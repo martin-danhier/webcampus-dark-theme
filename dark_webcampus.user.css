@@ -1,0 +1,358 @@
+/* ==UserStyle==
+@name           Webcampus Dark Theme
+@namespace      github.com/martin-danhier
+@version        0.1.0
+@description    Dark theme for webcampus
+@author         Martin Danhier
+==/UserStyle== */
+@-moz-document domain("webcampus.unamur.be") {
+    #region-main {
+        background-color: #171717;
+
+
+        border-color: #4f4f4f;
+    }
+
+    .btn:hover,
+    .btn:focus {
+        background-color: #484848;
+    }
+
+    #page-my-index {
+        background-color: #171717 !important;
+    }
+
+
+    .bg-pulse-grey {
+        animation: unset;
+        background-color: #201f1f;
+    }
+
+    #page-enrol-users #filterform,
+    .que .history,
+    .userprofile .profile_tree section,
+    .groupinfobox,
+    .well,
+    .path-calendar .maincalendar .calendar-event-panel {
+        background-color: #1e1e1e;
+        border-color: #444343;
+    }
+
+    .bs-popover-top .arrow::after {
+        border-top-color: #333;
+    }
+
+    .popover,
+    .popover-header,
+    .popover-body {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .show > .btn-outline-secondary.dropdown-toggle {
+        background-color: #424040;
+        color: #cac7c7;
+        ;
+    }
+
+    .dropdown-menu .dropdown-item:focus {
+        background-color: #313130;
+        color: #bfbfbf;
+    }
+
+    li.page-item .page-link,
+    li.page-item.disabled .page-link {
+        background-color: #3c3939;
+        border-color: #626262;
+    }
+
+    .path-mod-assign td.submissionstatussubmitted,
+    .path-mod-assign div.submissionstatussubmitted,
+    .path-mod-assign a:link.submissionstatussubmitted {
+        background-color: #1e6a36;
+        color: #e8e5e5;
+    }
+
+    .message-app.drawer .message.received .tail {
+        border-bottom-color: #333131;
+    }
+
+    .message-app.drawer .message.send .tail {
+
+        border-bottom-color: #777776;
+    }
+
+    .bg-secondary {
+        background-color: #777776 !important;
+    }
+
+    .path-mod-assign td.submissionnotgraded,
+    .path-mod-assign div.submissionnotgraded,
+    .path-mod-assign td.earlysubmission,
+    .path-mod-assign div.earlysubmission {
+        background-color: #3f403f;
+        color: #e8e5e5;
+    }
+
+    .dropdown-menu .dropdown-item {
+        color: #bfbfbf;
+    }
+
+    .dropdown-menu .dropdown-item.active {
+        background-color: #1e4042;
+        color: #e3e2e2;
+    }
+
+    .dropdown-menu .dropdown-item:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+    .text-muted,
+    .resourcelinkdetails {
+        color: #b3b3af !important;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    .h1,
+    .h2,
+    .path-calendar .maincalendar .calendar-controls .current,
+    .h3,
+    .h4,
+    .h5,
+    .h6 {
+        color: #9faab5;
+    }
+
+    #nav-drawer .list-group a.list-group-item.active {
+        background-color: #1e4a51;
+        border-color: #1e4a51;
+    }
+
+    .block-region .block.block_myoverview [data-region="course-content"] a.coursename {
+        color: #00fff7;
+    }
+
+    .brand-banner {
+        background: linear-gradient(to bottom, #313030 0%, #2f2e2e 20%, #2b2a2a 40%, #252525 60%, #222 80%, #212221 100%);
+    }
+
+    .switch input + label::before {
+        background-color: #776a6a;
+    }
+
+    .bg-light {
+        background-color: #191919 !important;
+    }
+
+    .overlay-icon-container {
+        background-color: #201f1f;
+    }
+
+    .list-group-item {
+        background-color: #212020;
+        border-color: #6c6c6f;
+        color: #737373;
+    }
+
+    .list-group-item:hover {
+        background-color: #353535;
+        color: #737373;
+    }
+
+
+    .courses .coursebox.even {
+        background-color: #1a1919;
+    }
+
+    .border-bottom {
+        background-color: #222;
+        border-bottom: 1px solid #717375!important;
+    }
+
+    .form-control,
+    .form-control:focus {
+        background-color: #333131;
+        color: #fff
+    }
+
+    .message-app .text-center {
+        background-color: #1e1c1c;
+    }
+
+    .bg-white {
+        background-color: #333131 !important;
+    }
+
+    h2 {
+        color: #fff;
+    }
+
+    #blocks-column-toggle:before,
+    .fa-plus:before {
+        color: #dbd9d9
+    }
+
+    *:before {
+        color: #8e8d8d
+    }
+
+    .navbar-receptic [data-region="drawer-toggle"] .btn-secondary {
+
+        background-color: #444546;
+        border-color: #686666;
+    }
+
+
+
+    .navbar-receptic a.dropdown-item {
+        color: #d2d4d7;
+    }
+
+    .navbar-receptic a.dropdown-item:hover {
+        background-color: #424040;
+        color: #fff;
+    }
+
+    .navbar-receptic a.dropdown-item:focus {
+        background-color: #424040;
+        color: #fff;
+    }
+
+    .dropdown-menu {
+        background-color: #222121;
+        border-color: #606060;
+    }
+
+    .bg-dark {
+        background-color: #151414 !important;
+    }
+
+    a {
+        color: #1cc9ca;
+    }
+
+    body {
+        background-color: #171717;
+        color: #fbfbfb;
+    }
+
+    #nav-drawer {
+        background-color: #171717;
+    }
+
+
+    #nav-drawer .list-group div.list-group-item,
+    #nav-drawer .list-group a.list-group-item {
+
+        background-color: #212020;
+        border-color: #6c6c6f;
+        color: #c5c6c8;
+    }
+
+    #nav-drawer .list-group div.list-group-item:hover,
+    #nav-drawer .list-group a.list-group-item:hover {
+
+        background-color: #3e3c3c;
+    }
+
+
+
+    .card {
+        background-color: #171717;
+        border-color: #4f4f4f;
+    }
+
+    .block-region .block {
+
+        border-color: #242624;
+    }
+
+    .navbar-receptic {
+        background: linear-gradient(to bottom, #3d3f42 0%, #2b2c2d 100%);
+    }
+
+    .block-region .block .card-body .card-title {
+        color: #67f917;
+    }
+
+    .block-region .block .card-body .card-title:before {
+        color: #a6a5a5;
+    }
+
+
+    .popover-region-container,
+    .popover-region-footer-container {
+        background-color: #222;
+    }
+
+
+    .content-item-container .content-item-footer .timestamp,
+    .content-item-container .content-item-footer .timestamp:hover {
+        color: #e3d7d7;
+    }
+
+    .content-item-container.unread {
+        background-color: #4e4e4f;
+    }
+
+    .content-item-container.unread:hover {
+        background-color: #4e4e4f;
+    }
+
+    .popover-region .notification-message {
+        color: #1edcdd;
+    }
+
+    .popover-region .notification-message:hover {
+        color: #52ae52;
+    }
+
+    .content-item-container.unread a {
+        color: #22c4c6;
+    }
+
+
+    .fa-user-plus:before {
+        color: #fff;
+    }
+
+
+    .block-region .block .card-body {
+        background-color: #201f1f;
+        box-shadow: 1px 2px 3px 0 #2b2929;
+    }
+
+    .block-region .block .minicalendar td,
+    .block-region .block .minicalendar.calendartable td {
+        border: 1px solid #85898c;
+    }
+
+    .calendar_event_course a {
+        color: #00fff7;
+    }
+
+    .calendar_event_course {
+        background-color: #573932;
+    }
+
+    .block-region .block .minicalendar td:nth-child(even).calendar_event_course,
+    .block-region .block .minicalendar.calendartable td:nth-child(even).calendar_event_course {
+        background-color: #3e312d;
+    }
+
+    .block-region .block .minicalendar td:nth-child(even),
+    .block-region .block .minicalendar.calendartable td:nth-child(even) {
+        background-color: #2b2929;
+    }
+
+    #back-to-top a.arrow {
+        color: #ccc;
+        background: #171717;
+    }
+}
