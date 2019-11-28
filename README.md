@@ -2,7 +2,7 @@
 
 ## Aperçu
 
-![Vue d'un cours](assets/course.png)
+![Vue d'un cours](assets/course1.png)
 
 ![Tableau de bord](assets/dashboard.png)
 
