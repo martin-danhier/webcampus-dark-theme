@@ -1,5 +1,11 @@
 # Webcampus Dark Theme
 
+## Aperçu
+
+![Vue d'un cours](assets/course.png)
+
+![Tableau de bord](assets/dashboard.png)
+
 ## Installation :
 
 1. Installer [Stylus](https://add0n.com/stylus.html) pour [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chromium](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne).
