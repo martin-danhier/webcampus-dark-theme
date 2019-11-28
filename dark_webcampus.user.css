@@ -1,11 +1,11 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.1.0
+@version        0.1.1
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
-@-moz-document domain("webcampus.unamur.be") {
+@-moz-document domain("webcampus.unamur.be"), domain("auth.unamur.be") {
 
     /* Main colors */
     #region-main {
@@ -320,9 +320,31 @@
     }
 
 
-
+    /* =========== */
+    /* evaluations */
+    .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
+        background-color:#262525;
+        color: #fff;
+        border-color:#827f7f;
+    }
+    .nav-tabs{
+        border-bottom: 1px solid #827f7f;
+    }
+    
     /* =========== */
     /* quiz */
+    .modal-content, .moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content{
+        background-color: #262525;
+    }
+    .moodle-dialogue-base .closebutton::after, .user-enroller-panel .uep-header .close:after, .user-enroller-panel .uep-header .moodle-dialogue-base .closebutton:after, .moodle-dialogue-base .user-enroller-panel .uep-header .closebutton:after{
+        color: #47a4b9;
+    }
+    #page-mod-quiz-view table.quizattemptsummary tr.bestrow td{
+        background-color: #1f1f1f;
+    }
+    .moodle-dialogue-base .moodle-dialogue-lightbox{
+        background-color:#272727;
+    }
     .path-mod-quiz #mod_quiz_navblock .qnbutton .thispageholder {
         border: unset;
     }
@@ -366,7 +388,6 @@
         background-color: #1e1d1d;
     }
 
-
     /* =========== */
     /* other things I don't remember */
     .switch input + label::before {
@@ -387,5 +408,27 @@
     li.page-item.disabled .page-link {
         background-color: #3c3939;
         border-color: #626262;
+    }
+        
+    /* ========== */
+    /* login page */
+    form.login{
+        background-color: #1f1e1e;
+    }
+    .input-group-addon{
+        background-color: #2d2b2b;
+    }
+    .glyphicon-log-in:before{
+        color: #fff !important;
+    }
+    .btn-success{
+        color: #fff  !important;;
+        background-image: unset;
+        background-color: #3c7919;
+        border-color: transparent;
+    }
+    div#wrap{
+        background-image: unset;
+        background-color: #070707;
     }
 }
