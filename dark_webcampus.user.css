@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.1.1
+@version        0.2.0
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
@@ -389,6 +389,51 @@
     }
 
     /* =========== */
+    
+    /* Upload */
+    
+   
+    
+    .fp-upload-form, .fp-iconview, .fp-filename-field, 
+    .fp-filename .text-truncate, .fp-iconview .fp-filename-field .fp-filename, 
+    .fp-content .card, .file-picker .fp-content  {
+        background-color: #1e1d1d !important;
+    }
+
+    .fp-thumbnail, .fp-reficons1, .fp-reficons2 {
+        border: unset !important;
+    }
+    
+    .custom-select {
+        width: 100%;
+        background-color: #2a2a2a;
+        background: #2a2a2a url("data:image/svg+xml;charset=utf8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 4 5\'%3E%3Cpath fill=\'%23c7c4c4\' d=\'M2 0L0 2h4zm0 5L0 3h4z\'/%3E%3C/svg%3E") no-repeat right .75rem center;
+        -webkit-background-size: 8px 10px;
+        background-size: 8px 10px;
+        
+        color: #fff;
+    }
+    
+    button.close, .moodle-dialogue-base button.closebutton {
+        background-color: #2a2a2a !important;
+        opacity: 1;
+    }
+    
+    .close, .moodle-dialogue-base .closebutton {
+        text-shadow: unset;
+    }
+    
+/*     .fp-toolbar .btn-secondary, .fp-toolbar .btn-default, .fp-toolbar .atto_generico_buttons button, .fp-toolbar .atto_generico_buttons button, .fp-toolbar .wikisearch form input, .wikisearch form .fp-toolbar input, .fp-toolbar #page-mod-forum-view #id_advancedadddiscussion, #page-mod-forum-view .fp-toolbar #id_advancedadddiscussion, .fp-toolbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"], #page-mod-forum-discuss .fp-toolbar button[data-action="forum-advanced-reply"], .fp-viewbar .btn-secondary, .fp-viewbar .btn-default, .fp-viewbar .atto_generico_buttons button, .atto_generico_buttons .fp-viewbar button, .fp-viewbar .wikisearch form input, .wikisearch form .fp-viewbar input, .fp-viewbar #page-mod-forum-view #id_advancedadddiscussion, #page-mod-forum-view .fp-viewbar #id_advancedadddiscussion, .fp-viewbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"], #page-mod-forum-discuss .fp-viewbar button[data-action="forum-advanced-reply"] {
+    background-color: #4e4a4a;
+    border: 1px solid #1e1d1d;
+    
+}
+    
+    .fptoolbar .btn-secondary ::before,  .fp-toolbar .btn-default ::before, .fp-toolbar .atto_generico_buttons button ::before, .fp-toolbar .atto_generico_buttons button ::before, .fp-toolbar .wikisearch form input ::before, .wikisearch form .fp-toolbar input ::before,  .fp-toolbar #page-mod-forum-view #id_advancedadddiscussion ::before,#page-mod-forum-view .fp-toolbar #id_advancedadddiscussion::before, fp-toolbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"] ::before, #page-mod-forum-discuss .fp-toolbar button[data-action="forum-advanced-reply"] ::before, .fp-viewbar .btn-secondary ::before,.fp-viewbar .btn-default ::before,  .fp-viewbar .atto_generico_buttons button ::before, .fp-viewbar .wikisearch form input ::before, .wikisearch form .fp-viewbar input ::before, .fp-viewbar #page-mod-forum-view #id_advancedadddiscussion ::before, .fp-viewbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"] ::before, #page-mod-forum-discuss .fp-viewbar button[data-action="forum-advanced-reply"] ::before, i .icon .fa .fa-refresh .fa-fw ::before   {
+        color: #f2e4e4 !important ;
+    } */
+    
+    
     /* other things I don't remember */
     .switch input + label::before {
         background-color: #776a6a;
