@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.2.0
+@version        0.2.1
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
@@ -242,6 +242,16 @@
         color: #e8e5e5;
     }
 
+    /** ==================== */
+    
+    /* warning */
+    .flashbox {
+        background: #222
+    }
+    
+    .flashbox.warning {
+        border: 2px solid #d84d4d;
+    }
 
     /* ================== */
     /* messaging app */
