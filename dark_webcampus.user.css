@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.2.5
+@version        0.2.6
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
@@ -460,6 +460,51 @@
     .fptoolbar .btn-secondary ::before,  .fp-toolbar .btn-default ::before, .fp-toolbar .atto_generico_buttons button ::before, .fp-toolbar .atto_generico_buttons button ::before, .fp-toolbar .wikisearch form input ::before, .wikisearch form .fp-toolbar input ::before,  .fp-toolbar #page-mod-forum-view #id_advancedadddiscussion ::before,#page-mod-forum-view .fp-toolbar #id_advancedadddiscussion::before, fp-toolbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"] ::before, #page-mod-forum-discuss .fp-toolbar button[data-action="forum-advanced-reply"] ::before, .fp-viewbar .btn-secondary ::before,.fp-viewbar .btn-default ::before,  .fp-viewbar .atto_generico_buttons button ::before, .fp-viewbar .wikisearch form input ::before, .wikisearch form .fp-viewbar input ::before, .fp-viewbar #page-mod-forum-view #id_advancedadddiscussion ::before, .fp-viewbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"] ::before, #page-mod-forum-discuss .fp-viewbar button[data-action="forum-advanced-reply"] ::before, i .icon .fa .fa-refresh .fa-fw ::before   {
         color: #f2e4e4 !important ;
     } */
+    
+    /* peer review */
+    
+    .path-mod-workshop .userplan {
+        border-radius: 15px;
+        border-color: #686868;
+    }
+    
+    .path-mod-workshop .userplan dt div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height:100%;
+        align-items: center;
+    }
+    
+    .path-mod-workshop .submission-summary .userdate {
+        color: #aca9a9;
+    }
+    
+    .path-mod-workshop .userplan dt .actions {
+        display: inline;
+    }
+    
+    .path-mod-workshop .userplan dt {
+        background-color: #1b1b1b;
+        text-align: center;
+        vertical-align: middle !important;
+        border-color: #686868;
+    }
+    
+    .path-mod-workshop .userplan .nonactive.phasetasks {
+        background-color: #0c0c0c;
+        border-color: #686868;
+    }
+    .path-mod-workshop .userplan dt.active {
+        
+        background-color: #346c2a;
+        color: #fff;
+    }
+    
+    .path-mod-workshop .userplan dd.active  {
+        background-color: #2a5b21;
+        color: #fff;
+    }
     
     
     /* other things I don't remember */
