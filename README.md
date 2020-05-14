@@ -2,9 +2,9 @@
 
 ## Aperçu
 
-![Vue d'un cours](assets/course1.png)
+![Vue d'un cours](assets/main preview.png)
 
-![Tableau de bord](assets/dashboard.png)
+![Tableau de bord](assets/course preview.png)
 
 ## Installation :
 
