@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.2.6
+@version        0.2.7
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
@@ -107,19 +107,6 @@
     .block-region .block .card-body {
         background-color: #201f1f;
         box-shadow: 1px 2px 3px 0 #2b2929;
-    }
-    
-    /* submission */
-    .path-mod-workshop .submission-full {
-        border: 1px solid #414141
-    }
-    
-    .path-mod-workshop .submission-full .header {
-         background-color: #201f1f;
-    }
-    
-    .path-mod-workshop .submission-full .header .userdate{
-        color: #fff
     }
 
     /* notifications */
@@ -506,6 +493,40 @@
         color: #fff;
     }
     
+    /* assessement */
+    
+    .path-mod-workshop .assessment-full {
+        background-color: #201f1f;
+        border-radius: 13px;
+        border: 1px solid #7d7575;
+    }
+    
+    .path-mod-workshop .assessment-full .header {
+        background-color: #201f1f;
+        border-radius: 13px;
+    }
+    
+    .path-mod-workshop .assessment-full .header .userdate{
+        color: #fff
+    }
+    
+    /* submission */
+    .path-mod-workshop .submission-full {
+       
+        background-color: #201f1f;
+        border-radius: 13px;
+        border: 1px solid #7d7575;
+    }
+    
+    .path-mod-workshop .submission-full .header {
+         
+        background-color: #201f1f;
+        border-radius: 13px;
+    }
+    
+    .path-mod-workshop .submission-full .header .userdate{
+        color: #fff
+    }
     
     /* other things I don't remember */
     .switch input + label::before {
