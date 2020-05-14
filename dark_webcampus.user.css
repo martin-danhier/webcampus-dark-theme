@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.2.4
+@version        0.2.5
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
@@ -485,23 +485,28 @@
         
     /* ========== */
     /* login page */
-    form.login{
+    
+    #page-login-index .loginpanelbg{
         background-color: #1f1e1e;
     }
-    .input-group-addon{
+    #page-login-index  #accordion .card-header{
+        background-color: #171717;
+    }
+    
+    #page-login-index .input-group-addon{
         background-color: #2d2b2b;
     }
-    .glyphicon-log-in:before{
+    #page-login-index .glyphicon-log-in:before{
         color: #fff !important;
     }
-    .btn-success{
+    #page-login-index .btn-success{
         color: #fff  !important;;
         background-image: unset;
         background-color: #3c7919;
         border-color: transparent;
     }
-    div#wrap{
+    #page-login-index div#wrap{
         background-image: unset;
         background-color: #070707;
-    }
+    } 
 }
