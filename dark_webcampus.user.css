@@ -1,18 +1,53 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.2.7
+@version        0.3.0
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
+
 @-moz-document domain("webcampus.unamur.be"), domain("auth.unamur.be") {
 
+    
     /* Main colors */
+    body {
+        
+    }
+    
+    ul.navbar-nav.d-none.d-md-flex::after {
+        content:"Webcampus";
+        font-size: 18px;
+        
+    }
+    
+    #page, #nav-drawer, #blocks-column, .message-app.drawer  {
+        top: 0px;
+        margin-top: 60px !important;
+    }
+    
+    
+    #page-wrapper #page-footer {
+        border-radius: 15px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    #page-header {
+        visibility: visible;
+    }
+    
+    #page-header .card {
+        background-color: #1b1b1b;
+        box-shadow: unset;
+        border-radius:15px;
+        border: unset;
+    }
+    
     #region-main {
-        background-color: #171717;
-
-
-        border-color: #4f4f4f;
+        background-color: #1b1b1b;
+        
+        border-radius:15px;
+        border: unset;
     }
     h2 {
         color: #fff;
@@ -21,9 +56,16 @@
         background-color: #171717 !important;
     }
     .list-group-item {
-        background-color: #212020;
-        border-color: #6c6c6f;
+        background-color: #262626;
+        box-shadow: 0.5px 0.5px #393535;
+        border: unset;
         color: #737373;
+    }
+    
+    
+    #region-main .list-group-item {
+
+        border-radius: 15px;
     }
     .bg-dark {
         background-color: #151414 !important;
@@ -39,19 +81,51 @@
         background-color: #171717;
         border-color: #4f4f4f;
     }
+    #region-main .card-body {
+        
+        border-radius: 15px;
+    }
+    
+    .mediaserver-iframe {
+      border-radius: 15px;
+        user-select: none;
+    }
 
 
 
     /* text field */
     .form-control,
     .form-control:focus {
-        background-color: #333131;
+        background-color: transparent;
+        border: unset;
+        
+        border-radius: unset;
         color: #fff
+    }
+    
+    .form-control:focus {
+        box-shadow: unset;
+        
+    }
+    
+    .input-group-prepend, .input-group-text, .input-group .btn-outline-secondary {
+        border: unset;
+        
+    }
+    
+    .input-group {
+        background-color: #242424;
+        border: 1px solid white;
+        border-radius: 15px;
     }
 
     /* top banner */
-    .brand-banner {
-        background: linear-gradient(to bottom, #313030 0%, #2f2e2e 20%, #2b2a2a 40%, #252525 60%, #222 80%, #212221 100%);
+    header {
+        visibility: hidden;
+/*         height: 0%;
+/*         background: linear-gradient(to bottom, #313030 0%, #2f2e2e 20%, #2b2a2a 40%, #252525 60%, #222 80%, #212221 100%); */
+/*         background: unset;
+        background-color: #1f1f1f; */
     }
 
     /* title color in "chronology" */
@@ -73,19 +147,19 @@
 
     /* calendar */
     .calendar_event_course a {
-        color: #00fff7;
+        color: #04d8d2;
     }
     .calendar_event_course,
     .block-region .block .minicalendar td:nth-child(even).calendar_event_course,
     .block-region .block .minicalendar.calendartable td:nth-child(even).calendar_event_course,
     .block-region .block .minicalendar td:nth-child(even),
     .block-region .block .minicalendar.calendartable td:nth-child(even) {
-        background-color: #0e0d0d;
+        background-color: inherit;
     }
 
     .block-region .block .minicalendar td,
     .block-region .block .minicalendar.calendartable td {
-        border: 1px solid #3b3f43;
+        border: 1px solid transparent;
     }
 
     /* back to top arrow */
@@ -95,8 +169,18 @@
     }
 
     /* block */
+    
+    .block_header {
+        border-bottom: unset !important;
+        text-align: center;
+    }
+    
+    .block-region .card-body {
+        border-radius: 15px;
+    }
+    
     .block-region .block {
-        border-color: #242624;
+        border: unset;
     }
     .block-region .block .card-body .card-title {
         color: #67f917;
@@ -106,17 +190,55 @@
     }
     .block-region .block .card-body {
         background-color: #201f1f;
-        box-shadow: 1px 2px 3px 0 #2b2929;
+        box-shadow: 1px 1px 2px 0 #2b2929;
+    }
+    
+    .block_timeline .list-group-item {
+        border-radius: 10px;
+        margin-top: 5px;
+    }
+    
+    
+    .block_timeline .list-group-item .d-flex{
+        padding: 0.5em;
+    }
+    
+    .block_timeline .list-group-item-action {
+        color: #d4d3d3;
     }
 
     /* notifications */
+    .navbar .popover-region-container {
+        top: 2.5rem;
+        box-shadow: 1px 1px #353434;
+    }
+    
+    .popover-region-toggle::before, .popover-region-toggle::after {
+        border: unset;
+    }
+    
     .popover-region-container,
     .popover-region-footer-container {
-        background-color: #222;
+        background-color: #282727;
+        border: unset;
+        border-radius: 15px;
+        padding: 10px;
     }
+    .popover-region .content-item-container {
+        
+        border: unset;
+    }
+    .popover-region .content-item-container:hover {
+        background-color: #333131;
+        border-radius: 10px;
+    }
+    .content-item-container:hover .content-item-footer .timestamp,
     .content-item-container .content-item-footer .timestamp,
     .content-item-container .content-item-footer .timestamp:hover {
         color: #e3d7d7;
+    }
+    .popover-region-header-container {
+        border: unset;   
     }
     .content-item-container.unread {
         background-color: #4e4e4f;
@@ -146,16 +268,32 @@
 
 
     /* Button on dashboard */
-    .btn:hover,
-    .btn:focus {
+    
+    .btn-primary:hover, .btn-primary:focus {
+        background-color: #186f70;
+    }
+    
+    .btn-outline-secondary:hover,
+    .btn-outline-secondary:focus {
         background-color: #484848;
     }
     .show > .btn-outline-secondary.dropdown-toggle {
         background-color: #424040;
         color: #cac7c7;
-        ;
+        box-shadow: unset;
+        
     }
+    
+    /* buttons */
 
+    .btn {
+        border-radius: 10px;
+    }
+    
+    .btn-outline-secondary {
+        border: 1px solid #666;
+    }
+    
     /* dropdown menus */
     .dropdown-menu .dropdown-item:focus {
         background-color: #313130;
@@ -174,6 +312,7 @@
     }
     .dropdown-menu {
         background-color: #222121;
+        border-radius: 10px;
         border-color: #606060;
     }
 
@@ -182,6 +321,35 @@
         animation: unset;
         background-color: #201f1f;
     }
+    
+    /* modal */
+    .modal-content {
+        border-radius: 15px;
+    }
+    
+    .modal-header {
+        border-bottom: 1px solid #4a4848;
+    }
+    
+    .modal-footer {
+        border-top: 1px solid #4a4848;
+    }
+    
+    .modal-title{
+        color: #f2ebeb;
+    }
+    
+    .modal-body .list-group-item:hover{
+        color: #e5e5e5;
+    }
+    
+    .modal-body .list-group-item {
+        color: #fff;
+        background-color: #2e2e2e;
+        margin-top: 5px;
+        border-radius: 7px;
+    }
+    
 
     /* ================= */
     /* courses overview */
@@ -194,7 +362,11 @@
         color: #00fff7;
     }
     .courses .coursebox.even {
-        background-color: #1c1b1b;
+        background-color: #242424;
+        border-radius:5px;
+    }
+    .course-content ul li.section.main {
+        border-bottom: 1px solid #444;
     }
 
     /* ================= */
@@ -219,7 +391,7 @@
     .groupinfobox,
     .well,
     .path-calendar .maincalendar .calendar-event-panel {
-        background-color: #1e1e1e;
+        background-color: #393737;
         border-color: #444343;
     }
 
@@ -256,17 +428,49 @@
     /* ================== */
     /* messaging app */
     /* received message bubble */
+    
+    .message-app.drawer {
+        height: calc(100vh - 60px);
+    }
+    
+    .message-app.drawer .footer-container .border-top{
+        border-top: unset !important;
+    }
+    
+    .message-app .header-container {
+        background-color: #242424;
+    }
+    
+    .card-header {
+        background-color: #1f1f1f;
+        border-color: #4e4d4d;
+    }
+    
+    .message-app.drawer .message.received {
+        background-color: #262525 !important;
+    }
+    
     .message-app.drawer .message.received .tail {
-        border-bottom-color: #333131;
+        border-bottom-color: #262525;
+    }
+    
+    .message-app .footer-container {
+        background-color: #222;
+    }
+    
+    
+    .message-app .footer-container textarea {
+        border: unset;
+        border-radius: 15px;
     }
 
     /* sent message bubble */
     .message-app.drawer .message.send .tail {
 
-        border-bottom-color: #777776;
+        border-bottom-color: #3b3a3a;
     }
     .bg-secondary {
-        background-color: #777776 !important;
+        background-color: #3b3a3a !important;
     }
 
 
@@ -275,25 +479,30 @@
         background-color: #191919 !important;
     }
     .border-bottom {
-        background-color: #222;
-        border-bottom: 1px solid #717375!important;
+        border-bottom: 1px solid transparent !important;
     }
     .message-app .text-center {
-        background-color: #1e1c1c;
+        background-color: inherit;
     }
     .bg-white {
-        background-color: #333131 !important;
+        background-color: inherit !important;
     }
 
     /* nav drawer */
+    div::-webkit-scrollbar-thumb, section::-webkit-scrollbar-thumb, div::-webkit-scrollbar-track, section::-webkit-scrollbar-track {
+        border-radius: 10px;
+    }
+    
+    
     #nav-drawer .list-group a.list-group-item.active {
         background-color: #1e4a51;
-        border-color: #1e4a51;
+        border: 1px solid #1e4a51;
+        border-radius: 15px;
     }
     .navbar-receptic [data-region="drawer-toggle"] .btn-secondary {
 
-        background-color: #444546;
-        border-color: #686666;
+        background-color: #282828;
+        border-color: #5d5d5d;
     }
     .navbar-receptic a.dropdown-item {
         color: #d2d4d7;
@@ -307,22 +516,30 @@
         color: #fff;
     }
     .navbar-receptic {
-        background: linear-gradient(to bottom, #3d3f42 0%, #2b2c2d 100%);
+        top: 0;
+        background: unset;
+        background-color: #242424;
+        box-shadow: 0px 1px #2e2c2c;
     }
     #nav-drawer {
-        background-color: #171717;
+        user-select: none;
+        background-color: #212020;
+        border-radius: 15px;
+        height: calc(100vh - 70px);
+        box-shadow: 1px 1px #242323;
     }
     #nav-drawer .list-group div.list-group-item,
     #nav-drawer .list-group a.list-group-item {
-
+        box-shadow: unset;
         background-color: #212020;
-        border-color: #6c6c6f;
+        border: 1px solid transparent;
         color: #c5c6c8;
     }
     #nav-drawer .list-group div.list-group-item:hover,
     #nav-drawer .list-group a.list-group-item:hover {
-
-        background-color: #3e3c3c;
+        border: 1px solid transparent;;
+        border-radius: 10px;
+        background-color: #333030;
     }
     .que .outcome {
         background-color: #232323;
@@ -429,8 +646,12 @@
         color: #fff;
     }
     
+    button.close span, .moodle-dialogue-base button.closebutton span {
+        color: #fff;
+    }
+    
     button.close, .moodle-dialogue-base button.closebutton {
-        background-color: #2a2a2a !important;
+        background-color: transparent !important;
         opacity: 1;
     }
     
@@ -528,6 +749,7 @@
         color: #fff
     }
     
+    
     /* other things I don't remember */
     .switch input + label::before {
         background-color: #776a6a;
@@ -575,4 +797,61 @@
         background-image: unset;
         background-color: #070707;
     } 
+}
+
+@-moz-document domain("medias.unamur.be") {
+    
+    /* video player */
+    #player_block .player-mask {
+        cursor: pointer;
+    }
+    
+    #header {
+        background-color: #333;
+        color: #717171;
+    }
+    
+    #container {
+        background-color: #1c1c1c;
+        color: #ececec;
+    }
+    
+    #player_block .player-seekbar-container {
+        left: 0.3em;
+        right: 0.3em;
+    }
+    
+    .button {
+        color: #e5e5e5;
+    }
+    
+    #global .main-title {
+        
+        background-color: #1c1c1c;
+        color: #ececec;
+    }
+    
+    #player_block .player-seekbar-left, #player_block .player-seekbar-right {
+        visibility: hidden;
+    }
+    
+    body {
+        background-color: #171717;
+        color: #fff;
+    }
+    
+    #player_block .player-controls .player-ctrl-menu-container {
+        background: #000000e3;
+        border-radius: 15px 15px 0px 0px ;
+    }
+    
+    #player_block.player-controls-hover .player-controls {
+        user-select: none;
+    }
+    
+    
+    #player_block .player-mask div {
+        visibility: hidden !important;
+    }
+    
 }
