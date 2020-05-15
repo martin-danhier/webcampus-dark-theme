@@ -2,6 +2,8 @@
 
 ## Aperçu
 
+![Avant Après](assets/webcampus_clean_dark_theme.gif)
+
 ![Vue d'un cours](assets/main_preview.png)
 
 ![Tableau de bord](assets/course_preview.png)
