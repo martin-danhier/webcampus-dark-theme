@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.3.4
+@version        0.3.5
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
@@ -263,8 +263,11 @@
     /* top banner */
     header.fixed-top.brand-banner {
         visibility: visible;
+        
+        width: 100px;
         z-index: 2000;
-        background-color: transparent;
+        left: 70px;
+        height: 50px;
         background: unset;
 /*         height: 0%;
 /*         background: linear-gradient(to bottom, #313030 0%, #2f2e2e 20%, #2b2a2a 40%, #252525 60%, #222 80%, #212221 100%); */
@@ -277,7 +280,7 @@
     }
     
     header.fixed-top.brand-banner .left-logo {
-        left: 70px;
+        left: 0px;
         width: 100px;
         height: 30px;
         box-shadow: unset;
