@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.3.5
+@version        0.3.6
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
@@ -885,6 +885,11 @@
     } */
     
     /* peer review */
+    
+    .path-mod-workshop #workshop-viewlet-yourgrades .finalgrades .grade.submissiongrade, .path-mod-workshop #workshop-viewlet-yourgrades .finalgrades .grade.assessmentgrade {
+        background-color:#353737;
+        border: 1px solid #6e6e6e;
+    }
     
     .path-mod-workshop .userplan {
         border-radius: 15px;
