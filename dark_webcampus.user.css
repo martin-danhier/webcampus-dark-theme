@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.3.6
+@version        0.3.7
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
@@ -112,6 +112,7 @@
         outline: unset;
         box-shadow: 0px 0px 0px 2px #598192;
         border-radius: 15px;
+        border-color: transparent !important;
     }
     
     .forumpost {
@@ -121,6 +122,16 @@
     
     .forumsearch .input-group{
         border: unset;
+    }
+    
+    .forumpost.unread {
+        border-color: #d6b153 !important;
+    }
+    
+    .forumpost.unread .row.header {
+        background-color: transparent;
+        border: 0;
+            
     }
     
     .forumsearch .input-group-prepend {
