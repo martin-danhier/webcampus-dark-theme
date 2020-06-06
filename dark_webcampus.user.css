@@ -1,57 +1,57 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.3.7
+@version        0.3.8
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
+@-moz-document domain("webcampus.unamur.be"),
+domain("auth.unamur.be") {
 
-@-moz-document domain("webcampus.unamur.be"), domain("auth.unamur.be") {
 
-    
     /* Main colors */
-    body {
-        
-    }
-    
+    body {}
+
     ul.navbar-nav.d-none.d-md-flex::after {
-        content:"Webcampus";
+        content: "Webcampus";
         font-size: 18px;
-        
     }
-    
+
     #blocks-column-toggle {
         top: 0px;
         margin-top: 75px;
     }
-    
-    #page, #nav-drawer, #blocks-column, .message-app.drawer  {
+
+    #page,
+    #nav-drawer,
+    #blocks-column,
+    .message-app.drawer {
         top: 0px;
         margin-top: 60px !important;
     }
-    
-    
+
+
     #page-wrapper #page-footer {
         border-radius: 15px;
         margin-left: 10px;
         margin-right: 10px;
     }
-    
+
     #page-header {
         visibility: visible;
     }
-    
+
     #page-header .card {
         background-color: #1b1b1b;
         box-shadow: unset;
-        border-radius:15px;
+        border-radius: 15px;
         border: unset;
     }
-    
+
     #region-main {
         background-color: #1b1b1b;
-        
-        border-radius:15px;
+
+        border-radius: 15px;
         border: unset;
     }
     h2 {
@@ -66,8 +66,8 @@
         border: unset;
         color: #737373;
     }
-    
-    
+
+
     #region-main .list-group-item {
 
         border-radius: 15px;
@@ -87,12 +87,12 @@
         border-color: #4f4f4f;
     }
     #region-main .card-body {
-        
+
         border-radius: 15px;
     }
-    
+
     .mediaserver-iframe {
-      border-radius: 15px;
+        border-radius: 15px;
         user-select: none;
     }
 
@@ -101,195 +101,215 @@
     }
 
     /* forum */
-    
-    .forum-post-container:focus>.focus-target, .custom-select {
+    .path-course-view .unread {
+        margin-left: 60px;
+        background-color: unset;
+    }
+
+    .path-course-view .unread::before {
+        content: "";
+        font-size: 18px;
+        font-family: "FontAwesome";
+        color: #aca9a9;
+        padding-right: 5px;
+    }
+
+    .path-course-view .unread a {
+        color: #e9e9e9;
+    }
+
+    .forum-post-container:focus > .focus-target,
+    .custom-select {
         border-radius: 10px;
         border-width: 1px;
         border-color: #616161;
     }
-    
-    .forum-post-container:focus>.focus-target {
+
+    .forum-post-container:focus > .focus-target {
         outline: unset;
         box-shadow: 0px 0px 0px 2px #598192;
         border-radius: 15px;
         border-color: transparent !important;
     }
-    
+
     .forumpost {
         border: 1px solid #373737 !important;
         border-radius: 15px;
     }
-    
-    .forumsearch .input-group{
+
+    .forumsearch .input-group {
         border: unset;
     }
-    
+
     .forumpost.unread {
         border-color: #d6b153 !important;
     }
-    
+
     .forumpost.unread .row.header {
         background-color: transparent;
         border: 0;
-            
     }
-    
+
     .forumsearch .input-group-prepend {
         vertical-align: middle;
-
     }
-    
-    #theme-receptic-activity-settings-card, #theme-receptic-course-settings-card {
-        background-color: #1b1b1b;   
+
+    #theme-receptic-activity-settings-card,
+    #theme-receptic-course-settings-card {
+        background-color: #1b1b1b;
         border-radius: 15px;
     }
-    
-    #theme-receptic-activity-settings-card .nav-tabs, #theme-receptic-course-settings-card .nav-tabs {
-        
+
+    #theme-receptic-activity-settings-card .nav-tabs,
+    #theme-receptic-course-settings-card .nav-tabs {
+
         border: unset;
     }
-    
-    #theme-receptic-activity-settings-card .nav-tabs .nav-link.active:hover, #theme-receptic-course-settings-card .nav-tabs .nav-link.active:hover {
+
+    #theme-receptic-activity-settings-card .nav-tabs .nav-link.active:hover,
+    #theme-receptic-course-settings-card .nav-tabs .nav-link.active:hover {
         background-color: #262626;
     }
-    
-    #theme-receptic-activity-settings-card .nav-tabs .nav-link.active, #theme-receptic-course-settings-card .nav-tabs .nav-link.active {
+
+    #theme-receptic-activity-settings-card .nav-tabs .nav-link.active,
+    #theme-receptic-course-settings-card .nav-tabs .nav-link.active {
         border: unset;
         background-color: #242424;
-        border-radius: 15px  15px 0px 0px;
+        border-radius: 15px 15px 0px 0px;
     }
-    
-    #theme-receptic-activity-settings-card>div, #theme-receptic-course-settings-card>div {
+
+    #theme-receptic-activity-settings-card > div,
+    #theme-receptic-course-settings-card > div {
         border: unset;
     }
-    
+
     /* editor */
-    
     .editor_atto {
         border: 1px solid #6e6b6b;
         border-radius: 15px;
     }
-    
+
     .editor_atto .editor_atto_toolbar {
-        
+
         border-radius: 15px 15px 0px 0px;
         background-color: #262626;
         border: unset;
     }
-    
+
     .editor_atto .editor_atto_content.form-control {
         border: unset;
     }
-    
+
     .editor_atto .atto_group {
-        border-color: #525252 !important; 
+        border-color: #525252 !important;
     }
-    
+
     .editor_atto .editor_atto_content_wrap {
         background-color: #1d1d1d;
         border: unset;
         border-radius: 0px 0px 15px 15px;
     }
-    
-    .editor_atto_toolbar button:active, .editor_atto_toolbar button.highlight, .editor_atto_toolbar button:hover {
+
+    .editor_atto_toolbar button:active,
+    .editor_atto_toolbar button.highlight,
+    .editor_atto_toolbar button:hover {
         background-image: unset !important;
         background-color: #525050 !important;
     }
-    
+
     .editor_atto_menu .dropdown-menu .atto_menuentry {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    .open.atto_menu>.dropdown-menu {
+
+    .open.atto_menu > .dropdown-menu {
         display: grid;
     }
-    
-    .editor_atto_menu .dropdown-menu>li>a>div {
-        margin:auto;
+
+    .editor_atto_menu .dropdown-menu > li > a > div {
+        margin: auto;
     }
-    
+
     .editor_atto_menu .dropdown-menu {
         display: grid;
         width: 150px;
         height: 100px;
         grid-template-columns: repeat(3, 1fr);
     }
-    
+
     .editor_atto_toolbar button i::before {
-        
+
         color: #b0b0b0 !important;
     }
-    
-   .editor_atto_toolbar button {
+
+    .editor_atto_toolbar button {
         background-image: unset;
         background-color: #262525 !important;
         border-color: #615e5e !important;
     }
-    
+
     .editor_atto_notification .atto_info {
         background-color: #222121;
         margin-left: 20px;
     }
-    
+
     /* text field */
-    
     .form-control {
         border: 1px solid #999;
     }
-    
+
     .input-group .form-control {
         border: unset;
-        border-radius:unset;
+        border-radius: unset;
     }
-    
+
     .form-control,
     .form-control:focus {
         background-color: transparent !important;
         border-radius: 10px;
         color: #fff
     }
-    
+
     .form-control:focus {
         box-shadow: unset;
-        
     }
-    
-    .input-group-prepend, .input-group-text, .input-group .btn-outline-secondary {
+
+    .input-group-prepend,
+    .input-group-text,
+    .input-group .btn-outline-secondary {
         border: unset;
-        
     }
-    
+
     .input-group {
         background-color: #242424;
         border: 1px solid white;
         border-radius: 15px;
     }
-    
-    #searchform .table td{
+
+    #searchform .table td {
         border-top: 1px solid #2c2c2c;
     }
 
     /* top banner */
     header.fixed-top.brand-banner {
         visibility: visible;
-        
+
         width: 100px;
         z-index: 2000;
         left: 70px;
         height: 50px;
         background: unset;
-/*         height: 0%;
+        /*         height: 0%;
 /*         background: linear-gradient(to bottom, #313030 0%, #2f2e2e 20%, #2b2a2a 40%, #252525 60%, #222 80%, #212221 100%); */
-/*         background: unset;
+        /*         background: unset;
         background-color: #1f1f1f; */
     }
-    
+
     header.fixed-top.brand-banner .right-logo {
         visibility: hidden;
     }
-    
+
     header.fixed-top.brand-banner .left-logo {
         left: 0px;
         width: 100px;
@@ -297,7 +317,7 @@
         box-shadow: unset;
         top: 10px;
     }
-    
+
     header.fixed-top.brand-banner .left-logo img {
         visibility: hidden;
     }
@@ -330,39 +350,39 @@
     .block-region .block .minicalendar.calendartable td:nth-child(even) {
         background-color: inherit;
     }
-    
+
     .path-calendar .maincalendar .calendarmonth thead {
-/*         width: 100%; */
+        /*         width: 100%; */
     }
-    
+
     .path-calendar .maincalendar .calendarmonth .weekend {
-        
+
         background: #171717;
     }
-    
+
     .calendarwrapper .header .select.custom-select.cal_courses_flt {
         width: 35%;
         margin-left: 20px;
     }
-    
+
     .calendarwrapper .header {
-/*         display: inline-grid; */
-/*         display: table; */
-/*         width: 100%; */
+        /*         display: inline-grid; */
+        /*         display: table; */
+        /*         width: 100%; */
     }
-    
+
     .calendarwrapper .header .btn.btn-secondary {
         margin-left: 20px;
     }
-    
+
     .path-calendar .maincalendar .calendarmonth {
         border: 1px solid #353535;
     }
-    
+
     .path-calendar .maincalendar .calendarmonth td {
         border: 1px dotted #303030;
     }
-    
+
     .path-calendar .maincalendar .calendarmonth th {
         background-color: #262626;
         color: #fff;
@@ -380,20 +400,19 @@
     }
 
     /* block */
-    
     #blocks-column {
         height: calc(100vh - 60px)
     }
-    
+
     .block_header {
         border-bottom: unset !important;
         text-align: center;
     }
-    
+
     .block-region .card-body {
         border-radius: 15px;
     }
-    
+
     .block-region .block {
         border: unset;
     }
@@ -407,17 +426,17 @@
         background-color: #201f1f;
         box-shadow: 1px 1px 2px 0 #2b2929;
     }
-    
+
     .block_timeline .list-group-item {
         border-radius: 10px;
         margin-top: 5px;
     }
-    
-    
-    .block_timeline .list-group-item .d-flex{
+
+
+    .block_timeline .list-group-item .d-flex {
         padding: 0.5em;
     }
-    
+
     .block_timeline .list-group-item-action {
         color: #d4d3d3;
     }
@@ -427,11 +446,12 @@
         top: 2.5rem;
         box-shadow: 1px 1px #353434;
     }
-    
-    .popover-region-toggle::before, .popover-region-toggle::after {
+
+    .popover-region-toggle::before,
+    .popover-region-toggle::after {
         border: unset;
     }
-    
+
     .popover-region-container,
     .popover-region-footer-container {
         background-color: #282727;
@@ -440,7 +460,7 @@
         padding: 10px;
     }
     .popover-region .content-item-container {
-        
+
         border: unset;
     }
     .popover-region .content-item-container:hover {
@@ -453,7 +473,7 @@
         color: #e3d7d7;
     }
     .popover-region-header-container {
-        border: unset;   
+        border: unset;
     }
     .content-item-container.unread {
         background-color: #4e4e4f;
@@ -483,11 +503,11 @@
 
 
     /* Button on dashboard */
-    
-    .btn-primary:hover, .btn-primary:focus {
+    .btn-primary:hover,
+    .btn-primary:focus {
         background-color: #186f70;
     }
-    
+
     .btn-outline-secondary:hover,
     .btn-outline-secondary:focus {
         background-color: #484848;
@@ -496,19 +516,17 @@
         background-color: #424040;
         color: #cac7c7;
         box-shadow: unset;
-        
     }
-    
-    /* buttons */
 
+    /* buttons */
     .btn {
         border-radius: 10px;
     }
-    
+
     .btn-outline-secondary {
         border: 1px solid #666;
     }
-    
+
     /* dropdown menus */
     .dropdown-menu .dropdown-item:focus {
         background-color: #313130;
@@ -536,35 +554,35 @@
         animation: unset;
         background-color: #201f1f;
     }
-    
+
     /* modal */
     .modal-content {
         border-radius: 15px;
     }
-    
+
     .modal-header {
         border-bottom: 1px solid #4a4848;
     }
-    
+
     .modal-footer {
         border-top: 1px solid #4a4848;
     }
-    
-    .modal-title{
+
+    .modal-title {
         color: #f2ebeb;
     }
-    
-    .modal-body .list-group-item:hover{
+
+    .modal-body .list-group-item:hover {
         color: #e5e5e5;
     }
-    
+
     .modal-body .list-group-item {
         color: #fff;
         background-color: #2e2e2e;
         margin-top: 5px;
         border-radius: 7px;
     }
-    
+
 
     /* ================= */
     /* courses overview */
@@ -578,10 +596,29 @@
     }
     .courses .coursebox.even {
         background-color: #242424;
-        border-radius:5px;
+        border-radius: 5px;
     }
     .course-content ul li.section.main {
         border-bottom: 1px solid #444;
+    }
+    div.availabilityinfo .badge.badge-info {
+        background-color: #373737;
+        border: 0;
+        border-radius: 15px;
+        padding: 5px 15px;
+        color: #eeecec;
+        font-weight: 500;
+    }
+    div.availabilityinfo::before {
+        color: #ff6c6c;
+        font-size: 16px;
+    }
+
+    /* new icons (beta) */
+    
+    img.activityicon[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/pdf-24"] {
+         content:url(http://icons.iconarchive.com/icons/icons8/ios7/24/Files-Pdf-icon.png);
+        filter: invert(100%);
     }
 
     /* ================= */
@@ -630,12 +667,11 @@
     }
 
     /** ==================== */
-    
     /* warning */
     .flashbox {
         background: #222
     }
-    
+
     .flashbox.warning {
         border: 2px solid #d84d4d;
     }
@@ -643,37 +679,36 @@
     /* ================== */
     /* messaging app */
     /* received message bubble */
-    
     .message-app.drawer {
         height: calc(100vh - 60px);
     }
-    
-    .message-app.drawer .footer-container .border-top{
+
+    .message-app.drawer .footer-container .border-top {
         border-top: unset !important;
     }
-    
+
     .message-app .header-container {
         background-color: #242424;
     }
-    
+
     .card-header {
         background-color: #1f1f1f;
         border-color: #4e4d4d;
     }
-    
+
     .message-app.drawer .message.received {
         background-color: #262525 !important;
     }
-    
+
     .message-app.drawer .message.received .tail {
         border-bottom-color: #262525;
     }
-    
+
     .message-app .footer-container {
         background-color: #222;
     }
-    
-    
+
+
     .message-app .footer-container textarea {
         border: unset;
         border-radius: 15px;
@@ -704,11 +739,14 @@
     }
 
     /* nav drawer */
-    div::-webkit-scrollbar-thumb, section::-webkit-scrollbar-thumb, div::-webkit-scrollbar-track, section::-webkit-scrollbar-track {
+    div::-webkit-scrollbar-thumb,
+    section::-webkit-scrollbar-thumb,
+    div::-webkit-scrollbar-track,
+    section::-webkit-scrollbar-track {
         border-radius: 10px;
     }
-    
-    
+
+
     #nav-drawer .list-group a.list-group-item.active {
         background-color: #1e4a51;
         border: 1px solid #1e4a51;
@@ -722,7 +760,8 @@
     .navbar-receptic a.dropdown-item {
         color: #d2d4d7;
     }
-    .navbar-receptic a.dropdown-item:hover, .navbar-receptic a.dropdown-item:focus:hover {
+    .navbar-receptic a.dropdown-item:hover,
+    .navbar-receptic a.dropdown-item:focus:hover {
         background-color: #424040;
         color: #fff;
     }
@@ -736,7 +775,7 @@
         background-color: #242424;
         box-shadow: 0px 1px #2e2c2c;
     }
-    body.shrinkablenavdrawer #nav-drawer.closed{
+    body.shrinkablenavdrawer #nav-drawer.closed {
         background-color: #212020;
     }
     #nav-drawer {
@@ -755,7 +794,8 @@
     }
     #nav-drawer .list-group div.list-group-item:hover,
     #nav-drawer .list-group a.list-group-item:hover {
-        border: 1px solid transparent;;
+        border: 1px solid transparent;
+        ;
         border-radius: 10px;
         background-color: #333030;
     }
@@ -767,39 +807,45 @@
 
     /* =========== */
     /* evaluations */
-    .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
-        background-color:#262525;
+    .nav-tabs .nav-link.active,
+    .nav-tabs .nav-item.show .nav-link {
+        background-color: #262525;
         color: #fff;
-        border-color:#827f7f;
+        border-color: #827f7f;
     }
-    .nav-tabs{
+    .nav-tabs {
         border-bottom: 1px solid #827f7f;
     }
-    
+
     /* =========== */
     /* quiz */
-    .modal-content, .moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content{
+    .modal-content,
+    .moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content {
         background-color: #262525;
     }
-    .moodle-dialogue-base .closebutton::after, .user-enroller-panel .uep-header .close:after, .user-enroller-panel .uep-header .moodle-dialogue-base .closebutton:after, .moodle-dialogue-base .user-enroller-panel .uep-header .closebutton:after{
+    .moodle-dialogue-base .closebutton::after,
+    .user-enroller-panel .uep-header .close:after,
+    .user-enroller-panel .uep-header .moodle-dialogue-base .closebutton:after,
+    .moodle-dialogue-base .user-enroller-panel .uep-header .closebutton:after {
         color: #47a4b9;
     }
-    #page-mod-quiz-view table.quizattemptsummary tr.bestrow td{
+    #page-mod-quiz-view table.quizattemptsummary tr.bestrow td {
         background-color: #1f1f1f;
     }
-    .moodle-dialogue-base .moodle-dialogue-lightbox{
-        background-color:#272727;
+    .moodle-dialogue-base .moodle-dialogue-lightbox {
+        background-color: #272727;
     }
     .path-mod-quiz #mod_quiz_navblock .qnbutton .thispageholder {
         border: unset;
     }
-    .path-mod-quiz #mod_quiz_navblock span.qnbutton{
+    .path-mod-quiz #mod_quiz_navblock span.qnbutton {
         background-color: #2d2d2d;
     }
-    .path-mod-quiz #mod_quiz_navblock .qnbutton.notyetanswered .trafficlight, .path-mod-quiz #mod_quiz_navblock .qnbutton.invalidanswer .trafficlight{
+    .path-mod-quiz #mod_quiz_navblock .qnbutton.notyetanswered .trafficlight,
+    .path-mod-quiz #mod_quiz_navblock .qnbutton.invalidanswer .trafficlight {
         background-color: #7b7a7a;
     }
-    
+
     #page-mod-quiz-attempt .que,
     #page-mod-quiz-review .que,
     #page-question-preview .que {
@@ -834,26 +880,33 @@
     }
 
     /* =========== */
-    
     /* Upload */
-    
-    .filepicker-filelist .dndupload-target, .filemanager-container .dndupload-target, .filepicker-filelist.dndupload-over .dndupload-target, .filemanager-container.dndupload-over .dndupload-target {
+    .filepicker-filelist .dndupload-target,
+    .filemanager-container .dndupload-target,
+    .filepicker-filelist.dndupload-over .dndupload-target,
+    .filemanager-container.dndupload-over .dndupload-target {
         background-color: #222;
     }
-    
-    
-   
-    
-    .fp-upload-form, .fp-iconview, .fp-filename-field, 
-    .fp-filename .text-truncate, .fp-iconview .fp-filename-field .fp-filename, 
-    .fp-content .card, .file-picker .fp-content  {
+
+
+
+
+    .fp-upload-form,
+    .fp-iconview,
+    .fp-filename-field,
+    .fp-filename .text-truncate,
+    .fp-iconview .fp-filename-field .fp-filename,
+    .fp-content .card,
+    .file-picker .fp-content {
         background-color: #1e1d1d !important;
     }
 
-    .fp-thumbnail, .fp-reficons1, .fp-reficons2 {
+    .fp-thumbnail,
+    .fp-reficons1,
+    .fp-reficons2 {
         border: unset !important;
     }
-    
+
     .custom-select {
         width: 100%;
         background-color: #2a2a2a;
@@ -863,29 +916,32 @@
         border-radius: 5px;
         color: #fff;
     }
-    
+
     .custom-select option {
         background-color: #242424;
     }
-    
-    .custom-select option:hover{
-        background-color:#292929
+
+    .custom-select option:hover {
+        background-color: #292929
     }
-    
-    button.close span, .moodle-dialogue-base button.closebutton span {
+
+    button.close span,
+    .moodle-dialogue-base button.closebutton span {
         color: #fff;
     }
-    
-    button.close, .moodle-dialogue-base button.closebutton {
+
+    button.close,
+    .moodle-dialogue-base button.closebutton {
         background-color: transparent !important;
         opacity: 1;
     }
-    
-    .close, .moodle-dialogue-base .closebutton {
+
+    .close,
+    .moodle-dialogue-base .closebutton {
         text-shadow: unset;
     }
-    
-/*     .fp-toolbar .btn-secondary, .fp-toolbar .btn-default, .fp-toolbar .atto_generico_buttons button, .fp-toolbar .atto_generico_buttons button, .fp-toolbar .wikisearch form input, .wikisearch form .fp-toolbar input, .fp-toolbar #page-mod-forum-view #id_advancedadddiscussion, #page-mod-forum-view .fp-toolbar #id_advancedadddiscussion, .fp-toolbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"], #page-mod-forum-discuss .fp-toolbar button[data-action="forum-advanced-reply"], .fp-viewbar .btn-secondary, .fp-viewbar .btn-default, .fp-viewbar .atto_generico_buttons button, .atto_generico_buttons .fp-viewbar button, .fp-viewbar .wikisearch form input, .wikisearch form .fp-viewbar input, .fp-viewbar #page-mod-forum-view #id_advancedadddiscussion, #page-mod-forum-view .fp-viewbar #id_advancedadddiscussion, .fp-viewbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"], #page-mod-forum-discuss .fp-viewbar button[data-action="forum-advanced-reply"] {
+
+    /*     .fp-toolbar .btn-secondary, .fp-toolbar .btn-default, .fp-toolbar .atto_generico_buttons button, .fp-toolbar .atto_generico_buttons button, .fp-toolbar .wikisearch form input, .wikisearch form .fp-toolbar input, .fp-toolbar #page-mod-forum-view #id_advancedadddiscussion, #page-mod-forum-view .fp-toolbar #id_advancedadddiscussion, .fp-toolbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"], #page-mod-forum-discuss .fp-toolbar button[data-action="forum-advanced-reply"], .fp-viewbar .btn-secondary, .fp-viewbar .btn-default, .fp-viewbar .atto_generico_buttons button, .atto_generico_buttons .fp-viewbar button, .fp-viewbar .wikisearch form input, .wikisearch form .fp-viewbar input, .fp-viewbar #page-mod-forum-view #id_advancedadddiscussion, #page-mod-forum-view .fp-viewbar #id_advancedadddiscussion, .fp-viewbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"], #page-mod-forum-discuss .fp-viewbar button[data-action="forum-advanced-reply"] {
     background-color: #4e4a4a;
     border: 1px solid #1e1d1d;
     
@@ -894,93 +950,91 @@
     .fptoolbar .btn-secondary ::before,  .fp-toolbar .btn-default ::before, .fp-toolbar .atto_generico_buttons button ::before, .fp-toolbar .atto_generico_buttons button ::before, .fp-toolbar .wikisearch form input ::before, .wikisearch form .fp-toolbar input ::before,  .fp-toolbar #page-mod-forum-view #id_advancedadddiscussion ::before,#page-mod-forum-view .fp-toolbar #id_advancedadddiscussion::before, fp-toolbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"] ::before, #page-mod-forum-discuss .fp-toolbar button[data-action="forum-advanced-reply"] ::before, .fp-viewbar .btn-secondary ::before,.fp-viewbar .btn-default ::before,  .fp-viewbar .atto_generico_buttons button ::before, .fp-viewbar .wikisearch form input ::before, .wikisearch form .fp-viewbar input ::before, .fp-viewbar #page-mod-forum-view #id_advancedadddiscussion ::before, .fp-viewbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"] ::before, #page-mod-forum-discuss .fp-viewbar button[data-action="forum-advanced-reply"] ::before, i .icon .fa .fa-refresh .fa-fw ::before   {
         color: #f2e4e4 !important ;
     } */
-    
     /* peer review */
-    
-    .path-mod-workshop #workshop-viewlet-yourgrades .finalgrades .grade.submissiongrade, .path-mod-workshop #workshop-viewlet-yourgrades .finalgrades .grade.assessmentgrade {
-        background-color:#353737;
+    .path-mod-workshop #workshop-viewlet-yourgrades .finalgrades .grade.submissiongrade,
+    .path-mod-workshop #workshop-viewlet-yourgrades .finalgrades .grade.assessmentgrade {
+        background-color: #353737;
         border: 1px solid #6e6e6e;
     }
-    
+
     .path-mod-workshop .userplan {
         border-radius: 15px;
         border-color: #686868;
     }
-    
+
     .path-mod-workshop .userplan dt div {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        height:100%;
+        height: 100%;
         align-items: center;
     }
-    
+
     .path-mod-workshop .submission-summary .userdate {
         color: #aca9a9;
     }
-    
+
     .path-mod-workshop .userplan dt .actions {
         display: inline;
     }
-    
+
     .path-mod-workshop .userplan dt {
         background-color: #1b1b1b;
         text-align: center;
         vertical-align: middle !important;
         border-color: #686868;
     }
-    
+
     .path-mod-workshop .userplan .nonactive.phasetasks {
         background-color: #0c0c0c;
         border-color: #686868;
     }
     .path-mod-workshop .userplan dt.active {
-        
+
         background-color: #346c2a;
         color: #fff;
     }
-    
-    .path-mod-workshop .userplan dd.active  {
+
+    .path-mod-workshop .userplan dd.active {
         background-color: #2a5b21;
         color: #fff;
     }
-    
+
     /* assessement */
-    
     .path-mod-workshop .assessment-full {
         background-color: #201f1f;
         border-radius: 13px;
         border: 1px solid #7d7575;
     }
-    
+
     .path-mod-workshop .assessment-full .header {
         background-color: #201f1f;
         border-radius: 13px;
     }
-    
-    .path-mod-workshop .assessment-full .header .userdate{
+
+    .path-mod-workshop .assessment-full .header .userdate {
         color: #fff
     }
-    
+
     /* submission */
     .path-mod-workshop .submission-full {
-       
+
         background-color: #201f1f;
         border-radius: 13px;
         border: 1px solid #7d7575;
     }
-    
+
     .path-mod-workshop .submission-full .header {
-         
+
         background-color: #201f1f;
         border-radius: 13px;
     }
-    
-    .path-mod-workshop .submission-full .header .userdate{
+
+    .path-mod-workshop .submission-full .header .userdate {
         color: #fff
     }
-    
-    
+
+
     /* other things I don't remember */
     .switch input + label::before {
         background-color: #776a6a;
@@ -1001,105 +1055,106 @@
         background-color: #3c3939;
         border-color: #626262;
     }
-        
+
     /* ========== */
     /* login page */
-    
     #page-login-index .input-group .input-group-text {
         background-color: #393939;
-        border-radius: 15px 0px 0px 15px;;
+        border-radius: 15px 0px 0px 15px;
+        ;
         width: 36px;
         text-align: center;
     }
-    
+
     #page-login-index .input-group .input-group-text ::before {
-        
+
         color: white;
     }
-    
-    #page-login-index .loginpanelbg{
+
+    #page-login-index .loginpanelbg {
         background-color: #1f1e1e;
     }
-    #page-login-index  #accordion .card-header{
+    #page-login-index #accordion .card-header {
         background-color: unset;
     }
-    
+
     #page-login-index .card {
         border-radius: 15px;
         background-color: #171717;
     }
-    
-    #page-login-index .input-group-addon{
+
+    #page-login-index .input-group-addon {
         background-color: #2d2b2b;
     }
-    #page-login-index .glyphicon-log-in:before{
+    #page-login-index .glyphicon-log-in:before {
         color: #fff !important;
     }
-    #page-login-index .btn-success{
-        color: #fff  !important;;
+    #page-login-index .btn-success {
+        color: #fff !important;
+        ;
         background-image: unset;
         background-color: #3c7919;
         border-color: transparent;
     }
-    #page-login-index div#wrap{
+    #page-login-index div#wrap {
         background-image: unset;
         background-color: #070707;
-    } 
+    }
 }
 
 @-moz-document domain("medias.unamur.be") {
-    
+
     /* video player */
     #player_block .player-mask {
         cursor: pointer;
     }
-    
+
     #header {
         background-color: #333;
         color: #717171;
     }
-    
+
     #container {
         background-color: #1c1c1c;
         color: #ececec;
     }
-    
+
     #player_block .player-seekbar-container {
         left: 0.3em;
         right: 0.3em;
     }
-    
+
     .button {
         color: #e5e5e5;
     }
-    
+
     #global .main-title {
-        
+
         background-color: #1c1c1c;
         color: #ececec;
     }
-    
-    #player_block .player-seekbar-left, #player_block .player-seekbar-right {
+
+    #player_block .player-seekbar-left,
+    #player_block .player-seekbar-right {
         visibility: hidden;
     }
-    
+
     body {
         background-color: #171717;
         color: #fff;
     }
-    
+
     #player_block .player-controls .player-ctrl-menu-container {
         background: #000000e3;
-        border-radius: 15px 15px 0px 0px ;
+        border-radius: 15px 15px 0px 0px;
     }
-    
+
     #player_block.player-controls-hover .player-controls {
         user-select: none;
     }
-    
-    
+
+
     #player_block .player-mask div {
         visibility: hidden !important;
     }
-    
 }
