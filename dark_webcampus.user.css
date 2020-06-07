@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.4.0
+@version        0.5.0
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
@@ -11,6 +11,8 @@ domain("auth.unamur.be") {
 
     /* Main colors */
     body {}
+
+
 
     ul.navbar-nav.d-none.d-md-flex::after {
         content: "Webcampus";
@@ -29,6 +31,27 @@ domain("auth.unamur.be") {
         top: 0px;
         margin-top: 60px !important;
     }
+    
+    .mr-auto, .mx-auto {
+        margin: 0 !important;
+        margin-right: 0 !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+    #page-header .logo img[alt="WebCampus"] {
+        content: url(http://drive.google.com/uc?id=1eIYldsdNtWjG7NG6tRgD150Xe9xdUWPt);
+        max-height: 130px;
+        vertical-align: middle;
+
+
+    }
+    
+    .path-my #region-main .card-body.pr-1.course-info-container {
+        border-radius: 0px;
+    }
 
 
     #page-wrapper #page-footer {
@@ -36,13 +59,13 @@ domain("auth.unamur.be") {
         margin-left: 10px;
         margin-right: 10px;
     }
-    
+
     #page-footer .fa.fa-phone {
         visibility: hidden;
     }
-    
+
     #page-footer .contactinfo::before {
-        content:"\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.4.0 \A \A";
+        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.0 \A \A";
         white-space: pre;
         text-align: center;
         color: #e7e7e7;
@@ -195,9 +218,15 @@ domain("auth.unamur.be") {
     }
 
     /* editor */
-    .editor_atto {
-        border: 1px solid #6e6b6b;
+    .editor_atto_wrap {
+        border: 1px solid #8a8686;
         border-radius: 15px;
+    }
+    
+    .qtype_essay_editor.qtype_essay_response::after{
+        content: "⚠ Les couleurs du sélecteur de couleurs sont hardcodées. Pour revenir à la couleur par défaut, il y a un bouton \"Supprimer le format\".";
+        margin-left: 15px;
+        font-size: 14px;
     }
 
     .editor_atto .editor_atto_toolbar {
@@ -205,6 +234,7 @@ domain("auth.unamur.be") {
         border-radius: 15px 15px 0px 0px;
         background-color: #262626;
         border: unset;
+        border-bottom: 1px solid #8a8686;
     }
 
     .editor_atto .editor_atto_content.form-control {
@@ -215,8 +245,39 @@ domain("auth.unamur.be") {
         border-color: #525252 !important;
     }
 
+    .editor_atto .atto_clear_button_removeFormat .icon::before {
+        content: url('https://api.iconify.design/ic:baseline-format-clear.svg?height=19');
+        vertical-align: -0.125em;
+        filter: invert(80%)
+    }
+
+    div.editor_atto_toolbar button[disabled] {
+        background-color: #353535 !important;
+    }
+
+    div.editor_atto_toolbar div.atto_group {
+        background-color: #262626;
+    }
+
+    .editor_atto .atto_clear_button_removeFormat .icon {
+        padding: 0;
+        margin-right: 2px;
+    }
+
+    .editor_atto .atto_bsgrid_button_iconone {
+        vertical-align: middle;
+        padding-top: 1px;
+    }
+
+    .editor_atto .atto_clear_button_removeFormat {
+        /*         padding: 0px 9px; */
+        vertical-align: middle;
+        margin: 0px;
+    }
+
     .editor_atto .editor_atto_content_wrap {
         background-color: #1d1d1d;
+        color: unset;
         border: unset;
         border-radius: 0px 0px 15px 15px;
     }
@@ -227,6 +288,10 @@ domain("auth.unamur.be") {
         background-image: unset !important;
         background-color: #525050 !important;
     }
+    
+    .editor_atto_menu .dropdown-menu>li>a {
+        margin: 0px;
+    }
 
     .editor_atto_menu .dropdown-menu .atto_menuentry {
         display: flex;
@@ -234,6 +299,22 @@ domain("auth.unamur.be") {
         align-items: center;
     }
 
+    .open.atto_title_button.atto_menu > .dropdown-menu {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        height: 12em
+    }
+    
+    .open.atto_fontcolor_button.atto_menu .dropdown-menu li {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .open.atto_fontcolor_button.atto_menu .dropdown-menu li + li {
+        display: flex;
+    }
+    
     .open.atto_menu > .dropdown-menu {
         display: grid;
     }
@@ -261,8 +342,65 @@ domain("auth.unamur.be") {
     }
 
     .editor_atto_notification .atto_info {
-        background-color: #222121;
+        background-color: #1E1E1E;
         margin-left: 20px;
+    }
+
+    .CodeMirror div.CodeMirror-cursor {
+        color: #D4D4D4;
+        border-color: #D4D4D4;
+    }
+
+    .CodeMirror-focused .CodeMirror-selected {
+        background-color: #264f78;
+    }
+
+    .CodeMirror-selected {
+        background-color: #313d41;
+    }
+
+    .CodeMirror-gutters {
+        border-right: 1px solid #303030;
+    }
+
+
+    .CodeMirror {
+        width: unset !important;
+        background: #1E1E1E;
+        color: #D4D4D4;
+        border-radius: 0px 0px 15px 15px;
+        border-top: 0;
+        line-height: 1.2;
+        font-size: 12px;
+    }
+
+    .CodeMirror-gutter {
+        background: #1d1d1d;
+        border: 0;
+    }
+
+    .cm-s-default .cm-tag {
+        color: #569CD6;
+    }
+
+    .cm-s-default .cm-comment {
+        color: #608B4E;
+    }
+
+    .cm-s-default .cm-attribute {
+        color: #9CDCFE;
+    }
+
+    .cm-s-default .cm-string {
+        color: #CE9178;
+    }
+
+    .cm-s-default .cm-variable {
+        color: #4EC9B0;
+    }
+
+    .cm-s-default .cm-property {
+        color: #DCDCAA;
     }
 
     /* text field */
@@ -453,12 +591,11 @@ domain("auth.unamur.be") {
     }
 
     /* block with personal files */
-    
     .ygtvfocus {
         background-color: #282727;
     }
-    
-  
+
+
     /* notifications */
     .navbar .popover-region-container {
         top: 2.5rem;
@@ -469,7 +606,7 @@ domain("auth.unamur.be") {
     .popover-region-toggle::after {
         border: unset;
     }
-    
+
 
     .popover-region-container,
     .popover-region-footer-container {
@@ -634,13 +771,13 @@ domain("auth.unamur.be") {
     }
 
     /* new icons (beta) */
-    
-    img.activityicon, #page-mod-folder-view .fp-icon .icon{
+    img.activityicon,
+    #page-mod-folder-view .fp-icon .icon {
         height: 24px;
         width: 24px;
         filter: invert(100%);
     }
-    
+
     /* URL */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/url/1590338487/icon"] {
         content: url('https://api.iconify.design/mdi:link-variant.svg?height=24');
@@ -650,68 +787,69 @@ domain("auth.unamur.be") {
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/forum/1590338487/icon"] {
         content: url('https://api.iconify.design/ic:round-forum.svg?height=24');
     }
-    
+
     /* Workshop / Peer review */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/workshop/1590338487/icon"] {
         content: url('https://api.iconify.design/uil:feedback.svg?height=24');
     }
-    
+
     /* Quiz */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/quiz/1590338487/icon"] {
         content: url('https://api.iconify.design/ant-design:form-outlined.svg?height=24');
     }
-    
+
     /* PDF */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/pdf-24"],
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/amanote/1590338487/icon"] {
-        content:url('https://api.iconify.design/bx:bxs-file-pdf.svg?height=25');
+        content: url('https://api.iconify.design/bx:bxs-file-pdf.svg?height=25');
     }
-    
+
     /* Vidéo */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/ubicast/1590338487/icon"],
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/mpeg-24"]{
+    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/mpeg-24"] {
         content: url('https://api.iconify.design/carbon:play-filled.svg?height=24');
     }
-    
+
     /* Zip */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/archive-24"] {
         content: url('https://api.iconify.design/clarity:file-zip-solid.svg?height=24');
     }
-    
-     /* Link to webcampus */
+
+    /* Link to webcampus */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/page/1590338487/icon"] {
         content: url('https://api.iconify.design/bx:bxs-note.svg?height=24');
     }
-    
-     /* Source code */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/sourcecode-24"], img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/markup-24"] {
+
+    /* Source code */
+    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/sourcecode-24"],
+    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/markup-24"] {
         content: url('https://api.iconify.design/mdi:file-code.svg?height=54');
     }
-    
-     /* Png */
+
+    /* Png */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/png-24"] {
         content: url('https://api.iconify.design/bx:bxs-file-png.svg?height=25');
     }
-     /* Jpg */
+    /* Jpg */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/jpeg-24"] {
         content: url('https://api.iconify.design/bx:bxs-file-jpg.svg?height=25');
     }
-    
+
     /* Word */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/document-24"] {
         content: url('https://api.iconify.design/mdi:file-word.svg?height=25');
     }
-    
+
     /* Powerpoint */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/powerpoint-24"] {
         content: url('https://api.iconify.design/mdi:file-powerpoint.svg?height=25');
     }
-    
+
     /* Devoir (upload) */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/assign/1590338487/icon"] {
         content: url('https://api.iconify.design/ic:round-file-upload.svg?height=24');
     }
-    
+
     /* Folder */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/folder/1590338487/icon"] {
         content: url('https://api.iconify.design/ic:round-folder.svg?height=24');
@@ -719,12 +857,12 @@ domain("auth.unamur.be") {
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/folder-24"] {
         content: url('https://api.iconify.design/ant-design:folder-open-filled.svg');
     }
-    
+
     /* Scheduler */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/scheduler/1590338487/icon"] {
         content: url('https://api.iconify.design/mdi:calendar-clock.svg?height=24');
     }
-    
+
     /* Question (choice) */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/choice/1590338487/icon"] {
         content: url('https://api.iconify.design/mdi:comment-question.svg?height=24');
@@ -734,32 +872,32 @@ domain("auth.unamur.be") {
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/glossary/1590338487/icon"] {
         content: url(' https://api.iconify.design/bx:bx-sort-a-z.svg?height=24');
     }
-    
+
     /* Certificate */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/customcert/1590338487/icon"] {
         content: url('https://api.iconify.design/mdi:certificate.svg?height=24');
     }
-    
+
     /* Wooclap */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/wooclap/1590338487/icon"] {
         content: url('https://api.iconify.design/ls:w.svg?height=24&inline=true');
     }
-    
+
     /* Choose a group */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/choicegroup/1590338487/icon"] {
         content: url('https://api.iconify.design/bi:people-fill.svg?height=24');
     }
-    
+
     /* Generic text file */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/text-24"] {
         content: url('https://api.iconify.design/eva:file-fill.svg?height=25');
     }
-    
+
     /* Chat */
     img.activityicon[src="https://webcampus.unamur.be/theme/image.php/receptic/chat/1590338487/icon"] {
         content: url('https://api.iconify.design/bi:chat-dots-fill.svg?height=24');
     }
-    
+
     /* Amanote thingy at the right */
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/folder"] {
         content: url('https://api.iconify.design/ic:round-folder.svg?height=16');
@@ -769,10 +907,10 @@ domain("auth.unamur.be") {
         content: url('https://api.iconify.design/eva:file-fill.svg?height=16');
         filter: invert(100%);
     }
-    
-    
-    
-    
+
+
+
+
     /* ================= */
     /* home */
     /* popover when mouse hover calendar */
@@ -974,10 +1112,16 @@ domain("auth.unamur.be") {
     #page-mod-quiz-attempt .que {
         box-shadow: unset;
     }
-    
+
     .modal-content,
     .moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content {
         background-color: #262525;
+    }
+    .moodle-dialogue-base .closebutton,
+    .user-enroller-panel .uep-header .close,
+    .user-enroller-panel .uep-header .moodle-dialogue-base .closebutton,
+    .moodle-dialogue-base .user-enroller-panel .uep-header .closebutton {
+        background-image: none;
     }
     .moodle-dialogue-base .closebutton::after,
     .user-enroller-panel .uep-header .close:after,
@@ -997,11 +1141,11 @@ domain("auth.unamur.be") {
     .path-mod-quiz #mod_quiz_navblock span.qnbutton {
         background-color: #2d2d2d;
     }
-    
+
     .path-mod-quiz #mod_quiz_navblock .qnbutton.answersaved .trafficlight {
         background-color: #84a8aa;
     }
-    
+
     .path-mod-quiz #mod_quiz_navblock .qnbutton.notyetanswered .trafficlight,
     .path-mod-quiz #mod_quiz_navblock .qnbutton.invalidanswer .trafficlight {
         background-color: #7b7a7a;
@@ -1076,6 +1220,8 @@ domain("auth.unamur.be") {
         background-size: 8px 10px;
         border-radius: 5px;
         color: #fff;
+        margin-top:4px;
+        margin-bottom: 4px;
     }
 
     .custom-select option {
@@ -1194,8 +1340,8 @@ domain("auth.unamur.be") {
     .path-mod-workshop .submission-full .header .userdate {
         color: #fff
     }
-    
-    
+
+
 
 
     /* other things I don't remember */
