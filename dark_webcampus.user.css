@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.5.0
+@version        0.5.1
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
@@ -65,7 +65,7 @@ domain("auth.unamur.be") {
     }
 
     #page-footer .contactinfo::before {
-        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.0 \A \A";
+        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.1 \A \A";
         white-space: pre;
         text-align: center;
         color: #e7e7e7;
@@ -223,7 +223,19 @@ domain("auth.unamur.be") {
         border-radius: 15px;
     }
     
-    .qtype_essay_editor.qtype_essay_response::after{
+    .que.essay div.qtype_essay_response textarea {
+        background-color: #1d1d1d;
+    }
+    
+    .que.essay .qtype_essay_response.readonly{
+        background: rgb(40, 40, 40);
+        border-radius: 10px;
+        padding: 10px;
+        color: #c9c9c9;
+    }
+    
+    
+    .qtype_essay_editor.qtype_essay_response:not(.readonly)::after{
         content: "⚠ Les couleurs du sélecteur de couleurs sont hardcodées. Pour revenir à la couleur par défaut, il y a un bouton \"Supprimer le format\".";
         margin-left: 15px;
         font-size: 14px;
@@ -1112,6 +1124,47 @@ domain("auth.unamur.be") {
     #page-mod-quiz-attempt .que {
         box-shadow: unset;
     }
+    
+    .questionflagsaveform {
+        box-shadow: none;
+        border: none;
+    }
+    
+    
+    input[type=radio] {
+        /* Hide original inputs */
+        visibility: hidden;
+        position: absolute;
+    }
+    
+    input[type=radio]:checked + label:before {
+        content: url('https://api.iconify.design/mdi:radiobox-marked.svg?height=20');
+        vertical-align: -0.125em;
+        filter: invert(69%) sepia(76%) saturate(572%) hue-rotate(173deg) brightness(102%) contrast(101%);
+    }
+    
+    input[type=radio]:disabled:checked + label:before {
+         filter: invert(52%) sepia(11%) saturate(934%) hue-rotate(161deg) brightness(91%) contrast(93%);
+
+    }    
+    
+    input[type=radio]:disabled + label:before {
+        cursor: not-allowed;
+        filter: invert(45%) sepia(6%) saturate(189%) hue-rotate(161deg) brightness(92%) contrast(95%);
+    }
+    
+    input[type=radio] + label:before {
+        content: url('https://api.iconify.design/mdi:radiobox-blank.svg?height=20');
+        filter: invert(85%) sepia(7%) saturate(138%) hue-rotate(151deg) brightness(85%) contrast(91%);
+        vertical-align: -0.125em;
+        height:21px;
+        cursor: pointer;
+        width:21px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        margin-right: 12px;
+        display:inline-block;
+    }
 
     .modal-content,
     .moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content {
@@ -1143,7 +1196,7 @@ domain("auth.unamur.be") {
     }
 
     .path-mod-quiz #mod_quiz_navblock .qnbutton.answersaved .trafficlight {
-        background-color: #84a8aa;
+        background-color: #7df8ff;
     }
 
     .path-mod-quiz #mod_quiz_navblock .qnbutton.notyetanswered .trafficlight,
@@ -1155,6 +1208,7 @@ domain("auth.unamur.be") {
     #page-mod-quiz-review .que,
     #page-question-preview .que {
         background-color: rgb(27, 27, 27);
+        box-shadow: none;
     }
     .que .info {
         background-color: #2a2a2a;
@@ -1178,10 +1232,12 @@ domain("auth.unamur.be") {
     .generaltable td {
         border-color: #464646;
     }
-    table.quizreviewsummary,
+    
+    
     table.quizreviewsummary th.cell,
     table.quizreviewsummary td.cell {
         background-color: #1e1d1d;
+        border: unset;
     }
 
     /* =========== */
@@ -1220,8 +1276,9 @@ domain("auth.unamur.be") {
         background-size: 8px 10px;
         border-radius: 5px;
         color: #fff;
-        margin-top:4px;
+        margin-top: 4px;
         margin-bottom: 4px;
+        margin-left: 10px !important;
     }
 
     .custom-select option {
