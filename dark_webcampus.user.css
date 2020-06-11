@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.5.1
+@version        0.5.2
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
@@ -31,8 +31,9 @@ domain("auth.unamur.be") {
         top: 0px;
         margin-top: 60px !important;
     }
-    
-    .mr-auto, .mx-auto {
+
+    #page-header .mr-auto,
+    .mx-auto {
         margin: 0 !important;
         margin-right: 0 !important;
         display: flex;
@@ -40,15 +41,13 @@ domain("auth.unamur.be") {
         align-items: center;
         width: 100%;
     }
-    
+
     #page-header .logo img[alt="WebCampus"] {
         content: url(http://drive.google.com/uc?id=1eIYldsdNtWjG7NG6tRgD150Xe9xdUWPt);
         max-height: 130px;
         vertical-align: middle;
-
-
     }
-    
+
     .path-my #region-main .card-body.pr-1.course-info-container {
         border-radius: 0px;
     }
@@ -65,7 +64,7 @@ domain("auth.unamur.be") {
     }
 
     #page-footer .contactinfo::before {
-        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.1 \A \A";
+        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.2 \A \A";
         white-space: pre;
         text-align: center;
         color: #e7e7e7;
@@ -222,20 +221,20 @@ domain("auth.unamur.be") {
         border: 1px solid #8a8686;
         border-radius: 15px;
     }
-    
+
     .que.essay div.qtype_essay_response textarea {
         background-color: #1d1d1d;
     }
-    
-    .que.essay .qtype_essay_response.readonly{
+
+    .que.essay .qtype_essay_response.readonly {
         background: rgb(40, 40, 40);
         border-radius: 10px;
         padding: 10px;
         color: #c9c9c9;
     }
-    
-    
-    .qtype_essay_editor.qtype_essay_response:not(.readonly)::after{
+
+
+    .qtype_essay_editor.qtype_essay_response:not(.readonly)::after {
         content: "⚠ Les couleurs du sélecteur de couleurs sont hardcodées. Pour revenir à la couleur par défaut, il y a un bouton \"Supprimer le format\".";
         margin-left: 15px;
         font-size: 14px;
@@ -300,8 +299,8 @@ domain("auth.unamur.be") {
         background-image: unset !important;
         background-color: #525050 !important;
     }
-    
-    .editor_atto_menu .dropdown-menu>li>a {
+
+    .editor_atto_menu .dropdown-menu > li > a {
         margin: 0px;
     }
 
@@ -316,7 +315,7 @@ domain("auth.unamur.be") {
         grid-template-columns: repeat(1, 1fr);
         height: 12em
     }
-    
+
     .open.atto_fontcolor_button.atto_menu .dropdown-menu li {
         display: none;
         margin: 0;
@@ -326,7 +325,7 @@ domain("auth.unamur.be") {
     .open.atto_fontcolor_button.atto_menu .dropdown-menu li + li {
         display: flex;
     }
-    
+
     .open.atto_menu > .dropdown-menu {
         display: grid;
     }
@@ -1103,6 +1102,7 @@ domain("auth.unamur.be") {
     }
     .que .outcome {
         background-color: #232323;
+        border-radius: 15px;
         color: #5fd0c6;
     }
 
@@ -1125,45 +1125,143 @@ domain("auth.unamur.be") {
         box-shadow: unset;
     }
     
+    .que.ddwtos .group1 {
+        background-color: transparent;
+        border: 0;
+        margin: 2px;
+    }
+    
+    .que.ddwtos .group1 {
+        color: #e9e2e2;
+        background-color: #4a4848;
+        border-radius: 15px;
+        box-shadow: 0.15em 0.15em 0.4em #171717;
+    }
+    
+    .que.ddwtos .drag.beingdragged {
+        box-shadow: 3px 3px 4px #171717;
+    }
+    
+    .que.ddwtos .drop:focus, .que.ddwtos .drop.valid-drag-over-drop {
+        box-shadow: 0 0 2px 3px rgb(143, 173, 206);
+    }
+    
+    
+    .que.ddwtos .group1.drop {
+        border-radius: 15px;
+        background-color: #282828;
+    }
+    
+    .que.multianswer .feedbackspan {
+        background-color: #5b5a5a;
+        padding: 10px;
+        box-shadow: 0.5em 0.5em 1em #171616;
+        border: 0;
+        border-radius: 15px;
+        color: #c9c9c9;
+    }
+    
+    
+    .path-mod-quiz input[type=text] {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    
+    .que.ddwtos .readonly .drag {
+        background-color: #2c2c2c;
+        border: 0;
+        color: #f2f2f2;
+        border-radius: 10px;
+    }
+
+    .path-mod-quiz #mod_quiz_navblock .qnbutton {
+        border-radius: 3px;
+    }
+
     .questionflagsaveform {
         box-shadow: none;
         border: none;
     }
+
+    .que .icon.fa-check.text-success:before {
+        color: #69bf56;
+        margin: 4px;
+    }
     
-    
-    input[type=radio] {
+    .que .icon.fa-remove.text-danger:before {
+        color: #ff5454;
+        margin: 4px;
+    }
+
+    .que.multichoice .answer div.specificfeedback {
+        background-color: #2a2a2a;
+        color: #e5e3e3;
+        border-radius: 10px;
+        margin: 5px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+
+    input[type=radio],
+    input[type=checkbox] {
         /* Hide original inputs */
         visibility: hidden;
         position: absolute;
     }
-    
+
+    /* checked */
+    input[type=checkbox]:checked + label:before {
+        content: url('https://api.iconify.design/mdi:checkbox-marked.svg?height=20');
+        vertical-align: -0.125em;
+    }
+
     input[type=radio]:checked + label:before {
         content: url('https://api.iconify.design/mdi:radiobox-marked.svg?height=20');
         vertical-align: -0.125em;
+    }
+
+    input[type=radio]:checked + label:before,
+    input[type=checkbox]:checked + label:before {
+
         filter: invert(69%) sepia(76%) saturate(572%) hue-rotate(173deg) brightness(102%) contrast(101%);
     }
-    
-    input[type=radio]:disabled:checked + label:before {
-         filter: invert(52%) sepia(11%) saturate(934%) hue-rotate(161deg) brightness(91%) contrast(93%);
+    /* checked disabled */
+    input[type=radio]:disabled:checked + label:before,
+    input[type=checkbox]:disabled:checked + label:before {
+        filter: invert(52%) sepia(11%) saturate(934%) hue-rotate(161deg) brightness(91%) contrast(93%);
+    }
 
-    }    
-    
-    input[type=radio]:disabled + label:before {
+    /* disabled unchecked */
+    input[type=radio]:disabled + label:before,
+    input[type=checkbox]:disabled + label:before {
         cursor: not-allowed;
         filter: invert(45%) sepia(6%) saturate(189%) hue-rotate(161deg) brightness(92%) contrast(95%);
     }
-    
+
+    /* enabled unchecked */
+    input[type=checkbox] + label:before {
+        content: url('https://api.iconify.design/mdi:checkbox-blank-outline.svg?height=20');
+        vertical-align: -0.125em;
+    }
+
     input[type=radio] + label:before {
         content: url('https://api.iconify.design/mdi:radiobox-blank.svg?height=20');
-        filter: invert(85%) sepia(7%) saturate(138%) hue-rotate(151deg) brightness(85%) contrast(91%);
         vertical-align: -0.125em;
-        height:21px;
+    }
+
+    input[type=radio] + label:before,
+    input[type=checkbox] + label:before {
+        filter: invert(85%) sepia(7%) saturate(138%) hue-rotate(151deg) brightness(85%) contrast(91%);
+        height: 21px;
         cursor: pointer;
-        width:21px;
+        width: 21px;
         margin-top: 4px;
         margin-bottom: 4px;
         margin-right: 12px;
-        display:inline-block;
+        display: inline-block;
     }
 
     .modal-content,
@@ -1232,8 +1330,8 @@ domain("auth.unamur.be") {
     .generaltable td {
         border-color: #464646;
     }
-    
-    
+
+
     table.quizreviewsummary th.cell,
     table.quizreviewsummary td.cell {
         background-color: #1e1d1d;
