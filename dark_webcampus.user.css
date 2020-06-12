@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.5.2
+@version        0.5.3
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
@@ -64,7 +64,7 @@ domain("auth.unamur.be") {
     }
 
     #page-footer .contactinfo::before {
-        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.2 \A \A";
+        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.3 \A \A";
         white-space: pre;
         text-align: center;
         color: #e7e7e7;
@@ -215,6 +215,38 @@ domain("auth.unamur.be") {
     #theme-receptic-course-settings-card > div {
         border: unset;
     }
+    
+    /* awful hardcoded colors */
+    span[style*="background-color: rgb("]:not([style^="color: rgb("]):not([style*=" color: rgb("]):not([style*="background-color: rgb(255, 255, 255)"]),
+    span[style*="background-color:rgb("]:not([style^="color:rgb("]):not([style*="background-color:rgb(255,255,255)"]){
+        color: #fff !important;
+    }
+    
+    span[style*="background-color: rgb(255, 207, 53)"],span[style*="background-color:rgb(255,207,53)"] {
+        background-color: #bd7800 !important;
+    }
+    
+    span[style="color: rgb(51, 51, 51);"],span[style="color:rgb(51,51,51);"]{
+        color: #888787 !important;
+    }
+    
+    span[style="color:rgb(239,69,64);"], span[style="color: rgb(239, 69, 64);"] {
+        color:#da4f4f !important;
+    }
+    
+    span[style*="background-color: rgb(152, 202, 62)"],span[style*="background-color:rgb(152,202,62)"] {
+        background-color: #52632c !important;
+    }
+    
+    span[style*="background-color: rgb(125, 159, 211)"],span[style*="background-color:rgb(125,159,211)"] {
+        background-color: #07577f !important;
+    }
+    
+    span[style*="background-color: rgb(255, 255, 255)"],span[style*="background-color:rgb(255,255,255)"]{
+        color: #111 !important;
+    }
+    
+
 
     /* editor */
     .editor_atto_wrap {
@@ -1254,7 +1286,7 @@ domain("auth.unamur.be") {
 
     input[type=radio] + label:before,
     input[type=checkbox] + label:before {
-        filter: invert(85%) sepia(7%) saturate(138%) hue-rotate(151deg) brightness(85%) contrast(91%);
+        filter: invert(100%) sepia(0%) saturate(4295%) hue-rotate(71deg) brightness(119%) contrast(88%);
         height: 21px;
         cursor: pointer;
         width: 21px;
@@ -1318,7 +1350,7 @@ domain("auth.unamur.be") {
     }
     .que .formulation {
 
-        color: #b1b1b1;
+        color: #e1e1e1;
     }
     .table th,
     table.collection th,
