@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.5.4
+@version        0.5.5
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
@@ -64,7 +64,7 @@ domain("auth.unamur.be") {
     }
 
     #page-footer .contactinfo::before {
-        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.4 \A \A";
+        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.5 \A \A";
         white-space: pre;
         text-align: center;
         color: #e7e7e7;
@@ -866,6 +866,70 @@ domain("auth.unamur.be") {
         color: #ff6c6c;
         font-size: 16px;
     }
+    
+    /* Progress block */
+    
+    /* done */
+    .block_completion_progress .progressBarCell[style*="background-color:#73A839;"] {
+        background-color: #b3da6e !important;
+    }
+    .block_completion_progress .progressBarCell[style*="background-color:#73A839;"]:hover {
+        background-color: #d1f592 !important;
+    }
+    
+    /* waiting */
+    .block_completion_progress .progressBarCell[style*="background-color:#FFCC00;"] {
+        background-color: #88b6df !important;
+    }
+    .block_completion_progress .progressBarCell[style*="background-color:#FFCC00;"]:hover {
+        background-color: #b2d4f2 !important;
+    }
+    
+    /* not done */
+    .block_completion_progress .progressBarCell[style*="background-color:#025187;"]{
+        background-color: #5f5d5d !important;
+    }
+    .block_completion_progress .progressBarCell[style*="background-color:#025187;"]:hover {
+        background-color: #9b9b9b !important;
+    }
+    
+    .block_completion_progress .progressBarCell[onclick="document.location='';"] {
+        display:none !important;
+    }
+    .block_completion_progress .progressEventInfo a img {
+        margin-bottom: 1em;
+    }
+    
+    .block_completion_progress .progressBarCell.firstProgressBarCell,
+    .block_completion_progress .progressBarCell {
+        border: 0;
+    }
+    
+    .block_completion_progress .progressBarCell .nowDiv {
+        display: none;
+    }
+    
+    li.activity.label.modtype_label .actions   {
+        display: none;
+    }
+    
+    .block_completion_progress .barRow {
+        margin-top: 0px !important;
+        margin-bottom: 10px;
+        height: 15px;
+    }
+    
+    .block_completion_progress .progressBarCell {
+        height: 15px;
+    }
+    
+    .block_completion_progress .progressBarCell .icon {
+        display: none;
+    }
+    
+    .block_completion_progress .progressEventInfo {
+        white-space: normal;
+    }
 
     /* new icons (beta) */
     .ygtvcell .icon {
@@ -884,7 +948,8 @@ domain("auth.unamur.be") {
     }
 
     img.activityicon,
-    #page-mod-folder-view .fp-icon .icon {
+    #page-mod-folder-view .fp-icon .icon,
+    .block_completion_progress .progressEventInfo img {
         height: 24px;
         width: 24px;
         filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
@@ -1021,6 +1086,29 @@ domain("auth.unamur.be") {
     img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/archive"] {
         content: url('https://api.iconify.design/eva:file-fill.svg?height=16');
         filter: invert(100%);
+    }
+    
+    /* text info block */
+    img[src="https://webcampus.unamur.be/theme/image.php/receptic/label/1590338487/icon"] {
+        content: url('https://api.iconify.design/fe:text-align-left.svg?height=24');
+    }
+    
+    /* Not terminated */
+    img[src="https://webcampus.unamur.be/theme/image.php/receptic/block_completion_progress/1590338487/cross"] {
+        content: url('https://api.iconify.design/emojione-monotone:cross-mark.svg?height=12');
+        height: 12px !important;
+        width: 12px !important;
+        vertical-align: -0.125em;
+        filter: invert(55%) sepia(12%) saturate(2496%) hue-rotate(315deg) brightness(99%) contrast(89%) !important;
+    }
+    
+    /* Done */
+    img[src="https://webcampus.unamur.be/theme/image.php/receptic/block_completion_progress/1590338487/tick"] {
+        content: url('https://api.iconify.design/fa-solid:check.svg?height=12');
+        vertical-align: -0.125em;
+        height: 12px !important;
+        width: 12px !important;
+        filter: invert(85%) sepia(24%) saturate(888%) hue-rotate(64deg) brightness(88%) contrast(85%) !important;
     }
 
 
