@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.5.3
+@version        0.5.4
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
@@ -64,7 +64,7 @@ domain("auth.unamur.be") {
     }
 
     #page-footer .contactinfo::before {
-        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.3 \A \A";
+        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.4 \A \A";
         white-space: pre;
         text-align: center;
         color: #e7e7e7;
@@ -134,12 +134,12 @@ domain("auth.unamur.be") {
     }
 
     /* forum */
-    .path-course-view .unread {
+    .path-course-view .activityinstance .unread {
         margin-left: 60px;
         background-color: unset;
     }
 
-    .path-course-view .unread::before {
+    .path-course-view .activityinstance .unread::before {
         content: "";
         font-size: 18px;
         font-family: "FontAwesome";
@@ -147,7 +147,7 @@ domain("auth.unamur.be") {
         padding-right: 5px;
     }
 
-    .path-course-view .unread a {
+    .path-course-view .activityinstance .unread a {
         color: #e9e9e9;
     }
 
@@ -215,37 +215,43 @@ domain("auth.unamur.be") {
     #theme-receptic-course-settings-card > div {
         border: unset;
     }
-    
+
     /* awful hardcoded colors */
     span[style*="background-color: rgb("]:not([style^="color: rgb("]):not([style*=" color: rgb("]):not([style*="background-color: rgb(255, 255, 255)"]),
-    span[style*="background-color:rgb("]:not([style^="color:rgb("]):not([style*="background-color:rgb(255,255,255)"]){
+    span[style*="background-color:rgb("]:not([style^="color:rgb("]):not([style*="background-color:rgb(255,255,255)"]) {
         color: #fff !important;
     }
-    
-    span[style*="background-color: rgb(255, 207, 53)"],span[style*="background-color:rgb(255,207,53)"] {
+
+    span[style*="background-color: rgb(255, 207, 53)"],
+    span[style*="background-color:rgb(255,207,53)"] {
         background-color: #bd7800 !important;
     }
-    
-    span[style="color: rgb(51, 51, 51);"],span[style="color:rgb(51,51,51);"]{
+
+    span[style="color: rgb(51, 51, 51);"],
+    span[style="color:rgb(51,51,51);"] {
         color: #888787 !important;
     }
-    
-    span[style="color:rgb(239,69,64);"], span[style="color: rgb(239, 69, 64);"] {
-        color:#da4f4f !important;
+
+    span[style="color:rgb(239,69,64);"],
+    span[style="color: rgb(239, 69, 64);"] {
+        color: #da4f4f !important;
     }
-    
-    span[style*="background-color: rgb(152, 202, 62)"],span[style*="background-color:rgb(152,202,62)"] {
+
+    span[style*="background-color: rgb(152, 202, 62)"],
+    span[style*="background-color:rgb(152,202,62)"] {
         background-color: #52632c !important;
     }
-    
-    span[style*="background-color: rgb(125, 159, 211)"],span[style*="background-color:rgb(125,159,211)"] {
+
+    span[style*="background-color: rgb(125, 159, 211)"],
+    span[style*="background-color:rgb(125,159,211)"] {
         background-color: #07577f !important;
     }
-    
-    span[style*="background-color: rgb(255, 255, 255)"],span[style*="background-color:rgb(255,255,255)"]{
+
+    span[style*="background-color: rgb(255, 255, 255)"],
+    span[style*="background-color:rgb(255,255,255)"] {
         color: #111 !important;
     }
-    
+
 
 
     /* editor */
@@ -543,6 +549,32 @@ domain("auth.unamur.be") {
         background-color: inherit;
     }
 
+    .block-region .block .minicalendar .calendar-controls .arrow_link.next .arrow {
+        visibility: hidden;
+        position: relative;
+    }
+    .block-region .block .minicalendar .calendar-controls .arrow_link.next .arrow:before {
+        visibility: visible;
+        position: absolute;
+        content: "";
+        font-family: "FontAwesome";
+        font-size: 12;
+        color: inherit;
+    }
+
+    .block-region .block .minicalendar .calendar-controls .arrow_link.previous .arrow {
+        visibility: hidden;
+        position: relative;
+    }
+    .block-region .block .minicalendar .calendar-controls .arrow_link.previous .arrow:before {
+        visibility: visible;
+        position: absolute;
+        content: "";
+        font-family: "FontAwesome";
+        font-size: 12;
+        color: inherit;
+    }
+
     .path-calendar .maincalendar .calendarmonth thead {
         /*         width: 100%; */
     }
@@ -675,7 +707,12 @@ domain("auth.unamur.be") {
         border: unset;
     }
     .content-item-container.unread {
-        background-color: unset;
+        background-color: #333;
+        font-weight: 700;
+    }
+    .content-item-container.unread .content-item-body .notification-message {
+        font-weight: 700;
+        color: #1edcdd;
     }
     .content-item-container.unread:hover {
         background-color: #4e4e4f;
@@ -696,7 +733,7 @@ domain("auth.unamur.be") {
         color: #dbd9d9
     }
     *:before {
-        color: #8e8d8d
+        color: #a5a4a4
     }
 
 
@@ -733,18 +770,35 @@ domain("auth.unamur.be") {
     }
     .dropdown-menu .dropdown-item {
         color: #bfbfbf;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
     .dropdown-menu .dropdown-item.active {
         background-color: #1e4042;
         color: #e3e2e2;
     }
+    .dropdown-menu .dropdown-divider {
+        margin: 0;
+        border-color: #606060;
+    }
     .dropdown-menu .dropdown-item:hover {
         background-color: #333;
         color: #fff;
     }
+    .dropdown-menu :first-child .dropdown-item,
+    .dropdown-menu > :first-child.dropdown-item {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .dropdown-menu :last-child .dropdown-item,
+    .dropdown-menu > :last-child.dropdown-item {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
     .dropdown-menu {
         background-color: #222121;
         border-radius: 10px;
+        padding: 0;
         border-color: #606060;
     }
 
@@ -814,11 +868,26 @@ domain("auth.unamur.be") {
     }
 
     /* new icons (beta) */
+    .ygtvcell .icon {
+        height: 16px;
+        vertical-align: middle;
+        width: 16px;
+        filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
+    }
+
+    img.icon.smallicon,
+    .content-item-container .notification-image img,
+    .notification-area .image-container img {
+        height: 20px;
+        width: 20px;
+        filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
+    }
+
     img.activityicon,
     #page-mod-folder-view .fp-icon .icon {
         height: 24px;
         width: 24px;
-        filter: invert(100%);
+        filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
     }
 
     /* URL */
@@ -827,7 +896,8 @@ domain("auth.unamur.be") {
     }
 
     /* Forum / Annonce */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/forum/1590338487/icon"] {
+    img[src="https://webcampus.unamur.be/theme/image.php/receptic/forum/1590338487/icon"],
+    img[src="https://webcampus.unamur.be/theme/image.php/receptic/mod_forum/1590338487/icon"] {
         content: url('https://api.iconify.design/ic:round-forum.svg?height=24');
     }
 
@@ -870,7 +940,8 @@ domain("auth.unamur.be") {
     }
 
     /* Png */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/png-24"] {
+    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/png-24"],
+    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1590338487/f/png"] {
         content: url('https://api.iconify.design/bx:bxs-file-png.svg?height=25');
     }
     /* Jpg */
@@ -889,7 +960,8 @@ domain("auth.unamur.be") {
     }
 
     /* Devoir (upload) */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/assign/1590338487/icon"] {
+    img[src="https://webcampus.unamur.be/theme/image.php/receptic/assign/1590338487/icon"],
+    img[src="https://webcampus.unamur.be/theme/image.php/receptic/mod_assign/1590338487/icon"] {
         content: url('https://api.iconify.design/ic:round-file-upload.svg?height=24');
     }
 
@@ -1156,34 +1228,35 @@ domain("auth.unamur.be") {
     #page-mod-quiz-attempt .que {
         box-shadow: unset;
     }
-    
+
     .que.ddwtos .group1 {
         background-color: transparent;
         border: 0;
         margin: 2px;
     }
-    
+
     .que.ddwtos .group1 {
         color: #e9e2e2;
         background-color: #4a4848;
         border-radius: 15px;
         box-shadow: 0.15em 0.15em 0.4em #171717;
     }
-    
+
     .que.ddwtos .drag.beingdragged {
         box-shadow: 3px 3px 4px #171717;
     }
-    
-    .que.ddwtos .drop:focus, .que.ddwtos .drop.valid-drag-over-drop {
+
+    .que.ddwtos .drop:focus,
+    .que.ddwtos .drop.valid-drag-over-drop {
         box-shadow: 0 0 2px 3px rgb(143, 173, 206);
     }
-    
-    
+
+
     .que.ddwtos .group1.drop {
         border-radius: 15px;
         background-color: #282828;
     }
-    
+
     .que.multianswer .feedbackspan {
         background-color: #5b5a5a;
         padding: 10px;
@@ -1192,13 +1265,13 @@ domain("auth.unamur.be") {
         border-radius: 15px;
         color: #c9c9c9;
     }
-    
-    
+
+
     .path-mod-quiz input[type=text] {
         margin-top: 5px;
         margin-bottom: 5px;
     }
-    
+
     .que.ddwtos .readonly .drag {
         background-color: #2c2c2c;
         border: 0;
@@ -1219,7 +1292,7 @@ domain("auth.unamur.be") {
         color: #69bf56;
         margin: 4px;
     }
-    
+
     .que .icon.fa-remove.text-danger:before {
         color: #ff5454;
         margin: 4px;
@@ -1244,13 +1317,95 @@ domain("auth.unamur.be") {
         position: absolute;
     }
 
+
+    /* Don't affect other types of input */
+    label > input[type=radio],
+    label > input[type=checkbox] {
+        visibility: visible;
+    }
+    
+    .custom-radio .custom-control-label:after {
+        visibility: hidden;
+        content: unset;
+    }
+    .custom-control {
+        padding-left: unset;
+    }
+   .custom-radio .custom-control-label::before {
+       background: none;
+       position: unset;
+       top: unset;
+       left: unset;
+    }
+    .custom-radio .custom-control-input:checked~.custom-control-label::before,
+    .custom-radio .custom-control-input:active~.custom-control-label::before{
+       background: none;
+    }
+    
+
+    .switch input[type=checkbox]:checked + label:before {
+        content: "";
+        filter: unset;
+    }
+
+    .switch input[type=checkbox] + label::before,
+    .switch input[type=checkbox] + label::after {
+        content: "";
+        position: absolute;
+        top: calc(50% - .825rem);
+        left: 0;
+        width: 3.3rem;
+        height: 1.65rem;
+        bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-right: 0;
+        filter: unset;
+        display: block;
+    }
+    
+    .switch input[type=checkbox] + label::after {
+        margin-top: 2px;
+        left: 2px;
+        width: calc(1.65rem - 4px);
+        height: calc(1.65rem - 4px);
+        border-radius: 50%;
+        background-color: #fff;
+        -webkit-transition: .2s all;
+        -o-transition: .2s all;
+        transition: .2s all;
+    }
+
+    /*     .switch input:checked + label::before {
+        background-color: #1a9e9f;
+    }
+    .switch input + label::before {
+        right: 0;
+        background-color: #dee2e6;
+        border-radius: 1.65rem;
+        -webkit-transition: .2s all;
+        -o-transition: .2s all;
+        transition: .2s all;
+    }
+    .switch input + label::before,
+    .switch input + label::after {
+        content: "";
+        position: absolute;
+        top: calc(50% - .825rem);
+        left: 0;
+        width: 3.3rem;
+        height: 1.65rem;
+        bottom: 0;
+        display: block;
+    } */
     /* checked */
     input[type=checkbox]:checked + label:before {
         content: url('https://api.iconify.design/mdi:checkbox-marked.svg?height=20');
         vertical-align: -0.125em;
     }
 
-    input[type=radio]:checked + label:before {
+    input[type=radio]:checked + label:before,
+    label > input[type=radio]:checked :before {
         content: url('https://api.iconify.design/mdi:radiobox-marked.svg?height=20');
         vertical-align: -0.125em;
     }
@@ -1267,7 +1422,7 @@ domain("auth.unamur.be") {
     }
 
     /* disabled unchecked */
-    input[type=radio]:disabled + label:before,
+    input[type=radio]:disabled + label :before,
     input[type=checkbox]:disabled + label:before {
         cursor: not-allowed;
         filter: invert(45%) sepia(6%) saturate(189%) hue-rotate(161deg) brightness(92%) contrast(95%);
