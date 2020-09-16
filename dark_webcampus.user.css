@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.5.7
+@version        0.5.8
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
@@ -47,6 +47,12 @@ domain("auth.unamur.be") {
         max-height: 130px;
         vertical-align: middle;
     }
+    
+    #page-login-index #page-content #region-main img.img-fluid.text-center {
+        content: url(http://drive.google.com/uc?id=1eIYldsdNtWjG7NG6tRgD150Xe9xdUWPt);
+        max-height:130px;
+        vertical-align: middle;
+    }
 
     .path-my #region-main .card-body.pr-1.course-info-container {
         border-radius: 0px;
@@ -64,7 +70,7 @@ domain("auth.unamur.be") {
     }
 
     #page-footer .contactinfo::before {
-        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.7 \A \A";
+        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.8 \A \A";
         white-space: pre;
         text-align: center;
         color: #e7e7e7;
