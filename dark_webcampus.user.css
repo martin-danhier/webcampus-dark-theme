@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.5.10
+@version        0.5.11
 @description    Dark theme for webcampus
 @author         Martin Danhier
 ==/UserStyle== */
@@ -70,7 +70,7 @@ domain("auth.unamur.be") {
     }
 
     #page-footer .contactinfo::before {
-        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.10 \A \A";
+        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.11 \A \A";
         white-space: pre;
         text-align: center;
         color: #e7e7e7;
@@ -1001,157 +1001,157 @@ domain("auth.unamur.be") {
     }
 
     /* URL */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/url/1600876976/icon"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/url/"][src$="/icon"] {
         content: url('https://api.iconify.design/mdi:link-variant.svg?height=24');
     }
 
     /* Forum / Annonce */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/mod_forum/1600876976/icon"],
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/forum/1600876976/icon"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/mod_forum/"][src$="/icon"],
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/forum/"][src$="/icon"] {
         content: url('https://api.iconify.design/ic:round-forum.svg?height=24');
     }
 
     /* Workshop / Peer review */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/workshop/1600876976/icon"],
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/feedback/1600876976/icon"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/workshop/"][src$="/icon"],
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/feedback/"][src$="/icon"] {
         content: url('https://api.iconify.design/uil:feedback.svg?height=24');
     }
 
     /* Quiz */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/quiz/1600876976/icon"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/quiz/1600876976/icon"] {
         content: url('https://api.iconify.design/ant-design:form-outlined.svg?height=24');
     }
 
     /* PDF */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1600876976/f/pdf"],
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1600876976/f/pdf-24"],
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/amanote/1600876976/icon"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/pdf"],
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/pdf-24"],
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/amanote/"][src$="/icon"] {
         content: url('https://api.iconify.design/bx:bxs-file-pdf.svg?height=25');
     }
 
     /* Vidéo */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/ubicast/1600876976/icon"],
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1600876976/f/mpeg-24"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/ubicast/"][src$="/icon"],
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/mpeg-24"] {
         content: url('https://api.iconify.design/carbon:play-filled.svg?height=24');
     }
 
     /* Zip */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1600876976/f/archive-24"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/archive-24"] {
         content: url('https://api.iconify.design/clarity:file-zip-solid.svg?height=24');
     }
 
     /* Link to webcampus */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/page/1600876976/icon"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/page/"][src$="/icon"] {
         content: url('https://api.iconify.design/bx:bxs-note.svg?height=24');
     }
 
     /* Source code */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1600876976/f/sourcecode-24"],
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1600876976/f/markup-24"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/sourcecode-24"],
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/markup-24"] {
         content: url('https://api.iconify.design/mdi:file-code.svg?height=54');
     }
 
     /* Png */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1600876976/f/png"],
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1600876976/f/png-24"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/png"],
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/png-24"] {
         content: url('https://api.iconify.design/bx:bxs-file-png.svg?height=25');
     }
     /* Jpg */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1600876976/f/jpeg-24"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/jpeg-24"] {
         content: url('https://api.iconify.design/bx:bxs-file-jpg.svg?height=25');
     }
 
     /* Word */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1600876976/f/document-24"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/document-24"] {
         content: url('https://api.iconify.design/mdi:file-word.svg?height=25');
     }
 
     /* Powerpoint */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1600876976/f/powerpoint-24"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/powerpoint-24"] {
         content: url('https://api.iconify.design/mdi:file-powerpoint.svg?height=25');
     }
 
     /* Excel */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1600876976/f/spreadsheet-24"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/spreadsheet-24"] {
         content: url('https://api.iconify.design/mdi:file-excel.svg?height=25');
     }
     
     /* Wiki */ 
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/wiki/1600876976/icon"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/wiki/"][src$="/icon"] {
         content: url('https://api.iconify.design/carbon:wikis.svg?height=25');
     }
 
     /* Devoir (upload) */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/assign/1600876976/icon"],
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/mod_assign/1600876976/icon"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/assign/"][src$="/icon"],
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/mod_assign/"][src$="/icon"] {
         content: url('https://api.iconify.design/ic:round-file-upload.svg?height=24');
     }
 
     /* Folder */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/folder/1600876976/icon"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/folder/"][src$="/icon"] {
         content: url('https://api.iconify.design/ic:round-folder.svg?height=24');
     }
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1600876976/f/folder-24"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/folder-24"] {
         content: url('https://api.iconify.design/ant-design:folder-open-filled.svg');
     }
 
     /* Scheduler */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/scheduler/1600876976/icon"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/scheduler/"][src$="/icon"] {
         content: url('https://api.iconify.design/mdi:calendar-clock.svg?height=24');
     }
 
     /* Question (choice) */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/choice/1600876976/icon"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/choice/"][src$="/icon"] {
         content: url('https://api.iconify.design/mdi:comment-question.svg?height=24');
     }
 
     /* Glossary */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/glossary/1600876976/icon"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/glossary/"][src$="/icon"] {
         content: url(' https://api.iconify.design/bx:bx-sort-a-z.svg?height=24');
     }
 
     /* Certificate */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/customcert/1600876976/icon"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/customcert/"][src$="/icon"] {
         content: url('https://api.iconify.design/mdi:certificate.svg?height=24');
     }
 
     /* Wooclap */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/wooclap/1600876976/icon"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/wooclap/"][src$="/icon"] {
         content: url('https://api.iconify.design/ls:w.svg?height=24&inline=true');
     }
 
     /* Choose a group */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/choicegroup/1600876976/icon"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/choicegroup/"][src$="/icon"] {
         content: url('https://api.iconify.design/bi:people-fill.svg?height=24');
     }
 
     /* Generic text file */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1600876976/f/text-24"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/text-24"] {
         content: url('https://api.iconify.design/eva:file-fill.svg?height=25');
     }
 
     /* Chat */
-    img.activityicon[src="https://webcampus.unamur.be/theme/image.php/receptic/chat/1600876976/icon"] {
+    img.activityicon[src^="https://webcampus.unamur.be/theme/image.php/receptic/chat/"][src$="/icon"] {
         content: url('https://api.iconify.design/bi:chat-dots-fill.svg?height=24');
     }
 
     /* Amanote thingy at the right */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1600876976/f/folder"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/folder"] {
         content: url('https://api.iconify.design/ic:round-folder.svg?height=16');
         filter: invert(100%);
     }
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/core/1600876976/f/archive"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/archive"] {
         content: url('https://api.iconify.design/eva:file-fill.svg?height=16');
         filter: invert(100%);
     }
 
     /* text info block */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/label/1600876976/icon"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/label/"][src$="/icon"] {
         content: url('https://api.iconify.design/fe:text-align-left.svg?height=24');
     }
 
     /* Not terminated */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/block_completion_progress/1600876976/cross"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/block_completion_progress/"][src$="/cross"] {
         content: url('https://api.iconify.design/emojione-monotone:cross-mark.svg?height=12');
         height: 12px !important;
         width: 12px !important;
@@ -1160,7 +1160,7 @@ domain("auth.unamur.be") {
     }
 
     /* Done */
-    img[src="https://webcampus.unamur.be/theme/image.php/receptic/block_completion_progress/1600876976/tick"] {
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/block_completion_progress/"][src$="/tick"] {
         content: url('https://api.iconify.design/fa-solid:check.svg?height=12');
         vertical-align: -0.125em;
         height: 12px !important;
