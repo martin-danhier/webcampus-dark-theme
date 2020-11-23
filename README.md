@@ -6,7 +6,7 @@
 
 ![Vue d'un cours](assets/main_preview.png)
 
-![Tableau de bord](assets/course_preview.png)
+![Tableau de bord](assets/course view.png)
 
 ## Installation :
 
