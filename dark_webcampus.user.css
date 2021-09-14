@@ -1340,7 +1340,7 @@ domain("auth.unamur.be") {
     }
 
 
-    #nav-drawer .list-group a.list-group-item.active {
+    #nav-drawer .list-group ul li a.list-group-item.active {
         background-color: #1e4a51;
         border: 1px solid #1e4a51;
         border-radius: 15px;
@@ -1350,15 +1350,15 @@ domain("auth.unamur.be") {
         background-color: #282828;
         border-color: #5d5d5d;
     }
-    .navbar-receptic a.dropdown-item {
+    .navbar-receptic ul li a.dropdown-item {
         color: #d2d4d7;
     }
-    .navbar-receptic a.dropdown-item:hover,
-    .navbar-receptic a.dropdown-item:focus:hover {
+    .navbar-receptic ul li a.dropdown-item:hover,
+    .navbar-receptic ul li a.dropdown-item:focus:hover {
         background-color: #424040;
         color: #fff;
     }
-    .navbar-receptic a.dropdown-item:focus {
+    .navbar-receptic ul li a.dropdown-item:focus {
         background-color: unset;
         color: #d2d4d7;
     }
@@ -1379,14 +1379,14 @@ domain("auth.unamur.be") {
         box-shadow: 1px 1px #242323;
     }
     #nav-drawer .list-group div.list-group-item,
-    #nav-drawer .list-group a.list-group-item {
+    #nav-drawer .list-group ul li a.list-group-item {
         box-shadow: unset;
         background-color: #212020;
         border: 1px solid transparent;
         color: #c5c6c8;
     }
     #nav-drawer .list-group div.list-group-item:hover,
-    #nav-drawer .list-group a.list-group-item:hover {
+    #nav-drawer .list-group ul li a.list-group-item:hover {
         border: 1px solid transparent;
         ;
         border-radius: 10px;
