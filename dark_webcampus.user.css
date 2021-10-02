@@ -663,6 +663,10 @@ domain("auth.unamur.be") {
     .block-region .block .minicalendar.calendartable td {
         border: 1px solid transparent;
     }
+    
+    .path-calendar .maincalendar .event .card-header {
+    background-color: #262626;
+    }
 
     /* back to top arrow */
     #back-to-top a.arrow {
