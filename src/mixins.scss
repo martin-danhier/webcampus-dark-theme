@@ -1,0 +1,105 @@
+@use '@material/ripple';
+@use 'constants.scss';
+
+@mixin surface($dp) {
+    // Common
+    color: $fg-on-surface;
+
+    // Level specific
+    @if $dp == 0 {
+        background-color: $bg-surface-00dp;
+    }
+    @else if $dp == 1 {
+        background-color: $bg-surface-01dp;
+    }
+    @else if $dp == 2 {
+        background-color: $bg-surface-02dp;
+    }
+    @else if $dp == 3 {
+        background-color: $bg-surface-03dp;
+    }
+    @else if $dp == 4 {
+        background-color: $bg-surface-04dp;
+    }
+    @else if $dp == 6 {
+        background-color: $bg-surface-06dp;
+    }
+    @else if $dp == 8 {
+        background-color: $bg-surface-08dp;
+    }
+    @else if $dp == 12 {
+        background-color: $bg-surface-12dp;
+    }
+    @else if $dp == 16 {
+        background-color: $bg-surface-16dp;
+    }
+    @else if $dp == 24 {
+        background-color: $bg-surface-24dp;
+    }
+    @else {
+        @error "Invalid argument for $dp: {" + $dp + "}, look at the method definition for possible values";
+    }
+
+}
+
+@mixin elevation($dp) {
+    @if $dp == 0 {
+        box-shadow: none
+    }
+    @else if $dp == 1 {
+        box-shadow: 0 1px 1px 0 $shadow-1, 0 2px 1px -1px $shadow-2, 0 1px 3px 0 $shadow-3
+    }
+    @else if $dp == 2 {
+        box-shadow: 0 2px 2px 0 $shadow-1, 0 3px 1px -2px $shadow-2, 0 1px 5px 0 $shadow-3
+    }
+    @else if $dp == 3 {
+        box-shadow: 0 3px 4px 0 $shadow-1, 0 3px 3px -2px $shadow-2, 0 1px 8px 0 $shadow-3
+    }
+    @else if $dp == 4 {
+        box-shadow: 0 4px 5px 0 $shadow-1, 0 1px 10px 0 $shadow-2, 0 2px 4px -1px $shadow-3
+    }
+    @else if $dp == 6 {
+        box-shadow: 0 6px 10px 0 $shadow-1, 0 1px 18px 0 $shadow-2, 0 3px 5px -1px $shadow-3
+    }
+    @else if $dp == 8 {
+        box-shadow: 0 8px 10px 1px $shadow-1, 0 3px 14px 2px $shadow-2, 0 5px 5px -3px $shadow-3
+    }
+    @else if $dp == 9 {
+        box-shadow: 0 9px 12px 1px $shadow-1, 0 3px 16px 2px $shadow-2, 0 5px 6px -3px $shadow-3
+    }
+    @else if $dp == 12 {
+        box-shadow: 0 12px 17px 2px $shadow-1, 0 5px 22px 4px $shadow-2, 0 7px 8px -4px $shadow-3
+    }
+    @else if $dp == 16 {
+        box-shadow: 0 16px 24px 2px $shadow-1, 0 6px 30px 5px $shadow-2, 0 8px 10px -5px $shadow-3
+    }
+    @else if $dp == 24 {
+        box-shadow: 0 24px 38px 3px $shadow-1, 0 9px 46px 8px $shadow-2, 0 11px 15px -7px $shadow-3
+    }
+    @else {
+        @error "Invalid argument for $dp: {" + $dp + "}, look at the method definition for possible values";
+    }
+}
+
+@mixin ripple {
+  @include ripple.surface;
+  @include ripple.radius-bounded;
+  @include ripple.states;
+  @include ripple.states-base-color(#bbb);
+  
+}
+
+@mixin button-base {
+    // Disable default styles
+    &, &:hover, &:active, &:focus, &:active:focus, &:visited {
+        border: none;
+        background-color: inherit;
+        color: inherit;
+        outline: none;
+        box-shadow: none;
+        text-decoration: none;
+    }
+
+    // Add new button style
+    @include ripple;
+}

@@ -1,0 +1,25 @@
+/* ==UserStyle==
+@name           Moodle Dark Theme
+@namespace      github.com/martin-danhier
+@version        0.6.0
+@description    Dark theme for Moodle
+@author         Martin Danhier & Yannis Fraselle
+@updateURL      https://raw.githubusercontent.com/martin-danhier/webcampus-dark-theme/master/dark_webcampus.user.css
+==/UserStyle== */
+
+/* 
+
+
+
+----> See repository for source SASS. <----
+
+
+
+*/
+
+// -> this will return a deprecation warning, but it is normal
+// That is how stylus works
+@-moz-document url-prefix("https://moodle.uclouvain.be/")
+{
+    @import 'sections/common.scss';
+}

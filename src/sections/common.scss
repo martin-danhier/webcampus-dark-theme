@@ -1,0 +1,82 @@
+@import '../mixins.scss';
+@import '../constants.scss';
+
+// Import material fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+body, #page-my-index {
+    // Base values
+    background-color: $bg-background;
+    color: $fg-on-background;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    font-weight: 100;
+}
+
+// Text styles
+
+a, .block .block-cards a.coursename {
+    color: $bg-secondary;
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.text-muted {
+    font-weight: 400;
+    color: inherit;
+}
+
+// Cards
+.card, #region-main {
+    @include surface(1);
+    @include elevation(1);
+    border: none;
+    border-radius: $border-radius;
+}
+
+.dashboard-card {
+    // They are on top of a bigger card so it needs a bigger elevation
+    @include surface(3);
+    @include elevation(2); // 3 because it is on top of a elevation 1 card
+}
+
+.card-footer {
+    background-color: inherit !important;
+}
+
+// Navbar
+
+.navbar {
+    @include surface(2);
+    @include elevation(2);
+}
+
+.navbar-fhs .navbar-nav .nav-link, span.userbutton {
+    color: inherit;
+}
+
+.navbar .btn-secondary {
+    color: inherit;
+    background-color: inherit;
+    border: none;
+}
+
+// Button
+
+.btn, .btn-secondary, .btn-secondary:not(:disabled):not(.disabled) {
+    @include button-base;
+}
+
+// Fixes to remove unwanted behaviour originating from the default theme
+
+.pagelayout-mydashboard #region-main {
+    // Remove that card because 3 layers of cards are ugly
+    @include surface(0);
+    @include elevation(0);
+}
+
+.list-group-item {
+    background-color: inherit;
+}

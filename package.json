@@ -1,0 +1,22 @@
+{
+  "name": "moodle-dark-theme",
+  "version": "0.6.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martin-danhier/webcampus-dark-theme.git"
+  },
+  "scripts": {
+    "build": "node_modules\\.bin\\sass ./src/index.scss ./output.user.css --no-source-map --load-path=node_modules"
+  },
+  "author": "Martin Danhier & Yannis Fraselle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martin-danhier/webcampus-dark-theme/issues"
+  },
+  "homepage": "https://github.com/martin-danhier/webcampus-dark-theme#readme",
+  "dependencies": {
+    "@material/elevation": "^13.0.0",
+    "@material/ripple": "^13.0.0",
+    "sass": "^1.42.1"
+  }
+}

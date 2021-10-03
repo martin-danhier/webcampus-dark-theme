@@ -1,0 +1,47 @@
+// Version of the style
+$version: "0.6.0";
+
+// =========== Color theme ===========
+
+// Background colors
+$bg-primary: #bb86fc;
+$bg-primary-variant: #3700b3;
+$bg-secondary: #03dac6;
+$bg-background: #121212;
+$bg-surface-00dp: #121212; // 0% white overlay 
+$bg-surface-01dp: #1e1e1e; // 5% 
+$bg-surface-02dp: #222222; // 7%
+$bg-surface-03dp: #242424; // 8%
+$bg-surface-04dp: #272727; // 9% 
+$bg-surface-06dp: #2c2c2c; // 11% 
+$bg-surface-08dp: #2d2d2d; // 12% 
+$bg-surface-12dp: #323232; // 14% 
+$bg-surface-16dp: #333333; // 15% 
+$bg-surface-24dp: #373737; // 16% 
+$bg-error: #cf6679;
+
+// Foreground colors
+$fg-on-primary: #000000;
+$fg-on-secondary: #000000;
+$fg-on-background: #ffffff;
+$fg-on-surface: #ffffff;
+$fg-on-error: #000000;
+
+// Special colors
+$shadow-1: rgba(0, 0, 0, .14);
+$shadow-2: rgba(0, 0, 0, .12);
+$shadow-3: rgba(0, 0, 0, .20);
+
+// Rgb version of some colors for maths
+// Don't add rgb() around it. It is used to allow to play with the alpha
+// value like this: rgba(var(--bg-thing-rgb), 80)
+
+$bg-primary-rgb: 187, 134, 252;
+$bg-primary-variant-rgb: 55, 0, 179;
+$bg-secondary-rgb: 3, 218, 198;
+$bg-background-rgb: 18, 18, 18;
+$bg-surface-rgb: 18, 18, 18;
+
+// Other parameters
+$border-radius: 0.5rem;
+
