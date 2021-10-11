@@ -1,0 +1,236 @@
+/* ------------- */
+/* --- Icons --- */
+/* ------------- */
+
+/** Global changes for icons */
+.ygtvcell .icon {
+    height: 16px;
+    vertical-align: middle;
+    width: 0px;
+    padding-right: 16px;
+    background: transparent top left no-repeat;
+    filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
+}
+
+img.icon.smallicon, .content-item-container .notification-image img, .notification-area .image-container img {
+    height: 20px;
+    width: 0px;
+    padding-right: 20px;
+    background: transparent top left no-repeat;
+    filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
+}
+
+img.activityicon, #page-mod-folder-view .fp-icon .icon, .block_completion_progress .progressEventInfo img {
+    height: 24px;
+    width: 0px;
+    padding-right: 24px;
+    background: transparent top left no-repeat;
+    filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
+}
+
+/** Individual changes for icons.
+-> each time, an icon is matched by the url of its image. The value is then replaced to another image.
+*/
+
+/* URL */
+
+img[src*="/theme/image.php/"][src*="/url/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/mdi:link-variant.svg?height=24');
+}
+
+/* Forum / Annonce */
+
+img[src*="/theme/image.php/"][src*="/mod_forum/"][src$="/icon"], img[src*="/theme/image.php/"][src*="/forum/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/ic:round-forum.svg?height=24');
+}
+
+/* Workshop / Peer review */
+
+img[src*="/theme/image.php/"][src*="/workshop/"][src$="/icon"], img[src*="/theme/image.php/"][src*="/feedback/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/uil:feedback.svg?height=24');
+}
+
+/* Quiz */
+
+img[src*="/theme/image.php/"][src*="/quiz/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/ant-design:form-outlined.svg?height=24');
+}
+
+/* PDF */
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/pdf"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/pdf-24"], img[src*="/theme/image.php/"][src*="/amanote/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/bx:bxs-file-pdf.svg?height=25');
+}
+
+/* Vidéo */
+
+img[src*="/theme/image.php/"][src*="/ubicast/"][src$="/icon"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/mpeg-24"] {
+    background-image: url('https://api.iconify.design/carbon:play-filled.svg?height=24');
+}
+
+/* Zip */
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive-24"] {
+    background-image: url('https://api.iconify.design/clarity:file-zip-solid.svg?height=24');
+}
+
+/* Link to webcampus */
+
+img[src*="/theme/image.php/"][src*="/page/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/bx:bxs-note.svg?height=24');
+}
+
+/* Source code */
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode-24"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/markup-24"] {
+    background-image: url('https://api.iconify.design/mdi:file-code.svg?height=54');
+}
+
+/* Tiff */
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/tiff"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/tiff-24"] {
+    background-image: url('https://api.iconify.design/bx:bxs-file-png.svg?height=25');
+}
+
+/* Png */
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/png"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/png-24"] {
+    background-image: url('https://api.iconify.design/bx:bxs-file-png.svg?height=25');
+}
+
+/* Jpg */
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/jpeg-24"] {
+    background-image: url('https://api.iconify.design/bx:bxs-file-jpg.svg?height=25');
+}
+
+/* Word */
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/document-24"] {
+    background-image: url('https://api.iconify.design/mdi:file-word.svg?height=25');
+}
+
+/* Powerpoint */
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/powerpoint-24"] {
+    background-image: url('https://api.iconify.design/mdi:file-powerpoint.svg?height=25');
+}
+
+/* Excel */
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/spreadsheet-24"] {
+    background-image: url('https://api.iconify.design/mdi:file-excel.svg?height=25');
+}
+
+/* Wiki */
+
+img[src*="/theme/image.php/"][src*="/wiki/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/carbon:wikis.svg?height=25');
+}
+
+/* Devoir (upload) */
+
+img[src*="/theme/image.php/"][src*="/assign/"][src$="/icon"], img[src*="/theme/image.php/"][src*="/mod_assign/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/ic:round-file-upload.svg?height=24');
+}
+
+/* Folder */
+
+img[src*="/theme/image.php/"][src*="/folder/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/ic:round-folder.svg?height=24');
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/folder-24"] {
+    background-image: url('https://api.iconify.design/ant-design:folder-open-filled.svg');
+}
+
+/* Scheduler */
+
+img[src*="/theme/image.php/"][src*="/scheduler/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/mdi:calendar-clock.svg?height=24');
+}
+
+/* Question (choice) */
+
+img[src*="/theme/image.php/"][src*="/choice/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/mdi:comment-question.svg?height=24');
+}
+
+/* Glossary */
+
+img[src*="/theme/image.php/"][src*="/glossary/"][src$="/icon"] {
+    background-image: url(' https://api.iconify.design/bx:bx-sort-a-z.svg?height=24');
+}
+
+/* Certificate */
+
+img[src*="/theme/image.php/"][src*="/customcert/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/mdi:certificate.svg?height=24');
+}
+
+/* Wooclap */
+
+img[src*="/theme/image.php/"][src*="/wooclap/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/ls:w.svg?height=24&inline=true');
+}
+
+/* Choose a group */
+
+img[src*="/theme/image.php/"][src*="/choicegroup/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/bi:people-fill.svg?height=24');
+}
+
+/* Generic text file */
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/text-24"] {
+    background-image: url('https://api.iconify.design/eva:file-fill.svg?height=25');
+}
+
+/* Chat */
+
+img.activityicon[src*="/theme/image.php/"][src*="/chat/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/bi:chat-dots-fill.svg?height=24');
+}
+
+/* Amanote thingy at the right */
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/folder"] {
+    background-image: url('https://api.iconify.design/ic:round-folder.svg?height=16');
+    filter: invert(100%);
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive"] {
+    background-image: url('https://api.iconify.design/eva:file-fill.svg?height=16');
+    filter: invert(100%);
+}
+
+/* text info block */
+
+img[src*="/theme/image.php/"][src*="/label/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/fe:text-align-left.svg?height=24');
+}
+
+/* Not terminated */
+
+img[src*="/theme/image.php/"][src*="/block_completion_progress/"][src$="/cross"] {
+    background-image: url('https://api.iconify.design/emojione-monotone:cross-mark.svg?height=12');
+    height: 12px !important;
+    width: 12px !important;
+    vertical-align: -0.125em;
+    filter: invert(55%) sepia(12%) saturate(2496%) hue-rotate(315deg) brightness(99%) contrast(89%) !important;
+}
+
+/* Done */
+
+img[src*="/theme/image.php/"][src*="/block_completion_progress/"][src$="/tick"] {
+    background-image: url('https://api.iconify.design/fa-solid:check.svg?height=12');
+    vertical-align: -0.125em;
+    height: 12px !important;
+    width: 12px !important;
+    filter: invert(85%) sepia(24%) saturate(888%) hue-rotate(64deg) brightness(88%) contrast(85%) !important;
+}
+
+/* Data */
+img[src*="/theme/image.php/"][src*="/data/"][src$="/icon"] {
+    background-image: url('https://api.iconify.design/mdi/database.svg?height=24');
+}
