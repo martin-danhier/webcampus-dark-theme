@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.5.19
+@version        0.5.20
 @description    Dark theme for webcampus
 @author         Martin Danhier
 @updateURL      https://raw.githubusercontent.com/martin-danhier/webcampus-dark-theme/master/dark_webcampus.user.css
@@ -71,7 +71,7 @@ domain("auth.unamur.be") {
     }
 
     #page-footer .contactinfo::before {
-        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.19 \A \A";
+        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.20 \A \A";
         white-space: pre;
         text-align: center;
         color: #e7e7e7;
@@ -1958,6 +1958,46 @@ domain("auth.unamur.be") {
         background-image: unset;
         background-color: #070707;
     }
+    
+        /* =========== */
+    /* authentification UNamur trucs specifiques BETA */
+
+    .alert-warning:before, #page-admin-index .adminwarning:before, .uninstalldeleteconfirmexternal:before, .que .outcome:before, .que .comment:before {
+        color: #ff9191;
+    }
+
+    *:before {
+        color: white;
+    }
+
+    .alert-warning {
+        background-image: linear-gradient(to bottom, #2c2c2c 0, #2c2c2c 100%);
+        color: #ff9191;
+        border-color: #2c2c2c;
+    }
+
+    .alert-danger {
+        background-image: linear-gradient(to bottom, #2c2c2c 0, #2c2c2c 100%);
+        color: #ff9191;
+        border-color: #2c2c2c;
+    }
+
+    .login {
+        background-color: #171717;
+    }
+
+    .panel {
+        border-color: #4f4f4f;
+    }
+
+    div#wrap {
+        background: -webkit-linear-gradient(top, #1f1e1e 0%,#1f1e1e 100%);
+    }
+
+    .input-group-addon {
+        background-color: #393939;
+        border: transparent;
+    }
 }
 
 @-moz-document domain("medias.unamur.be") {
@@ -2015,44 +2055,4 @@ domain("auth.unamur.be") {
     #player_block .player-mask div {
         visibility: hidden !important;
     }
-}
-
-/* =========== */
-/* authentification UNamur trucs specifiques BETA */
-
-.alert-warning:before, #page-admin-index .adminwarning:before, .uninstalldeleteconfirmexternal:before, .que .outcome:before, .que .comment:before {
-    color: #ff9191;
-}
-
-*:before {
-    color: white;
-}
-
-.alert-warning {
-    background-image: linear-gradient(to bottom, #2c2c2c 0, #2c2c2c 100%);
-    color: #ff9191;
-    border-color: #2c2c2c;
-}
-
-.alert-danger {
-    background-image: linear-gradient(to bottom, #2c2c2c 0, #2c2c2c 100%);
-    color: #ff9191;
-    border-color: #2c2c2c;
-}
-
-.login {
-    background-color: #171717;
-}
-
-.panel {
-    border-color: #4f4f4f;
-}
-
-div#wrap {
-    background: -webkit-linear-gradient(top, #1f1e1e 0%,#1f1e1e 100%);
-}
-
-.input-group-addon {
-    background-color: #393939;
-    border: transparent;
 }
