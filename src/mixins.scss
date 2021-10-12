@@ -1,5 +1,7 @@
 @use 'constants.scss';
 
+// Surface and elevation
+
 @mixin surface($dp) {
     // Common
     color: $fg-on-surface;
@@ -80,6 +82,8 @@
     }
 }
 
+// Buttons
+
 @mixin ripple($color) {
     @if ($color) {
         perspective: 1px;
@@ -138,9 +142,22 @@
     // Clear default style
     border: none;
     outline: none;
-    
+
     // Add new button style
-    border-radius: $border-radius;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: normal;
+    min-width: 64px;
+    padding: 0px 16px;
+    min-height: 36px;
+    user-select: none;
+    vertical-align: middle;
 
     @include ripple(white);
 }
@@ -148,7 +165,7 @@
 @mixin raised-button($bg, $bg-hover, $fg) {
     @include button-base($bg, $fg);
 
-    @include elevation(2);
+    @include elevation(3);
     transition: box-shadow 0.7s;
 
     &:hover {
@@ -167,7 +184,67 @@
     @include button-base(inherit, $color);
     box-shadow: none;
     border: 1px solid $color !important;
+}
 
+// Text field
 
+@mixin text-field-base($color) {
+    height: 56px;
+    border-radius: 4px 4px 0 0;
+    display: inline-flex;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    @include surface(24);
+    width: max-content;
+    min-width: 20%;
+    margin-right: auto;
+    flex: unset;
+    padding: 0;
+
+    input {
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 0.009375em;
+        text-decoration: inherit;
+        text-transform: inherit;
+        align-self: flex-end;
+        box-sizing: border-box;
+        width: 100%;
+        flex-grow: 1;
+        height: 100%;
+        padding: 20px 16px 6px;
+        border: none;
+        border-bottom: 1px solid;
+        background: none;
+        appearance: none;
+        border-radius: 0;
+        caret-color: $color;
+        border-bottom-color: rgba(255,255,255,.42);
+
+        &:hover {
+            border-bottom-color: rgba(255,255,255,.87);
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+            background: none;
+            border-bottom-color: $color;
+            border-width: 2px;
+            transition: none;
+        }
+
+        
+        
+    }
+
+}
+
+@mixin filled-text-field() {
+
+}
+
+@mixin outlined-text-field() {
 
 }

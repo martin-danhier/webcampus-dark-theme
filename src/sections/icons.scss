@@ -3,27 +3,28 @@
 /* ------------- */
 
 /** Global changes for icons */
-.ygtvcell .icon {
-    height: 16px;
+.ygtvcell .icon, .block_calendar_upcoming .event .icon {
+    height: 16px !important;
     vertical-align: middle;
-    width: 0px;
-    padding-right: 16px;
+    width: 0px !important;
+    padding-right: 16px !important;
     background: transparent top left no-repeat;
     filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
+    background-size: contain;
 }
 
 img.icon.smallicon, .content-item-container .notification-image img, .notification-area .image-container img {
-    height: 20px;
-    width: 0px;
-    padding-right: 20px;
+    height: 20px !important;
+    width: 0px !important;
+    padding-right: 20px !important;
     background: transparent top left no-repeat;
     filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
 }
 
-img.activityicon, #page-mod-folder-view .fp-icon .icon, .block_completion_progress .progressEventInfo img {
-    height: 24px;
-    width: 0px;
-    padding-right: 24px;
+img.activityicon, #page-mod-folder-view .fp-icon .icon, .block_completion_progress .progressEventInfo img, .icon-size-4 .icon {
+    height: 24px !important;
+    width: 0px !important;
+    padding-right: 24px !important;
     background: transparent top left no-repeat;
     filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
 }
@@ -40,13 +41,15 @@ img[src*="/theme/image.php/"][src*="/url/"][src$="/icon"] {
 
 /* Forum / Annonce */
 
-img[src*="/theme/image.php/"][src*="/mod_forum/"][src$="/icon"], img[src*="/theme/image.php/"][src*="/forum/"][src$="/icon"] {
+img[src*="/theme/image.php/"][src*="/mod_forum/"][src$="/icon"],
+img[src*="/theme/image.php/"][src*="/forum/"][src$="/icon"] {
     background-image: url('https://api.iconify.design/ic:round-forum.svg?height=24');
 }
 
 /* Workshop / Peer review */
 
-img[src*="/theme/image.php/"][src*="/workshop/"][src$="/icon"], img[src*="/theme/image.php/"][src*="/feedback/"][src$="/icon"] {
+img[src*="/theme/image.php/"][src*="/workshop/"][src$="/icon"],
+img[src*="/theme/image.php/"][src*="/feedback/"][src$="/icon"] {
     background-image: url('https://api.iconify.design/uil:feedback.svg?height=24');
 }
 
@@ -58,19 +61,22 @@ img[src*="/theme/image.php/"][src*="/quiz/"][src$="/icon"] {
 
 /* PDF */
 
-img[src*="/theme/image.php/"][src*="/core/"][src$="/f/pdf"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/pdf-24"], img[src*="/theme/image.php/"][src*="/amanote/"][src$="/icon"] {
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/pdf"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/pdf-24"],
+img[src*="/theme/image.php/"][src*="/amanote/"][src$="/icon"] {
     background-image: url('https://api.iconify.design/bx:bxs-file-pdf.svg?height=25');
 }
 
 /* Vidéo */
 
-img[src*="/theme/image.php/"][src*="/ubicast/"][src$="/icon"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/mpeg-24"] {
+img[src*="/theme/image.php/"][src*="/ubicast/"][src$="/icon"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/mpeg-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/mpeg"] {
     background-image: url('https://api.iconify.design/carbon:play-filled.svg?height=24');
 }
 
 /* Zip */
 
-img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive-24"] {
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive-24"],img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive"] {
     background-image: url('https://api.iconify.design/clarity:file-zip-solid.svg?height=24');
 }
 
@@ -82,7 +88,8 @@ img[src*="/theme/image.php/"][src*="/page/"][src$="/icon"] {
 
 /* Source code */
 
-img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode-24"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/markup-24"] {
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode-24"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/markup-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/markup"] {
     background-image: url('https://api.iconify.design/mdi:file-code.svg?height=54');
 }
 
@@ -100,25 +107,25 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/f/png"], img[src*="/theme/im
 
 /* Jpg */
 
-img[src*="/theme/image.php/"][src*="/core/"][src$="/f/jpeg-24"] {
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/jpeg-24"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/jpeg"] {
     background-image: url('https://api.iconify.design/bx:bxs-file-jpg.svg?height=25');
 }
 
 /* Word */
 
-img[src*="/theme/image.php/"][src*="/core/"][src$="/f/document-24"] {
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/document-24"] , img[src*="/theme/image.php/"][src*="/core/"][src$="/f/document"]{
     background-image: url('https://api.iconify.design/mdi:file-word.svg?height=25');
 }
 
 /* Powerpoint */
 
-img[src*="/theme/image.php/"][src*="/core/"][src$="/f/powerpoint-24"] {
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/powerpoint-24"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/powerpoint"] {
     background-image: url('https://api.iconify.design/mdi:file-powerpoint.svg?height=25');
 }
 
 /* Excel */
 
-img[src*="/theme/image.php/"][src*="/core/"][src$="/f/spreadsheet-24"] {
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/spreadsheet-24"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/spreadsheet"]{
     background-image: url('https://api.iconify.design/mdi:file-excel.svg?height=25');
 }
 
