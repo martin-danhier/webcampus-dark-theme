@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.5.22
+@version        0.5.23
 @description    Dark theme for webcampus
 @author         Martin Danhier
 @updateURL      https://raw.githubusercontent.com/martin-danhier/webcampus-dark-theme/master/dark_webcampus.user.css
@@ -71,7 +71,7 @@ domain("auth.unamur.be") {
     }
 
     #page-footer .contactinfo::before {
-        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.22 \A \A";
+        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.23 \A \A";
         white-space: pre;
         text-align: center;
         color: #e7e7e7;
@@ -2063,56 +2063,72 @@ domain("auth.unamur.be") {
     
      /* bouton pause */
     .player-state-playing .ub-play:before {
-    content: url('https://api.iconify.design/fluent/pause-16-filled.svg?color=white&width=30&height=30');
+        content: url('https://api.iconify.design/fluent/pause-16-filled.svg?color=white&width=30&height=30');
     }
     
     /* bouton play */
     .ub-play:before {
-    content: url('https://api.iconify.design/fluent/play-16-filled.svg?color=white&width=30&height=30');
+        content: url('https://api.iconify.design/fluent/play-16-filled.svg?color=white&width=30&height=30');
     }
     
     /* bouton -5sec */
     .ub-rewind-five-big:before {
-    content: url('https://api.iconify.design/carbon/rewind-5.svg?color=white&width=30&height=30');
+        content: url('https://api.iconify.design/carbon/rewind-5.svg?color=white&width=30&height=30');
     }
      
     /* bouton speed ajustement */
     .ub-speed:before {
-    content: url('https://api.iconify.design/ri/speed-mini-fill.svg?color=white&width=30&height=30');
+        content: url('https://api.iconify.design/ri/speed-mini-fill.svg?color=white&width=30&height=30');
     }
     
     /* bouton volume state 1 not loud */
     .ub-volume-1:before {
-    content: url('https://api.iconify.design/ion/volume-off.svg?color=white&width=30&height=30');
+        content: url('https://api.iconify.design/ion/volume-off.svg?color=white&width=30&height=30');
     }
     
     /* bouton volume state 2 loud */
     .ub-volume-2:before {
-    content: url('https://api.iconify.design/ion/volume-low.svg?color=white&width=30&height=30');
+        content: url('https://api.iconify.design/ion/volume-low.svg?color=white&width=30&height=30');
     }
     
     /* bouton volume state 3 SUPER loud */
     .ub-volume-3:before {
-    content: url('https://api.iconify.design/ion/volume-medium.svg?color=white&width=30&height=30');
+        content: url('https://api.iconify.design/ion/volume-medium.svg?color=white&width=30&height=30');
     }
     
     /* bouton volume mute */
     .ub-mute:before {
-    content: url('https://api.iconify.design/ion/volume-mute.svg?color=white&width=30&height=30');
+        content: url('https://api.iconify.design/ion/volume-mute.svg?color=white&width=30&height=30');
     }
     
     /* bouton settings */
     .ub-settings:before {
-    content: url('https://api.iconify.design/fluent/settings-24-filled.svg?color=white&width=30&height=30');
+        content: url('https://api.iconify.design/fluent/settings-24-filled.svg?color=white&width=30&height=30');
     }
     
     /* fullscreen bouton */
     .ub-fullscreen:before {
-    content: url('https://api.iconify.design/ic/baseline-fullscreen.svg?color=white&width=30&height=30');
+        content: url('https://api.iconify.design/ic/baseline-fullscreen.svg?color=white&width=30&height=30');
     }
     
     .player-seekbar-handle {
         content: url('https://api.iconify.design/akar-icons/circle-fill.svg?color=white&width=30&height=30');
+    }
+    
+    .fa-info-circle:before {
+        content: url('https://api.iconify.design/fluent/info-24-filled.svg?color=white&width=30&height=30');
+    }
+    
+    .ub-search:before {
+        content: url('https://api.iconify.design/fluent/search-24-filled.svg?color=white&width=30&height=30');
+    }
+    
+    .fa-comments-o{
+        content: url('https://api.iconify.design/cil/chat-bubble.svg?color=white&width=30&height=30');
+    }
+    
+    .ub-unvalid:before {
+        content: url('https://api.iconify.design/gridicons/cross-circle.svg?width=30&height=30');
     }
     
     html {
@@ -2120,6 +2136,6 @@ domain("auth.unamur.be") {
     }
     
     #player_block.player-controls-hover .player-controls {
-    background: rgba(20,20,20,.6);
+        background: rgba(20,20,20,.6);
     }
 }
