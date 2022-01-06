@@ -1,5 +1,9 @@
 # Webcampus Dark Theme
 
+## [NEW] Fluent Icons Update 0.5.24
+
+![Fluent icons update screenshot](assets/Fluent_icons_update.png)
+
 ## Aperçu
 
 ![Avant Après](assets/webcampus_clean_dark_theme.gif)
