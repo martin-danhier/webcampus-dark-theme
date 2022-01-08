@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.5.26
+@version        0.5.27
 @description    Dark theme for webcampus
 @author         Martin Danhier
 @author         Yannis Fraselle
@@ -72,7 +72,7 @@ domain("auth.unamur.be") {
     }
 
     #page-footer .contactinfo::before {
-        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.26 \A \A";
+        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.27 \A \A";
         white-space: pre;
         text-align: center;
         color: #e7e7e7;
@@ -1519,6 +1519,14 @@ domain("auth.unamur.be") {
     
     div.availabilityinfo:before{
         content: url('https://api.iconify.design/fluent/clock-12-regular.svg?color=%23da4f4f&width=24');
+    }
+    
+    .block-region .block .minicalendar .calendar-controls .arrow_link.previous .arrow:before{
+        content: url('https://api.iconify.design/fluent/chevron-left-16-filled.svg?color=%231cc9ca&width=20');
+    }
+    
+    .block-region .block .minicalendar .calendar-controls .arrow_link.next .arrow:before{
+        content: url('https://api.iconify.design/fluent/chevron-right-16-filled.svg?color=%231cc9ca&width=20');
     }
     
     span.eventname{
