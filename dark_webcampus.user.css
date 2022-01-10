@@ -2131,6 +2131,10 @@ domain("auth.unamur.be") {
         border-radius: 15px;
         background-color: #171717;
     }
+    
+    #page-login-index .card .form-control {
+        border-radius: 0 10px 10px 0;
+    }
 
     #page-login-index .input-group-addon {
         background-color: #2d2b2b;
