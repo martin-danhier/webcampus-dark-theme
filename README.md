@@ -19,3 +19,7 @@
 2. [Cliquez ici pour installer le CSS](https://raw.githubusercontent.com/martin-danhier/webcampus-dark-theme/master/dark_webcampus.user.css): Stylus reconnaît le fichier, cliquer sur `Install Style`.
 
 3. Enjoy
+
+## Contributions
+
+Vous pouvez faire un fork et ouvrir des pull requests si vous avez des idées d'améliorations.
