@@ -1,9 +1,7 @@
-/* ------------- */
-/* --- Icons --- */
-/* ------------- */
-
-/** Global changes for icons */
-.ygtvcell .icon, .block_calendar_upcoming .event .icon {
+/** ----- Global changes for icons ----- */
+.ygtvcell .icon,
+.block_calendar_upcoming .event .icon,
+.block_completion_progress .progressBarCell .nowicon {
     height: 16px !important;
     vertical-align: middle;
     width: 0px !important;
@@ -13,7 +11,10 @@
     background-size: contain;
 }
 
-img.icon.smallicon, .content-item-container .notification-image img, .notification-area .image-container img {
+
+img.icon.smallicon,
+.content-item-container .notification-image img,
+.notification-area .image-container img {
     height: 20px !important;
     width: 0px !important;
     padding-right: 20px !important;
@@ -21,7 +22,10 @@ img.icon.smallicon, .content-item-container .notification-image img, .notificati
     filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
 }
 
-img.activityicon, #page-mod-folder-view .fp-icon .icon, .block_completion_progress .progressEventInfo img, .icon-size-4 .icon {
+img.activityicon,
+#page-mod-folder-view .fp-icon .icon,
+.block_completion_progress .progressEventInfo img,
+.icon-size-4 .icon {
     height: 24px !important;
     width: 0px !important;
     padding-right: 24px !important;
@@ -240,4 +244,17 @@ img[src*="/theme/image.php/"][src*="/block_completion_progress/"][src$="/tick"] 
 /* Data */
 img[src*="/theme/image.php/"][src*="/data/"][src$="/icon"] {
     background-image: url('https://api.iconify.design/mdi/database.svg?height=24');
+}
+
+/* Now */
+
+img[src*="/theme/image.php/"][src*="/block_completion_progress/"][src$="/right"] {
+    background-image: url('https://api.iconify.design/bi/caret-down-fill.svg');
+}
+
+// ----- Changes that don't require icon changes -----
+
+// Info bubble (question mark)
+.text-info {
+    color: $bg-secondary !important;
 }

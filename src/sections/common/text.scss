@@ -1,0 +1,31 @@
+/* ----- Texts ----- */
+
+label {
+    color: $fg-high-emphasis;
+    font-weight: 300;
+}
+
+a,
+.block .block-cards a.coursename {
+    color: $bg-secondary;
+    font-weight: 400;
+}
+
+strong {
+    font-weight: 700;
+}
+
+.text-muted {
+    font-weight: 400;
+    color: $fg-medium-emphasis !important;
+}
+
+.resourcelinkdetails {
+    color: $fg-medium-emphasis;
+    font-weight: 300;
+}
+
+.navbar-fhs .navbar-brand,
+.navbar-fhs .navbar-brand:hover {
+    color: $fg-on-surface;
+}

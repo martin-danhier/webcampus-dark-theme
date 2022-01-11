@@ -1,0 +1,24 @@
+/* ----- Navbar ----- */
+
+.navbar {
+    @include surface(2);
+    @include elevation(2);
+}
+
+.navbar-fhs .navbar-nav .nav-link,
+span.userbutton {
+    color: inherit;
+}
+
+.navbar .btn-secondary {
+    color: inherit;
+    background-color: inherit;
+    border: none;
+}
+
+div#page-navbar {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

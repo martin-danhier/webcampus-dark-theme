@@ -1,0 +1,45 @@
+/* ----- Progress indicators ----- */
+
+// Cool modern progress bar
+.progress {
+    border: 0 !important;
+    border-radius: 5px;
+    background-color: $bg-field !important;
+    margin-bottom: 5px;
+
+    .progress-bar {
+        background-color: $bg-primary;
+        border: 0;
+    }
+}
+
+// Ugly blocky progress bar
+.block_completion_progress {
+    .progressEventInfo {
+        font-weight: 300;
+        letter-spacing: normal;
+
+        img.icon {
+            filter: none !important;
+        }
+    }
+
+    .barRowCells .progressBarCell {
+        height: 1rem;
+        border: 0 !important;
+
+        &.completed {
+            background-color: $bg-success;
+        }
+
+        .nowDiv {
+            font-size: 14px;
+            top: -25px;
+            margin-right: 5.5px;
+
+            .nowicon {
+                margin-left: 5px;
+            }
+        }
+    }
+}

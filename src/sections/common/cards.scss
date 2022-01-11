@@ -1,0 +1,23 @@
+/* ----- Cards ----- */
+
+.card,
+#region-main {
+    @include surface(1);
+    @include elevation(1);
+    border: none;
+    border-radius: $border-radius;
+}
+
+.dashboard-card,
+.course-listitem.list-group-item {
+    // They are on top of a bigger card so it needs a bigger elevation
+    @include surface(3);
+    @include elevation(2); // 3 because it is on top of a elevation 1 card
+    border: none;
+    border-radius: $border-radius;
+}
+
+.card-footer {
+    background-color: inherit !important;
+    border-radius: inherit;
+}

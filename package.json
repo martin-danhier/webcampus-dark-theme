@@ -6,7 +6,7 @@
     "url": "git+https://github.com/martin-danhier/webcampus-dark-theme.git"
   },
   "scripts": {
-    "build": "node_modules\\.bin\\sass ./src/index.scss ./output.user.css --no-source-map --load-path=node_modules"
+    "build": "sass ./src/index.scss ./output.user.css --no-source-map --load-path=node_modules"
   },
   "author": "Martin Danhier & Yannis Fraselle",
   "license": "MIT",

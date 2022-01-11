@@ -190,50 +190,27 @@
 
 @mixin text-field-base($color) {
     height: 56px;
-    border-radius: 4px 4px 0 0;
     display: inline-flex;
     position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
-    @include surface(24);
+    
     width: max-content;
     min-width: 20%;
     margin-right: auto;
-    flex: unset;
-    padding: 0;
+    
 
     input {
-        font-size: 1rem;
-        font-weight: 400;
-        letter-spacing: 0.009375em;
-        text-decoration: inherit;
-        text-transform: inherit;
+        
         align-self: flex-end;
         box-sizing: border-box;
         width: 100%;
         flex-grow: 1;
         height: 100%;
-        padding: 20px 16px 6px;
-        border: none;
-        border-bottom: 1px solid;
-        background: none;
-        appearance: none;
+        
+       
         border-radius: 0;
-        caret-color: $color;
-        border-bottom-color: rgba(255,255,255,.42);
+        
 
-        &:hover {
-            border-bottom-color: rgba(255,255,255,.87);
-        }
-
-        &:focus {
-            outline: none;
-            box-shadow: none;
-            background: none;
-            border-bottom-color: $color;
-            border-width: 2px;
-            transition: none;
-        }
+        
 
         
         
@@ -241,8 +218,53 @@
 
 }
 
-@mixin filled-text-field() {
+@mixin filled-text-field($color) {
+    
+    background-color: $bg-field;
+    color: $fg-on-surface;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.009375em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    padding: 16px 6px;
+    height: 42px;
+    border: none;
+    border-bottom: 1px solid;
+    caret-color: $color;
+    border-bottom-color: rgba(255,255,255,.42);
+    will-change: border-color, background-color, border-width;
+    transition: border-color .15s ease-in-out, background-color .15s ease-in-out, border-width .20s ease-in-out !important;
 
+
+    &:hover {
+        background-color: $bg-field-hover;
+        border-bottom-color: rgba(255,255,255,.87);
+    }
+
+    &:focus, &:focus-visible {
+        color: inherit;
+        background-color: $bg-field-focus;
+        outline: none;
+        box-shadow: none;
+        border-bottom-color: $color;
+        border-width: 2px;
+        transition: none;
+    }
+
+    &:disabled, &:read-only {
+        background-color: $bg-field-disabled;
+        color: $fg-field-disabled;
+        border-bottom-color: $fg-field-disabled;
+        transition: none !important;
+
+        &:hover {
+            border-bottom-color: inherit;
+        }
+    }
 }
 
 @mixin outlined-text-field() {

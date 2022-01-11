@@ -16,142 +16,91 @@
 
 
 */
-@-moz-document url-prefix("https://moodle.uclouvain.be/") {
+@-moz-document url-prefix("https://moodle.uclouvain.be/"), url-prefix("https://webcampus.unamur.be/") {
+  /* Global imports */
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
-  body, #page-my-index {
+}
+@-moz-document url-prefix("https://webcampus.unamur.be/") {
+  /* Webcampus specific style */
+  ul.navbar-nav.d-none.d-md-flex::after {
+    content: "Webcampus";
+    font-size: 18px;
+    font-size: 1.171875rem;
+    line-height: inherit;
+    white-space: nowrap;
+    font-weight: 400;
+    pointer-events: none;
+  }
+  ul.navbar-nav.d-none.d-md-flex::after:hover {
+    text-decoration: underline;
+  }
+
+  header.fixed-top.brand-banner {
+    background: unset;
+    z-index: 2000;
+    height: 50px;
+    left: 4.25rem;
+    width: 6.4rem;
+  }
+  header.fixed-top.brand-banner .right-logo {
+    visibility: hidden;
+  }
+  header.fixed-top.brand-banner .left-logo {
+    display: block;
+    position: static;
+    height: inherit;
+    box-shadow: unset;
+  }
+  header.fixed-top.brand-banner .left-logo img {
+    visibility: hidden;
+  }
+
+  #blocks-column-toggle {
+    top: 0px;
+    margin-top: 75px;
+  }
+
+  #page,
+#nav-drawer,
+#blocks-column,
+.message-app.drawer {
+    top: 0px;
+    margin-top: 60px !important;
+  }
+
+  .navbar-receptic {
+    top: 0;
+    background: unset;
+  }
+
+  .block-myoverview div[data-region=courses-view] ul.list-group {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -0.25rem;
+    margin-left: -0.25rem;
+  }
+  .block-myoverview div[data-region=courses-view] ul.list-group .card.dashboard-card {
+    margin-bottom: 0.5rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: calc(33.33% - 0.5rem);
+  }
+}
+@-moz-document url-prefix("https://moodle.uclouvain.be/"), url-prefix("https://webcampus.unamur.be/") {
+  /* Global changes */
+  /* ----- Root ----- */
+  body,
+#page-my-index {
     background-color: #121212;
     color: #ffffff;
     font-family: "Roboto", "Helvetica", sans-serif;
-    font-weight: 100;
+    font-weight: 200;
   }
 
-  a, .block .block-cards a.coursename {
-    color: #03dac6;
-    font-weight: 400;
-  }
-
-  strong {
-    font-weight: 700;
-  }
-
-  .text-muted {
-    font-weight: 400;
-    color: inherit;
-  }
-
-  .resourcelinkdetails {
-    color: #ffffff;
-    font-weight: 300;
-  }
-
-  .navbar-fhs .navbar-brand, .navbar-fhs .navbar-brand:hover {
-    color: #ffffff;
-  }
-
-  .card, #region-main {
-    color: #ffffff;
-    background-color: #1e1e1e;
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2) !important;
-    border: none;
-    border-radius: 0.5rem;
-  }
-
-  .dashboard-card {
-    color: #ffffff;
-    background-color: #242424;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
-  }
-
-  .card-footer {
-    background-color: inherit !important;
-    border-radius: inherit;
-  }
-
-  .navbar {
-    color: #ffffff;
-    background-color: #222222;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
-  }
-
-  .navbar-fhs .navbar-nav .nav-link, span.userbutton {
-    color: inherit;
-  }
-
-  .navbar .btn-secondary {
-    color: inherit;
-    background-color: inherit;
-    border: none;
-  }
-
-  button.btn.btn-secondary[type=submit] {
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1.25px;
-    text-transform: uppercase;
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    line-height: normal;
-    min-width: 64px;
-    padding: 0px 16px;
-    min-height: 36px;
-    user-select: none;
-    vertical-align: middle;
-    perspective: 1px;
-    position: relative;
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2) !important;
-    transition: box-shadow 0.7s;
-  }
-  button.btn.btn-secondary[type=submit], button.btn.btn-secondary[type=submit]:active, button.btn.btn-secondary[type=submit]:focus, button.btn.btn-secondary[type=submit]:active:focus {
-    outline: unset;
-    background-color: #bb86fc;
-    color: #000000;
-  }
-  button.btn.btn-secondary[type=submit]:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border-radius: inherit;
-    pointer-events: none;
-    background-image: radial-gradient(circle, white 1%, transparent 1%);
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: 15000%;
-    opacity: 0.01;
-    transition: background 0.7s, opacity 1s;
-    z-index: -1;
-  }
-  button.btn.btn-secondary[type=submit]:active:before, button.btn.btn-secondary[type=submit]:focus:before {
-    animation-name: ripple;
-    animation-duration: 0.6s;
-    opacity: 0.4;
-    transition: 0s !important;
-  }
-  @keyframes ripple {
-    from {
-      background-size: 1%;
-    }
-    to {
-      background-size: 15000%;
-    }
-  }
-  button.btn.btn-secondary[type=submit]:hover {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2) !important;
-    transition: box-shadow 0.6s;
-    background-color: #c18fff;
-  }
-  button.btn.btn-secondary[type=submit]:focus, button.btn.btn-secondary[type=submit]:active {
-    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2) !important;
-    transition: box-shadow 0.6s;
-  }
-
+  /* ----- Fixes to remove unwanted behavior originating from the default theme ----- */
   .pagelayout-mydashboard #region-main {
     color: #ffffff;
     background-color: #121212;
@@ -175,58 +124,10 @@
     width: 100%;
   }
 
-  form .form-inline {
-    height: 56px;
-    border-radius: 4px 4px 0 0;
-    display: inline-flex;
-    position: relative;
-    box-sizing: border-box;
-    overflow: hidden;
-    color: #ffffff;
-    background-color: #373737;
-    width: max-content;
-    min-width: 20%;
-    margin-right: auto;
-    flex: unset;
-    padding: 0;
-  }
-  form .form-inline input {
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 0.009375em;
-    text-decoration: inherit;
-    text-transform: inherit;
-    align-self: flex-end;
-    box-sizing: border-box;
-    width: 100%;
-    flex-grow: 1;
-    height: 100%;
-    padding: 20px 16px 6px;
-    border: none;
-    border-bottom: 1px solid;
-    background: none;
-    appearance: none;
-    border-radius: 0;
-    caret-color: #bb86fc;
-    border-bottom-color: rgba(255, 255, 255, 0.42);
-  }
-  form .form-inline input:hover {
-    border-bottom-color: rgba(255, 255, 255, 0.87);
-  }
-  form .form-inline input:focus {
-    outline: none;
-    box-shadow: none;
-    background: none;
-    border-bottom-color: #bb86fc;
-    border-width: 2px;
-    transition: none;
-  }
-
-  /* ------------- */
-  /* --- Icons --- */
-  /* ------------- */
-  /** Global changes for icons */
-  .ygtvcell .icon, .block_calendar_upcoming .event .icon {
+  /** ----- Global changes for icons ----- */
+  .ygtvcell .icon,
+.block_calendar_upcoming .event .icon,
+.block_completion_progress .progressBarCell .nowicon {
     height: 16px !important;
     vertical-align: middle;
     width: 0px !important;
@@ -236,7 +137,9 @@
     background-size: contain;
   }
 
-  img.icon.smallicon, .content-item-container .notification-image img, .notification-area .image-container img {
+  img.icon.smallicon,
+.content-item-container .notification-image img,
+.notification-area .image-container img {
     height: 20px !important;
     width: 0px !important;
     padding-right: 20px !important;
@@ -244,7 +147,10 @@
     filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
   }
 
-  img.activityicon, #page-mod-folder-view .fp-icon .icon, .block_completion_progress .progressEventInfo img, .icon-size-4 .icon {
+  img.activityicon,
+#page-mod-folder-view .fp-icon .icon,
+.block_completion_progress .progressEventInfo img,
+.icon-size-4 .icon {
     height: 24px !important;
     width: 0px !important;
     padding-right: 24px !important;
@@ -432,5 +338,296 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode"], img[src*="/t
   /* Data */
   img[src*="/theme/image.php/"][src*="/data/"][src$="/icon"] {
     background-image: url("https://api.iconify.design/mdi/database.svg?height=24");
+  }
+
+  /* Now */
+  img[src*="/theme/image.php/"][src*="/block_completion_progress/"][src$="/right"] {
+    background-image: url("https://api.iconify.design/bi/caret-down-fill.svg");
+  }
+
+  .text-info {
+    color: #03dac6 !important;
+  }
+
+  /* ----- Texts ----- */
+  label {
+    color: #c6c6c6;
+    font-weight: 300;
+  }
+
+  a,
+.block .block-cards a.coursename {
+    color: #03dac6;
+    font-weight: 400;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  .text-muted {
+    font-weight: 400;
+    color: #959595 !important;
+  }
+
+  .resourcelinkdetails {
+    color: #959595;
+    font-weight: 300;
+  }
+
+  .navbar-fhs .navbar-brand,
+.navbar-fhs .navbar-brand:hover {
+    color: #ffffff;
+  }
+
+  /* ----- Cards ----- */
+  .card,
+#region-main {
+    color: #ffffff;
+    background-color: #1e1e1e;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2) !important;
+    border: none;
+    border-radius: 0.5rem;
+  }
+
+  .dashboard-card,
+.course-listitem.list-group-item {
+    color: #ffffff;
+    background-color: #242424;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+    border: none;
+    border-radius: 0.5rem;
+  }
+
+  .card-footer {
+    background-color: inherit !important;
+    border-radius: inherit;
+  }
+
+  /* ----- Input ----- */
+  form .form-inline input[type=text],
+#coursesearch .coursesearchbox input[type=text],
+form.form-inline input[type=text] {
+    background-color: #424242;
+    color: #ffffff;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.009375em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    padding: 16px 6px;
+    height: 42px;
+    border: none;
+    border-bottom: 1px solid;
+    caret-color: #bb86fc;
+    border-bottom-color: rgba(255, 255, 255, 0.42);
+    will-change: border-color, background-color, border-width;
+    transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-width 0.2s ease-in-out !important;
+  }
+  form .form-inline input[type=text]:hover,
+#coursesearch .coursesearchbox input[type=text]:hover,
+form.form-inline input[type=text]:hover {
+    background-color: #373737;
+    border-bottom-color: rgba(255, 255, 255, 0.87);
+  }
+  form .form-inline input[type=text]:focus, form .form-inline input[type=text]:focus-visible,
+#coursesearch .coursesearchbox input[type=text]:focus,
+#coursesearch .coursesearchbox input[type=text]:focus-visible,
+form.form-inline input[type=text]:focus,
+form.form-inline input[type=text]:focus-visible {
+    color: inherit;
+    background-color: #2c2c2c;
+    outline: none;
+    box-shadow: none;
+    border-bottom-color: #bb86fc;
+    border-width: 2px;
+    transition: none;
+  }
+  form .form-inline input[type=text]:disabled, form .form-inline input[type=text]:read-only,
+#coursesearch .coursesearchbox input[type=text]:disabled,
+#coursesearch .coursesearchbox input[type=text]:read-only,
+form.form-inline input[type=text]:disabled,
+form.form-inline input[type=text]:read-only {
+    background-color: #242424;
+    color: #7c7c7c;
+    border-bottom-color: #7c7c7c;
+    transition: none !important;
+  }
+  form .form-inline input[type=text]:disabled:hover, form .form-inline input[type=text]:read-only:hover,
+#coursesearch .coursesearchbox input[type=text]:disabled:hover,
+#coursesearch .coursesearchbox input[type=text]:read-only:hover,
+form.form-inline input[type=text]:disabled:hover,
+form.form-inline input[type=text]:read-only:hover {
+    border-bottom-color: inherit;
+  }
+
+  #coursesearch .coursesearchbox {
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    flex-wrap: wrap;
+    display: inline-flex;
+  }
+  #coursesearch .coursesearchbox input {
+    min-width: 30%;
+  }
+
+  .input-group {
+    gap: 10px;
+  }
+
+  a.btn.btn-link {
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+  }
+
+  button.btn.btn-secondary[type=submit] {
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: normal;
+    min-width: 64px;
+    padding: 0px 16px;
+    min-height: 36px;
+    user-select: none;
+    vertical-align: middle;
+    perspective: 1px;
+    position: relative;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2) !important;
+    transition: box-shadow 0.7s;
+  }
+  button.btn.btn-secondary[type=submit], button.btn.btn-secondary[type=submit]:active, button.btn.btn-secondary[type=submit]:focus, button.btn.btn-secondary[type=submit]:active:focus {
+    outline: unset;
+    background-color: #bb86fc;
+    color: #000000;
+  }
+  button.btn.btn-secondary[type=submit]:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image: radial-gradient(circle, white 1%, transparent 1%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 15000%;
+    opacity: 0.01;
+    transition: background 0.7s, opacity 1s;
+    z-index: -1;
+  }
+  button.btn.btn-secondary[type=submit]:active:before, button.btn.btn-secondary[type=submit]:focus:before {
+    animation-name: ripple;
+    animation-duration: 0.6s;
+    opacity: 0.4;
+    transition: 0s !important;
+  }
+  @keyframes ripple {
+    from {
+      background-size: 1%;
+    }
+    to {
+      background-size: 15000%;
+    }
+  }
+  button.btn.btn-secondary[type=submit]:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2) !important;
+    transition: box-shadow 0.6s;
+    background-color: #c18fff;
+  }
+  button.btn.btn-secondary[type=submit]:focus, button.btn.btn-secondary[type=submit]:active {
+    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2) !important;
+    transition: box-shadow 0.6s;
+  }
+
+  /* ----- Navbar ----- */
+  .navbar {
+    color: #ffffff;
+    background-color: #222222;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .navbar-fhs .navbar-nav .nav-link,
+span.userbutton {
+    color: inherit;
+  }
+
+  .navbar .btn-secondary {
+    color: inherit;
+    background-color: inherit;
+    border: none;
+  }
+
+  div#page-navbar {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* ----- Progress indicators ----- */
+  .progress {
+    border: 0 !important;
+    border-radius: 5px;
+    background-color: #424242 !important;
+    margin-bottom: 5px;
+  }
+  .progress .progress-bar {
+    background-color: #bb86fc;
+    border: 0;
+  }
+
+  .block_completion_progress .progressEventInfo {
+    font-weight: 300;
+    letter-spacing: normal;
+  }
+  .block_completion_progress .progressEventInfo img.icon {
+    filter: none !important;
+  }
+  .block_completion_progress .barRowCells .progressBarCell {
+    height: 1rem;
+    border: 0 !important;
+  }
+  .block_completion_progress .barRowCells .progressBarCell.completed {
+    background-color: #78ce65;
+  }
+  .block_completion_progress .barRowCells .progressBarCell .nowDiv {
+    font-size: 14px;
+    top: -25px;
+    margin-right: 5.5px;
+  }
+  .block_completion_progress .barRowCells .progressBarCell .nowDiv .nowicon {
+    margin-left: 5px;
+  }
+
+  /* ----- Ghost elements ----- */
+  @keyframes bg-pulse-grey {
+    0% {
+      background-color: #2c2c2c;
+    }
+    50% {
+      background-color: #333333;
+    }
+    100% {
+      background-color: #2c2c2c;
+    }
+  }
+  /* ----- Other miscellaneous changes ----- */
+  .path-course-view .completionprogress a.btn.btn-link {
+    margin-left: 10px;
   }
 }

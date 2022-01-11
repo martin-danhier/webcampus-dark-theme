@@ -1,0 +1,40 @@
+/* ----- Input ----- */
+
+// Text fields
+
+form .form-inline input[type="text"],
+#coursesearch .coursesearchbox input[type="text"],
+form.form-inline input[type="text"] {
+    // Apply text field to fields
+    @include filled-text-field($bg-primary);
+}
+
+#coursesearch .coursesearchbox {
+    align-items: center;
+    justify-content: flex-start;
+    gap: $flex-gap;
+    flex-wrap: wrap;
+    display: inline-flex;
+
+    input {
+        min-width: 30%;
+    }
+}
+
+// Input groups
+
+.input-group {
+    gap: $flex-gap;
+}
+
+// Buttons
+
+a.btn.btn-link {
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+button.btn.btn-secondary[type="submit"] {
+    @include raised-button($bg-primary, $bg-primary-hover, $fg-on-primary);
+}

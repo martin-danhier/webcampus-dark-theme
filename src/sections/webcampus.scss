@@ -1,0 +1,94 @@
+@import '../constants.scss';
+@import '../mixins.scss';
+
+// Fixes that only need to be applied to WebCampus because of their ugly custom theme
+
+// ====== Remove custom Banner ======
+
+ul.navbar-nav.d-none.d-md-flex::after {
+    // Add a title text in the appbar instead of the brand banner
+    // We will make it clickable by moving the brand banner on top of it
+    content: "Webcampus";
+    font-size: 18px;
+    font-size: 1.171875rem;
+    line-height: inherit;
+    white-space: nowrap;
+    font-weight: 400;
+
+    pointer-events: none;
+    
+
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+header.fixed-top.brand-banner {
+    // Remove ugly background
+    background: unset;
+
+    // Instead of hiding it, make it invisible and position it above the actual
+    // app  bar
+    z-index: 2000;
+    height: $appbar-height;
+
+    // Make it smaller so than it only covers the "Webcampus" brand text
+    left: 4.25rem;
+    width: 6.4rem;
+
+    // Hide right logo
+    .right-logo {
+        visibility: hidden;
+    }
+    .left-logo {
+
+        // Make the left logo container take the whole space of the brand banner
+        display: block;
+        position: static;
+        height: inherit;
+        
+        // Hide left logo
+        box-shadow: unset;
+        img {
+            visibility: hidden;
+        }
+    }
+}
+
+// Move the contents of the page up because there isn't a brand banner anymore
+#blocks-column-toggle {
+    top: 0px;
+    margin-top: 75px;
+}
+#page,
+#nav-drawer,
+#blocks-column,
+.message-app.drawer {
+    top: 0px;
+    margin-top: 60px !important;
+}
+
+.navbar-receptic {
+    // Move the real navbar as well, and remove the ugly theme
+    top: 0;
+    background: unset;
+}
+
+// Make a card deck instead of a list
+.block-myoverview  div[data-region=courses-view] ul.list-group {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -0.25rem;
+    margin-left: -0.25rem;
+    
+    .card.dashboard-card {
+        margin-bottom: .5rem;
+        margin-left: .25rem;
+        margin-right: .25rem;
+        flex-basis: auto;
+        flex-grow: 0;
+        flex-shrink: 0;
+        width: calc(33.33% - .5rem);
+    }
+    
+}

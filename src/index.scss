@@ -17,10 +17,42 @@
 
 */
 
-// -> this will return a deprecation warning, but it is normal
-// That is how stylus works
-@-moz-document url-prefix("https://moodle.uclouvain.be/")
+// ============= Global imports =============
+
+@-moz-document url-prefix("https://moodle.uclouvain.be/"), url-prefix("https://webcampus.unamur.be/")
 {
+    // -> this will return a deprecation warning, but it is normal
+    // That is how stylus works
+
+    /* Global imports */
+    
+    // Import material fonts
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+}
+
+// ============= Site-specific style =============
+
+@-moz-document url-prefix("https://webcampus.unamur.be/")
+{
+    // -> this will return a deprecation warning, but it is normal
+    // That is how stylus works
+
+    /* Webcampus specific style */
+
+    @import 'sections/webcampus.scss';
+}
+
+// ============= Global style =============
+
+// The global style is applied last because all of the site-specific styles aim to bring them to a common base
+// on top of which the custom style can be applied
+
+@-moz-document url-prefix("https://moodle.uclouvain.be/"), url-prefix("https://webcampus.unamur.be/")
+{
+    // -> this will return a deprecation warning, but it is normal
+    // That is how stylus works
+
+    /* Global changes */
+
     @import 'sections/common.scss';
-    @import 'sections/icons.scss';
 }

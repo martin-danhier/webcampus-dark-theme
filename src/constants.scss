@@ -19,7 +19,13 @@ $bg-surface-08dp: #2d2d2d; // 12%
 $bg-surface-12dp: #323232; // 14% 
 $bg-surface-16dp: #333333; // 15% 
 $bg-surface-24dp: #373737; // 16% 
+$bg-field: #424242;
+$bg-field-hover: #373737;
+$bg-field-focus: #2c2c2c;
+$bg-field-disabled: #242424;
+
 $bg-error: #cf6679;
+$bg-success: #78ce65;
 
 // Foreground colors
 $fg-on-primary: #000000;
@@ -27,22 +33,18 @@ $fg-on-secondary: #000000;
 $fg-on-background: #ffffff;
 $fg-on-surface: #ffffff;
 $fg-on-error: #000000;
+$fg-on-success: #000000;
+$fg-high-emphasis: #c6c6c6;
+$fg-medium-emphasis: #959595;
+$fg-field-disabled: #7c7c7c;
 
 // Special colors
 $shadow-1: rgba(0, 0, 0, .14);
 $shadow-2: rgba(0, 0, 0, .12);
 $shadow-3: rgba(0, 0, 0, .20);
 
-// Rgb version of some colors for maths
-// Don't add rgb() around it. It is used to allow to play with the alpha
-// value like this: rgba(var(--bg-thing-rgb), 80)
-
-$bg-primary-rgb: 187, 134, 252;
-$bg-primary-variant-rgb: 55, 0, 179;
-$bg-secondary-rgb: 3, 218, 198;
-$bg-background-rgb: 18, 18, 18;
-$bg-surface-rgb: 18, 18, 18;
-
 // Other parameters
 $border-radius: 0.5rem;
+$flex-gap: 10px;
+$appbar-height: 50px;
 

@@ -1,85 +1,18 @@
 @import '../constants.scss';
 @import '../mixins.scss';
 
-// Import material fonts
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+/* ----- Root ----- */
 
-body, #page-my-index {
+body,
+#page-my-index {
     // Base values
     background-color: $bg-background;
     color: $fg-on-background;
-    font-family: 'Roboto', 'Helvetica', sans-serif;
-    font-weight: 100;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-weight: 200;
 }
 
-// Text styles
-
-a, .block .block-cards a.coursename {
-    color: $bg-secondary;
-    font-weight: 400;
-}
-
-strong {
-    font-weight: 700;
-}
-
-.text-muted {
-    font-weight: 400;
-    color: inherit;
-}
-
-.resourcelinkdetails {
-    color: $fg-on-surface;
-    font-weight: 300;
-}
-
-.navbar-fhs .navbar-brand, .navbar-fhs .navbar-brand:hover {
-    color: $fg-on-surface;
-}
-
-// Cards
-.card, #region-main {
-    @include surface(1);
-    @include elevation(1);
-    border: none;
-    border-radius: $border-radius;
-}
-
-.dashboard-card {
-    // They are on top of a bigger card so it needs a bigger elevation
-    @include surface(3);
-    @include elevation(2); // 3 because it is on top of a elevation 1 card
-}
-
-.card-footer {
-    background-color: inherit !important;
-    border-radius: inherit;
-}
-
-// Navbar
-
-.navbar {
-    @include surface(2);
-    @include elevation(2);
-}
-
-.navbar-fhs .navbar-nav .nav-link, span.userbutton {
-    color: inherit;
-}
-
-.navbar .btn-secondary {
-    color: inherit;
-    background-color: inherit;
-    border: none;
-}
-
-// Buttons
-
-button.btn.btn-secondary[type=submit] {
-    @include raised-button($bg-primary, $bg-primary-hover, $fg-on-primary);
-}
-
-// Fixes to remove unwanted behaviour originating from the default theme
+/* ----- Fixes to remove unwanted behavior originating from the default theme ----- */
 
 .pagelayout-mydashboard #region-main {
     // Remove that card because 3 layers of cards are ugly
@@ -104,8 +37,14 @@ h3.sectionname {
     width: 100%;
 }
 
-// Course search box
+// Imports parts from common directory (split into multiple files to avoid having one huge file)
+@import './common/icons.scss';
+@import './common/text.scss';
+@import './common/cards.scss';
+@import './common/input.scss';
+@import './common/navbar.scss';
+@import './common/progress-indicators.scss';
+@import './common/ghost.scss';
 
-form .form-inline {
-    @include text-field-base($bg-primary);
-}
+// Last import the miscellaneous styles
+@import './common/misc.scss';
