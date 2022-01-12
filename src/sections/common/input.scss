@@ -38,3 +38,114 @@ a.btn.btn-link {
 button.btn.btn-secondary[type="submit"] {
     @include raised-button($bg-primary, $bg-primary-hover, $fg-on-primary);
 }
+
+// Drop downs
+
+.dropdown,
+.btn-group[data-region="view-selector"] {
+    // Button / preview
+    .dropdown-toggle.btn {
+        @include outlined-button($fg-on-surface, false);
+        &:active:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        &:hover {
+            background-color: $bg-field-hover;
+        }
+    }
+
+    // Menu itself
+    .dropdown-menu {
+        @include surface(12);
+        @include elevation(12);
+        color: $fg-on-surface;
+
+        list-style: none;
+
+        border-radius: $border-radius;
+
+        // List items
+        .dropdown-item {
+            // Remove default style
+            color: inherit;
+            list-style: none;
+            &:before {
+                display: none;
+            }
+            background-color: inherit;
+
+            // Padding
+            padding: $spacing-s $spacing-sm;
+
+            // Hover & selected
+            &[aria-current="true"] {
+                background-color: $bg-field-selected-bright;
+            }
+
+            &:hover {
+                background-color: $bg-field-hover-bright;
+            }
+        }
+
+        // Header
+        .dropdown-header {
+            color: $fg-medium-emphasis;
+            padding: $spacing-xs $spacing-s;
+            text-align: center;
+        }
+
+        // Divider
+        .dropdown-divider {
+            border-color: $bg-divider;
+            margin: 0;
+        }
+    }
+}
+
+// Page buttons
+
+.pagination {
+    .page-item {
+        // In a button group, only curve the outer edges
+        &:first-child .page-link {
+            border-top-left-radius: $border-radius;
+            border-bottom-left-radius: $border-radius;
+        }
+
+        &:last-child .page-link {
+            border-top-right-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+        }
+
+        // Disabled
+        &.disabled .page-link {
+            color: $fg-field-disabled;
+            border-color: $fg-field-disabled;
+        }
+
+        .page-link {
+            // Remove default style
+            border-radius: 0;
+            background-color: inherit;
+            color: inherit;
+            box-shadow: none;
+            outline: none;
+
+            // Position
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            & .icon {
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            // Color
+            &:hover {
+                background-color: $bg-field-hover;
+            }
+        }
+    }
+}

@@ -7,7 +7,7 @@
 @author         Martin Danhier & Yannis Fraselle
 @updateURL      https://raw.githubusercontent.com/martin-danhier/webcampus-dark-theme/master/dark_webcampus.user.css
 ==/UserStyle== */
-/* 
+/*
 
 
 
@@ -390,8 +390,14 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode"], img[src*="/t
     border-radius: 0.5rem;
   }
 
+  .card-footer {
+    background-color: inherit !important;
+    border-radius: inherit;
+  }
+
   .dashboard-card,
-.course-listitem.list-group-item {
+.course-listitem.list-group-item,
+.block .block-cards .course-summaryitem {
     color: #ffffff;
     background-color: #242424;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
@@ -399,9 +405,25 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode"], img[src*="/t
     border-radius: 0.5rem;
   }
 
-  .card-footer {
-    background-color: inherit !important;
-    border-radius: inherit;
+  .block .block-cards .course-summaryitem {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+  .block .block-cards .course-summaryitem a {
+    margin: 5px;
+    margin-right: 10px;
+  }
+  .block .block-cards .course-summaryitem a .summaryimage {
+    border-radius: 50% !important;
+  }
+
+  .block_myoverview .container-fluid {
+    margin-top: 20px;
+  }
+
+  .block_myoverview [data-region=courses-view] .list-group .list-group-item {
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
   /* ----- Input ----- */
@@ -512,6 +534,9 @@ form.form-inline input[type=text]:read-only:hover {
     background-color: #bb86fc;
     color: #000000;
   }
+  button.btn.btn-secondary[type=submit] i, button.btn.btn-secondary[type=submit].fa {
+    margin-right: 8px;
+  }
   button.btn.btn-secondary[type=submit]:before {
     content: "";
     display: block;
@@ -526,7 +551,7 @@ form.form-inline input[type=text]:read-only:hover {
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 15000%;
-    opacity: 0.01;
+    opacity: 0;
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
@@ -554,29 +579,258 @@ form.form-inline input[type=text]:read-only:hover {
     transition: box-shadow 0.6s;
   }
 
+  .dropdown .dropdown-toggle.btn,
+.btn-group[data-region=view-selector] .dropdown-toggle.btn {
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: normal;
+    min-width: 64px;
+    padding: 0px 16px;
+    min-height: 36px;
+    user-select: none;
+    vertical-align: middle;
+    box-shadow: none;
+    border: 1px solid #ffffff !important;
+  }
+  .dropdown .dropdown-toggle.btn, .dropdown .dropdown-toggle.btn:active, .dropdown .dropdown-toggle.btn:focus, .dropdown .dropdown-toggle.btn:active:focus,
+.btn-group[data-region=view-selector] .dropdown-toggle.btn,
+.btn-group[data-region=view-selector] .dropdown-toggle.btn:active,
+.btn-group[data-region=view-selector] .dropdown-toggle.btn:focus,
+.btn-group[data-region=view-selector] .dropdown-toggle.btn:active:focus {
+    outline: unset;
+    background-color: inherit;
+    color: #ffffff;
+  }
+  .dropdown .dropdown-toggle.btn i, .dropdown .dropdown-toggle.btn.fa,
+.btn-group[data-region=view-selector] .dropdown-toggle.btn i,
+.btn-group[data-region=view-selector] .dropdown-toggle.btn.fa {
+    margin-right: 8px;
+  }
+  .dropdown .dropdown-toggle.btn:active:focus,
+.btn-group[data-region=view-selector] .dropdown-toggle.btn:active:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .dropdown .dropdown-toggle.btn:hover,
+.btn-group[data-region=view-selector] .dropdown-toggle.btn:hover {
+    background-color: #373737;
+  }
+  .dropdown .dropdown-menu,
+.btn-group[data-region=view-selector] .dropdown-menu {
+    color: #ffffff;
+    background-color: #323232;
+    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2) !important;
+    color: #ffffff;
+    list-style: none;
+    border-radius: 0.5rem;
+  }
+  .dropdown .dropdown-menu .dropdown-item,
+.btn-group[data-region=view-selector] .dropdown-menu .dropdown-item {
+    color: inherit;
+    list-style: none;
+    background-color: inherit;
+    padding: 10px 15px;
+  }
+  .dropdown .dropdown-menu .dropdown-item:before,
+.btn-group[data-region=view-selector] .dropdown-menu .dropdown-item:before {
+    display: none;
+  }
+  .dropdown .dropdown-menu .dropdown-item[aria-current=true],
+.btn-group[data-region=view-selector] .dropdown-menu .dropdown-item[aria-current=true] {
+    background-color: #404040;
+  }
+  .dropdown .dropdown-menu .dropdown-item:hover,
+.btn-group[data-region=view-selector] .dropdown-menu .dropdown-item:hover {
+    background-color: #424242;
+  }
+  .dropdown .dropdown-menu .dropdown-header,
+.btn-group[data-region=view-selector] .dropdown-menu .dropdown-header {
+    color: #959595;
+    padding: 5px 10px;
+    text-align: center;
+  }
+  .dropdown .dropdown-menu .dropdown-divider,
+.btn-group[data-region=view-selector] .dropdown-menu .dropdown-divider {
+    border-color: #121212;
+    margin: 0;
+  }
+
+  .pagination .page-item:first-child .page-link {
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+  }
+  .pagination .page-item:last-child .page-link {
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+  }
+  .pagination .page-item.disabled .page-link {
+    color: #7c7c7c;
+    border-color: #7c7c7c;
+  }
+  .pagination .page-item .page-link {
+    border-radius: 0;
+    background-color: inherit;
+    color: inherit;
+    box-shadow: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .pagination .page-item .page-link .icon {
+    text-align: center;
+    vertical-align: middle;
+  }
+  .pagination .page-item .page-link:hover {
+    background-color: #373737;
+  }
+
   /* ----- Navbar ----- */
-  .navbar {
+  .navbar.navbar-fhs {
     color: #ffffff;
     background-color: #222222;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
+    color: #ffffff;
   }
-
-  .navbar-fhs .navbar-nav .nav-link,
-span.userbutton {
-    color: inherit;
-  }
-
-  .navbar .btn-secondary {
+  .navbar.navbar-fhs .btn-secondary[data-action=toggle-drawer] {
     color: inherit;
     background-color: inherit;
     border: none;
+    border-radius: 0.5rem;
+  }
+  .navbar.navbar-fhs .btn-secondary[data-action=toggle-drawer]:focus, .navbar.navbar-fhs .btn-secondary[data-action=toggle-drawer]:active:focus, .navbar.navbar-fhs .btn-secondary[data-action=toggle-drawer]:active {
+    outline: none;
+    box-shadow: none;
+    color: inherit;
+  }
+  .navbar.navbar-fhs .btn-secondary[data-action=toggle-drawer]:hover {
+    background-color: #373737;
+  }
+  .navbar.navbar-fhs .navbar-nav .nav-link {
+    color: inherit;
+    border-radius: 0.5rem;
+  }
+  .navbar.navbar-fhs .navbar-nav .nav-link:hover {
+    background-color: #373737;
+  }
+  .navbar.navbar-fhs .navbar-nav .popover-region-notifications .nav-link,
+.navbar.navbar-fhs .navbar-nav [data-region=popover-region-messages] .nav-link {
+    width: 40px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar.navbar-fhs .navbar-nav .popover-region-notifications .nav-link .icon,
+.navbar.navbar-fhs .navbar-nav [data-region=popover-region-messages] .nav-link .icon {
+    margin-right: 0;
+    text-align: center;
+  }
+  .navbar.navbar-fhs .navbar-nav .popover-region-notifications .nav-link .count-container,
+.navbar.navbar-fhs .navbar-nav [data-region=popover-region-messages] .nav-link .count-container {
+    right: 7px;
+  }
+  .navbar.navbar-fhs .navbar-nav .usermenu {
+    padding-left: 5px;
+    padding-right: 10px;
+    border-radius: 0.5rem;
+  }
+  .navbar.navbar-fhs .navbar-nav .usermenu .usertext {
+    color: #ffffff;
+    padding: 0 10px;
+  }
+  .navbar.navbar-fhs .navbar-nav .usermenu .caret {
+    color: #ffffff;
+  }
+  .navbar.navbar-fhs .navbar-nav .usermenu .userpicture {
+    margin-right: 5px;
+  }
+  .navbar.navbar-fhs .navbar-nav .usermenu:hover {
+    background-color: #373737;
+  }
+  .navbar.navbar-fhs .navbar-nav .usermenu .caret:after {
+    margin-right: 2px;
   }
 
-  div#page-navbar {
-    align-items: flex-start;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  /* ----- Drawer ----- */
+  [data-region=drawer] {
+    color: #ffffff;
+    background-color: #1e1e1e;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2) !important;
+    padding: 0;
+    width: 250px;
+  }
+  [data-region=drawer] .list-group {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  [data-region=drawer] .list-group .list-group-item {
+    background-color: inherit;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.5rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    perspective: 1px;
+    position: relative;
+  }
+  [data-region=drawer] .list-group .list-group-item:hover {
+    background-color: #373737;
+  }
+  [data-region=drawer] .list-group .list-group-item:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image: radial-gradient(circle, white 1%, transparent 1%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 15000%;
+    opacity: 0;
+    transition: background 0.7s, opacity 1s;
+    z-index: -1;
+  }
+  [data-region=drawer] .list-group .list-group-item:active:before, [data-region=drawer] .list-group .list-group-item:focus:before {
+    animation-name: ripple;
+    animation-duration: 0.6s;
+    opacity: 0.4;
+    transition: 0s !important;
+  }
+  @keyframes ripple {
+    from {
+      background-size: 1%;
+    }
+    to {
+      background-size: 15000%;
+    }
+  }
+  [data-region=drawer] .list-group .list-group-item.active {
+    background-color: #bb86fc;
+    color: #000000;
+  }
+  [data-region=drawer] .list-group .list-group-item.active:hover {
+    background-color: #c18fff;
+  }
+
+  body.drawer-open-left {
+    margin-left: 250px;
   }
 
   /* ----- Progress indicators ----- */
@@ -626,6 +880,84 @@ span.userbutton {
       background-color: #2c2c2c;
     }
   }
+  /* ----- Footer ----- */
+  #page-footer {
+    background-color: inherit;
+    border: none;
+    margin: 0;
+    padding: 40px 20px !important;
+  }
+  #page-footer:after {
+    content: "\a===    Moodle Dark Theme    ===\aStyle par Martin Danhier et Yannis Fraselle \aVersion 0.6.0 \a\a";
+    display: block;
+    white-space: pre;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 300;
+  }
+
+  #back-to-top {
+    perspective: 1px;
+    position: relative;
+    background-color: #03dac6;
+    color: #000000;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2) !important;
+    transition: box-shadow 0.7s;
+    position: fixed;
+  }
+  #back-to-top:focus {
+    outline: none;
+    border: none;
+  }
+  #back-to-top:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image: radial-gradient(circle, white 1%, transparent 1%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 15000%;
+    opacity: 0;
+    transition: background 0.7s, opacity 1s;
+    z-index: -1;
+  }
+  #back-to-top:active:before, #back-to-top:focus:before {
+    animation-name: ripple;
+    animation-duration: 0.6s;
+    opacity: 0.4;
+    transition: 0s !important;
+  }
+  @keyframes ripple {
+    from {
+      background-size: 1%;
+    }
+    to {
+      background-size: 15000%;
+    }
+  }
+  #back-to-top:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2) !important;
+    transition: box-shadow 0.6s;
+    background-color: #3de2d2;
+  }
+  #back-to-top:focus, #back-to-top:active {
+    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2) !important;
+    transition: box-shadow 0.6s;
+  }
+
   /* ----- Other miscellaneous changes ----- */
   .path-course-view .completionprogress a.btn.btn-link {
     margin-left: 10px;

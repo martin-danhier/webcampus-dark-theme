@@ -8,8 +8,16 @@
     border-radius: $border-radius;
 }
 
+.card-footer {
+    background-color: inherit !important;
+    border-radius: inherit;
+}
+
+// ----- Generic course items ------
+
 .dashboard-card,
-.course-listitem.list-group-item {
+.course-listitem.list-group-item,
+.block .block-cards .course-summaryitem {
     // They are on top of a bigger card so it needs a bigger elevation
     @include surface(3);
     @include elevation(2); // 3 because it is on top of a elevation 1 card
@@ -17,7 +25,28 @@
     border-radius: $border-radius;
 }
 
-.card-footer {
-    background-color: inherit !important;
-    border-radius: inherit;
+.block .block-cards .course-summaryitem {
+    a {
+        margin: $spacing-xs;
+        margin-right: $spacing-s;
+
+        .summaryimage {
+            border-radius: 50% !important;
+        }
+    }
+
+    margin-top: $spacing-s !important;
+    margin-bottom: $spacing-s !important;
+}
+
+// ----- Overview block -----
+
+.block_myoverview .container-fluid {
+    margin-top: $spacing-m;
+}
+
+// List appearance
+.block_myoverview [data-region="courses-view"] .list-group .list-group-item {
+    margin-top: $spacing-xs;
+    margin-bottom: $spacing-xs;
 }

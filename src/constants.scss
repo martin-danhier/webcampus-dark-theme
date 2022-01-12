@@ -1,6 +1,9 @@
 // Version of the style
 $version: "0.6.0";
 
+// Authors of the style
+$authors: "Martin Danhier et Yannis Fraselle";
+
 // =========== Color theme ===========
 
 // Background colors
@@ -8,21 +11,26 @@ $bg-primary: #bb86fc;
 $bg-primary-hover: #c18fff;
 $bg-primary-variant: #3700b3;
 $bg-secondary: #03dac6;
+$bg-secondary-hover: #3de2d2;
 $bg-background: #121212;
-$bg-surface-00dp: #121212; // 0% white overlay 
-$bg-surface-01dp: #1e1e1e; // 5% 
+$bg-surface-00dp: #121212; // 0% white overlay
+$bg-surface-01dp: #1e1e1e;
 $bg-surface-02dp: #222222; // 7%
 $bg-surface-03dp: #242424; // 8%
-$bg-surface-04dp: #272727; // 9% 
-$bg-surface-06dp: #2c2c2c; // 11% 
-$bg-surface-08dp: #2d2d2d; // 12% 
-$bg-surface-12dp: #323232; // 14% 
-$bg-surface-16dp: #333333; // 15% 
-$bg-surface-24dp: #373737; // 16% 
+$bg-surface-04dp: #272727; // 9%
+$bg-surface-06dp: #2c2c2c; // 11%
+$bg-surface-08dp: #2d2d2d; // 12%
+$bg-surface-12dp: #323232; // 14%
+$bg-surface-16dp: #333333; // 15%
+$bg-surface-24dp: #373737; // 16%
 $bg-field: #424242;
 $bg-field-hover: #373737;
+$bg-field-hover-bright: #424242; // For use on bright background such as surface-12dp
+$bg-field-selected: #373737;
+$bg-field-selected-bright: #404040; // For use on bright background such as surface-12dp
 $bg-field-focus: #2c2c2c;
 $bg-field-disabled: #242424;
+$bg-divider: #121212;
 
 $bg-error: #cf6679;
 $bg-success: #78ce65;
@@ -47,4 +55,14 @@ $shadow-3: rgba(0, 0, 0, .20);
 $border-radius: 0.5rem;
 $flex-gap: 10px;
 $appbar-height: 50px;
+$drawer-width: 250px;
+$icon-button-diameter: 48px;
+
+// Spacing
+$spacing-xs: 5px;
+$spacing-s: 10px;
+$spacing-sm: 15px;
+$spacing-m: 20px;
+$spacing-l: 40px;
+$spacing-xl: 80px;
 

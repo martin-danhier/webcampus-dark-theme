@@ -1,4 +1,26 @@
-@use 'constants.scss';
+@use "constants.scss";
+
+// Common color combinations
+
+@mixin primary() {
+    background-color: $bg-primary;
+    color: $fg-on-primary;
+}
+
+@mixin secondary() {
+    background-color: $bg-secondary;
+    color: $fg-on-secondary;
+}
+
+@mixin success() {
+    background-color: $bg-success;
+    color: $fg-on-success;
+}
+
+@mixin error() {
+    background-color: $bg-error;
+    color: $fg-on-error;
+}
 
 // Surface and elevation
 
@@ -9,75 +31,53 @@
     // Level specific
     @if $dp == 0 {
         background-color: $bg-surface-00dp;
-    }
-    @else if $dp == 1 {
+    } @else if $dp == 1 {
         background-color: $bg-surface-01dp;
-    }
-    @else if $dp == 2 {
+    } @else if $dp == 2 {
         background-color: $bg-surface-02dp;
-    }
-    @else if $dp == 3 {
+    } @else if $dp == 3 {
         background-color: $bg-surface-03dp;
-    }
-    @else if $dp == 4 {
+    } @else if $dp == 4 {
         background-color: $bg-surface-04dp;
-    }
-    @else if $dp == 6 {
+    } @else if $dp == 6 {
         background-color: $bg-surface-06dp;
-    }
-    @else if $dp == 8 {
+    } @else if $dp == 8 {
         background-color: $bg-surface-08dp;
-    }
-    @else if $dp == 12 {
+    } @else if $dp == 12 {
         background-color: $bg-surface-12dp;
-    }
-    @else if $dp == 16 {
+    } @else if $dp == 16 {
         background-color: $bg-surface-16dp;
-    }
-    @else if $dp == 24 {
+    } @else if $dp == 24 {
         background-color: $bg-surface-24dp;
-    }
-    @else {
+    } @else {
         @error "Invalid argument for $dp: {" + $dp + "}, look at the method definition for possible values";
     }
-
 }
 
 @mixin elevation($dp) {
     @if $dp == 0 {
         box-shadow: none !important;
-    }
-    @else if $dp == 1 {
+    } @else if $dp == 1 {
         box-shadow: 0 1px 1px 0 $shadow-1, 0 2px 1px -1px $shadow-2, 0 1px 3px 0 $shadow-3 !important;
-    }
-    @else if $dp == 2 {
+    } @else if $dp == 2 {
         box-shadow: 0 2px 2px 0 $shadow-1, 0 3px 1px -2px $shadow-2, 0 1px 5px 0 $shadow-3 !important;
-    }
-    @else if $dp == 3 {
+    } @else if $dp == 3 {
         box-shadow: 0 3px 4px 0 $shadow-1, 0 3px 3px -2px $shadow-2, 0 1px 8px 0 $shadow-3 !important;
-    }
-    @else if $dp == 4 {
+    } @else if $dp == 4 {
         box-shadow: 0 4px 5px 0 $shadow-1, 0 1px 10px 0 $shadow-2, 0 2px 4px -1px $shadow-3 !important;
-    }
-    @else if $dp == 6 {
+    } @else if $dp == 6 {
         box-shadow: 0 6px 10px 0 $shadow-1, 0 1px 18px 0 $shadow-2, 0 3px 5px -1px $shadow-3 !important;
-    }
-    @else if $dp == 8 {
+    } @else if $dp == 8 {
         box-shadow: 0 8px 10px 1px $shadow-1, 0 3px 14px 2px $shadow-2, 0 5px 5px -3px $shadow-3 !important;
-    }
-    @else if $dp == 9 {
+    } @else if $dp == 9 {
         box-shadow: 0 9px 12px 1px $shadow-1, 0 3px 16px 2px $shadow-2, 0 5px 6px -3px $shadow-3 !important;
-    }
-    @else if $dp == 12 {
+    } @else if $dp == 12 {
         box-shadow: 0 12px 17px 2px $shadow-1, 0 5px 22px 4px $shadow-2, 0 7px 8px -4px $shadow-3 !important;
-    }
-    @else if $dp == 16 {
+    } @else if $dp == 16 {
         box-shadow: 0 16px 24px 2px $shadow-1, 0 6px 30px 5px $shadow-2, 0 8px 10px -5px $shadow-3 !important;
-    }
-    @else if $dp == 24 {
+    } @else if $dp == 24 {
         box-shadow: 0 24px 38px 3px $shadow-1, 0 9px 46px 8px $shadow-2, 0 11px 15px -7px $shadow-3 !important;
-    }
-    @else {
+    } @else {
         @error "Invalid argument for $dp: {" + $dp + "}, look at the method definition for possible values";
     }
 }
@@ -103,12 +103,13 @@
             background-repeat: no-repeat;
             background-position: 50%;
             background-size: 15000%;
-            opacity: 0.01;
+            opacity: 0;
             transition: background 0.7s, opacity 1s;
             z-index: -1;
         }
 
-        &:active:before, &:focus:before {
+        &:active:before,
+        &:focus:before {
             animation-name: ripple;
             animation-duration: 0.6s;
             opacity: 0.4;
@@ -123,22 +124,27 @@
                 background-size: 15000%;
             }
         }
-    }
-    @else {
+    } @else {
         @warn "Must pass color for ripple effect.";
     }
 }
 
-
-
-@mixin button-base($bg, $fg) {
-
-    &, &:active, &:focus, &:active:focus {
+@mixin button-base($bg, $fg, $do_ripple: true) {
+    &,
+    &:active,
+    &:focus,
+    &:active:focus {
         outline: unset;
         background-color: $bg;
         color: $fg;
     }
-    
+
+    // Leading icon
+    & i,
+    &.fa {
+        margin-right: 8px;
+    }
+
     // Clear default style
     border: none;
     outline: none;
@@ -159,7 +165,49 @@
     user-select: none;
     vertical-align: middle;
 
+    @if ($do_ripple) {
+        @include ripple(white);
+    }
+}
+
+@mixin floating-action-button($bg, $bg-hover, $fg) {
+    // Remove default style
+    &:focus {
+        outline: none;
+        border: none;
+    }
+
+    // Ripple
     @include ripple(white);
+
+    // Color
+    background-color: $bg;
+    color: $fg;
+
+    // Shape
+    border-radius: 50%;
+    width: $icon-button-diameter;
+    height: $icon-button-diameter;
+
+    // Position
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include elevation(8);
+    transition: box-shadow 0.7s;
+
+    // Interaction
+    &:hover {
+        @include elevation(6);
+        transition: box-shadow 0.6s;
+        background-color: $bg-hover;
+    }
+
+    &:focus,
+    &:active {
+        @include elevation(12);
+        transition: box-shadow 0.6s;
+    }
 }
 
 @mixin raised-button($bg, $bg-hover, $fg) {
@@ -174,14 +222,15 @@
         background-color: $bg-hover;
     }
 
-    &:focus, &:active {
+    &:focus,
+    &:active {
         @include elevation(12);
         transition: box-shadow 0.6s;
     }
 }
 
-@mixin outlined-button($color) {
-    @include button-base(inherit, $color);
+@mixin outlined-button($color, $do_ripple: true) {
+    @include button-base(inherit, $color, $do_ripple);
     box-shadow: none;
     border: 1px solid $color !important;
 }
@@ -192,34 +241,22 @@
     height: 56px;
     display: inline-flex;
     position: relative;
-    
+
     width: max-content;
     min-width: 20%;
     margin-right: auto;
-    
 
     input {
-        
         align-self: flex-end;
         box-sizing: border-box;
         width: 100%;
         flex-grow: 1;
         height: 100%;
-        
-       
         border-radius: 0;
-        
-
-        
-
-        
-        
     }
-
 }
 
 @mixin filled-text-field($color) {
-    
     background-color: $bg-field;
     color: $fg-on-surface;
     box-sizing: border-box;
@@ -235,17 +272,17 @@
     border: none;
     border-bottom: 1px solid;
     caret-color: $color;
-    border-bottom-color: rgba(255,255,255,.42);
+    border-bottom-color: rgba(255, 255, 255, 0.42);
     will-change: border-color, background-color, border-width;
-    transition: border-color .15s ease-in-out, background-color .15s ease-in-out, border-width .20s ease-in-out !important;
-
+    transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-width 0.2s ease-in-out !important;
 
     &:hover {
         background-color: $bg-field-hover;
-        border-bottom-color: rgba(255,255,255,.87);
+        border-bottom-color: rgba(255, 255, 255, 0.87);
     }
 
-    &:focus, &:focus-visible {
+    &:focus,
+    &:focus-visible {
         color: inherit;
         background-color: $bg-field-focus;
         outline: none;
@@ -255,7 +292,8 @@
         transition: none;
     }
 
-    &:disabled, &:read-only {
+    &:disabled,
+    &:read-only {
         background-color: $bg-field-disabled;
         color: $fg-field-disabled;
         border-bottom-color: $fg-field-disabled;
@@ -268,5 +306,4 @@
 }
 
 @mixin outlined-text-field() {
-
 }

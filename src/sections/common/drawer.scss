@@ -1,0 +1,59 @@
+/* ----- Drawer ----- */
+
+[data-region="drawer"] {
+    @include surface(1);
+    @include elevation(1);
+
+    padding: 0;
+    width: $drawer-width;
+
+    .list-group {
+        margin-top: $spacing-m;
+        margin-bottom: $spacing-m;
+        padding-left: $spacing-s;
+        padding-right:$spacing-s;
+
+        .list-group-item {
+            // Color and shape
+            background-color: inherit;
+            color: $fg-on-surface;
+
+            // Border
+            border: none;
+            border-radius: $border-radius;
+
+            // Padding
+            padding-top: $spacing-s;
+            padding-bottom: $spacing-s;
+
+            // Margin
+            margin-top: $spacing-xs;
+            margin-bottom: $spacing-xs;
+
+            // Text
+            font-size: 15px;
+
+            &:hover {
+                background-color: $bg-field-hover;
+            }
+
+            // Ripple
+            @include ripple(white);
+
+            // Selected item
+            &.active {
+                @include primary;
+
+                &:hover {
+                    background-color: $bg-primary-hover;
+                }
+            }
+        }
+    }
+}
+
+// Shift body when drawer is open
+
+body.drawer-open-left {
+    margin-left: $drawer-width;
+}
