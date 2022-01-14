@@ -888,7 +888,7 @@ form.form-inline input[type=text]:read-only:hover {
     padding: 40px 20px !important;
   }
   #page-footer:after {
-    content: "\a===    Moodle Dark Theme    ===\aStyle par Martin Danhier et Yannis Fraselle \aVersion 0.6.0 \a\a";
+    content: "\a===    Moodle Dark Theme    ===\aStyle par Martin Danhier & Yannis Fraselle\aVersion 0.6.0\a\a";
     display: block;
     white-space: pre;
     width: 100%;
@@ -956,6 +956,68 @@ form.form-inline input[type=text]:read-only:hover {
   #back-to-top:focus, #back-to-top:active {
     box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2) !important;
     transition: box-shadow 0.6s;
+  }
+
+  /* Tooltips (notifications, and others) */
+  .popover-region .popover-region-toggle:before, .popover-region .popover-region-toggle:after {
+    border-bottom-color: #323232;
+    right: 11px;
+  }
+  .popover-region .popover-region-toggle:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .popover-region .popover-region-container {
+    color: #ffffff;
+    background-color: #323232;
+    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2) !important;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    border: 0;
+    border-color: #121212;
+  }
+  .popover-region .popover-region-container .popover-region-header-container {
+    height: 35px;
+    border-color: inherit;
+    padding: 5px 15px;
+  }
+  .popover-region .popover-region-container .popover-region-header-container .popover-region-header-text {
+    font-weight: 400;
+    letter-spacing: 0.4px;
+  }
+  .popover-region .popover-region-container .popover-region-content-container {
+    height: calc(100% - 55px - 20px);
+  }
+  .popover-region .popover-region-container .popover-region-content-container .notification {
+    color: inherit;
+    background-color: inherit;
+    border-color: #121212;
+    padding: 10px;
+  }
+  .popover-region .popover-region-container .popover-region-content-container .notification:hover {
+    background-color: #424242;
+  }
+  .popover-region .popover-region-container .popover-region-content-container .notification .notification-image {
+    margin-right: 10px;
+  }
+  .popover-region .popover-region-container .popover-region-content-container .notification .notification-message {
+    width: calc(100% - 24px - 10px);
+  }
+  .popover-region .popover-region-container .popover-region-content-container .notification .content-item-footer .timestamp {
+    margin-left: 34px;
+    color: #959595;
+  }
+  .popover-region .popover-region-container .popover-region-content-container .notification.unread {
+    background-color: #404040;
+  }
+  .popover-region .popover-region-container .popover-region-footer-container {
+    height: 35px;
+    border-color: #121212;
+    background-color: inherit;
+    color: inherit;
+  }
+  .popover-region .popover-region-container .popover-region-footer-container .popover-region-seeall-text {
+    padding: 5px 15px;
   }
 
   /* ----- Other miscellaneous changes ----- */

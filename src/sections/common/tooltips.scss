@@ -1,0 +1,98 @@
+/* Tooltips (notifications, and others) */
+
+.popover-region {
+    // Handle
+    .popover-region-toggle {
+        &:before, &:after {
+            border-bottom-color: $bg-surface-12dp;
+            right: 11px;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    // Popover itself
+    .popover-region-container {
+        // Make the popover region elevated above the rest of the page
+        @include surface(12);
+        @include elevation(12);
+        color: $fg-on-surface;
+
+        // Border
+        border-radius: $border-radius;
+        border: 0;
+        border-color: $bg-divider;
+
+        // Header
+        .popover-region-header-container {
+            height: calc(25px + 2 * $spacing-xs);
+            border-color: inherit;
+            padding: $spacing-xs $spacing-sm;
+
+            .popover-region-header-text {
+                font-weight: 400;
+                letter-spacing: $letter-spacing;
+            }
+        }
+
+        // Content
+
+        .popover-region-content-container {
+            height: calc(100% - 55px - 4 * $spacing-xs);
+
+            // Notifications
+            .notification {
+                // Remove default style
+                color: inherit;
+                background-color: inherit;
+
+                // Border
+                border-color: $bg-divider;
+
+                // Padding
+                padding: $spacing-s;
+
+                // Hover
+                &:hover {
+                    background-color: $bg-field-hover-bright;
+                }
+
+                // Icon
+                .notification-image {
+                    margin-right: $spacing-s;
+                }
+
+                // Body
+                .notification-message {
+                    width: calc(100% - 24px - $spacing-s);
+                }
+
+                // Footer
+                .content-item-footer .timestamp {
+                    margin-left: calc(24px + $spacing-s);
+                    color: $fg-medium-emphasis;
+                }
+
+                // Unread
+                &.unread {
+                    background-color: $bg-field-selected-bright;
+                }
+            }
+        }
+
+        // Footer
+        .popover-region-footer-container {
+            height: calc(25px + 2 * $spacing-xs);
+            border-color: $bg-divider;
+            background-color: inherit;
+            color: inherit;
+
+            .popover-region-seeall-text {
+                padding: $spacing-xs $spacing-sm;
+            }
+        }
+    }
+}

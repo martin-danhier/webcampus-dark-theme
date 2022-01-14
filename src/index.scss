@@ -1,9 +1,11 @@
+@import 'constants.scss';
+
 /* ==UserStyle==
 @name           Moodle Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.6.0
+@version        #{$version}
 @description    Dark theme for Moodle
-@author         Martin Danhier & Yannis Fraselle
+@author         #{$authors}
 @updateURL      https://raw.githubusercontent.com/martin-danhier/webcampus-dark-theme/master/dark_webcampus.user.css
 ==/UserStyle== */
 
