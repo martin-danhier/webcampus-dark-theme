@@ -130,59 +130,72 @@
 }
 
 @mixin button-base($bg, $fg, $do_ripple: true) {
-    &,
-    &:active,
-    &:focus,
-    &:active:focus {
-        outline: unset;
-        background-color: $bg;
-        color: $fg;
-    }
+    &:not(.hidden) {
+        &,
+        &:active,
+        &:focus,
+        &:active:focus {
+            outline: unset;
+            background-color: $bg;
+            color: $fg;
+        }
 
-    // Leading icon
-    & i,
-    &.fa {
-        margin-right: 8px;
-    }
+        // Leading icon
+        & i,
+        &.fa {
+            margin-right: 8px;
+        }
 
-    // Clear default style
-    border: none;
-    outline: none;
+        // Clear default style
+        border: none;
+        outline: none;
 
-    // Add new button style
-    border-radius: 4px;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1.25px;
-    text-transform: uppercase;
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    line-height: normal;
-    min-width: 64px;
-    padding: 0px 16px;
-    min-height: 36px;
-    user-select: none;
-    vertical-align: middle;
+        // Add new button style
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1.25px;
+        text-transform: uppercase;
+        align-items: center;
+        display: inline-flex;
+        justify-content: center;
+        line-height: normal;
+        min-width: 64px;
+        padding: 0px 16px;
+        min-height: 36px;
+        user-select: none;
+        vertical-align: middle;
 
-    @if ($do_ripple) {
-        @include ripple(white);
+        @if ($do_ripple) {
+            @include ripple(white);
+        }
     }
 }
 
-@mixin floating-action-button($bg, $bg-hover, $fg) {
-    // Remove default style
-    &:focus {
-        outline: none;
-        border: none;
+@mixin text-button($fg, $fg-hover) {
+    @include button-base(inherit, $fg);
+    &:hover{
+        color: $fg-hover;
     }
+    &:focus, &:active, &:focus:active, &:focus:hover {
+        outline: none;
+        box-shadow: none;
+    }
+}
 
+@mixin icon-button-base() {
     // Ripple
     @include ripple(white);
 
-    // Color
-    background-color: $bg;
-    color: $fg;
+    // Remove default style
+    border: 0;
+    &:focus,
+    &:active,
+    &:hover,
+    &:focus:active {
+        outline: none;
+        border: none;
+    }
 
     // Shape
     border-radius: 50%;
@@ -193,6 +206,32 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin flat-icon-button($bg-hover: $bg-field-hover) {
+    @include icon-button-base();
+
+    &:hover {
+        background-color: $bg-hover;
+        text-decoration: none;
+    }
+
+    &:focus,
+    &:focus-visible {
+        box-shadow: none;
+        background-color: inherit;
+        text-decoration: none;
+    }
+}
+
+@mixin floating-action-button($bg, $bg-hover, $fg) {
+    @include icon-button-base();
+
+    // Color
+    background-color: $bg;
+    color: $fg;
+
+    // Position
     @include elevation(8);
     transition: box-shadow 0.7s;
 
@@ -211,28 +250,32 @@
 }
 
 @mixin raised-button($bg, $bg-hover, $fg) {
-    @include button-base($bg, $fg);
+    &:not(.hidden) {
+        @include button-base($bg, $fg);
 
-    @include elevation(3);
-    transition: box-shadow 0.7s;
+        @include elevation(3);
+        transition: box-shadow 0.7s;
 
-    &:hover {
-        @include elevation(6);
-        transition: box-shadow 0.6s;
-        background-color: $bg-hover;
-    }
+        &:hover {
+            @include elevation(6);
+            transition: box-shadow 0.6s;
+            background-color: $bg-hover;
+        }
 
-    &:focus,
-    &:active {
-        @include elevation(12);
-        transition: box-shadow 0.6s;
+        &:focus,
+        &:active {
+            @include elevation(12);
+            transition: box-shadow 0.6s;
+        }
     }
 }
 
 @mixin outlined-button($color, $do_ripple: true) {
-    @include button-base(inherit, $color, $do_ripple);
-    box-shadow: none;
-    border: 1px solid $color !important;
+    &:not(.hidden) {
+        @include button-base(inherit, $color, $do_ripple);
+        box-shadow: none;
+        border: 1px solid $color !important;
+    }
 }
 
 // Text field
@@ -303,7 +346,4 @@
             border-bottom-color: inherit;
         }
     }
-}
-
-@mixin outlined-text-field() {
 }

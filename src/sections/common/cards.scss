@@ -6,6 +6,10 @@
     @include elevation(1);
     border: none;
     border-radius: $border-radius;
+
+    &:focus {
+        outline: none;
+    }
 }
 
 .card-footer {
@@ -23,6 +27,10 @@
     @include elevation(2); // 3 because it is on top of a elevation 1 card
     border: none;
     border-radius: $border-radius;
+
+    .dropdown .btn.btn-link.coursemenubtn {
+        @include flat-icon-button($bg-field-hover);
+    }
 }
 
 .block .block-cards .course-summaryitem {
@@ -49,4 +57,121 @@
 .block_myoverview [data-region="courses-view"] .list-group .list-group-item {
     margin-top: $spacing-xs;
     margin-bottom: $spacing-xs;
+}
+
+// ----- Section ------
+
+.card.section {
+    border-radius: 0;
+    box-shadow: none !important;
+}
+
+// ----- Alerts -----
+
+.bg-white[role="alert"] {
+    background-color: $bg-surface-16dp !important;
+    @include elevation(16);
+    border-radius: $border-radius;
+
+    .text-muted {
+        color: $fg-on-surface !important;
+        user-select: none;
+    }
+
+    .btn.btn-primary {
+        @include raised-button($bg-primary, $bg-primary-hover, $fg-on-primary);
+
+        &[data-action="confirm-delete-selected-messages"] {
+            @include raised-button($bg-error, $bg-error-hover, $fg-on-error);
+        }
+    }
+
+    .btn.btn-secondary {
+        @include text-button($fg-high-emphasis, $fg-on-surface);
+    }
+}
+
+// ----- Settings -----
+
+#page-user-preferences {
+    #page-header .card {
+        padding: $spacing-m;
+    }
+
+    #region-main .container-fluid {
+        margin-top: $spacing-m;
+
+        .card {
+            @include surface(3);
+            @include elevation(1);
+            padding: $spacing-sm;
+        }
+    }
+}
+
+#page-user-profile {
+    .profile_tree .card {
+        @include surface(3);
+        @include elevation(1);
+        padding: $spacing-s;
+
+        .badge-image {
+            border-radius: $border-radius;
+        }
+    }
+}
+
+// ----- Course content -----
+
+#page-course-view-topics {
+    #page-header .card {
+        padding: $spacing-m;
+    }
+
+    .course-content {
+        li.section.hidden {
+            // Title
+            h3.sectionname {
+                border-top: 0 !important;
+                a {
+                    color: $fg-field-disabled;
+                    cursor: not-allowed;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                // Icon
+                &:before {
+                    content: "";
+                    background-image: url("https://api.iconify.design/fluent/lock-closed-32-filled.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    vertical-align: baseline;
+                    width: 24px;
+                    height: 24px;
+                    display: inline-block;
+                    filter: invert(1);
+
+                    margin-right: $spacing-s;
+                }
+            }
+
+            .content {
+                background-color: inherit;
+                color: inherit;
+                border-color: inherit;
+            }
+
+            .section_availability .badge.badge-info {
+                background-color: $bg-error;
+                color: $fg-on-error;
+                margin-left: $spacing-l;
+                font-size: 12px;
+                border-radius: 5px;
+            }
+        }
+    }
 }

@@ -4,7 +4,8 @@
 
 form .form-inline input[type="text"],
 #coursesearch .coursesearchbox input[type="text"],
-form.form-inline input[type="text"] {
+form.form-inline input[type="text"],
+.message-app input[type="text"] {
     // Apply text field to fields
     @include filled-text-field($bg-primary);
 }
@@ -27,16 +28,37 @@ form.form-inline input[type="text"] {
     gap: $flex-gap;
 }
 
+.input-group-prepend {
+    display: none;
+}
+
+.input-group-append .btn {
+    @include flat-icon-button();
+}
+
 // Buttons
 
 a.btn.btn-link {
     justify-content: center;
     align-items: center;
     display: inline-flex;
+    &:focus {
+        outline: none;
+        text-decoration: none;
+        box-shadow: none;
+    }
+}
+
+.btn.btn-primary:not(.btn-lg) {
+    @include raised-button($bg-primary, $bg-primary-hover, $fg-on-primary);
 }
 
 button.btn.btn-secondary[type="submit"] {
-    @include raised-button($bg-primary, $bg-primary-hover, $fg-on-primary);
+    @include text-button($fg-high-emphasis, $fg-on-surface);
+}
+
+.btn.btn-link.btn-icon {
+    @include flat-icon-button($bg-field-hover);
 }
 
 // Drop downs
@@ -44,15 +66,20 @@ button.btn.btn-secondary[type="submit"] {
 .dropdown,
 .btn-group[data-region="view-selector"] {
     // Button / preview
-    .dropdown-toggle.btn {
-        @include outlined-button($fg-on-surface, false);
-        &:active:focus {
+    .dropdown-toggle {
+        &:active:focus,
+        &:hover:focus,
+        &:focus {
             outline: none;
             box-shadow: none;
         }
 
-        &:hover {
-            background-color: $bg-field-hover;
+        &.btn {
+            @include outlined-button($fg-on-surface, false);
+
+            &:hover {
+                background-color: $bg-field-hover;
+            }
         }
     }
 
@@ -60,7 +87,6 @@ button.btn.btn-secondary[type="submit"] {
     .dropdown-menu {
         @include surface(12);
         @include elevation(12);
-        color: $fg-on-surface;
 
         list-style: none;
 
@@ -69,9 +95,20 @@ button.btn.btn-secondary[type="submit"] {
         // List items
         .dropdown-item {
             // Remove default style
-            color: inherit;
+            color: $fg-on-surface;
             list-style: none;
             &:before {
+                display: none;
+            }
+            a {
+                color: inherit !important;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            i.icon[aria-hidden="true"] {
                 display: none;
             }
             background-color: inherit;
@@ -102,6 +139,62 @@ button.btn.btn-secondary[type="submit"] {
             margin: 0;
         }
     }
+}
+
+.mform select.custom-select {
+    color: $fg-on-surface;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    // Shape
+    padding: 0px 2px;
+    padding-right: 28px;
+    height: 42px;
+    border-radius: 4px 4px 0 0;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.42);
+
+    // Font
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.009375em;
+    text-decoration: inherit;
+    text-transform: inherit;
+
+    // Animation
+    will-change: border-color, background-color, border-width;
+    transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-width 0.2s ease-in-out !important;
+
+    &:hover {
+        background-color: $bg-field-hover;
+        border-bottom-color: rgba(255, 255, 255, 0.87);
+        cursor: pointer;
+    }
+
+    &:focus,
+    &:focus-visible {
+        color: inherit;
+        background-color: $bg-field;
+        outline: none;
+        box-shadow: none;
+        border-bottom-color: $bg-primary;
+    }
+
+    &:disabled {
+        background-color: $bg-field-disabled;
+        color: $fg-field-disabled;
+        border-bottom-color: $fg-field-disabled;
+
+        &:hover {
+            border-bottom-color: inherit;
+        }
+    }
+
+    // Arrow
+    background: $bg-field
+        url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23c7c4c4' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E")
+        no-repeat right 10px center;
+    background-size: 14px 14px;
 }
 
 // Page buttons
@@ -148,4 +241,102 @@ button.btn.btn-secondary[type="submit"] {
             }
         }
     }
+}
+
+// Tabs
+
+.nav.nav-pills.nav-fill {
+    .nav-item .nav-link {
+        // Border
+        border-bottom: 1px solid $fg-high-emphasis;
+        border-radius: 0;
+
+        // Color
+        background-color: inherit;
+        color: $fg-high-emphasis;
+
+        // Font
+        font-weight: 400;
+        text-transform: uppercase;
+        font-size: 14px;
+        outline: none;
+        letter-spacing: 1.25px;
+        line-height: normal;
+        user-select: none;
+        vertical-align: middle;
+        width: 100%;
+        padding: $spacing-s;
+
+        // Layout
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        // Animation
+        transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        &.active {
+            color: $bg-primary;
+            border-color: $bg-primary;
+        }
+    }
+}
+
+// Category buttons
+
+.category-button,
+.emoji-picker .category-button,
+.emoji-picker .btn-outline-secondary:not(:disabled) {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+
+    &:hover {
+        background-color: $bg-field-hover;
+        border-color: $fg-high-emphasis;
+    }
+
+    &:focus,
+    &:active,
+    &:active:focus {
+        background-color: transparent;
+        outline: none;
+        box-shadow: none;
+    }
+
+    &.selected {
+        border-color: $bg-primary;
+    }
+}
+
+// Radios and switches
+
+.custom-control-label::before {
+    background-color: $bg-field;
+    border-color: $bg-field;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    border-color: $bg-primary-dark;
+    background-color: $bg-primary-dark;
+}
+
+// Message user button
+
+#message-user-button {
+    color: $fg-medium-emphasis;
+
+    &:hover {
+        color: $fg-high-emphasis;
+    }
+}
+
+// Field sets
+
+.mform fieldset {
+    border-bottom-color: $bg-divider;
 }

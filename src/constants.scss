@@ -9,6 +9,7 @@ $authors: "Martin Danhier & Yannis Fraselle";
 // Background colors
 $bg-primary: #bb86fc;
 $bg-primary-hover: #c18fff;
+$bg-primary-dark: #6e51d6;
 $bg-primary-variant: #3700b3;
 $bg-secondary: #03dac6;
 $bg-secondary-hover: #3de2d2;
@@ -33,6 +34,7 @@ $bg-field-disabled: #242424;
 $bg-divider: #121212;
 
 $bg-error: #cf6679;
+$bg-error-hover: #e17f8c;
 $bg-success: #78ce65;
 
 // Foreground colors
@@ -55,9 +57,14 @@ $shadow-3: rgba(0, 0, 0, .20);
 $border-radius: 0.5rem;
 $flex-gap: 10px;
 $appbar-height: 50px;
-$drawer-width: 250px;
-$icon-button-diameter: 48px;
-$letter-spacing: 0.4px;
+$left-drawer-width: 250px;
+$right-drawer-width: 350px;
+$icon-button-diameter: 40px;
+
+// Letter spacing
+$letter-spacing-s: 0.3px;
+$letter-spacing-m: 0.4px;
+$letter-spacing-l: 0.5px;
 
 // Spacing
 $spacing-xs: 5px;

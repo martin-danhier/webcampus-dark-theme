@@ -37,6 +37,14 @@ h3.sectionname {
     width: 100%;
 }
 
+.bg-white {
+    background-color: inherit !important;
+}
+
+.border-bottom {
+    border-bottom-color: inherit !important;
+}
+
 // Imports parts from common directory (split into multiple files to avoid having one huge file)
 @import './common/icons.scss';
 @import './common/text.scss';
@@ -48,6 +56,8 @@ h3.sectionname {
 @import './common/ghost.scss';
 @import './common/footer.scss';
 @import './common/tooltips.scss';
+@import './common/chat.scss';
+@import './common/modals.scss';
 
 // Last import the miscellaneous styles
 @import './common/misc.scss';

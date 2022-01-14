@@ -4,10 +4,9 @@
     // Base values
     @include surface(2);
     @include elevation(2);
-    color: $fg-on-surface;
 
-    // Drawer button
-    .btn-secondary[data-action="toggle-drawer"] {
+    // Drawer button & course controls
+    .btn-secondary[data-action="toggle-drawer"], .coursecontrols .btn-secondary {
         color: inherit;
         background-color: inherit;
         border: none;
@@ -78,6 +77,8 @@
 
             &:hover {
                 background-color: $bg-field-hover;
+                outline: none;
+                box-shadow: none;
             }
 
             .caret:after {
