@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.5.29
+@version        0.5.30
 @description    Dark theme for webcampus
 @author         Martin Danhier
 @author         Yannis Fraselle
@@ -72,7 +72,7 @@ domain("auth.unamur.be") {
     }
 
     #page-footer .contactinfo::before {
-        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.29 \A \A";
+        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.30 \A \A";
         white-space: pre;
         text-align: center;
         color: #e7e7e7;
@@ -103,7 +103,6 @@ domain("auth.unamur.be") {
     }
     .list-group-item {
         background-color: #262626;
-        box-shadow: 0.5px 0.5px #393535;
         border: unset;
         color: #737373;
     }
@@ -125,7 +124,8 @@ domain("auth.unamur.be") {
     }
     .card {
         background-color: #171717;
-        border-color: #4f4f4f;
+        border-color: #262626;
+        border-radius: 15px;
     }
     #region-main .card-body {
 
@@ -2102,7 +2102,7 @@ domain("auth.unamur.be") {
     }
     li.page-item .page-link,
     li.page-item.disabled .page-link {
-        background-color: #3c3939;
+        background-color: #201f1f;
         border-color: #626262;
     }
 
@@ -2198,6 +2198,14 @@ domain("auth.unamur.be") {
     .input-group-addon {
         background-color: #393939;
         border: transparent;
+    }
+    
+    .dashboard-card-deck .dashboard-card .dashboard-card-img{
+        height: 0;
+    }
+    
+    .block-region .block.block_recentlyaccessedcourses .card-body .course-info-container{
+        background-color: #262626;
     }
 }
 
