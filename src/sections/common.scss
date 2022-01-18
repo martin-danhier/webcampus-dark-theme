@@ -42,6 +42,10 @@ h3.sectionname {
     border-bottom-color: inherit !important;
 }
 
+hr {
+    border-top-color: $bg-divider !important;
+}
+
 // Imports parts from common directory (split into multiple files to avoid having one huge file)
 @import './common/icons.scss';
 @import './common/text.scss';
@@ -56,6 +60,7 @@ h3.sectionname {
 @import './common/chat.scss';
 @import './common/modals.scss';
 @import './common/forums.scss';
+@import './common/database.scss';
 
 // Last import the miscellaneous styles
 @import './common/misc.scss';

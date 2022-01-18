@@ -8,15 +8,15 @@ label {
 a,
 .block .block-cards a.coursename,
 a.aalink span {
-    color: $bg-secondary;
+    color: var(--bg-secondary);
     font-weight: 400;
 
     &:hover, &:active, &:focus, &:focus:active {
-        color: $bg-secondary-hover;
+        color: var(--bg-secondary-hover);
     }
 
     &:visited {
-        color: $bg-secondary;
+        color: var(--bg-secondary);
     }
 }
 
@@ -40,5 +40,9 @@ strong {
 }
 
 .text-primary {
-    color: $bg-primary !important;
+    color: var(--bg-primary-light) !important;
+}
+
+.text-danger {
+    color: $bg-error !important;
 }

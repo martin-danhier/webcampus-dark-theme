@@ -1,0 +1,46 @@
+/* ----- Database ----- */
+
+#page-mod-data-view .defaulttemplate table.mod-data-default-template {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border: 0;
+    @include elevation(1);
+
+    .template-token {
+        width: 50%;
+        padding: $spacing-xs $spacing-sm;
+    }
+    .template-field {
+        width: 50%;
+        font-weight: 500;
+        padding: $spacing-xs $spacing-sm;
+    }
+
+    tr {
+        // Background
+        &:nth-child(even) td {
+            background-color: $bg-surface-08dp;
+        }
+        &:nth-child(odd) td {
+            background-color: $bg-surface-03dp;
+        }
+        // Corners
+        &:first-child td {
+            border-top-left-radius: $border-radius;
+            border-top-right-radius: $border-radius;
+        }
+        &:last-child td {
+            border-bottom-left-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+        }
+    }
+}
+
+// Disable for form
+#page-mod-data-view .datapreferences .defaulttemplate table.mod-data-default-template {
+    box-shadow: none !important;
+    td {
+        background-color: inherit !important;
+    }
+}

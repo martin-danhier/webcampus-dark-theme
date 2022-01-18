@@ -88,7 +88,7 @@
     }
 
     .btn.btn-primary {
-        @include raised-button($bg-primary, $bg-primary-hover, $fg-on-primary);
+        @include raised-button(var(--bg-primary), var(--bg-primary-hover), var(--fg-on-primary));
 
         &[data-action="confirm-delete-selected-messages"] {
             @include raised-button($bg-error, $bg-error-hover, $fg-on-error);

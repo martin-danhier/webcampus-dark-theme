@@ -124,7 +124,7 @@
 
                 &.send {
                     margin-left: auto !important;
-                    background-color: $bg-primary-dark;
+                    background-color: var(--bg-primary-dark);
                     border-bottom-right-radius: 0 !important;
                 }
                 &.received {
@@ -180,14 +180,14 @@
             }
 
             a {
-                color: $bg-secondary;
+                color: var(--bg-secondary);
                 &:hover {
-                    color: $bg-secondary-hover;
+                    color: var(--bg-secondary-hover);
                 }
             }
 
             textarea {
-                @include filled-text-field($bg-primary);
+                @include filled-text-field(var(--bg-primary));
                 background-color: $bg-field !important;
                 height: auto;
                 padding: $spacing-xs $spacing-xs;

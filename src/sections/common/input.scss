@@ -8,26 +8,39 @@
     }
 }
 
-#data_adv_form {
+#data_adv_form,
+#page-mod-data-edit form .generalbox {
     width: 100%;
 
     table {
         width: 100%;
     }
 
-    .defaulttemplate table {
-        .template-field,
-        .template-token {
-            padding: $spacing-xs $spacing-m;
+    .defaulttemplate {
+        table {
+            .template-field,
+            .template-token {
+                padding: $spacing-xs $spacing-m;
+            }
+
+            .template-field {
+                width: fit-content;
+            }
+
+            .template-token {
+                width: 65%;
+
+                // Required icon
+                position: relative;
+                .inline-req .icon.text-danger {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
         }
 
-        .template-field {
-            width: fit-content;
-        }
-
-        .template-token {
-            width: 65%;
-        }
+        margin-bottom: $spacing-m;
     }
 
     tr td[colspan="4"] {
@@ -50,9 +63,10 @@ form .form-inline input[type="text"],
 #coursesearch .coursesearchbox input[type="text"],
 form.form-inline input[type="text"],
 .message-app input[type="text"],
-#data_adv_form input[type="text"] {
+#data_adv_form input[type="text"],
+#page-mod-data-edit form .generalbox input[type="text"] {
     // Apply text field to fields
-    @include filled-text-field($bg-primary);
+    @include filled-text-field(var(--bg-primary-light));
 }
 
 #coursesearch .coursesearchbox {
@@ -95,7 +109,7 @@ a.btn.btn-link {
 }
 
 .btn.btn-primary:not(.btn-lg) {
-    @include raised-button($bg-primary, $bg-primary-hover, $fg-on-primary);
+    @include raised-button(var(--bg-primary), var(--bg-primary-hover), var(--fg-on-primary));
 }
 
 button.btn.btn-secondary[type="submit"],
@@ -225,7 +239,7 @@ button.btn.btn-secondary[type="submit"],
         background-color: $bg-field;
         outline: none;
         box-shadow: none;
-        border-bottom-color: $bg-primary;
+        border-bottom-color: var(--bg-primary);
     }
 
     &:disabled {
@@ -349,8 +363,8 @@ button.btn.btn-secondary[type="submit"],
             }
 
             &.active {
-                color: $bg-primary;
-                border-color: $bg-primary;
+                color: var(--bg-primary-light);
+                border-color: var(--bg-primary-light);
             }
         }
     }
@@ -378,7 +392,7 @@ button.btn.btn-secondary[type="submit"],
     }
 
     &.selected {
-        border-color: $bg-primary;
+        border-color: var(--bg-primary);
     }
 }
 
@@ -390,8 +404,8 @@ button.btn.btn-secondary[type="submit"],
 }
 
 .custom-control-input:checked ~ .custom-control-label::before {
-    border-color: $bg-primary-dark;
-    background-color: $bg-primary-dark;
+    border-color: var(--bg-primary-dark);
+    background-color: var(--bg-primary-dark);
 }
 
 // Checkboxes
@@ -414,37 +428,48 @@ input[type="checkbox"] {
 
         &:before {
             // Show icon
-            display: inline-block;
             position: absolute;
-            vertical-align: middle;
             left: 0px;
             top: 2px;
+
+            // Positioning
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 1px;
+            padding-right: 1px;
 
             // Cursor
             cursor: pointer;
 
-            // Shape. We use Font Awesome because since it's text, the color is easily changed to the primary color.
-            // With Iconify, we need the right filter to change the color.
-            content: "\f0c8";
-            font: normal normal normal $checkbox-size "FontAwesome";
+            // Box
+            width: $checkbox-size;
+            height: $checkbox-size;
+            border-radius: 3.5px;
+            background-color: $bg-field-bright;
+
+            // Check
+            content: "";
+            font: normal normal normal calc($checkbox-size - 5.5px) "FontAwesome";
+            font-weight: 300;
             line-height: $checkbox-size;
             text-rendering: auto;
-            color: $bg-field-bright;
             text-align: center;
         }
         &:hover:before {
-            color: $bg-field-hover-bright;
+            background-color: $bg-field-hover-bright;
         }
     }
 
     // Change icon and color on checked
     &:checked + label {
         &:before {
-            content: "\f14a";
-            color: $bg-primary;
+            content: "\f00c";
+            color: var(--fg-on-primary);
+            background-color: var(--bg-primary);
         }
         &:hover:before {
-            color: $bg-primary-hover;
+            background-color: var(--bg-primary-hover);
         }
     }
 }
@@ -454,8 +479,8 @@ input[type="checkbox"] {
 .datatagcontrol {
     .form-autocomplete-selection span.badge {
         // Color
-        background-color: $bg-primary;
-        color: $fg-on-primary;
+        background-color: var(--bg-primary);
+        color: var(--fg-on-primary);
 
         // Shape
         border-radius: $border-radius;
@@ -474,7 +499,7 @@ input[type="checkbox"] {
         }
 
         &:hover {
-            background-color: $bg-primary-hover;
+            background-color: var(--bg-primary-hover);
         }
     }
 
@@ -490,7 +515,7 @@ input[type="checkbox"] {
     .form-autocomplete-suggestions {
         @include surface(12);
         @include elevation(12);
-        border-radius:$border-radius;
+        border-radius: $border-radius;
         border: 0;
         padding: $spacing-s;
     }

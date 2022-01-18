@@ -8,7 +8,7 @@
     margin-bottom: 5px;
 
     .progress-bar {
-        background-color: $bg-primary;
+        background-color: var(--bg-primary);
         border: 0;
     }
 }

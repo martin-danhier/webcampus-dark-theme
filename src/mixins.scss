@@ -3,13 +3,13 @@
 // Common color combinations
 
 @mixin primary() {
-    background-color: $bg-primary;
-    color: $fg-on-primary;
+    background-color: var(--bg-primary);
+    color: var(--fg-on-primary);
 }
 
 @mixin secondary() {
-    background-color: $bg-secondary;
-    color: $fg-on-secondary;
+    background-color: var(--bg-secondary);
+    color: var(--fg-on-secondary);
 }
 
 @mixin success() {

@@ -28,6 +28,6 @@
 }
 
 #back-to-top {
-    @include floating-action-button($bg-secondary, $bg-secondary-hover, $fg-on-secondary);
+    @include floating-action-button(var(--bg-secondary), var(--bg-secondary-hover), var(--fg-on-secondary));
     position: fixed;
 }

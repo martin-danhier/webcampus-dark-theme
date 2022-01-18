@@ -45,7 +45,7 @@
                 @include primary;
 
                 &:hover {
-                    background-color: $bg-primary-hover;
+                    background-color: var(--bg-primary-hover);
                 }
             }
         }
