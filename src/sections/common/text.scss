@@ -8,7 +8,7 @@ label {
 a,
 .block .block-cards a.coursename,
 a.aalink span {
-    color: var(--bg-secondary);
+    color: var(--bg-secondary-light);
     font-weight: 400;
 
     &:hover, &:active, &:focus, &:focus:active {
@@ -16,7 +16,7 @@ a.aalink span {
     }
 
     &:visited {
-        color: var(--bg-secondary);
+        color: var(--bg-secondary-light);
     }
 }
 

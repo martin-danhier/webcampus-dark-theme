@@ -32,7 +32,8 @@
         @include flat-icon-button($bg-field-hover);
     }
 
-    .card-img-top, .card-img {
+    .card-img-top,
+    .card-img {
         border-top-left-radius: $border-radius;
         border-top-right-radius: $border-radius;
     }
@@ -219,5 +220,17 @@
     }
     #region-main {
         padding: $spacing-m;
+    }
+}
+
+/* ----- Resource ----- */
+
+.path-mod-resource {
+    #page-header .card {
+        margin-top: $spacing-s;
+        padding: $spacing-s;
+    }
+    .resourcedetails {
+        color: $fg-high-emphasis;
     }
 }

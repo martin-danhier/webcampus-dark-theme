@@ -13,6 +13,10 @@
         padding-left: $spacing-s;
         padding-right:$spacing-s;
 
+        &:not(:last-child) {
+            border-bottom: 1px solid $bg-divider;
+        }
+
         .list-group-item {
             // Color and shape
             background-color: inherit;

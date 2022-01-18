@@ -139,10 +139,10 @@ SOFTWARE.
     --bg-primary-hover: #2196f3;
     --bg-primary-light: #63a4ff;
     --bg-primary-dark: #004ba0;
-    --bg-secondary: #03dac6;
-    --bg-secondary-light: #66fff9;
-    --bg-secondary-dark: #00a896;
-    --bg-secondary-hover: #3de2d2;
+    --bg-secondary: #00bcd4;
+    --bg-secondary-light: #62efff;
+    --bg-secondary-dark: #008ba3;
+    --bg-secondary-hover: #4dd0e1;
     --fg-on-primary: #ffffff;
     --fg-on-primary-light: #000000;
     --fg-on-primary-dark: #ffffff;
@@ -447,7 +447,7 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode"], img[src*="/t
   }
 
   .text-info {
-    color: var(--bg-secondary) !important;
+    color: var(--bg-secondary-light) !important;
   }
 
   /* ----- Texts ----- */
@@ -459,7 +459,7 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode"], img[src*="/t
   a,
 .block .block-cards a.coursename,
 a.aalink span {
-    color: var(--bg-secondary);
+    color: var(--bg-secondary-light);
     font-weight: 400;
   }
   a:hover, a:active, a:focus, a:focus:active,
@@ -476,7 +476,7 @@ a.aalink span:focus:active {
   a:visited,
 .block .block-cards a.coursename:visited,
 a.aalink span:visited {
-    color: var(--bg-secondary);
+    color: var(--bg-secondary-light);
   }
 
   strong {
@@ -612,7 +612,8 @@ a.aalink span:visited {
     background-color: inherit;
     text-decoration: none;
   }
-  .dashboard-card .card-img-top, .dashboard-card .card-img,
+  .dashboard-card .card-img-top,
+.dashboard-card .card-img,
 .course-listitem.list-group-item .card-img-top,
 .course-listitem.list-group-item .card-img,
 .block .block-cards .course-summaryitem .card-img-top,
@@ -964,6 +965,15 @@ a.aalink span:visited {
   }
   #page-mod-forum-view #region-main {
     padding: 20px;
+  }
+
+  /* ----- Resource ----- */
+  .path-mod-resource #page-header .card {
+    margin-top: 10px;
+    padding: 10px;
+  }
+  .path-mod-resource .resourcedetails {
+    color: #c6c6c6;
   }
 
   /* ----- Input ----- */
@@ -2008,6 +2018,9 @@ form.form-inline input[type=text]:read-only:hover,
     margin-bottom: 20px;
     padding-left: 10px;
     padding-right: 10px;
+  }
+  [data-region=drawer] .list-group:not(:last-child) {
+    border-bottom: 1px solid #121212;
   }
   [data-region=drawer] .list-group .list-group-item {
     background-color: inherit;
