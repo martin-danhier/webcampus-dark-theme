@@ -547,3 +547,10 @@ input[type="checkbox"] {
         @include text-button($fg-high-emphasis, $fg-on-surface);
     }
 }
+
+// Textarea
+
+[data-fieldtype="textarea"] textarea {
+    @include filled-text-field(var(--bg-primary-light));
+    height: fit-content;
+}
