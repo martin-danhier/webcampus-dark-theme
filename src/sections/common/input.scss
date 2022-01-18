@@ -1,11 +1,56 @@
 /* ----- Input ----- */
 
+// Advanced search
+
+.datapreferences > form > div {
+    #advancedcheckbox:checked ~ input.btn.btn-secondary {
+        display: none;
+    }
+}
+
+#data_adv_form {
+    width: 100%;
+
+    table {
+        width: 100%;
+    }
+
+    .defaulttemplate table {
+        .template-field,
+        .template-token {
+            padding: $spacing-xs $spacing-m;
+        }
+
+        .template-field {
+            width: fit-content;
+        }
+
+        .template-token {
+            width: 65%;
+        }
+    }
+
+    tr td[colspan="4"] {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: $spacing-m;
+
+        .btn.btn-secondary[name="resetadv"] {
+            @include outlined-button($fg-on-surface, false);
+        }
+    }
+}
+
 // Text fields
 
 form .form-inline input[type="text"],
 #coursesearch .coursesearchbox input[type="text"],
 form.form-inline input[type="text"],
-.message-app input[type="text"] {
+.message-app input[type="text"],
+#data_adv_form input[type="text"] {
     // Apply text field to fields
     @include filled-text-field($bg-primary);
 }
@@ -53,7 +98,8 @@ a.btn.btn-link {
     @include raised-button($bg-primary, $bg-primary-hover, $fg-on-primary);
 }
 
-button.btn.btn-secondary[type="submit"] {
+button.btn.btn-secondary[type="submit"],
+.datapreferences input.btn.btn-secondary[type="submit"] {
     @include text-button($fg-high-emphasis, $fg-on-surface);
 }
 
@@ -141,7 +187,9 @@ button.btn.btn-secondary[type="submit"] {
     }
 }
 
-.mform select.custom-select {
+.mform select.custom-select,
+.urlselect.custom-select,
+.datapreferences select.custom-select {
     color: $fg-on-surface;
     box-sizing: border-box;
     overflow: hidden;
@@ -218,13 +266,21 @@ button.btn.btn-secondary[type="submit"] {
             border-color: $fg-field-disabled;
         }
 
+        // Active
+        &.active .page-link {
+            border-color: $fg-high-emphasis;
+            background-color: $bg-field-selected-bright;
+            color: $fg-on-surface;
+        }
+
         .page-link {
             // Remove default style
             border-radius: 0;
             background-color: inherit;
-            color: inherit;
+            color: $fg-high-emphasis;
             box-shadow: none;
             outline: none;
+            border-color: $fg-high-emphasis;
 
             // Position
             display: flex;
@@ -245,44 +301,57 @@ button.btn.btn-secondary[type="submit"] {
 
 // Tabs
 
-.nav.nav-pills.nav-fill {
-    .nav-item .nav-link {
-        // Border
-        border-bottom: 1px solid $fg-high-emphasis;
-        border-radius: 0;
+.nav.nav-pills.nav-fill,
+.nav.nav-tabs {
+    border: 0;
 
-        // Color
-        background-color: inherit;
-        color: $fg-high-emphasis;
+    .nav-item {
+        flex-grow: 1;
 
-        // Font
-        font-weight: 400;
-        text-transform: uppercase;
-        font-size: 14px;
-        outline: none;
-        letter-spacing: 1.25px;
-        line-height: normal;
-        user-select: none;
-        vertical-align: middle;
-        width: 100%;
-        padding: $spacing-s;
+        .nav-link {
+            // Border
+            border: 0;
+            border-bottom: 1px solid $fg-high-emphasis;
+            border-radius: 0;
 
-        // Layout
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+            // Color
+            background-color: inherit;
+            color: $fg-high-emphasis;
 
-        // Animation
-        transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
-
-        &:focus {
+            // Font
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 14px;
             outline: none;
-            box-shadow: none;
-        }
+            letter-spacing: 1.25px;
+            line-height: normal;
+            user-select: none;
+            vertical-align: middle;
+            width: 100%;
+            padding: $spacing-s;
 
-        &.active {
-            color: $bg-primary;
-            border-color: $bg-primary;
+            // Layout
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            // Animation
+            transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+            &:hover {
+                color: $fg-on-surface;
+                border-color: $fg-on-surface;
+            }
+
+            &.active {
+                color: $bg-primary;
+                border-color: $bg-primary;
+            }
         }
     }
 }
@@ -325,6 +394,108 @@ button.btn.btn-secondary[type="submit"] {
     background-color: $bg-primary-dark;
 }
 
+// Checkboxes
+
+input[type="checkbox"] {
+    // Hide default unmodifiable checkbox
+    visibility: hidden;
+    width: 0;
+    padding: 0;
+    margin: 0 !important;
+
+    // Add a "fake" checkbox before the label
+    & + label {
+        // Anchor the before element relatively to this one
+        position: relative;
+
+        // Leave some space for the checkbox
+        padding-left: calc($checkbox-size + $spacing-s);
+        user-select: none;
+
+        &:before {
+            // Show icon
+            display: inline-block;
+            position: absolute;
+            vertical-align: middle;
+            left: 0px;
+            top: 2px;
+
+            // Cursor
+            cursor: pointer;
+
+            // Shape. We use Font Awesome because since it's text, the color is easily changed to the primary color.
+            // With Iconify, we need the right filter to change the color.
+            content: "\f0c8";
+            font: normal normal normal $checkbox-size "FontAwesome";
+            line-height: $checkbox-size;
+            text-rendering: auto;
+            color: $bg-field-bright;
+            text-align: center;
+        }
+        &:hover:before {
+            color: $bg-field-hover-bright;
+        }
+    }
+
+    // Change icon and color on checked
+    &:checked + label {
+        &:before {
+            content: "\f14a";
+            color: $bg-primary;
+        }
+        &:hover:before {
+            color: $bg-primary-hover;
+        }
+    }
+}
+
+// Tags
+
+.datatagcontrol {
+    .form-autocomplete-selection span.badge {
+        // Color
+        background-color: $bg-primary;
+        color: $fg-on-primary;
+
+        // Shape
+        border-radius: $border-radius;
+        padding: 2px $spacing-s;
+        margin-bottom: $spacing-s !important;
+
+        // Text
+        font-size: 13px !important;
+        font-weight: 500;
+
+        // Button
+        span {
+            margin-right: $spacing-s;
+            font-size: 14px;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            background-color: $bg-primary-hover;
+        }
+    }
+
+    input[type="text"].form-control {
+        padding-right: $spacing-l !important;
+    }
+
+    .form-autocomplete-downarrow {
+        color: $fg-high-emphasis;
+        vertical-align: middle;
+    }
+
+    .form-autocomplete-suggestions {
+        @include surface(12);
+        @include elevation(12);
+        border-radius:$border-radius;
+        border: 0;
+        padding: $spacing-s;
+    }
+}
+
 // Message user button
 
 #message-user-button {
@@ -339,4 +510,15 @@ button.btn.btn-secondary[type="submit"] {
 
 .mform fieldset {
     border-bottom-color: $bg-divider;
+}
+
+// Bottom activities links
+.activity-navigation {
+    margin: 0 $spacing-l;
+    width: auto;
+
+    #next-activity-link,
+    #prev-activity-link {
+        @include text-button($fg-high-emphasis, $fg-on-surface);
+    }
 }

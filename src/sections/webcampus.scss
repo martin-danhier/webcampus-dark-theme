@@ -1,5 +1,4 @@
-@import '../constants.scss';
-@import '../mixins.scss';
+/* ----- UNamur specific styles ----- */
 
 // Fixes that only need to be applied to WebCampus because of their ugly custom theme
 
@@ -16,9 +15,8 @@ ul.navbar-nav.d-none.d-md-flex::after {
     font-weight: 400;
 
     pointer-events: none;
-    
 
-    &:hover{
+    &:hover {
         text-decoration: underline;
     }
 }
@@ -41,12 +39,11 @@ header.fixed-top.brand-banner {
         visibility: hidden;
     }
     .left-logo {
-
         // Make the left logo container take the whole space of the brand banner
         display: block;
         position: static;
         height: inherit;
-        
+
         // Hide left logo
         box-shadow: unset;
         img {
@@ -75,20 +72,19 @@ header.fixed-top.brand-banner {
 }
 
 // Make a card deck instead of a list
-.block-myoverview  div[data-region=courses-view] ul.list-group {
+.block-myoverview div[data-region="courses-view"] ul.list-group {
     display: flex;
     flex-flow: row wrap;
     margin-right: -0.25rem;
     margin-left: -0.25rem;
-    
+
     .card.dashboard-card {
-        margin-bottom: .5rem;
-        margin-left: .25rem;
-        margin-right: .25rem;
+        margin-bottom: 0.5rem;
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
         flex-basis: auto;
         flex-grow: 0;
         flex-shrink: 0;
-        width: calc(33.33% - .5rem);
+        width: calc(33.33% - 0.5rem);
     }
-    
 }

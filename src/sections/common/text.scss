@@ -6,12 +6,17 @@ label {
 }
 
 a,
-.block .block-cards a.coursename {
+.block .block-cards a.coursename,
+a.aalink span {
     color: $bg-secondary;
     font-weight: 400;
 
-    &:hover {
+    &:hover, &:active, &:focus, &:focus:active {
         color: $bg-secondary-hover;
+    }
+
+    &:visited {
+        color: $bg-secondary;
     }
 }
 

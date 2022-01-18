@@ -31,6 +31,15 @@
     .dropdown .btn.btn-link.coursemenubtn {
         @include flat-icon-button($bg-field-hover);
     }
+
+    .card-img-top, .card-img {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+    }
+
+    .course-info-container .bg-pulse-grey {
+        border-radius: 3px;
+    }
 }
 
 .block .block-cards .course-summaryitem {
@@ -88,6 +97,31 @@
 
     .btn.btn-secondary {
         @include text-button($fg-high-emphasis, $fg-on-surface);
+    }
+}
+
+// ----- Home -----
+
+#page-site-index #page-header .card .d-flex {
+    justify-content: center;
+    align-items: center;
+    margin: $spacing-sm !important;
+
+    .mr-auto {
+        margin-right: 0 !important;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &.flex-wrap {
+        height: 0;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 }
 
@@ -173,5 +207,17 @@
                 border-radius: 5px;
             }
         }
+    }
+}
+
+/* Forum view */
+
+#page-mod-forum-view {
+    #page-header .card {
+        margin-top: $spacing-s;
+        padding: $spacing-s;
+    }
+    #region-main {
+        padding: $spacing-m;
     }
 }

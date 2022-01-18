@@ -1,6 +1,3 @@
-@import '../constants.scss';
-@import '../mixins.scss';
-
 /* ----- Root ----- */
 
 body,
@@ -9,7 +6,7 @@ body,
     background-color: $bg-background;
     color: $fg-on-background;
     font-family: "Roboto", "Helvetica", sans-serif;
-    font-weight: 200;
+    font-weight: 300;
 }
 
 /* ----- Fixes to remove unwanted behavior originating from the default theme ----- */
@@ -58,6 +55,7 @@ h3.sectionname {
 @import './common/tooltips.scss';
 @import './common/chat.scss';
 @import './common/modals.scss';
+@import './common/forums.scss';
 
 // Last import the miscellaneous styles
 @import './common/misc.scss';

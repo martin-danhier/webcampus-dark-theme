@@ -1,0 +1,133 @@
+/* ----- Announces and forums ----- */
+
+// Forum search
+.forumsearch .input-group {
+    gap: 0;
+
+    .search {
+        margin-right: $spacing-m;
+    }
+
+    .input-group-prepend {
+        display: flex;
+    }
+
+    .input-group-append {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .btn {
+            width: fit-content;
+            height: fit-content;
+        }
+    }
+}
+
+// Table
+.discussion-list {
+    background-color: inherit;
+    @include elevation(1);
+
+    // Setup the border to support radius
+    border-collapse: separate;
+    border-spacing: 0px;
+    border-radius: $border-radius;
+
+    // Default style for table
+    thead th {
+        // Colors
+        background-color: $bg-surface-12dp;
+
+        // Align
+        vertical-align: middle;
+
+        // Text
+        a {
+            color: $fg-on-surface;
+            font-weight: 500;
+            &:active,
+            &:focus,
+            &:focus:active {
+                color: $fg-on-surface;
+            }
+        }
+
+        // Borders
+        border-color: $bg-divider;
+        border: 0;
+        border-bottom: 1px solid $bg-divider;
+        &:first-child {
+            border-top-left-radius: $border-radius;
+        }
+        &:last-child {
+            border-top-right-radius: $border-radius;
+        }
+    }
+    tbody {
+        td,
+        th,
+        tr {
+            color: $fg-high-emphasis;
+            border: 0;
+        }
+
+        // Colors
+        tr:nth-child(even) {
+            td,
+            th {
+                background-color: $bg-surface-04dp;
+            }
+        }
+        tr:nth-child(odd) {
+            td,
+            th {
+                background-color: $bg-surface-02dp;
+            }
+        }
+
+        // Border radius
+        tr:last-child {
+            td,
+            th {
+                &:first-child {
+                    border-bottom-left-radius: $border-radius;
+                }
+                &:last-child {
+                    border-bottom-right-radius: $border-radius;
+                }
+            }
+        }
+    }
+
+    // Favorites
+    .btn.btn-link[data-type="favorite-toggle"] {
+        @include flat-icon-button($bg-field-hover);
+        color: $fg-high-emphasis;
+        margin: $spacing-xs;
+    }
+    // Settings
+    [data-container="discussion-tools"] {
+        margin-right: $spacing-xs;
+    }
+
+    // Authors and other texts
+    .author-info {
+        color: $fg-on-surface;
+        font-weight: 300;
+
+        time {
+            color: $fg-medium-emphasis;
+        }
+
+        a {
+            color: $fg-medium-emphasis;
+
+            &:hover,
+            &:hover time {
+                color: $fg-high-emphasis;
+            }
+        }
+    }
+}

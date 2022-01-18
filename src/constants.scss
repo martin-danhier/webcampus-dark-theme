@@ -8,7 +8,7 @@ $authors: "Martin Danhier & Yannis Fraselle";
 
 // Background colors
 $bg-primary: #bb86fc;
-$bg-primary-hover: #c18fff;
+$bg-primary-hover: #c29bf3;
 $bg-primary-dark: #6e51d6;
 $bg-primary-variant: #3700b3;
 $bg-secondary: #03dac6;
@@ -24,9 +24,10 @@ $bg-surface-08dp: #2d2d2d; // 12%
 $bg-surface-12dp: #323232; // 14%
 $bg-surface-16dp: #333333; // 15%
 $bg-surface-24dp: #373737; // 16%
-$bg-field: #424242;
+$bg-field: #494949;
 $bg-field-hover: #373737;
-$bg-field-hover-bright: #424242; // For use on bright background such as surface-12dp
+$bg-field-bright: #6e6e6e;
+$bg-field-hover-bright: #808080; // For use on bright background such as surface-12dp
 $bg-field-selected: #373737;
 $bg-field-selected-bright: #404040; // For use on bright background such as surface-12dp
 $bg-field-focus: #2c2c2c;
@@ -54,12 +55,13 @@ $shadow-2: rgba(0, 0, 0, .12);
 $shadow-3: rgba(0, 0, 0, .20);
 
 // Other parameters
-$border-radius: 0.5rem;
+$border-radius: 10px;
 $flex-gap: 10px;
 $appbar-height: 50px;
 $left-drawer-width: 250px;
 $right-drawer-width: 350px;
 $icon-button-diameter: 40px;
+$checkbox-size: 16px;
 
 // Letter spacing
 $letter-spacing-s: 0.3px;

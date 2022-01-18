@@ -6,6 +6,14 @@
     border-radius: $border-radius;
     border: none;
 
+    .btn.btn-secondary[data-action="cancel"] {
+        @include outlined-button($fg-on-surface, true);
+    }
+
+    .modal-header, .modal-footer {
+        border-color: $bg-divider;
+    }
+
     .studentdashboard {
         // Dashboard actions
         .row:nth-child(2) {
