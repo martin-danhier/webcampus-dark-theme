@@ -11,10 +11,7 @@
 domain("auth.unamur.be") {
 
 
-    /* Main colors */
-    body {}
-
-
+    /* Main colors & General */
 
     ul.navbar-nav.d-none.d-md-flex::after {
         content: "Webcampus";
@@ -59,7 +56,6 @@ domain("auth.unamur.be") {
     .path-my #region-main .card-body.pr-1.course-info-container {
         border-radius: 0px;
     }
-
 
     #page-wrapper #page-footer {
         border-radius: 15px;
@@ -109,9 +105,9 @@ domain("auth.unamur.be") {
 
 
     #region-main .list-group-item {
-
         border-radius: 15px;
     }
+    
     .bg-dark {
         background-color: #151414 !important;
     }
@@ -141,7 +137,7 @@ domain("auth.unamur.be") {
         background-color: inherit;
     }
 
-    /* forum */
+    /* Forum */
     .path-course-view .activityinstance .unread {
         margin-left: 60px;
         background-color: unset;
@@ -164,11 +160,11 @@ domain("auth.unamur.be") {
         margin-top: 15px;
     }
 
-    .alert-warning:before,
-    #page-admin-index .adminwarning:before,
-    .uninstalldeleteconfirmexternal:before,
-    .que .outcome:before,
-    .que .comment:before {
+    .alert-warning::before,
+    #page-admin-index .adminwarning::before,
+    .uninstalldeleteconfirmexternal::before,
+    .que .outcome::before,
+    .que .comment::before {
         content: "⚠"
     }
     
@@ -179,7 +175,7 @@ domain("auth.unamur.be") {
         margin-top: 15px;
     }
     
-    .alert-danger:before, #page-admin-index .adminerror:before {
+    .alert-danger::before, #page-admin-index .adminerror::before {
         content:"⛔"
     }
     
@@ -601,12 +597,12 @@ domain("auth.unamur.be") {
         visibility: hidden;
         position: relative;
     }
-    .block-region .block .minicalendar .calendar-controls .arrow_link.next .arrow:before {
+    .block-region .block .minicalendar .calendar-controls .arrow_link.next .arrow::before {
         visibility: visible;
         position: absolute;
         content: "";
         font-family: "FontAwesome";
-        font-size: 12;
+        font-size: 12px;
         color: inherit;
     }
 
@@ -614,12 +610,12 @@ domain("auth.unamur.be") {
         visibility: hidden;
         position: relative;
     }
-    .block-region .block .minicalendar .calendar-controls .arrow_link.previous .arrow:before {
+    .block-region .block .minicalendar .calendar-controls .arrow_link.previous .arrow::before {
         visibility: visible;
         position: absolute;
         content: "";
         font-family: "FontAwesome";
-        font-size: 12;
+        font-size: 12px;
         color: inherit;
     }
 
@@ -674,7 +670,6 @@ domain("auth.unamur.be") {
         color: #ccc;
         background: #171717;
     }
-
     /* block */
     #blocks-column {
         height: calc(100vh - 60px)
@@ -695,7 +690,7 @@ domain("auth.unamur.be") {
     .block-region .block .card-body .card-title {
         color: #67f917;
     }
-    .block-region .block .card-body .card-title:before {
+    .block-region .block .card-body .card-title::before {
         color: #a6a5a5;
     }
     .block-region .block .card-body {
@@ -780,11 +775,11 @@ domain("auth.unamur.be") {
     }
 
     /* icons */
-    #blocks-column-toggle:before,
-    .fa-plus:before {
+    #blocks-column-toggle::before,
+    .fa-plus::before {
         color: #dbd9d9
     }
-    *:before {
+    *::before {
         color: #a5a4a4
     }
 
@@ -806,7 +801,7 @@ domain("auth.unamur.be") {
         box-shadow: unset;
     }
 
-    /* buttons */
+    /* Buttons */
     .btn {
         border-radius: 10px;
     }
@@ -814,8 +809,8 @@ domain("auth.unamur.be") {
     .btn-outline-secondary {
         border: 1px solid #666;
     }
-
-    /* dropdown menus */
+    
+    /* Dropdown Menus */
     .dropdown-menu .dropdown-item:focus {
         background-color: #313130;
         color: #bfbfbf;
@@ -986,7 +981,7 @@ domain("auth.unamur.be") {
         white-space: normal;
     }
 
-    /* new icons (beta) */
+    /* New icons (beta) */
     .ygtvcell .icon {
         height: 16px;
         vertical-align: middle;
@@ -1190,110 +1185,110 @@ domain("auth.unamur.be") {
         filter: invert(85%) sepia(24%) saturate(888%) hue-rotate(64deg) brightness(88%) contrast(85%) !important;
     }
     
-    .fa-bell:before {
+    .fa-bell::before {
         content: url('https://api.iconify.design/fluent/alert-16-regular.svg?color=white&width=24');
         margin-left: -0.2rem;
     }
     
-    .fa-comment:before {
+    .fa-comment::before {
         content: url('https://api.iconify.design/fluent/comment-12-regular.svg?color=white&width=24');
         margin-left: -0.2rem;
     }
     
-    .fa-check:before {
+    .fa-check::before {
         content: url('https://api.iconify.design/fluent/checkmark-12-filled.svg?color=white&width=20');
     }
     
-    .fa-gear:before, .fa-cog:before {
+    .fa-gear::before, .fa-cog::before {
         content: url('https://api.iconify.design/fluent/settings-16-regular.svg?color=white&width=20');
     }
     
-    .fa-user:before {
+    .fa-user::before {
         content: url('https://api.iconify.design/fluent/person-16-regular.svg?color=white&width=20');
     }
     
-    .fa-chevron-right:before {
+    .fa-chevron-right::before {
         content: url('https://api.iconify.design/fluent/chevron-right-16-filled.svg?color=white&width=20');
     }
     
-    .fa-chevron-left:before {
+    .fa-chevron-left::before {
         content: url('https://api.iconify.design/fluent/chevron-left-16-filled.svg?color=white&width=20');
     }
     
-    .fa-dashboard:before, .fa-tachometer:before {
+    .fa-dashboard::before, .fa-tachometer::before {
         content: url('https://api.iconify.design/fluent/board-16-regular.svg?color=white&width=24');
     }
     
-    .fa-info-circle:before {
+    .fa-info-circle::before {
         content: url('https://api.iconify.design/fluent/calendar-info-16-regular.svg?color=white&width=24');
     }
     
-    .fa-calendar:before {
+    .fa-calendar::before {
         content: url('https://api.iconify.design/fluent/calendar-ltr-16-regular.svg?color=white&width=24');
     }
     
-    .fa-list:before {
+    .fa-list::before {
         content: url('https://api.iconify.design/fluent/text-bullet-list-tree-16-filled.svg?color=white&width=24');
     }
     
-    .fa-thumbs-up:before {
+    .fa-thumbs-up::before {
         content: url('https://api.iconify.design/fluent/person-feedback-24-regular.svg?color=white&width=24');   
     }
     
-    .fa-filter:before {
+    .fa-filter::before {
         content: url('https://api.iconify.design/fluent/filter-16-filled.svg?color=white&width=20');
     }
     
-    .fa-sort-amount-asc:before {
+    .fa-sort-amount-asc::before {
         content: url('https://api.iconify.design/fluent/arrow-sort-down-lines-16-filled.svg?color=white&width=20');
     }
     
-    .block-region .block.block_myoverview h5:before {
+    .block-region .block.block_myoverview h5::before {
         content: url('https://api.iconify.design/fluent/board-16-regular.svg?color=white&width=24');
     }
 
-    .fa-star:before {
+    .fa-star::before {
         content: url('https://api.iconify.design/fluent/star-12-filled.svg?color=white&width=18');
     }
     
-    .fa-ban:before {
+    .fa-ban::before {
         content: url('https://api.iconify.design/fluent/star-off-12-regular.svg?color=white&width=18');
     }
 
-    .fa-sign-out:before {
+    .fa-sign-out::before {
         content: url('https://api.iconify.design/fluent/sign-out-24-regular.svg?color=white&width=18');
     }
     
-    .block-region .block.block_recentlyaccessedcourses h5:before {
+    .block-region .block.block_recentlyaccessedcourses h5::before {
         content: url('https://api.iconify.design/fluent/app-recent-24-regular.svg?color=white&width=24');
     }
     
-    .block-region .block.block_news_items h5:before {
+    .block-region .block.block_news_items h5::before {
         content: url('https://api.iconify.design/fluent/news-16-regular.svg?color=white&width=24');
     }
     
-    .block-region .block.block_timeline h5:before {
+    .block-region .block.block_timeline h5::before {
         content: url('https://api.iconify.design/fluent/calendar-clock-16-regular.svg?color=white&width=24');
     }
     
-    .fa-clock-o:before {
+    .fa-clock-o::before {
         content: url('https://api.iconify.design/fluent/clock-12-regular.svg?color=white&width=20');
     }
     
-    .fa-mortar-board:before, .fa-graduation-cap:before {
+    .fa-mortar-board::before, .fa-graduation-cap::before {
         content: url('https://api.iconify.design/fluent/book-open-16-filled.svg?color=white&width=24');
     }
 
-    .fa-user-plus:before {
+    .fa-user-plus::before {
         content: url('https://api.iconify.design/fluent/person-add-24-regular.svg?color=white&width=18');
     }
     
-    body.drawer-open-right #blocks-column-toggle:before {
+    body.drawer-open-right #blocks-column-toggle::before {
         content: url('https://api.iconify.design/fluent/chevron-right-12-regular.svg?color=white&width=24');
         margin-left: -0.4rem;
     }
     
-    #blocks-column-toggle:before {
+    #blocks-column-toggle::before {
         content: url('https://api.iconify.design/fluent/chevron-left-12-regular.svg?color=white&width=24');
         margin-left: -0.4rem;
     }
@@ -1315,31 +1310,31 @@ domain("auth.unamur.be") {
         content: url('https://api.iconify.design/fluent/more-horizontal-16-regular.svg?color=white&width=20');
     }
     
-    .fa-table:before {
+    .fa-table::before {
         content: url('https://api.iconify.design/fluent/table-32-regular.svg?color=white&width=20');
     }
     
-    .fa-wrench:before {
+    .fa-wrench::before {
         content: url('https://api.iconify.design/fluent/settings-16-regular.svg?color=white&width=20');
     }
     
-    .fa-user-circle:before {
+    .fa-user-circle::before {
         content: url('https://api.iconify.design/fluent/person-circle-12-regular.svg?color=white&width=20');
     }
     
-    .fa-lock:before {
+    .fa-lock::before {
         content: url('https://api.iconify.design/fluent/lock-closed-16-regular.svg?color=white&width=20');
     }
     
-    .help-icon:before{
+    .help-icon::before{
         content: url('https://api.iconify.design/fluent/chat-help-24-regular.svg?color=%231a9e9f&width=20');
     }
     
-    .fa-envelope:before {
+    .fa-envelope::before {
         content: url('https://api.iconify.design/fluent/mail-16-regular.svg?color=white&width=20');
     }
     
-    .fa-phone:before {
+    .fa-phone::before {
         content: url('https://api.iconify.design/fluent/call-16-regular.svg?color=white&width=20');
     }
 
@@ -1356,15 +1351,15 @@ domain("auth.unamur.be") {
         content: url('https://api.iconify.design/fluent/beach-48-regular.svg?color=%23b3b3af');
     }
     
-    .dropdown-item[aria-current="true"]:before{
+    .dropdown-item[aria-current="true"]::before{
         content: url('https://api.iconify.design/fluent/circle-12-regular.svg?color=white&width=13');
     }
     
-    .course_category_tree .courses .coursebox>.info>.coursename a:before, #page-course-search .courses .coursebox>.info>.coursename a:before {
+    .course_category_tree .courses .coursebox>.info>.coursename a::before, #page-course-search .courses .coursebox>.info>.coursename a::before {
         content: url('https://api.iconify.design/fluent/book-open-16-filled.svg?color=white&width=15');
     }
     
-    .course_category_tree .courses .coursebox .moreinfo .fa-info:before, #page-course-search .courses .coursebox .moreinfo .fa-info:before {
+    .course_category_tree .courses .coursebox .moreinfo .fa-info::before, #page-course-search .courses .coursebox .moreinfo .fa-info::before {
         content: url('https://api.iconify.design/fluent/info-12-regular.svg?color=white&width=15');
     }
     
@@ -1388,17 +1383,17 @@ domain("auth.unamur.be") {
         background-image: url('https://api.iconify.design/fluent/caret-down-20-regular.svg?color=white&width=20');
     }
     
-    .fa-group:before, .fa-users:before {
+    .fa-group::before, .fa-users::before {
         content: url('https://api.iconify.design/fluent/people-community-16-regular.svg?color=white&width=24');
     }
     
-    /* bouger l'icone */
     .icon{
         margin-right: 0.7rem;
         margin-top: -0.1rem;
+    /* Centrage des icônes SVG */
     }
     
-    /* bouger le cadre icone texte mais pas complètement enfin c'est chelou */
+    /* Bouger le cadre icone texte mais pas complètement enfin c'est chelou */
     #nav-drawer .list-group div.list-group-item.active .icon, #nav-drawer .list-group ul li a.list-group-item.active .icon, #nav-drawer .list-group div.list-group-item.active:hover .icon, #nav-drawer .list-group ul li a.list-group-item.active:hover .icon{
         margin-left: -0.2rem;
     }
@@ -1406,7 +1401,7 @@ domain("auth.unamur.be") {
         margin-left: -0.2rem;
     }
     
-    /* bouger le machin bleu */
+    /* Bouger le machin bleu */
     #nav-drawer .list-group ul li a.list-group-item.active{
         padding-bottom: 0.4rem;
     }
@@ -1414,26 +1409,25 @@ domain("auth.unamur.be") {
         padding-bottom: 0.4rem;
     }
     
-    /* fixer et bouger les icones des blocks */
-    .block-region .block .card-body .card-title:before{
+    /* Fixer et bouger les icônes des blocks */
+    .block-region .block .card-body .card-title::before{
         margin-left: -1.7rem;
         position: absolute;
-
     }
     
     .block-region .block.block_recent_activity h5:before{
         content: url('https://api.iconify.design/fluent/shifts-activity-20-filled.svg?color=white&width=24');
     }
     
-    .block-region .block.block_calendar_month h5:before, .block-region .block.block_calendar_upcoming h5:before{
+    .block-region .block.block_calendar_month h5::before, .block-region .block.block_calendar_upcoming h5::before{
             content: url(https://api.iconify.design/fluent/calendar-ltr-16-regular.svg?color=white&width=24);
     }
     
-    .fa-globe:before{
+    .fa-globe::before{
         content: url('https://api.iconify.design/fluent/globe-16-regular.svg?color=white&width=24');
     }
     
-    .fa-cubes:before{
+    .fa-cubes::before{
         content: url('https://api.iconify.design/fluent/select-all-off-24-regular.svg?color=white&width=24');
     }
     
@@ -1461,40 +1455,40 @@ domain("auth.unamur.be") {
         content: url('https://api.iconify.design/fluent/checkbox-checked-24-filled.svg?color=%23868e96');
     }
     
-    .hot .activityinstance:before, .warm .activityinstance:before{
+    .hot .activityinstance::before, .warm .activityinstance::before{
         content: url('https://api.iconify.design/fluent/new-16-filled.svg?color=crimson');
     }
     
-    .fa-map-pin:before {
+    .fa-map-pin::before {
         content: url('https://api.iconify.design/fluent/pin-12-filled.svg?color=white&width=18');
     }
     
-    .fa-star-o:before{
+    .fa-star-o::before{
         content: url('https://api.iconify.design/fluent/star-12-regular.svg?color=white&width=18');
     }
     
-    .fa-ellipsis-v:before{
+    .fa-ellipsis-v::before{
         content: url('https://api.iconify.design/fluent/more-vertical-16-filled.svg?color=white&width=18');
     }
     
-    .alert-danger:before{
+    .alert-danger::before{
         content: url('https://api.iconify.design/fluent/error-circle-12-regular.svg?color=%23ff9191&width=18');
         margin-right: 0.2rem;
     }
     
-    #nav-drawer .list-group div.list-group-item .fa-folder-o:before, #nav-drawer .list-group ul li a.list-group-item .fa-folder-o:before {
+    #nav-drawer .list-group div.list-group-item .fa-folder-o::before, #nav-drawer .list-group ul li a.list-group-item .fa-folder-o::before {
         content: url('https://api.iconify.design/fluent/folder-16-regular.svg?color=white&width=24');
     }
     
-    .fa-align-left:before{
+    .fa-align-left::before{
         content: url('https://api.iconify.design/fluent/list-16-regular.svg?color=white&width=24');
     }
     
-    .fa-map-marker:before{
+    .fa-map-marker::before{
         content: url('https://api.iconify.design/fluent/location-28-regular.svg?color=white&width=24');
     }
     
-    .fa-feed:before, .fa-rss:before{
+    .fa-feed::before, .fa-rss::before{
         content: url('https://api.iconify.design/fluent/rss-24-regular.svg?color=white&width=24');
     }
     
@@ -1502,31 +1496,31 @@ domain("auth.unamur.be") {
         border-radius: 10px;
     }
     
-    .fa-eye:before, .fa-eye-slash:before{
+    .fa-eye::before, .fa-eye-slash::before{
         color: transparent;
     }
     
-    .fa-mortar-board:before, .fa-graduation-cap:before{
+    .fa-mortar-board::before, .fa-graduation-cap::before{
         margin-right: 0.7rem;
     }
     
-    .fa-long-arrow-down:before{
+    .fa-long-arrow-down::before{
         content: url('https://api.iconify.design/fluent/arrow-sort-down-16-filled.svg?color=white&width=18');
     }
     
-    .fa-warning:before, .fa-exclamation-triangle:before{
+    .fa-warning::before, .fa-exclamation-triangle::before{
         content: url('https://api.iconify.design/fluent/chat-warning-16-regular.svg?color=%23da4f4f&width=24');
     }
     
-    div.availabilityinfo:before{
+    div.availabilityinfo::before{
         content: url('https://api.iconify.design/fluent/clock-12-regular.svg?color=%23da4f4f&width=24');
     }
     
-    .block-region .block .minicalendar .calendar-controls .arrow_link.previous .arrow:before{
+    .block-region .block .minicalendar .calendar-controls .arrow_link.previous .arrow::before{
         content: url('https://api.iconify.design/fluent/chevron-left-16-filled.svg?color=%231cc9ca&width=20');
     }
     
-    .block-region .block .minicalendar .calendar-controls .arrow_link.next .arrow:before{
+    .block-region .block .minicalendar .calendar-controls .arrow_link.next .arrow::before{
         content: url('https://api.iconify.design/fluent/chevron-right-16-filled.svg?color=%231cc9ca&width=20');
     }
     
@@ -1556,10 +1550,6 @@ domain("auth.unamur.be") {
         max-width: 60%;
         flex: 0 0 60%;
     }
-
-
-    
-    
 
     /* ================= */
     /* home */
@@ -1740,7 +1730,6 @@ domain("auth.unamur.be") {
     #nav-drawer .list-group div.list-group-item:hover,
     #nav-drawer .list-group ul li a.list-group-item:hover {
         border: 1px solid transparent;
-        ;
         border-radius: 10px;
         background-color: #333030;
     }
@@ -1828,12 +1817,12 @@ domain("auth.unamur.be") {
         border: none;
     }
 
-    .que .icon.fa-check.text-success:before {
+    .que .icon.fa-check.text-success::before {
         color: #69bf56;
         margin: 4px;
     }
 
-    .que .icon.fa-remove.text-danger:before {
+    .que .icon.fa-remove.text-danger::before {
         color: #ff5454;
         margin: 4px;
     }
@@ -1860,9 +1849,9 @@ domain("auth.unamur.be") {
         background-image: none;
     }
     .moodle-dialogue-base .closebutton::after,
-    .user-enroller-panel .uep-header .close:after,
-    .user-enroller-panel .uep-header .moodle-dialogue-base .closebutton:after,
-    .moodle-dialogue-base .user-enroller-panel .uep-header .closebutton:after {
+    .user-enroller-panel .uep-header .close::after,
+    .user-enroller-panel .uep-header .moodle-dialogue-base .closebutton::after,
+    .moodle-dialogue-base .user-enroller-panel .uep-header .closebutton::after {
         color: #47a4b9;
     }
     #page-mod-quiz-view table.quizattemptsummary tr.bestrow td {
@@ -1932,9 +1921,6 @@ domain("auth.unamur.be") {
     .filemanager-container.dndupload-over .dndupload-target {
         background-color: #222;
     }
-
-
-
 
     .fp-upload-form,
     .fp-iconview,
@@ -2097,7 +2083,7 @@ domain("auth.unamur.be") {
         background-color: #353535;
         color: #737373;
     }
-    .fa-user-plus:before {
+    .fa-user-plus::before {
         color: #fff;
     }
     li.page-item .page-link,
@@ -2119,7 +2105,6 @@ domain("auth.unamur.be") {
     #page-login-index .input-group .input-group-text {
         background-color: #393939;
         border-radius: 15px 0px 0px 15px;
-        ;
         width: 36px;
         text-align: center;
     }
@@ -2148,12 +2133,11 @@ domain("auth.unamur.be") {
     #page-login-index .input-group-addon {
         background-color: #2d2b2b;
     }
-    #page-login-index .glyphicon-log-in:before {
+    #page-login-index .glyphicon-log-in::before {
         color: #fff !important;
     }
     #page-login-index .btn-success {
         color: #fff !important;
-        ;
         background-image: unset;
         background-color: #3c7919;
         border-color: transparent;
@@ -2171,11 +2155,11 @@ domain("auth.unamur.be") {
         /* =========== */
     /* authentification UNamur trucs specifiques BETA */
 
-    .alert-warning:before, #page-admin-index .adminwarning:before, .uninstalldeleteconfirmexternal:before, .que .outcome:before, .que .comment:before {
+    .alert-warning::before, #page-admin-index .adminwarning::before, .uninstalldeleteconfirmexternal::before, .que .outcome::before, .que .comment::before {
         color: #ff9191;
     }
 
-    *:before {
+    *::before {
         color: white;
     }
 
@@ -2223,7 +2207,7 @@ domain("auth.unamur.be") {
 
 @-moz-document domain("medias.unamur.be") {
 
-    /* video player */
+    /* Video Player */
     #player_block .player-mask {
         cursor: pointer;
     }
@@ -2278,52 +2262,52 @@ domain("auth.unamur.be") {
     }
     
      /* bouton pause */
-    .player-state-playing .ub-play:before {
+    .player-state-playing .ub-play::before {
         content: url('https://api.iconify.design/fluent/pause-16-filled.svg?color=white&width=30&height=30');
     }
     
     /* bouton play */
-    .ub-play:before {
+    .ub-play::before {
         content: url('https://api.iconify.design/fluent/play-16-filled.svg?color=white&width=30&height=30');
     }
     
     /* bouton -5sec */
-    .ub-rewind-five-big:before {
+    .ub-rewind-five-big::before {
         content: url('https://api.iconify.design/carbon/rewind-5.svg?color=white&width=30&height=30');
     }
      
     /* bouton speed ajustement */
-    .ub-speed:before {
+    .ub-speed::before {
         content: url('https://api.iconify.design/ri/speed-mini-fill.svg?color=white&width=30&height=30');
     }
     
     /* bouton volume state 1 not loud */
-    .ub-volume-1:before {
+    .ub-volume-1::before {
         content: url('https://api.iconify.design/ion/volume-off.svg?color=white&width=30&height=30');
     }
     
     /* bouton volume state 2 loud */
-    .ub-volume-2:before {
+    .ub-volume-2::before {
         content: url('https://api.iconify.design/ion/volume-low.svg?color=white&width=30&height=30');
     }
     
     /* bouton volume state 3 SUPER loud */
-    .ub-volume-3:before {
+    .ub-volume-3::before {
         content: url('https://api.iconify.design/ion/volume-medium.svg?color=white&width=30&height=30');
     }
     
     /* bouton volume mute */
-    .ub-mute:before {
+    .ub-mute::before {
         content: url('https://api.iconify.design/ion/volume-mute.svg?color=white&width=30&height=30');
     }
     
     /* bouton settings */
-    .ub-settings:before {
+    .ub-settings::before {
         content: url('https://api.iconify.design/fluent/settings-24-filled.svg?color=white&width=30&height=30');
     }
     
     /* fullscreen bouton */
-    .ub-fullscreen:before {
+    .ub-fullscreen::before {
         content: url('https://api.iconify.design/ic/baseline-fullscreen.svg?color=white&width=30&height=30');
     }
     
@@ -2331,11 +2315,11 @@ domain("auth.unamur.be") {
         content: url('https://api.iconify.design/akar-icons/circle-fill.svg?color=white&width=30&height=30');
     }
     
-    .fa-info-circle:before {
+    .fa-info-circle::before {
         content: url('https://api.iconify.design/fluent/info-24-filled.svg?color=white&width=30&height=30');
     }
     
-    .ub-search:before {
+    .ub-search::before {
         content: url('https://api.iconify.design/fluent/search-24-filled.svg?color=white&width=30&height=30');
     }
     
@@ -2343,7 +2327,7 @@ domain("auth.unamur.be") {
         content: url('https://api.iconify.design/cil/chat-bubble.svg?color=white&width=30&height=30');
     }
     
-    .ub-unvalid:before {
+    .ub-unvalid::before {
         content: url('https://api.iconify.design/gridicons/cross-circle.svg?width=30&height=30');
     }
     
