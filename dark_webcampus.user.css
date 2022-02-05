@@ -56,6 +56,10 @@ domain("auth.unamur.be") {
     .path-my #region-main .card-body.pr-1.course-info-container {
         border-radius: 0px;
     }
+    
+    #page.container-fluid, #page.container-sm, #page.container-md, #page.container-lg, #page.container-xl {
+        padding-left: 1rem;
+    }
 
     #page-wrapper #page-footer {
         border-radius: 15px;
@@ -63,12 +67,8 @@ domain("auth.unamur.be") {
         margin-right: 10px;
     }
 
-    #page-footer .fa.fa-phone {
-        visibility: hidden;
-    }
-
     #page-footer .contactinfo::before {
-        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.32 \A \A";
+        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.33 \A \A";
         white-space: pre;
         text-align: center;
         color: #e7e7e7;
@@ -102,6 +102,11 @@ domain("auth.unamur.be") {
         border: unset;
         color: #737373;
     }
+    
+    /* Réduire le padding du header sur une page de cours */
+    .pt-3 {
+        padding-top: unset !important;
+    }
 
 
     #region-main .list-group-item {
@@ -134,6 +139,19 @@ domain("auth.unamur.be") {
     }
 
     .region_main_settings_menu_proxy {
+        background-color: inherit;
+    }
+    
+    .usertext {
+        margin-right: .50rem !important;
+    }
+    
+    /* Messages */
+    .message-app {
+        background-color: #262626;
+    }
+    
+    [id^="message-drawer-view-overview-container"]>.card {
         background-color: inherit;
     }
 
@@ -585,7 +603,6 @@ domain("auth.unamur.be") {
     .calendar_event_course a {
         color: #04d8d2;
     }
-    .calendar_event_course,
     .block-region .block .minicalendar td:nth-child(even).calendar_event_course,
     .block-region .block .minicalendar.calendartable td:nth-child(even).calendar_event_course,
     .block-region .block .minicalendar td:nth-child(even),
@@ -664,12 +681,55 @@ domain("auth.unamur.be") {
     .path-calendar .maincalendar .event .card-header {
     background-color: #262626;
     }
+    
+    .calendar_event_course, .calendar_event_site, .calendar_event_category, .calendar_event_group, .calendar_event_user, .calendar_event_other{
+        border-radius: 10px;
+    }
 
     /* back to top arrow */
     #back-to-top a.arrow {
         color: #ccc;
         background: #171717;
     }
+    
+    /* Preferences */
+    .preferences-container .preference-table tr th:nth-child(2n), .preferences-container .preference-table tr td:nth-child(2n) {
+        background-color: unset;
+    }
+    
+    .preferences-container .preference-table .preference-row .preference-state input[type="checkbox"]:checked + .preference-state-status-container .on-text {
+        visibility: hidden;
+    }
+    .preferences-container .preference-table .preference-row .preference-state input[type="checkbox"]:checked + .preference-state-status-container .on-text::after {
+        content: "On";
+        visibility: visible;
+        position: absolute;
+        left: 5px;
+    }
+    .preferences-container .preference-table .preference-row .preference-state .preference-state-status-container .off-text {
+        visibility: hidden;
+    }
+    .preferences-container .preference-table .preference-row .preference-state .preference-state-status-container .off-text::after {
+        content: "Off";
+        visibility: visible;
+        position: absolute;
+        left: 4px
+    }
+    
+    /* Profile */
+    #message-user-button {
+        color: white;
+        margin-left: calc(-1*(24px / 2));
+    }
+    
+    #message-user-button>span>i {
+        margin-right: .2rem;
+    }
+    
+    .page-context-header .header-button-group {
+        float: unset;
+    }
+    
     /* block */
     #blocks-column {
         height: calc(100vh - 60px)
@@ -810,6 +870,41 @@ domain("auth.unamur.be") {
         border: 1px solid #666;
     }
     
+    .navbar-receptic .navbar-nav .nav-link:hover, .navbar-receptic .navbar-nav .nav-link:focus {
+        color: unset;
+    }
+    
+    .navbar-expand .navbar-nav .nav-link {
+        padding-left: unset;
+    }
+    
+    .aabtn.focus, .btn-link.focus, .nav-link.focus, .atto_link_button.focus, [role="button"].focus, .list-group-item-action.focus, input[type="checkbox"].focus, input[type="radio"].focus, input[type="file"].focus, input[type="image"].focus, .sr-only-focusable.focus, a.dropdown-toggle.focus, .modal-dialog[tabindex="0"].focus, .moodle-dialogue-base .closebutton.focus, button.close.focus, .form-autocomplete-selection.focus, .aabtn:focus, .btn-link:focus, .nav-link:focus, .atto_link_button:focus, [role="button"]:focus, .list-group-item-action:focus, input[type="checkbox"]:focus, input[type="radio"]:focus, input[type="file"]:focus, input[type="image"]:focus, .sr-only-focusable:focus, a.dropdown-toggle:focus, .modal-dialog[tabindex="0"]:focus, .moodle-dialogue-base .closebutton:focus, button.close:focus, .form-autocomplete-selection:focus {
+        box-shadow: 0 0 0 .15rem #4a4a4a;
+        transition: box-shadow .15s ease-in-out;
+    }
+    
+    [id^="message-drawer-view-overview-container"]>div>[id$="-toggle"]>button:focus {
+        box-shadow: unset;
+    }
+    
+    .btn-primary:focus, .btn-primary.focus,
+    .btn-secondary:focus, .btn-secondary.focus,
+    .btn-outline-secondary:focus, .btn-outline-secondary.focus {
+        outline: .1rem solid #4a4a4a;
+    }
+    
+    .block .block-cards .btn.btn-link.btn-icon:hover, .block .block-cards .btn.btn-link.btn-icon:focus {
+        background-color: #606060;
+    }
+    
+    .aalink.focus, #page-footer a:not([class]).focus, .arrow_link.focus, a:not([class]).focus, .activityinstance > a.focus, .aalink:focus, #page-footer a:not([class]):focus, .arrow_link:focus, a:not([class]):focus, .activityinstance > a:focus {
+        color: #c0c0c0;
+        background-color: #4a4a4a;
+        box-shadow: 0 -.1rem 0 0 #4a4a4a,
+                    0 .1rem 0 0 #4a4a4a;
+        transition: unset;
+    }
+    
     /* Dropdown Menus */
     .dropdown-menu .dropdown-item:focus {
         background-color: #313130;
@@ -916,6 +1011,10 @@ domain("auth.unamur.be") {
     
     .course-content ul.collapsibletopics li.section.current, .course-content ul.collapsibleweeks li.section.current {
         background-color: unset;
+    }
+    
+    [data-region="myoverview"]>[data-region="filter"] {
+        margin-bottom: .5rem;
     }
 
     /* Progress block */
@@ -1187,12 +1286,12 @@ domain("auth.unamur.be") {
     
     .fa-bell::before {
         content: url('https://api.iconify.design/fluent/alert-16-regular.svg?color=white&width=24');
-        margin-left: -0.2rem;
+        margin-left: .03rem;
     }
     
     .fa-comment::before {
         content: url('https://api.iconify.design/fluent/comment-12-regular.svg?color=white&width=24');
-        margin-left: -0.2rem;
+        margin-left: .05rem;
     }
     
     .fa-check::before {
@@ -1303,10 +1402,17 @@ domain("auth.unamur.be") {
     
     .dropdown-toggle::after {
         content: url('https://api.iconify.design/fluent/caret-down-20-regular.svg?color=white&width=18');
-        border-top: 0em;
+        border-top: none;
+        border-right: none;
+        margin-left: unset;
+        vertical-align: middle;
     }
     
-    .fa-ellipsis-h:before {
+    #action-menu-toggle-1::after {
+        margin-right: .3rem;
+    }
+    
+    .fa-ellipsis-h::before {
         content: url('https://api.iconify.design/fluent/more-horizontal-16-regular.svg?color=white&width=20');
     }
     
@@ -1387,10 +1493,20 @@ domain("auth.unamur.be") {
         content: url('https://api.iconify.design/fluent/people-community-16-regular.svg?color=white&width=24');
     }
     
-    .icon{
-        margin-right: 0.7rem;
-        margin-top: -0.1rem;
     /* Centrage des icônes SVG */
+    .icon:not(img), .fa, .icon-size-3 .icon{
+        width: auto !important;
+        height: auto !important;
+        vertical-align: middle !important;
+    }
+    
+    [id^="message-drawer-view-overview-container"]>div>[id$="-toggle"]>button>[class$="icon-container"]>.icon {
+        width: 16px !important;
+        height: 16px !important;
+    }
+    
+    .nav-link[data-action="toggle-drawer"]>.icon {
+        vertical-align: unset !important;
     }
     
     /* Bouger le cadre icone texte mais pas complètement enfin c'est chelou */
@@ -1415,7 +1531,12 @@ domain("auth.unamur.be") {
         position: absolute;
     }
     
-    .block-region .block.block_recent_activity h5:before{
+    /* Ajustement du centrage de l'étoile de la liste des cours */
+    .fa-star {
+        margin-top: -.1em;
+    }
+    
+    .block-region .block.block_recent_activity h5::before{
         content: url('https://api.iconify.design/fluent/shifts-activity-20-filled.svg?color=white&width=24');
     }
     
@@ -1490,10 +1611,6 @@ domain("auth.unamur.be") {
     
     .fa-feed::before, .fa-rss::before{
         content: url('https://api.iconify.design/fluent/rss-24-regular.svg?color=white&width=24');
-    }
-    
-    .calendar_event_site, .calendar_event_category, .calendar_event_group, .calendar_event_user, .calendar_event_other{
-        border-radius: 10px;
     }
     
     .fa-eye::before, .fa-eye-slash::before{
@@ -1717,7 +1834,7 @@ domain("auth.unamur.be") {
         user-select: none;
         background-color: #212020;
         border-radius: 15px;
-        height: calc(100vh - 70px);
+        height: auto;
         box-shadow: 1px 1px #242323;
     }
     #nav-drawer .list-group div.list-group-item,
@@ -1738,7 +1855,12 @@ domain("auth.unamur.be") {
         border-radius: 15px;
         color: #5fd0c6;
     }
-
+    #nav-drawer>.list-group {
+        margin-top: .5rem;
+    }
+    #nav-drawer>.list-group, #nav-drawer .list-group ul li a.list-group-item.active {
+        margin-left: -.1rem
+    }
 
     /* =========== */
     /* evaluations */
@@ -1940,7 +2062,6 @@ domain("auth.unamur.be") {
 
     .custom-select {
         width: 100%;
-        background-color: #2a2a2a;
         background: #2a2a2a url("data:image/svg+xml;charset=utf8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 4 5\'%3E%3Cpath fill=\'%23c7c4c4\' d=\'M2 0L0 2h4zm0 5L0 3h4z\'/%3E%3C/svg%3E") no-repeat right .75rem center;
         -webkit-background-size: 8px 10px;
         background-size: 8px 10px;
