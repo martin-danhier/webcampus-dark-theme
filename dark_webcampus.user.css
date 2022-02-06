@@ -278,7 +278,7 @@ domain("auth.unamur.be") {
         border: unset;
     }
 
-    /* awful hardcoded colors */
+    /* Awful hardcoded colors */
     span[style*="background-color: rgb("]:not([style^="color: rgb("]):not([style*=" color: rgb("]):not([style*="background-color: rgb(255, 255, 255)"]),
     span[style*="background-color:rgb("]:not([style^="color:rgb("]):not([style*="background-color:rgb(255,255,255)"]) {
         color: #fff !important;
@@ -316,7 +316,7 @@ domain("auth.unamur.be") {
 
 
 
-    /* editor */
+    /* Editor */
     .editor_atto_wrap {
         border: 1px solid #8a8686;
         border-radius: 15px;
@@ -514,7 +514,7 @@ domain("auth.unamur.be") {
         color: #DCDCAA;
     }
 
-    /* text field */
+    /* Text fields */
     .form-control {
         border: 1px solid #999;
     }
@@ -551,7 +551,7 @@ domain("auth.unamur.be") {
         border-top: 1px solid #2c2c2c;
     }
 
-    /* top banner */
+    /* Top banner */
     header.fixed-top.brand-banner {
         visibility: visible;
 
@@ -582,7 +582,7 @@ domain("auth.unamur.be") {
         visibility: hidden;
     }
 
-    /* title color in "chronology" */
+    /* Title color in "chronology" */
     h1,
     h2,
     h3,
@@ -688,7 +688,7 @@ domain("auth.unamur.be") {
         border-top: unset;
     }
 
-    /* back to top arrow */
+    /* "Back to top" arrow */
     #back-to-top a.arrow {
         color: #ccc;
         background: #171717;
@@ -732,7 +732,7 @@ domain("auth.unamur.be") {
         float: unset;
     }
     
-    /* block */
+    /* Blocks */
     #blocks-column {
         height: calc(100vh - 60px)
     }
@@ -774,13 +774,13 @@ domain("auth.unamur.be") {
         color: #d4d3d3;
     }
 
-    /* block with personal files */
+    /* Block with personal files */
     .ygtvfocus {
         background-color: #282727;
     }
 
 
-    /* notifications */
+    /* Notifications */
     .navbar .popover-region-container {
         top: 2.5rem;
         box-shadow: 1px 1px #353434;
@@ -836,16 +836,15 @@ domain("auth.unamur.be") {
         color: #22c4c6;
     }
 
-    /* icons */
+    /* Icons */
     #blocks-column-toggle::before,
     .fa-plus::before {
         color: #dbd9d9
     }
+    
     *::before {
         color: #a5a4a4
     }
-
-
 
     /* Button on dashboard */
     .btn-primary:hover,
@@ -952,7 +951,7 @@ domain("auth.unamur.be") {
         background-color: #201f1f;
     }
 
-    /* modal */
+    /* Modal */
     .modal-content {
         border-radius: 15px;
     }
@@ -982,8 +981,8 @@ domain("auth.unamur.be") {
 
 
     /* ================= */
-    /* courses overview */
-    /* course list */
+    /* Courses overview */
+    /* Course list */
     .text-muted,
     .resourcelinkdetails {
         color: #b3b3af !important;
@@ -1259,7 +1258,7 @@ domain("auth.unamur.be") {
         filter: invert(100%);
     }
 
-    /* text info block */
+    /* Text info block */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/label/"][src$="/icon"] {
         content: url('https://api.iconify.design/fluent/text-align-left-20-filled.svg?width=24');
     }
@@ -1519,7 +1518,7 @@ domain("auth.unamur.be") {
         margin-left: -0.2rem;
     }
     
-    /* Bouger le machin bleu */
+    /* Bouger le highlight bleu */
     #nav-drawer .list-group ul li a.list-group-item.active{
         padding-bottom: 0.4rem;
     }
@@ -1671,8 +1670,8 @@ domain("auth.unamur.be") {
     }
 
     /* ================= */
-    /* home */
-    /* popover when mouse hover calendar */
+    /* Home */
+    /* Popover when mouse hover calendar */
     .bs-popover-top .arrow::after {
         border-top-color: #333;
     }
@@ -1685,7 +1684,7 @@ domain("auth.unamur.be") {
 
     /* ================== */
     /* /user/profile.php */
-    /* user profile frames */
+    /* User profile frames */
     #page-enrol-users #filterform,
     .que .history,
     .userprofile .profile_tree section,
@@ -1697,8 +1696,8 @@ domain("auth.unamur.be") {
     }
 
     /* ================== */
-    /* homework submission page */
-    /* "remis pour evaluation" color */
+    /* Homework submission page */
+    /* "Remis pour évaluation" color */
     .path-mod-assign td.submissionstatussubmitted,
     .path-mod-assign div.submissionstatussubmitted,
     .path-mod-assign a:link.submissionstatussubmitted {
@@ -1706,7 +1705,7 @@ domain("auth.unamur.be") {
         color: #e8e5e5;
     }
 
-    /* alternate fields */
+    /* Alternate fields */
     .path-mod-assign td.submissionnotgraded,
     .path-mod-assign div.submissionnotgraded,
     .path-mod-assign td.earlysubmission,
@@ -1716,7 +1715,7 @@ domain("auth.unamur.be") {
     }
 
     /** ==================== */
-    /* warning */
+    /* Warning */
     .flashbox {
         background: #222;
             border-radius: 15px;
@@ -1731,8 +1730,8 @@ domain("auth.unamur.be") {
     }
 
     /* ================== */
-    /* messaging app */
-    /* received message bubble */
+    /* Messaging app */
+    /* Received message bubble */
     .message-app.drawer {
         height: calc(100vh - 60px);
     }
@@ -1768,7 +1767,7 @@ domain("auth.unamur.be") {
         border-radius: 15px;
     }
 
-    /* sent message bubble */
+    /* Sent message bubble */
     .message-app.drawer .message.send .tail {
 
         border-bottom-color: #3b3a3a;
@@ -1778,7 +1777,7 @@ domain("auth.unamur.be") {
     }
 
 
-    /* background color */
+    /* Background color */
     .bg-light {
         background-color: #191919 !important;
     }
@@ -1792,7 +1791,7 @@ domain("auth.unamur.be") {
         background-color: inherit !important;
     }
 
-    /* nav drawer */
+    /* Nav drawer */
     div::-webkit-scrollbar-thumb,
     section::-webkit-scrollbar-thumb,
     div::-webkit-scrollbar-track,
@@ -1836,7 +1835,7 @@ domain("auth.unamur.be") {
         user-select: none;
         background-color: #212020;
         border-radius: 15px;
-        height: auto;
+        height: 90%; /* TODO */
         box-shadow: 1px 1px #242323;
     }
     #nav-drawer .list-group div.list-group-item,
@@ -1865,7 +1864,7 @@ domain("auth.unamur.be") {
     }
 
     /* =========== */
-    /* evaluations */
+    /* Evaluations */
     .nav-tabs .nav-link.active,
     .nav-tabs .nav-item.show .nav-link {
         background-color: #262525;
@@ -1877,7 +1876,7 @@ domain("auth.unamur.be") {
     }
 
     /* =========== */
-    /* quiz */
+    /* Quiz */
     #page-mod-quiz-attempt .que {
         box-shadow: unset;
     }
@@ -2107,7 +2106,7 @@ domain("auth.unamur.be") {
     .fptoolbar .btn-secondary ::before,  .fp-toolbar .btn-default ::before, .fp-toolbar .atto_generico_buttons button ::before, .fp-toolbar .atto_generico_buttons button ::before, .fp-toolbar .wikisearch form input ::before, .wikisearch form .fp-toolbar input ::before,  .fp-toolbar #page-mod-forum-view #id_advancedadddiscussion ::before,#page-mod-forum-view .fp-toolbar #id_advancedadddiscussion::before, fp-toolbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"] ::before, #page-mod-forum-discuss .fp-toolbar button[data-action="forum-advanced-reply"] ::before, .fp-viewbar .btn-secondary ::before,.fp-viewbar .btn-default ::before,  .fp-viewbar .atto_generico_buttons button ::before, .fp-viewbar .wikisearch form input ::before, .wikisearch form .fp-viewbar input ::before, .fp-viewbar #page-mod-forum-view #id_advancedadddiscussion ::before, .fp-viewbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"] ::before, #page-mod-forum-discuss .fp-viewbar button[data-action="forum-advanced-reply"] ::before, i .icon .fa .fa-refresh .fa-fw ::before   {
         color: #f2e4e4 !important ;
     } */
-    /* peer review */
+    /* Peer review */
     .path-mod-workshop #workshop-viewlet-yourgrades .finalgrades .grade.submissiongrade,
     .path-mod-workshop #workshop-viewlet-yourgrades .finalgrades .grade.assessmentgrade {
         background-color: #353737;
@@ -2157,7 +2156,7 @@ domain("auth.unamur.be") {
         color: #fff;
     }
 
-    /* assessement */
+    /* Assessement */
     .path-mod-workshop .assessment-full {
         background-color: #201f1f;
         border-radius: 13px;
@@ -2173,7 +2172,7 @@ domain("auth.unamur.be") {
         color: #fff
     }
 
-    /* submission */
+    /* Submission */
     .path-mod-workshop .submission-full {
 
         background-color: #201f1f;
@@ -2194,7 +2193,7 @@ domain("auth.unamur.be") {
 
 
 
-    /* other things I don't remember */
+    /* Other things I don't remember */
     .switch input + label::before {
         background-color: #776a6a;
     }
@@ -2224,7 +2223,7 @@ domain("auth.unamur.be") {
     }
 
     /* ========== */
-    /* login page */
+    /* Login page */
     #page-login-index .input-group .input-group-text {
         background-color: #393939;
         border-radius: 15px 0px 0px 15px;
@@ -2275,8 +2274,8 @@ domain("auth.unamur.be") {
     color: #fbfbfb !important;
     }
     
-        /* =========== */
-    /* authentification UNamur trucs specifiques BETA */
+    /* =========== */
+    /* Authentification UNamur — Trucs specifiques (BETA) */
 
     .alert-warning::before, #page-admin-index .adminwarning::before, .uninstalldeleteconfirmexternal::before, .que .outcome::before, .que .comment::before {
         color: #ff9191;
@@ -2384,52 +2383,52 @@ domain("auth.unamur.be") {
         visibility: hidden !important;
     }
     
-     /* bouton pause */
+     /* Pause button */
     .player-state-playing .ub-play::before {
         content: url('https://api.iconify.design/fluent/pause-16-filled.svg?color=white&width=30&height=30');
     }
     
-    /* bouton play */
+    /* Play button */
     .ub-play::before {
         content: url('https://api.iconify.design/fluent/play-16-filled.svg?color=white&width=30&height=30');
     }
     
-    /* bouton -5sec */
+    /* -5sec button */
     .ub-rewind-five-big::before {
         content: url('https://api.iconify.design/carbon/rewind-5.svg?color=white&width=30&height=30');
     }
      
-    /* bouton speed ajustement */
+    /* Speed ajustement button */
     .ub-speed::before {
         content: url('https://api.iconify.design/ri/speed-mini-fill.svg?color=white&width=30&height=30');
     }
     
-    /* bouton volume state 1 not loud */
+    /* Volume state 1 not loud button */
     .ub-volume-1::before {
         content: url('https://api.iconify.design/ion/volume-off.svg?color=white&width=30&height=30');
     }
     
-    /* bouton volume state 2 loud */
+    /* Volume state 2 loud button */
     .ub-volume-2::before {
         content: url('https://api.iconify.design/ion/volume-low.svg?color=white&width=30&height=30');
     }
     
-    /* bouton volume state 3 SUPER loud */
+    /* Volume state 3 SUPER loud button */
     .ub-volume-3::before {
         content: url('https://api.iconify.design/ion/volume-medium.svg?color=white&width=30&height=30');
     }
     
-    /* bouton volume mute */
+    /* Volume mute button */
     .ub-mute::before {
         content: url('https://api.iconify.design/ion/volume-mute.svg?color=white&width=30&height=30');
     }
     
-    /* bouton settings */
+    /* Settings button */
     .ub-settings::before {
         content: url('https://api.iconify.design/fluent/settings-24-filled.svg?color=white&width=30&height=30');
     }
     
-    /* fullscreen bouton */
+    /* Fullscreen button */
     .ub-fullscreen::before {
         content: url('https://api.iconify.design/ic/baseline-fullscreen.svg?color=white&width=30&height=30');
     }
