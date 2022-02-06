@@ -1,5 +1,5 @@
-@import 'constants.scss';
-@import 'mixins.scss';
+@import "constants.scss";
+@import "mixins.scss";
 
 /* ==UserStyle==
 @name           Moodle Dark Theme
@@ -48,7 +48,9 @@ SOFTWARE.
 
 // ============= Global imports =============
 
-@-moz-document url-prefix("https://moodle.uclouvain.be/"), url-prefix("https://webcampus.unamur.be/")
+@-moz-document url-prefix("https://moodle.uclouvain.be/"),
+               url-prefix("https://webcampus.unamur.be/"),
+               url-prefix("https://idp.uclouvain.be/idp/profile/SAML2/Redirect/SSO")
 {
     // -> this will return a deprecation warning, but it is normal
     // That is how stylus works
@@ -56,9 +58,11 @@ SOFTWARE.
     /* Global imports */
 
     // Import material fonts
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-    // Import default color theme
-    @import 'themes/default.scss';
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+    @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+    // Import default color theme and root style
+    @import "default-theme.scss";
 }
 
 // ============= Site-specific style =============
@@ -68,19 +72,10 @@ SOFTWARE.
     // -> this will return a deprecation warning, but it is normal
     // That is how stylus works
 
-    @import 'sections/webcampus.scss';
+    @import "sections/webcampus.scss";
 }
 
-@-moz-document url-prefix("https://moodle.uclouvain.be/")
-{
-    // -> this will return a deprecation warning, but it is normal
-    // That is how stylus works
-
-    // Import UCLouvain color theme
-    @import 'themes/uclouvain.scss';
-    // Import UCLouvain style
-    @import 'sections/uclouvain.scss';
-}
+@import "sections/uclouvain/index.scss";
 
 // ============= Global style =============
 
@@ -94,5 +89,5 @@ SOFTWARE.
 
     /* Global changes */
 
-    @import 'sections/common.scss';
+    @import "sections/common/index.scss";
 }

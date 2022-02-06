@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* ==UserStyle==
 @name           Moodle Dark Theme
 @namespace      github.com/martin-danhier
@@ -41,9 +40,12 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 */
-@-moz-document url-prefix("https://moodle.uclouvain.be/"), url-prefix("https://webcampus.unamur.be/") {
+@-moz-document url-prefix("https://moodle.uclouvain.be/"),
+               url-prefix("https://webcampus.unamur.be/"),
+               url-prefix("https://idp.uclouvain.be/idp/profile/SAML2/Redirect/SSO") {
   /* Global imports */
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
+  @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
   /* ----- Default color theme ----- */
   :root {
     --bg-primary: #bb86fc;
@@ -61,6 +63,14 @@ SOFTWARE.
     --fg-on-secondary: #000000;
     --fg-on-secondary-light: #000000;
     --fg-on-secondary-dark: #000000;
+  }
+
+  body,
+#page-my-index {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-weight: 400;
   }
 }
 @-moz-document url-prefix("https://webcampus.unamur.be/") {
@@ -132,6 +142,7 @@ SOFTWARE.
     width: calc(33.33% - 0.5rem);
   }
 }
+/* ----- UCLouvain ----- */
 @-moz-document url-prefix("https://moodle.uclouvain.be/") {
   /* ----- UCLouvain color theme ----- */
   :root {
@@ -173,17 +184,255 @@ SOFTWARE.
     padding-right: 10px !important;
   }
 }
-@-moz-document url-prefix("https://moodle.uclouvain.be/"), url-prefix("https://webcampus.unamur.be/") {
-  /* Global changes */
-  /* ----- Root ----- */
-  body,
-#page-my-index {
-    background-color: #121212;
-    color: #ffffff;
-    font-family: "Roboto", "Helvetica", sans-serif;
-    font-weight: 300;
+@-moz-document url-prefix("https://idp.uclouvain.be/idp/profile/SAML2/Redirect/SSO") {
+  /* ----- UCLouvain color theme ----- */
+  :root {
+    --bg-primary: #1976d2;
+    --bg-primary-hover: #2196f3;
+    --bg-primary-light: #63a4ff;
+    --bg-primary-dark: #004ba0;
+    --bg-secondary: #00bcd4;
+    --bg-secondary-light: #62efff;
+    --bg-secondary-dark: #008ba3;
+    --bg-secondary-hover: #4dd0e1;
+    --fg-on-primary: #ffffff;
+    --fg-on-primary-light: #000000;
+    --fg-on-primary-dark: #ffffff;
+    --fg-on-secondary: #000000;
+    --fg-on-secondary-light: #000000;
+    --fg-on-secondary-dark: #000000;
   }
 
+  /* ----- Login page ----- */
+  .wrapper .container {
+    width: 630px;
+    padding: 20px;
+  }
+
+  .list-help-item a {
+    color: var(--bg-secondary-light);
+    font-weight: normal;
+  }
+  .list-help-item a:hover, .list-help-item a:active, .list-help-item a:focus, .list-help-item a:focus:active {
+    color: var(--bg-secondary-hover);
+  }
+  .list-help-item a:visited {
+    color: var(--bg-secondary-light);
+  }
+  .list-help-item a .item-marker {
+    visibility: hidden;
+    width: 0;
+  }
+  .list-help-item a .item-marker:before {
+    font-family: "Material Icons";
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: normal;
+    vertical-align: text-bottom;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    visibility: visible;
+    color: inherit;
+    content: "\e5cc" !important;
+    color: var(--bg-secondary-light);
+  }
+
+  .wrapper {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2) !important;
+  }
+  .wrapper header img {
+    content: url("https://ojs.uclouvain.be/public/logo_neg.png");
+    width: 250px;
+  }
+
+  .wrapper,
+footer,
+.container-footer {
+    color: #ffffff;
+    background-color: #1e1e1e;
+  }
+
+  .column.one {
+    width: 65%;
+  }
+
+  form {
+    width: 100%;
+  }
+  form legend {
+    margin-top: 10px;
+    color: var(--bg-primary-light);
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 24px;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+  }
+  form .form-element.form-error {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.33px;
+    font-weight: 500;
+    color: #c7475e;
+  }
+  form .form-element.form-error:before {
+    font-family: "Material Icons";
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: normal;
+    vertical-align: text-bottom;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    visibility: visible;
+    color: inherit;
+    content: "\e001" !important;
+    margin-right: 5px;
+  }
+
+  .form-element-wrapper label {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    font-weight: 500;
+  }
+  .form-element-wrapper input[type=text],
+.form-element-wrapper input[type=password] {
+    background-color: #494949;
+    color: #ffffff;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.009375em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    padding: 16px 6px;
+    height: 42px;
+    border: none;
+    border-bottom: 1px solid;
+    caret-color: var(--bg-primary);
+    border-bottom-color: rgba(255, 255, 255, 0.42);
+    will-change: border-color, background-color, border-width;
+    transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-width 0.2s ease-in-out !important;
+  }
+  .form-element-wrapper input[type=text]:hover,
+.form-element-wrapper input[type=password]:hover {
+    background-color: #373737;
+    border-bottom-color: rgba(255, 255, 255, 0.87);
+  }
+  .form-element-wrapper input[type=text]:focus, .form-element-wrapper input[type=text]:focus-visible,
+.form-element-wrapper input[type=password]:focus,
+.form-element-wrapper input[type=password]:focus-visible {
+    color: inherit;
+    background-color: #2c2c2c;
+    outline: none;
+    box-shadow: none;
+    border-bottom-color: var(--bg-primary);
+    border-width: 2px;
+    transition: none;
+  }
+  .form-element-wrapper input[type=text]:disabled, .form-element-wrapper input[type=text]:read-only,
+.form-element-wrapper input[type=password]:disabled,
+.form-element-wrapper input[type=password]:read-only {
+    background-color: #1d1d1d;
+    color: #888888;
+    border-bottom-color: #888888;
+    transition: none !important;
+  }
+  .form-element-wrapper input[type=text]:disabled:hover, .form-element-wrapper input[type=text]:read-only:hover,
+.form-element-wrapper input[type=password]:disabled:hover,
+.form-element-wrapper input[type=password]:read-only:hover {
+    border-bottom-color: inherit;
+  }
+  .form-element-wrapper input[type=checkbox] {
+    margin-right: 5px;
+  }
+  .form-element-wrapper button[type=submit] {
+    padding: 0 !important;
+  }
+  .form-element-wrapper button[type=submit]:not(.hidden) {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2) !important;
+    transition: box-shadow 0.7s;
+  }
+  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden) {
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: normal;
+    min-width: 64px;
+    padding: 0px 16px;
+    min-height: 36px;
+    user-select: none;
+    vertical-align: middle;
+    perspective: 1px;
+    position: relative;
+  }
+  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden), .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):active, .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):focus, .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):active:focus {
+    outline: unset;
+    background-color: var(--bg-primary);
+    color: var(--fg-on-primary);
+  }
+  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden) i, .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden).fa {
+    margin-right: 8px;
+  }
+  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image: radial-gradient(circle, white 1%, transparent 1%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 15000%;
+    opacity: 0;
+    transition: background 0.7s, opacity 1s;
+    z-index: -1;
+  }
+  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):active:before, .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):focus:before {
+    animation-name: ripple;
+    animation-duration: 0.6s;
+    opacity: 0.4;
+    transition: 0s !important;
+  }
+  @keyframes ripple {
+    from {
+      background-size: 1%;
+    }
+    to {
+      background-size: 15000%;
+    }
+  }
+  .form-element-wrapper button[type=submit]:not(.hidden):hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2) !important;
+    transition: box-shadow 0.6s;
+    background-color: var(--bg-primary-hover);
+  }
+  .form-element-wrapper button[type=submit]:not(.hidden):focus, .form-element-wrapper button[type=submit]:not(.hidden):active {
+    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2) !important;
+    transition: box-shadow 0.6s;
+  }
+
+  .footer-text {
+    padding: 10px;
+  }
+}
+@-moz-document url-prefix("https://moodle.uclouvain.be/"), url-prefix("https://webcampus.unamur.be/") {
+  /* Global changes */
   /* ----- Fixes to remove unwanted behavior originating from the default theme ----- */
   .pagelayout-mydashboard #region-main {
     color: #ffffff;
@@ -220,197 +469,139 @@ SOFTWARE.
     border-top-color: #121212 !important;
   }
 
-  /** ----- Global changes for icons ----- */
-  .ygtvcell .icon,
-.block_calendar_upcoming .event .icon,
-.block_completion_progress .progressBarCell .nowicon {
-    height: 16px !important;
-    vertical-align: middle;
-    width: 0px !important;
-    padding-right: 16px !important;
-    background: transparent top left no-repeat;
-    filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
-    background-size: contain;
-  }
-
-  img.icon.smallicon,
-.content-item-container .notification-image img,
-.notification-area .image-container img {
-    height: 20px !important;
-    width: 0px !important;
-    padding-right: 20px !important;
-    background: transparent top left no-repeat;
-    filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
-  }
-
-  img.activityicon,
-#page-mod-folder-view .fp-icon .icon,
-.block_completion_progress .progressEventInfo img,
-.icon-size-4 .icon {
-    height: 24px !important;
-    width: 0px !important;
-    padding-right: 24px !important;
-    background: transparent top left no-repeat;
-    filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
-  }
-
-  /** Individual changes for icons.
-  -> each time, an icon is matched by the url of its image. The value is then replaced to another image.
-  */
-  /* URL */
+  /* ----- Global changes for icons ----- */
+  /* ----- Img icons ----- */
   img[src*="/theme/image.php/"][src*="/url/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/mdi:link-variant.svg?height=24");
+    content: url("https://api.iconify.design/fluent/link-20-filled.svg?color=white") !important;
   }
 
-  /* Forum / Annonce */
   img[src*="/theme/image.php/"][src*="/mod_forum/"][src$="/icon"],
 img[src*="/theme/image.php/"][src*="/forum/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/ic:round-forum.svg?height=24");
+    content: url("https://api.iconify.design/fluent/chat-multiple-20-filled.svg?color=white") !important;
   }
 
-  /* Workshop / Peer review */
   img[src*="/theme/image.php/"][src*="/workshop/"][src$="/icon"],
 img[src*="/theme/image.php/"][src*="/feedback/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/uil:feedback.svg?height=24");
+    content: url("https://api.iconify.design/fluent/person-feedback-20-filled.svg?color=white") !important;
   }
 
-  /* Quiz */
   img[src*="/theme/image.php/"][src*="/quiz/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/ant-design:form-outlined.svg?height=24");
+    content: url("https://api.iconify.design/fluent/quiz-new-20-filled.svg?color=white") !important;
   }
 
-  /* PDF */
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/pdf"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/pdf-24"],
 img[src*="/theme/image.php/"][src*="/amanote/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/bx:bxs-file-pdf.svg?height=25");
+    content: url("https://api.iconify.design/fluent/document-pdf-20-filled.svg?color=white") !important;
   }
 
-  /* Vidéo */
-  img[src*="/theme/image.php/"][src*="/ubicast/"][src$="/icon"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/mpeg-24"],
+  img[src*="/theme/image.php/"][src*="/ubicast/"][src$="/icon"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/mpeg-24"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/mpeg"] {
-    background-image: url("https://api.iconify.design/carbon:play-filled.svg?height=24");
+    content: url("https://api.iconify.design/fluent/video-clip-20-filled.svg?color=white") !important;
   }
 
-  /* Zip */
-  img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive-24"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive"] {
-    background-image: url("https://api.iconify.design/clarity:file-zip-solid.svg?height=24");
+  img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive"] {
+    content: url("https://api.iconify.design/fluent/folder-zip-20-filled.svg?color=white") !important;
   }
 
-  /* Link to webcampus */
   img[src*="/theme/image.php/"][src*="/page/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/bx:bxs-note.svg?height=24");
+    content: url("https://api.iconify.design/fluent/note-20-filled.svg?color=white") !important;
   }
 
-  /* Source code */
-  img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode-24"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/markup-24"],
-img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/markup"] {
-    background-image: url("https://api.iconify.design/mdi:file-code.svg?height=54");
+  img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/markup-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/markup"] {
+    content: url("https://api.iconify.design/fluent/document-chevron-double-20-filled.svg?color=white") !important;
   }
 
-  /* Tiff */
-  img[src*="/theme/image.php/"][src*="/core/"][src$="/f/tiff"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/tiff-24"] {
-    background-image: url("https://api.iconify.design/bx:bxs-file-png.svg?height=25");
+  img[src*="/theme/image.php/"][src*="/core/"][src$="/f/tiff"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/tiff-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/png"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/png-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/jpeg"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/jpeg-24"] {
+    content: url("https://api.iconify.design/fluent/image-20-filled.svg?color=white") !important;
   }
 
-  /* Png */
-  img[src*="/theme/image.php/"][src*="/core/"][src$="/f/png"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/png-24"] {
-    background-image: url("https://api.iconify.design/bx:bxs-file-png.svg?height=25");
+  img[src*="/theme/image.php/"][src*="/core/"][src$="/f/document-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/document"] {
+    content: url("https://api.iconify.design/fluent/document-text-20-filled.svg?color=white") !important;
   }
 
-  /* Jpg */
-  img[src*="/theme/image.php/"][src*="/core/"][src$="/f/jpeg-24"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/jpeg"] {
-    background-image: url("https://api.iconify.design/bx:bxs-file-jpg.svg?height=25");
+  img[src*="/theme/image.php/"][src*="/core/"][src$="/f/powerpoint-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/powerpoint"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/impress-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/impress"] {
+    content: url("https://api.iconify.design/fluent/data-pie-20-filled.svg?color=white") !important;
   }
 
-  /* Word */
-  img[src*="/theme/image.php/"][src*="/core/"][src$="/f/document-24"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/document"] {
-    background-image: url("https://api.iconify.design/mdi:file-word.svg?height=25");
+  img[src*="/theme/image.php/"][src*="/core/"][src$="/f/spreadsheet-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/spreadsheet"] {
+    content: url("https://api.iconify.design/fluent/document-table-20-filled.svg?color=white") !important;
   }
 
-  /* Powerpoint */
-  img[src*="/theme/image.php/"][src*="/core/"][src$="/f/powerpoint-24"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/powerpoint"] {
-    background-image: url("https://api.iconify.design/mdi:file-powerpoint.svg?height=25");
-  }
-
-  /* Excel */
-  img[src*="/theme/image.php/"][src*="/core/"][src$="/f/spreadsheet-24"], img[src*="/theme/image.php/"][src*="/core/"][src$="/f/spreadsheet"] {
-    background-image: url("https://api.iconify.design/mdi:file-excel.svg?height=25");
-  }
-
-  /* Wiki */
   img[src*="/theme/image.php/"][src*="/wiki/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/carbon:wikis.svg?height=25");
+    content: url("https://api.iconify.design/fluent/globe-20-filled.svg?color=white") !important;
   }
 
-  /* Devoir (upload) */
-  img[src*="/theme/image.php/"][src*="/assign/"][src$="/icon"], img[src*="/theme/image.php/"][src*="/mod_assign/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/ic:round-file-upload.svg?height=24");
+  img[src*="/theme/image.php/"][src*="/assign/"][src$="/icon"],
+img[src*="/theme/image.php/"][src*="/mod_assign/"][src$="/icon"] {
+    content: url("https://api.iconify.design/fluent/arrow-upload-20-filled.svg?color=white") !important;
   }
 
-  /* Folder */
   img[src*="/theme/image.php/"][src*="/folder/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/ic:round-folder.svg?height=24");
+    content: url("https://api.iconify.design/fluent/folder-20-filled.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/folder-24"] {
-    background-image: url("https://api.iconify.design/ant-design:folder-open-filled.svg");
+    content: url("https://api.iconify.design/fluent/folder-open-20-filled.svg?color=white") !important;
   }
 
-  /* Scheduler */
   img[src*="/theme/image.php/"][src*="/scheduler/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/mdi:calendar-clock.svg?height=24");
+    content: url("https://api.iconify.design/fluent/calendar-clock-20-filled.svg?color=white") !important;
   }
 
-  /* Question (choice) */
   img[src*="/theme/image.php/"][src*="/choice/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/mdi:comment-question.svg?height=24");
+    content: url("https://api.iconify.design/fluent/chat-help-20-filled.svg?color=white") !important;
   }
 
-  /* Glossary */
   img[src*="/theme/image.php/"][src*="/glossary/"][src$="/icon"] {
-    background-image: url(" https://api.iconify.design/bx:bx-sort-a-z.svg?height=24");
+    content: url("https://api.iconify.design/fluent/text-sort-ascending-20-filled.svg?color=white") !important;
   }
 
-  /* Certificate */
   img[src*="/theme/image.php/"][src*="/customcert/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/mdi:certificate.svg?height=24");
+    content: url("https://api.iconify.design/fluent/certificate-20-filled.svg?color=white") !important;
   }
 
-  /* Wooclap */
   img[src*="/theme/image.php/"][src*="/wooclap/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/ls:w.svg?height=24&inline=true");
+    content: url("https://api.iconify.design/fluent/form-new-20-filled.svg?color=white") !important;
   }
 
-  /* Choose a group */
   img[src*="/theme/image.php/"][src*="/choicegroup/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/bi:people-fill.svg?height=24");
+    content: url("https://api.iconify.design/fluent/people-swap-20-filled.svg?color=white") !important;
   }
 
-  /* Generic text file */
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/text-24"] {
-    background-image: url("https://api.iconify.design/eva:file-fill.svg?height=25");
+    content: url("https://api.iconify.design/fluent/document-text-20-filled.svg?color=white") !important;
   }
 
-  /* Chat */
   img.activityicon[src*="/theme/image.php/"][src*="/chat/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/bi:chat-dots-fill.svg?height=24");
+    content: url("https://api.iconify.design/fluent/chat-20-filled.svg?color=white") !important;
   }
 
-  /* Amanote thingy at the right */
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/folder"] {
-    background-image: url("https://api.iconify.design/ic:round-folder.svg?height=16");
-    filter: invert(100%);
+    content: url("https://api.iconify.design/fluent/folder-20-filled.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive"] {
-    background-image: url("https://api.iconify.design/eva:file-fill.svg?height=16");
-    filter: invert(100%);
+    content: url("https://api.iconify.design/fluent/folder-zip-20-filled.svg?color=white") !important;
   }
 
-  /* text info block */
   img[src*="/theme/image.php/"][src*="/label/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/fe:text-align-left.svg?height=24");
+    content: url("https://api.iconify.design/fluent/text-align-left-20-filled.svg?color=white") !important;
   }
 
   /* Not terminated */
@@ -441,9 +632,199 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode"], img[src*="/t
     background-image: url("https://api.iconify.design/bi/caret-down-fill.svg");
   }
 
-  .icon.fa.fa-trash {
-    color: transparent;
-    background-image: url("https://api.iconify.design/fa-solid:trash.svg?height=24");
+  /* ----- FontAwesome icons ----- */
+  i.fa {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+  }
+  i.fa:before {
+    width: 20px !important;
+    height: 20px !important;
+    display: flex !important;
+    padding: 0 !important;
+  }
+
+  #page-footer ul.footercontact li,
+#nav-drawer .list-group-item .media {
+    flex-direction: row;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  #page-footer ul.footercontact li i,
+#nav-drawer .list-group-item .media i {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+  }
+
+  a[data-route=view-settings] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  a[data-route=view-contacts],
+#message-user-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  a[data-route=view-contacts] i,
+#message-user-button i {
+    margin-right: 5px !important;
+  }
+
+  .icon-size-3 {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  i.fa.fa-bars:before {
+    content: url("https://api.iconify.design/fluent/navigation-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-tachometer:before,
+i.fa.fa-dashboard:before {
+    content: url("https://api.iconify.design/fluent/board-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-home:before {
+    content: url("https://api.iconify.design/fluent/home-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-calendar:before {
+    content: url("https://api.iconify.design/fluent/calendar-20-filled.svg?color=white") !important;
+  }
+
+  body.drawer-open-left [data-region=drawer] [data-parent-key=myhome] .media-left i:not(.fa-home):before {
+    content: url("https://api.iconify.design/fluent/open-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-bell:before {
+    content: url("https://api.iconify.design/fluent/alert-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-comment:before {
+    content: url("https://api.iconify.design/fluent/chat-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-question-circle:before {
+    content: url("https://api.iconify.design/fluent/question-circle-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-chevron-left:before {
+    content: url("https://api.iconify.design/fluent/chevron-left-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-chevron-right:before {
+    content: url("https://api.iconify.design/fluent/chevron-right-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-filter:before {
+    content: url("https://api.iconify.design/fluent/filter-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-sort-amount-asc:before {
+    content: url("https://api.iconify.design/fluent/arrow-sort-down-lines-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-th:before {
+    content: url("https://api.iconify.design/fluent/table-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-ellipsis-h:before {
+    content: url("https://api.iconify.design/fluent/more-horizontal-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-ellipsis-v:before {
+    content: url("https://api.iconify.design/fluent/more-vertical-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-clock-o:before {
+    content: url("https://api.iconify.design/fluent/clock-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-chevron-circle-up:before {
+    content: url("https://api.iconify.design/fluent/chevron-up-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-graduation-cap:before {
+    content: url("https://api.iconify.design/fluent/hat-graduation-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-users:before {
+    content: url("https://api.iconify.design/fluent/people-community-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-folder-o:before {
+    content: url("https://api.iconify.design/fluent/folder-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-cogs:before {
+    content: url("https://api.iconify.design/fluent/settings-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-envelope:before {
+    content: url("https://api.iconify.design/fluent/mail-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-check:before {
+    content: url("https://api.iconify.design/fluent/checkmark-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-cog:before {
+    content: url("https://api.iconify.design/fluent/settings-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-user:before {
+    content: url("https://api.iconify.design/fluent/people-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-smile-o:before {
+    content: url("https://api.iconify.design/fluent/emoji-add-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-paper-plane:before {
+    content: url("https://api.iconify.design/fluent/send-20-filled.svg?color=white") !important;
+  }
+
+  i.fa.fa-trash:before {
+    content: url("https://api.iconify.design/fluent/delete-20-filled.svg?color=white") !important;
+  }
+
+  .icon-size-4 i.icon.fa.fa-trash {
+    width: 24px;
+    height: 24px;
+  }
+  .icon-size-4 i.icon.fa.fa-trash:before {
+    width: 24px !important;
+    height: 24px !important;
+    content: url("https://api.iconify.design/fluent/delete-24-filled.svg?color=white") !important;
+  }
+
+  .small i.fa.fa-check-circle:before {
+    content: url("https://api.iconify.design/fluent/checkmark-circle-20-filled.svg?color=white") !important;
+  }
+
+  .small i.fa.fa-circle-o:before {
+    content: url("https://api.iconify.design/fluent/circle-20-regular.svg?color=white") !important;
+  }
+
+  i.fa.fa-star {
+    width: 16px;
+    height: 16px;
+  }
+  i.fa.fa-star:before {
+    width: 16px !important;
+    height: 16px !important;
+    content: url("https://api.iconify.design/fluent/star-16-filled.svg?color=%23ffd600") !important;
   }
 
   .text-info {
@@ -460,7 +841,7 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode"], img[src*="/t
 .block .block-cards a.coursename,
 a.aalink span {
     color: var(--bg-secondary-light);
-    font-weight: 400;
+    font-weight: normal;
   }
   a:hover, a:active, a:focus, a:focus:active,
 .block .block-cards a.coursename:hover,
@@ -503,7 +884,15 @@ a.aalink span:visited {
   }
 
   .text-danger {
-    color: #cf6679 !important;
+    color: #c7475e !important;
+  }
+
+  span[style*="color: rgb(68, 68, 68)"], em[style*="color: rgb(68, 68, 68)"] span {
+    color: #959595 !important;
+  }
+
+  h3[style*="color: rgb(51, 51, 51)"] {
+    color: #ffffff !important;
   }
 
   /* ----- Cards ----- */
@@ -543,7 +932,7 @@ a.aalink span:visited {
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
   }
@@ -670,10 +1059,11 @@ a.aalink span:visited {
     border: none;
     outline: none;
     border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 1.25px;
     text-transform: uppercase;
+    font-weight: 500;
     align-items: center;
     display: inline-flex;
     justify-content: center;
@@ -743,10 +1133,11 @@ a.aalink span:visited {
     border: none;
     outline: none;
     border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 1.25px;
     text-transform: uppercase;
+    font-weight: 500;
     align-items: center;
     display: inline-flex;
     justify-content: center;
@@ -761,7 +1152,7 @@ a.aalink span:visited {
   }
   .bg-white[role=alert] .btn.btn-primary[data-action=confirm-delete-selected-messages]:not(.hidden):not(.hidden), .bg-white[role=alert] .btn.btn-primary[data-action=confirm-delete-selected-messages]:not(.hidden):not(.hidden):active, .bg-white[role=alert] .btn.btn-primary[data-action=confirm-delete-selected-messages]:not(.hidden):not(.hidden):focus, .bg-white[role=alert] .btn.btn-primary[data-action=confirm-delete-selected-messages]:not(.hidden):not(.hidden):active:focus {
     outline: unset;
-    background-color: #cf6679;
+    background-color: #c7475e;
     color: #000000;
   }
   .bg-white[role=alert] .btn.btn-primary[data-action=confirm-delete-selected-messages]:not(.hidden):not(.hidden) i, .bg-white[role=alert] .btn.btn-primary[data-action=confirm-delete-selected-messages]:not(.hidden):not(.hidden).fa {
@@ -812,10 +1203,11 @@ a.aalink span:visited {
     border: none;
     outline: none;
     border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 1.25px;
     text-transform: uppercase;
+    font-weight: 500;
     align-items: center;
     display: inline-flex;
     justify-content: center;
@@ -885,9 +1277,9 @@ a.aalink span:visited {
     margin-right: 0 !important;
   }
   #page-site-index #page-header .card .d-flex .logo {
-    display: flex;
-    align-items: center;
+    display: flex !important;
     justify-content: center;
+    align-items: center;
     width: 100%;
   }
   #page-site-index #page-header .card .d-flex.flex-wrap {
@@ -951,7 +1343,7 @@ a.aalink span:visited {
     border-color: inherit;
   }
   #page-course-view-topics .course-content li.section.hidden .section_availability .badge.badge-info {
-    background-color: #cf6679;
+    background-color: #c7475e;
     color: #000000;
     margin-left: 40px;
     font-size: 12px;
@@ -1016,10 +1408,9 @@ a.aalink span:visited {
   }
   #data_adv_form tr td[colspan="4"],
 #page-mod-data-edit form .generalbox tr td[colspan="4"] {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: flex !important;
     justify-content: center;
+    align-items: center;
     margin-top: 20px;
   }
   #data_adv_form tr td[colspan="4"] .btn.btn-secondary[name=resetadv]:not(.hidden),
@@ -1032,10 +1423,11 @@ a.aalink span:visited {
     border: none;
     outline: none;
     border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 1.25px;
     text-transform: uppercase;
+    font-weight: 500;
     align-items: center;
     display: inline-flex;
     justify-content: center;
@@ -1170,7 +1562,7 @@ form.form-inline input[type=text]:read-only:hover,
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
   }
@@ -1239,10 +1631,11 @@ form.form-inline input[type=text]:read-only:hover,
     border: none;
     outline: none;
     border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 1.25px;
     text-transform: uppercase;
+    font-weight: 500;
     align-items: center;
     display: inline-flex;
     justify-content: center;
@@ -1310,10 +1703,11 @@ form.form-inline input[type=text]:read-only:hover,
     border: none;
     outline: none;
     border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 1.25px;
     text-transform: uppercase;
+    font-weight: 500;
     align-items: center;
     display: inline-flex;
     justify-content: center;
@@ -1395,7 +1789,7 @@ form.form-inline input[type=text]:read-only:hover,
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
   }
@@ -1462,10 +1856,11 @@ form.form-inline input[type=text]:read-only:hover,
     border: none;
     outline: none;
     border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 1.25px;
     text-transform: uppercase;
+    font-weight: 500;
     align-items: center;
     display: inline-flex;
     justify-content: center;
@@ -1547,6 +1942,7 @@ form.form-inline input[type=text]:read-only:hover,
 
   .mform select.custom-select,
 .urlselect.custom-select,
+select.custom-select.singleselect,
 .datapreferences select.custom-select {
     color: #ffffff;
     box-sizing: border-box;
@@ -1569,6 +1965,7 @@ form.form-inline input[type=text]:read-only:hover,
   }
   .mform select.custom-select:hover,
 .urlselect.custom-select:hover,
+select.custom-select.singleselect:hover,
 .datapreferences select.custom-select:hover {
     background-color: #373737;
     border-bottom-color: rgba(255, 255, 255, 0.87);
@@ -1577,6 +1974,8 @@ form.form-inline input[type=text]:read-only:hover,
   .mform select.custom-select:focus, .mform select.custom-select:focus-visible,
 .urlselect.custom-select:focus,
 .urlselect.custom-select:focus-visible,
+select.custom-select.singleselect:focus,
+select.custom-select.singleselect:focus-visible,
 .datapreferences select.custom-select:focus,
 .datapreferences select.custom-select:focus-visible {
     color: inherit;
@@ -1587,6 +1986,7 @@ form.form-inline input[type=text]:read-only:hover,
   }
   .mform select.custom-select:disabled,
 .urlselect.custom-select:disabled,
+select.custom-select.singleselect:disabled,
 .datapreferences select.custom-select:disabled {
     background-color: #1d1d1d;
     color: #888888;
@@ -1594,6 +1994,7 @@ form.form-inline input[type=text]:read-only:hover,
   }
   .mform select.custom-select:disabled:hover,
 .urlselect.custom-select:disabled:hover,
+select.custom-select.singleselect:disabled:hover,
 .datapreferences select.custom-select:disabled:hover {
     border-bottom-color: inherit;
   }
@@ -1734,9 +2135,9 @@ form.form-inline input[type=text]:read-only:hover,
     position: absolute;
     left: 0px;
     top: 2px;
-    display: flex;
-    align-items: center;
+    display: flex !important;
     justify-content: center;
+    align-items: center;
     padding-top: 1px;
     padding-right: 1px;
     cursor: pointer;
@@ -1816,10 +2217,11 @@ form.form-inline input[type=text]:read-only:hover,
     border: none;
     outline: none;
     border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 1.25px;
     text-transform: uppercase;
+    font-weight: 500;
     align-items: center;
     display: inline-flex;
     justify-content: center;
@@ -1949,6 +2351,9 @@ form.form-inline input[type=text]:read-only:hover,
     background-color: inherit;
     border: none;
     border-radius: 10px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
   }
   .navbar.navbar-fhs .btn-secondary[data-action=toggle-drawer]:focus, .navbar.navbar-fhs .btn-secondary[data-action=toggle-drawer]:active:focus, .navbar.navbar-fhs .btn-secondary[data-action=toggle-drawer]:active, .navbar.navbar-fhs .coursecontrols .btn-secondary:focus, .navbar.navbar-fhs .coursecontrols .btn-secondary:active:focus, .navbar.navbar-fhs .coursecontrols .btn-secondary:active {
     outline: none;
@@ -2157,7 +2562,7 @@ form.form-inline input[type=text]:read-only:hover,
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     background-color: var(--bg-secondary);
@@ -2233,10 +2638,28 @@ form.form-inline input[type=text]:read-only:hover,
     height: 35px;
     border-color: inherit;
     padding: 5px 15px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
   }
   .popover-region .popover-region-container .popover-region-header-container .popover-region-header-text {
     font-weight: 400;
     letter-spacing: 0.4px;
+    flex-grow: 1;
+  }
+  .popover-region .popover-region-container .popover-region-header-container .popover-region-header-actions {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  .popover-region .popover-region-container .popover-region-header-container .popover-region-header-actions > *, .popover-region .popover-region-container .popover-region-header-container .popover-region-header-actions .normal-icon {
+    height: 20px;
+  }
+  .popover-region .popover-region-container .popover-region-header-container .popover-region-header-actions > *:focus {
+    outline: none;
+    box-shadow: none;
   }
   .popover-region .popover-region-container .popover-region-content-container {
     height: calc(100% - 55px - 20px);
@@ -2408,10 +2831,9 @@ form.form-inline input[type=text]:read-only:hover,
     user-select: none;
     letter-spacing: 0.3px;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex !important;
     justify-content: center;
+    align-items: center;
   }
   [data-region=right-hand-drawer].drawer .message-app .body-container [data-region=view-contacts] .flex-column > .p-3 {
     padding: 0 !important;
@@ -2532,10 +2954,11 @@ form.form-inline input[type=text]:read-only:hover,
     border: none;
     outline: none;
     border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 1.25px;
     text-transform: uppercase;
+    font-weight: 500;
     align-items: center;
     display: inline-flex;
     justify-content: center;
@@ -2625,7 +3048,7 @@ form.form-inline input[type=text]:read-only:hover,
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     color: #ffffff;
@@ -2690,10 +3113,9 @@ form.form-inline input[type=text]:read-only:hover,
     display: flex;
   }
   .forumsearch .input-group .input-group-append {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: flex !important;
     justify-content: center;
+    align-items: center;
   }
   .forumsearch .input-group .input-group-append .btn {
     width: fit-content;
@@ -2756,7 +3178,7 @@ form.form-inline input[type=text]:read-only:hover,
     border-radius: 50%;
     width: 40px;
     height: 40px;
-    display: flex;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     color: #c6c6c6;
@@ -2822,6 +3244,94 @@ form.form-inline input[type=text]:read-only:hover,
   }
   .discussion-list .author-info a:hover, .discussion-list .author-info a:hover time {
     color: #c6c6c6;
+  }
+
+  .path-mod-forum #region-main .forum-post-container .forumpost {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2) !important;
+    color: #ffffff;
+    background-color: #272727;
+    border-radius: 10px;
+    border: 1px solid #272727 !important;
+  }
+  .path-mod-forum #region-main .forum-post-container .forumpost:focus-visible, .path-mod-forum #region-main .forum-post-container .forumpost:focus {
+    border: inherit !important;
+  }
+  .path-mod-forum #region-main :target > .forumpost {
+    border-color: var(--bg-primary-light) !important;
+  }
+  .path-mod-forum #region-main :target > .forumpost:before {
+    display: none;
+  }
+  .path-mod-forum #region-main a.btn.btn-link:not(.hidden) {
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: normal;
+    min-width: 64px;
+    padding: 0px 16px;
+    min-height: 36px;
+    user-select: none;
+    vertical-align: middle;
+    perspective: 1px;
+    position: relative;
+  }
+  .path-mod-forum #region-main a.btn.btn-link:not(.hidden), .path-mod-forum #region-main a.btn.btn-link:not(.hidden):active, .path-mod-forum #region-main a.btn.btn-link:not(.hidden):focus, .path-mod-forum #region-main a.btn.btn-link:not(.hidden):active:focus {
+    outline: unset;
+    background-color: inherit;
+    color: #c6c6c6;
+  }
+  .path-mod-forum #region-main a.btn.btn-link:not(.hidden) i, .path-mod-forum #region-main a.btn.btn-link:not(.hidden).fa {
+    margin-right: 8px;
+  }
+  .path-mod-forum #region-main a.btn.btn-link:not(.hidden):before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image: radial-gradient(circle, white 1%, transparent 1%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 15000%;
+    opacity: 0;
+    transition: background 0.7s, opacity 1s;
+    z-index: -1;
+  }
+  .path-mod-forum #region-main a.btn.btn-link:not(.hidden):active:before, .path-mod-forum #region-main a.btn.btn-link:not(.hidden):focus:before {
+    animation-name: ripple;
+    animation-duration: 0.6s;
+    opacity: 0.4;
+    transition: 0s !important;
+  }
+  @keyframes ripple {
+    from {
+      background-size: 1%;
+    }
+    to {
+      background-size: 15000%;
+    }
+  }
+  .path-mod-forum #region-main a.btn.btn-link:hover {
+    color: #ffffff;
+  }
+  .path-mod-forum #region-main a.btn.btn-link:focus, .path-mod-forum #region-main a.btn.btn-link:active, .path-mod-forum #region-main a.btn.btn-link:focus:active, .path-mod-forum #region-main a.btn.btn-link:focus:hover {
+    outline: none;
+    box-shadow: none;
+  }
+  .path-mod-forum #region-main a.btn.btn-link:hover {
+    text-decoration: none;
   }
 
   /* ----- Database ----- */
@@ -2908,8 +3418,7 @@ form.form-inline input[type=text]:read-only:hover,
   }
   #page-mod-workshop-view.path-mod-workshop .userplan .phase dt {
     height: 60px !important;
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid #121212;

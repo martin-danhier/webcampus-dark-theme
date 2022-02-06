@@ -44,10 +44,7 @@
     }
 
     tr td[colspan="4"] {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        @include flex-center();
 
         margin-top: $spacing-m;
 
@@ -203,6 +200,7 @@ button.btn.btn-secondary[type="submit"],
 
 .mform select.custom-select,
 .urlselect.custom-select,
+select.custom-select.singleselect,
 .datapreferences select.custom-select {
     color: $fg-on-surface;
     box-sizing: border-box;
@@ -433,9 +431,7 @@ input[type="checkbox"] {
             top: 2px;
 
             // Positioning
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include flex-center();
             padding-top: 1px;
             padding-right: 1px;
 

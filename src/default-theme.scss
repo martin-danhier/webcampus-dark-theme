@@ -23,3 +23,13 @@
     --fg-on-secondary-light: #000000;
     --fg-on-secondary-dark: #000000;
 }
+
+// Root style that is common between all websites
+body,
+#page-my-index {
+    // Base values
+    background-color: $bg-background;
+    color: $fg-on-background;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-weight: 400;
+}

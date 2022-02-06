@@ -62,10 +62,7 @@
             dt {
                 height: calc(40px + 2 * $spacing-s) !important;
 
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+                @include flex-center();
 
                 border-bottom: 1px solid $bg-divider;
 

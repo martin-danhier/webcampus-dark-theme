@@ -21,6 +21,7 @@ $bg-surface-16dp: #333333; // 15%
 $bg-surface-24dp: #373737; // 16%
 $bg-field: #494949;
 $bg-field-hover: #373737;
+$bg-dropdown-item-hover: #404040;
 $bg-field-bright: #6e6e6e;
 $bg-field-hover-bright: #808080; // For use on bright background such as surface-12dp
 $bg-field-selected: #373737;
@@ -29,9 +30,11 @@ $bg-field-focus: #2c2c2c;
 $bg-field-disabled: #1d1d1d;
 $bg-divider: #121212;
 
-$bg-error: #cf6679;
+$bg-error: #c7475e;
 $bg-error-hover: #e17f8c;
 $bg-success: #78ce65;
+
+$bg-icon-favorite: #ffd600;
 
 // Foreground colors
 // For primary colors, see themes
@@ -56,6 +59,12 @@ $left-drawer-width: 250px;
 $right-drawer-width: 350px;
 $icon-button-diameter: 40px;
 $checkbox-size: 16px;
+
+// Icon settings
+$fluent-icon-size: 20px; // 16px, 20px, 24px, 28px, 32px or 48px
+$fluent-small-icon-size: 16px;
+$fluent-icon-style: "filled"; // "regular" or "filled"
+$fluent-icon-default-color: white;
 
 // Letter spacing
 $letter-spacing-s: 0.3px;

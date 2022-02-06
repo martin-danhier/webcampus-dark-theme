@@ -1,14 +1,3 @@
-/* ----- Root ----- */
-
-body,
-#page-my-index {
-    // Base values
-    background-color: $bg-background;
-    color: $fg-on-background;
-    font-family: "Roboto", "Helvetica", sans-serif;
-    font-weight: 300;
-}
-
 /* ----- Fixes to remove unwanted behavior originating from the default theme ----- */
 
 .pagelayout-mydashboard #region-main {
@@ -47,21 +36,21 @@ hr {
 }
 
 // Imports parts from common directory (split into multiple files to avoid having one huge file)
-@import './common/icons.scss';
-@import './common/text.scss';
-@import './common/cards.scss';
-@import './common/input.scss';
-@import './common/navbar.scss';
-@import './common/drawer.scss';
-@import './common/progress-indicators.scss';
-@import './common/ghost.scss';
-@import './common/footer.scss';
-@import './common/tooltips.scss';
-@import './common/chat.scss';
-@import './common/modals.scss';
-@import './common/forums.scss';
-@import './common/database.scss';
-@import './common/peer-review.scss';
+@import 'moodle/icons.scss';
+@import 'moodle/text.scss';
+@import 'moodle/cards.scss';
+@import 'moodle/input.scss';
+@import 'moodle/navbar.scss';
+@import 'moodle/drawer.scss';
+@import 'moodle/progress-indicators.scss';
+@import 'moodle/ghost.scss';
+@import 'moodle/footer.scss';
+@import 'moodle/tooltips.scss';
+@import 'moodle/chat.scss';
+@import 'moodle/modals.scss';
+@import 'moodle/forums.scss';
+@import 'moodle/database.scss';
+@import 'moodle/peer-review.scss';
 
 // Last import the miscellaneous styles
-@import './common/misc.scss';
+@import 'moodle/misc.scss';

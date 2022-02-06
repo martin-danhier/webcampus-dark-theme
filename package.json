@@ -6,7 +6,7 @@
     "url": "git+https://github.com/martin-danhier/webcampus-dark-theme.git"
   },
   "scripts": {
-    "build": "sass ./src/index.scss ./output.user.css --no-source-map --load-path=node_modules"
+    "build": "sass ./src/index.scss ./output.user.css --no-source-map"
   },
   "author": "Martin Danhier & Yannis Fraselle",
   "license": "MIT",
@@ -15,8 +15,6 @@
   },
   "homepage": "https://github.com/martin-danhier/webcampus-dark-theme#readme",
   "dependencies": {
-    "@material/elevation": "^13.0.0",
-    "@material/ripple": "^13.0.0",
-    "sass": "^1.42.1"
+    "sass": "^1.49.0"
   }
 }

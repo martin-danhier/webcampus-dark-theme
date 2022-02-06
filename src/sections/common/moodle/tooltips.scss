@@ -31,10 +31,27 @@
             height: calc(25px + 2 * $spacing-xs);
             border-color: inherit;
             padding: $spacing-xs $spacing-sm;
+            @include flex-center();
+            flex-direction: row;
 
             .popover-region-header-text {
                 font-weight: 400;
                 letter-spacing: $letter-spacing-m;
+                flex-grow: 1;
+            }
+
+            .popover-region-header-actions {
+                @include flex-center();
+                flex-direction: row;
+
+                & > *, .normal-icon {
+                    height: $fluent-icon-size;
+                }
+
+                & > *:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
             }
         }
 

@@ -8,16 +8,7 @@ label {
 a,
 .block .block-cards a.coursename,
 a.aalink span {
-    color: var(--bg-secondary-light);
-    font-weight: 400;
-
-    &:hover, &:active, &:focus, &:focus:active {
-        color: var(--bg-secondary-hover);
-    }
-
-    &:visited {
-        color: var(--bg-secondary-light);
-    }
+    @include link();
 }
 
 strong {
@@ -45,4 +36,14 @@ strong {
 
 .text-danger {
     color: $bg-error !important;
+}
+
+// Specific styles for custom texts (e.g when a page is designed by the editor and it hardcodes an ugly color);
+
+span[style*="color: rgb(68, 68, 68)"], em[style*="color: rgb(68, 68, 68)"] span {
+    color: $fg-medium-emphasis !important;
+}
+
+h3[style*="color: rgb(51, 51, 51)"] {
+    color: $fg-on-surface !important;
 }

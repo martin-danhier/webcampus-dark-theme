@@ -11,6 +11,7 @@
         background-color: inherit;
         border: none;
         border-radius: $border-radius;
+        @include flex-center();
 
         &:focus,
         &:active:focus,
@@ -41,9 +42,7 @@
         [data-region="popover-region-messages"] {
             .nav-link {
                 width: $spacing-l;
-                display: flex !important;
-                justify-content: center;
-                align-items: center;
+                @include flex-center();
 
                 .icon {
                     margin-right: 0;

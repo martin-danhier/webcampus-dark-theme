@@ -32,21 +32,5 @@ Chromium-based browsers and Firefox are supported.
 If you notice a problem but don't have time to implement it, you can report it to us in an issue.
 
 If you want to contribute, please fork and make pull requests ! Any help is appreciated.
+Please read the [contributing](CONTRIBUTING.md) file for additional information.
 
-The proposed changes must be tested against all supported website and browsers before being approved, since Stylus will update the style automatically if a newer version is added to the master branch.
-
-### Explanation of the code and coding guidelines
-
-Whenever possible, we try to respect Material Design V2 guidelines.
-
-The code is structured in *sections*. Each section has a list of URL patterns that Stylus will test against the URL of a visited page. If the URL matches, Stylus will inject the CSS into the page such that it overwrites the default one, thus providing the ability to tweak any website's appearance however we want.
-
-To provide support for multiple instances of Moodle at once, two sections are applied for each website:
-- A specific style that is only applied to a specific instance. This is useful if this instance uses a custom CSS.
-- A common style that is applied to all instances. This is the main part of the style that is applied on top of Moodle's default style.
-
-The use of SCSS also allows us to define constant variables (for colors or common spacings) and mixins (reusable CSS, for example for a button, elevation or ripple). Use those in priority. Moreover, all used colors should be declared in variables. That way, the colors stay consistent across the whole application, and can be easily tweaked.
-
-Some variables, like the primary and secondary colors, are defined with vanilla CSS variables instead. Unlike SCSS variables, they keep their variable form in the compiled code, which means that different color themes can be defined for different websites. These themes are defined in the [themes](src/themes) directory.
-
-Feel free to ask questions if you have any !

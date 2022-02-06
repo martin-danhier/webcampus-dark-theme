@@ -1,0 +1,387 @@
+/* ----- Global changes for icons ----- */
+
+/* ----- Img icons ----- */
+
+img[src*="/theme/image.php/"][src*="/url/"][src$="/icon"] {
+    // Link
+    @include fluent-icon-img("link");
+}
+
+img[src*="/theme/image.php/"][src*="/mod_forum/"][src$="/icon"],
+img[src*="/theme/image.php/"][src*="/forum/"][src$="/icon"] {
+    // Forum
+    @include fluent-icon-img("chat-multiple");
+}
+
+img[src*="/theme/image.php/"][src*="/workshop/"][src$="/icon"],
+img[src*="/theme/image.php/"][src*="/feedback/"][src$="/icon"] {
+    // Workshop / peer-review
+    @include fluent-icon-img("person-feedback");
+}
+
+img[src*="/theme/image.php/"][src*="/quiz/"][src$="/icon"] {
+    // Quiz
+    @include fluent-icon-img("quiz-new");
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/pdf"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/pdf-24"],
+img[src*="/theme/image.php/"][src*="/amanote/"][src$="/icon"] {
+    // PDF
+    @include fluent-icon-img("document-pdf");
+}
+
+img[src*="/theme/image.php/"][src*="/ubicast/"][src$="/icon"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/mpeg-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/mpeg"] {
+    // Video
+    @include fluent-icon-img("video-clip");
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive"] {
+    // Zip
+    @include fluent-icon-img("folder-zip");
+}
+
+img[src*="/theme/image.php/"][src*="/page/"][src$="/icon"] {
+    // Link to other Moodle page
+    @include fluent-icon-img("note");
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/markup-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/markup"] {
+    // Source code
+    @include fluent-icon-img("document-chevron-double");
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/tiff"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/tiff-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/png"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/png-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/jpeg"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/jpeg-24"] {
+    // Tiff, Png, Jpg
+    @include fluent-icon-img("image");
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/document-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/document"] {
+    // Word
+    @include fluent-icon-img("document-text");
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/powerpoint-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/powerpoint"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/impress-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/impress"] {
+    // Powerpoint & Impress
+    @include fluent-icon-img("data-pie");
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/spreadsheet-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/spreadsheet"] {
+    // Excel
+    @include fluent-icon-img("document-table");
+}
+
+img[src*="/theme/image.php/"][src*="/wiki/"][src$="/icon"] {
+    // Wiki
+    @include fluent-icon-img("globe");
+}
+
+img[src*="/theme/image.php/"][src*="/assign/"][src$="/icon"],
+img[src*="/theme/image.php/"][src*="/mod_assign/"][src$="/icon"] {
+    // Assignment
+    @include fluent-icon-img("arrow-upload");
+}
+
+img[src*="/theme/image.php/"][src*="/folder/"][src$="/icon"] {
+    // Closed folder
+    @include fluent-icon-img("folder");
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/folder-24"] {
+    // Open folder
+    @include fluent-icon-img("folder-open");
+}
+
+img[src*="/theme/image.php/"][src*="/scheduler/"][src$="/icon"] {
+    // Scheduler
+    @include fluent-icon-img("calendar-clock");
+}
+
+img[src*="/theme/image.php/"][src*="/choice/"][src$="/icon"] {
+    // Question (Choice)
+    @include fluent-icon-img("chat-help");
+}
+
+img[src*="/theme/image.php/"][src*="/glossary/"][src$="/icon"] {
+    // Glossary
+    @include fluent-icon-img("text-sort-ascending");
+}
+
+img[src*="/theme/image.php/"][src*="/customcert/"][src$="/icon"] {
+    // Certificate
+    @include fluent-icon-img("certificate");
+}
+
+img[src*="/theme/image.php/"][src*="/wooclap/"][src$="/icon"] {
+    // Wooclap
+    @include fluent-icon-img("form-new");
+}
+
+img[src*="/theme/image.php/"][src*="/choicegroup/"][src$="/icon"] {
+    // Choose a group
+    @include fluent-icon-img("people-swap");
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/text-24"] {
+    // Generic text file
+    @include fluent-icon-img("document-text");
+}
+
+img.activityicon[src*="/theme/image.php/"][src*="/chat/"][src$="/icon"] {
+    // Chat
+    @include fluent-icon-img("chat");
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/folder"] {
+    // Folder
+    @include fluent-icon-img("folder");
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive"] {
+    // Archive
+    @include fluent-icon-img("folder-zip");
+}
+
+img[src*="/theme/image.php/"][src*="/label/"][src$="/icon"] {
+    // Text info block
+    @include fluent-icon-img("text-align-left");
+}
+
+// TODO: wtf are these icons: keep them ? don't ?
+
+/* Not terminated */
+
+img[src*="/theme/image.php/"][src*="/block_completion_progress/"][src$="/cross"] {
+    background-image: url("https://api.iconify.design/emojione-monotone:cross-mark.svg?height=12");
+    height: 12px !important;
+    width: 12px !important;
+    vertical-align: -0.125em;
+    filter: invert(55%) sepia(12%) saturate(2496%) hue-rotate(315deg) brightness(99%) contrast(89%) !important;
+}
+
+/* Done */
+
+img[src*="/theme/image.php/"][src*="/block_completion_progress/"][src$="/tick"] {
+    background-image: url("https://api.iconify.design/fa-solid:check.svg?height=12");
+    vertical-align: -0.125em;
+    height: 12px !important;
+    width: 12px !important;
+    filter: invert(85%) sepia(24%) saturate(888%) hue-rotate(64deg) brightness(88%) contrast(85%) !important;
+}
+
+/* Data */
+img[src*="/theme/image.php/"][src*="/data/"][src$="/icon"] {
+    background-image: url("https://api.iconify.design/mdi/database.svg?height=24");
+}
+
+/* Now */
+
+img[src*="/theme/image.php/"][src*="/block_completion_progress/"][src$="/right"] {
+    background-image: url("https://api.iconify.design/bi/caret-down-fill.svg");
+}
+
+// End of TODO
+
+/* ----- FontAwesome icons ----- */
+
+i.fa {
+    @include fluent-icon-base();
+}
+
+// Positioning tweaks
+
+#page-footer ul.footercontact li,
+#nav-drawer .list-group-item .media {
+    // Center with margin
+
+    flex-direction: row;
+    @include flex-center();
+
+    i {
+        @include flex-center();
+        margin-right: $spacing-s;
+    }
+}
+
+a[data-route="view-settings"] {
+    // Center right but no margin
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+a[data-route="view-contacts"],
+#message-user-button {
+    // Center right, with margin
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+
+    i {
+        margin-right: $spacing-xs !important;
+    }
+}
+
+.icon-size-3 {
+    width: $fluent-icon-size !important;
+    height: $fluent-icon-size !important;
+}
+
+// Replace icons
+
+i.fa.fa-bars {
+    // Menu
+    @include fluent-icon("navigation");
+}
+i.fa.fa-tachometer,
+i.fa.fa-dashboard {
+    // Dashboard
+    @include fluent-icon("board");
+}
+i.fa.fa-home {
+    // Home
+    @include fluent-icon("home");
+}
+i.fa.fa-calendar {
+    // Calendar
+    @include fluent-icon("calendar");
+}
+body.drawer-open-left [data-region="drawer"] [data-parent-key="myhome"] .media-left i:not(.fa-home) {
+    // Open in new tab
+    @include fluent-icon("open");
+}
+i.fa.fa-bell {
+    // Notifications
+    @include fluent-icon("alert");
+}
+i.fa.fa-comment {
+    // Chat
+    @include fluent-icon("chat");
+}
+i.fa.fa-question-circle {
+    // Help
+    @include fluent-icon("question-circle");
+}
+i.fa.fa-chevron-left {
+    // Chevron left
+    @include fluent-icon("chevron-left");
+}
+i.fa.fa-chevron-right {
+    // Chevron right
+    @include fluent-icon("chevron-right");
+}
+i.fa.fa-filter {
+    // Filter
+    @include fluent-icon("filter");
+}
+i.fa.fa-sort-amount-asc {
+    // Sort
+    @include fluent-icon("arrow-sort-down-lines");
+}
+i.fa.fa-th {
+    // Table
+    @include fluent-icon("table");
+}
+i.fa.fa-ellipsis-h {
+    // More
+    @include fluent-icon("more-horizontal");
+}
+i.fa.fa-ellipsis-v {
+    // More vertical
+    @include fluent-icon("more-vertical");
+}
+i.fa.fa-clock-o {
+    // Clock
+    @include fluent-icon("clock");
+}
+i.fa.fa-chevron-circle-up {
+    // Up
+    @include fluent-icon("chevron-up");
+}
+i.fa.fa-graduation-cap {
+    // Graduation cap
+    @include fluent-icon("hat-graduation");
+}
+i.fa.fa-users {
+    // Users
+    @include fluent-icon("people-community");
+}
+i.fa.fa-folder-o {
+    // Folder
+    @include fluent-icon("folder");
+}
+i.fa.fa-cogs {
+    // Settings
+    @include fluent-icon("settings");
+}
+
+i.fa.fa-envelope {
+    // Email
+    @include fluent-icon("mail");
+}
+i.fa.fa-check {
+    // Check
+    @include fluent-icon("checkmark");
+}
+i.fa.fa-cog {
+    // Settings
+    @include fluent-icon("settings");
+}
+i.fa.fa-user {
+    // User
+    @include fluent-icon("people");
+}
+i.fa.fa-smile-o {
+    // Smile
+    @include fluent-icon("emoji-add");
+}
+i.fa.fa-paper-plane {
+    // Send
+    @include fluent-icon("send");
+}
+i.fa.fa-trash {
+    // Trash
+    @include fluent-icon("delete");
+}
+.icon-size-4 i.icon.fa.fa-trash {
+    // Trash
+    @include fluent-icon-override("delete", 24px);
+}
+.small i.fa.fa-check-circle {
+    // Check
+    @include fluent-icon("checkmark-circle");
+}
+.small i.fa.fa-circle-o {
+    // Circle
+    @include fluent-icon("circle", $fluent-icon-default-color, "regular");
+}
+
+i.fa.fa-star {
+    // Star
+    @include fluent-icon-override("star", $fluent-small-icon-size, $bg-icon-favorite);
+}
+
+// ----- Changes that don't require icon changes -----
+
+// Info bubble (question mark)
+.text-info {
+    color: var(--bg-secondary-light) !important;
+}

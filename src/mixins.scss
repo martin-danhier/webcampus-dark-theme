@@ -1,5 +1,11 @@
 @use "constants.scss";
 
+// Note to developers:
+// If possible, define common CSS in mixins in this file.
+// They are accessible from everywhere.
+// It is very useful for example to define the same material text fields both in Moodle and the login page::after
+// they are defined in completely independent sections (which means duplicated CSS), but with Mixins, this can be quick to implement.
+
 // Common color combinations
 
 @mixin primary() {
@@ -152,10 +158,7 @@
 
         // Add new button style
         border-radius: 4px;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        text-transform: uppercase;
+        @include typography(button);
         align-items: center;
         display: inline-flex;
         justify-content: center;
@@ -174,10 +177,13 @@
 
 @mixin text-button($fg, $fg-hover) {
     @include button-base(inherit, $fg);
-    &:hover{
+    &:hover {
         color: $fg-hover;
     }
-    &:focus, &:active, &:focus:active, &:focus:hover {
+    &:focus,
+    &:active,
+    &:focus:active,
+    &:focus:hover {
         outline: none;
         box-shadow: none;
     }
@@ -203,9 +209,7 @@
     height: $icon-button-diameter;
 
     // Position
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center();
 }
 
 @mixin flat-icon-button($bg-hover: $bg-field-hover) {
@@ -346,4 +350,313 @@
             border-bottom-color: inherit;
         }
     }
+}
+
+// Positioning
+
+@mixin flex-center() {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+// Typography
+
+@mixin font-weight($weight) {
+    @if ($weight == "light") {
+        font-weight: lighter;
+    } @else if ($weight == "normal" or $weight == "regular") {
+        font-weight: normal;
+    } @else if ($weight == "medium") {
+        font-weight: 500;
+    } @else {
+        @error "Invalid font weight: \"#{$weight}\"";
+    }
+}
+
+@mixin typography($style) {
+    font-family: "Roboto", "Helvetica", sans-serif;
+
+    // Define typography styles as defined at https://material.io/design/typography/the-type-system.html#type-scale
+    @if ($style == "body1") {
+        font-size: 16px;
+        letter-spacing: 0.5px;
+        @include font-weight(normal);
+    } @else if ($style == "body2") {
+        font-size: 14px;
+        letter-spacing: 0.25px;
+        @include font-weight(normal);
+    } @else if ($style == "button") {
+        font-size: 14px;
+        letter-spacing: 1.25px;
+        text-transform: uppercase;
+        @include font-weight(medium);
+    } @else if ($style == "caption") {
+        font-size: 12px;
+        letter-spacing: 0.4px;
+        @include font-weight(normal);
+    } @else if ($style == "overline") {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+        @include font-weight(normal);
+        text-transform: uppercase;
+    } @else if ($style == "subtitle1") {
+        font-size: 16px;
+        letter-spacing: 0.15px;
+        @include font-weight(normal);
+    } @else if ($style == "subtitle2") {
+        font-size: 14px;
+        letter-spacing: 0.1px;
+        @include font-weight(medium);
+    } @else if ($style == "h1") {
+        font-size: 96px;
+        letter-spacing: -1.5px;
+        @include font-weight(light);
+    } @else if ($style == "h2") {
+        font-size: 60px;
+        letter-spacing: -0.5px;
+        @include font-weight(light);
+    } @else if ($style == "h3") {
+        font-size: 48px;
+        letter-spacing: 0px;
+        @include font-weight(normal);
+    } @else if ($style == "h4") {
+        font-size: 34px;
+        letter-spacing: 0.25px;
+        @include font-weight(normal);
+    } @else if ($style == "h5") {
+        font-size: 24px;
+        letter-spacing: 0.15px;
+        @include font-weight(medium);
+    } @else if ($style == "h6") {
+        font-size: 20px;
+        letter-spacing: 0.15px;
+        @include font-weight(medium);
+    } @else if ($style == "helper-text") {
+        font-size: 12px;
+        letter-spacing: 0.33px;
+        @include font-weight(medium);
+    } @else {
+        @error "Typography style \"#{$style}\" is not supported";
+    }
+}
+
+// Links
+
+@mixin link() {
+    color: var(--bg-secondary-light);
+    @include font-weight(normal);
+
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus:active {
+        color: var(--bg-secondary-hover);
+    }
+
+    &:visited {
+        color: var(--bg-secondary-light);
+    }
+}
+
+// Icons
+
+// Fluent icon
+@mixin fluent-icon-base() {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: $fluent-icon-size;
+    height: $fluent-icon-size;
+
+    &:before {
+        width: $fluent-icon-size !important;
+        height: $fluent-icon-size !important;
+        display: flex !important;
+        padding: 0 !important;
+    }
+}
+@mixin fluent-icon($name, $color: $fluent-icon-default-color, $style: $fluent-icon-style) {
+    &:before {
+        @if color-is-hardcoded($color) {
+            // Hardcoded color: use it in the url
+            content: url("https://api.iconify.design/fluent/#{$name}-" + escape-size(
+                    $fluent-icon-size
+                ) + "-" + $style + ".svg?color=" + escape-color($color)) !important;
+        } @else {
+            @error "Can't hardcode a variable color in the URL.";
+        }
+    }
+}
+@mixin fluent-icon-override($name, $size, $color: $fluent-icon-default-color, $style: $fluent-icon-style) {
+    width: $size;
+    height: $size;
+
+    &:before {
+        width: $size !important;
+        height: $size !important;
+
+        @if color-is-hardcoded($color) {
+            // Hardcoded color: use it in the url
+            content: url("https://api.iconify.design/fluent/#{$name}-" + escape-size(
+                    $size
+                ) + "-" + $style + ".svg?color=" + escape-color($color)) !important;
+        } @else {
+            @error "Can't hardcode a variable color in the URL.";
+        }
+    }
+}
+@mixin fluent-icon-img($name, $color: $fluent-icon-default-color, $style: $fluent-icon-style) {
+    @if color-is-hardcoded($color) {
+        // Hardcoded color: use it in the url
+        content: url("https://api.iconify.design/fluent/#{$name}-" + escape-size(
+                $fluent-icon-size
+            ) + "-" + $style + ".svg?color=" + escape-color($color)) !important;
+    } @else {
+        @error "Can't hardcode a variable color in the URL.";
+    }
+}
+
+// Material icon
+@mixin icon($name) {
+    @include icon-base();
+    @include icon-code($name);
+}
+@mixin icon-base() {
+    font-family: "Material Icons";
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: normal;
+    vertical-align: text-bottom;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    visibility: visible;
+    color: inherit;
+}
+// Icon codes
+@mixin icon-code($name) {
+    // Chevrons
+    @if $name == "chevron-left" {
+        content: "\e5cb" !important;
+    } @else if $name == "chevron-right" {
+        content: "\e5cc" !important;
+    }
+    // Back to top
+    @else if $name == "arrow-upward" {
+        content: "\e5d8" !important;
+    }
+    // Error
+    @else if $name == "error" {
+        content: "\e000" !important;
+    } @else if $name == "error-outline" {
+        content: "\e001" !important;
+    }
+    // Menu
+    @else if $name == "menu" {
+        content: "\e5d2" !important;
+    }
+    // Dashboard
+    @else if $name == "dashboard" {
+        content: "\e871" !important;
+    }
+    // Home
+    @else if $name == "home" {
+        content: "\e88a" !important;
+    }
+    // Calendar
+    @else if $name == "calendar" {
+        content: "\e878" !important;
+    }
+    // Open in new tab
+    @else if $name == "open-in-new" {
+        content: "\e89e" !important;
+    }
+    // Notifications
+    @else if $name == "notifications" {
+        content: "\e7f4" !important;
+    }
+    // Chat
+    @else if $name == "chat" {
+        content: "\e0b7" !important;
+    }
+    // Help
+    @else if $name == "help" {
+        content: "\e887" !important;
+    }
+    // Filter
+    @else if $name == "filter-list" {
+        content: "\e152" !important;
+    }
+    // Sort
+    @else if $name == "sort" {
+        content: "\e164" !important;
+    }
+    // View list
+    @else if $name == "view-list" {
+        content: "\e8ef" !important;
+    }
+    // More
+    @else if $name == "more-vert" {
+        content: "\e5d4" !important;
+    } @else if $name == "more-horiz" {
+        content: "\e5d3" !important;
+    }
+    // Schedule
+    @else if $name == "access-time" {
+        content: "\e192" !important;
+    }
+
+    // Unknown icon
+    @else {
+        @error "Unknown icon: \"#{$name}\"";
+    }
+}
+
+// Utils
+
+// Replaces the first occurrence of a substring with another string
+@function str-replace($str, $search, $replacement) {
+    // Find substring in original string
+    $index: str-index($str, $search);
+
+    // If substring is found
+    @if $index != null {
+        // Replace substring with replacement
+        $str: str-slice($str, 0, $index - 1) + $replacement + str-slice($str, $index + str-length($search));
+    }
+
+    @return $str;
+}
+
+// Is the color hardcoded or not (not=CSS variable)
+@function color-is-hardcoded($color) {
+    $str-color: "#{$color}";
+    @return str-index($str-color, "var(--") == null;
+}
+
+// Escape a color to be used in an URL
+@function escape-color($color) {
+    // Convert to string
+    $str-color: "#{$color}";
+
+    // If hex, replace # with %23
+    $first-char: str-slice($str-color, 0, 1);
+    @if ($first-char == "#") {
+        $str-color: "%23" + str-slice($str-color, 2);
+    }
+    @return $str-color;
+}
+
+// Removes the unit of a size
+@function escape-size($size) {
+    $str-size: "#{$size}";
+
+    // Replace unit with empty string
+    $str-size: str-replace($str-size, "px", "");
+    $str-size: str-replace($str-size, "em", "");
+    $str-size: str-replace($str-size, "rem", "");
+
+    // Return string
+    @return $str-size;
 }
