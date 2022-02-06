@@ -546,7 +546,7 @@ input[type="checkbox"] {
 
 // Textarea
 
-[data-fieldtype="textarea"] textarea {
+[data-fieldtype="textarea"] textarea, .comment-ctrl textarea {
     @include filled-text-field(var(--bg-primary-light));
     height: fit-content;
 }

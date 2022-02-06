@@ -2,6 +2,8 @@
 [data-region="right-hand-drawer"].drawer {
     width: $right-drawer-width;
 
+}
+[data-region="right-hand-drawer"].drawer, #page-message-index{
     .message-app {
         @include surface(1);
         @include elevation(1);
@@ -232,5 +234,44 @@
 
     .card-header {
         border-bottom-color: $bg-divider;
+    }
+}
+
+// Fullscreen chat
+
+#page-message-index .message-app.main {
+    // Position
+    margin-top: $spacing-l;
+    min-height: 650px;
+
+    // Card
+    @include elevation(1);
+    background-color: $bg-surface-01dp !important;
+    color: $fg-on-surface !important;
+    
+    // Border
+    border: 0 !important;
+    border-radius: $border-radius;
+
+    .row-fluid > div, .panel-header-container, [data-region="view-overview-favourites"], .header-container {
+        
+        border-color: $bg-divider !important;
+    }
+
+    .p-3.border-bottom {
+        padding: 0 !important;
+        border: 0 !important;
+    }
+
+    .list-group-item-action:hover {
+        background-color: $bg-field-hover !important;
+        color: inherit;
+    }
+
+    .dropdown-menu {
+        right: 0;
+        top: 100% !important;
+        left: auto !important;
+        transform: none !important;
     }
 }

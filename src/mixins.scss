@@ -175,8 +175,8 @@
     }
 }
 
-@mixin text-button($fg, $fg-hover) {
-    @include button-base(inherit, $fg);
+@mixin text-button($fg, $fg-hover, $do_ripple: true) {
+    @include button-base(inherit, $fg, $do_ripple);
     &:hover {
         color: $fg-hover;
     }
@@ -184,8 +184,9 @@
     &:active,
     &:focus:active,
     &:focus:hover {
-        outline: none;
-        box-shadow: none;
+        outline: none !important;
+        box-shadow: none !important;
+        background-color: inherit;
     }
 }
 

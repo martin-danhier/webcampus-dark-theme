@@ -30,6 +30,9 @@ h3.sectionname {
 .border-bottom {
     border-bottom-color: inherit !important;
 }
+.border-right {
+    border-right-color: inherit !important;
+}
 
 hr {
     border-top-color: $bg-divider !important;
@@ -48,9 +51,10 @@ hr {
 @import 'moodle/tooltips.scss';
 @import 'moodle/chat.scss';
 @import 'moodle/modals.scss';
-@import 'moodle/forums.scss';
+@import 'moodle/tables-forums.scss';
 @import 'moodle/database.scss';
 @import 'moodle/peer-review.scss';
+@import 'moodle/editor-atto.scss';
 
 // Last import the miscellaneous styles
 @import 'moodle/misc.scss';

@@ -1,5 +1,14 @@
 /* ----- Global changes for icons ----- */
 
+img.icon, .content-item-container.notification .content-item-body .notification-image > img {
+    width: $fluent-icon-size;
+    height: $fluent-icon-size;
+    line-height: $fluent-icon-size;
+    font-size: $fluent-icon-size;
+}
+
+
+
 /* ----- Img icons ----- */
 
 img[src*="/theme/image.php/"][src*="/url/"][src$="/icon"] {
@@ -163,6 +172,36 @@ img[src*="/theme/image.php/"][src*="/label/"][src$="/icon"] {
     @include fluent-icon-img("text-align-left");
 }
 
+img[src*="/theme/image.php/"][src*="/data/"][src$="/icon"] {
+    // Data
+    @include fluent-icon-img("database");
+}
+
+img[src*="/theme/image.php/"][src*="/atto_bsgrid/"][src$="/iconone"] {
+    // Atto
+    @include fluent-icon-img("column-triple");
+}
+
+img[src*="/theme/image.php/"][src*="/atto_chemistry/"][src$="/icon"] {
+    // Atto chemistry (no fluent equivalent)
+    content: url('https://api.iconify.design/mdi/flask.svg?color=white&width=20&height=20');
+}
+
+img[src*="/theme/image.php/"][src*="/atto_generico/"][src$="/iconone"] {
+    // Atto generico
+    @include fluent-icon-img("puzzle-piece");
+}
+
+img[src*="/theme/image.php/"][src*="/atto_fontfamily/"][src$="/icon"] {
+    // Atto font family
+    @include fluent-icon-img("text-font");
+}
+
+img[src*="/theme/image.php/"][src*="/atto_fontsize/"][src$="/icon"] {
+    // Atto font size
+    @include fluent-icon-img("text-font-size");
+}
+
 // TODO: wtf are these icons: keep them ? don't ?
 
 /* Not terminated */
@@ -185,18 +224,13 @@ img[src*="/theme/image.php/"][src*="/block_completion_progress/"][src$="/tick"] 
     filter: invert(85%) sepia(24%) saturate(888%) hue-rotate(64deg) brightness(88%) contrast(85%) !important;
 }
 
-/* Data */
-img[src*="/theme/image.php/"][src*="/data/"][src$="/icon"] {
-    background-image: url("https://api.iconify.design/mdi/database.svg?height=24");
-}
-
-/* Now */
+// End of TODO
 
 img[src*="/theme/image.php/"][src*="/block_completion_progress/"][src$="/right"] {
-    background-image: url("https://api.iconify.design/bi/caret-down-fill.svg");
+    // Now icon
+    @include fluent-icon-img("caret-down");
 }
 
-// End of TODO
 
 /* ----- FontAwesome icons ----- */
 
@@ -216,6 +250,16 @@ i.fa {
     i {
         @include flex-center();
         margin-right: $spacing-s;
+    }
+}
+
+.btn.btn-outline-secondary > span:not(.hidden)[data-region*="icon-container"] {
+    // Center without margin
+    flex-direction: row;
+    @include flex-center();
+
+    i {
+        @include flex-center();
     }
 }
 
@@ -316,6 +360,11 @@ i.fa.fa-chevron-circle-up {
     // Up
     @include fluent-icon("chevron-up");
 }
+#back-to-top i.fa.fa-chevron-circle-up {
+    // Back to top, black one on secondary color (impossible to use fg-on-secondary as it is a CSS variable)
+    // Assume it's black... with an icon font this problem wouldn't exist
+    @include fluent-icon("chevron-up", black);
+}
 i.fa.fa-graduation-cap {
     // Graduation cap
     @include fluent-icon("hat-graduation");
@@ -365,6 +414,14 @@ i.fa.fa-trash {
     // Trash
     @include fluent-icon-override("delete", 24px);
 }
+i.fa-plus {
+    // Add
+    @include fluent-icon("add");
+}
+i.fa-minus {
+    // Minus
+    @include fluent-icon("subtract");
+}
 .small i.fa.fa-check-circle {
     // Check
     @include fluent-icon("checkmark-circle");
@@ -372,6 +429,162 @@ i.fa.fa-trash {
 .small i.fa.fa-circle-o {
     // Circle
     @include fluent-icon("circle", $fluent-icon-default-color, "regular");
+}
+i.fa.fa-bold {
+    // Bold
+    @include fluent-icon("text-bold");
+}
+i.fa.fa-italic {
+    // Italic
+    @include fluent-icon("text-italic");
+}
+i.fa.fa-underline {
+    // Underline
+    @include fluent-icon("text-underline");
+}
+i.fa.fa-strikethrough {
+    // Strikethrough
+    @include fluent-icon("text-strikethrough");
+}
+i.fa.fa-subscript {
+    // Subscript
+    @include fluent-icon("text-subscript");
+}
+i.fa.fa-superscript {
+    // Superscript
+    @include fluent-icon("text-superscript");
+}
+i.fa.fa-list-ul {
+    // List
+    @include fluent-icon("text-bullet-list-ltr");
+}
+i.fa.fa-list-ol {
+    // List
+    @include fluent-icon("text-number-list-ltr");
+}
+i.fa.fa-align-left {
+    // Align left
+    @include fluent-icon("text-align-left");
+}
+i.fa.fa-align-center {
+    // Align center
+    @include fluent-icon("text-align-center");
+}
+i.fa.fa-align-right {
+    // Align right
+    @include fluent-icon("text-align-right");
+}
+i.fa.fa-align-justify {
+    // Align justify
+    @include fluent-icon("text-align-justify");
+}
+i.fa.fa-indent {
+    // Indent
+    @include fluent-icon("text-indent-increase-ltr");
+}
+i.fa.fa-outdent {
+    // Outdent
+    @include fluent-icon("text-indent-decrease-ltr");
+}
+i.fa.fa-link {
+    // Link
+    @include fluent-icon("link");
+}
+i.fa.fa-chain-broken {
+    // Broken link
+    @include fluent-icon("link-dismiss");
+}
+i.fa.fa-picture-o {
+    // Image
+    @include fluent-icon("image");
+}
+i.fa.fa-paint-brush {
+    // Paint brush
+    @include fluent-icon("text-color");
+}
+i.fa.fa-lightbulb-o {
+    // Background color
+    @include fluent-icon("color-line");
+}
+.editor_atto_toolbar i.fa.fa-caret-down {
+    // Caret down in editor ATTO
+    @include fluent-icon-override("caret-down", 16px, $fg-high-emphasis);
+}
+i.fa.fa-tint {
+    // Style
+    @include fluent-icon("color");
+}
+i.fa.fa-font {
+    // Font
+    @include fluent-icon("text-font");
+}
+i.fa.fa-undo {
+    // Undo
+    @include fluent-icon("arrow-undo");
+}
+i.fa.fa-repeat {
+    // Repeat
+    @include fluent-icon("arrow-redo");
+}
+i.fa.fa-search {
+    // Search
+    @include fluent-icon("search");
+}
+i.fa.fa-circle-o-notch {
+    // Spinner
+    @include fluent-icon("spinner-ios");
+}
+i.fa.fa-times {
+    // Close
+    @include fluent-icon("close");
+}
+i.fa.fa-level-down {
+    // Level down
+    @include fluent-icon("arrow-curve-down-left");
+}
+i.fa.fa-files-o {
+    // Files
+    @include fluent-icon("document-multiple");
+}
+i.fa.fa-microphone {
+    // Microphone
+    @include fluent-icon("mic");
+}
+i.fa.fa-calculator {
+    // Calculator
+    @include fluent-icon("calculator");
+}
+.editor_atto_toolbar i.fa.fa-pencil-square-o {
+    // Insert character
+    @include fluent-icon("translate");
+}
+i.fa.fa-table {
+    // Insert table
+    @include fluent-icon("table");
+}
+i.fa.fa-i-cursor {
+    // Remove formatting
+    @include fluent-icon("text-clear-formatting");
+}
+i.fa.fa-code {
+    // Code
+    @include fluent-icon("code");
+}
+i.fa.fa-arrows-alt {
+    // Arrows
+    @include fluent-icon("arrow-expand");
+}
+i.fa.fa-universal-access {
+    // Accessibility
+    @include fluent-icon("accessibility");
+}
+i.fa.fa-braille:before {
+    // Braille (no fluent equivalent)
+    content: url('https://api.iconify.design/whh/braillen.svg?color=white&width=16&height=16');
+    width: 16px !important;
+    height: 16px !important;
+    margin: auto;
+    vertical-align: middle;
 }
 
 i.fa.fa-star {

@@ -156,54 +156,86 @@
 
 // ----- Course content -----
 
-#page-course-view-topics {
+#page-course-view-topics,
+#page-course-view-weeks {
     #page-header .card {
         padding: $spacing-m;
     }
 
     .course-content {
-        li.section.hidden {
-            // Title
-            h3.sectionname {
-                border-top: 0 !important;
-                a {
-                    color: $fg-field-disabled;
-                    cursor: not-allowed;
+        .section {
+            // Current section (in week mode)
+            &.current {
+                @include surface(4);
+                @include elevation(1);
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
 
-                    &:hover {
-                        text-decoration: none;
+                border-left: 5px solid var(--bg-primary);
+
+                &:before {
+                    display: none;
+                }
+                // Title
+                .sectionname {
+                    background-color: inherit;
+                }
+            }
+
+            .availabilityinfo {
+                .badge.badge-info {
+                    font-size: 12px;
+                    border-radius: 5px;
+                    margin-right: $spacing-xs;
+                    margin-left: $spacing-s;
+                }
+
+                &.isrestricted .badge.badge-info {
+                    background-color: $bg-warning;
+                    color: $fg-on-warning;
+                }
+
+                &.ishidden .badge.badge-info {
+                    background-color: $bg-error;
+                    color: $fg-on-error;
+                }
+            }
+
+            &.hidden {
+                // Title
+                h3.sectionname {
+                    border-top: 0 !important;
+                    a {
+                        color: $fg-field-disabled;
+                        cursor: not-allowed;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+
+                    // Icon
+                    &:before {
+                        content: "";
+                        background-image: url("https://api.iconify.design/fluent/lock-closed-32-filled.svg");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        vertical-align: baseline;
+                        width: 24px;
+                        height: 24px;
+                        display: inline-block;
+                        filter: invert(1);
+
+                        margin-right: $spacing-s;
                     }
                 }
 
-                // Icon
-                &:before {
-                    content: "";
-                    background-image: url("https://api.iconify.design/fluent/lock-closed-32-filled.svg");
-                    background-size: contain;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    vertical-align: baseline;
-                    width: 24px;
-                    height: 24px;
-                    display: inline-block;
-                    filter: invert(1);
-
-                    margin-right: $spacing-s;
+                .content {
+                    background-color: inherit;
+                    color: inherit;
+                    border-color: inherit;
                 }
-            }
-
-            .content {
-                background-color: inherit;
-                color: inherit;
-                border-color: inherit;
-            }
-
-            .section_availability .badge.badge-info {
-                background-color: $bg-error;
-                color: $fg-on-error;
-                margin-left: $spacing-l;
-                font-size: 12px;
-                border-radius: 5px;
             }
         }
     }
@@ -230,5 +262,83 @@
     }
     .resourcedetails {
         color: $fg-high-emphasis;
+    }
+}
+
+/* ----- Assignment ----- */
+
+#page-mod-assign-view {
+    table.generaltable {
+        background-color: inherit;
+        @include elevation(2);
+        border-radius: $border-radius;
+
+        th {
+            width: 280px;
+        }
+
+        tr {
+            &:nth-child(even) {
+                td,
+                th {
+                    @include surface(4);
+                }
+            }
+            &:nth-child(odd) {
+                td,
+                th {
+                    @include surface(2);
+                }
+            }
+
+            td,
+            th {
+                border: 0;
+                padding: $spacing-sm;
+
+                &.submissionstatussubmitted, &.earlysubmission  {
+                    background-color: $bg-success;
+                    color: $fg-on-success;
+                }
+            }
+
+            &:first-child {
+                th {
+                    border-top-left-radius: $border-radius;
+                }
+                td {
+                    border-top-right-radius: $border-radius;
+                }
+            }
+
+            &:last-child {
+                th {
+                    border-bottom-left-radius: $border-radius;
+                }
+                td {
+                    border-bottom-right-radius: $border-radius;
+                }
+            }
+        }
+    }
+
+    a.expandsummaryicon {
+        &:focus, &:active, &:active:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
+
+/* ---- Assignment submission ----- */
+
+#page-mod-assign-editsubmission {
+    label[for="id_submissionstatement"] {
+        color: $fg-on-surface;
+        font-weight: 500;
+    }
+
+    #id_cancel{
+        @include text-button($fg-high-emphasis, $fg-on-surface);
     }
 }

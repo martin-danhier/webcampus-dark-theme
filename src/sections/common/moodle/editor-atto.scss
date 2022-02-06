@@ -1,0 +1,102 @@
+/* ----- Editor ATTO ----- */
+
+.editor_atto_wrap .editor_atto {
+    @include elevation(1);
+    border-radius: $border-radius;
+    border-bottom-right-radius: 0;
+
+    // Content
+    .editor_atto_content_wrap {
+        color: $fg-on-surface;
+        border-bottom-left-radius: $border-radius;
+        background-color: $bg-field-focus;
+        border: 0;
+
+        .form-control {
+            color: inherit;
+            border: inherit;
+            border-bottom-left-radius: inherit;
+
+            padding: $spacing-s;
+            background-color: $bg-field;
+            caret-color: var(--bg-primary-light);
+
+            transition: background-color 0.15s ease-in-out;
+            will-change: background-color;
+
+            &:focus,
+            &:active,
+            &:focus:active {
+                outline: none;
+                box-shadow: none;
+            }
+
+            &:focus {
+                background-color: $bg-field-focus;
+            }
+        }
+    }
+
+    // Toolbar
+    .editor_atto_toolbar {
+        @include surface(24);
+
+        border: 0;
+        border-bottom: 1px solid $bg-divider;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        .atto_group:not([hidden]) {
+            border-color: $bg-divider;
+            border-radius: 4px;
+
+            height: fit-content;
+            @include flex-center();
+            flex-direction: row;
+            width: fit-content;
+            background: inherit;
+
+            button:first-child {
+                border-top-left-radius: 4px;
+                border-bottom-left-radius: 4px;
+            }
+            button:last-child {
+                border-top-right-radius: 4px;
+                border-bottom-right-radius: 4px;
+            }
+
+            button {
+                @include flex-center();
+                flex-direction: row;
+                background: $bg-field;
+                border-color: $bg-divider;
+                
+                transition: background-color 0.15s ease-in-out;
+                will-change: background-color;
+
+                &.atto_accessibilityhelper_button i {
+                    height: fit-content;
+                }
+
+                &:hover {
+                    background: $bg-field-hover;
+                }
+                &:focus {
+                    background: $bg-field-focus;
+                }
+            }
+
+            .editor_atto_menu_icon {
+                height: 20px;
+            }
+        }
+    }
+
+    .atto_info {
+        @include surface(24);
+    }
+}

@@ -23,9 +23,12 @@
 }
 
 // Table
-.discussion-list {
+.discussion-list,
+.choicegroups,
+#overview-grade {
     background-color: inherit;
     @include elevation(1);
+    color: $fg-on-surface;
 
     // Setup the border to support radius
     border-collapse: separate;
@@ -33,22 +36,15 @@
     border-radius: $border-radius;
 
     // Default style for table
-    thead th {
+    th {
         // Colors
         background-color: $bg-surface-12dp;
-
-        // Align
-        vertical-align: middle;
+        text-align: center;
 
         // Text
         a {
-            color: $fg-on-surface;
-            font-weight: 500;
-            &:active,
-            &:focus,
-            &:focus:active {
-                color: $fg-on-surface;
-            }
+            @include text-button(var(--bg-primary-light), var(--bg-primary-hover), false);
+            width: 100%;
         }
 
         // Borders
@@ -62,6 +58,7 @@
             border-top-right-radius: $border-radius;
         }
     }
+
     tbody {
         td,
         th,
@@ -135,14 +132,15 @@
         @include surface(4);
         border-radius: $border-radius;
         border: 1px solid $bg-surface-04dp !important;
-        &:focus-visible, &:focus {
+        &:focus-visible,
+        &:focus {
             border: inherit !important;
         }
     }
     :target > .forumpost {
         border-color: var(--bg-primary-light) !important;
         &:before {
-            display: none
+            display: none;
         }
     }
 
@@ -154,6 +152,11 @@
     }
 }
 
-#page-mod-forum-discuss {
-    
+// Grades
+
+#overview-grade {
+    @include elevation(1);
+    td.cell.c1 {
+        text-align: center;
+    }
 }
