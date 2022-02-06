@@ -146,6 +146,10 @@ domain("auth.unamur.be") {
         margin-right: .50rem !important;
     }
     
+    #paging-control-limit-container-1>.mr-1 { /* Space between "Show" and the number of courses to show on the overview page */
+        margin-right: .75rem !important;
+    }
+    
     /* Messages */
     .message-app {
         background-color: #262626;
@@ -1856,12 +1860,16 @@ domain("auth.unamur.be") {
         border-radius: 15px;
         color: #5fd0c6;
     }
+    
+    #nav-drawer .list-group ul li:not(:last-child) { 
+        margin-bottom: .2rem;  
+    }
+    
     #nav-drawer>.list-group {
         margin-top: .5rem;
-    }
-    #nav-drawer>.list-group, #nav-drawer .list-group ul li a.list-group-item.active {
-        margin-left: -.1rem
-    }
+        margin-left: -.1rem;
+        margin-right: .1rem;
+    }    
 
     /* =========== */
     /* Evaluations */
