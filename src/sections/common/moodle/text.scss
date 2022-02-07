@@ -60,13 +60,13 @@ a.dimmed_text:visited,
 // Specific styles for custom texts (e.g when a page is designed by the editor and it hardcodes an ugly color);
 
 span, em, p, i {
-    &[style*="color: rgb(68, 68, 68)"], &[style*="color: rgb(51, 51, 51)"] {
+    &[style*='color: rgb(68, 68, 68)'], &[style*='color: rgb(51, 51, 51)'] {
         &, span {
             color: $fg-medium-emphasis !important;
         }
     }
 }
 
-h3[style*="color: rgb(51, 51, 51)"] {
+h3[style*='color: rgb(51, 51, 51)'] {
     color: $fg-on-surface !important;
 }

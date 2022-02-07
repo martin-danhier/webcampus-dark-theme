@@ -6,11 +6,12 @@
     border-radius: $border-radius;
     border: none;
 
-    .btn.btn-secondary[data-action="cancel"] {
+    .btn.btn-secondary[data-action='cancel'] {
         @include outlined-button($fg-on-surface, true);
     }
 
-    .modal-header, .modal-footer {
+    .modal-header,
+    .modal-footer {
         border-color: $bg-divider;
     }
 
@@ -45,15 +46,15 @@
                     border: 0;
                 }
             }
+        }
 
-            // Activities
-            .activitylinks .list-group .list-group-item {
-                border: 0;
-                border-radius: $border-radius;
+        // Activities
+        .activitylinks .list-group-item {
+            border: 0;
+            border-radius: $border-radius;
 
-                &:hover {
-                    background-color: $bg-field-hover;
-                }
+            &:hover {
+                background-color: $bg-field-hover;
             }
         }
     }
@@ -63,6 +64,7 @@
 button.close {
     @include flat-icon-button($bg-field-hover);
     color: $fg-on-surface;
+
     &:hover {
         color: inherit;
     }

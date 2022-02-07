@@ -64,7 +64,7 @@
 }
 
 // List appearance
-.block_myoverview [data-region="courses-view"] .list-group .list-group-item {
+.block_myoverview [data-region='courses-view'] .list-group .list-group-item {
     margin-top: $spacing-xs;
     margin-bottom: $spacing-xs;
 }
@@ -78,7 +78,7 @@
 
 // ----- Alerts -----
 
-.bg-white[role="alert"] {
+.bg-white[role='alert'] {
     background-color: $bg-surface-16dp !important;
     @include elevation(16);
     border-radius: $border-radius;
@@ -91,7 +91,7 @@
     .btn.btn-primary {
         @include raised-button(var(--bg-primary), var(--bg-primary-hover), var(--fg-on-primary));
 
-        &[data-action="confirm-delete-selected-messages"] {
+        &[data-action='confirm-delete-selected-messages'] {
             @include raised-button($bg-error, $bg-error-hover, $fg-on-error);
         }
     }
@@ -173,7 +173,7 @@
 
                 border-left: 5px solid var(--bg-primary);
 
-                &:before {
+                &::before {
                     display: none;
                 }
                 // Title
@@ -205,6 +205,7 @@
                 // Title
                 h3.sectionname {
                     border-top: 0 !important;
+
                     a {
                         color: $fg-field-disabled;
                         cursor: not-allowed;
@@ -215,9 +216,9 @@
                     }
 
                     // Icon
-                    &:before {
-                        content: "";
-                        background-image: url("https://api.iconify.design/fluent/lock-closed-32-filled.svg");
+                    &::before {
+                        content: '';
+                        background-image: url('https://api.iconify.design/fluent/lock-closed-32-filled.svg');
                         background-size: contain;
                         background-repeat: no-repeat;
                         background-position: center;
@@ -248,6 +249,7 @@
         margin-top: $spacing-s;
         padding: $spacing-s;
     }
+
     #region-main {
         padding: $spacing-m;
     }
@@ -260,6 +262,7 @@
         margin-top: $spacing-s;
         padding: $spacing-s;
     }
+
     .resourcedetails {
         color: $fg-high-emphasis;
     }
@@ -284,6 +287,7 @@
                     @include surface(4);
                 }
             }
+
             &:nth-child(odd) {
                 td,
                 th {
@@ -296,7 +300,7 @@
                 border: 0;
                 padding: $spacing-sm;
 
-                &.submissionstatussubmitted, &.earlysubmission  {
+                &.submissionstatussubmitted, &.earlysubmission {
                     background-color: $bg-success;
                     color: $fg-on-success;
                 }
@@ -306,6 +310,7 @@
                 th {
                     border-top-left-radius: $border-radius;
                 }
+
                 td {
                     border-top-right-radius: $border-radius;
                 }
@@ -315,6 +320,7 @@
                 th {
                     border-bottom-left-radius: $border-radius;
                 }
+
                 td {
                     border-bottom-right-radius: $border-radius;
                 }
@@ -333,12 +339,12 @@
 /* ---- Assignment submission ----- */
 
 #page-mod-assign-editsubmission {
-    label[for="id_submissionstatement"] {
+    label[for='id_submissionstatement'] {
         color: $fg-on-surface;
         font-weight: 500;
     }
 
-    #id_cancel{
+    #id_cancel {
         @include text-button($fg-high-emphasis, $fg-on-surface);
     }
 }

@@ -2,13 +2,14 @@
 
 #page-site-index #page-header .logo img {
     // Use a lighter logo
-    content: url("https://ojs.uclouvain.be/public/logo_neg.png");
+    content: url('https://ojs.uclouvain.be/public/logo_neg.png');
 }
 
 // Dashboard card loaders
 #page-my-index .block_recentlyaccessedcourses {
-    [data-region="loading-placeholder"] {
+    [data-region='loading-placeholder'] {
         margin-top: 36.5px;
+
         .card-deck {
             height: auto !important;
 

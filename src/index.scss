@@ -1,5 +1,5 @@
-@import "constants.scss";
-@import "mixins.scss";
+@import 'constants';
+@import 'mixins';
 
 /* ==UserStyle==
 @name           Moodle Dark Theme
@@ -48,46 +48,43 @@ SOFTWARE.
 
 // ============= Global imports =============
 
-@-moz-document url-prefix("https://moodle.uclouvain.be/"),
-               url-prefix("https://webcampus.unamur.be/"),
-               url-prefix("https://idp.uclouvain.be/idp/profile/SAML2/Redirect/SSO")
-{
+@-moz-document url-prefix('https://moodle.uclouvain.be/'),
+    url-prefix('https://webcampus.unamur.be/'),
+    url-prefix('https://idp.uclouvain.be/idp/profile/SAML2/Redirect/SSO') {
     // -> this will return a deprecation warning, but it is normal
     // That is how stylus works
 
     /* Global imports */
 
     // Import material fonts
-    @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
-    @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+    @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
     // Import default color theme and root style
-    @import "default-theme.scss";
+    @import 'default-theme';
 }
 
 // ============= Site-specific style =============
 
-@-moz-document url-prefix("https://webcampus.unamur.be/")
-{
+@-moz-document url-prefix('https://webcampus.unamur.be/') {
     // -> this will return a deprecation warning, but it is normal
     // That is how stylus works
 
-    @import "sections/webcampus.scss";
+    @import 'sections/webcampus';
 }
 
-@import "sections/uclouvain/index.scss";
+@import 'sections/uclouvain/index';
 
 // ============= Global style =============
 
 // The global style is applied last because all of the site-specific styles aim to bring them to a common base
 // on top of which the custom style can be applied
 
-@-moz-document url-prefix("https://moodle.uclouvain.be/"), url-prefix("https://webcampus.unamur.be/")
-{
+@-moz-document url-prefix('https://moodle.uclouvain.be/'), url-prefix('https://webcampus.unamur.be/') {
     // -> this will return a deprecation warning, but it is normal
     // That is how stylus works
 
     /* Global changes */
 
-    @import "sections/common/index.scss";
+    @import 'sections/common/index';
 }

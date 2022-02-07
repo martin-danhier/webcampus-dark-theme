@@ -41,8 +41,8 @@ SOFTWARE.
 
 */
 @-moz-document url-prefix("https://moodle.uclouvain.be/"),
-               url-prefix("https://webcampus.unamur.be/"),
-               url-prefix("https://idp.uclouvain.be/idp/profile/SAML2/Redirect/SSO") {
+    url-prefix("https://webcampus.unamur.be/"),
+    url-prefix("https://idp.uclouvain.be/idp/profile/SAML2/Redirect/SSO") {
   /* Global imports */
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
   @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
@@ -79,10 +79,10 @@ SOFTWARE.
     content: "Webcampus";
     font-size: 18px;
     font-size: 1.171875rem;
-    line-height: inherit;
-    white-space: nowrap;
     font-weight: 400;
+    line-height: inherit;
     pointer-events: none;
+    white-space: nowrap;
   }
   ul.navbar-nav.d-none.d-md-flex::after:hover {
     text-decoration: underline;
@@ -90,55 +90,54 @@ SOFTWARE.
 
   header.fixed-top.brand-banner {
     background: unset;
-    z-index: 2000;
     height: 50px;
     left: 4.25rem;
     width: 6.4rem;
+    z-index: 2000;
   }
   header.fixed-top.brand-banner .right-logo {
     visibility: hidden;
   }
   header.fixed-top.brand-banner .left-logo {
-    display: block;
-    position: static;
-    height: inherit;
     box-shadow: unset;
+    display: block;
+    height: inherit;
+    position: static;
   }
   header.fixed-top.brand-banner .left-logo img {
     visibility: hidden;
   }
 
   #blocks-column-toggle {
-    top: 0px;
     margin-top: 75px;
+    top: 0;
   }
 
-  #page,
-#nav-drawer,
+  #nav-drawer,
 #blocks-column,
 .message-app.drawer {
-    top: 0px;
     margin-top: 60px !important;
+    top: 0;
   }
 
   .navbar-receptic {
-    top: 0;
     background: unset;
+    top: 0;
   }
 
   .block-myoverview div[data-region=courses-view] ul.list-group {
     display: flex;
     flex-flow: row wrap;
-    margin-right: -0.25rem;
     margin-left: -0.25rem;
+    margin-right: -0.25rem;
   }
   .block-myoverview div[data-region=courses-view] ul.list-group .card.dashboard-card {
-    margin-bottom: 0.5rem;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
     flex-basis: auto;
     flex-grow: 0;
     flex-shrink: 0;
+    margin-bottom: 0.5rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
     width: calc(33.33% - 0.5rem);
   }
 }
@@ -211,7 +210,7 @@ SOFTWARE.
 
   .list-help-item a {
     color: var(--bg-secondary-light);
-    font-weight: normal;
+    font-weight: 400;
   }
   .list-help-item a:hover, .list-help-item a:active, .list-help-item a:focus, .list-help-item a:focus:active {
     color: var(--bg-secondary-hover);
@@ -223,11 +222,11 @@ SOFTWARE.
     visibility: hidden;
     width: 0;
   }
-  .list-help-item a .item-marker:before {
+  .list-help-item a .item-marker::before {
     font-family: "Material Icons";
     font-size: 16px;
     line-height: 16px;
-    font-weight: normal;
+    font-weight: 400;
     vertical-align: text-bottom;
     padding: 0;
     margin: 0;
@@ -275,11 +274,11 @@ footer,
     font-weight: 500;
     color: #c95066;
   }
-  form .form-element.form-error:before {
+  form .form-element.form-error::before {
     font-family: "Material Icons";
     font-size: 16px;
     line-height: 16px;
-    font-weight: normal;
+    font-weight: 400;
     vertical-align: text-bottom;
     padding: 0;
     margin: 0;
@@ -357,7 +356,7 @@ footer,
     transition: box-shadow 0.7s;
   }
   .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden) {
-    border: none;
+    border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
@@ -370,7 +369,7 @@ footer,
     justify-content: center;
     line-height: normal;
     min-width: 64px;
-    padding: 0px 16px;
+    padding: 0 16px;
     min-height: 36px;
     user-select: none;
     vertical-align: middle;
@@ -385,7 +384,7 @@ footer,
   .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden) i, .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden).fa {
     margin-right: 8px;
   }
-  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):before {
+  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden)::before {
     content: "";
     display: block;
     position: absolute;
@@ -403,7 +402,7 @@ footer,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):active:before, .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):focus:before {
+  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):active::before, .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -669,7 +668,7 @@ img[src*="/theme/image.php/"][src*="/mod_assign/"][src$="/icon"] {
     width: 20px;
     height: 20px;
   }
-  i.fa:before {
+  i.fa::before {
     width: 20px !important;
     height: 20px !important;
     display: flex !important;
@@ -727,120 +726,120 @@ img[src*="/theme/image.php/"][src*="/mod_assign/"][src$="/icon"] {
     height: 20px !important;
   }
 
-  i.fa.fa-bars:before {
+  i.fa.fa-bars::before {
     content: url("https://api.iconify.design/fluent/navigation-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-tachometer:before,
-i.fa.fa-dashboard:before {
+  i.fa.fa-tachometer::before,
+i.fa.fa-dashboard::before {
     content: url("https://api.iconify.design/fluent/board-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-home:before {
+  i.fa.fa-home::before {
     content: url("https://api.iconify.design/fluent/home-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-calendar:before {
+  i.fa.fa-calendar::before {
     content: url("https://api.iconify.design/fluent/calendar-20-filled.svg?color=white") !important;
   }
 
-  body.drawer-open-left [data-region=drawer] [data-parent-key=myhome] .media-left i:not(.fa-home):before {
+  body.drawer-open-left [data-region=drawer] [data-parent-key=myhome] .media-left i:not(.fa-home)::before {
     content: url("https://api.iconify.design/fluent/open-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-bell:before {
+  i.fa.fa-bell::before {
     content: url("https://api.iconify.design/fluent/alert-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-comment:before {
+  i.fa.fa-comment::before {
     content: url("https://api.iconify.design/fluent/chat-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-question-circle:before {
+  i.fa.fa-question-circle::before {
     content: url("https://api.iconify.design/fluent/question-circle-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-chevron-left:before {
+  i.fa.fa-chevron-left::before {
     content: url("https://api.iconify.design/fluent/chevron-left-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-chevron-right:before {
+  i.fa.fa-chevron-right::before {
     content: url("https://api.iconify.design/fluent/chevron-right-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-filter:before {
+  i.fa.fa-filter::before {
     content: url("https://api.iconify.design/fluent/filter-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-sort-amount-asc:before {
+  i.fa.fa-sort-amount-asc::before {
     content: url("https://api.iconify.design/fluent/arrow-sort-down-lines-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-th:before {
+  i.fa.fa-th::before {
     content: url("https://api.iconify.design/fluent/table-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-ellipsis-h:before {
+  i.fa.fa-ellipsis-h::before {
     content: url("https://api.iconify.design/fluent/more-horizontal-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-ellipsis-v:before {
+  i.fa.fa-ellipsis-v::before {
     content: url("https://api.iconify.design/fluent/more-vertical-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-clock-o:before {
+  i.fa.fa-clock-o::before {
     content: url("https://api.iconify.design/fluent/clock-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-chevron-circle-up:before {
+  i.fa.fa-chevron-circle-up::before {
     content: url("https://api.iconify.design/fluent/chevron-up-20-filled.svg?color=white") !important;
   }
 
-  #back-to-top i.fa.fa-chevron-circle-up:before {
+  #back-to-top i.fa.fa-chevron-circle-up::before {
     content: url("https://api.iconify.design/fluent/chevron-up-20-filled.svg?color=black") !important;
   }
 
-  i.fa.fa-graduation-cap:before {
+  i.fa.fa-graduation-cap::before {
     content: url("https://api.iconify.design/fluent/hat-graduation-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-users:before {
+  i.fa.fa-users::before {
     content: url("https://api.iconify.design/fluent/people-community-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-folder-o:before {
+  i.fa.fa-folder-o::before {
     content: url("https://api.iconify.design/fluent/folder-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-cogs:before {
+  i.fa.fa-cogs::before {
     content: url("https://api.iconify.design/fluent/settings-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-envelope:before {
+  i.fa.fa-envelope::before {
     content: url("https://api.iconify.design/fluent/mail-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-check:before {
+  i.fa.fa-check::before {
     content: url("https://api.iconify.design/fluent/checkmark-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-cog:before {
+  i.fa.fa-cog::before {
     content: url("https://api.iconify.design/fluent/settings-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-user:before {
+  i.fa.fa-user::before {
     content: url("https://api.iconify.design/fluent/people-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-smile-o:before {
+  i.fa.fa-smile-o::before {
     content: url("https://api.iconify.design/fluent/emoji-add-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-paper-plane:before {
+  i.fa.fa-paper-plane::before {
     content: url("https://api.iconify.design/fluent/send-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-trash:before {
+  i.fa.fa-trash::before {
     content: url("https://api.iconify.design/fluent/delete-20-filled.svg?color=white") !important;
   }
 
@@ -848,101 +847,101 @@ i.fa.fa-dashboard:before {
     width: 24px;
     height: 24px;
   }
-  .icon-size-4 i.icon.fa.fa-trash:before {
+  .icon-size-4 i.icon.fa.fa-trash::before {
     width: 24px !important;
     height: 24px !important;
     content: url("https://api.iconify.design/fluent/delete-24-filled.svg?color=white") !important;
   }
 
-  i.fa-plus:before {
+  i.fa-plus::before {
     content: url("https://api.iconify.design/fluent/add-20-filled.svg?color=white") !important;
   }
 
-  i.fa-minus:before {
+  i.fa-minus::before {
     content: url("https://api.iconify.design/fluent/subtract-20-filled.svg?color=white") !important;
   }
 
-  .small i.fa.fa-check-circle:before {
+  .small i.fa.fa-check-circle::before {
     content: url("https://api.iconify.design/fluent/checkmark-circle-20-filled.svg?color=white") !important;
   }
 
-  .small i.fa.fa-circle-o:before {
+  .small i.fa.fa-circle-o::before {
     content: url("https://api.iconify.design/fluent/circle-20-regular.svg?color=white") !important;
   }
 
-  i.fa.fa-bold:before {
+  i.fa.fa-bold::before {
     content: url("https://api.iconify.design/fluent/text-bold-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-italic:before {
+  i.fa.fa-italic::before {
     content: url("https://api.iconify.design/fluent/text-italic-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-underline:before {
+  i.fa.fa-underline::before {
     content: url("https://api.iconify.design/fluent/text-underline-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-strikethrough:before {
+  i.fa.fa-strikethrough::before {
     content: url("https://api.iconify.design/fluent/text-strikethrough-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-subscript:before {
+  i.fa.fa-subscript::before {
     content: url("https://api.iconify.design/fluent/text-subscript-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-superscript:before {
+  i.fa.fa-superscript::before {
     content: url("https://api.iconify.design/fluent/text-superscript-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-list-ul:before {
+  i.fa.fa-list-ul::before {
     content: url("https://api.iconify.design/fluent/text-bullet-list-ltr-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-list-ol:before {
+  i.fa.fa-list-ol::before {
     content: url("https://api.iconify.design/fluent/text-number-list-ltr-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-align-left:before {
+  i.fa.fa-align-left::before {
     content: url("https://api.iconify.design/fluent/text-align-left-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-align-center:before {
+  i.fa.fa-align-center::before {
     content: url("https://api.iconify.design/fluent/text-align-center-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-align-right:before {
+  i.fa.fa-align-right::before {
     content: url("https://api.iconify.design/fluent/text-align-right-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-align-justify:before {
+  i.fa.fa-align-justify::before {
     content: url("https://api.iconify.design/fluent/text-align-justify-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-indent:before {
+  i.fa.fa-indent::before {
     content: url("https://api.iconify.design/fluent/text-indent-increase-ltr-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-outdent:before {
+  i.fa.fa-outdent::before {
     content: url("https://api.iconify.design/fluent/text-indent-decrease-ltr-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-link:before {
+  i.fa.fa-link::before {
     content: url("https://api.iconify.design/fluent/link-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-chain-broken:before {
+  i.fa.fa-chain-broken::before {
     content: url("https://api.iconify.design/fluent/link-dismiss-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-picture-o:before {
+  i.fa.fa-picture-o::before {
     content: url("https://api.iconify.design/fluent/image-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-paint-brush:before {
+  i.fa.fa-paint-brush::before {
     content: url("https://api.iconify.design/fluent/text-color-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-lightbulb-o:before {
+  i.fa.fa-lightbulb-o::before {
     content: url("https://api.iconify.design/fluent/color-line-20-filled.svg?color=white") !important;
   }
 
@@ -950,81 +949,81 @@ i.fa.fa-dashboard:before {
     width: 16px;
     height: 16px;
   }
-  .editor_atto_toolbar i.fa.fa-caret-down:before {
+  .editor_atto_toolbar i.fa.fa-caret-down::before {
     width: 16px !important;
     height: 16px !important;
     content: url("https://api.iconify.design/fluent/caret-down-16-filled.svg?color=%23c6c6c6") !important;
   }
 
-  i.fa.fa-tint:before {
+  i.fa.fa-tint::before {
     content: url("https://api.iconify.design/fluent/color-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-font:before {
+  i.fa.fa-font::before {
     content: url("https://api.iconify.design/fluent/text-font-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-undo:before {
+  i.fa.fa-undo::before {
     content: url("https://api.iconify.design/fluent/arrow-undo-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-repeat:before {
+  i.fa.fa-repeat::before {
     content: url("https://api.iconify.design/fluent/arrow-redo-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-search:before {
+  i.fa.fa-search::before {
     content: url("https://api.iconify.design/fluent/search-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-circle-o-notch:before {
+  i.fa.fa-circle-o-notch::before {
     content: url("https://api.iconify.design/fluent/spinner-ios-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-times:before {
+  i.fa.fa-times::before {
     content: url("https://api.iconify.design/fluent/close-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-level-down:before {
+  i.fa.fa-level-down::before {
     content: url("https://api.iconify.design/fluent/arrow-curve-down-left-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-files-o:before {
+  i.fa.fa-files-o::before {
     content: url("https://api.iconify.design/fluent/document-multiple-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-microphone:before {
+  i.fa.fa-microphone::before {
     content: url("https://api.iconify.design/fluent/mic-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-calculator:before {
+  i.fa.fa-calculator::before {
     content: url("https://api.iconify.design/fluent/calculator-20-filled.svg?color=white") !important;
   }
 
-  .editor_atto_toolbar i.fa.fa-pencil-square-o:before {
+  .editor_atto_toolbar i.fa.fa-pencil-square-o::before {
     content: url("https://api.iconify.design/fluent/translate-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-table:before {
+  i.fa.fa-table::before {
     content: url("https://api.iconify.design/fluent/table-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-i-cursor:before {
+  i.fa.fa-i-cursor::before {
     content: url("https://api.iconify.design/fluent/text-clear-formatting-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-code:before {
+  i.fa.fa-code::before {
     content: url("https://api.iconify.design/fluent/code-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-arrows-alt:before {
+  i.fa.fa-arrows-alt::before {
     content: url("https://api.iconify.design/fluent/arrow-expand-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-universal-access:before {
+  i.fa.fa-universal-access::before {
     content: url("https://api.iconify.design/fluent/accessibility-20-filled.svg?color=white") !important;
   }
 
-  i.fa.fa-braille:before {
+  i.fa.fa-braille::before {
     content: url("https://api.iconify.design/whh/braillen.svg?color=white&width=16&height=16");
     width: 16px !important;
     height: 16px !important;
@@ -1036,7 +1035,7 @@ i.fa.fa-dashboard:before {
     width: 16px;
     height: 16px;
   }
-  i.fa.fa-star:before {
+  i.fa.fa-star::before {
     width: 16px !important;
     height: 16px !important;
     content: url("https://api.iconify.design/fluent/star-16-filled.svg?color=%23ffd600") !important;
@@ -1056,7 +1055,7 @@ i.fa.fa-dashboard:before {
 .block .block-cards a.coursename,
 a.aalink span {
     color: var(--bg-secondary-light);
-    font-weight: normal;
+    font-weight: 400;
   }
   a:hover, a:active, a:focus, a:focus:active,
 .block .block-cards a.coursename:hover,
@@ -1170,9 +1169,9 @@ a.dimmed_text:visited,
     justify-content: center;
     align-items: center;
   }
-  .dashboard-card .dropdown .btn.btn-link.coursemenubtn:before,
-.course-listitem.list-group-item .dropdown .btn.btn-link.coursemenubtn:before,
-.block .block-cards .course-summaryitem .dropdown .btn.btn-link.coursemenubtn:before {
+  .dashboard-card .dropdown .btn.btn-link.coursemenubtn::before,
+.course-listitem.list-group-item .dropdown .btn.btn-link.coursemenubtn::before,
+.block .block-cards .course-summaryitem .dropdown .btn.btn-link.coursemenubtn::before {
     content: "";
     display: block;
     position: absolute;
@@ -1190,11 +1189,11 @@ a.dimmed_text:visited,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  .dashboard-card .dropdown .btn.btn-link.coursemenubtn:active:before, .dashboard-card .dropdown .btn.btn-link.coursemenubtn:focus:before,
-.course-listitem.list-group-item .dropdown .btn.btn-link.coursemenubtn:active:before,
-.course-listitem.list-group-item .dropdown .btn.btn-link.coursemenubtn:focus:before,
-.block .block-cards .course-summaryitem .dropdown .btn.btn-link.coursemenubtn:active:before,
-.block .block-cards .course-summaryitem .dropdown .btn.btn-link.coursemenubtn:focus:before {
+  .dashboard-card .dropdown .btn.btn-link.coursemenubtn:active::before, .dashboard-card .dropdown .btn.btn-link.coursemenubtn:focus::before,
+.course-listitem.list-group-item .dropdown .btn.btn-link.coursemenubtn:active::before,
+.course-listitem.list-group-item .dropdown .btn.btn-link.coursemenubtn:focus::before,
+.block .block-cards .course-summaryitem .dropdown .btn.btn-link.coursemenubtn:active::before,
+.block .block-cards .course-summaryitem .dropdown .btn.btn-link.coursemenubtn:focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -1290,7 +1289,7 @@ a.dimmed_text:visited,
     transition: box-shadow 0.7s;
   }
   .bg-white[role=alert] .btn.btn-primary:not(.hidden):not(.hidden) {
-    border: none;
+    border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
@@ -1303,7 +1302,7 @@ a.dimmed_text:visited,
     justify-content: center;
     line-height: normal;
     min-width: 64px;
-    padding: 0px 16px;
+    padding: 0 16px;
     min-height: 36px;
     user-select: none;
     vertical-align: middle;
@@ -1318,7 +1317,7 @@ a.dimmed_text:visited,
   .bg-white[role=alert] .btn.btn-primary:not(.hidden):not(.hidden) i, .bg-white[role=alert] .btn.btn-primary:not(.hidden):not(.hidden).fa {
     margin-right: 8px;
   }
-  .bg-white[role=alert] .btn.btn-primary:not(.hidden):not(.hidden):before {
+  .bg-white[role=alert] .btn.btn-primary:not(.hidden):not(.hidden)::before {
     content: "";
     display: block;
     position: absolute;
@@ -1336,7 +1335,7 @@ a.dimmed_text:visited,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  .bg-white[role=alert] .btn.btn-primary:not(.hidden):not(.hidden):active:before, .bg-white[role=alert] .btn.btn-primary:not(.hidden):not(.hidden):focus:before {
+  .bg-white[role=alert] .btn.btn-primary:not(.hidden):not(.hidden):active::before, .bg-white[role=alert] .btn.btn-primary:not(.hidden):not(.hidden):focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -1364,7 +1363,7 @@ a.dimmed_text:visited,
     transition: box-shadow 0.7s;
   }
   .bg-white[role=alert] .btn.btn-primary[data-action=confirm-delete-selected-messages]:not(.hidden):not(.hidden) {
-    border: none;
+    border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
@@ -1377,7 +1376,7 @@ a.dimmed_text:visited,
     justify-content: center;
     line-height: normal;
     min-width: 64px;
-    padding: 0px 16px;
+    padding: 0 16px;
     min-height: 36px;
     user-select: none;
     vertical-align: middle;
@@ -1392,7 +1391,7 @@ a.dimmed_text:visited,
   .bg-white[role=alert] .btn.btn-primary[data-action=confirm-delete-selected-messages]:not(.hidden):not(.hidden) i, .bg-white[role=alert] .btn.btn-primary[data-action=confirm-delete-selected-messages]:not(.hidden):not(.hidden).fa {
     margin-right: 8px;
   }
-  .bg-white[role=alert] .btn.btn-primary[data-action=confirm-delete-selected-messages]:not(.hidden):not(.hidden):before {
+  .bg-white[role=alert] .btn.btn-primary[data-action=confirm-delete-selected-messages]:not(.hidden):not(.hidden)::before {
     content: "";
     display: block;
     position: absolute;
@@ -1410,7 +1409,7 @@ a.dimmed_text:visited,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  .bg-white[role=alert] .btn.btn-primary[data-action=confirm-delete-selected-messages]:not(.hidden):not(.hidden):active:before, .bg-white[role=alert] .btn.btn-primary[data-action=confirm-delete-selected-messages]:not(.hidden):not(.hidden):focus:before {
+  .bg-white[role=alert] .btn.btn-primary[data-action=confirm-delete-selected-messages]:not(.hidden):not(.hidden):active::before, .bg-white[role=alert] .btn.btn-primary[data-action=confirm-delete-selected-messages]:not(.hidden):not(.hidden):focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -1434,7 +1433,7 @@ a.dimmed_text:visited,
     transition: box-shadow 0.6s;
   }
   .bg-white[role=alert] .btn.btn-secondary:not(.hidden) {
-    border: none;
+    border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
@@ -1447,7 +1446,7 @@ a.dimmed_text:visited,
     justify-content: center;
     line-height: normal;
     min-width: 64px;
-    padding: 0px 16px;
+    padding: 0 16px;
     min-height: 36px;
     user-select: none;
     vertical-align: middle;
@@ -1462,7 +1461,7 @@ a.dimmed_text:visited,
   .bg-white[role=alert] .btn.btn-secondary:not(.hidden) i, .bg-white[role=alert] .btn.btn-secondary:not(.hidden).fa {
     margin-right: 8px;
   }
-  .bg-white[role=alert] .btn.btn-secondary:not(.hidden):before {
+  .bg-white[role=alert] .btn.btn-secondary:not(.hidden)::before {
     content: "";
     display: block;
     position: absolute;
@@ -1480,7 +1479,7 @@ a.dimmed_text:visited,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  .bg-white[role=alert] .btn.btn-secondary:not(.hidden):active:before, .bg-white[role=alert] .btn.btn-secondary:not(.hidden):focus:before {
+  .bg-white[role=alert] .btn.btn-secondary:not(.hidden):active::before, .bg-white[role=alert] .btn.btn-secondary:not(.hidden):focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -1559,8 +1558,8 @@ a.dimmed_text:visited,
     border-bottom-right-radius: 10px;
     border-left: 5px solid var(--bg-primary);
   }
-  #page-course-view-topics .course-content .section.current:before,
-#page-course-view-weeks .course-content .section.current:before {
+  #page-course-view-topics .course-content .section.current::before,
+#page-course-view-weeks .course-content .section.current::before {
     display: none;
   }
   #page-course-view-topics .course-content .section.current .sectionname,
@@ -1597,8 +1596,8 @@ a.dimmed_text:visited,
 #page-course-view-weeks .course-content .section.hidden h3.sectionname a:hover {
     text-decoration: none;
   }
-  #page-course-view-topics .course-content .section.hidden h3.sectionname:before,
-#page-course-view-weeks .course-content .section.hidden h3.sectionname:before {
+  #page-course-view-topics .course-content .section.hidden h3.sectionname::before,
+#page-course-view-weeks .course-content .section.hidden h3.sectionname::before {
     content: "";
     background-image: url("https://api.iconify.design/fluent/lock-closed-32-filled.svg");
     background-size: contain;
@@ -1689,7 +1688,7 @@ a.dimmed_text:visited,
     font-weight: 500;
   }
   #page-mod-assign-editsubmission #id_cancel:not(.hidden) {
-    border: none;
+    border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
@@ -1702,7 +1701,7 @@ a.dimmed_text:visited,
     justify-content: center;
     line-height: normal;
     min-width: 64px;
-    padding: 0px 16px;
+    padding: 0 16px;
     min-height: 36px;
     user-select: none;
     vertical-align: middle;
@@ -1717,7 +1716,7 @@ a.dimmed_text:visited,
   #page-mod-assign-editsubmission #id_cancel:not(.hidden) i, #page-mod-assign-editsubmission #id_cancel:not(.hidden).fa {
     margin-right: 8px;
   }
-  #page-mod-assign-editsubmission #id_cancel:not(.hidden):before {
+  #page-mod-assign-editsubmission #id_cancel:not(.hidden)::before {
     content: "";
     display: block;
     position: absolute;
@@ -1735,7 +1734,7 @@ a.dimmed_text:visited,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  #page-mod-assign-editsubmission #id_cancel:not(.hidden):active:before, #page-mod-assign-editsubmission #id_cancel:not(.hidden):focus:before {
+  #page-mod-assign-editsubmission #id_cancel:not(.hidden):active::before, #page-mod-assign-editsubmission #id_cancel:not(.hidden):focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -1810,7 +1809,7 @@ a.dimmed_text:visited,
   }
   #data_adv_form tr td[colspan="4"] .btn.btn-secondary[name=resetadv]:not(.hidden):not(.hidden),
 #page-mod-data-edit form .generalbox tr td[colspan="4"] .btn.btn-secondary[name=resetadv]:not(.hidden):not(.hidden) {
-    border: none;
+    border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
@@ -1823,7 +1822,7 @@ a.dimmed_text:visited,
     justify-content: center;
     line-height: normal;
     min-width: 64px;
-    padding: 0px 16px;
+    padding: 0 16px;
     min-height: 36px;
     user-select: none;
     vertical-align: middle;
@@ -1956,7 +1955,7 @@ form.form-inline input[type=text]:read-only:hover,
     justify-content: center;
     align-items: center;
   }
-  .input-group-append .btn:before {
+  .input-group-append .btn::before {
     content: "";
     display: block;
     position: absolute;
@@ -1974,7 +1973,7 @@ form.form-inline input[type=text]:read-only:hover,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  .input-group-append .btn:active:before, .input-group-append .btn:focus:before {
+  .input-group-append .btn:active::before, .input-group-append .btn:focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -2018,7 +2017,7 @@ form.form-inline input[type=text]:read-only:hover,
     transition: box-shadow 0.7s;
   }
   .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden) {
-    border: none;
+    border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
@@ -2031,7 +2030,7 @@ form.form-inline input[type=text]:read-only:hover,
     justify-content: center;
     line-height: normal;
     min-width: 64px;
-    padding: 0px 16px;
+    padding: 0 16px;
     min-height: 36px;
     user-select: none;
     vertical-align: middle;
@@ -2046,7 +2045,7 @@ form.form-inline input[type=text]:read-only:hover,
   .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden) i, .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden).fa {
     margin-right: 8px;
   }
-  .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):before {
+  .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden)::before {
     content: "";
     display: block;
     position: absolute;
@@ -2064,7 +2063,7 @@ form.form-inline input[type=text]:read-only:hover,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):active:before, .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):focus:before {
+  .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):active::before, .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -2090,7 +2089,7 @@ form.form-inline input[type=text]:read-only:hover,
 
   button.btn.btn-secondary[type=submit]:not(.hidden),
 .datapreferences input.btn.btn-secondary[type=submit]:not(.hidden) {
-    border: none;
+    border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
@@ -2103,7 +2102,7 @@ form.form-inline input[type=text]:read-only:hover,
     justify-content: center;
     line-height: normal;
     min-width: 64px;
-    padding: 0px 16px;
+    padding: 0 16px;
     min-height: 36px;
     user-select: none;
     vertical-align: middle;
@@ -2124,8 +2123,8 @@ form.form-inline input[type=text]:read-only:hover,
 .datapreferences input.btn.btn-secondary[type=submit]:not(.hidden).fa {
     margin-right: 8px;
   }
-  button.btn.btn-secondary[type=submit]:not(.hidden):before,
-.datapreferences input.btn.btn-secondary[type=submit]:not(.hidden):before {
+  button.btn.btn-secondary[type=submit]:not(.hidden)::before,
+.datapreferences input.btn.btn-secondary[type=submit]:not(.hidden)::before {
     content: "";
     display: block;
     position: absolute;
@@ -2143,9 +2142,9 @@ form.form-inline input[type=text]:read-only:hover,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  button.btn.btn-secondary[type=submit]:not(.hidden):active:before, button.btn.btn-secondary[type=submit]:not(.hidden):focus:before,
-.datapreferences input.btn.btn-secondary[type=submit]:not(.hidden):active:before,
-.datapreferences input.btn.btn-secondary[type=submit]:not(.hidden):focus:before {
+  button.btn.btn-secondary[type=submit]:not(.hidden):active::before, button.btn.btn-secondary[type=submit]:not(.hidden):focus::before,
+.datapreferences input.btn.btn-secondary[type=submit]:not(.hidden):active::before,
+.datapreferences input.btn.btn-secondary[type=submit]:not(.hidden):focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -2184,7 +2183,7 @@ form.form-inline input[type=text]:read-only:hover,
     justify-content: center;
     align-items: center;
   }
-  .btn.btn-link.btn-icon:before {
+  .btn.btn-link.btn-icon::before {
     content: "";
     display: block;
     position: absolute;
@@ -2202,7 +2201,7 @@ form.form-inline input[type=text]:read-only:hover,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  .btn.btn-link.btn-icon:active:before, .btn.btn-link.btn-icon:focus:before {
+  .btn.btn-link.btn-icon:active::before, .btn.btn-link.btn-icon:focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -2244,7 +2243,7 @@ form.form-inline input[type=text]:read-only:hover,
   }
   .dropdown .dropdown-toggle.btn:not(.hidden):not(.hidden),
 .btn-group[data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden) {
-    border: none;
+    border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
@@ -2257,7 +2256,7 @@ form.form-inline input[type=text]:read-only:hover,
     justify-content: center;
     line-height: normal;
     min-width: 64px;
-    padding: 0px 16px;
+    padding: 0 16px;
     min-height: 36px;
     user-select: none;
     vertical-align: middle;
@@ -2295,8 +2294,8 @@ form.form-inline input[type=text]:read-only:hover,
     background-color: inherit;
     padding: 10px 15px;
   }
-  .dropdown .dropdown-menu .dropdown-item:before,
-.btn-group[data-region=view-selector] .dropdown-menu .dropdown-item:before {
+  .dropdown .dropdown-menu .dropdown-item::before,
+.btn-group[data-region=view-selector] .dropdown-menu .dropdown-item::before {
     display: none;
   }
   .dropdown .dropdown-menu .dropdown-item a,
@@ -2338,7 +2337,7 @@ select.custom-select.singleselect,
     color: #ffffff;
     box-sizing: border-box;
     overflow: hidden;
-    padding: 0px 2px;
+    padding: 0 2px;
     padding-right: 28px;
     height: 42px;
     border-radius: 4px 4px 0 0;
@@ -2522,9 +2521,9 @@ select.custom-select.singleselect:disabled:hover,
     padding-left: 26px;
     user-select: none;
   }
-  input[type=checkbox] + label:before {
+  input[type=checkbox] + label::before {
     position: absolute;
-    left: 0px;
+    left: 0;
     top: 2px;
     display: flex !important;
     justify-content: center;
@@ -2537,21 +2536,21 @@ select.custom-select.singleselect:disabled:hover,
     border-radius: 3.5px;
     background-color: #6e6e6e;
     content: "";
-    font: normal normal normal 10.5px "FontAwesome";
+    font: 400 normal normal 10.5px "FontAwesome";
     font-weight: 300;
     line-height: 16px;
     text-rendering: auto;
     text-align: center;
   }
-  input[type=checkbox] + label:hover:before {
+  input[type=checkbox] + label:hover::before {
     background-color: #808080;
   }
-  input[type=checkbox]:checked + label:before {
+  input[type=checkbox]:checked + label::before {
     content: "\f00c";
     color: var(--fg-on-primary);
     background-color: var(--bg-primary);
   }
-  input[type=checkbox]:checked + label:hover:before {
+  input[type=checkbox]:checked + label:hover::before {
     background-color: var(--bg-primary-hover);
   }
 
@@ -2605,7 +2604,7 @@ select.custom-select.singleselect:disabled:hover,
   }
   .activity-navigation #next-activity-link:not(.hidden),
 .activity-navigation #prev-activity-link:not(.hidden) {
-    border: none;
+    border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
@@ -2618,7 +2617,7 @@ select.custom-select.singleselect:disabled:hover,
     justify-content: center;
     line-height: normal;
     min-width: 64px;
-    padding: 0px 16px;
+    padding: 0 16px;
     min-height: 36px;
     user-select: none;
     vertical-align: middle;
@@ -2639,8 +2638,8 @@ select.custom-select.singleselect:disabled:hover,
 .activity-navigation #prev-activity-link:not(.hidden).fa {
     margin-right: 8px;
   }
-  .activity-navigation #next-activity-link:not(.hidden):before,
-.activity-navigation #prev-activity-link:not(.hidden):before {
+  .activity-navigation #next-activity-link:not(.hidden)::before,
+.activity-navigation #prev-activity-link:not(.hidden)::before {
     content: "";
     display: block;
     position: absolute;
@@ -2658,9 +2657,9 @@ select.custom-select.singleselect:disabled:hover,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  .activity-navigation #next-activity-link:not(.hidden):active:before, .activity-navigation #next-activity-link:not(.hidden):focus:before,
-.activity-navigation #prev-activity-link:not(.hidden):active:before,
-.activity-navigation #prev-activity-link:not(.hidden):focus:before {
+  .activity-navigation #next-activity-link:not(.hidden):active::before, .activity-navigation #next-activity-link:not(.hidden):focus::before,
+.activity-navigation #prev-activity-link:not(.hidden):active::before,
+.activity-navigation #prev-activity-link:not(.hidden):focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -2688,7 +2687,8 @@ select.custom-select.singleselect:disabled:hover,
     background-color: inherit;
   }
 
-  [data-fieldtype=textarea] textarea, .comment-ctrl textarea {
+  [data-fieldtype=textarea] textarea,
+.comment-ctrl textarea {
     background-color: #494949;
     color: #ffffff;
     box-sizing: border-box;
@@ -2709,11 +2709,14 @@ select.custom-select.singleselect:disabled:hover,
     transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-width 0.2s ease-in-out !important;
     height: fit-content;
   }
-  [data-fieldtype=textarea] textarea:hover, .comment-ctrl textarea:hover {
+  [data-fieldtype=textarea] textarea:hover,
+.comment-ctrl textarea:hover {
     background-color: #373737;
     border-bottom-color: rgba(255, 255, 255, 0.87);
   }
-  [data-fieldtype=textarea] textarea:focus, [data-fieldtype=textarea] textarea:focus-visible, .comment-ctrl textarea:focus, .comment-ctrl textarea:focus-visible {
+  [data-fieldtype=textarea] textarea:focus, [data-fieldtype=textarea] textarea:focus-visible,
+.comment-ctrl textarea:focus,
+.comment-ctrl textarea:focus-visible {
     color: inherit;
     background-color: #2c2c2c;
     outline: none;
@@ -2722,13 +2725,17 @@ select.custom-select.singleselect:disabled:hover,
     border-width: 2px;
     transition: none;
   }
-  [data-fieldtype=textarea] textarea:disabled, [data-fieldtype=textarea] textarea:read-only, .comment-ctrl textarea:disabled, .comment-ctrl textarea:read-only {
+  [data-fieldtype=textarea] textarea:disabled, [data-fieldtype=textarea] textarea:read-only,
+.comment-ctrl textarea:disabled,
+.comment-ctrl textarea:read-only {
     background-color: #1d1d1d;
     color: #888888;
     border-bottom-color: #888888;
     transition: none !important;
   }
-  [data-fieldtype=textarea] textarea:disabled:hover, [data-fieldtype=textarea] textarea:read-only:hover, .comment-ctrl textarea:disabled:hover, .comment-ctrl textarea:read-only:hover {
+  [data-fieldtype=textarea] textarea:disabled:hover, [data-fieldtype=textarea] textarea:read-only:hover,
+.comment-ctrl textarea:disabled:hover,
+.comment-ctrl textarea:read-only:hover {
     border-bottom-color: inherit;
   }
 
@@ -2798,7 +2805,7 @@ select.custom-select.singleselect:disabled:hover,
     outline: none;
     box-shadow: none;
   }
-  .navbar.navbar-fhs .navbar-nav .usermenu .caret:after {
+  .navbar.navbar-fhs .navbar-nav .usermenu .caret::after {
     margin-right: 2px;
   }
 
@@ -2835,7 +2842,7 @@ select.custom-select.singleselect:disabled:hover,
   [data-region=drawer] .list-group .list-group-item:hover {
     background-color: #373737;
   }
-  [data-region=drawer] .list-group .list-group-item:before {
+  [data-region=drawer] .list-group .list-group-item::before {
     content: "";
     display: block;
     position: absolute;
@@ -2853,7 +2860,7 @@ select.custom-select.singleselect:disabled:hover,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  [data-region=drawer] .list-group .list-group-item:active:before, [data-region=drawer] .list-group .list-group-item:focus:before {
+  [data-region=drawer] .list-group .list-group-item:active::before, [data-region=drawer] .list-group .list-group-item:focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -2937,7 +2944,7 @@ select.custom-select.singleselect:disabled:hover,
     margin: 0;
     padding: 40px 20px !important;
   }
-  #page-footer:after {
+  #page-footer::after {
     content: "\a===    Moodle Dark Theme    ===\aStyle par Martin Danhier & Yannis Fraselle\aVersion 0.6.0\a\a";
     display: block;
     white-space: pre;
@@ -2963,7 +2970,7 @@ select.custom-select.singleselect:disabled:hover,
     transition: box-shadow 0.7s;
     position: fixed;
   }
-  #back-to-top:before {
+  #back-to-top::before {
     content: "";
     display: block;
     position: absolute;
@@ -2981,7 +2988,7 @@ select.custom-select.singleselect:disabled:hover,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  #back-to-top:active:before, #back-to-top:focus:before {
+  #back-to-top:active::before, #back-to-top:focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -3010,7 +3017,7 @@ select.custom-select.singleselect:disabled:hover,
   }
 
   /* ----- Tooltips (notifications, and others) ----- */
-  .popover-region .popover-region-toggle:before, .popover-region .popover-region-toggle:after {
+  .popover-region .popover-region-toggle::before, .popover-region .popover-region-toggle::after {
     border-bottom-color: #323232;
     right: 11px;
   }
@@ -3372,7 +3379,7 @@ select.custom-select.singleselect:disabled:hover,
     border: 1px solid #ffffff !important;
   }
   .modal-dialog .modal-content .btn.btn-secondary[data-action=cancel]:not(.hidden):not(.hidden) {
-    border: none;
+    border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
@@ -3385,7 +3392,7 @@ select.custom-select.singleselect:disabled:hover,
     justify-content: center;
     line-height: normal;
     min-width: 64px;
-    padding: 0px 16px;
+    padding: 0 16px;
     min-height: 36px;
     user-select: none;
     vertical-align: middle;
@@ -3400,7 +3407,7 @@ select.custom-select.singleselect:disabled:hover,
   .modal-dialog .modal-content .btn.btn-secondary[data-action=cancel]:not(.hidden):not(.hidden) i, .modal-dialog .modal-content .btn.btn-secondary[data-action=cancel]:not(.hidden):not(.hidden).fa {
     margin-right: 8px;
   }
-  .modal-dialog .modal-content .btn.btn-secondary[data-action=cancel]:not(.hidden):not(.hidden):before {
+  .modal-dialog .modal-content .btn.btn-secondary[data-action=cancel]:not(.hidden):not(.hidden)::before {
     content: "";
     display: block;
     position: absolute;
@@ -3418,7 +3425,7 @@ select.custom-select.singleselect:disabled:hover,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  .modal-dialog .modal-content .btn.btn-secondary[data-action=cancel]:not(.hidden):not(.hidden):active:before, .modal-dialog .modal-content .btn.btn-secondary[data-action=cancel]:not(.hidden):not(.hidden):focus:before {
+  .modal-dialog .modal-content .btn.btn-secondary[data-action=cancel]:not(.hidden):not(.hidden):active::before, .modal-dialog .modal-content .btn.btn-secondary[data-action=cancel]:not(.hidden):not(.hidden):focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -3432,7 +3439,8 @@ select.custom-select.singleselect:disabled:hover,
       background-size: 15000%;
     }
   }
-  .modal-dialog .modal-content .modal-header, .modal-dialog .modal-content .modal-footer {
+  .modal-dialog .modal-content .modal-header,
+.modal-dialog .modal-content .modal-footer {
     border-color: #121212;
   }
   .modal-dialog .modal-content .studentdashboard .row:nth-child(2) {
@@ -3454,11 +3462,11 @@ select.custom-select.singleselect:disabled:hover,
   .modal-dialog .modal-content .studentdashboard .row:nth-child(3) .coursestafflisting .list-group-item {
     border: 0;
   }
-  .modal-dialog .modal-content .studentdashboard .row:nth-child(3) .activitylinks .list-group .list-group-item {
+  .modal-dialog .modal-content .studentdashboard .activitylinks .list-group-item {
     border: 0;
     border-radius: 10px;
   }
-  .modal-dialog .modal-content .studentdashboard .row:nth-child(3) .activitylinks .list-group .list-group-item:hover {
+  .modal-dialog .modal-content .studentdashboard .activitylinks .list-group-item:hover {
     background-color: #373737;
   }
 
@@ -3474,7 +3482,7 @@ select.custom-select.singleselect:disabled:hover,
     align-items: center;
     color: #ffffff;
   }
-  button.close:before {
+  button.close::before {
     content: "";
     display: block;
     position: absolute;
@@ -3492,7 +3500,7 @@ select.custom-select.singleselect:disabled:hover,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  button.close:active:before, button.close:focus:before {
+  button.close:active::before, button.close:focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -3550,7 +3558,7 @@ select.custom-select.singleselect:disabled:hover,
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2) !important;
     color: #ffffff;
     border-collapse: separate;
-    border-spacing: 0px;
+    border-spacing: 0;
     border-radius: 10px;
   }
   .discussion-list th,
@@ -3570,7 +3578,7 @@ select.custom-select.singleselect:disabled:hover,
   .discussion-list th a:not(.hidden),
 .choicegroups th a:not(.hidden),
 #overview-grade th a:not(.hidden) {
-    border: none;
+    border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
@@ -3583,7 +3591,7 @@ select.custom-select.singleselect:disabled:hover,
     justify-content: center;
     line-height: normal;
     min-width: 64px;
-    padding: 0px 16px;
+    padding: 0 16px;
     min-height: 36px;
     user-select: none;
     vertical-align: middle;
@@ -3695,9 +3703,9 @@ select.custom-select.singleselect:disabled:hover,
     color: #c6c6c6;
     margin: 5px;
   }
-  .discussion-list .btn.btn-link[data-type=favorite-toggle]:before,
-.choicegroups .btn.btn-link[data-type=favorite-toggle]:before,
-#overview-grade .btn.btn-link[data-type=favorite-toggle]:before {
+  .discussion-list .btn.btn-link[data-type=favorite-toggle]::before,
+.choicegroups .btn.btn-link[data-type=favorite-toggle]::before,
+#overview-grade .btn.btn-link[data-type=favorite-toggle]::before {
     content: "";
     display: block;
     position: absolute;
@@ -3715,11 +3723,11 @@ select.custom-select.singleselect:disabled:hover,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  .discussion-list .btn.btn-link[data-type=favorite-toggle]:active:before, .discussion-list .btn.btn-link[data-type=favorite-toggle]:focus:before,
-.choicegroups .btn.btn-link[data-type=favorite-toggle]:active:before,
-.choicegroups .btn.btn-link[data-type=favorite-toggle]:focus:before,
-#overview-grade .btn.btn-link[data-type=favorite-toggle]:active:before,
-#overview-grade .btn.btn-link[data-type=favorite-toggle]:focus:before {
+  .discussion-list .btn.btn-link[data-type=favorite-toggle]:active::before, .discussion-list .btn.btn-link[data-type=favorite-toggle]:focus::before,
+.choicegroups .btn.btn-link[data-type=favorite-toggle]:active::before,
+.choicegroups .btn.btn-link[data-type=favorite-toggle]:focus::before,
+#overview-grade .btn.btn-link[data-type=favorite-toggle]:active::before,
+#overview-grade .btn.btn-link[data-type=favorite-toggle]:focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -3802,11 +3810,11 @@ select.custom-select.singleselect:disabled:hover,
   .path-mod-forum #region-main :target > .forumpost {
     border-color: var(--bg-primary-light) !important;
   }
-  .path-mod-forum #region-main :target > .forumpost:before {
+  .path-mod-forum #region-main :target > .forumpost::before {
     display: none;
   }
   .path-mod-forum #region-main a.btn.btn-link:not(.hidden) {
-    border: none;
+    border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
@@ -3819,7 +3827,7 @@ select.custom-select.singleselect:disabled:hover,
     justify-content: center;
     line-height: normal;
     min-width: 64px;
-    padding: 0px 16px;
+    padding: 0 16px;
     min-height: 36px;
     user-select: none;
     vertical-align: middle;
@@ -3834,7 +3842,7 @@ select.custom-select.singleselect:disabled:hover,
   .path-mod-forum #region-main a.btn.btn-link:not(.hidden) i, .path-mod-forum #region-main a.btn.btn-link:not(.hidden).fa {
     margin-right: 8px;
   }
-  .path-mod-forum #region-main a.btn.btn-link:not(.hidden):before {
+  .path-mod-forum #region-main a.btn.btn-link:not(.hidden)::before {
     content: "";
     display: block;
     position: absolute;
@@ -3852,7 +3860,7 @@ select.custom-select.singleselect:disabled:hover,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  .path-mod-forum #region-main a.btn.btn-link:not(.hidden):active:before, .path-mod-forum #region-main a.btn.btn-link:not(.hidden):focus:before {
+  .path-mod-forum #region-main a.btn.btn-link:not(.hidden):active::before, .path-mod-forum #region-main a.btn.btn-link:not(.hidden):focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;

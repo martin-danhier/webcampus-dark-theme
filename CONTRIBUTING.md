@@ -44,3 +44,6 @@ Once the contents is copied, you simply have to paste it in the Stylus edition t
 ## Current list of third-party dependencies and explanation
 
 - `sass`: compiler for the SCSS source code
+- `stylelint`: Linter for CSS files (good practices, enforce code style)
+- `postcss`, `postcss-scss`: Provide SCSS syntax to Stylelint
+- `stylelint-scss`: SCSS-specific rules for Stylelint

@@ -3,8 +3,8 @@
 .popover-region {
     // Handle
     .popover-region-toggle {
-        &:before,
-        &:after {
+        &::before,
+        &::after {
             border-bottom-color: $bg-surface-12dp;
             right: 11px;
         }
@@ -120,25 +120,30 @@
     @include surface(12);
     @include elevation(12);
     border-radius: $border-radius;
+
     .popover-body {
         padding: $spacing-sm;
         color: inherit;
         font-size: 15px;
     }
 }
+
 .bs-popover-right > .arrow::after,
-.bs-popover-auto[x-placement^="right"] > .arrow::after {
+.bs-popover-auto[x-placement^='right'] > .arrow::after {
     border-right-color: $bg-surface-12dp;
 }
+
 .bs-popover-bottom > .arrow::after,
-.bs-popover-auto[x-placement^="bottom"] > .arrow::after {
+.bs-popover-auto[x-placement^='bottom'] > .arrow::after {
     border-bottom-color: $bg-surface-12dp;
 }
+
 .bs-popover-left > .arrow::after,
-.bs-popover-auto[x-placement^="left"] > .arrow::after {
+.bs-popover-auto[x-placement^='left'] > .arrow::after {
     border-left-color: $bg-surface-12dp;
 }
+
 .bs-popover-top > .arrow::after,
-.bs-popover-auto[x-placement^="top"] > .arrow::after {
+.bs-popover-auto[x-placement^='top'] > .arrow::after {
     border-top-color: $bg-surface-12dp;
 }

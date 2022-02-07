@@ -11,9 +11,9 @@
     padding: $spacing-l $spacing-m !important;
 
     // Credits
-    &:after {
+    &::after {
         // Text
-        content: "\A===    Moodle Dark Theme    ===\AStyle par " + $authors + "\A Version " + $version + "\A \A";
+        content: '\A===    Moodle Dark Theme    ===\AStyle par ' + $authors + '\A Version ' + $version + '\A \A';
 
         // Placement
         display: block;

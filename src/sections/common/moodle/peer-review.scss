@@ -1,7 +1,7 @@
 /* ----- Peer review ----- */
 
 #page-mod-workshop-view.path-mod-workshop {
-    h2 .btn[data-toggle="popover"] {
+    h2 .btn[data-toggle='popover'] {
         margin-left: $spacing-sm;
     }
 
@@ -37,6 +37,7 @@
                     background-color: $bg-surface-04dp;
                 }
             }
+
             &:nth-child(odd) {
                 dt,
                 dd {
@@ -70,6 +71,7 @@
                     color: $fg-field-disabled;
                 }
             }
+
             dd {
                 height: calc(209.2px + 2 * $spacing-s) !important;
             }
@@ -79,14 +81,17 @@
                 dt {
                     border-top-left-radius: $border-radius;
                 }
+
                 dd {
                     border-bottom-left-radius: $border-radius;
                 }
             }
+
             &:last-of-type {
                 dt {
                     border-top-right-radius: $border-radius;
                 }
+
                 dd {
                     border-bottom-right-radius: $border-radius;
                 }
@@ -97,7 +102,7 @@
 
 // Submission
 #page-mod-workshop-submission {
-    [role="main"] > h3 {
+    [role='main'] > h3 {
         margin-top: $spacing-m;
         margin-bottom: $spacing-m;
     }

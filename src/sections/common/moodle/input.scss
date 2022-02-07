@@ -32,6 +32,7 @@
 
                 // Required icon
                 position: relative;
+
                 .inline-req .icon.text-danger {
                     position: absolute;
                     top: 0;
@@ -43,12 +44,12 @@
         margin-bottom: $spacing-m;
     }
 
-    tr td[colspan="4"] {
+    tr td[colspan='4'] {
         @include flex-center();
 
         margin-top: $spacing-m;
 
-        .btn.btn-secondary[name="resetadv"] {
+        .btn.btn-secondary[name='resetadv'] {
             @include outlined-button($fg-on-surface, false);
         }
     }
@@ -56,12 +57,12 @@
 
 // Text fields
 
-form .form-inline input[type="text"],
-#coursesearch .coursesearchbox input[type="text"],
-form.form-inline input[type="text"],
-.message-app input[type="text"],
-#data_adv_form input[type="text"],
-#page-mod-data-edit form .generalbox input[type="text"] {
+form .form-inline input[type='text'],
+#coursesearch .coursesearchbox input[type='text'],
+form.form-inline input[type='text'],
+.message-app input[type='text'],
+#data_adv_form input[type='text'],
+#page-mod-data-edit form .generalbox input[type='text'] {
     // Apply text field to fields
     @include filled-text-field(var(--bg-primary-light));
 }
@@ -98,6 +99,7 @@ a.btn.btn-link {
     justify-content: center;
     align-items: center;
     display: inline-flex;
+
     &:focus {
         outline: none;
         text-decoration: none;
@@ -109,8 +111,8 @@ a.btn.btn-link {
     @include raised-button(var(--bg-primary), var(--bg-primary-hover), var(--fg-on-primary));
 }
 
-button.btn.btn-secondary[type="submit"],
-.datapreferences input.btn.btn-secondary[type="submit"] {
+button.btn.btn-secondary[type='submit'],
+.datapreferences input.btn.btn-secondary[type='submit'] {
     @include text-button($fg-high-emphasis, $fg-on-surface);
 }
 
@@ -121,7 +123,7 @@ button.btn.btn-secondary[type="submit"],
 // Drop downs
 
 .dropdown,
-.btn-group[data-region="view-selector"] {
+.btn-group[data-region='view-selector'] {
     // Button / preview
     .dropdown-toggle {
         &:active:focus,
@@ -154,9 +156,11 @@ button.btn.btn-secondary[type="submit"],
             // Remove default style
             color: $fg-on-surface;
             list-style: none;
-            &:before {
+
+            &::before {
                 display: none;
             }
+
             a {
                 color: inherit !important;
 
@@ -165,7 +169,7 @@ button.btn.btn-secondary[type="submit"],
                 }
             }
 
-            i.icon[aria-hidden="true"] {
+            i.icon[aria-hidden='true'] {
                 display: none;
             }
             background-color: inherit;
@@ -174,7 +178,7 @@ button.btn.btn-secondary[type="submit"],
             padding: $spacing-s $spacing-sm;
 
             // Hover & selected
-            &[aria-current="true"] {
+            &[aria-current='true'] {
                 background-color: $bg-field-selected-bright;
             }
 
@@ -207,7 +211,7 @@ select.custom-select.singleselect,
     overflow: hidden;
 
     // Shape
-    padding: 0px 2px;
+    padding: 0 2px;
     padding-right: 28px;
     height: 42px;
     border-radius: 4px 4px 0 0;
@@ -298,6 +302,7 @@ select.custom-select.singleselect,
             display: flex;
             align-items: center;
             justify-content: center;
+
             & .icon {
                 text-align: center;
                 vertical-align: middle;
@@ -408,7 +413,7 @@ select.custom-select.singleselect,
 
 // Checkboxes
 
-input[type="checkbox"] {
+input[type='checkbox'] {
     // Hide default unmodifiable checkbox
     visibility: hidden;
     width: 0;
@@ -424,10 +429,10 @@ input[type="checkbox"] {
         padding-left: calc($checkbox-size + $spacing-s);
         user-select: none;
 
-        &:before {
+        &::before {
             // Show icon
             position: absolute;
-            left: 0px;
+            left: 0;
             top: 2px;
 
             // Positioning
@@ -445,26 +450,28 @@ input[type="checkbox"] {
             background-color: $bg-field-bright;
 
             // Check
-            content: "";
-            font: normal normal normal calc($checkbox-size - 5.5px) "FontAwesome";
+            content: '';
+            font: 400 normal normal calc($checkbox-size - 5.5px) 'FontAwesome';
             font-weight: 300;
             line-height: $checkbox-size;
             text-rendering: auto;
             text-align: center;
         }
-        &:hover:before {
+
+        &:hover::before {
             background-color: $bg-field-hover-bright;
         }
     }
 
     // Change icon and color on checked
     &:checked + label {
-        &:before {
-            content: "\f00c";
+        &::before {
+            content: '\f00c';
             color: var(--fg-on-primary);
             background-color: var(--bg-primary);
         }
-        &:hover:before {
+
+        &:hover::before {
             background-color: var(--bg-primary-hover);
         }
     }
@@ -499,7 +506,7 @@ input[type="checkbox"] {
         }
     }
 
-    input[type="text"].form-control {
+    input[type='text'].form-control {
         padding-right: $spacing-l !important;
     }
 
@@ -546,7 +553,8 @@ input[type="checkbox"] {
 
 // Textarea
 
-[data-fieldtype="textarea"] textarea, .comment-ctrl textarea {
+[data-fieldtype='textarea'] textarea,
+.comment-ctrl textarea {
     @include filled-text-field(var(--bg-primary-light));
     height: fit-content;
 }

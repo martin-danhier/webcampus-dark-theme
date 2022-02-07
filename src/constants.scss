@@ -1,8 +1,8 @@
 // Version of the style
-$version: "0.6.0";
+$version: '0.6.0';
 
 // Authors of the style
-$authors: "Martin Danhier & Yannis Fraselle";
+$authors: 'Martin Danhier & Yannis Fraselle';
 
 // =========== Color theme ===========
 
@@ -49,9 +49,9 @@ $fg-medium-emphasis: #959595;
 $fg-field-disabled: #888888;
 
 // Special colors
-$shadow-1: rgba(0, 0, 0, .14);
-$shadow-2: rgba(0, 0, 0, .12);
-$shadow-3: rgba(0, 0, 0, .20);
+$shadow-1: rgba(0, 0, 0, 0.14);
+$shadow-2: rgba(0, 0, 0, 0.12);
+$shadow-3: rgba(0, 0, 0, 0.2);
 
 // Other parameters
 $border-radius: 10px;
@@ -65,7 +65,7 @@ $checkbox-size: 16px;
 // Icon settings
 $fluent-icon-size: 20px; // 16px, 20px, 24px, 28px, 32px or 48px
 $fluent-small-icon-size: 16px;
-$fluent-icon-style: "filled"; // "regular" or "filled"
+$fluent-icon-style: 'filled'; // "regular" or "filled"
 $fluent-icon-default-color: white;
 
 // Letter spacing

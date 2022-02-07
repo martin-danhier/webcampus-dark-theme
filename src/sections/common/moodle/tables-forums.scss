@@ -32,7 +32,7 @@
 
     // Setup the border to support radius
     border-collapse: separate;
-    border-spacing: 0px;
+    border-spacing: 0;
     border-radius: $border-radius;
 
     // Default style for table
@@ -51,9 +51,11 @@
         border-color: $bg-divider;
         border: 0;
         border-bottom: 1px solid $bg-divider;
+
         &:first-child {
             border-top-left-radius: $border-radius;
         }
+
         &:last-child {
             border-top-right-radius: $border-radius;
         }
@@ -74,6 +76,7 @@
                 background-color: $bg-surface-04dp;
             }
         }
+
         tr:nth-child(odd) {
             td,
             th {
@@ -88,6 +91,7 @@
                 &:first-child {
                     border-bottom-left-radius: $border-radius;
                 }
+
                 &:last-child {
                     border-bottom-right-radius: $border-radius;
                 }
@@ -96,13 +100,13 @@
     }
 
     // Favorites
-    .btn.btn-link[data-type="favorite-toggle"] {
+    .btn.btn-link[data-type='favorite-toggle'] {
         @include flat-icon-button($bg-field-hover);
         color: $fg-high-emphasis;
         margin: $spacing-xs;
     }
     // Settings
-    [data-container="discussion-tools"] {
+    [data-container='discussion-tools'] {
         margin-right: $spacing-xs;
     }
 
@@ -132,20 +136,24 @@
         @include surface(4);
         border-radius: $border-radius;
         border: 1px solid $bg-surface-04dp !important;
+
         &:focus-visible,
         &:focus {
             border: inherit !important;
         }
     }
+
     :target > .forumpost {
         border-color: var(--bg-primary-light) !important;
-        &:before {
+
+        &::before {
             display: none;
         }
     }
 
     a.btn.btn-link {
         @include text-button($fg-high-emphasis, $fg-on-surface);
+
         &:hover {
             text-decoration: none;
         }
@@ -156,6 +164,7 @@
 
 #overview-grade {
     @include elevation(1);
+
     td.cell.c1 {
         text-align: center;
     }

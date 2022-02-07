@@ -15,6 +15,10 @@
   },
   "homepage": "https://github.com/martin-danhier/webcampus-dark-theme#readme",
   "dependencies": {
-    "sass": "^1.49.0"
+    "postcss": "^8.4.6",
+    "postcss-scss": "^4.0.3",
+    "sass": "^1.49.0",
+    "stylelint": "^14.3.0",
+    "stylelint-scss": "^4.1.0"
   }
 }

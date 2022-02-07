@@ -1,4 +1,5 @@
 {
+    // Dictionary
     "cSpell.words": [
         "aalink",
         "accessibilityhelper",
@@ -7,6 +8,7 @@
         "advancedcheckbox",
         "amanote",
         "appbar",
+        "argumentless",
         "assessmentgrade",
         "ATTO",
         "availabilityinfo",
@@ -57,6 +59,7 @@
         "invisiblefieldset",
         "ishidden",
         "isrestricted",
+        "linebreaks",
         "listitem",
         "mediaserver",
         "mform",
@@ -81,6 +84,7 @@
         "sourcecode",
         "strikethrough",
         "studentdashboard",
+        "stylelint",
         "submissiongrade",
         "submissionstatement",
         "submissionstatussubmitted",
@@ -90,6 +94,7 @@
         "ubicast",
         "uclouvain",
         "unamur",
+        "unspaced",
         "urlselect",
         "userbutton",
         "userdate",
@@ -102,5 +107,15 @@
         "webcampus",
         "wooclap",
         "ygtvcell"
-    ]
+    ],
+    // SCSS linter
+    "stylelint.configFile": ".stylelintrc.json",
+    "stylelint.validate": [
+        "scss"
+    ],
+    // SCSS formatter
+    "scssFormatter.singleQuote": true,
+    "[scss]": {
+        "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+    }
 }

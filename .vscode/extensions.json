@@ -1,7 +1,10 @@
 {
     "recommendations": [
+        // Format SCSS files
         "sibiraj-s.vscode-scss-formatter",
-        "maptz.regionfolder",
-        "mrmlnc.vscode-scss"
+        // Language support for SCSS
+        "mrmlnc.vscode-scss",
+        // Linter for SCSS (good code practice)
+        "stylelint.vscode-stylelint"
     ]
 }
