@@ -25,7 +25,12 @@
 // Table
 .discussion-list,
 .choicegroups,
-#overview-grade {
+#overview-grade,
+#page-report-usersessions-user table.generaltable,
+#page-admin-tool-lp-plans table.generaltable,
+#page-user-managetoken table.generaltable,
+#page-message-notificationpreferences table.preference-table,
+#page-repository-manage_instances table.generaltable {
     background-color: inherit;
     @include elevation(1);
     color: $fg-on-surface;
@@ -40,7 +45,7 @@
         @include elevation(2);
     }
 
-    th,
+    tbody:first-child tr:first-child th,
     thead th {
         // Colors
         background-color: $bg-surface-12dp;
@@ -206,5 +211,44 @@ span.unread {
         display: flex !important;
         padding: 0 !important;
         @include fluent-icon-img("mail-unread", $fg-on-warning);
+    }
+}
+
+// Preference table
+
+#page-message-notificationpreferences table.preference-table {
+    border: 0;
+
+    h4 {
+        color: $fg-on-surface;
+    }
+
+    // On / Off switch
+    .preference-state-status-container {
+        background: none;
+    }
+
+    input[type="checkbox"]:not(:checked) + .preference-state-status-container .off-text,
+    input[type="checkbox"]:checked + .preference-state-status-container .on-text {
+        @include fluent-icon-base();
+        font-size: 0;
+    }
+
+    // OFF
+    input[type="checkbox"]:not(:checked) + .preference-state-status-container .off-text {
+        @include fluent-icon-override("alert-off", 28px, $red);
+    }
+
+    // ON
+    input[type="checkbox"]:checked + .preference-state-status-container .on-text {
+        @include fluent-icon-override("alert", 28px, $green);
+    }
+
+    td .container-fluid, .col-6 {
+        padding: 0 $spacing-xs;
+    }
+
+    tr td:not(:first-child) {
+        width: fit-content;
     }
 }

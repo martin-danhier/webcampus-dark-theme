@@ -372,6 +372,11 @@ img[src*="/theme/image.php/"][src*="/mod_page/"][src$="/icon"] {
     @include fluent-icon-img("book-open");
 }
 
+img[src*="/theme/image.php/"][src*="/block_timeline/"][src$="/activities"] {
+    // Timeline
+    @include fluent-icon-img("calendar-clock", $size: 24px);
+}
+
 // TODO: wtf are these icons: keep them ? don't ?
 
 /* Not terminated */
@@ -434,22 +439,25 @@ i.fa {
 
 a[data-route="view-settings"] {
     // Center right but no margin
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
+    @include flex-center-end();
 }
 
 a[data-route="view-contacts"],
 #message-user-button {
     // Center right, with margin
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
+    @include flex-center-end();
 
     i {
         margin-right: $spacing-xs !important;
+    }
+}
+
+#page-message-notificationpreferences a:not(#back-to-top)[role="button"] {
+    // Center, with margin left
+    @include flex-center();
+
+    i {
+        margin-left: $spacing-xs !important;
     }
 }
 

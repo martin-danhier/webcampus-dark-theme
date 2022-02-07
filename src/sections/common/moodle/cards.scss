@@ -246,12 +246,12 @@
     @include surface(3);
     border-radius: $border-radius;
 
-    .section:empty, .summary p:empty {
+    .section:empty,
+    .summary p:empty {
         display: none;
         margin-bottom: 0;
     }
 }
-
 
 /* Forum view */
 
@@ -360,5 +360,39 @@
 
     #id_cancel {
         @include text-button($fg-high-emphasis, $fg-on-surface);
+    }
+}
+
+/* ----- Loading ----- */
+
+.block_onlinesurvey_surveys_loading {
+    @include surface(1);
+}
+
+.block_onlinesurvey_lds-spinner div::after {
+    background: $fg-high-emphasis;
+}
+
+.overlay-icon-container {
+    background-color: inherit;
+
+    .loading-icon .icon {
+        height: $fluent-icon-size;
+        width: $fluent-icon-size;
+        font-size: $fluent-icon-size;
+    }
+}
+
+/* ----- Nested cards ----- */
+
+#page-admin-tool-dataprivacy-summary #region-main .card {
+    @include surface(2);
+    @include elevation(1);
+
+    .card-header {
+        @include surface(3);
+        border-bottom: 1px solid $bg-divider;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
     }
 }

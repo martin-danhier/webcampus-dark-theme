@@ -58,6 +58,7 @@
 // Text fields
 
 form .form-inline input[type="text"],
+form .form-inline input[type="password"],
 #coursesearch .coursesearchbox input[type="text"],
 form.form-inline input[type="text"],
 .message-app input[type="text"],
@@ -110,13 +111,16 @@ a.btn.btn-link {
     }
 }
 
-.btn.btn-primary:not(.btn-lg) {
+.btn.btn-primary:not(.btn-lg),
+.maincalendar button[data-action="new-event-button"],
+ {
     @include raised-button(var(--bg-primary), var(--bg-primary-hover), var(--fg-on-primary));
 }
 
 button.btn.btn-secondary[type="submit"],
 .datapreferences input.btn.btn-secondary[type="submit"],
-.moodle-dialogue-base .moodle-dialogue-bd  .btn.btn-secondary {
+.moodle-dialogue-base .moodle-dialogue-bd  .btn.btn-secondary,
+#id_cancel {
     @include text-button($fg-high-emphasis, $fg-on-surface);
 }
 
@@ -128,7 +132,8 @@ button.btn.btn-secondary[type="submit"],
 
 .dropdown,
 .btn-group[data-region="view-selector"],
-.atto_menu {
+.atto_menu,
+.maincalendar [data-region="view-selector"] {
     // Button / preview
     .dropdown-toggle {
         &:active:focus,
@@ -207,11 +212,17 @@ button.btn.btn-secondary[type="submit"],
     }
 }
 
+// Custom selects that must look like a dropdown menu (because they used it wrong)
+.maincalendar select.custom-select {
+
+}
+
 .mform select.custom-select,
 .urlselect.custom-select,
 select.custom-select.singleselect,
 .datapreferences select.custom-select,
-.moodle-dialogue-base .moodle-dialogue-bd select.custom-select {
+.moodle-dialogue-base .moodle-dialogue-bd select.custom-select,
+.modal-content select.custom-select {
     color: $fg-on-surface;
     box-sizing: border-box;
     overflow: hidden;

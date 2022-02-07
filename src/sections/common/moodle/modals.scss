@@ -91,12 +91,16 @@ button.close {
 }
 
 // Alerts
-.moodle-dialogue-bd .alert {
+.alert {
     border-radius: $border-radius;
     margin: $spacing-sm;
 
     @include flex-center-start();
-    height: $fluent-icon-size;
+    min-height: $fluent-icon-size;
+
+    @include typography("subtitle2");
+
+    position: relative;
 
     // Add an icon to the message
     &::before {
@@ -124,11 +128,35 @@ button.close {
             @include fluent-icon-img("error-circle", $fg-on-warning, "regular");
         }
     }
+
+    &.alert-success {
+        background-color: $bg-success;
+        color: $fg-on-success;
+
+        &::before {
+            @include fluent-icon-img("checkmark-circle", $fg-on-success, "regular");
+        }
+    }
+
+    &.alert-info {
+        background-color: $bg-info;
+        color: $fg-on-info;
+
+        &::before {
+            @include fluent-icon-img("info", $fg-on-info, "regular");
+        }
+    }
+
+    button.close {
+        position: absolute;
+        right: $spacing-s;
+    }
 }
 
 // Buttons
 .atto_generico_buttons {
     display: block;
+
     button {
         @include text-button($fg-high-emphasis, $fg-on-surface);
     }
@@ -138,7 +166,7 @@ button.close {
     border-radius: $border-radius;
     border-color: $red;
     color: $red;
-    
+
     &:hover {
         color: white;
         background-color: $red;

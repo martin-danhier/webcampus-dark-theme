@@ -1,0 +1,18 @@
+/* ----- Calendar ----- */
+
+#page-calendar-view {
+
+}
+
+
+.maincalendar {
+    // Next / previous
+    .arrow_link {
+        @include text-button($fg-high-emphasis, $fg-on-surface);
+    }
+
+    // View selector
+    [data-region="view-selector"] .dropdown-item {
+        text-transform: capitalize;
+    }
+}

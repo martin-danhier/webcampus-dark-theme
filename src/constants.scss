@@ -34,6 +34,7 @@ $bg-error: #c95066;
 $bg-error-hover: #e17f8c;
 $bg-success: #6eb45e;
 $bg-warning: #f1d06b;
+$bg-info: #5e9cd3;
 
 $bg-icon-favorite: #ffd600;
 
@@ -44,6 +45,7 @@ $fg-on-surface: #ffffff;
 $fg-on-error: #000000;
 $fg-on-success: #000000;
 $fg-on-warning: #000000;
+$fg-on-info: #000000;
 $fg-high-emphasis: #c6c6c6;
 $fg-medium-emphasis: #959595;
 $fg-field-disabled: #888888;
@@ -65,7 +67,7 @@ $checkbox-size: 16px;
 // Icon settings
 $fluent-icon-size: 20px; // 16px, 20px, 24px, 28px, 32px or 48px
 $fluent-small-icon-size: 16px;
-$fluent-icon-style: "filled"; // "regular" or "filled"
+$fluent-icon-style: "regular"; // "regular" or "filled"
 $fluent-icon-default-color: white;
 
 // Letter spacing

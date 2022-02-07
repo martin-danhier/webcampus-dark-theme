@@ -492,12 +492,12 @@
         padding: 0 !important;
     }
 }
-@mixin fluent-icon($name, $color: $fluent-icon-default-color, $style: $fluent-icon-style) {
+@mixin fluent-icon($name, $color: $fluent-icon-default-color, $style: $fluent-icon-style, $size: $fluent-icon-size) {
     &::before {
         @if color-is-hardcoded($color) {
             // Hardcoded color: use it in the url
             content: url("https://api.iconify.design/fluent/#{$name}-" + escape-size(
-                $fluent-icon-size
+                $size
             ) + "-" + $style + ".svg?color=" + escape-color($color)) !important;
         } @else {
             @error "Can't hardcode a variable color in the URL.";
@@ -522,11 +522,11 @@
         }
     }
 }
-@mixin fluent-icon-img($name, $color: $fluent-icon-default-color, $style: $fluent-icon-style) {
+@mixin fluent-icon-img($name, $color: $fluent-icon-default-color, $style: $fluent-icon-style, $size: $fluent-icon-size) {
     @if color-is-hardcoded($color) {
         // Hardcoded color: use it in the url
         content: url("https://api.iconify.design/fluent/#{$name}-" + escape-size(
-            $fluent-icon-size
+            $size
         ) + "-" + $style + ".svg?color=" + escape-color($color)) !important;
     } @else {
         @error "Can't hardcode a variable color in the URL.";

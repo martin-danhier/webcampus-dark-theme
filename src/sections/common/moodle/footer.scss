@@ -10,6 +10,16 @@
     // Padding
     padding: $spacing-l $spacing-m !important;
 
+    a {
+        color: $fg-high-emphasis !important;
+
+        &:focus, &:active, &:hover, &:focus:active {
+            color: $fg-on-surface !important;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
     // Credits
     &::after {
         // Text

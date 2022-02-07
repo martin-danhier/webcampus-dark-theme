@@ -48,7 +48,8 @@ h3[style*="color: rgb(51, 51, 51)"] {
     color: $fg-on-surface !important;
 }
 
-span[style*="background-color: rgb(255, 207, 53)"] {
+span[style*="background-color: rgb(255, 207, 53)"],
+span[style*="background-color: rgb(125, 159, 211)"] {
     background-color: inherit !important;
 }
 

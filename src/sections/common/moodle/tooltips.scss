@@ -148,3 +148,16 @@
 .bs-popover-auto[x-placement^="top"] > .arrow::after {
     border-top-color: $bg-surface-12dp;
 }
+
+// Hover tooltip
+
+.hover-tooltip-container .hover-tooltip {
+    @include surface(12);
+    @include elevation(12);
+    border-radius: $border-radius;
+    padding: $spacing-sm;
+
+    &::before, &::after {
+        border-top-color: $bg-surface-12dp;
+    }
+}

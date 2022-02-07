@@ -45,7 +45,6 @@ SOFTWARE.
     url-prefix("https://idp.uclouvain.be/idp/profile/SAML2/Redirect/SSO") {
   /* Global imports */
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap");
-  @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
   /* ----- Default color theme ----- */
   :root {
     --bg-primary: #bb86fc;
@@ -205,7 +204,8 @@ i[style*="color: rgb(51, 51, 51)"] span {
     color: #ffffff !important;
   }
 
-  span[style*="background-color: rgb(255, 207, 53)"] {
+  span[style*="background-color: rgb(255, 207, 53)"],
+span[style*="background-color: rgb(125, 159, 211)"] {
     background-color: inherit !important;
   }
 
@@ -567,96 +567,96 @@ footer,
 
   /* ----- Img icons ----- */
   img[src*="/theme/image.php/"][src*="/url/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/link-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/link-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/url/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/link-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/link-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/mod_forum/"][src$="/icon"],
 img[src*="/theme/image.php/"][src*="/forum/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/chat-multiple-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/chat-multiple-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/mod_forum/"][src$="/icon"].activityicon,
 img[src*="/theme/image.php/"][src*="/forum/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/chat-multiple-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/chat-multiple-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/workshop/"][src$="/icon"],
 img[src*="/theme/image.php/"][src*="/feedback/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/person-feedback-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/person-feedback-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/workshop/"][src$="/icon"].activityicon,
 img[src*="/theme/image.php/"][src*="/feedback/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/person-feedback-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/person-feedback-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/quiz/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/quiz-new-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/quiz-new-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/quiz/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/quiz-new-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/quiz-new-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/pdf"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/pdf-24"],
 img[src*="/theme/image.php/"][src*="/amanote/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/document-pdf-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/document-pdf-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/pdf"].activityicon,
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/pdf-24"].activityicon,
 img[src*="/theme/image.php/"][src*="/amanote/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/document-pdf-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/document-pdf-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/ubicast/"][src$="/icon"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/mpeg-24"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/mpeg"] {
-    content: url("https://api.iconify.design/fluent/video-clip-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/video-clip-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/ubicast/"][src$="/icon"].activityicon,
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/mpeg-24"].activityicon,
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/mpeg"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/video-clip-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/video-clip-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive-24"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive"] {
-    content: url("https://api.iconify.design/fluent/folder-zip-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/folder-zip-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive-24"].activityicon,
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/folder-zip-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/folder-zip-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/page/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/note-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/note-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/page/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/note-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/note-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode-24"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/markup-24"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/markup"] {
-    content: url("https://api.iconify.design/fluent/document-chevron-double-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/document-chevron-double-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode-24"].activityicon,
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/markup-24"].activityicon,
@@ -664,7 +664,7 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode"].activityicon,
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/markup"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/document-chevron-double-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/document-chevron-double-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/tiff"],
@@ -673,7 +673,7 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/f/png"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/png-24"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/jpeg"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/jpeg-24"] {
-    content: url("https://api.iconify.design/fluent/image-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/image-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/tiff"].activityicon,
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/tiff-24"].activityicon,
@@ -683,25 +683,25 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/f/jpeg"].activityicon,
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/jpeg-24"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/image-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/image-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/document-24"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/document"] {
-    content: url("https://api.iconify.design/fluent/document-text-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/document-text-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/document-24"].activityicon,
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/document"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/document-text-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/document-text-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/powerpoint-24"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/powerpoint"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/impress-24"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/impress"] {
-    content: url("https://api.iconify.design/fluent/data-pie-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/data-pie-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/powerpoint-24"].activityicon,
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/powerpoint"].activityicon,
@@ -709,172 +709,172 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/f/impress-24"].activityicon,
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/impress"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/data-pie-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/data-pie-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/spreadsheet-24"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/spreadsheet"] {
-    content: url("https://api.iconify.design/fluent/document-table-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/document-table-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/spreadsheet-24"].activityicon,
 img[src*="/theme/image.php/"][src*="/core/"][src$="/f/spreadsheet"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/document-table-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/document-table-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/wiki/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/globe-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/globe-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/wiki/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/globe-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/globe-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/assign/"][src$="/icon"],
 img[src*="/theme/image.php/"][src*="/mod_assign/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/arrow-upload-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/arrow-upload-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/assign/"][src$="/icon"].activityicon,
 img[src*="/theme/image.php/"][src*="/mod_assign/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/arrow-upload-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/arrow-upload-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/folder/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/folder-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/folder-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/folder/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/folder-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/folder-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/folder-24"] {
-    content: url("https://api.iconify.design/fluent/folder-open-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/folder-open-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/folder-24"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/folder-open-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/folder-open-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/scheduler/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/calendar-clock-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/calendar-clock-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/scheduler/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/calendar-clock-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/calendar-clock-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/choice/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/chat-help-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/chat-help-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/choice/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/chat-help-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/chat-help-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/glossary/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/text-sort-ascending-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-sort-ascending-20-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/customcert/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/certificate-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/certificate-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/customcert/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/certificate-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/certificate-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/wooclap/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/form-new-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/form-new-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/wooclap/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/form-new-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/form-new-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/choicegroup/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/people-swap-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/people-swap-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/choicegroup/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/people-swap-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/people-swap-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/text-24"] {
-    content: url("https://api.iconify.design/fluent/document-text-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/document-text-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/text-24"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/document-text-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/document-text-24-regular.svg?color=white") !important;
   }
 
   img.activityicon[src*="/theme/image.php/"][src*="/chat/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/chat-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/chat-20-regular.svg?color=white") !important;
   }
   img.activityicon[src*="/theme/image.php/"][src*="/chat/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/chat-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/chat-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/folder"] {
-    content: url("https://api.iconify.design/fluent/folder-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/folder-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/folder"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/folder-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/folder-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive"] {
-    content: url("https://api.iconify.design/fluent/folder-zip-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/folder-zip-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/folder-zip-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/folder-zip-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/label/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/text-align-left-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-align-left-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/label/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/text-align-left-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-align-left-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/data/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/database-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/database-20-regular.svg?color=white") !important;
   }
   img[src*="/theme/image.php/"][src*="/data/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/database-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/database-24-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/core/"][src$="/completion-auto-pass"],
 img[src*="/theme/image.php/"][src*="/core/"][src$="/completion-auto-y"] {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/checkmark-square-24-filled.svg?color=%236eb45e") !important;
+    content: url("https://api.iconify.design/fluent/checkmark-square-24-regular.svg?color=%236eb45e") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/core/"][src$="/completion-auto-fail"] {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/dismiss-square-24-filled.svg?color=%23c95066") !important;
+    content: url("https://api.iconify.design/fluent/dismiss-square-24-regular.svg?color=%23c95066") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/core/"][src$="/completion-auto-n"] {
@@ -892,7 +892,7 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/completion-auto-y"] {
   }
 
   img[src*="/theme/image.php/"][src*="/atto_bsgrid/"][src$="/iconone"] {
-    content: url("https://api.iconify.design/fluent/column-triple-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/column-triple-20-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/atto_chemistry/"][src$="/icon"] {
@@ -900,19 +900,23 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/completion-auto-y"] {
   }
 
   img[src*="/theme/image.php/"][src*="/atto_generico/"][src$="/iconone"] {
-    content: url("https://api.iconify.design/fluent/puzzle-piece-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/puzzle-piece-20-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/atto_fontfamily/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/text-font-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-font-20-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/atto_fontsize/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/text-font-size-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-font-size-20-regular.svg?color=white") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/mod_page/"][src$="/icon"] {
-    content: url("https://api.iconify.design/fluent/book-open-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/book-open-20-regular.svg?color=white") !important;
+  }
+
+  img[src*="/theme/image.php/"][src*="/block_timeline/"][src$="/activities"] {
+    content: url("https://api.iconify.design/fluent/calendar-clock-24-regular.svg?color=white") !important;
   }
 
   /* Not terminated */
@@ -934,7 +938,7 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/completion-auto-y"] {
   }
 
   img[src*="/theme/image.php/"][src*="/block_completion_progress/"][src$="/right"] {
-    content: url("https://api.iconify.design/fluent/caret-down-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/caret-down-20-regular.svg?color=white") !important;
   }
 
   /* ----- FontAwesome icons ----- */
@@ -980,22 +984,29 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/completion-auto-y"] {
   }
 
   a[data-route=view-settings] {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: flex !important;
     justify-content: flex-end;
+    align-items: center;
   }
 
   a[data-route=view-contacts],
 #message-user-button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    display: flex !important;
     justify-content: flex-end;
+    align-items: center;
   }
   a[data-route=view-contacts] i,
 #message-user-button i {
     margin-right: 5px !important;
+  }
+
+  #page-message-notificationpreferences a:not(#back-to-top)[role=button] {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  #page-message-notificationpreferences a:not(#back-to-top)[role=button] i {
+    margin-left: 5px !important;
   }
 
   .icon-size-3 {
@@ -1004,84 +1015,84 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/completion-auto-y"] {
   }
 
   i.fa.fa-bars::before {
-    content: url("https://api.iconify.design/fluent/navigation-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/navigation-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-tachometer::before,
 i.fa.fa-dashboard::before {
-    content: url("https://api.iconify.design/fluent/board-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/board-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-home::before {
-    content: url("https://api.iconify.design/fluent/home-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/home-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-calendar::before {
-    content: url("https://api.iconify.design/fluent/calendar-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/calendar-20-regular.svg?color=white") !important;
   }
 
   body.drawer-open-left [data-region=drawer] [data-parent-key=myhome] .media-left i:not(.fa-home)::before {
-    content: url("https://api.iconify.design/fluent/open-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/open-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-bell::before {
-    content: url("https://api.iconify.design/fluent/alert-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/alert-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-comment::before {
-    content: url("https://api.iconify.design/fluent/chat-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/chat-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-question-circle::before {
-    content: url("https://api.iconify.design/fluent/question-circle-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/question-circle-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-chevron-left::before {
-    content: url("https://api.iconify.design/fluent/chevron-left-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/chevron-left-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-chevron-right::before {
-    content: url("https://api.iconify.design/fluent/chevron-right-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/chevron-right-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-filter::before {
-    content: url("https://api.iconify.design/fluent/filter-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/filter-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-sort-amount-asc::before {
-    content: url("https://api.iconify.design/fluent/arrow-sort-down-lines-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/arrow-sort-down-lines-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-th::before {
-    content: url("https://api.iconify.design/fluent/table-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/table-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-ellipsis-h::before {
-    content: url("https://api.iconify.design/fluent/more-horizontal-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/more-horizontal-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-ellipsis-v::before {
-    content: url("https://api.iconify.design/fluent/more-vertical-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/more-vertical-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-clock-o::before {
-    content: url("https://api.iconify.design/fluent/clock-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/clock-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-chevron-circle-up::before {
-    content: url("https://api.iconify.design/fluent/chevron-up-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/chevron-up-20-regular.svg?color=white") !important;
   }
 
   #back-to-top i.fa.fa-chevron-circle-up::before {
-    content: url("https://api.iconify.design/fluent/chevron-up-20-filled.svg?color=black") !important;
+    content: url("https://api.iconify.design/fluent/chevron-up-20-regular.svg?color=black") !important;
   }
 
   i.fa.fa-graduation-cap::before {
-    content: url("https://api.iconify.design/fluent/hat-graduation-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/hat-graduation-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-users::before {
-    content: url("https://api.iconify.design/fluent/people-community-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/people-community-20-regular.svg?color=white") !important;
   }
 
   .dashtitle i.fa.fa-users {
@@ -1091,27 +1102,27 @@ i.fa.fa-dashboard::before {
   .dashtitle i.fa.fa-users::before {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/people-community-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/people-community-24-regular.svg?color=white") !important;
   }
 
   i.fa.fa-folder-o::before {
-    content: url("https://api.iconify.design/fluent/folder-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/folder-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-cogs::before {
-    content: url("https://api.iconify.design/fluent/settings-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/settings-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-envelope::before, i.fa.fa-envelope-o::before {
-    content: url("https://api.iconify.design/fluent/mail-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/mail-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-check::before {
-    content: url("https://api.iconify.design/fluent/checkmark-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/checkmark-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-cog::before {
-    content: url("https://api.iconify.design/fluent/settings-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/settings-20-regular.svg?color=white") !important;
   }
   i.fa.fa-cog.fa-5x {
     width: 32px;
@@ -1120,23 +1131,23 @@ i.fa.fa-dashboard::before {
   i.fa.fa-cog.fa-5x::before {
     width: 32px !important;
     height: 32px !important;
-    content: url("https://api.iconify.design/fluent/settings-32-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/settings-32-regular.svg?color=white") !important;
   }
 
   i.fa.fa-user::before {
-    content: url("https://api.iconify.design/fluent/people-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/people-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-smile-o::before {
-    content: url("https://api.iconify.design/fluent/emoji-add-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/emoji-add-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-paper-plane::before {
-    content: url("https://api.iconify.design/fluent/send-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/send-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-trash::before {
-    content: url("https://api.iconify.design/fluent/delete-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/delete-20-regular.svg?color=white") !important;
   }
 
   .icon-size-4 i.icon.fa.fa-trash {
@@ -1146,19 +1157,19 @@ i.fa.fa-dashboard::before {
   .icon-size-4 i.icon.fa.fa-trash::before {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/delete-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/delete-24-regular.svg?color=white") !important;
   }
 
   i.fa-plus::before {
-    content: url("https://api.iconify.design/fluent/add-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/add-20-regular.svg?color=white") !important;
   }
 
   i.fa-minus::before {
-    content: url("https://api.iconify.design/fluent/subtract-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/subtract-20-regular.svg?color=white") !important;
   }
 
   .small i.fa.fa-check-circle::before {
-    content: url("https://api.iconify.design/fluent/checkmark-circle-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/checkmark-circle-20-regular.svg?color=white") !important;
   }
 
   .small i.fa.fa-circle-o::before {
@@ -1166,79 +1177,79 @@ i.fa.fa-dashboard::before {
   }
 
   i.fa.fa-bold::before {
-    content: url("https://api.iconify.design/fluent/text-bold-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-bold-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-italic::before {
-    content: url("https://api.iconify.design/fluent/text-italic-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-italic-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-underline::before {
-    content: url("https://api.iconify.design/fluent/text-underline-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-underline-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-strikethrough::before {
-    content: url("https://api.iconify.design/fluent/text-strikethrough-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-strikethrough-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-subscript::before {
-    content: url("https://api.iconify.design/fluent/text-subscript-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-subscript-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-superscript::before {
-    content: url("https://api.iconify.design/fluent/text-superscript-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-superscript-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-list-ul::before {
-    content: url("https://api.iconify.design/fluent/text-bullet-list-ltr-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-bullet-list-ltr-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-list-ol::before {
-    content: url("https://api.iconify.design/fluent/text-number-list-ltr-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-number-list-ltr-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-align-left::before {
-    content: url("https://api.iconify.design/fluent/text-align-left-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-align-left-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-align-center::before {
-    content: url("https://api.iconify.design/fluent/text-align-center-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-align-center-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-align-right::before {
-    content: url("https://api.iconify.design/fluent/text-align-right-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-align-right-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-align-justify::before {
-    content: url("https://api.iconify.design/fluent/text-align-justify-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-align-justify-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-indent::before {
-    content: url("https://api.iconify.design/fluent/text-indent-increase-ltr-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-indent-increase-ltr-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-outdent::before {
-    content: url("https://api.iconify.design/fluent/text-indent-decrease-ltr-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-indent-decrease-ltr-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-link::before {
-    content: url("https://api.iconify.design/fluent/link-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/link-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-chain-broken::before {
-    content: url("https://api.iconify.design/fluent/link-dismiss-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/link-dismiss-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-picture-o::before {
-    content: url("https://api.iconify.design/fluent/image-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/image-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-paint-brush::before {
-    content: url("https://api.iconify.design/fluent/text-color-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-color-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-lightbulb-o::before {
-    content: url("https://api.iconify.design/fluent/color-line-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/color-line-20-regular.svg?color=white") !important;
   }
 
   .editor_atto_toolbar i.fa.fa-caret-down {
@@ -1248,59 +1259,59 @@ i.fa.fa-dashboard::before {
   .editor_atto_toolbar i.fa.fa-caret-down::before {
     width: 16px !important;
     height: 16px !important;
-    content: url("https://api.iconify.design/fluent/caret-down-16-filled.svg?color=%23c6c6c6") !important;
+    content: url("https://api.iconify.design/fluent/caret-down-16-regular.svg?color=%23c6c6c6") !important;
   }
 
   i.fa.fa-tint::before {
-    content: url("https://api.iconify.design/fluent/color-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/color-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-font::before {
-    content: url("https://api.iconify.design/fluent/text-font-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-font-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-undo::before {
-    content: url("https://api.iconify.design/fluent/arrow-undo-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/arrow-undo-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-repeat::before {
-    content: url("https://api.iconify.design/fluent/arrow-redo-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/arrow-redo-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-search::before {
-    content: url("https://api.iconify.design/fluent/search-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/search-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-circle-o-notch::before {
-    content: url("https://api.iconify.design/fluent/spinner-ios-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/spinner-ios-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-times::before {
-    content: url("https://api.iconify.design/fluent/close-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/close-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-level-down::before {
-    content: url("https://api.iconify.design/fluent/arrow-curve-down-left-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/arrow-curve-down-left-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-files-o::before {
-    content: url("https://api.iconify.design/fluent/document-multiple-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/document-multiple-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-microphone::before {
-    content: url("https://api.iconify.design/fluent/mic-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/mic-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-calculator::before {
-    content: url("https://api.iconify.design/fluent/calculator-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/calculator-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-check-square-o::before {
-    content: url("https://api.iconify.design/fluent/checkmark-square-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/checkmark-square-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-map::before {
-    content: url("https://api.iconify.design/fluent/map-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/map-20-regular.svg?color=white") !important;
   }
 
   .dashtitle i.fa.fa-map {
@@ -1310,11 +1321,11 @@ i.fa.fa-dashboard::before {
   .dashtitle i.fa.fa-map::before {
     width: 24px !important;
     height: 24px !important;
-    content: url("https://api.iconify.design/fluent/map-24-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/map-24-regular.svg?color=white") !important;
   }
 
   i.fa.fa-bar-chart::before {
-    content: url("https://api.iconify.design/fluent/data-histogram-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/data-histogram-20-regular.svg?color=white") !important;
   }
   i.fa.fa-bar-chart.fa-5x {
     width: 32px;
@@ -1323,39 +1334,39 @@ i.fa.fa-dashboard::before {
   i.fa.fa-bar-chart.fa-5x::before {
     width: 32px !important;
     height: 32px !important;
-    content: url("https://api.iconify.design/fluent/clipboard-data-bar-32-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/clipboard-data-bar-32-regular.svg?color=white") !important;
   }
 
   .editor_atto_toolbar i.fa.fa-pencil-square-o::before {
-    content: url("https://api.iconify.design/fluent/translate-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/translate-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-table::before {
-    content: url("https://api.iconify.design/fluent/table-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/table-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-i-cursor::before {
-    content: url("https://api.iconify.design/fluent/text-clear-formatting-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/text-clear-formatting-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-code::before {
-    content: url("https://api.iconify.design/fluent/code-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/code-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-arrows-alt::before {
-    content: url("https://api.iconify.design/fluent/arrow-expand-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/arrow-expand-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-universal-access::before {
-    content: url("https://api.iconify.design/fluent/accessibility-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/accessibility-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-long-arrow-down::before {
-    content: url("https://api.iconify.design/fluent/arrow-sort-down-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/arrow-sort-down-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-long-arrow-up::before {
-    content: url("https://api.iconify.design/fluent/arrow-sort-up-20-filled.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/arrow-sort-up-20-regular.svg?color=white") !important;
   }
 
   i.fa.fa-braille::before {
@@ -1373,7 +1384,7 @@ i.fa.fa-dashboard::before {
   i.fa.fa-star::before {
     width: 16px !important;
     height: 16px !important;
-    content: url("https://api.iconify.design/fluent/star-16-filled.svg?color=%23ffd600") !important;
+    content: url("https://api.iconify.design/fluent/star-16-regular.svg?color=%23ffd600") !important;
   }
 
   .text-info {
@@ -1991,7 +2002,8 @@ a.dimmed_text:visited,
     background-color: #242424;
     border-radius: 10px;
   }
-  #page-course-view-weeks .weeks li.section:nth-child(even) .section:empty, #page-course-view-weeks .weeks li.section:nth-child(even) .summary p:empty {
+  #page-course-view-weeks .weeks li.section:nth-child(even) .section:empty,
+#page-course-view-weeks .weeks li.section:nth-child(even) .summary p:empty {
     display: none;
     margin-bottom: 0;
   }
@@ -2136,6 +2148,39 @@ a.dimmed_text:visited,
     background-color: inherit;
   }
 
+  /* ----- Loading ----- */
+  .block_onlinesurvey_surveys_loading {
+    color: #ffffff;
+    background-color: #1e1e1e;
+  }
+
+  .block_onlinesurvey_lds-spinner div::after {
+    background: #c6c6c6;
+  }
+
+  .overlay-icon-container {
+    background-color: inherit;
+  }
+  .overlay-icon-container .loading-icon .icon {
+    height: 20px;
+    width: 20px;
+    font-size: 20px;
+  }
+
+  /* ----- Nested cards ----- */
+  #page-admin-tool-dataprivacy-summary #region-main .card {
+    color: #ffffff;
+    background-color: #222222;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2) !important;
+  }
+  #page-admin-tool-dataprivacy-summary #region-main .card .card-header {
+    color: #ffffff;
+    background-color: #242424;
+    border-bottom: 1px solid #121212;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
   /* ----- Input ----- */
   .datapreferences > form > div #advancedcheckbox:checked ~ input.btn.btn-secondary {
     display: none;
@@ -2222,6 +2267,7 @@ a.dimmed_text:visited,
   }
 
   form .form-inline input[type=text],
+form .form-inline input[type=password],
 #coursesearch .coursesearchbox input[type=text],
 form.form-inline input[type=text],
 .message-app input[type=text],
@@ -2250,6 +2296,7 @@ form.form-inline input[type=text],
     transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-width 0.2s ease-in-out !important;
   }
   form .form-inline input[type=text]:hover,
+form .form-inline input[type=password]:hover,
 #coursesearch .coursesearchbox input[type=text]:hover,
 form.form-inline input[type=text]:hover,
 .message-app input[type=text]:hover,
@@ -2262,6 +2309,8 @@ form.form-inline input[type=text]:hover,
     border-bottom-color: rgba(255, 255, 255, 0.87);
   }
   form .form-inline input[type=text]:focus, form .form-inline input[type=text]:focus-visible,
+form .form-inline input[type=password]:focus,
+form .form-inline input[type=password]:focus-visible,
 #coursesearch .coursesearchbox input[type=text]:focus,
 #coursesearch .coursesearchbox input[type=text]:focus-visible,
 form.form-inline input[type=text]:focus,
@@ -2287,6 +2336,8 @@ form.form-inline input[type=text]:focus-visible,
     transition: none;
   }
   form .form-inline input[type=text]:disabled, form .form-inline input[type=text]:read-only,
+form .form-inline input[type=password]:disabled,
+form .form-inline input[type=password]:read-only,
 #coursesearch .coursesearchbox input[type=text]:disabled,
 #coursesearch .coursesearchbox input[type=text]:read-only,
 form.form-inline input[type=text]:disabled,
@@ -2309,6 +2360,8 @@ form.form-inline input[type=text]:read-only,
     transition: none !important;
   }
   form .form-inline input[type=text]:disabled:hover, form .form-inline input[type=text]:read-only:hover,
+form .form-inline input[type=password]:disabled:hover,
+form .form-inline input[type=password]:read-only:hover,
 #coursesearch .coursesearchbox input[type=text]:disabled:hover,
 #coursesearch .coursesearchbox input[type=text]:read-only:hover,
 form.form-inline input[type=text]:disabled:hover,
@@ -2415,11 +2468,13 @@ form.form-inline input[type=text]:read-only:hover,
     box-shadow: none;
   }
 
-  .btn.btn-primary:not(.btn-lg):not(.hidden) {
+  .btn.btn-primary:not(.btn-lg):not(.hidden),
+.maincalendar button[data-action=new-event-button]:not(.hidden) {
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2) !important;
     transition: box-shadow 0.7s;
   }
-  .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden) {
+  .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden),
+.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden) {
     border: 0;
     outline: none;
     border-radius: 4px;
@@ -2440,15 +2495,22 @@ form.form-inline input[type=text]:read-only:hover,
     perspective: 1px;
     position: relative;
   }
-  .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden), .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):active, .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):focus, .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):active:focus {
+  .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden), .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):active, .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):focus, .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):active:focus,
+.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden),
+.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden):active,
+.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden):focus,
+.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden):active:focus {
     outline: unset;
     background-color: var(--bg-primary);
     color: var(--fg-on-primary);
   }
-  .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden) i, .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden).fa {
+  .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden) i, .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden).fa,
+.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden) i,
+.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden).fa {
     margin-right: 8px;
   }
-  .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden)::before {
+  .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden)::before,
+.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden)::before {
     content: "";
     display: block;
     position: absolute;
@@ -2466,7 +2528,9 @@ form.form-inline input[type=text]:read-only:hover,
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):active::before, .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):focus::before {
+  .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):active::before, .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):focus::before,
+.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden):active::before,
+.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden):focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -2480,19 +2544,23 @@ form.form-inline input[type=text]:read-only:hover,
       background-size: 15000%;
     }
   }
-  .btn.btn-primary:not(.btn-lg):not(.hidden):hover {
+  .btn.btn-primary:not(.btn-lg):not(.hidden):hover,
+.maincalendar button[data-action=new-event-button]:not(.hidden):hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2) !important;
     transition: box-shadow 0.6s;
     background-color: var(--bg-primary-hover);
   }
-  .btn.btn-primary:not(.btn-lg):not(.hidden):focus, .btn.btn-primary:not(.btn-lg):not(.hidden):active {
+  .btn.btn-primary:not(.btn-lg):not(.hidden):focus, .btn.btn-primary:not(.btn-lg):not(.hidden):active,
+.maincalendar button[data-action=new-event-button]:not(.hidden):focus,
+.maincalendar button[data-action=new-event-button]:not(.hidden):active {
     box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2) !important;
     transition: box-shadow 0.6s;
   }
 
   button.btn.btn-secondary[type=submit]:not(.hidden),
 .datapreferences input.btn.btn-secondary[type=submit]:not(.hidden),
-.moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden) {
+.moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden),
+#id_cancel:not(.hidden) {
     border: 0;
     outline: none;
     border-radius: 4px;
@@ -2521,7 +2589,11 @@ form.form-inline input[type=text]:read-only:hover,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden),
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden):active,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden):focus,
-.moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden):active:focus {
+.moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden):active:focus,
+#id_cancel:not(.hidden),
+#id_cancel:not(.hidden):active,
+#id_cancel:not(.hidden):focus,
+#id_cancel:not(.hidden):active:focus {
     outline: unset;
     background-color: inherit;
     color: #c6c6c6;
@@ -2530,12 +2602,15 @@ form.form-inline input[type=text]:read-only:hover,
 .datapreferences input.btn.btn-secondary[type=submit]:not(.hidden) i,
 .datapreferences input.btn.btn-secondary[type=submit]:not(.hidden).fa,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden) i,
-.moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden).fa {
+.moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden).fa,
+#id_cancel:not(.hidden) i,
+#id_cancel:not(.hidden).fa {
     margin-right: 8px;
   }
   button.btn.btn-secondary[type=submit]:not(.hidden)::before,
 .datapreferences input.btn.btn-secondary[type=submit]:not(.hidden)::before,
-.moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden)::before {
+.moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden)::before,
+#id_cancel:not(.hidden)::before {
     content: "";
     display: block;
     position: absolute;
@@ -2557,7 +2632,9 @@ form.form-inline input[type=text]:read-only:hover,
 .datapreferences input.btn.btn-secondary[type=submit]:not(.hidden):active::before,
 .datapreferences input.btn.btn-secondary[type=submit]:not(.hidden):focus::before,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden):active::before,
-.moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden):focus::before {
+.moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden):focus::before,
+#id_cancel:not(.hidden):active::before,
+#id_cancel:not(.hidden):focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -2573,7 +2650,8 @@ form.form-inline input[type=text]:read-only:hover,
   }
   button.btn.btn-secondary[type=submit]:hover,
 .datapreferences input.btn.btn-secondary[type=submit]:hover,
-.moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:hover {
+.moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:hover,
+#id_cancel:hover {
     color: #ffffff;
   }
   button.btn.btn-secondary[type=submit]:focus, button.btn.btn-secondary[type=submit]:active, button.btn.btn-secondary[type=submit]:focus:active, button.btn.btn-secondary[type=submit]:focus:hover,
@@ -2584,7 +2662,11 @@ form.form-inline input[type=text]:read-only:hover,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:focus,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:active,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:focus:active,
-.moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:focus:hover {
+.moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:focus:hover,
+#id_cancel:focus,
+#id_cancel:active,
+#id_cancel:focus:active,
+#id_cancel:focus:hover {
     outline: none !important;
     box-shadow: none !important;
     background-color: inherit;
@@ -2653,19 +2735,24 @@ form.form-inline input[type=text]:read-only:hover,
 .btn-group[data-region=view-selector] .dropdown-toggle:focus,
 .atto_menu .dropdown-toggle:active:focus,
 .atto_menu .dropdown-toggle:hover:focus,
-.atto_menu .dropdown-toggle:focus {
+.atto_menu .dropdown-toggle:focus,
+.maincalendar [data-region=view-selector] .dropdown-toggle:active:focus,
+.maincalendar [data-region=view-selector] .dropdown-toggle:hover:focus,
+.maincalendar [data-region=view-selector] .dropdown-toggle:focus {
     outline: none;
     box-shadow: none;
   }
   .dropdown .dropdown-toggle.btn:not(.hidden),
 .btn-group[data-region=view-selector] .dropdown-toggle.btn:not(.hidden),
-.atto_menu .dropdown-toggle.btn:not(.hidden) {
+.atto_menu .dropdown-toggle.btn:not(.hidden),
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden) {
     box-shadow: none;
     border: 1px solid #ffffff !important;
   }
   .dropdown .dropdown-toggle.btn:not(.hidden):not(.hidden),
 .btn-group[data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden),
-.atto_menu .dropdown-toggle.btn:not(.hidden):not(.hidden) {
+.atto_menu .dropdown-toggle.btn:not(.hidden):not(.hidden),
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden) {
     border: 0;
     outline: none;
     border-radius: 4px;
@@ -2692,7 +2779,11 @@ form.form-inline input[type=text]:read-only:hover,
 .atto_menu .dropdown-toggle.btn:not(.hidden):not(.hidden),
 .atto_menu .dropdown-toggle.btn:not(.hidden):not(.hidden):active,
 .atto_menu .dropdown-toggle.btn:not(.hidden):not(.hidden):focus,
-.atto_menu .dropdown-toggle.btn:not(.hidden):not(.hidden):active:focus {
+.atto_menu .dropdown-toggle.btn:not(.hidden):not(.hidden):active:focus,
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden),
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden):active,
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden):focus,
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden):active:focus {
     outline: unset;
     background-color: inherit;
     color: #ffffff;
@@ -2701,17 +2792,21 @@ form.form-inline input[type=text]:read-only:hover,
 .btn-group[data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden) i,
 .btn-group[data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden).fa,
 .atto_menu .dropdown-toggle.btn:not(.hidden):not(.hidden) i,
-.atto_menu .dropdown-toggle.btn:not(.hidden):not(.hidden).fa {
+.atto_menu .dropdown-toggle.btn:not(.hidden):not(.hidden).fa,
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden) i,
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden).fa {
     margin-right: 8px;
   }
   .dropdown .dropdown-toggle.btn:hover,
 .btn-group[data-region=view-selector] .dropdown-toggle.btn:hover,
-.atto_menu .dropdown-toggle.btn:hover {
+.atto_menu .dropdown-toggle.btn:hover,
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn:hover {
     background-color: #373737;
   }
   .dropdown .dropdown-menu,
 .btn-group[data-region=view-selector] .dropdown-menu,
-.atto_menu .dropdown-menu {
+.atto_menu .dropdown-menu,
+.maincalendar [data-region=view-selector] .dropdown-menu {
     color: #ffffff;
     background-color: #323232;
     box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2) !important;
@@ -2720,7 +2815,8 @@ form.form-inline input[type=text]:read-only:hover,
   }
   .dropdown .dropdown-menu .dropdown-item,
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-item,
-.atto_menu .dropdown-menu .dropdown-item {
+.atto_menu .dropdown-menu .dropdown-item,
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item {
     color: #ffffff;
     list-style: none;
     background-color: inherit;
@@ -2728,44 +2824,52 @@ form.form-inline input[type=text]:read-only:hover,
   }
   .dropdown .dropdown-menu .dropdown-item::before,
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-item::before,
-.atto_menu .dropdown-menu .dropdown-item::before {
+.atto_menu .dropdown-menu .dropdown-item::before,
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item::before {
     display: none;
   }
   .dropdown .dropdown-menu .dropdown-item a,
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-item a,
-.atto_menu .dropdown-menu .dropdown-item a {
+.atto_menu .dropdown-menu .dropdown-item a,
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item a {
     color: inherit !important;
   }
   .dropdown .dropdown-menu .dropdown-item a:hover,
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-item a:hover,
-.atto_menu .dropdown-menu .dropdown-item a:hover {
+.atto_menu .dropdown-menu .dropdown-item a:hover,
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item a:hover {
     text-decoration: none;
   }
   .dropdown .dropdown-menu .dropdown-item i.icon[aria-hidden=true],
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-item i.icon[aria-hidden=true],
-.atto_menu .dropdown-menu .dropdown-item i.icon[aria-hidden=true] {
+.atto_menu .dropdown-menu .dropdown-item i.icon[aria-hidden=true],
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item i.icon[aria-hidden=true] {
     display: none;
   }
   .dropdown .dropdown-menu .dropdown-item[aria-current=true],
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-item[aria-current=true],
-.atto_menu .dropdown-menu .dropdown-item[aria-current=true] {
+.atto_menu .dropdown-menu .dropdown-item[aria-current=true],
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item[aria-current=true] {
     background-color: #404040;
   }
   .dropdown .dropdown-menu .dropdown-item:hover,
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-item:hover,
-.atto_menu .dropdown-menu .dropdown-item:hover {
+.atto_menu .dropdown-menu .dropdown-item:hover,
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item:hover {
     background-color: #373737;
   }
   .dropdown .dropdown-menu .dropdown-header,
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-header,
-.atto_menu .dropdown-menu .dropdown-header {
+.atto_menu .dropdown-menu .dropdown-header,
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-header {
     color: #959595;
     padding: 5px 10px;
     text-align: center;
   }
   .dropdown .dropdown-menu .dropdown-divider,
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-divider,
-.atto_menu .dropdown-menu .dropdown-divider {
+.atto_menu .dropdown-menu .dropdown-divider,
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-divider {
     border-color: #121212;
     margin: 0;
   }
@@ -2774,7 +2878,8 @@ form.form-inline input[type=text]:read-only:hover,
 .urlselect.custom-select,
 select.custom-select.singleselect,
 .datapreferences select.custom-select,
-.moodle-dialogue-base .moodle-dialogue-bd select.custom-select {
+.moodle-dialogue-base .moodle-dialogue-bd select.custom-select,
+.modal-content select.custom-select {
     color: #ffffff;
     box-sizing: border-box;
     overflow: hidden;
@@ -2798,7 +2903,8 @@ select.custom-select.singleselect,
 .urlselect.custom-select:hover,
 select.custom-select.singleselect:hover,
 .datapreferences select.custom-select:hover,
-.moodle-dialogue-base .moodle-dialogue-bd select.custom-select:hover {
+.moodle-dialogue-base .moodle-dialogue-bd select.custom-select:hover,
+.modal-content select.custom-select:hover {
     background-color: #373737;
     border-bottom-color: rgba(255, 255, 255, 0.87);
     cursor: pointer;
@@ -2811,7 +2917,9 @@ select.custom-select.singleselect:focus-visible,
 .datapreferences select.custom-select:focus,
 .datapreferences select.custom-select:focus-visible,
 .moodle-dialogue-base .moodle-dialogue-bd select.custom-select:focus,
-.moodle-dialogue-base .moodle-dialogue-bd select.custom-select:focus-visible {
+.moodle-dialogue-base .moodle-dialogue-bd select.custom-select:focus-visible,
+.modal-content select.custom-select:focus,
+.modal-content select.custom-select:focus-visible {
     color: inherit;
     background-color: #494949;
     outline: none;
@@ -2822,7 +2930,8 @@ select.custom-select.singleselect:focus-visible,
 .urlselect.custom-select:disabled,
 select.custom-select.singleselect:disabled,
 .datapreferences select.custom-select:disabled,
-.moodle-dialogue-base .moodle-dialogue-bd select.custom-select:disabled {
+.moodle-dialogue-base .moodle-dialogue-bd select.custom-select:disabled,
+.modal-content select.custom-select:disabled {
     background-color: #1d1d1d;
     color: #888888;
     border-bottom-color: #888888;
@@ -2831,7 +2940,8 @@ select.custom-select.singleselect:disabled,
 .urlselect.custom-select:disabled:hover,
 select.custom-select.singleselect:disabled:hover,
 .datapreferences select.custom-select:disabled:hover,
-.moodle-dialogue-base .moodle-dialogue-bd select.custom-select:disabled:hover {
+.moodle-dialogue-base .moodle-dialogue-bd select.custom-select:disabled:hover,
+.modal-content select.custom-select:disabled:hover {
     border-bottom-color: inherit;
   }
 
@@ -3403,6 +3513,14 @@ select.custom-select.singleselect:disabled:hover,
     margin: 0;
     padding: 40px 20px !important;
   }
+  #page-footer a {
+    color: #c6c6c6 !important;
+  }
+  #page-footer a:focus, #page-footer a:active, #page-footer a:hover, #page-footer a:focus:active {
+    color: #ffffff !important;
+    outline: none;
+    box-shadow: none;
+  }
   #page-footer::after {
     content: "\a===    Moodle Dark Theme    ===\aStyle par Martin Danhier & Yannis Fraselle\aVersion 0.6.0\a\a";
     display: block;
@@ -3584,6 +3702,17 @@ select.custom-select.singleselect:disabled:hover,
 
   .bs-popover-top > .arrow::after,
 .bs-popover-auto[x-placement^=top] > .arrow::after {
+    border-top-color: #323232;
+  }
+
+  .hover-tooltip-container .hover-tooltip {
+    color: #ffffff;
+    background-color: #323232;
+    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2) !important;
+    border-radius: 10px;
+    padding: 15px;
+  }
+  .hover-tooltip-container .hover-tooltip::before, .hover-tooltip-container .hover-tooltip::after {
     border-top-color: #323232;
   }
 
@@ -4087,34 +4216,57 @@ select.custom-select.singleselect:disabled:hover,
     color: inherit;
   }
 
-  .moodle-dialogue-bd .alert {
+  .alert {
     border-radius: 10px;
     margin: 15px;
     display: flex !important;
     justify-content: flex-start;
     align-items: center;
-    height: 20px;
+    min-height: 20px;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    font-weight: 500;
+    position: relative;
   }
-  .moodle-dialogue-bd .alert::before {
+  .alert::before {
     width: 20px !important;
     height: 20px !important;
     display: flex !important;
     padding: 0 !important;
     margin-right: 5px;
   }
-  .moodle-dialogue-bd .alert.alert-warning {
+  .alert.alert-warning {
     background-color: #f1d06b;
     color: #000000;
   }
-  .moodle-dialogue-bd .alert.alert-warning::before {
+  .alert.alert-warning::before {
     content: url("https://api.iconify.design/fluent/warning-20-regular.svg?color=%23000000") !important;
   }
-  .moodle-dialogue-bd .alert.alert-danger {
+  .alert.alert-danger {
     background-color: #c95066;
     color: #000000;
   }
-  .moodle-dialogue-bd .alert.alert-danger::before {
+  .alert.alert-danger::before {
     content: url("https://api.iconify.design/fluent/error-circle-20-regular.svg?color=%23000000") !important;
+  }
+  .alert.alert-success {
+    background-color: #6eb45e;
+    color: #000000;
+  }
+  .alert.alert-success::before {
+    content: url("https://api.iconify.design/fluent/checkmark-circle-20-regular.svg?color=%23000000") !important;
+  }
+  .alert.alert-info {
+    background-color: #5e9cd3;
+    color: #000000;
+  }
+  .alert.alert-info::before {
+    content: url("https://api.iconify.design/fluent/info-20-regular.svg?color=%23000000") !important;
+  }
+  .alert button.close {
+    position: absolute;
+    right: 10px;
   }
 
   .atto_generico_buttons {
@@ -4222,7 +4374,12 @@ select.custom-select.singleselect:disabled:hover,
 
   .discussion-list,
 .choicegroups,
-#overview-grade {
+#overview-grade,
+#page-report-usersessions-user table.generaltable,
+#page-admin-tool-lp-plans table.generaltable,
+#page-user-managetoken table.generaltable,
+#page-message-notificationpreferences table.preference-table,
+#page-repository-manage_instances table.generaltable {
     background-color: inherit;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2) !important;
     color: #ffffff;
@@ -4232,39 +4389,79 @@ select.custom-select.singleselect:disabled:hover,
   }
   .discussion-list thead,
 .choicegroups thead,
-#overview-grade thead {
+#overview-grade thead,
+#page-report-usersessions-user table.generaltable thead,
+#page-admin-tool-lp-plans table.generaltable thead,
+#page-user-managetoken table.generaltable thead,
+#page-message-notificationpreferences table.preference-table thead,
+#page-repository-manage_instances table.generaltable thead {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
   }
-  .discussion-list th,
+  .discussion-list tbody:first-child tr:first-child th,
 .discussion-list thead th,
-.choicegroups th,
+.choicegroups tbody:first-child tr:first-child th,
 .choicegroups thead th,
-#overview-grade th,
-#overview-grade thead th {
+#overview-grade tbody:first-child tr:first-child th,
+#overview-grade thead th,
+#page-report-usersessions-user table.generaltable tbody:first-child tr:first-child th,
+#page-report-usersessions-user table.generaltable thead th,
+#page-admin-tool-lp-plans table.generaltable tbody:first-child tr:first-child th,
+#page-admin-tool-lp-plans table.generaltable thead th,
+#page-user-managetoken table.generaltable tbody:first-child tr:first-child th,
+#page-user-managetoken table.generaltable thead th,
+#page-message-notificationpreferences table.preference-table tbody:first-child tr:first-child th,
+#page-message-notificationpreferences table.preference-table thead th,
+#page-repository-manage_instances table.generaltable tbody:first-child tr:first-child th,
+#page-repository-manage_instances table.generaltable thead th {
     background-color: #323232;
     text-align: center;
     border-color: #121212;
     border: 0;
   }
-  .discussion-list th:first-child,
+  .discussion-list tbody:first-child tr:first-child th:first-child,
 .discussion-list thead th:first-child,
-.choicegroups th:first-child,
+.choicegroups tbody:first-child tr:first-child th:first-child,
 .choicegroups thead th:first-child,
-#overview-grade th:first-child,
-#overview-grade thead th:first-child {
+#overview-grade tbody:first-child tr:first-child th:first-child,
+#overview-grade thead th:first-child,
+#page-report-usersessions-user table.generaltable tbody:first-child tr:first-child th:first-child,
+#page-report-usersessions-user table.generaltable thead th:first-child,
+#page-admin-tool-lp-plans table.generaltable tbody:first-child tr:first-child th:first-child,
+#page-admin-tool-lp-plans table.generaltable thead th:first-child,
+#page-user-managetoken table.generaltable tbody:first-child tr:first-child th:first-child,
+#page-user-managetoken table.generaltable thead th:first-child,
+#page-message-notificationpreferences table.preference-table tbody:first-child tr:first-child th:first-child,
+#page-message-notificationpreferences table.preference-table thead th:first-child,
+#page-repository-manage_instances table.generaltable tbody:first-child tr:first-child th:first-child,
+#page-repository-manage_instances table.generaltable thead th:first-child {
     border-top-left-radius: 10px;
   }
-  .discussion-list th:last-child,
+  .discussion-list tbody:first-child tr:first-child th:last-child,
 .discussion-list thead th:last-child,
-.choicegroups th:last-child,
+.choicegroups tbody:first-child tr:first-child th:last-child,
 .choicegroups thead th:last-child,
-#overview-grade th:last-child,
-#overview-grade thead th:last-child {
+#overview-grade tbody:first-child tr:first-child th:last-child,
+#overview-grade thead th:last-child,
+#page-report-usersessions-user table.generaltable tbody:first-child tr:first-child th:last-child,
+#page-report-usersessions-user table.generaltable thead th:last-child,
+#page-admin-tool-lp-plans table.generaltable tbody:first-child tr:first-child th:last-child,
+#page-admin-tool-lp-plans table.generaltable thead th:last-child,
+#page-user-managetoken table.generaltable tbody:first-child tr:first-child th:last-child,
+#page-user-managetoken table.generaltable thead th:last-child,
+#page-message-notificationpreferences table.preference-table tbody:first-child tr:first-child th:last-child,
+#page-message-notificationpreferences table.preference-table thead th:last-child,
+#page-repository-manage_instances table.generaltable tbody:first-child tr:first-child th:last-child,
+#page-repository-manage_instances table.generaltable thead th:last-child {
     border-top-right-radius: 10px;
   }
   .discussion-list .lead .badge.rounded-pill,
 .choicegroups .lead .badge.rounded-pill,
-#overview-grade .lead .badge.rounded-pill {
+#overview-grade .lead .badge.rounded-pill,
+#page-report-usersessions-user table.generaltable .lead .badge.rounded-pill,
+#page-admin-tool-lp-plans table.generaltable .lead .badge.rounded-pill,
+#page-user-managetoken table.generaltable .lead .badge.rounded-pill,
+#page-message-notificationpreferences table.preference-table .lead .badge.rounded-pill,
+#page-repository-manage_instances table.generaltable .lead .badge.rounded-pill {
     background-color: var(--bg-primary-light);
     color: var(--fg-on-primary-light);
     border-radius: 50%;
@@ -4278,7 +4475,22 @@ select.custom-select.singleselect:disabled:hover,
 .choicegroups tbody tr,
 #overview-grade tbody td,
 #overview-grade tbody th,
-#overview-grade tbody tr {
+#overview-grade tbody tr,
+#page-report-usersessions-user table.generaltable tbody td,
+#page-report-usersessions-user table.generaltable tbody th,
+#page-report-usersessions-user table.generaltable tbody tr,
+#page-admin-tool-lp-plans table.generaltable tbody td,
+#page-admin-tool-lp-plans table.generaltable tbody th,
+#page-admin-tool-lp-plans table.generaltable tbody tr,
+#page-user-managetoken table.generaltable tbody td,
+#page-user-managetoken table.generaltable tbody th,
+#page-user-managetoken table.generaltable tbody tr,
+#page-message-notificationpreferences table.preference-table tbody td,
+#page-message-notificationpreferences table.preference-table tbody th,
+#page-message-notificationpreferences table.preference-table tbody tr,
+#page-repository-manage_instances table.generaltable tbody td,
+#page-repository-manage_instances table.generaltable tbody th,
+#page-repository-manage_instances table.generaltable tbody tr {
     color: #c6c6c6;
     border: 0;
   }
@@ -4287,7 +4499,17 @@ select.custom-select.singleselect:disabled:hover,
 .choicegroups tbody tr:nth-child(even) td,
 .choicegroups tbody tr:nth-child(even) th,
 #overview-grade tbody tr:nth-child(even) td,
-#overview-grade tbody tr:nth-child(even) th {
+#overview-grade tbody tr:nth-child(even) th,
+#page-report-usersessions-user table.generaltable tbody tr:nth-child(even) td,
+#page-report-usersessions-user table.generaltable tbody tr:nth-child(even) th,
+#page-admin-tool-lp-plans table.generaltable tbody tr:nth-child(even) td,
+#page-admin-tool-lp-plans table.generaltable tbody tr:nth-child(even) th,
+#page-user-managetoken table.generaltable tbody tr:nth-child(even) td,
+#page-user-managetoken table.generaltable tbody tr:nth-child(even) th,
+#page-message-notificationpreferences table.preference-table tbody tr:nth-child(even) td,
+#page-message-notificationpreferences table.preference-table tbody tr:nth-child(even) th,
+#page-repository-manage_instances table.generaltable tbody tr:nth-child(even) td,
+#page-repository-manage_instances table.generaltable tbody tr:nth-child(even) th {
     background-color: #272727;
   }
   .discussion-list tbody tr:nth-child(odd) td,
@@ -4295,7 +4517,17 @@ select.custom-select.singleselect:disabled:hover,
 .choicegroups tbody tr:nth-child(odd) td,
 .choicegroups tbody tr:nth-child(odd) th,
 #overview-grade tbody tr:nth-child(odd) td,
-#overview-grade tbody tr:nth-child(odd) th {
+#overview-grade tbody tr:nth-child(odd) th,
+#page-report-usersessions-user table.generaltable tbody tr:nth-child(odd) td,
+#page-report-usersessions-user table.generaltable tbody tr:nth-child(odd) th,
+#page-admin-tool-lp-plans table.generaltable tbody tr:nth-child(odd) td,
+#page-admin-tool-lp-plans table.generaltable tbody tr:nth-child(odd) th,
+#page-user-managetoken table.generaltable tbody tr:nth-child(odd) td,
+#page-user-managetoken table.generaltable tbody tr:nth-child(odd) th,
+#page-message-notificationpreferences table.preference-table tbody tr:nth-child(odd) td,
+#page-message-notificationpreferences table.preference-table tbody tr:nth-child(odd) th,
+#page-repository-manage_instances table.generaltable tbody tr:nth-child(odd) td,
+#page-repository-manage_instances table.generaltable tbody tr:nth-child(odd) th {
     background-color: #222222;
   }
   .discussion-list tbody tr:last-child td:first-child,
@@ -4303,7 +4535,17 @@ select.custom-select.singleselect:disabled:hover,
 .choicegroups tbody tr:last-child td:first-child,
 .choicegroups tbody tr:last-child th:first-child,
 #overview-grade tbody tr:last-child td:first-child,
-#overview-grade tbody tr:last-child th:first-child {
+#overview-grade tbody tr:last-child th:first-child,
+#page-report-usersessions-user table.generaltable tbody tr:last-child td:first-child,
+#page-report-usersessions-user table.generaltable tbody tr:last-child th:first-child,
+#page-admin-tool-lp-plans table.generaltable tbody tr:last-child td:first-child,
+#page-admin-tool-lp-plans table.generaltable tbody tr:last-child th:first-child,
+#page-user-managetoken table.generaltable tbody tr:last-child td:first-child,
+#page-user-managetoken table.generaltable tbody tr:last-child th:first-child,
+#page-message-notificationpreferences table.preference-table tbody tr:last-child td:first-child,
+#page-message-notificationpreferences table.preference-table tbody tr:last-child th:first-child,
+#page-repository-manage_instances table.generaltable tbody tr:last-child td:first-child,
+#page-repository-manage_instances table.generaltable tbody tr:last-child th:first-child {
     border-bottom-left-radius: 10px;
   }
   .discussion-list tbody tr:last-child td:last-child,
@@ -4311,12 +4553,27 @@ select.custom-select.singleselect:disabled:hover,
 .choicegroups tbody tr:last-child td:last-child,
 .choicegroups tbody tr:last-child th:last-child,
 #overview-grade tbody tr:last-child td:last-child,
-#overview-grade tbody tr:last-child th:last-child {
+#overview-grade tbody tr:last-child th:last-child,
+#page-report-usersessions-user table.generaltable tbody tr:last-child td:last-child,
+#page-report-usersessions-user table.generaltable tbody tr:last-child th:last-child,
+#page-admin-tool-lp-plans table.generaltable tbody tr:last-child td:last-child,
+#page-admin-tool-lp-plans table.generaltable tbody tr:last-child th:last-child,
+#page-user-managetoken table.generaltable tbody tr:last-child td:last-child,
+#page-user-managetoken table.generaltable tbody tr:last-child th:last-child,
+#page-message-notificationpreferences table.preference-table tbody tr:last-child td:last-child,
+#page-message-notificationpreferences table.preference-table tbody tr:last-child th:last-child,
+#page-repository-manage_instances table.generaltable tbody tr:last-child td:last-child,
+#page-repository-manage_instances table.generaltable tbody tr:last-child th:last-child {
     border-bottom-right-radius: 10px;
   }
   .discussion-list .btn.btn-link[data-type=favorite-toggle],
 .choicegroups .btn.btn-link[data-type=favorite-toggle],
-#overview-grade .btn.btn-link[data-type=favorite-toggle] {
+#overview-grade .btn.btn-link[data-type=favorite-toggle],
+#page-report-usersessions-user table.generaltable .btn.btn-link[data-type=favorite-toggle],
+#page-admin-tool-lp-plans table.generaltable .btn.btn-link[data-type=favorite-toggle],
+#page-user-managetoken table.generaltable .btn.btn-link[data-type=favorite-toggle],
+#page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle],
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle] {
     perspective: 1px;
     position: relative;
     border: 0;
@@ -4331,7 +4588,12 @@ select.custom-select.singleselect:disabled:hover,
   }
   .discussion-list .btn.btn-link[data-type=favorite-toggle]::before,
 .choicegroups .btn.btn-link[data-type=favorite-toggle]::before,
-#overview-grade .btn.btn-link[data-type=favorite-toggle]::before {
+#overview-grade .btn.btn-link[data-type=favorite-toggle]::before,
+#page-report-usersessions-user table.generaltable .btn.btn-link[data-type=favorite-toggle]::before,
+#page-admin-tool-lp-plans table.generaltable .btn.btn-link[data-type=favorite-toggle]::before,
+#page-user-managetoken table.generaltable .btn.btn-link[data-type=favorite-toggle]::before,
+#page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle]::before,
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]::before {
     content: "";
     display: block;
     position: absolute;
@@ -4353,7 +4615,17 @@ select.custom-select.singleselect:disabled:hover,
 .choicegroups .btn.btn-link[data-type=favorite-toggle]:active::before,
 .choicegroups .btn.btn-link[data-type=favorite-toggle]:focus::before,
 #overview-grade .btn.btn-link[data-type=favorite-toggle]:active::before,
-#overview-grade .btn.btn-link[data-type=favorite-toggle]:focus::before {
+#overview-grade .btn.btn-link[data-type=favorite-toggle]:focus::before,
+#page-report-usersessions-user table.generaltable .btn.btn-link[data-type=favorite-toggle]:active::before,
+#page-report-usersessions-user table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus::before,
+#page-admin-tool-lp-plans table.generaltable .btn.btn-link[data-type=favorite-toggle]:active::before,
+#page-admin-tool-lp-plans table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus::before,
+#page-user-managetoken table.generaltable .btn.btn-link[data-type=favorite-toggle]:active::before,
+#page-user-managetoken table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus::before,
+#page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle]:active::before,
+#page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle]:focus::before,
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:active::before,
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -4375,13 +4647,38 @@ select.custom-select.singleselect:disabled:hover,
 #overview-grade .btn.btn-link[data-type=favorite-toggle]:focus,
 #overview-grade .btn.btn-link[data-type=favorite-toggle]:active,
 #overview-grade .btn.btn-link[data-type=favorite-toggle]:hover,
-#overview-grade .btn.btn-link[data-type=favorite-toggle]:focus:active {
+#overview-grade .btn.btn-link[data-type=favorite-toggle]:focus:active,
+#page-report-usersessions-user table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus,
+#page-report-usersessions-user table.generaltable .btn.btn-link[data-type=favorite-toggle]:active,
+#page-report-usersessions-user table.generaltable .btn.btn-link[data-type=favorite-toggle]:hover,
+#page-report-usersessions-user table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus:active,
+#page-admin-tool-lp-plans table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus,
+#page-admin-tool-lp-plans table.generaltable .btn.btn-link[data-type=favorite-toggle]:active,
+#page-admin-tool-lp-plans table.generaltable .btn.btn-link[data-type=favorite-toggle]:hover,
+#page-admin-tool-lp-plans table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus:active,
+#page-user-managetoken table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus,
+#page-user-managetoken table.generaltable .btn.btn-link[data-type=favorite-toggle]:active,
+#page-user-managetoken table.generaltable .btn.btn-link[data-type=favorite-toggle]:hover,
+#page-user-managetoken table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus:active,
+#page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle]:focus,
+#page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle]:active,
+#page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle]:hover,
+#page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle]:focus:active,
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus,
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:active,
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:hover,
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus:active {
     outline: none;
     border: none;
   }
   .discussion-list .btn.btn-link[data-type=favorite-toggle]:hover,
 .choicegroups .btn.btn-link[data-type=favorite-toggle]:hover,
-#overview-grade .btn.btn-link[data-type=favorite-toggle]:hover {
+#overview-grade .btn.btn-link[data-type=favorite-toggle]:hover,
+#page-report-usersessions-user table.generaltable .btn.btn-link[data-type=favorite-toggle]:hover,
+#page-admin-tool-lp-plans table.generaltable .btn.btn-link[data-type=favorite-toggle]:hover,
+#page-user-managetoken table.generaltable .btn.btn-link[data-type=favorite-toggle]:hover,
+#page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle]:hover,
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:hover {
     background-color: #373737;
     text-decoration: none;
   }
@@ -4389,37 +4686,77 @@ select.custom-select.singleselect:disabled:hover,
 .choicegroups .btn.btn-link[data-type=favorite-toggle]:focus,
 .choicegroups .btn.btn-link[data-type=favorite-toggle]:focus-visible,
 #overview-grade .btn.btn-link[data-type=favorite-toggle]:focus,
-#overview-grade .btn.btn-link[data-type=favorite-toggle]:focus-visible {
+#overview-grade .btn.btn-link[data-type=favorite-toggle]:focus-visible,
+#page-report-usersessions-user table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus,
+#page-report-usersessions-user table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus-visible,
+#page-admin-tool-lp-plans table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus,
+#page-admin-tool-lp-plans table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus-visible,
+#page-user-managetoken table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus,
+#page-user-managetoken table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus-visible,
+#page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle]:focus,
+#page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle]:focus-visible,
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus,
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus-visible {
     box-shadow: none;
     background-color: inherit;
     text-decoration: none;
   }
   .discussion-list [data-container=discussion-tools],
 .choicegroups [data-container=discussion-tools],
-#overview-grade [data-container=discussion-tools] {
+#overview-grade [data-container=discussion-tools],
+#page-report-usersessions-user table.generaltable [data-container=discussion-tools],
+#page-admin-tool-lp-plans table.generaltable [data-container=discussion-tools],
+#page-user-managetoken table.generaltable [data-container=discussion-tools],
+#page-message-notificationpreferences table.preference-table [data-container=discussion-tools],
+#page-repository-manage_instances table.generaltable [data-container=discussion-tools] {
     margin-right: 5px;
   }
   .discussion-list .author-info,
 .choicegroups .author-info,
-#overview-grade .author-info {
+#overview-grade .author-info,
+#page-report-usersessions-user table.generaltable .author-info,
+#page-admin-tool-lp-plans table.generaltable .author-info,
+#page-user-managetoken table.generaltable .author-info,
+#page-message-notificationpreferences table.preference-table .author-info,
+#page-repository-manage_instances table.generaltable .author-info {
     color: #ffffff;
     font-weight: 300;
   }
   .discussion-list .author-info time,
 .choicegroups .author-info time,
-#overview-grade .author-info time {
+#overview-grade .author-info time,
+#page-report-usersessions-user table.generaltable .author-info time,
+#page-admin-tool-lp-plans table.generaltable .author-info time,
+#page-user-managetoken table.generaltable .author-info time,
+#page-message-notificationpreferences table.preference-table .author-info time,
+#page-repository-manage_instances table.generaltable .author-info time {
     color: #959595;
   }
   .discussion-list .author-info a,
 .choicegroups .author-info a,
-#overview-grade .author-info a {
+#overview-grade .author-info a,
+#page-report-usersessions-user table.generaltable .author-info a,
+#page-admin-tool-lp-plans table.generaltable .author-info a,
+#page-user-managetoken table.generaltable .author-info a,
+#page-message-notificationpreferences table.preference-table .author-info a,
+#page-repository-manage_instances table.generaltable .author-info a {
     color: #959595;
   }
   .discussion-list .author-info a:hover, .discussion-list .author-info a:hover time,
 .choicegroups .author-info a:hover,
 .choicegroups .author-info a:hover time,
 #overview-grade .author-info a:hover,
-#overview-grade .author-info a:hover time {
+#overview-grade .author-info a:hover time,
+#page-report-usersessions-user table.generaltable .author-info a:hover,
+#page-report-usersessions-user table.generaltable .author-info a:hover time,
+#page-admin-tool-lp-plans table.generaltable .author-info a:hover,
+#page-admin-tool-lp-plans table.generaltable .author-info a:hover time,
+#page-user-managetoken table.generaltable .author-info a:hover,
+#page-user-managetoken table.generaltable .author-info a:hover time,
+#page-message-notificationpreferences table.preference-table .author-info a:hover,
+#page-message-notificationpreferences table.preference-table .author-info a:hover time,
+#page-repository-manage_instances table.generaltable .author-info a:hover,
+#page-repository-manage_instances table.generaltable .author-info a:hover time {
     color: #c6c6c6;
   }
 
@@ -4550,7 +4887,57 @@ span.unread::before {
     height: 20px !important;
     display: flex !important;
     padding: 0 !important;
-    content: url("https://api.iconify.design/fluent/mail-unread-20-filled.svg?color=%23000000") !important;
+    content: url("https://api.iconify.design/fluent/mail-unread-20-regular.svg?color=%23000000") !important;
+  }
+
+  #page-message-notificationpreferences table.preference-table {
+    border: 0;
+  }
+  #page-message-notificationpreferences table.preference-table h4 {
+    color: #ffffff;
+  }
+  #page-message-notificationpreferences table.preference-table .preference-state-status-container {
+    background: none;
+  }
+  #page-message-notificationpreferences table.preference-table input[type=checkbox]:not(:checked) + .preference-state-status-container .off-text,
+#page-message-notificationpreferences table.preference-table input[type=checkbox]:checked + .preference-state-status-container .on-text {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    font-size: 0;
+  }
+  #page-message-notificationpreferences table.preference-table input[type=checkbox]:not(:checked) + .preference-state-status-container .off-text::before,
+#page-message-notificationpreferences table.preference-table input[type=checkbox]:checked + .preference-state-status-container .on-text::before {
+    width: 20px !important;
+    height: 20px !important;
+    display: flex !important;
+    padding: 0 !important;
+  }
+  #page-message-notificationpreferences table.preference-table input[type=checkbox]:not(:checked) + .preference-state-status-container .off-text {
+    width: 28px;
+    height: 28px;
+  }
+  #page-message-notificationpreferences table.preference-table input[type=checkbox]:not(:checked) + .preference-state-status-container .off-text::before {
+    width: 28px !important;
+    height: 28px !important;
+    content: url("https://api.iconify.design/fluent/alert-off-28-regular.svg?color=%23e04545") !important;
+  }
+  #page-message-notificationpreferences table.preference-table input[type=checkbox]:checked + .preference-state-status-container .on-text {
+    width: 28px;
+    height: 28px;
+  }
+  #page-message-notificationpreferences table.preference-table input[type=checkbox]:checked + .preference-state-status-container .on-text::before {
+    width: 28px !important;
+    height: 28px !important;
+    content: url("https://api.iconify.design/fluent/alert-28-regular.svg?color=%236eb45e") !important;
+  }
+  #page-message-notificationpreferences table.preference-table td .container-fluid, #page-message-notificationpreferences table.preference-table .col-6 {
+    padding: 0 5px;
+  }
+  #page-message-notificationpreferences table.preference-table tr td:not(:first-child) {
+    width: fit-content;
   }
 
   /* ----- Database ----- */
@@ -5023,6 +5410,80 @@ span.unread::before {
     outline: none !important;
     box-shadow: none !important;
     background-color: inherit;
+  }
+
+  /* ----- Calendar ----- */
+  .maincalendar .arrow_link:not(.hidden) {
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: normal;
+    min-width: 64px;
+    padding: 0 16px;
+    min-height: 36px;
+    user-select: none;
+    vertical-align: middle;
+    perspective: 1px;
+    position: relative;
+  }
+  .maincalendar .arrow_link:not(.hidden), .maincalendar .arrow_link:not(.hidden):active, .maincalendar .arrow_link:not(.hidden):focus, .maincalendar .arrow_link:not(.hidden):active:focus {
+    outline: unset;
+    background-color: inherit;
+    color: #c6c6c6;
+  }
+  .maincalendar .arrow_link:not(.hidden) i, .maincalendar .arrow_link:not(.hidden).fa {
+    margin-right: 8px;
+  }
+  .maincalendar .arrow_link:not(.hidden)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image: radial-gradient(circle, white 1%, transparent 1%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 15000%;
+    opacity: 0;
+    transition: background 0.7s, opacity 1s;
+    z-index: -1;
+  }
+  .maincalendar .arrow_link:not(.hidden):active::before, .maincalendar .arrow_link:not(.hidden):focus::before {
+    animation-name: ripple;
+    animation-duration: 0.6s;
+    opacity: 0.4;
+    transition: 0s !important;
+  }
+  @keyframes ripple {
+    from {
+      background-size: 1%;
+    }
+    to {
+      background-size: 15000%;
+    }
+  }
+  .maincalendar .arrow_link:hover {
+    color: #ffffff;
+  }
+  .maincalendar .arrow_link:focus, .maincalendar .arrow_link:active, .maincalendar .arrow_link:focus:active, .maincalendar .arrow_link:focus:hover {
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: inherit;
+  }
+  .maincalendar [data-region=view-selector] .dropdown-item {
+    text-transform: capitalize;
   }
 
   /* ----- Other miscellaneous changes ----- */
