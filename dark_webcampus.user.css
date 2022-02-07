@@ -158,6 +158,13 @@ domain("auth.unamur.be") {
     [id^="message-drawer-view-overview-container"]>.card {
         background-color: inherit;
     }
+    
+    [id^="message-drawer-view-overview-container"]>.card>.lazy-load-list>.list-group>a:focus,
+    [id^="message-drawer-view-overview-container"]>.card>.lazy-load-list>.list-group>a:active
+    {
+        color: white;
+        background-color: #4a4a4a;
+    }
 
     /* Forum */
     .path-course-view .activityinstance .unread {
@@ -885,7 +892,7 @@ domain("auth.unamur.be") {
     
     .aabtn.focus, .btn-link.focus, .nav-link.focus, .atto_link_button.focus, [role="button"].focus, .list-group-item-action.focus, input[type="checkbox"].focus, input[type="radio"].focus, input[type="file"].focus, input[type="image"].focus, .sr-only-focusable.focus, a.dropdown-toggle.focus, .modal-dialog[tabindex="0"].focus, .moodle-dialogue-base .closebutton.focus, button.close.focus, .form-autocomplete-selection.focus, .aabtn:focus, .btn-link:focus, .nav-link:focus, .atto_link_button:focus, [role="button"]:focus, .list-group-item-action:focus, input[type="checkbox"]:focus, input[type="radio"]:focus, input[type="file"]:focus, input[type="image"]:focus, .sr-only-focusable:focus, a.dropdown-toggle:focus, .modal-dialog[tabindex="0"]:focus, .moodle-dialogue-base .closebutton:focus, button.close:focus, .form-autocomplete-selection:focus {
         box-shadow: 0 0 0 .15rem #4a4a4a;
-        transition: box-shadow .15s ease-in-out;
+        transition: box-shadow .15s ease;
     }
     
     [id^="message-drawer-view-overview-container"]>div>[id$="-toggle"]>button:focus {
@@ -1096,8 +1103,8 @@ domain("auth.unamur.be") {
     img.icon.smallicon,
     .content-item-container .notification-image img,
     .notification-area .image-container img {
-        height: 20px;
-        width: 20px;
+        height: auto;
+        width: auto;
         filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
     }
 
@@ -1389,12 +1396,15 @@ domain("auth.unamur.be") {
     
     body.drawer-open-right #blocks-column-toggle::before {
         content: url('https://api.iconify.design/fluent/chevron-right-12-regular.svg?color=white&width=24');
-        margin-left: -0.4rem;
     }
     
     #blocks-column-toggle::before {
         content: url('https://api.iconify.design/fluent/chevron-left-12-regular.svg?color=white&width=24');
-        margin-left: -0.4rem;
+        height: 24px;
+        width: 24px;
+        position: absolute;
+        left: .25rem;
+        top: .5rem;
     }
     
     .jsenabled .list-group-item.localboostnavigationcollapsibleparent.localboostnavigationcollapsedparent>div::after {
@@ -1451,7 +1461,6 @@ domain("auth.unamur.be") {
 
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/i/marker"] {
         content: url('https://api.iconify.design/fluent/calendar-info-16-regular.svg?width=20');
-        color: white;
     }
     
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/block_timeline/"][src$="/activities"] {
@@ -1514,20 +1523,14 @@ domain("auth.unamur.be") {
         vertical-align: unset !important;
     }
     
-    /* Bouger le cadre icone texte mais pas complètement enfin c'est chelou */
-    #nav-drawer .list-group div.list-group-item.active .icon, #nav-drawer .list-group ul li a.list-group-item.active .icon, #nav-drawer .list-group div.list-group-item.active:hover .icon, #nav-drawer .list-group ul li a.list-group-item.active:hover .icon{
-        margin-left: -0.2rem;
-    }
+    /* Center navbar icons */
     #nav-drawer .list-group div.list-group-item .icon, #nav-drawer .list-group ul li a.list-group-item .icon{
         margin-left: -0.2rem;
     }
     
-    /* Bouger le highlight bleu */
-    #nav-drawer .list-group ul li a.list-group-item.active{
-        padding-bottom: 0.4rem;
-    }
+    /* Reduce navbar buttons padding */
     #nav-drawer .list-group div.list-group-item, #nav-drawer .list-group ul li a.list-group-item{
-        padding-bottom: 0.4rem;
+        padding-bottom: 0.5rem;
     }
     
     /* Fixer et bouger les icônes des blocks */
@@ -1546,7 +1549,7 @@ domain("auth.unamur.be") {
     }
     
     .block-region .block.block_calendar_month h5::before, .block-region .block.block_calendar_upcoming h5::before{
-            content: url(https://api.iconify.design/fluent/calendar-ltr-16-regular.svg?color=white&width=24);
+        content: url(https://api.iconify.design/fluent/calendar-ltr-16-regular.svg?color=white&width=24);
     }
     
     .fa-globe::before{
@@ -1570,7 +1573,7 @@ domain("auth.unamur.be") {
     }
     
     .course-content .collapsible-actions a.collapseall{
-        background: url('https://api.iconify.design/fluent/caret-down-20-regular.svg?color=white&width=18') left no-repeat
+        background: url('https://api.iconify.design/fluent/caret-down-20-regular.svg?color=white&width=18') left no-repeat;
     }
     
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/i/completion-manual-n"] {
@@ -1597,7 +1600,7 @@ domain("auth.unamur.be") {
         content: url('https://api.iconify.design/fluent/more-vertical-16-filled.svg?color=white&width=18');
     }
     
-    .alert-danger::before{
+    .alert-danger::before{ /* To check next time an alert is shown */
         content: url('https://api.iconify.design/fluent/error-circle-12-regular.svg?color=%23ff9191&width=18');
         margin-right: 0.2rem;
     }
@@ -1620,10 +1623,6 @@ domain("auth.unamur.be") {
     
     .fa-eye::before, .fa-eye-slash::before{
         color: transparent;
-    }
-    
-    .fa-mortar-board::before, .fa-graduation-cap::before{
-        margin-right: 0.7rem;
     }
     
     .fa-long-arrow-down::before{
@@ -1695,8 +1694,8 @@ domain("auth.unamur.be") {
     .groupinfobox,
     .well,
     .path-calendar .maincalendar .calendar-event-panel {
-        background-color: #393737;
-        border-color: #444343;
+        background-color: #262626;
+        border-color: #303030;
     }
 
     /* ================== */
@@ -1839,7 +1838,7 @@ domain("auth.unamur.be") {
         user-select: none;
         background-color: #212020;
         border-radius: 15px;
-        height: 90%; /* TODO */
+        height: 100vh;
         box-shadow: 1px 1px #242323;
     }
     #nav-drawer .list-group div.list-group-item,
