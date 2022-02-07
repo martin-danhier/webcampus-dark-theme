@@ -112,14 +112,13 @@ a.btn.btn-link {
 }
 
 .btn.btn-primary:not(.btn-lg),
-.maincalendar button[data-action="new-event-button"],
- {
+.maincalendar button[data-action="new-event-button"] {
     @include raised-button(var(--bg-primary), var(--bg-primary-hover), var(--fg-on-primary));
 }
 
 button.btn.btn-secondary[type="submit"],
 .datapreferences input.btn.btn-secondary[type="submit"],
-.moodle-dialogue-base .moodle-dialogue-bd  .btn.btn-secondary,
+.moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary,
 #id_cancel {
     @include text-button($fg-high-emphasis, $fg-on-surface);
 }
@@ -145,9 +144,18 @@ button.btn.btn-secondary[type="submit"],
 
         &.btn {
             @include outlined-button($fg-on-surface, false);
+            padding-right: $spacing-s !important;
 
             &:hover {
                 background-color: $bg-field-hover;
+            }
+
+            // Arrow
+            &::after {
+                border: 0;
+                @include fluent-icon-base();
+                @include fluent-icon-img-override("caret-down", 16px, $fg-on-surface, "filled");
+                margin-left: $spacing-m !important;
             }
         }
     }
@@ -214,7 +222,22 @@ button.btn.btn-secondary[type="submit"],
 
 // Custom selects that must look like a dropdown menu (because they used it wrong)
 .maincalendar select.custom-select {
+    @include outlined-button($fg-on-surface, false);
 
+    // Arrow
+    background: $bg-field url(https://api.iconify.design/fluent/caret-down-16-filled.svg?color=%23ffffff) no-repeat right $spacing-s center;
+    background-size: 16px 16px;
+
+    &:active:focus,
+    &:hover:focus,
+    &:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    &:hover {
+        background-color: $bg-field-hover;
+    }
 }
 
 .mform select.custom-select,

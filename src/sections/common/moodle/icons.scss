@@ -879,7 +879,7 @@ i.fa.fa-braille::before {
 
 i.fa.fa-star {
     // Star
-    @include fluent-icon-override("star", $fluent-small-icon-size, $bg-icon-favorite);
+    @include fluent-icon-override("star", $fluent-small-icon-size, $bg-icon-favorite, "filled");
 }
 
 // ----- Changes that don't require icon changes -----

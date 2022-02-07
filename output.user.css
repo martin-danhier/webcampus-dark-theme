@@ -1384,7 +1384,7 @@ i.fa.fa-dashboard::before {
   i.fa.fa-star::before {
     width: 16px !important;
     height: 16px !important;
-    content: url("https://api.iconify.design/fluent/star-16-regular.svg?color=%23ffd600") !important;
+    content: url("https://api.iconify.design/fluent/star-16-filled.svg?color=%23ffd600") !important;
   }
 
   .text-info {
@@ -2742,6 +2742,12 @@ form.form-inline input[type=text]:read-only:hover,
     outline: none;
     box-shadow: none;
   }
+  .dropdown .dropdown-toggle.btn,
+.btn-group[data-region=view-selector] .dropdown-toggle.btn,
+.atto_menu .dropdown-toggle.btn,
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn {
+    padding-right: 10px !important;
+  }
   .dropdown .dropdown-toggle.btn:not(.hidden),
 .btn-group[data-region=view-selector] .dropdown-toggle.btn:not(.hidden),
 .atto_menu .dropdown-toggle.btn:not(.hidden),
@@ -2802,6 +2808,30 @@ form.form-inline input[type=text]:read-only:hover,
 .atto_menu .dropdown-toggle.btn:hover,
 .maincalendar [data-region=view-selector] .dropdown-toggle.btn:hover {
     background-color: #373737;
+  }
+  .dropdown .dropdown-toggle.btn::after,
+.btn-group[data-region=view-selector] .dropdown-toggle.btn::after,
+.atto_menu .dropdown-toggle.btn::after,
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn::after {
+    border: 0;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    width: 16px !important;
+    height: 16px !important;
+    content: url("https://api.iconify.design/fluent/caret-down-16-filled.svg?color=%23ffffff") !important;
+    margin-left: 20px !important;
+  }
+  .dropdown .dropdown-toggle.btn::after::before,
+.btn-group[data-region=view-selector] .dropdown-toggle.btn::after::before,
+.atto_menu .dropdown-toggle.btn::after::before,
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn::after::before {
+    width: 20px !important;
+    height: 20px !important;
+    display: flex !important;
+    padding: 0 !important;
   }
   .dropdown .dropdown-menu,
 .btn-group[data-region=view-selector] .dropdown-menu,
@@ -2872,6 +2902,49 @@ form.form-inline input[type=text]:read-only:hover,
 .maincalendar [data-region=view-selector] .dropdown-menu .dropdown-divider {
     border-color: #121212;
     margin: 0;
+  }
+
+  .maincalendar select.custom-select {
+    background: #494949 url(https://api.iconify.design/fluent/caret-down-16-filled.svg?color=%23ffffff) no-repeat right 10px center;
+    background-size: 16px 16px;
+  }
+  .maincalendar select.custom-select:not(.hidden) {
+    box-shadow: none;
+    border: 1px solid #ffffff !important;
+  }
+  .maincalendar select.custom-select:not(.hidden):not(.hidden) {
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: normal;
+    min-width: 64px;
+    padding: 0 16px;
+    min-height: 36px;
+    user-select: none;
+    vertical-align: middle;
+  }
+  .maincalendar select.custom-select:not(.hidden):not(.hidden), .maincalendar select.custom-select:not(.hidden):not(.hidden):active, .maincalendar select.custom-select:not(.hidden):not(.hidden):focus, .maincalendar select.custom-select:not(.hidden):not(.hidden):active:focus {
+    outline: unset;
+    background-color: inherit;
+    color: #ffffff;
+  }
+  .maincalendar select.custom-select:not(.hidden):not(.hidden) i, .maincalendar select.custom-select:not(.hidden):not(.hidden).fa {
+    margin-right: 8px;
+  }
+  .maincalendar select.custom-select:active:focus, .maincalendar select.custom-select:hover:focus, .maincalendar select.custom-select:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  .maincalendar select.custom-select:hover {
+    background-color: #373737;
   }
 
   .mform select.custom-select,
