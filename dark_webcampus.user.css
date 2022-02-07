@@ -861,28 +861,13 @@ domain("auth.unamur.be") {
         color: #a5a4a4
     }
 
-    /* Button on dashboard */
-    .btn-primary:hover,
-    .btn-primary:focus {
-        background-color: #186f70;
-    }
-
-    .btn-outline-secondary:hover,
-    .btn-outline-secondary:focus {
-        background-color: #484848;
-    }
-    .show > .btn-outline-secondary.dropdown-toggle {
-        background-color: #424040;
-        color: #cac7c7;
-        box-shadow: unset;
-    }
-
     /* Buttons */
     .btn {
         border-radius: 10px;
     }
 
-    .btn-outline-secondary {
+    .btn-outline-secondary,
+    .page-link, .page-item.disabled .page-link {
         border: 1px solid #666;
     }
     
@@ -894,19 +879,13 @@ domain("auth.unamur.be") {
         padding-left: unset;
     }
     
-    .aabtn.focus, .btn-link.focus, .nav-link.focus, .atto_link_button.focus, [role="button"].focus, .list-group-item-action.focus, input[type="checkbox"].focus, input[type="radio"].focus, input[type="file"].focus, input[type="image"].focus, .sr-only-focusable.focus, a.dropdown-toggle.focus, .modal-dialog[tabindex="0"].focus, .moodle-dialogue-base .closebutton.focus, button.close.focus, .form-autocomplete-selection.focus, .aabtn:focus, .btn-link:focus, .nav-link:focus, .atto_link_button:focus, [role="button"]:focus, .list-group-item-action:focus, input[type="checkbox"]:focus, input[type="radio"]:focus, input[type="file"]:focus, input[type="image"]:focus, .sr-only-focusable:focus, a.dropdown-toggle:focus, .modal-dialog[tabindex="0"]:focus, .moodle-dialogue-base .closebutton:focus, button.close:focus, .form-autocomplete-selection:focus {
+    .aabtn.focus, .btn-link.focus, .nav-link.focus, .atto_link_button.focus, [role="button"].focus, .list-group-item-action.focus, input[type="checkbox"].focus, input[type="radio"].focus, input[type="file"].focus, input[type="image"].focus, .sr-only-focusable.focus, a.dropdown-toggle.focus, .modal-dialog[tabindex="0"].focus, .moodle-dialogue-base .closebutton.focus, button.close.focus, .form-autocomplete-selection.focus, .aabtn:focus, .btn-link:focus, .nav-link:focus, .atto_link_button:focus, [role="button"]:focus, .list-group-item-action:focus, input[type="checkbox"]:focus, input[type="radio"]:focus, input[type="file"]:focus, input[type="image"]:focus, .sr-only-focusable:focus, a.dropdown-toggle:focus, .modal-dialog[tabindex="0"]:focus, .moodle-dialogue-base .closebutton:focus, button.close:focus, .form-autocomplete-selection:focus, .page-link:focus, .page-item.disabled .page-link:focus {
         box-shadow: 0 0 0 .15rem #4a4a4a;
         transition: box-shadow .15s ease;
     }
     
     [id^="message-drawer-view-overview-container"]>div>[id$="-toggle"]>button:focus {
         box-shadow: unset;
-    }
-    
-    .btn-primary:focus, .btn-primary.focus,
-    .btn-secondary:focus, .btn-secondary.focus,
-    .btn-outline-secondary:focus, .btn-outline-secondary.focus {
-        outline: .1rem solid #4a4a4a;
     }
     
     .block .block-cards .btn.btn-link.btn-icon:hover, .block .block-cards .btn.btn-link.btn-icon:focus {
@@ -919,6 +898,38 @@ domain("auth.unamur.be") {
         box-shadow: 0 -.1rem 0 0 #4a4a4a,
                     0 .1rem 0 0 #4a4a4a;
         transition: unset;
+    }
+    
+    .btn-primary:focus, .btn-primary.focus,
+    .btn-secondary:focus, .btn-secondary.focus,
+    .btn-outline-secondary:focus, .btn-outline-secondary.focus {
+        outline: .1rem solid #4a4a4a;
+    }
+    
+    .btn-primary:hover,
+    .btn-primary:focus {
+        background-color: #186f70;
+    }
+
+    .btn-outline-secondary:hover, .btn-outline-secondary:focus,
+    .page-link:hover, .page-link:focus {
+        background-color: #484848;
+    }
+    
+    .show > .btn-outline-secondary.dropdown-toggle {
+        background-color: #424040;
+        color: #cac7c7;
+        box-shadow: unset;
+    }
+    
+    .page-link, .page-item.disabled .page-link {
+        background-color: transparent;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    }
+    .page-link:active, .page-link:hover {
+        color: #fff;
+        background-color: #868e96;
+        border-color: #868e96;
     }
     
     /* Dropdown Menus */
@@ -2206,11 +2217,6 @@ domain("auth.unamur.be") {
     }
     .fa-user-plus::before {
         color: #fff;
-    }
-    li.page-item .page-link,
-    li.page-item.disabled .page-link {
-        background-color: #201f1f;
-        border-color: #626262;
     }
     
     li.page-item:last-child .page-link{
