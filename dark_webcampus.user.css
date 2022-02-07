@@ -2072,15 +2072,17 @@ domain("auth.unamur.be") {
     }
 
     .custom-select {
-        width: 100%;
         background: #2a2a2a url("data:image/svg+xml;charset=utf8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 4 5\'%3E%3Cpath fill=\'%23c7c4c4\' d=\'M2 0L0 2h4zm0 5L0 3h4z\'/%3E%3C/svg%3E") no-repeat right .75rem center;
         -webkit-background-size: 8px 10px;
         background-size: 8px 10px;
-        border-radius: 5px;
+        border-radius: 10px;
         color: #fff;
-        margin-top: 4px;
         margin-bottom: 4px;
-        margin-left: 10px !important;
+        margin-left: 10px !important; /* Still useful somewhere? */
+    }
+    
+    .custom-select.form-control { /* Align custom-select element on modify upload view */
+        margin-left: unset !important;
     }
 
     .custom-select option {
