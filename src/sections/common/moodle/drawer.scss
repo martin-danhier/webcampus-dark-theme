@@ -1,6 +1,6 @@
 /* ----- Drawer ----- */
 
-[data-region='drawer'] {
+[data-region="drawer"] {
     @include surface(1);
     @include elevation(1);
 
@@ -11,7 +11,7 @@
         margin-top: $spacing-m;
         margin-bottom: $spacing-m;
         padding-left: $spacing-s;
-        padding-right:$spacing-s;
+        padding-right: $spacing-s;
 
         &:not(:last-child) {
             border-bottom: 1px solid $bg-divider;

@@ -1,10 +1,10 @@
 /* ----- Chat ----- */
-[data-region='right-hand-drawer'].drawer {
+[data-region="right-hand-drawer"].drawer {
     width: $right-drawer-width;
-
 }
 
-[data-region='right-hand-drawer'].drawer, #page-message-index {
+[data-region="right-hand-drawer"].drawer,
+#page-message-index {
     .message-app {
         @include surface(1);
         @include elevation(1);
@@ -21,7 +21,7 @@
             align-items: center;
             justify-content: center;
 
-            [data-region='view-settings'] {
+            [data-region="view-settings"] {
                 padding: $spacing-sm $spacing-m !important;
             }
 
@@ -48,8 +48,8 @@
         // Body
         .body-container {
             // Search results
-            [data-region='view-search'] {
-                [data-region='empty-message-container'] {
+            [data-region="view-search"] {
+                [data-region="empty-message-container"] {
                     font-weight: 300;
                     user-select: none;
                     letter-spacing: $letter-spacing-s;
@@ -137,7 +137,7 @@
             }
 
             // Empty message
-            .tab-pane [data-region='empty-message-container'] {
+            .tab-pane [data-region="empty-message-container"] {
                 padding: $spacing-m $spacing-l !important;
 
                 // Font
@@ -151,20 +151,20 @@
             }
 
             // Contacts
-            [data-region='view-contacts'] {
+            [data-region="view-contacts"] {
                 .flex-column > .p-3 {
                     padding: 0 !important;
                     border: 0 !important;
                 }
             }
 
-            [data-region='self-conversation-message-container'] {
+            [data-region="self-conversation-message-container"] {
                 user-select: none;
             }
         }
 
         // Ghost for loading
-        [data-region='content-placeholder'] .bg-light {
+        [data-region="content-placeholder"] .bg-light {
             background-color: inherit !important;
         }
 
@@ -196,7 +196,7 @@
                 padding: $spacing-xs $spacing-xs;
             }
 
-            .btn.btn-icon[data-action='delete-selected-messages'] .icon {
+            .btn.btn-icon[data-action="delete-selected-messages"] .icon {
                 background-size: contain;
                 vertical-align: middle;
             }
@@ -257,8 +257,10 @@
     border: 0 !important;
     border-radius: $border-radius;
 
-    .row-fluid > div, .panel-header-container, [data-region='view-overview-favourites'], .header-container {
-
+    .row-fluid > div,
+    .panel-header-container,
+    [data-region="view-overview-favourites"],
+    .header-container {
         border-color: $bg-divider !important;
     }
 

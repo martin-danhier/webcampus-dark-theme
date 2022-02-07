@@ -44,12 +44,12 @@
         margin-bottom: $spacing-m;
     }
 
-    tr td[colspan='4'] {
+    tr td[colspan="4"] {
         @include flex-center();
 
         margin-top: $spacing-m;
 
-        .btn.btn-secondary[name='resetadv'] {
+        .btn.btn-secondary[name="resetadv"] {
             @include outlined-button($fg-on-surface, false);
         }
     }
@@ -57,12 +57,15 @@
 
 // Text fields
 
-form .form-inline input[type='text'],
-#coursesearch .coursesearchbox input[type='text'],
-form.form-inline input[type='text'],
-.message-app input[type='text'],
-#data_adv_form input[type='text'],
-#page-mod-data-edit form .generalbox input[type='text'] {
+form .form-inline input[type="text"],
+#coursesearch .coursesearchbox input[type="text"],
+form.form-inline input[type="text"],
+.message-app input[type="text"],
+#data_adv_form input[type="text"],
+#page-mod-data-edit form .generalbox input[type="text"],
+.moodle-dialogue-base .moodle-dialogue-bd input[type="url"].form-control,
+.moodle-dialogue-base .moodle-dialogue-bd input[type="text"].form-control,
+.moodle-dialogue-base .moodle-dialogue-bd input[type="number"].form-control {
     // Apply text field to fields
     @include filled-text-field(var(--bg-primary-light));
 }
@@ -89,7 +92,7 @@ form.form-inline input[type='text'],
     display: none;
 }
 
-.input-group-append .btn {
+.input-group-append .btn:empty {
     @include flat-icon-button();
 }
 
@@ -111,8 +114,9 @@ a.btn.btn-link {
     @include raised-button(var(--bg-primary), var(--bg-primary-hover), var(--fg-on-primary));
 }
 
-button.btn.btn-secondary[type='submit'],
-.datapreferences input.btn.btn-secondary[type='submit'] {
+button.btn.btn-secondary[type="submit"],
+.datapreferences input.btn.btn-secondary[type="submit"],
+.moodle-dialogue-base .moodle-dialogue-bd  .btn.btn-secondary {
     @include text-button($fg-high-emphasis, $fg-on-surface);
 }
 
@@ -123,7 +127,8 @@ button.btn.btn-secondary[type='submit'],
 // Drop downs
 
 .dropdown,
-.btn-group[data-region='view-selector'] {
+.btn-group[data-region="view-selector"],
+.atto_menu {
     // Button / preview
     .dropdown-toggle {
         &:active:focus,
@@ -169,7 +174,7 @@ button.btn.btn-secondary[type='submit'],
                 }
             }
 
-            i.icon[aria-hidden='true'] {
+            i.icon[aria-hidden="true"] {
                 display: none;
             }
             background-color: inherit;
@@ -178,12 +183,12 @@ button.btn.btn-secondary[type='submit'],
             padding: $spacing-s $spacing-sm;
 
             // Hover & selected
-            &[aria-current='true'] {
+            &[aria-current="true"] {
                 background-color: $bg-field-selected-bright;
             }
 
             &:hover {
-                background-color: $bg-field-hover-bright;
+                background-color: $bg-field-hover;
             }
         }
 
@@ -205,7 +210,8 @@ button.btn.btn-secondary[type='submit'],
 .mform select.custom-select,
 .urlselect.custom-select,
 select.custom-select.singleselect,
-.datapreferences select.custom-select {
+.datapreferences select.custom-select,
+.moodle-dialogue-base .moodle-dialogue-bd select.custom-select {
     color: $fg-on-surface;
     box-sizing: border-box;
     overflow: hidden;
@@ -413,7 +419,7 @@ select.custom-select.singleselect,
 
 // Checkboxes
 
-input[type='checkbox'] {
+input[type="checkbox"] {
     // Hide default unmodifiable checkbox
     visibility: hidden;
     width: 0;
@@ -450,8 +456,8 @@ input[type='checkbox'] {
             background-color: $bg-field-bright;
 
             // Check
-            content: '';
-            font: 400 normal normal calc($checkbox-size - 5.5px) 'FontAwesome';
+            content: "";
+            font: 400 normal normal calc($checkbox-size - 5.5px) "FontAwesome";
             font-weight: 300;
             line-height: $checkbox-size;
             text-rendering: auto;
@@ -466,7 +472,7 @@ input[type='checkbox'] {
     // Change icon and color on checked
     &:checked + label {
         &::before {
-            content: '\f00c';
+            content: "\f00c";
             color: var(--fg-on-primary);
             background-color: var(--bg-primary);
         }
@@ -506,7 +512,7 @@ input[type='checkbox'] {
         }
     }
 
-    input[type='text'].form-control {
+    input[type="text"].form-control {
         padding-right: $spacing-l !important;
     }
 
@@ -553,8 +559,9 @@ input[type='checkbox'] {
 
 // Textarea
 
-[data-fieldtype='textarea'] textarea,
-.comment-ctrl textarea {
+[data-fieldtype="textarea"] textarea,
+.comment-ctrl textarea,
+.moodle-dialogue-base .moodle-dialogue-bd textarea {
     @include filled-text-field(var(--bg-primary-light));
     height: fit-content;
 }

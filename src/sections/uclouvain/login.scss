@@ -13,7 +13,7 @@
         width: 0;
 
         &::before {
-            @include icon('chevron-right');
+            @include icon("chevron-right");
             color: var(--bg-secondary-light);
         }
     }
@@ -24,7 +24,7 @@
 
     header img {
         // Use a lighter logo
-        content: url('https://ojs.uclouvain.be/public/logo_neg.png');
+        content: url("https://ojs.uclouvain.be/public/logo_neg.png");
         width: 250px;
     }
 }
@@ -53,7 +53,7 @@ form {
         color: $bg-error;
 
         &::before {
-            @include icon('error-outline');
+            @include icon("error-outline");
             margin-right: $spacing-xs;
         }
     }
@@ -64,16 +64,16 @@ form {
         @include typography(subtitle2);
     }
 
-    input[type='text'],
-    input[type='password'] {
+    input[type="text"],
+    input[type="password"] {
         @include filled-text-field(var(--bg-primary));
     }
 
-    input[type='checkbox'] {
+    input[type="checkbox"] {
         margin-right: $spacing-xs;
     }
 
-    button[type='submit'] {
+    button[type="submit"] {
         @include raised-button(var(--bg-primary), var(--bg-primary-hover), var(--fg-on-primary));
         padding: 0 !important;
     }

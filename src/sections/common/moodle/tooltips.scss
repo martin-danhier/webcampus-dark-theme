@@ -44,7 +44,8 @@
                 @include flex-center();
                 flex-direction: row;
 
-                & > *, .normal-icon {
+                & > *,
+                .normal-icon {
                     height: $fluent-icon-size;
                 }
 
@@ -129,21 +130,21 @@
 }
 
 .bs-popover-right > .arrow::after,
-.bs-popover-auto[x-placement^='right'] > .arrow::after {
+.bs-popover-auto[x-placement^="right"] > .arrow::after {
     border-right-color: $bg-surface-12dp;
 }
 
 .bs-popover-bottom > .arrow::after,
-.bs-popover-auto[x-placement^='bottom'] > .arrow::after {
+.bs-popover-auto[x-placement^="bottom"] > .arrow::after {
     border-bottom-color: $bg-surface-12dp;
 }
 
 .bs-popover-left > .arrow::after,
-.bs-popover-auto[x-placement^='left'] > .arrow::after {
+.bs-popover-auto[x-placement^="left"] > .arrow::after {
     border-left-color: $bg-surface-12dp;
 }
 
 .bs-popover-top > .arrow::after,
-.bs-popover-auto[x-placement^='top'] > .arrow::after {
+.bs-popover-auto[x-placement^="top"] > .arrow::after {
     border-top-color: $bg-surface-12dp;
 }

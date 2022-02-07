@@ -6,7 +6,8 @@
     @include elevation(2);
 
     // Drawer button & course controls
-    .btn-secondary[data-action='toggle-drawer'], .coursecontrols .btn-secondary {
+    .btn-secondary[data-action="toggle-drawer"],
+    .coursecontrols .btn-secondary {
         color: inherit;
         background-color: inherit;
         border: none;
@@ -39,7 +40,7 @@
 
         // Icon buttons (notifications, chat)
         .popover-region-notifications,
-        [data-region='popover-region-messages'] {
+        [data-region="popover-region-messages"] {
             .nav-link {
                 width: $spacing-l;
                 @include flex-center();
@@ -83,7 +84,6 @@
             .caret::after {
                 margin-right: 2px;
             }
-
         }
     }
 }

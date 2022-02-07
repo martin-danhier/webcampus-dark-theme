@@ -57,16 +57,27 @@ a.dimmed_text:visited,
     color: $bg-error !important;
 }
 
-// Specific styles for custom texts (e.g when a page is designed by the editor and it hardcodes an ugly color);
-
-span, em, p, i {
-    &[style*='color: rgb(68, 68, 68)'], &[style*='color: rgb(51, 51, 51)'] {
-        &, span {
-            color: $fg-medium-emphasis !important;
-        }
-    }
+h1 {
+    @include typography("h1");
 }
 
-h3[style*='color: rgb(51, 51, 51)'] {
-    color: $fg-on-surface !important;
+h2 {
+    @include typography("h2");
 }
+
+h3 {
+    @include typography("h3");
+}
+
+h4 {
+    @include typography("h4");
+}
+
+h5 {
+    @include typography("h5");
+}
+
+h6 {
+    @include typography("h6");
+}
+

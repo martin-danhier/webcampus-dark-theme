@@ -64,7 +64,7 @@
 }
 
 // List appearance
-.block_myoverview [data-region='courses-view'] .list-group .list-group-item {
+.block_myoverview [data-region="courses-view"] .list-group .list-group-item {
     margin-top: $spacing-xs;
     margin-bottom: $spacing-xs;
 }
@@ -78,7 +78,7 @@
 
 // ----- Alerts -----
 
-.bg-white[role='alert'] {
+.bg-white[role="alert"] {
     background-color: $bg-surface-16dp !important;
     @include elevation(16);
     border-radius: $border-radius;
@@ -91,7 +91,7 @@
     .btn.btn-primary {
         @include raised-button(var(--bg-primary), var(--bg-primary-hover), var(--fg-on-primary));
 
-        &[data-action='confirm-delete-selected-messages'] {
+        &[data-action="confirm-delete-selected-messages"] {
             @include raised-button($bg-error, $bg-error-hover, $fg-on-error);
         }
     }
@@ -217,8 +217,8 @@
 
                     // Icon
                     &::before {
-                        content: '';
-                        background-image: url('https://api.iconify.design/fluent/lock-closed-32-filled.svg');
+                        content: "";
+                        background-image: url("https://api.iconify.design/fluent/lock-closed-32-filled.svg");
                         background-size: contain;
                         background-repeat: no-repeat;
                         background-position: center;
@@ -241,6 +241,17 @@
         }
     }
 }
+
+#page-course-view-weeks .weeks li.section:nth-child(even) {
+    @include surface(3);
+    border-radius: $border-radius;
+
+    .section:empty, .summary p:empty {
+        display: none;
+        margin-bottom: 0;
+    }
+}
+
 
 /* Forum view */
 
@@ -300,7 +311,8 @@
                 border: 0;
                 padding: $spacing-sm;
 
-                &.submissionstatussubmitted, &.earlysubmission {
+                &.submissionstatussubmitted,
+                &.earlysubmission {
                     background-color: $bg-success;
                     color: $fg-on-success;
                 }
@@ -329,7 +341,9 @@
     }
 
     a.expandsummaryicon {
-        &:focus, &:active, &:active:focus {
+        &:focus,
+        &:active,
+        &:active:focus {
             outline: none;
             box-shadow: none;
         }
@@ -339,7 +353,7 @@
 /* ---- Assignment submission ----- */
 
 #page-mod-assign-editsubmission {
-    label[for='id_submissionstatement'] {
+    label[for="id_submissionstatement"] {
         color: $fg-on-surface;
         font-weight: 500;
     }

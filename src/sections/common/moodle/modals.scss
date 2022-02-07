@@ -1,18 +1,25 @@
 /* ----- Modals ----- */
 
-.modal-dialog .modal-content {
+.moodle-dialogue-base .closebutton {
+    color: $fg-on-surface;
+}
+
+.modal-dialog .modal-content,
+.moodle-dialogue-base .moodle-dialogue-wrap {
     @include surface(8);
     @include elevation(8);
     border-radius: $border-radius;
     border: none;
 
-    .btn.btn-secondary[data-action='cancel'] {
+    .btn.btn-secondary[data-action="cancel"] {
         @include outlined-button($fg-on-surface, true);
     }
 
     .modal-header,
-    .modal-footer {
+    .modal-footer,
+    .moodle-dialogue-hd {
         border-color: $bg-divider;
+        color: $fg-on-surface !important;
     }
 
     .studentdashboard {
@@ -34,8 +41,12 @@
         // Details of course
         .row:nth-child(3) {
             .dashtitle {
-                h3 i {
-                    margin-right: $spacing-s;
+                h3 {
+                    @include flex-center-start();
+
+                    i {
+                        margin-right: $spacing-s;
+                    }
                 }
                 margin-bottom: $spacing-sm;
             }
@@ -44,6 +55,15 @@
             .coursestafflisting {
                 .list-group-item {
                     border: 0;
+                }
+            }
+
+            .staffinfo a {
+                @include flex-center-start();
+                min-height: $fluent-icon-size;
+
+                i {
+                    margin-right: $spacing-xs;
                 }
             }
         }
@@ -67,5 +87,60 @@ button.close {
 
     &:hover {
         color: inherit;
+    }
+}
+
+// Alerts
+.moodle-dialogue-bd .alert {
+    border-radius: $border-radius;
+    margin: $spacing-sm;
+
+    @include flex-center-start();
+    height: $fluent-icon-size;
+
+    // Add an icon to the message
+    &::before {
+        width: $fluent-icon-size !important;
+        height: $fluent-icon-size !important;
+        display: flex !important;
+        padding: 0 !important;
+        margin-right: $spacing-xs;
+    }
+
+    &.alert-warning {
+        background-color: $bg-warning;
+        color: $fg-on-warning;
+
+        &::before {
+            @include fluent-icon-img("warning", $fg-on-warning, "regular");
+        }
+    }
+
+    &.alert-danger {
+        background-color: $bg-error;
+        color: $fg-on-error;
+
+        &::before {
+            @include fluent-icon-img("error-circle", $fg-on-warning, "regular");
+        }
+    }
+}
+
+// Buttons
+.atto_generico_buttons {
+    display: block;
+    button {
+        @include text-button($fg-high-emphasis, $fg-on-surface);
+    }
+}
+
+.moodle-dialogue-bd #start-stop {
+    border-radius: $border-radius;
+    border-color: $red;
+    color: $red;
+    
+    &:hover {
+        color: white;
+        background-color: $red;
     }
 }

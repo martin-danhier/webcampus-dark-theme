@@ -1,7 +1,7 @@
 /* ----- Peer review ----- */
 
 #page-mod-workshop-view.path-mod-workshop {
-    h2 .btn[data-toggle='popover'] {
+    h2 .btn[data-toggle="popover"] {
         margin-left: $spacing-sm;
     }
 
@@ -102,7 +102,7 @@
 
 // Submission
 #page-mod-workshop-submission {
-    [role='main'] > h3 {
+    [role="main"] > h3 {
         margin-top: $spacing-m;
         margin-bottom: $spacing-m;
     }

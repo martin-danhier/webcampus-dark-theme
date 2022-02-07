@@ -1,7 +1,33 @@
 /* ----- Editor ATTO ----- */
 
+.editor_atto_notification {
+    .atto_info {
+        @include surface(2);
+        @include elevation(1);
+    }
+
+    .atto_warning {
+        background-color: $bg-warning;
+        color: $fg-on-warning;
+    }
+
+    .atto_info,
+    .atto_warning {
+        margin-left: $spacing-l;
+        @include flex-center-start();
+        min-height: $fluent-icon-size;
+        width: fit-content;
+
+        img {
+            margin-right: $spacing-s;
+            width: $fluent-icon-size;
+            height: $fluent-icon-size;
+        }
+    }
+}
+
 .editor_atto_wrap .editor_atto {
-    @include elevation(1);
+    @include elevation(2);
     border-radius: $border-radius;
     border-bottom-right-radius: 0;
 
@@ -29,10 +55,6 @@
             &:focus:active {
                 outline: none;
                 box-shadow: none;
-            }
-
-            &:focus {
-                background-color: $bg-field-focus;
             }
         }
     }
@@ -83,7 +105,7 @@
                     height: fit-content;
                 }
 
-                &:hover {
+                &:hover:enabled {
                     background: $bg-field-hover;
                 }
 
@@ -101,4 +123,119 @@
     .atto_info {
         @include surface(24);
     }
+}
+
+// Dialogs
+.atto_menu {
+    .atto_menuentry {
+        padding: 0 !important;
+        border: 0 !important;
+        display: flex;
+
+        a {
+            padding: $spacing-s $spacing-sm;
+            margin: 0 !important;
+            width: 100%;
+
+            color: $fg-high-emphasis;
+
+            &:hover {
+                color: $fg-on-surface;
+                text-decoration: none;
+                background-color: $bg-field-hover;
+            }
+
+            &:focus {
+                background-color: $bg-field-selected-bright;
+            }
+        }
+    }
+
+    &.atto_styles_button {
+        padding: 0;
+
+        i.fa,
+        i.fa::before {
+            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
+        }
+
+        .dropdown-menu > li {
+            padding: 0;
+
+            & > a {
+                padding: $spacing-s $spacing-sm;
+            }
+        }
+
+        span,
+        .dropdown-menu > li > a span > span.preview {
+            width: 100%;
+            max-width: 100% !important;
+        }
+    }
+
+    &.atto_fontcolor_button,
+    &.atto_backcolor_button {
+        & > ul.dropdown-menu {
+            display: flex;
+            flex-wrap: wrap;
+            width: calc(4 * $spacing-sm + 2 * 21px);
+        }
+    }
+}
+
+// Equation
+.well {
+    border: 0;
+}
+
+// Chemistry
+.atto_chemistry_library {
+    li a:not(.hidden) {
+        @include text-button($fg-high-emphasis, $fg-on-surface);
+
+        &::before {
+            background-image: none;
+        }
+
+        &:hover,
+        &:focus {
+            background-image: none;
+            background: inherit !important;
+        }
+    }
+
+    [role="toolbar"] {
+        button {
+            color: $fg-on-surface;
+            background-color: $bg-field;
+
+            &:hover {
+                background-color: $bg-field-hover;
+            }
+
+            outline: none;
+            box-shadow: none;
+            border: 1px solid $bg-divider;
+            padding: $spacing-xs;
+            border-radius: 2px;
+        }
+    }
+}
+
+.yui3-skin-sam .yui3-tab-label {
+    background: none;
+}
+
+.yui3-skin-sam .yui3-tabview-panel {
+    background-color: inherit;
+    box-shadow: none;
+    border: 0;
+    outline: 0;
+}
+
+.atto_chemistry_submit {
+    @include text-button($fg-high-emphasis, $fg-on-surface);
 }

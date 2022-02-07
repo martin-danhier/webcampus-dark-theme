@@ -7,7 +7,7 @@
 ul.navbar-nav.d-none.d-md-flex::after {
     // Add a title text in the appbar instead of the brand banner
     // We will make it clickable by moving the brand banner on top of it
-    content: 'Webcampus';
+    content: "Webcampus";
     font-size: 18px;
     font-size: 1.171875rem;
     font-weight: 400;
@@ -73,7 +73,7 @@ header.fixed-top.brand-banner {
 }
 
 // Make a card deck instead of a list
-.block-myoverview div[data-region='courses-view'] ul.list-group {
+.block-myoverview div[data-region="courses-view"] ul.list-group {
     display: flex;
     flex-flow: row wrap;
     margin-left: -0.25rem;

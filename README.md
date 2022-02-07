@@ -2,11 +2,7 @@
 
 ## [NEW] V0.6 - Material Design Update + UCLouvain support
 
-![Before after](assets/webcampus_clean_dark_theme.gif)
-
-![Preview of a course](assets/main_preview.png)
-
-![Dashboard](assets/course_view.png)
+Nouveaux screens TODO
 
 ## Supported websites and browsers
 

@@ -1,23 +1,23 @@
 /* ----- UCLouvain ----- */
 
 // Moodle
-@-moz-document url-prefix('https://moodle.uclouvain.be/') {
+@-moz-document url-prefix("https://moodle.uclouvain.be/") {
     // -> this will return a deprecation warning, but it is normal
     // That is how stylus works
 
     // Import UCLouvain color theme
-    @import 'theme.scss';
+    @import "theme.scss";
     // Import UCLouvain style
-    @import 'moodle.scss';
+    @import "moodle.scss";
 }
 
 // Login page
-@-moz-document url-prefix('https://idp.uclouvain.be/idp/profile/SAML2/Redirect/SSO') {
+@-moz-document url-prefix("https://idp.uclouvain.be/idp/profile/SAML2/Redirect/SSO") {
     // -> this will return a deprecation warning, but it is normal
     // That is how stylus works
 
     // Import UCLouvain color theme
-    @import 'theme.scss';
+    @import "theme.scss";
     // Import login page theme
-    @import 'login.scss';
+    @import "login.scss";
 }

@@ -40,22 +40,22 @@ hr {
 }
 
 // Imports parts from common directory (split into multiple files to avoid having one huge file)
-@import 'moodle/icons.scss';
-@import 'moodle/text.scss';
-@import 'moodle/cards.scss';
-@import 'moodle/input.scss';
-@import 'moodle/navbar.scss';
-@import 'moodle/drawer.scss';
-@import 'moodle/progress-indicators.scss';
-@import 'moodle/ghost.scss';
-@import 'moodle/footer.scss';
-@import 'moodle/tooltips.scss';
-@import 'moodle/chat.scss';
-@import 'moodle/modals.scss';
-@import 'moodle/tables-forums.scss';
-@import 'moodle/database.scss';
-@import 'moodle/peer-review.scss';
-@import 'moodle/editor-atto.scss';
+@import "moodle/icons.scss";
+@import "moodle/text.scss";
+@import "moodle/cards.scss";
+@import "moodle/input.scss";
+@import "moodle/navbar.scss";
+@import "moodle/drawer.scss";
+@import "moodle/progress-indicators.scss";
+@import "moodle/ghost.scss";
+@import "moodle/footer.scss";
+@import "moodle/tooltips.scss";
+@import "moodle/chat.scss";
+@import "moodle/modals.scss";
+@import "moodle/tables-forums.scss";
+@import "moodle/database.scss";
+@import "moodle/peer-review.scss";
+@import "moodle/editor-atto.scss";
 
 // Last import the miscellaneous styles
-@import 'moodle/misc.scss';
+@import "moodle/misc.scss";

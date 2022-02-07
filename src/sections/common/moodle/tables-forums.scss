@@ -36,21 +36,19 @@
     border-radius: $border-radius;
 
     // Default style for table
-    th {
+    thead {
+        @include elevation(2);
+    }
+
+    th,
+    thead th {
         // Colors
         background-color: $bg-surface-12dp;
         text-align: center;
 
-        // Text
-        a {
-            @include text-button(var(--bg-primary-light), var(--bg-primary-hover), false);
-            width: 100%;
-        }
-
         // Borders
         border-color: $bg-divider;
         border: 0;
-        border-bottom: 1px solid $bg-divider;
 
         &:first-child {
             border-top-left-radius: $border-radius;
@@ -59,6 +57,14 @@
         &:last-child {
             border-top-right-radius: $border-radius;
         }
+    }
+
+    // Unread messages
+    .lead .badge.rounded-pill {
+        background-color: var(--bg-primary-light);
+        color: var(--fg-on-primary-light);
+        border-radius: 50%;
+        margin: 0 $spacing-xs;
     }
 
     tbody {
@@ -100,13 +106,13 @@
     }
 
     // Favorites
-    .btn.btn-link[data-type='favorite-toggle'] {
+    .btn.btn-link[data-type="favorite-toggle"] {
         @include flat-icon-button($bg-field-hover);
         color: $fg-high-emphasis;
         margin: $spacing-xs;
     }
     // Settings
-    [data-container='discussion-tools'] {
+    [data-container="discussion-tools"] {
         margin-right: $spacing-xs;
     }
 
@@ -158,6 +164,11 @@
             text-decoration: none;
         }
     }
+
+    .forumpost.unread .header {
+        background-color: inherit;
+        border: inherit;
+    }
 }
 
 // Grades
@@ -167,5 +178,33 @@
 
     td.cell.c1 {
         text-align: center;
+    }
+}
+
+// Unread message text
+.path-course-view .unread,
+span.unread {
+    @include flex-center-start();
+    height: $fluent-icon-size;
+    background-color: inherit;
+    margin-left: $spacing-xl;
+    padding: 0 $spacing-xs;
+
+    background-color: $bg-warning;
+    border-radius: 5px;
+
+    a {
+        color: $fg-on-warning !important;
+        @include typography("subtitle2");
+        margin-left: $spacing-xs;
+    }
+
+    // Add an icon to the message
+    &::before {
+        width: $fluent-icon-size !important;
+        height: $fluent-icon-size !important;
+        display: flex !important;
+        padding: 0 !important;
+        @include fluent-icon-img("mail-unread", $fg-on-warning);
     }
 }

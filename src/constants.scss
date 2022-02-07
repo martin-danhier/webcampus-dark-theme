@@ -1,8 +1,8 @@
 // Version of the style
-$version: '0.6.0';
+$version: "0.6.0";
 
 // Authors of the style
-$authors: 'Martin Danhier & Yannis Fraselle';
+$authors: "Martin Danhier & Yannis Fraselle";
 
 // =========== Color theme ===========
 
@@ -65,7 +65,7 @@ $checkbox-size: 16px;
 // Icon settings
 $fluent-icon-size: 20px; // 16px, 20px, 24px, 28px, 32px or 48px
 $fluent-small-icon-size: 16px;
-$fluent-icon-style: 'filled'; // "regular" or "filled"
+$fluent-icon-style: "filled"; // "regular" or "filled"
 $fluent-icon-default-color: white;
 
 // Letter spacing
@@ -81,3 +81,10 @@ $spacing-m: 20px;
 $spacing-l: 40px;
 $spacing-xl: 80px;
 
+// General colors (used to replace colors set with editor)
+$blue: #00a1e4;
+$yellow: #f1d06b;
+$pink: #ff5e62;
+$purple: #9b51e0;
+$green: #6eb45e;
+$red: #e04545;

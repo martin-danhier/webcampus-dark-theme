@@ -1,5 +1,6 @@
 {
     "customSyntax": "postcss-scss",
+    "defaultSeverity": "warning",
     "plugins": [
         "stylelint-scss"
     ],
@@ -64,7 +65,7 @@
         "selector-type-case": "lower",
         "shorthand-property-no-redundant-values": true,
         "string-no-newline": true,
-        "string-quotes": "single",
+        "string-quotes": "double",
         "unit-case": "lower",
         "unit-no-unknown": true,
         "value-keyword-case": "lower"
