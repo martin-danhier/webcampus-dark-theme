@@ -63,21 +63,7 @@ SOFTWARE.
     @import "default-theme";
 }
 
-// ============= Site-specific style =============
-
-@-moz-document url-prefix("https://webcampus.unamur.be/") {
-    // -> this will return a deprecation warning, but it is normal
-    // That is how stylus works
-
-    @import "sections/webcampus";
-}
-
-@import "sections/uclouvain/index";
-
 // ============= Global style =============
-
-// The global style is applied last because all of the site-specific styles aim to bring them to a common base
-// on top of which the custom style can be applied
 
 @-moz-document url-prefix("https://moodle.uclouvain.be/"), url-prefix("https://webcampus.unamur.be/") {
     // -> this will return a deprecation warning, but it is normal
@@ -87,3 +73,10 @@ SOFTWARE.
 
     @import "sections/common/index";
 }
+
+// ============= Site-specific style =============
+
+// Additional changes to be applied to specific styles (to counter custom styles)
+
+@import "sections/webcampus/index";
+@import "sections/uclouvain/index";

@@ -1,7 +1,3 @@
-/* ----- UNamur specific styles ----- */
-
-// Fixes that only need to be applied to WebCampus because of their ugly custom theme
-
 // ====== Remove custom Banner ======
 
 ul.navbar-nav.d-none.d-md-flex::after {
@@ -88,4 +84,27 @@ header.fixed-top.brand-banner {
         margin-right: 0.25rem;
         width: calc(33.33% - 0.5rem);
     }
+}
+
+// Login
+
+.pagelayout-login {
+    .card-header::before {
+        @include typography("h5");
+        content: "Login to WebCampus";
+        margin-top: $spacing-s;
+        color: var(--bg-primary-light);
+    }
+
+    // Remove useless padding and contact info
+    .contactinfo, .col-sm-1, .col-sm-6 {
+        // TODO if you want it, do something with it
+        display: none;
+    }
+}
+
+// Ugly banner
+
+img.img-fluid[src*="/core_admin/logo/"][src*="/webcampus.png"] {
+    content: url("https://transitions.unamur.be/++theme++unamur/images/logo-unamur.png");
 }

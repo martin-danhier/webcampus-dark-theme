@@ -74,458 +74,6 @@ SOFTWARE.
     font-weight: 400;
   }
 }
-@-moz-document url-prefix("https://webcampus.unamur.be/") {
-  /* ----- UNamur specific styles ----- */
-  ul.navbar-nav.d-none.d-md-flex::after {
-    content: "Webcampus";
-    font-size: 18px;
-    font-size: 1.171875rem;
-    font-weight: 400;
-    line-height: inherit;
-    pointer-events: none;
-    white-space: nowrap;
-  }
-  ul.navbar-nav.d-none.d-md-flex::after:hover {
-    text-decoration: underline;
-  }
-
-  header.fixed-top.brand-banner {
-    background: unset;
-    height: 50px;
-    left: 4.25rem;
-    width: 6.4rem;
-    z-index: 2000;
-  }
-  header.fixed-top.brand-banner .right-logo {
-    visibility: hidden;
-  }
-  header.fixed-top.brand-banner .left-logo {
-    box-shadow: unset;
-    display: block;
-    height: inherit;
-    position: static;
-  }
-  header.fixed-top.brand-banner .left-logo img {
-    visibility: hidden;
-  }
-
-  #blocks-column-toggle {
-    margin-top: 75px;
-    top: 0;
-  }
-
-  #nav-drawer,
-#blocks-column,
-.message-app.drawer {
-    margin-top: 60px !important;
-    top: 0;
-  }
-
-  .navbar-receptic {
-    background: unset;
-    top: 0;
-  }
-
-  .block-myoverview div[data-region=courses-view] ul.list-group {
-    display: flex;
-    flex-flow: row wrap;
-    margin-left: -0.25rem;
-    margin-right: -0.25rem;
-  }
-  .block-myoverview div[data-region=courses-view] ul.list-group .card.dashboard-card {
-    flex-basis: auto;
-    flex-grow: 0;
-    flex-shrink: 0;
-    margin-bottom: 0.5rem;
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-    width: calc(33.33% - 0.5rem);
-  }
-}
-/* ----- UCLouvain ----- */
-@-moz-document url-prefix("https://moodle.uclouvain.be/") {
-  /* ----- UCLouvain color theme ----- */
-  :root {
-    --bg-primary: #1976d2;
-    --bg-primary-hover: #2196f3;
-    --bg-primary-light: #63a4ff;
-    --bg-primary-light-hover: #80b3ff;
-    --bg-primary-dark: #004ba0;
-    --bg-primary-dark-hover: #0062b1;
-    --bg-secondary: #00bcd4;
-    --bg-secondary-light: #62efff;
-    --bg-secondary-dark: #008ba3;
-    --bg-secondary-hover: #4dd0e1;
-    --fg-on-primary: #ffffff;
-    --fg-on-primary-light: #000000;
-    --fg-on-primary-dark: #ffffff;
-    --fg-on-secondary: #000000;
-    --fg-on-secondary-light: #000000;
-    --fg-on-secondary-dark: #000000;
-  }
-
-  /* UCLouvain specific styles */
-  #page-site-index #page-header .logo img {
-    content: url("https://ojs.uclouvain.be/public/logo_neg.png");
-  }
-
-  #page-my-index .block_recentlyaccessedcourses [data-region=loading-placeholder] {
-    margin-top: 36.5px;
-  }
-  #page-my-index .block_recentlyaccessedcourses [data-region=loading-placeholder] .card-deck {
-    height: auto !important;
-  }
-  #page-my-index .block_recentlyaccessedcourses [data-region=loading-placeholder] .card-deck .card {
-    height: 74.6px !important;
-  }
-  #page-my-index .block_recentlyaccessedcourses [data-region=loading-placeholder] .card-deck .card.dashboard-card .card-img-top {
-    display: none;
-  }
-  #page-my-index .block_recentlyaccessedcourses [data-region=loading-placeholder] .card-deck .card-body.course-info-container {
-    padding-top: 20px !important;
-    padding-right: 10px !important;
-  }
-
-  span[style*="color: rgb(68, 68, 68)"],
-span[style*="color: rgb(68, 68, 68)"] span, span[style*="color: rgb(51, 51, 51)"],
-span[style*="color: rgb(51, 51, 51)"] span,
-em[style*="color: rgb(68, 68, 68)"],
-em[style*="color: rgb(68, 68, 68)"] span,
-em[style*="color: rgb(51, 51, 51)"],
-em[style*="color: rgb(51, 51, 51)"] span,
-p[style*="color: rgb(68, 68, 68)"],
-p[style*="color: rgb(68, 68, 68)"] span,
-p[style*="color: rgb(51, 51, 51)"],
-p[style*="color: rgb(51, 51, 51)"] span,
-i[style*="color: rgb(68, 68, 68)"],
-i[style*="color: rgb(68, 68, 68)"] span,
-i[style*="color: rgb(51, 51, 51)"],
-i[style*="color: rgb(51, 51, 51)"] span {
-    color: #959595 !important;
-  }
-
-  h3[style*="color: rgb(51, 51, 51)"] {
-    color: #ffffff !important;
-  }
-
-  span[style*="background-color: rgb(255, 207, 53)"],
-span[style*="background-color: rgb(125, 159, 211)"] {
-    background-color: inherit !important;
-  }
-
-  .titre-bleu,
-.titre-vert,
-.titre-jaune,
-.titre-rouge,
-.titre-rose,
-.titre-mauve {
-    border: 0;
-    font-family: "Roboto", "Helvetica", sans-serif;
-    font-size: 16px !important;
-    letter-spacing: 0.15px;
-    font-weight: 500;
-  }
-
-  .titre-bleu {
-    color: #00a1e4;
-  }
-
-  .titre-vert {
-    color: #6eb45e;
-  }
-
-  .titre-jaune {
-    color: #f1d06b;
-  }
-
-  .titre-rouge {
-    color: #e04545;
-  }
-
-  .titre-rose {
-    color: #ff5e62;
-  }
-
-  .titre-mauve {
-    color: #9b51e0;
-  }
-
-  .astuce,
-.covid {
-    background: inherit;
-    font-family: "Roboto", "Helvetica", sans-serif;
-    font-size: 16px !important;
-    letter-spacing: 0.15px;
-    font-weight: 500;
-    padding: 10px;
-    border-radius: 10px;
-  }
-
-  .astuce {
-    border-color: #00a1e4;
-    color: #00a1e4;
-  }
-
-  .covid {
-    border-color: #e04545;
-    color: #e04545;
-  }
-}
-@-moz-document url-prefix("https://idp.uclouvain.be/idp/profile/SAML2/Redirect/SSO") {
-  /* ----- UCLouvain color theme ----- */
-  :root {
-    --bg-primary: #1976d2;
-    --bg-primary-hover: #2196f3;
-    --bg-primary-light: #63a4ff;
-    --bg-primary-light-hover: #80b3ff;
-    --bg-primary-dark: #004ba0;
-    --bg-primary-dark-hover: #0062b1;
-    --bg-secondary: #00bcd4;
-    --bg-secondary-light: #62efff;
-    --bg-secondary-dark: #008ba3;
-    --bg-secondary-hover: #4dd0e1;
-    --fg-on-primary: #ffffff;
-    --fg-on-primary-light: #000000;
-    --fg-on-primary-dark: #ffffff;
-    --fg-on-secondary: #000000;
-    --fg-on-secondary-light: #000000;
-    --fg-on-secondary-dark: #000000;
-  }
-
-  /* ----- Login page ----- */
-  .wrapper .container {
-    width: 630px;
-    padding: 20px;
-  }
-
-  .list-help-item a {
-    color: var(--bg-secondary-light);
-    font-weight: 400;
-    display: flex !important;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .list-help-item a:hover, .list-help-item a:active, .list-help-item a:focus, .list-help-item a:focus:active {
-    color: var(--bg-secondary-hover);
-  }
-  .list-help-item a:visited {
-    color: var(--bg-secondary-light);
-  }
-  .list-help-item a .item-marker {
-    width: 0;
-    font-size: 0;
-    margin-right: 5px !important;
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    width: 20px;
-    height: 20px;
-  }
-  .list-help-item a .item-marker::before {
-    width: 20px !important;
-    height: 20px !important;
-    display: flex !important;
-    padding: 0 !important;
-  }
-  .list-help-item a .item-marker::before {
-    content: url("https://api.iconify.design/fluent/caret-right-20-regular.svg?color=white") !important;
-  }
-
-  .wrapper {
-    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2) !important;
-  }
-  .wrapper header img {
-    content: url("https://ojs.uclouvain.be/public/logo_neg.png");
-    width: 250px;
-  }
-
-  .wrapper,
-footer,
-.container-footer {
-    color: #ffffff;
-    background-color: #1e1e1e;
-  }
-
-  .column.one {
-    width: 65%;
-  }
-
-  form {
-    width: 100%;
-  }
-  form legend {
-    margin-top: 10px;
-    color: var(--bg-primary-light);
-    font-family: "Roboto", "Helvetica", sans-serif;
-    font-size: 20px !important;
-    letter-spacing: 0.15px;
-    font-weight: 500;
-  }
-  form .form-element.form-error {
-    font-family: "Roboto", "Helvetica", sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.33px;
-    font-weight: 500;
-    color: #c95066;
-    display: flex !important;
-    justify-content: flex-start;
-    align-items: center;
-    min-width: 20px;
-    min-height: 20px;
-  }
-  form .form-element.form-error::before {
-    content: url("https://api.iconify.design/fluent/error-circle-20-regular.svg?color=white") !important;
-  }
-  form .form-element.form-error::before {
-    width: 20px !important;
-    height: 20px !important;
-    display: flex !important;
-    padding: 0 !important;
-    margin-right: 5px;
-  }
-
-  .form-element-wrapper label {
-    font-family: "Roboto", "Helvetica", sans-serif;
-    font-size: 14px;
-    letter-spacing: 0.1px;
-    font-weight: 500;
-  }
-  .form-element-wrapper input[type=text],
-.form-element-wrapper input[type=password] {
-    background-color: #494949;
-    color: #ffffff;
-    box-sizing: border-box;
-    overflow: hidden;
-    border-radius: 4px 4px 0 0;
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: 0.009375em;
-    text-decoration: inherit;
-    text-transform: inherit;
-    padding: 16px 6px;
-    height: 42px;
-    border: none;
-    border-bottom: 1px solid;
-    caret-color: var(--bg-primary);
-    border-bottom-color: rgba(255, 255, 255, 0.42);
-    will-change: border-color, background-color, border-width;
-    transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-width 0.2s ease-in-out !important;
-  }
-  .form-element-wrapper input[type=text]:hover,
-.form-element-wrapper input[type=password]:hover {
-    background-color: #373737;
-    border-bottom-color: rgba(255, 255, 255, 0.87);
-  }
-  .form-element-wrapper input[type=text]:focus, .form-element-wrapper input[type=text]:focus-visible,
-.form-element-wrapper input[type=password]:focus,
-.form-element-wrapper input[type=password]:focus-visible {
-    color: inherit;
-    background-color: #2c2c2c;
-    outline: none;
-    box-shadow: none;
-    border-bottom-color: var(--bg-primary);
-    border-width: 2px;
-    transition: none;
-  }
-  .form-element-wrapper input[type=text]:disabled, .form-element-wrapper input[type=text]:read-only,
-.form-element-wrapper input[type=password]:disabled,
-.form-element-wrapper input[type=password]:read-only {
-    background-color: #1d1d1d;
-    color: #888888;
-    border-bottom-color: #888888;
-    transition: none !important;
-  }
-  .form-element-wrapper input[type=text]:disabled:hover, .form-element-wrapper input[type=text]:read-only:hover,
-.form-element-wrapper input[type=password]:disabled:hover,
-.form-element-wrapper input[type=password]:read-only:hover {
-    border-bottom-color: inherit;
-  }
-  .form-element-wrapper input[type=checkbox] {
-    margin-right: 5px;
-  }
-  .form-element-wrapper button[type=submit] {
-    padding: 0 !important;
-  }
-  .form-element-wrapper button[type=submit]:not(.hidden) {
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2) !important;
-    transition: box-shadow 0.7s;
-  }
-  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden) {
-    border: 0;
-    outline: none;
-    border-radius: 4px;
-    font-family: "Roboto", "Helvetica", sans-serif;
-    font-size: 14px;
-    line-height: 14px;
-    letter-spacing: 1.25px;
-    text-transform: uppercase;
-    font-weight: 500;
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    line-height: normal;
-    min-width: 64px;
-    padding: 0 16px;
-    min-height: 36px;
-    user-select: none;
-    vertical-align: middle;
-    perspective: 1px;
-    position: relative;
-  }
-  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden), .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):active, .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):focus, .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):active:focus {
-    outline: unset;
-    background-color: var(--bg-primary);
-    color: var(--fg-on-primary);
-  }
-  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden) i, .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden).fa {
-    margin-right: 8px;
-  }
-  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden)::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border-radius: inherit;
-    pointer-events: none;
-    background-image: radial-gradient(circle, white 1%, transparent 1%);
-    background-repeat: no-repeat;
-    background-position: 50%;
-    background-size: 15000%;
-    opacity: 0;
-    transition: background 0.7s, opacity 1s;
-    z-index: -1;
-  }
-  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):active::before, .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):focus::before {
-    animation-name: ripple;
-    animation-duration: 0.6s;
-    opacity: 0.4;
-    transition: 0s !important;
-  }
-  @keyframes ripple {
-    from {
-      background-size: 1%;
-    }
-    to {
-      background-size: 15000%;
-    }
-  }
-  .form-element-wrapper button[type=submit]:not(.hidden):hover {
-    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2) !important;
-    transition: box-shadow 0.6s;
-    background-color: var(--bg-primary-hover);
-  }
-  .form-element-wrapper button[type=submit]:not(.hidden):focus, .form-element-wrapper button[type=submit]:not(.hidden):active {
-    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2) !important;
-    transition: box-shadow 0.6s;
-  }
-
-  .footer-text {
-    padding: 10px;
-  }
-}
 @-moz-document url-prefix("https://moodle.uclouvain.be/"), url-prefix("https://webcampus.unamur.be/") {
   /* Global changes */
   /* ----- Fixes to remove unwanted behavior originating from the default theme ----- */
@@ -1183,6 +731,10 @@ i.fa.fa-envelope-o::before {
     content: url("https://api.iconify.design/fluent/mail-20-regular.svg?color=white") !important;
   }
 
+  i.fa.fa-phone {
+    display: none;
+  }
+
   i.fa.fa-check::before {
     content: url("https://api.iconify.design/fluent/checkmark-20-regular.svg?color=white") !important;
   }
@@ -1551,6 +1103,11 @@ a.dimmed_text:visited,
     font-size: 16px !important;
     letter-spacing: 0.15px;
     font-weight: 500;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+    text-align: left;
   }
 
   h1 {
@@ -2480,7 +2037,8 @@ form.form-inline input[type=text],
 #page-mod-data-edit form .generalbox input[type=text],
 .moodle-dialogue-base .moodle-dialogue-bd input[type=url].form-control,
 .moodle-dialogue-base .moodle-dialogue-bd input[type=text].form-control,
-.moodle-dialogue-base .moodle-dialogue-bd input[type=number].form-control {
+.moodle-dialogue-base .moodle-dialogue-bd input[type=number].form-control,
+.pagelayout-login input.form-control {
     background-color: #494949;
     color: #ffffff;
     box-sizing: border-box;
@@ -2509,7 +2067,8 @@ form.form-inline input[type=text]:hover,
 #page-mod-data-edit form .generalbox input[type=text]:hover,
 .moodle-dialogue-base .moodle-dialogue-bd input[type=url].form-control:hover,
 .moodle-dialogue-base .moodle-dialogue-bd input[type=text].form-control:hover,
-.moodle-dialogue-base .moodle-dialogue-bd input[type=number].form-control:hover {
+.moodle-dialogue-base .moodle-dialogue-bd input[type=number].form-control:hover,
+.pagelayout-login input.form-control:hover {
     background-color: #373737;
     border-bottom-color: rgba(255, 255, 255, 0.87);
   }
@@ -2531,7 +2090,9 @@ form.form-inline input[type=text]:focus-visible,
 .moodle-dialogue-base .moodle-dialogue-bd input[type=text].form-control:focus,
 .moodle-dialogue-base .moodle-dialogue-bd input[type=text].form-control:focus-visible,
 .moodle-dialogue-base .moodle-dialogue-bd input[type=number].form-control:focus,
-.moodle-dialogue-base .moodle-dialogue-bd input[type=number].form-control:focus-visible {
+.moodle-dialogue-base .moodle-dialogue-bd input[type=number].form-control:focus-visible,
+.pagelayout-login input.form-control:focus,
+.pagelayout-login input.form-control:focus-visible {
     color: inherit;
     background-color: #2c2c2c;
     outline: none;
@@ -2558,7 +2119,9 @@ form.form-inline input[type=text]:read-only,
 .moodle-dialogue-base .moodle-dialogue-bd input[type=text].form-control:disabled,
 .moodle-dialogue-base .moodle-dialogue-bd input[type=text].form-control:read-only,
 .moodle-dialogue-base .moodle-dialogue-bd input[type=number].form-control:disabled,
-.moodle-dialogue-base .moodle-dialogue-bd input[type=number].form-control:read-only {
+.moodle-dialogue-base .moodle-dialogue-bd input[type=number].form-control:read-only,
+.pagelayout-login input.form-control:disabled,
+.pagelayout-login input.form-control:read-only {
     background-color: #1d1d1d;
     color: #888888;
     border-bottom-color: #888888;
@@ -2582,7 +2145,9 @@ form.form-inline input[type=text]:read-only:hover,
 .moodle-dialogue-base .moodle-dialogue-bd input[type=text].form-control:disabled:hover,
 .moodle-dialogue-base .moodle-dialogue-bd input[type=text].form-control:read-only:hover,
 .moodle-dialogue-base .moodle-dialogue-bd input[type=number].form-control:disabled:hover,
-.moodle-dialogue-base .moodle-dialogue-bd input[type=number].form-control:read-only:hover {
+.moodle-dialogue-base .moodle-dialogue-bd input[type=number].form-control:read-only:hover,
+.pagelayout-login input.form-control:disabled:hover,
+.pagelayout-login input.form-control:read-only:hover {
     border-bottom-color: inherit;
   }
 
@@ -6943,5 +6508,555 @@ span.unread::before {
     color: var(--bg-secondary-light);
   }
 
+  /* ----- Login page ----- */
+  .pagelayout-login #page-wrapper {
+    flex-direction: column !important;
+    align-items: flex-start;
+  }
+  .pagelayout-login #region-main {
+    color: #ffffff;
+    background-color: #1e1e1e;
+    border-radius: 0;
+  }
+  .pagelayout-login .loginpagepanel,
+.pagelayout-login .loginpanelbg {
+    background-color: inherit !important;
+    box-shadow: none !important;
+  }
+  .pagelayout-login .loginpagepanel {
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+  }
+  .pagelayout-login .col-12.col-sm-4.py-0.loginpanelbg {
+    border-radius: 10px;
+    padding: 15px;
+  }
+  .pagelayout-login .col-12.col-sm-4.py-0.loginpanelbg .card {
+    box-shadow: none !important;
+  }
+  .pagelayout-login #accordion .card-header {
+    background-color: unset !important;
+  }
+  .pagelayout-login .card-body > label.sr-only {
+    position: static;
+    width: unset;
+    height: unset;
+    color: #ffffff;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    font-weight: 500;
+  }
+  .pagelayout-login a u {
+    color: var(--bg-secondary-light) !important;
+  }
+  .pagelayout-login a.help-icon {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+  }
+  .pagelayout-login a.help-icon::before {
+    width: 20px !important;
+    height: 20px !important;
+    display: flex !important;
+    padding: 0 !important;
+  }
+  .pagelayout-login a.help-icon::before {
+    content: url("https://api.iconify.design/fluent/question-circle-20-regular.svg?color=white") !important;
+  }
+
   /* ----- Other miscellaneous changes ----- */
+}
+/* ----- UNamur specific styles ----- */
+@-moz-document url-prefix("https://webcampus.unamur.be/") {
+  /* ----- Webcampus color theme ----- */
+  :root {
+    --bg-primary: #1976d2;
+    --bg-primary-hover: #2196f3;
+    --bg-primary-light: #63a4ff;
+    --bg-primary-light-hover: #80b3ff;
+    --bg-primary-dark: #004ba0;
+    --bg-primary-dark-hover: #0062b1;
+    --bg-secondary: #00bcd4;
+    --bg-secondary-light: #62efff;
+    --bg-secondary-dark: #008ba3;
+    --bg-secondary-hover: #4dd0e1;
+    --fg-on-primary: #ffffff;
+    --fg-on-primary-light: #000000;
+    --fg-on-primary-dark: #ffffff;
+    --fg-on-secondary: #000000;
+    --fg-on-secondary-light: #000000;
+    --fg-on-secondary-dark: #000000;
+  }
+
+  ul.navbar-nav.d-none.d-md-flex::after {
+    content: "Webcampus";
+    font-size: 18px;
+    font-size: 1.171875rem;
+    font-weight: 400;
+    line-height: inherit;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  ul.navbar-nav.d-none.d-md-flex::after:hover {
+    text-decoration: underline;
+  }
+
+  header.fixed-top.brand-banner {
+    background: unset;
+    height: 50px;
+    left: 4.25rem;
+    width: 6.4rem;
+    z-index: 2000;
+  }
+  header.fixed-top.brand-banner .right-logo {
+    visibility: hidden;
+  }
+  header.fixed-top.brand-banner .left-logo {
+    box-shadow: unset;
+    display: block;
+    height: inherit;
+    position: static;
+  }
+  header.fixed-top.brand-banner .left-logo img {
+    visibility: hidden;
+  }
+
+  #blocks-column-toggle {
+    margin-top: 75px;
+    top: 0;
+  }
+
+  #nav-drawer,
+#blocks-column,
+.message-app.drawer {
+    margin-top: 60px !important;
+    top: 0;
+  }
+
+  .navbar-receptic {
+    background: unset;
+    top: 0;
+  }
+
+  .block-myoverview div[data-region=courses-view] ul.list-group {
+    display: flex;
+    flex-flow: row wrap;
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+  }
+  .block-myoverview div[data-region=courses-view] ul.list-group .card.dashboard-card {
+    flex-basis: auto;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-bottom: 0.5rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    width: calc(33.33% - 0.5rem);
+  }
+
+  .pagelayout-login .card-header::before {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 20px !important;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+    content: "Login to WebCampus";
+    margin-top: 10px;
+    color: var(--bg-primary-light);
+  }
+  .pagelayout-login .contactinfo, .pagelayout-login .col-sm-1, .pagelayout-login .col-sm-6 {
+    display: none;
+  }
+
+  img.img-fluid[src*="/core_admin/logo/"][src*="/webcampus.png"] {
+    content: url("https://transitions.unamur.be/++theme++unamur/images/logo-unamur.png");
+  }
+}
+/* ----- UCLouvain ----- */
+@-moz-document url-prefix("https://moodle.uclouvain.be/") {
+  /* ----- UCLouvain color theme ----- */
+  :root {
+    --bg-primary: #1976d2;
+    --bg-primary-hover: #2196f3;
+    --bg-primary-light: #63a4ff;
+    --bg-primary-light-hover: #80b3ff;
+    --bg-primary-dark: #004ba0;
+    --bg-primary-dark-hover: #0062b1;
+    --bg-secondary: #00bcd4;
+    --bg-secondary-light: #62efff;
+    --bg-secondary-dark: #008ba3;
+    --bg-secondary-hover: #4dd0e1;
+    --fg-on-primary: #ffffff;
+    --fg-on-primary-light: #000000;
+    --fg-on-primary-dark: #ffffff;
+    --fg-on-secondary: #000000;
+    --fg-on-secondary-light: #000000;
+    --fg-on-secondary-dark: #000000;
+  }
+
+  /* UCLouvain specific styles */
+  #page-site-index #page-header .logo img {
+    content: url("https://ojs.uclouvain.be/public/logo_neg.png");
+  }
+
+  #page-my-index .block_recentlyaccessedcourses [data-region=loading-placeholder] {
+    margin-top: 36.5px;
+  }
+  #page-my-index .block_recentlyaccessedcourses [data-region=loading-placeholder] .card-deck {
+    height: auto !important;
+  }
+  #page-my-index .block_recentlyaccessedcourses [data-region=loading-placeholder] .card-deck .card {
+    height: 74.6px !important;
+  }
+  #page-my-index .block_recentlyaccessedcourses [data-region=loading-placeholder] .card-deck .card.dashboard-card .card-img-top {
+    display: none;
+  }
+  #page-my-index .block_recentlyaccessedcourses [data-region=loading-placeholder] .card-deck .card-body.course-info-container {
+    padding-top: 20px !important;
+    padding-right: 10px !important;
+  }
+
+  span[style*="color: rgb(68, 68, 68)"],
+span[style*="color: rgb(68, 68, 68)"] span, span[style*="color: rgb(51, 51, 51)"],
+span[style*="color: rgb(51, 51, 51)"] span,
+em[style*="color: rgb(68, 68, 68)"],
+em[style*="color: rgb(68, 68, 68)"] span,
+em[style*="color: rgb(51, 51, 51)"],
+em[style*="color: rgb(51, 51, 51)"] span,
+p[style*="color: rgb(68, 68, 68)"],
+p[style*="color: rgb(68, 68, 68)"] span,
+p[style*="color: rgb(51, 51, 51)"],
+p[style*="color: rgb(51, 51, 51)"] span,
+i[style*="color: rgb(68, 68, 68)"],
+i[style*="color: rgb(68, 68, 68)"] span,
+i[style*="color: rgb(51, 51, 51)"],
+i[style*="color: rgb(51, 51, 51)"] span {
+    color: #959595 !important;
+  }
+
+  h3[style*="color: rgb(51, 51, 51)"] {
+    color: #ffffff !important;
+  }
+
+  span[style*="background-color: rgb(255, 207, 53)"],
+span[style*="background-color: rgb(125, 159, 211)"] {
+    background-color: inherit !important;
+  }
+
+  .titre-bleu,
+.titre-vert,
+.titre-jaune,
+.titre-rouge,
+.titre-rose,
+.titre-mauve {
+    border: 0;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 16px !important;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+  }
+
+  .titre-bleu {
+    color: #00a1e4;
+  }
+
+  .titre-vert {
+    color: #6eb45e;
+  }
+
+  .titre-jaune {
+    color: #f1d06b;
+  }
+
+  .titre-rouge {
+    color: #e04545;
+  }
+
+  .titre-rose {
+    color: #ff5e62;
+  }
+
+  .titre-mauve {
+    color: #9b51e0;
+  }
+
+  .astuce,
+.covid {
+    background: inherit;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 16px !important;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  .astuce {
+    border-color: #00a1e4;
+    color: #00a1e4;
+  }
+
+  .covid {
+    border-color: #e04545;
+    color: #e04545;
+  }
+}
+@-moz-document url-prefix("https://idp.uclouvain.be/idp/profile/SAML2/Redirect/SSO") {
+  /* ----- UCLouvain color theme ----- */
+  :root {
+    --bg-primary: #1976d2;
+    --bg-primary-hover: #2196f3;
+    --bg-primary-light: #63a4ff;
+    --bg-primary-light-hover: #80b3ff;
+    --bg-primary-dark: #004ba0;
+    --bg-primary-dark-hover: #0062b1;
+    --bg-secondary: #00bcd4;
+    --bg-secondary-light: #62efff;
+    --bg-secondary-dark: #008ba3;
+    --bg-secondary-hover: #4dd0e1;
+    --fg-on-primary: #ffffff;
+    --fg-on-primary-light: #000000;
+    --fg-on-primary-dark: #ffffff;
+    --fg-on-secondary: #000000;
+    --fg-on-secondary-light: #000000;
+    --fg-on-secondary-dark: #000000;
+  }
+
+  /* ----- Login page ----- */
+  .wrapper .container {
+    width: 630px;
+    padding: 20px;
+  }
+
+  .list-help-item a {
+    color: var(--bg-secondary-light);
+    font-weight: 400;
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .list-help-item a:hover, .list-help-item a:active, .list-help-item a:focus, .list-help-item a:focus:active {
+    color: var(--bg-secondary-hover);
+  }
+  .list-help-item a:visited {
+    color: var(--bg-secondary-light);
+  }
+  .list-help-item a .item-marker {
+    width: 0;
+    font-size: 0;
+    margin-right: 5px !important;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+  }
+  .list-help-item a .item-marker::before {
+    width: 20px !important;
+    height: 20px !important;
+    display: flex !important;
+    padding: 0 !important;
+  }
+  .list-help-item a .item-marker::before {
+    content: url("https://api.iconify.design/fluent/caret-right-20-regular.svg?color=white") !important;
+  }
+
+  .wrapper {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2) !important;
+  }
+  .wrapper header img {
+    content: url("https://ojs.uclouvain.be/public/logo_neg.png");
+    width: 250px;
+  }
+
+  .wrapper,
+footer,
+.container-footer {
+    color: #ffffff;
+    background-color: #1e1e1e;
+  }
+
+  .column.one {
+    width: 65%;
+  }
+
+  form {
+    width: 100%;
+  }
+  form legend {
+    margin-top: 10px;
+    color: var(--bg-primary-light);
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 20px !important;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+  }
+  form .form-element.form-error {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.33px;
+    font-weight: 500;
+    color: #c95066;
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 20px;
+    min-height: 20px;
+  }
+  form .form-element.form-error::before {
+    content: url("https://api.iconify.design/fluent/error-circle-20-regular.svg?color=white") !important;
+  }
+  form .form-element.form-error::before {
+    width: 20px !important;
+    height: 20px !important;
+    display: flex !important;
+    padding: 0 !important;
+    margin-right: 5px;
+  }
+
+  .form-element-wrapper label {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.1px;
+    font-weight: 500;
+  }
+  .form-element-wrapper input[type=text],
+.form-element-wrapper input[type=password] {
+    background-color: #494949;
+    color: #ffffff;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.009375em;
+    text-decoration: inherit;
+    text-transform: inherit;
+    padding: 16px 6px;
+    height: 42px;
+    border: none;
+    border-bottom: 1px solid;
+    caret-color: var(--bg-primary);
+    border-bottom-color: rgba(255, 255, 255, 0.42);
+    will-change: border-color, background-color, border-width;
+    transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-width 0.2s ease-in-out !important;
+  }
+  .form-element-wrapper input[type=text]:hover,
+.form-element-wrapper input[type=password]:hover {
+    background-color: #373737;
+    border-bottom-color: rgba(255, 255, 255, 0.87);
+  }
+  .form-element-wrapper input[type=text]:focus, .form-element-wrapper input[type=text]:focus-visible,
+.form-element-wrapper input[type=password]:focus,
+.form-element-wrapper input[type=password]:focus-visible {
+    color: inherit;
+    background-color: #2c2c2c;
+    outline: none;
+    box-shadow: none;
+    border-bottom-color: var(--bg-primary);
+    border-width: 2px;
+    transition: none;
+  }
+  .form-element-wrapper input[type=text]:disabled, .form-element-wrapper input[type=text]:read-only,
+.form-element-wrapper input[type=password]:disabled,
+.form-element-wrapper input[type=password]:read-only {
+    background-color: #1d1d1d;
+    color: #888888;
+    border-bottom-color: #888888;
+    transition: none !important;
+  }
+  .form-element-wrapper input[type=text]:disabled:hover, .form-element-wrapper input[type=text]:read-only:hover,
+.form-element-wrapper input[type=password]:disabled:hover,
+.form-element-wrapper input[type=password]:read-only:hover {
+    border-bottom-color: inherit;
+  }
+  .form-element-wrapper input[type=checkbox] {
+    margin-right: 5px;
+  }
+  .form-element-wrapper button[type=submit] {
+    padding: 0 !important;
+  }
+  .form-element-wrapper button[type=submit]:not(.hidden) {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2) !important;
+    transition: box-shadow 0.7s;
+  }
+  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden) {
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: normal;
+    min-width: 64px;
+    padding: 0 16px;
+    min-height: 36px;
+    user-select: none;
+    vertical-align: middle;
+    perspective: 1px;
+    position: relative;
+  }
+  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden), .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):active, .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):focus, .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):active:focus {
+    outline: unset;
+    background-color: var(--bg-primary);
+    color: var(--fg-on-primary);
+  }
+  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden) i, .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden).fa {
+    margin-right: 8px;
+  }
+  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image: radial-gradient(circle, white 1%, transparent 1%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 15000%;
+    opacity: 0;
+    transition: background 0.7s, opacity 1s;
+    z-index: -1;
+  }
+  .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):active::before, .form-element-wrapper button[type=submit]:not(.hidden):not(.hidden):focus::before {
+    animation-name: ripple;
+    animation-duration: 0.6s;
+    opacity: 0.4;
+    transition: 0s !important;
+  }
+  @keyframes ripple {
+    from {
+      background-size: 1%;
+    }
+    to {
+      background-size: 15000%;
+    }
+  }
+  .form-element-wrapper button[type=submit]:not(.hidden):hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2) !important;
+    transition: box-shadow 0.6s;
+    background-color: var(--bg-primary-hover);
+  }
+  .form-element-wrapper button[type=submit]:not(.hidden):focus, .form-element-wrapper button[type=submit]:not(.hidden):active {
+    box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2) !important;
+    transition: box-shadow 0.6s;
+  }
+
+  .footer-text {
+    padding: 10px;
+  }
 }
