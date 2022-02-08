@@ -1,6 +1,6 @@
 # Modern dark theme for Moodle
 
-## [NEW] V0.6 - Material Design Update + UCLouvain support
+## [NEW] V2.0.0 - Material Design Update + UCLouvain support
 
 Nouveaux screens TODO
 
@@ -29,4 +29,3 @@ If you notice a problem but don't have time to implement it, you can report it t
 
 If you want to contribute, please fork and make pull requests ! Any help is appreciated.
 Please read the [contributing](CONTRIBUTING.md) file for additional information.
-
