@@ -122,6 +122,8 @@ button.btn.btn-secondary[type="submit"],
 .datapreferences input.btn.btn-secondary[type="submit"],
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary,
 [data-region="more-courses-button-container"] .btn.btn-secondary,
+.choicegroup-descriptionshow.btn.btn-secondary,
+.choicegroup-membershow.btn.btn-secondary,
 #id_cancel {
     @include text-button($fg-high-emphasis, $fg-on-surface);
 }
