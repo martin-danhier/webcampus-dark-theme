@@ -1,9 +1,10 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.5.17
+@version        0.5.32
 @description    Dark theme for webcampus
 @author         Martin Danhier
+@author         Yannis Fraselle
 @updateURL      https://raw.githubusercontent.com/martin-danhier/webcampus-dark-theme/master/dark_webcampus.user.css
 ==/UserStyle== */
 @-moz-document domain("webcampus.unamur.be"),
@@ -71,7 +72,7 @@ domain("auth.unamur.be") {
     }
 
     #page-footer .contactinfo::before {
-        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.17 \A \A";
+        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.32 \A \A";
         white-space: pre;
         text-align: center;
         color: #e7e7e7;
@@ -102,7 +103,6 @@ domain("auth.unamur.be") {
     }
     .list-group-item {
         background-color: #262626;
-        box-shadow: 0.5px 0.5px #393535;
         border: unset;
         color: #737373;
     }
@@ -124,7 +124,8 @@ domain("auth.unamur.be") {
     }
     .card {
         background-color: #171717;
-        border-color: #4f4f4f;
+        border-color: #262626;
+        border-radius: 15px;
     }
     #region-main .card-body {
 
@@ -1011,144 +1012,145 @@ domain("auth.unamur.be") {
 
     /* URL */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/url/"][src$="/icon"] {
-        content: url('https://api.iconify.design/mdi:link-variant.svg?height=24');
+        content: url('https://api.iconify.design/fluent/link-12-regular.svg?width=24');
     }
 
     /* Forum / Annonce */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/mod_forum/"][src$="/icon"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/forum/"][src$="/icon"] {
-        content: url('https://api.iconify.design/ic:round-forum.svg?height=24');
+        content: url('https://api.iconify.design/fluent/chat-multiple-16-regular.svg?width=24');
     }
 
     /* Workshop / Peer review */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/workshop/"][src$="/icon"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/feedback/"][src$="/icon"] {
-        content: url('https://api.iconify.design/uil:feedback.svg?height=24');
+        content: url('https://api.iconify.design/fluent/person-feedback-24-regular.svg?width=24');
     }
 
     /* Quiz */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/quiz/"][src$="/icon"] {
-        content: url('https://api.iconify.design/ant-design:form-outlined.svg?height=24');
+        content: url('https://api.iconify.design/fluent/quiz-new-24-regular.svg?width=24');
     }
 
     /* PDF */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/pdf"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/pdf-24"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/amanote/"][src$="/icon"] {
-        content: url('https://api.iconify.design/bx:bxs-file-pdf.svg?height=25');
+        content: url('https://api.iconify.design/fluent/document-pdf-16-regular.svg?width=24');
     }
 
     /* Vidéo */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/ubicast/"][src$="/icon"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/mpeg-24"] {
-        content: url('https://api.iconify.design/carbon:play-filled.svg?height=24');
+        content: url('https://api.iconify.design/fluent/video-clip-16-regular.svg?width=24');
     }
 
     /* Zip */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/archive-24"] {
-        content: url('https://api.iconify.design/clarity:file-zip-solid.svg?height=24');
+        content: url('https://api.iconify.design/fluent/folder-zip-16-regular.svg?width=24');
     }
 
     /* Link to webcampus */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/page/"][src$="/icon"] {
-        content: url('https://api.iconify.design/bx:bxs-note.svg?height=24');
+        content: url('https://api.iconify.design/fluent/note-16-regular.svg?width=24');
     }
 
     /* Source code */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/sourcecode-24"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/markup-24"] {
-        content: url('https://api.iconify.design/mdi:file-code.svg?height=54');
+        content: url('https://api.iconify.design/fluent/document-chevron-double-24-regular.svg?width=24');
     }
     
     /* Tiff */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/tiff"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/tiff-24"] {
-        content: url('https://api.iconify.design/bx:bxs-file-png.svg?height=25');
+        content: url('https://api.iconify.design/fluent/image-16-filled.svg?width=24');
     }
     
 
     /* Png */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/png"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/png-24"] {
-        content: url('https://api.iconify.design/bx:bxs-file-png.svg?height=25');
+        content: url('https://api.iconify.design/fluent/image-24-regular.svg?width=24');
     }
     /* Jpg */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/jpeg-24"] {
-        content: url('https://api.iconify.design/bx:bxs-file-jpg.svg?height=25');
+        content: url('https://api.iconify.design/fluent/image-24-regular.svg?width=24');
     }
 
     /* Word */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/document-24"] {
-        content: url('https://api.iconify.design/mdi:file-word.svg?height=25');
+        content: url('https://api.iconify.design/fluent/document-text-24-regular.svg?width=24');
     }
 
-    /* Powerpoint */
-    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/powerpoint-24"] {
-        content: url('https://api.iconify.design/mdi:file-powerpoint.svg?height=25');
+    /* Powerpoint & ODP */
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/powerpoint-24"],
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/impress-24"] {
+        content: url('https://api.iconify.design/fluent/data-pie-20-regular.svg?width=24');
     }
 
     /* Excel */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/spreadsheet-24"] {
-        content: url('https://api.iconify.design/mdi:file-excel.svg?height=25');
+        content: url('https://api.iconify.design/fluent/document-table-24-regular.svg?width=24');
     }
     
     /* Wiki */ 
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/wiki/"][src$="/icon"] {
-        content: url('https://api.iconify.design/carbon:wikis.svg?height=25');
+        content: url('https://api.iconify.design/fluent/globe-16-regular.svg?width=24');
     }
 
     /* Devoir (upload) */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/assign/"][src$="/icon"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/mod_assign/"][src$="/icon"] {
-        content: url('https://api.iconify.design/ic:round-file-upload.svg?height=24');
+        content: url('https://api.iconify.design/fluent/arrow-upload-16-filled.svg?width=24');
     }
 
     /* Folder */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/folder/"][src$="/icon"] {
-        content: url('https://api.iconify.design/ic:round-folder.svg?height=24');
+        content: url('https://api.iconify.design/fluent/folder-16-regular.svg?width=24');
     }
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/folder-24"] {
-        content: url('https://api.iconify.design/ant-design:folder-open-filled.svg');
+        content: url('https://api.iconify.design/fluent/folder-open-16-regular.svg?width=24');
     }
 
     /* Scheduler */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/scheduler/"][src$="/icon"] {
-        content: url('https://api.iconify.design/mdi:calendar-clock.svg?height=24');
+        content: url('https://api.iconify.design/fluent/calendar-clock-16-regular.svg?width=24');
     }
 
     /* Question (choice) */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/choice/"][src$="/icon"] {
-        content: url('https://api.iconify.design/mdi:comment-question.svg?height=24');
+        content: url('https://api.iconify.design/fluent/chat-help-24-regular.svg?width=24');
     }
 
     /* Glossary */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/glossary/"][src$="/icon"] {
-        content: url(' https://api.iconify.design/bx:bx-sort-a-z.svg?height=24');
+        content: url('https://api.iconify.design/fluent/text-sort-ascending-16-filled.svg?width=24');
     }
 
     /* Certificate */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/customcert/"][src$="/icon"] {
-        content: url('https://api.iconify.design/mdi:certificate.svg?height=24');
+        content: url('https://api.iconify.design/fluent/certificate-24-regular.svg?width=24');
     }
 
     /* Wooclap */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/wooclap/"][src$="/icon"] {
-        content: url('https://api.iconify.design/ls:w.svg?height=24&inline=true');
+        content: url('https://api.iconify.design/fluent/form-new-24-regular.svg?width=24');
     }
 
     /* Choose a group */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/choicegroup/"][src$="/icon"] {
-        content: url('https://api.iconify.design/bi:people-fill.svg?height=24');
+        content: url('https://api.iconify.design/fluent/people-swap-16-regular.svg?width=24');
     }
 
     /* Generic text file */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/text-24"] {
-        content: url('https://api.iconify.design/eva:file-fill.svg?height=25');
+        content: url('https://api.iconify.design/fluent/document-text-24-regular.svg?width=24');
     }
 
     /* Chat */
     img.activityicon[src^="https://webcampus.unamur.be/theme/image.php/receptic/chat/"][src$="/icon"] {
-        content: url('https://api.iconify.design/bi:chat-dots-fill.svg?height=24');
+        content: url('https://api.iconify.design/fluent/chat-12-regular.svg?width=24');
     }
 
     /* Amanote thingy at the right */
@@ -1163,7 +1165,11 @@ domain("auth.unamur.be") {
 
     /* text info block */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/label/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fe:text-align-left.svg?height=24');
+        content: url('https://api.iconify.design/fluent/text-align-left-20-filled.svg?width=24');
+    }
+    
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/book/"][src$="/icon"] {
+        content: url('https://api.iconify.design/fluent/book-24-regular.svg?width=24');    
     }
 
     /* Not terminated */
@@ -1184,6 +1190,350 @@ domain("auth.unamur.be") {
         filter: invert(85%) sepia(24%) saturate(888%) hue-rotate(64deg) brightness(88%) contrast(85%) !important;
     }
     
+    .fa-bell:before {
+        content: url('https://api.iconify.design/fluent/alert-16-regular.svg?color=white&width=24');
+        margin-left: -0.2rem;
+    }
+    
+    .fa-comment:before {
+        content: url('https://api.iconify.design/fluent/comment-12-regular.svg?color=white&width=24');
+        margin-left: -0.2rem;
+    }
+    
+    .fa-check:before {
+        content: url('https://api.iconify.design/fluent/checkmark-12-filled.svg?color=white&width=20');
+    }
+    
+    .fa-gear:before, .fa-cog:before {
+        content: url('https://api.iconify.design/fluent/settings-16-regular.svg?color=white&width=20');
+    }
+    
+    .fa-user:before {
+        content: url('https://api.iconify.design/fluent/person-16-regular.svg?color=white&width=20');
+    }
+    
+    .fa-chevron-right:before {
+        content: url('https://api.iconify.design/fluent/chevron-right-16-filled.svg?color=white&width=20');
+    }
+    
+    .fa-chevron-left:before {
+        content: url('https://api.iconify.design/fluent/chevron-left-16-filled.svg?color=white&width=20');
+    }
+    
+    .fa-dashboard:before, .fa-tachometer:before {
+        content: url('https://api.iconify.design/fluent/board-16-regular.svg?color=white&width=24');
+    }
+    
+    .fa-info-circle:before {
+        content: url('https://api.iconify.design/fluent/calendar-info-16-regular.svg?color=white&width=24');
+    }
+    
+    .fa-calendar:before {
+        content: url('https://api.iconify.design/fluent/calendar-ltr-16-regular.svg?color=white&width=24');
+    }
+    
+    .fa-list:before {
+        content: url('https://api.iconify.design/fluent/text-bullet-list-tree-16-filled.svg?color=white&width=24');
+    }
+    
+    .fa-thumbs-up:before {
+        content: url('https://api.iconify.design/fluent/person-feedback-24-regular.svg?color=white&width=24');   
+    }
+    
+    .fa-filter:before {
+        content: url('https://api.iconify.design/fluent/filter-16-filled.svg?color=white&width=20');
+    }
+    
+    .fa-sort-amount-asc:before {
+        content: url('https://api.iconify.design/fluent/arrow-sort-down-lines-16-filled.svg?color=white&width=20');
+    }
+    
+    .block-region .block.block_myoverview h5:before {
+        content: url('https://api.iconify.design/fluent/board-16-regular.svg?color=white&width=24');
+    }
+
+    .fa-star:before {
+        content: url('https://api.iconify.design/fluent/star-12-filled.svg?color=white&width=18');
+    }
+    
+    .fa-ban:before {
+        content: url('https://api.iconify.design/fluent/star-off-12-regular.svg?color=white&width=18');
+    }
+
+    .fa-sign-out:before {
+        content: url('https://api.iconify.design/fluent/sign-out-24-regular.svg?color=white&width=18');
+    }
+    
+    .block-region .block.block_recentlyaccessedcourses h5:before {
+        content: url('https://api.iconify.design/fluent/app-recent-24-regular.svg?color=white&width=24');
+    }
+    
+    .block-region .block.block_news_items h5:before {
+        content: url('https://api.iconify.design/fluent/news-16-regular.svg?color=white&width=24');
+    }
+    
+    .block-region .block.block_timeline h5:before {
+        content: url('https://api.iconify.design/fluent/calendar-clock-16-regular.svg?color=white&width=24');
+    }
+    
+    .fa-clock-o:before {
+        content: url('https://api.iconify.design/fluent/clock-12-regular.svg?color=white&width=20');
+    }
+    
+    .fa-mortar-board:before, .fa-graduation-cap:before {
+        content: url('https://api.iconify.design/fluent/book-open-16-filled.svg?color=white&width=24');
+    }
+
+    .fa-user-plus:before {
+        content: url('https://api.iconify.design/fluent/person-add-24-regular.svg?color=white&width=18');
+    }
+    
+    body.drawer-open-right #blocks-column-toggle:before {
+        content: url('https://api.iconify.design/fluent/chevron-right-12-regular.svg?color=white&width=24');
+        margin-left: -0.4rem;
+    }
+    
+    #blocks-column-toggle:before {
+        content: url('https://api.iconify.design/fluent/chevron-left-12-regular.svg?color=white&width=24');
+        margin-left: -0.4rem;
+    }
+    
+    .jsenabled .list-group-item.localboostnavigationcollapsibleparent.localboostnavigationcollapsedparent>div::after {
+        content: url('https://api.iconify.design/fluent/caret-right-20-regular.svg?color=white&width=20');
+    }
+    
+    .jsenabled .list-group-item.localboostnavigationcollapsibleparent:not(.localboostnavigationcollapsedparent)>div::after {
+        content: url('https://api.iconify.design/fluent/caret-down-20-regular.svg?color=white&width=20');
+    }
+    
+    .dropdown-toggle::after {
+        content: url('https://api.iconify.design/fluent/caret-down-20-regular.svg?color=white&width=18');
+        border-top: 0em;
+    }
+    
+    .fa-ellipsis-h:before {
+        content: url('https://api.iconify.design/fluent/more-horizontal-16-regular.svg?color=white&width=20');
+    }
+    
+    .fa-table:before {
+        content: url('https://api.iconify.design/fluent/table-32-regular.svg?color=white&width=20');
+    }
+    
+    .fa-wrench:before {
+        content: url('https://api.iconify.design/fluent/settings-16-regular.svg?color=white&width=20');
+    }
+    
+    .fa-user-circle:before {
+        content: url('https://api.iconify.design/fluent/person-circle-12-regular.svg?color=white&width=20');
+    }
+    
+    .fa-lock:before {
+        content: url('https://api.iconify.design/fluent/lock-closed-16-regular.svg?color=white&width=20');
+    }
+    
+    .help-icon:before{
+        content: url('https://api.iconify.design/fluent/chat-help-24-regular.svg?color=%231a9e9f&width=20');
+    }
+    
+    .fa-envelope:before {
+        content: url('https://api.iconify.design/fluent/mail-16-regular.svg?color=white&width=20');
+    }
+    
+    .fa-phone:before {
+        content: url('https://api.iconify.design/fluent/call-16-regular.svg?color=white&width=20');
+    }
+
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/i/marker"] {
+        content: url('https://api.iconify.design/fluent/calendar-info-16-regular.svg?width=20');
+        color: white;
+    }
+    
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/block_timeline/"][src$="/activities"] {
+        content: url('https://api.iconify.design/fluent/calendar-checkmark-28-regular.svg?color=%23b3b3af');
+    }
+    
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/block_myoverview/"][src$="/courses"] {
+        content: url('https://api.iconify.design/fluent/beach-48-regular.svg?color=%23b3b3af');
+    }
+    
+    .dropdown-item[aria-current="true"]:before{
+        content: url('https://api.iconify.design/fluent/circle-12-regular.svg?color=white&width=13');
+    }
+    
+    .course_category_tree .courses .coursebox>.info>.coursename a:before, #page-course-search .courses .coursebox>.info>.coursename a:before {
+        content: url('https://api.iconify.design/fluent/book-open-16-filled.svg?color=white&width=15');
+    }
+    
+    .course_category_tree .courses .coursebox .moreinfo .fa-info:before, #page-course-search .courses .coursebox .moreinfo .fa-info:before {
+        content: url('https://api.iconify.design/fluent/info-12-regular.svg?color=white&width=15');
+    }
+    
+    #back-to-top a.arrow{
+        content: url('https://api.iconify.design/fluent/chevron-up-12-regular.svg?color=white&width=40');
+    }
+    
+    .collapsible-actions .collapseexpand {
+        background: url('https://api.iconify.design/fluent/caret-right-20-regular.svg?color=white&width=20') left no-repeat;
+    }
+    
+    .collapsible-actions .collapse-all {
+        background-image: url('https://api.iconify.design/fluent/caret-down-20-regular.svg?color=white&width=20');
+    }
+    
+    .course_category_tree .category.with_children.collapsed>.info>.categoryname{
+        background-image: url('https://api.iconify.design/fluent/caret-right-20-regular.svg?color=white&width=20');
+    }
+    
+    .course_category_tree .category.with_children>.info>.categoryname{
+        background-image: url('https://api.iconify.design/fluent/caret-down-20-regular.svg?color=white&width=20');
+    }
+    
+    .fa-group:before, .fa-users:before {
+        content: url('https://api.iconify.design/fluent/people-community-16-regular.svg?color=white&width=24');
+    }
+    
+    /* bouger l'icone */
+    .icon{
+        margin-right: 0.7rem;
+        margin-top: -0.1rem;
+    }
+    
+    /* bouger le cadre icone texte mais pas complètement enfin c'est chelou */
+    #nav-drawer .list-group div.list-group-item.active .icon, #nav-drawer .list-group ul li a.list-group-item.active .icon, #nav-drawer .list-group div.list-group-item.active:hover .icon, #nav-drawer .list-group ul li a.list-group-item.active:hover .icon{
+        margin-left: -0.2rem;
+    }
+    #nav-drawer .list-group div.list-group-item .icon, #nav-drawer .list-group ul li a.list-group-item .icon{
+        margin-left: -0.2rem;
+    }
+    
+    /* bouger le machin bleu */
+    #nav-drawer .list-group ul li a.list-group-item.active{
+        padding-bottom: 0.4rem;
+    }
+    #nav-drawer .list-group div.list-group-item, #nav-drawer .list-group ul li a.list-group-item{
+        padding-bottom: 0.4rem;
+    }
+    
+    /* fixer et bouger les icones des blocks */
+    .block-region .block .card-body .card-title:before{
+        margin-left: -1.7rem;
+        position: absolute;
+
+    }
+    
+    .block-region .block.block_recent_activity h5:before{
+        content: url('https://api.iconify.design/fluent/shifts-activity-20-filled.svg?color=white&width=24');
+    }
+    
+    .block-region .block.block_calendar_month h5:before, .block-region .block.block_calendar_upcoming h5:before{
+            content: url(https://api.iconify.design/fluent/calendar-ltr-16-regular.svg?color=white&width=24);
+    }
+    
+    .fa-globe:before{
+        content: url('https://api.iconify.design/fluent/globe-16-regular.svg?color=white&width=24');
+    }
+    
+    .fa-cubes:before{
+        content: url('https://api.iconify.design/fluent/select-all-off-24-regular.svg?color=white&width=24');
+    }
+    
+    .course-content ul.collapsibletopics a.sectiontoggle[aria-expanded="true"]{
+        background-image: url('https://api.iconify.design/fluent/caret-down-20-regular.svg?color=white&width=18');
+    }
+    
+    .course-content ul.collapsibletopics a.sectiontoggle[aria-expanded="false"]{
+        background-image: url('https://api.iconify.design/fluent/caret-right-20-regular.svg?color=white&width=18'); 
+    }
+    
+    .course-content .collapsible-actions a.expandall{
+        background: url('https://api.iconify.design/fluent/caret-right-20-regular.svg?color=white&width=18') left no-repeat;
+    }
+    
+    .course-content .collapsible-actions a.collapseall{
+        background: url('https://api.iconify.design/fluent/caret-down-20-regular.svg?color=white&width=18') left no-repeat
+    }
+    
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/i/completion-manual-n"] {
+        content: url('https://api.iconify.design/fluent/checkbox-unchecked-24-filled.svg?color=%23868e96');
+    }
+    
+    img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/i/completion-manual-y"] {
+        content: url('https://api.iconify.design/fluent/checkbox-checked-24-filled.svg?color=%23868e96');
+    }
+    
+    .hot .activityinstance:before, .warm .activityinstance:before{
+        content: url('https://api.iconify.design/fluent/new-16-filled.svg?color=crimson');
+    }
+    
+    .fa-map-pin:before {
+        content: url('https://api.iconify.design/fluent/pin-12-filled.svg?color=white&width=18');
+    }
+    
+    .fa-star-o:before{
+        content: url('https://api.iconify.design/fluent/star-12-regular.svg?color=white&width=18');
+    }
+    
+    .fa-ellipsis-v:before{
+        content: url('https://api.iconify.design/fluent/more-vertical-16-filled.svg?color=white&width=18');
+    }
+    
+    .alert-danger:before{
+        content: url('https://api.iconify.design/fluent/error-circle-12-regular.svg?color=%23ff9191&width=18');
+        margin-right: 0.2rem;
+    }
+    
+    #nav-drawer .list-group div.list-group-item .fa-folder-o:before, #nav-drawer .list-group ul li a.list-group-item .fa-folder-o:before {
+        content: url('https://api.iconify.design/fluent/folder-16-regular.svg?color=white&width=24');
+    }
+    
+    .fa-align-left:before{
+        content: url('https://api.iconify.design/fluent/list-16-regular.svg?color=white&width=24');
+    }
+    
+    .fa-map-marker:before{
+        content: url('https://api.iconify.design/fluent/location-28-regular.svg?color=white&width=24');
+    }
+    
+    .fa-feed:before, .fa-rss:before{
+        content: url('https://api.iconify.design/fluent/rss-24-regular.svg?color=white&width=24');
+    }
+    
+    .calendar_event_site, .calendar_event_category, .calendar_event_group, .calendar_event_user, .calendar_event_other{
+        border-radius: 10px;
+    }
+    
+    .fa-eye:before, .fa-eye-slash:before{
+        color: transparent;
+    }
+    
+    .fa-mortar-board:before, .fa-graduation-cap:before{
+        margin-right: 0.7rem;
+    }
+    
+    .fa-long-arrow-down:before{
+        content: url('https://api.iconify.design/fluent/arrow-sort-down-16-filled.svg?color=white&width=18');
+    }
+    
+    .fa-warning:before, .fa-exclamation-triangle:before{
+        content: url('https://api.iconify.design/fluent/chat-warning-16-regular.svg?color=%23da4f4f&width=24');
+    }
+    
+    div.availabilityinfo:before{
+        content: url('https://api.iconify.design/fluent/clock-12-regular.svg?color=%23da4f4f&width=24');
+    }
+    
+    .block-region .block .minicalendar .calendar-controls .arrow_link.previous .arrow:before{
+        content: url('https://api.iconify.design/fluent/chevron-left-16-filled.svg?color=%231cc9ca&width=20');
+    }
+    
+    .block-region .block .minicalendar .calendar-controls .arrow_link.next .arrow:before{
+        content: url('https://api.iconify.design/fluent/chevron-right-16-filled.svg?color=%231cc9ca&width=20');
+    }
+    
+    span.eventname{
+        margin-left: 0.4rem;
+    }
+    
     /* ================== */
     
     /* Feedback module */
@@ -1196,8 +1546,6 @@ domain("auth.unamur.be") {
         max-width: 1200px;
         margin: auto;
     }
-    
- 
     
     #page-mod-feedback-print #page-content #region-main .form-group.row .col-md-3 {
         max-width: 40%;
@@ -1501,162 +1849,6 @@ domain("auth.unamur.be") {
         padding-right: 12px;
     }
 
-
-    input[type=radio],
-    input[type=checkbox] {
-        /* Hide original inputs */
-        visibility: hidden;
-        position: absolute;
-    }
-    
-    #page-mod-choicegroup-view .choicegroups input[type="radio"] {
-        visibility: unset;
-        position: unset;
-    }
-    
-    #page-mod-choicegroup-view .choicegroups input[type="checkbox"] {
-        visibility: unset;
-        position: unset;
-    }
-    
-    #page-mod-choicegroup-view div.tablecontainer  {
-        border-radius: 15px;
-    }
-
-
-    /* Don't affect other types of input */
-    label > input[type=radio],
-    label > input[type=checkbox] {
-        visibility: visible;
-    }
-
-    .custom-radio .custom-control-label:after {
-        visibility: hidden;
-        content: unset;
-    }
-    .custom-control {
-        padding-left: unset;
-    }
-    .custom-radio .custom-control-label::before {
-        background: none;
-        position: unset;
-        top: unset;
-        left: unset;
-    }
-    .custom-radio .custom-control-input:checked ~ .custom-control-label::before,
-    .custom-radio .custom-control-input:active ~ .custom-control-label::before {
-        background: none;
-    }
-
-
-    .switch input[type=checkbox]:checked + label:before {
-        content: "";
-        filter: unset;
-    }
-
-    .switch input[type=checkbox] + label::before,
-    .switch input[type=checkbox] + label::after {
-        content: "";
-        position: absolute;
-        top: calc(50% - .825rem);
-        left: 0;
-        width: 3.3rem;
-        height: 1.65rem;
-        bottom: 0;
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-right: 0;
-        filter: unset;
-        display: block;
-    }
-
-    .switch input[type=checkbox] + label::after {
-        margin-top: 2px;
-        left: 2px;
-        width: calc(1.65rem - 4px);
-        height: calc(1.65rem - 4px);
-        border-radius: 50%;
-        background-color: #fff;
-        -webkit-transition: .2s all;
-        -o-transition: .2s all;
-        transition: .2s all;
-    }
-
-    /*     .switch input:checked + label::before {
-        background-color: #1a9e9f;
-    }
-    .switch input + label::before {
-        right: 0;
-        background-color: #dee2e6;
-        border-radius: 1.65rem;
-        -webkit-transition: .2s all;
-        -o-transition: .2s all;
-        transition: .2s all;
-    }
-    .switch input + label::before,
-    .switch input + label::after {
-        content: "";
-        position: absolute;
-        top: calc(50% - .825rem);
-        left: 0;
-        width: 3.3rem;
-        height: 1.65rem;
-        bottom: 0;
-        display: block;
-    } */
-    /* checked */
-    input[type=checkbox]:checked + label:before {
-        content: url('https://api.iconify.design/mdi:checkbox-marked.svg?height=20');
-        vertical-align: -0.125em;
-    }
-
-    input[type=radio]:checked + label:before,
-    label > input[type=radio]:checked :before {
-        content: url('https://api.iconify.design/mdi:radiobox-marked.svg?height=20');
-        vertical-align: -0.125em;
-    }
-
-    input[type=radio]:checked + label:before,
-    input[type=checkbox]:checked + label:before {
-
-        filter: invert(69%) sepia(76%) saturate(572%) hue-rotate(173deg) brightness(102%) contrast(101%);
-    }
-    /* checked disabled */
-    input[type=radio]:disabled:checked + label:before,
-    input[type=checkbox]:disabled:checked + label:before {
-        filter: invert(52%) sepia(11%) saturate(934%) hue-rotate(161deg) brightness(91%) contrast(93%);
-    }
-
-    /* disabled unchecked */
-    input[type=radio]:disabled + label :before,
-    input[type=checkbox]:disabled + label:before {
-        cursor: not-allowed;
-        filter: invert(45%) sepia(6%) saturate(189%) hue-rotate(161deg) brightness(92%) contrast(95%);
-    }
-
-    /* enabled unchecked */
-    input[type=checkbox] + label:before {
-        content: url('https://api.iconify.design/mdi:checkbox-blank-outline.svg?height=20');
-        vertical-align: -0.125em;
-    }
-
-    input[type=radio] + label:before {
-        content: url('https://api.iconify.design/mdi:radiobox-blank.svg?height=20');
-        vertical-align: -0.125em;
-    }
-
-    input[type=radio] + label:before,
-    input[type=checkbox] + label:before {
-        filter: invert(100%) sepia(0%) saturate(4295%) hue-rotate(71deg) brightness(119%) contrast(88%);
-        height: 21px;
-        cursor: pointer;
-        width: 21px;
-        margin-top: 4px;
-        margin-bottom: 4px;
-        margin-right: 12px;
-        display: inline-block;
-    }
-
     .modal-content,
     .moodle-dialogue-base .moodle-dialogue-wrap.moodle-dialogue-content {
         background-color: #262525;
@@ -1722,6 +1914,7 @@ domain("auth.unamur.be") {
     table.flexible td,
     .generaltable td {
         border-color: #464646;
+        color: #e1e1e1;
     }
 
 
@@ -1909,8 +2102,16 @@ domain("auth.unamur.be") {
     }
     li.page-item .page-link,
     li.page-item.disabled .page-link {
-        background-color: #3c3939;
+        background-color: #201f1f;
         border-color: #626262;
+    }
+    
+    li.page-item:last-child .page-link{
+        border-radius: 0px 10px 10px 0px;
+    }
+    
+    li.page-item:first-child .page-link{
+        border-radius: 10px 0px 0px 10px;
     }
 
     /* ========== */
@@ -1939,6 +2140,10 @@ domain("auth.unamur.be") {
         border-radius: 15px;
         background-color: #171717;
     }
+    
+    #page-login-index .card .form-control {
+        border-radius: 0 10px 10px 0;
+    }
 
     #page-login-index .input-group-addon {
         background-color: #2d2b2b;
@@ -1956,6 +2161,63 @@ domain("auth.unamur.be") {
     #page-login-index div#wrap {
         background-image: unset;
         background-color: #070707;
+    }
+    
+    span[style="color: rgb(51, 51, 51);"], span[style="color:rgb(51,51,51);"]
+    {
+    color: #fbfbfb !important;
+    }
+    
+        /* =========== */
+    /* authentification UNamur trucs specifiques BETA */
+
+    .alert-warning:before, #page-admin-index .adminwarning:before, .uninstalldeleteconfirmexternal:before, .que .outcome:before, .que .comment:before {
+        color: #ff9191;
+    }
+
+    *:before {
+        color: white;
+    }
+
+    .alert-warning {
+        background-image: linear-gradient(to bottom, #2c2c2c 0, #2c2c2c 100%);
+        color: #ff9191;
+        border-color: #2c2c2c;
+    }
+
+    .alert-danger {
+        background-image: linear-gradient(to bottom, #2c2c2c 0, #2c2c2c 100%);
+        color: #ff9191;
+        border-color: #2c2c2c;
+    }
+
+    .login {
+        background-color: #171717;
+    }
+
+    .panel {
+        border-color: #4f4f4f;
+    }
+
+    div#wrap {
+        background: -webkit-linear-gradient(top, #1f1e1e 0%,#1f1e1e 100%);
+    }
+
+    .input-group-addon {
+        background-color: #393939;
+        border: transparent;
+    }
+    
+    .dashboard-card-deck .dashboard-card .dashboard-card-img{
+        height: 0;
+    }
+    
+    .block-region .block.block_recentlyaccessedcourses .card-body .course-info-container{
+        background-color: #262626;
+    }
+    
+    #blocks-column-toggle{
+        border-radius: 15px;
     }
 }
 
@@ -2013,5 +2275,83 @@ domain("auth.unamur.be") {
 
     #player_block .player-mask div {
         visibility: hidden !important;
+    }
+    
+     /* bouton pause */
+    .player-state-playing .ub-play:before {
+        content: url('https://api.iconify.design/fluent/pause-16-filled.svg?color=white&width=30&height=30');
+    }
+    
+    /* bouton play */
+    .ub-play:before {
+        content: url('https://api.iconify.design/fluent/play-16-filled.svg?color=white&width=30&height=30');
+    }
+    
+    /* bouton -5sec */
+    .ub-rewind-five-big:before {
+        content: url('https://api.iconify.design/carbon/rewind-5.svg?color=white&width=30&height=30');
+    }
+     
+    /* bouton speed ajustement */
+    .ub-speed:before {
+        content: url('https://api.iconify.design/ri/speed-mini-fill.svg?color=white&width=30&height=30');
+    }
+    
+    /* bouton volume state 1 not loud */
+    .ub-volume-1:before {
+        content: url('https://api.iconify.design/ion/volume-off.svg?color=white&width=30&height=30');
+    }
+    
+    /* bouton volume state 2 loud */
+    .ub-volume-2:before {
+        content: url('https://api.iconify.design/ion/volume-low.svg?color=white&width=30&height=30');
+    }
+    
+    /* bouton volume state 3 SUPER loud */
+    .ub-volume-3:before {
+        content: url('https://api.iconify.design/ion/volume-medium.svg?color=white&width=30&height=30');
+    }
+    
+    /* bouton volume mute */
+    .ub-mute:before {
+        content: url('https://api.iconify.design/ion/volume-mute.svg?color=white&width=30&height=30');
+    }
+    
+    /* bouton settings */
+    .ub-settings:before {
+        content: url('https://api.iconify.design/fluent/settings-24-filled.svg?color=white&width=30&height=30');
+    }
+    
+    /* fullscreen bouton */
+    .ub-fullscreen:before {
+        content: url('https://api.iconify.design/ic/baseline-fullscreen.svg?color=white&width=30&height=30');
+    }
+    
+    .player-seekbar-handle {
+        content: url('https://api.iconify.design/akar-icons/circle-fill.svg?color=white&width=30&height=30');
+    }
+    
+    .fa-info-circle:before {
+        content: url('https://api.iconify.design/fluent/info-24-filled.svg?color=white&width=30&height=30');
+    }
+    
+    .ub-search:before {
+        content: url('https://api.iconify.design/fluent/search-24-filled.svg?color=white&width=30&height=30');
+    }
+    
+    .fa-comments-o{
+        content: url('https://api.iconify.design/cil/chat-bubble.svg?color=white&width=30&height=30');
+    }
+    
+    .ub-unvalid:before {
+        content: url('https://api.iconify.design/gridicons/cross-circle.svg?width=30&height=30');
+    }
+    
+    html {
+        font-family: Arial, sans-serif;
+    }
+    
+    #player_block.player-controls-hover .player-controls {
+        background: rgba(20,20,20,.6);
     }
 }
