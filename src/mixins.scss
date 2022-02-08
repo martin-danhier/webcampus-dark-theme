@@ -179,12 +179,14 @@
 
     &:hover {
         color: $fg-hover;
+        text-decoration: none;
     }
 
     &:focus,
     &:active,
     &:focus:active,
     &:focus:hover {
+        color: $fg-hover;
         outline: none !important;
         box-shadow: none !important;
         background-color: inherit;
@@ -375,7 +377,6 @@
     align-items: center;
 }
 
-
 // Typography
 
 @mixin font-weight($weight) {
@@ -404,6 +405,7 @@
         @include font-weight(normal);
     } @else if ($style == "button") {
         font-size: 14px;
+        line-height: 14px;
         letter-spacing: 1.25px;
         text-transform: uppercase;
         @include font-weight(medium);
@@ -522,7 +524,12 @@
         }
     }
 }
-@mixin fluent-icon-img($name, $color: $fluent-icon-default-color, $style: $fluent-icon-style, $size: $fluent-icon-size) {
+@mixin fluent-icon-img(
+    $name,
+    $color: $fluent-icon-default-color,
+    $style: $fluent-icon-style,
+    $size: $fluent-icon-size
+) {
     @if color-is-hardcoded($color) {
         // Hardcoded color: use it in the url
         content: url("https://api.iconify.design/fluent/#{$name}-" + escape-size(

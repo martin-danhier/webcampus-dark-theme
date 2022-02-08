@@ -117,8 +117,13 @@
 
                 padding: $spacing-xs $spacing-s !important;
 
+                [data-region="text-container"] p {
+                    @include typography("body2");
+                }
+
                 .time {
                     color: inherit;
+                    @include typography("caption");
                 }
 
                 .tail {
@@ -182,11 +187,7 @@
             }
 
             a {
-                color: var(--bg-secondary);
-
-                &:hover {
-                    color: var(--bg-secondary-hover);
-                }
+                @include text-button($fg-high-emphasis, $fg-on-surface);
             }
 
             textarea {

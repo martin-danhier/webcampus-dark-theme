@@ -122,6 +122,12 @@
     @include elevation(12);
     border-radius: $border-radius;
 
+    .popover-header {
+        background-color: unset !important;
+        @include typography("h6");
+        border-color: $bg-divider;
+    }
+
     .popover-body {
         padding: $spacing-sm;
         color: inherit;

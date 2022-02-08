@@ -36,6 +36,14 @@
             &:hover {
                 background-color: $bg-field-hover;
             }
+
+            // Arrow
+            &.dropdown a::after {
+                border: 0;
+                @include fluent-icon-base();
+                @include fluent-icon-img-override("caret-down", 16px, $fg-on-surface, "filled");
+                margin-left: $spacing-m !important;
+            }
         }
 
         // Icon buttons (notifications, chat)

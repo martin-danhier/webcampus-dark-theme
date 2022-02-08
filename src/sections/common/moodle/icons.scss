@@ -181,6 +181,14 @@ img[src*="/theme/image.php/"][src*="/mod_assign/"][src$="/icon"] {
     }
 }
 
+// Smaller icon for calendar
+.path-calendar .maincalendar [data-region="event-item"] {
+    img[src*="/theme/image.php/"][src*="/assign/"][src$="/icon"],
+    img[src*="/theme/image.php/"][src*="/mod_assign/"][src$="/icon"] {
+        @include fluent-icon-img-override("arrow-upload", 16px, $fg-on-badge);
+    }
+}
+
 img[src*="/theme/image.php/"][src*="/folder/"][src$="/icon"] {
     // Closed folder
     @include fluent-icon-img("folder");
@@ -468,6 +476,10 @@ a[data-route="view-contacts"],
 
 // Replace icons
 
+i.fa.fa-exclamation-circle {
+    @include fluent-icon("error-circle", $bg-error-hover);
+}
+
 i.fa.fa-bars {
     // Menu
     @include fluent-icon("navigation");
@@ -489,9 +501,38 @@ i.fa.fa-calendar {
     @include fluent-icon("calendar");
 }
 
-body.drawer-open-left [data-region="drawer"] [data-parent-key="myhome"] .media-left i:not(.fa-home) {
-    // Open in new tab
-    @include fluent-icon("open");
+// Smaller icon for calendar
+.path-calendar .maincalendar [data-region="event-item"] i.fa.fa-calendar {
+    @include fluent-icon-img-override("calendar", 16px, $fg-on-badge);
+}
+
+i.fa.fa-globe {
+    // Globe
+    @include fluent-icon("earth");
+}
+
+// Smaller icon for calendar
+.path-calendar .maincalendar [data-region="event-item"] i.fa.fa-globe {
+    @include fluent-icon-img-override("earth", 16px, $fg-on-badge);
+}
+
+i.fa.fa-cubes {
+    // Category
+    @include fluent-icon("organization");
+}
+
+// Smaller icon for calendar
+.path-calendar .maincalendar [data-region="event-item"] i.fa.fa-cubes {
+    @include fluent-icon-img-override("organization", 16px, $fg-on-badge);
+}
+
+body.drawer-open-left [data-region="drawer"] {
+    [data-parent-key="myhome"], [data-parent-key="home"] {
+        .media-left i:not(.fa-home) {
+            // Open in new tab
+            @include fluent-icon("open");
+        }
+    }
 }
 
 i.fa.fa-bell {
@@ -565,9 +606,19 @@ i.fa.fa-graduation-cap {
     @include fluent-icon("hat-graduation");
 }
 
-i.fa.fa-users {
+// Smaller icon for calendar
+.path-calendar .maincalendar [data-region="event-item"] i.fa.fa-graduation-cap {
+    @include fluent-icon-img-override("hat-graduation", 16px, $fg-on-badge);
+}
+
+i.fa.fa-user, i.fa.fa-group, i.fa.fa-users {
     // Users
     @include fluent-icon("people-community");
+}
+
+// Smaller icon for calendar
+.path-calendar .maincalendar [data-region="event-item"] i.fa.fa-group {
+    @include fluent-icon-img-override("people-community", 16px, $fg-on-badge);
 }
 
 .dashtitle i.fa.fa-users {
@@ -585,7 +636,8 @@ i.fa.fa-cogs {
     @include fluent-icon("settings");
 }
 
-i.fa.fa-envelope, i.fa.fa-envelope-o {
+i.fa.fa-envelope,
+i.fa.fa-envelope-o {
     // Email
     @include fluent-icon("mail");
 }
@@ -606,7 +658,12 @@ i.fa.fa-cog {
 
 i.fa.fa-user {
     // User
-    @include fluent-icon("people");
+    @include fluent-icon("person");
+}
+
+// Smaller icon for calendar
+.path-calendar .maincalendar [data-region="event-item"] i.fa.fa-user {
+    @include fluent-icon-img-override("person", 16px, $fg-on-badge);
 }
 
 i.fa.fa-smile-o {
@@ -880,6 +937,16 @@ i.fa.fa-braille::before {
 i.fa.fa-star {
     // Star
     @include fluent-icon-override("star", $fluent-small-icon-size, $bg-icon-favorite, "filled");
+}
+
+i.fa.fa-info-circle {
+    // Info
+    @include fluent-icon("info");
+}
+
+i.fa.fa-arrow-right {
+    // Next
+    @include fluent-icon("arrow-right");
 }
 
 // ----- Changes that don't require icon changes -----

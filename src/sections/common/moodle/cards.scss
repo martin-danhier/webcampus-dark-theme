@@ -396,3 +396,47 @@
         border-top-right-radius: $border-radius;
     }
 }
+
+/* ----- Timeline ----- */
+
+.block_timeline {
+    .border-bottom {
+        border-bottom: 0 !important;
+    }
+
+    h5.h6 {
+        @include typography("h6");
+
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    h4.h5 {
+        @include typography("h5");
+
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    .list-group-item[data-region="event-list-item"] {
+        @include surface(2);
+        @include elevation(1);
+        border-radius: $border-radius;
+        margin: $spacing-xs 0;
+        padding: $spacing-s $spacing-sm !important;
+
+        h6 {
+            text-align: left;
+        }
+
+        .list-group-item-action {
+            @include text-button($fg-high-emphasis, $fg-on-surface);
+        }
+    }
+
+    [data-region="paging-control-limit-container"] > span {
+        margin-right: $spacing-s !important;
+    }
+}

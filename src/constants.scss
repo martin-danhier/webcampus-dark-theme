@@ -30,6 +30,14 @@ $bg-field-focus: #2c2c2c;
 $bg-field-disabled: #1d1d1d;
 $bg-divider: #121212;
 
+// Colored backgrounds for calendar badges
+$bg-badge-course: #2196f3;
+$bg-badge-user: #4caf50;
+$bg-badge-site: #f44336;
+$bg-badge-category: #9c27b0;
+$bg-badge-group: #ff9800;
+$bg-badge-other: #9e9e9e;
+
 $bg-error: #c95066;
 $bg-error-hover: #e17f8c;
 $bg-success: #6eb45e;
@@ -49,6 +57,9 @@ $fg-on-info: #000000;
 $fg-high-emphasis: #c6c6c6;
 $fg-medium-emphasis: #959595;
 $fg-field-disabled: #888888;
+
+// Foreground colors for badges
+$fg-on-badge: #ffffff;
 
 // Special colors
 $shadow-1: rgba(0, 0, 0, 0.14);

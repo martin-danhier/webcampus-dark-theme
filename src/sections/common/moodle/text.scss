@@ -57,6 +57,10 @@ a.dimmed_text:visited,
     color: $bg-error !important;
 }
 
+h3.popover-region-header-text {
+    @include typography("h6");
+}
+
 h1 {
     @include typography("h1");
 }

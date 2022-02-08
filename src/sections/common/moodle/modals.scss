@@ -15,10 +15,21 @@
         @include outlined-button($fg-on-surface, true);
     }
 
+    .modal-footer {
+        a {
+            @include text-button($fg-high-emphasis, $fg-on-surface);
+        }
+
+        button.btn.btn-secondary[data-action="delete"] {
+            @include text-button($bg-error, $bg-error-hover);
+        }
+    }
+
     .modal-header,
     .modal-footer,
     .moodle-dialogue-hd {
         border-color: $bg-divider;
+        background-color: unset !important;
         color: $fg-on-surface !important;
     }
 

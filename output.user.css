@@ -50,7 +50,9 @@ SOFTWARE.
     --bg-primary: #bb86fc;
     --bg-primary-hover: #c29bf3;
     --bg-primary-light: #efb7ff;
+    --bg-primary-light-hover: #f3c6ff;
     --bg-primary-dark: #8858c8;
+    --bg-primary-dark-hover: #9069d1;
     --bg-primary-variant: #3700b3;
     --bg-secondary: #03dac6;
     --bg-secondary-light: #66fff9;
@@ -147,7 +149,9 @@ SOFTWARE.
     --bg-primary: #1976d2;
     --bg-primary-hover: #2196f3;
     --bg-primary-light: #63a4ff;
+    --bg-primary-light-hover: #80b3ff;
     --bg-primary-dark: #004ba0;
+    --bg-primary-dark-hover: #0062b1;
     --bg-secondary: #00bcd4;
     --bg-secondary-light: #62efff;
     --bg-secondary-dark: #008ba3;
@@ -273,7 +277,9 @@ span[style*="background-color: rgb(125, 159, 211)"] {
     --bg-primary: #1976d2;
     --bg-primary-hover: #2196f3;
     --bg-primary-light: #63a4ff;
+    --bg-primary-light-hover: #80b3ff;
     --bg-primary-dark: #004ba0;
+    --bg-primary-dark-hover: #0062b1;
     --bg-secondary: #00bcd4;
     --bg-secondary-light: #62efff;
     --bg-secondary-dark: #008ba3;
@@ -295,6 +301,9 @@ span[style*="background-color: rgb(125, 159, 211)"] {
   .list-help-item a {
     color: var(--bg-secondary-light);
     font-weight: 400;
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
   }
   .list-help-item a:hover, .list-help-item a:active, .list-help-item a:focus, .list-help-item a:focus:active {
     color: var(--bg-secondary-hover);
@@ -303,22 +312,23 @@ span[style*="background-color: rgb(125, 159, 211)"] {
     color: var(--bg-secondary-light);
   }
   .list-help-item a .item-marker {
-    visibility: hidden;
     width: 0;
+    font-size: 0;
+    margin-right: 5px !important;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
   }
   .list-help-item a .item-marker::before {
-    font-family: "Material Icons";
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 400;
-    vertical-align: text-bottom;
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-    visibility: visible;
-    color: inherit;
-    content: "\e5cc" !important;
-    color: var(--bg-secondary-light);
+    width: 20px !important;
+    height: 20px !important;
+    display: flex !important;
+    padding: 0 !important;
+  }
+  .list-help-item a .item-marker::before {
+    content: url("https://api.iconify.design/fluent/caret-right-20-regular.svg?color=white") !important;
   }
 
   .wrapper {
@@ -357,19 +367,20 @@ footer,
     letter-spacing: 0.33px;
     font-weight: 500;
     color: #c95066;
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 20px;
+    min-height: 20px;
   }
   form .form-element.form-error::before {
-    font-family: "Material Icons";
-    font-size: 16px;
-    line-height: 16px;
-    font-weight: 400;
-    vertical-align: text-bottom;
-    padding: 0;
-    margin: 0;
-    display: inline-block;
-    visibility: visible;
-    color: inherit;
-    content: "\e001" !important;
+    content: url("https://api.iconify.design/fluent/error-circle-20-regular.svg?color=white") !important;
+  }
+  form .form-element.form-error::before {
+    width: 20px !important;
+    height: 20px !important;
+    display: flex !important;
+    padding: 0 !important;
     margin-right: 5px;
   }
 
@@ -445,6 +456,7 @@ footer,
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -540,8 +552,12 @@ footer,
     width: 100%;
   }
 
-  .bg-white {
+  .bg-white, .bg-light {
     background-color: inherit !important;
+  }
+
+  .border {
+    border: none !important;
   }
 
   .border-bottom {
@@ -741,6 +757,13 @@ img[src*="/theme/image.php/"][src*="/mod_assign/"][src$="/icon"].activityicon {
     width: 24px !important;
     height: 24px !important;
     content: url("https://api.iconify.design/fluent/arrow-upload-24-regular.svg?color=white") !important;
+  }
+
+  .path-calendar .maincalendar [data-region=event-item] img[src*="/theme/image.php/"][src*="/assign/"][src$="/icon"],
+.path-calendar .maincalendar [data-region=event-item] img[src*="/theme/image.php/"][src*="/mod_assign/"][src$="/icon"] {
+    width: 16px !important;
+    height: 16px !important;
+    content: url("https://api.iconify.design/fluent/arrow-upload-16-regular.svg?color=%23ffffff") !important;
   }
 
   img[src*="/theme/image.php/"][src*="/folder/"][src$="/icon"] {
@@ -1014,6 +1037,10 @@ img[src*="/theme/image.php/"][src*="/core/"][src$="/completion-auto-y"] {
     height: 20px !important;
   }
 
+  i.fa.fa-exclamation-circle::before {
+    content: url("https://api.iconify.design/fluent/error-circle-20-regular.svg?color=%23e17f8c") !important;
+  }
+
   i.fa.fa-bars::before {
     content: url("https://api.iconify.design/fluent/navigation-20-regular.svg?color=white") !important;
   }
@@ -1031,7 +1058,33 @@ i.fa.fa-dashboard::before {
     content: url("https://api.iconify.design/fluent/calendar-20-regular.svg?color=white") !important;
   }
 
-  body.drawer-open-left [data-region=drawer] [data-parent-key=myhome] .media-left i:not(.fa-home)::before {
+  .path-calendar .maincalendar [data-region=event-item] i.fa.fa-calendar {
+    width: 16px !important;
+    height: 16px !important;
+    content: url("https://api.iconify.design/fluent/calendar-16-regular.svg?color=%23ffffff") !important;
+  }
+
+  i.fa.fa-globe::before {
+    content: url("https://api.iconify.design/fluent/earth-20-regular.svg?color=white") !important;
+  }
+
+  .path-calendar .maincalendar [data-region=event-item] i.fa.fa-globe {
+    width: 16px !important;
+    height: 16px !important;
+    content: url("https://api.iconify.design/fluent/earth-16-regular.svg?color=%23ffffff") !important;
+  }
+
+  i.fa.fa-cubes::before {
+    content: url("https://api.iconify.design/fluent/organization-20-regular.svg?color=white") !important;
+  }
+
+  .path-calendar .maincalendar [data-region=event-item] i.fa.fa-cubes {
+    width: 16px !important;
+    height: 16px !important;
+    content: url("https://api.iconify.design/fluent/organization-16-regular.svg?color=%23ffffff") !important;
+  }
+
+  body.drawer-open-left [data-region=drawer] [data-parent-key=myhome] .media-left i:not(.fa-home)::before, body.drawer-open-left [data-region=drawer] [data-parent-key=home] .media-left i:not(.fa-home)::before {
     content: url("https://api.iconify.design/fluent/open-20-regular.svg?color=white") !important;
   }
 
@@ -1091,8 +1144,20 @@ i.fa.fa-dashboard::before {
     content: url("https://api.iconify.design/fluent/hat-graduation-20-regular.svg?color=white") !important;
   }
 
-  i.fa.fa-users::before {
+  .path-calendar .maincalendar [data-region=event-item] i.fa.fa-graduation-cap {
+    width: 16px !important;
+    height: 16px !important;
+    content: url("https://api.iconify.design/fluent/hat-graduation-16-regular.svg?color=%23ffffff") !important;
+  }
+
+  i.fa.fa-user::before, i.fa.fa-group::before, i.fa.fa-users::before {
     content: url("https://api.iconify.design/fluent/people-community-20-regular.svg?color=white") !important;
+  }
+
+  .path-calendar .maincalendar [data-region=event-item] i.fa.fa-group {
+    width: 16px !important;
+    height: 16px !important;
+    content: url("https://api.iconify.design/fluent/people-community-16-regular.svg?color=%23ffffff") !important;
   }
 
   .dashtitle i.fa.fa-users {
@@ -1113,7 +1178,8 @@ i.fa.fa-dashboard::before {
     content: url("https://api.iconify.design/fluent/settings-20-regular.svg?color=white") !important;
   }
 
-  i.fa.fa-envelope::before, i.fa.fa-envelope-o::before {
+  i.fa.fa-envelope::before,
+i.fa.fa-envelope-o::before {
     content: url("https://api.iconify.design/fluent/mail-20-regular.svg?color=white") !important;
   }
 
@@ -1135,7 +1201,13 @@ i.fa.fa-dashboard::before {
   }
 
   i.fa.fa-user::before {
-    content: url("https://api.iconify.design/fluent/people-20-regular.svg?color=white") !important;
+    content: url("https://api.iconify.design/fluent/person-20-regular.svg?color=white") !important;
+  }
+
+  .path-calendar .maincalendar [data-region=event-item] i.fa.fa-user {
+    width: 16px !important;
+    height: 16px !important;
+    content: url("https://api.iconify.design/fluent/person-16-regular.svg?color=%23ffffff") !important;
   }
 
   i.fa.fa-smile-o::before {
@@ -1387,6 +1459,14 @@ i.fa.fa-dashboard::before {
     content: url("https://api.iconify.design/fluent/star-16-filled.svg?color=%23ffd600") !important;
   }
 
+  i.fa.fa-info-circle::before {
+    content: url("https://api.iconify.design/fluent/info-20-regular.svg?color=white") !important;
+  }
+
+  i.fa.fa-arrow-right::before {
+    content: url("https://api.iconify.design/fluent/arrow-right-20-regular.svg?color=white") !important;
+  }
+
   .text-info {
     color: var(--bg-secondary-light) !important;
   }
@@ -1464,6 +1544,13 @@ a.dimmed_text:visited,
 
   .text-danger {
     color: #c95066 !important;
+  }
+
+  h3.popover-region-header-text {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 16px !important;
+    letter-spacing: 0.15px;
+    font-weight: 500;
   }
 
   h1 {
@@ -1674,6 +1761,7 @@ a.dimmed_text:visited,
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -1748,6 +1836,7 @@ a.dimmed_text:visited,
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -1818,6 +1907,7 @@ a.dimmed_text:visited,
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -1875,8 +1965,10 @@ a.dimmed_text:visited,
   }
   .bg-white[role=alert] .btn.btn-secondary:hover {
     color: #ffffff;
+    text-decoration: none;
   }
   .bg-white[role=alert] .btn.btn-secondary:focus, .bg-white[role=alert] .btn.btn-secondary:active, .bg-white[role=alert] .btn.btn-secondary:focus:active, .bg-white[role=alert] .btn.btn-secondary:focus:hover {
+    color: #ffffff;
     outline: none !important;
     box-shadow: none !important;
     background-color: inherit;
@@ -2084,6 +2176,7 @@ a.dimmed_text:visited,
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -2141,8 +2234,10 @@ a.dimmed_text:visited,
   }
   #page-mod-assign-editsubmission #id_cancel:hover {
     color: #ffffff;
+    text-decoration: none;
   }
   #page-mod-assign-editsubmission #id_cancel:focus, #page-mod-assign-editsubmission #id_cancel:active, #page-mod-assign-editsubmission #id_cancel:focus:active, #page-mod-assign-editsubmission #id_cancel:focus:hover {
+    color: #ffffff;
     outline: none !important;
     box-shadow: none !important;
     background-color: inherit;
@@ -2179,6 +2274,115 @@ a.dimmed_text:visited,
     border-bottom: 1px solid #121212;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+  }
+
+  /* ----- Timeline ----- */
+  .block_timeline .border-bottom {
+    border-bottom: 0 !important;
+  }
+  .block_timeline h5.h6 {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 16px !important;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+  }
+  .block_timeline h5.h6::first-letter {
+    text-transform: capitalize;
+  }
+  .block_timeline h4.h5 {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 20px !important;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+  }
+  .block_timeline h4.h5::first-letter {
+    text-transform: capitalize;
+  }
+  .block_timeline .list-group-item[data-region=event-list-item] {
+    color: #ffffff;
+    background-color: #222222;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2) !important;
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 10px 15px !important;
+  }
+  .block_timeline .list-group-item[data-region=event-list-item] h6 {
+    text-align: left;
+  }
+  .block_timeline .list-group-item[data-region=event-list-item] .list-group-item-action:not(.hidden) {
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: normal;
+    min-width: 64px;
+    padding: 0 16px;
+    min-height: 36px;
+    user-select: none;
+    vertical-align: middle;
+    perspective: 1px;
+    position: relative;
+  }
+  .block_timeline .list-group-item[data-region=event-list-item] .list-group-item-action:not(.hidden), .block_timeline .list-group-item[data-region=event-list-item] .list-group-item-action:not(.hidden):active, .block_timeline .list-group-item[data-region=event-list-item] .list-group-item-action:not(.hidden):focus, .block_timeline .list-group-item[data-region=event-list-item] .list-group-item-action:not(.hidden):active:focus {
+    outline: unset;
+    background-color: inherit;
+    color: #c6c6c6;
+  }
+  .block_timeline .list-group-item[data-region=event-list-item] .list-group-item-action:not(.hidden) i, .block_timeline .list-group-item[data-region=event-list-item] .list-group-item-action:not(.hidden).fa {
+    margin-right: 8px;
+  }
+  .block_timeline .list-group-item[data-region=event-list-item] .list-group-item-action:not(.hidden)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image: radial-gradient(circle, white 1%, transparent 1%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 15000%;
+    opacity: 0;
+    transition: background 0.7s, opacity 1s;
+    z-index: -1;
+  }
+  .block_timeline .list-group-item[data-region=event-list-item] .list-group-item-action:not(.hidden):active::before, .block_timeline .list-group-item[data-region=event-list-item] .list-group-item-action:not(.hidden):focus::before {
+    animation-name: ripple;
+    animation-duration: 0.6s;
+    opacity: 0.4;
+    transition: 0s !important;
+  }
+  @keyframes ripple {
+    from {
+      background-size: 1%;
+    }
+    to {
+      background-size: 15000%;
+    }
+  }
+  .block_timeline .list-group-item[data-region=event-list-item] .list-group-item-action:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .block_timeline .list-group-item[data-region=event-list-item] .list-group-item-action:focus, .block_timeline .list-group-item[data-region=event-list-item] .list-group-item-action:active, .block_timeline .list-group-item[data-region=event-list-item] .list-group-item-action:focus:active, .block_timeline .list-group-item[data-region=event-list-item] .list-group-item-action:focus:hover {
+    color: #ffffff;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: inherit;
+  }
+  .block_timeline [data-region=paging-control-limit-container] > span {
+    margin-right: 10px !important;
   }
 
   /* ----- Input ----- */
@@ -2238,6 +2442,7 @@ a.dimmed_text:visited,
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -2469,17 +2674,22 @@ form.form-inline input[type=text]:read-only:hover,
   }
 
   .btn.btn-primary:not(.btn-lg):not(.hidden),
-.maincalendar button[data-action=new-event-button]:not(.hidden) {
+.maincalendar button[data-action=new-event-button]:not(.hidden),
+[data-template="core_calendar/day_detailed"] button[data-action=new-event-button]:not(.hidden),
+[data-template="core_calendar/month_detailed"] button[data-action=new-event-button]:not(.hidden) {
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 8px 0 rgba(0, 0, 0, 0.2) !important;
     transition: box-shadow 0.7s;
   }
   .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden),
-.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden) {
+.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden),
+[data-template="core_calendar/day_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden),
+[data-template="core_calendar/month_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden) {
     border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -2499,18 +2709,32 @@ form.form-inline input[type=text]:read-only:hover,
 .maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden),
 .maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden):active,
 .maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden):focus,
-.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden):active:focus {
+.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden):active:focus,
+[data-template="core_calendar/day_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden),
+[data-template="core_calendar/day_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden):active,
+[data-template="core_calendar/day_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden):focus,
+[data-template="core_calendar/day_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden):active:focus,
+[data-template="core_calendar/month_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden),
+[data-template="core_calendar/month_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden):active,
+[data-template="core_calendar/month_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden):focus,
+[data-template="core_calendar/month_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden):active:focus {
     outline: unset;
     background-color: var(--bg-primary);
     color: var(--fg-on-primary);
   }
   .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden) i, .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden).fa,
 .maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden) i,
-.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden).fa {
+.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden).fa,
+[data-template="core_calendar/day_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden) i,
+[data-template="core_calendar/day_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden).fa,
+[data-template="core_calendar/month_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden) i,
+[data-template="core_calendar/month_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden).fa {
     margin-right: 8px;
   }
   .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden)::before,
-.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden)::before {
+.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden)::before,
+[data-template="core_calendar/day_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden)::before,
+[data-template="core_calendar/month_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden)::before {
     content: "";
     display: block;
     position: absolute;
@@ -2530,7 +2754,11 @@ form.form-inline input[type=text]:read-only:hover,
   }
   .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):active::before, .btn.btn-primary:not(.btn-lg):not(.hidden):not(.hidden):focus::before,
 .maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden):active::before,
-.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden):focus::before {
+.maincalendar button[data-action=new-event-button]:not(.hidden):not(.hidden):focus::before,
+[data-template="core_calendar/day_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden):active::before,
+[data-template="core_calendar/day_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden):focus::before,
+[data-template="core_calendar/month_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden):active::before,
+[data-template="core_calendar/month_detailed"] button[data-action=new-event-button]:not(.hidden):not(.hidden):focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -2545,14 +2773,20 @@ form.form-inline input[type=text]:read-only:hover,
     }
   }
   .btn.btn-primary:not(.btn-lg):not(.hidden):hover,
-.maincalendar button[data-action=new-event-button]:not(.hidden):hover {
+.maincalendar button[data-action=new-event-button]:not(.hidden):hover,
+[data-template="core_calendar/day_detailed"] button[data-action=new-event-button]:not(.hidden):hover,
+[data-template="core_calendar/month_detailed"] button[data-action=new-event-button]:not(.hidden):hover {
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.2) !important;
     transition: box-shadow 0.6s;
     background-color: var(--bg-primary-hover);
   }
   .btn.btn-primary:not(.btn-lg):not(.hidden):focus, .btn.btn-primary:not(.btn-lg):not(.hidden):active,
 .maincalendar button[data-action=new-event-button]:not(.hidden):focus,
-.maincalendar button[data-action=new-event-button]:not(.hidden):active {
+.maincalendar button[data-action=new-event-button]:not(.hidden):active,
+[data-template="core_calendar/day_detailed"] button[data-action=new-event-button]:not(.hidden):focus,
+[data-template="core_calendar/day_detailed"] button[data-action=new-event-button]:not(.hidden):active,
+[data-template="core_calendar/month_detailed"] button[data-action=new-event-button]:not(.hidden):focus,
+[data-template="core_calendar/month_detailed"] button[data-action=new-event-button]:not(.hidden):active {
     box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2) !important;
     transition: box-shadow 0.6s;
   }
@@ -2560,12 +2794,14 @@ form.form-inline input[type=text]:read-only:hover,
   button.btn.btn-secondary[type=submit]:not(.hidden),
 .datapreferences input.btn.btn-secondary[type=submit]:not(.hidden),
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden),
+[data-region=more-courses-button-container] .btn.btn-secondary:not(.hidden),
 #id_cancel:not(.hidden) {
     border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -2590,6 +2826,10 @@ form.form-inline input[type=text]:read-only:hover,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden):active,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden):focus,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden):active:focus,
+[data-region=more-courses-button-container] .btn.btn-secondary:not(.hidden),
+[data-region=more-courses-button-container] .btn.btn-secondary:not(.hidden):active,
+[data-region=more-courses-button-container] .btn.btn-secondary:not(.hidden):focus,
+[data-region=more-courses-button-container] .btn.btn-secondary:not(.hidden):active:focus,
 #id_cancel:not(.hidden),
 #id_cancel:not(.hidden):active,
 #id_cancel:not(.hidden):focus,
@@ -2603,6 +2843,8 @@ form.form-inline input[type=text]:read-only:hover,
 .datapreferences input.btn.btn-secondary[type=submit]:not(.hidden).fa,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden) i,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden).fa,
+[data-region=more-courses-button-container] .btn.btn-secondary:not(.hidden) i,
+[data-region=more-courses-button-container] .btn.btn-secondary:not(.hidden).fa,
 #id_cancel:not(.hidden) i,
 #id_cancel:not(.hidden).fa {
     margin-right: 8px;
@@ -2610,6 +2852,7 @@ form.form-inline input[type=text]:read-only:hover,
   button.btn.btn-secondary[type=submit]:not(.hidden)::before,
 .datapreferences input.btn.btn-secondary[type=submit]:not(.hidden)::before,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden)::before,
+[data-region=more-courses-button-container] .btn.btn-secondary:not(.hidden)::before,
 #id_cancel:not(.hidden)::before {
     content: "";
     display: block;
@@ -2633,6 +2876,8 @@ form.form-inline input[type=text]:read-only:hover,
 .datapreferences input.btn.btn-secondary[type=submit]:not(.hidden):focus::before,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden):active::before,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:not(.hidden):focus::before,
+[data-region=more-courses-button-container] .btn.btn-secondary:not(.hidden):active::before,
+[data-region=more-courses-button-container] .btn.btn-secondary:not(.hidden):focus::before,
 #id_cancel:not(.hidden):active::before,
 #id_cancel:not(.hidden):focus::before {
     animation-name: ripple;
@@ -2651,8 +2896,10 @@ form.form-inline input[type=text]:read-only:hover,
   button.btn.btn-secondary[type=submit]:hover,
 .datapreferences input.btn.btn-secondary[type=submit]:hover,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:hover,
+[data-region=more-courses-button-container] .btn.btn-secondary:hover,
 #id_cancel:hover {
     color: #ffffff;
+    text-decoration: none;
   }
   button.btn.btn-secondary[type=submit]:focus, button.btn.btn-secondary[type=submit]:active, button.btn.btn-secondary[type=submit]:focus:active, button.btn.btn-secondary[type=submit]:focus:hover,
 .datapreferences input.btn.btn-secondary[type=submit]:focus,
@@ -2663,10 +2910,15 @@ form.form-inline input[type=text]:read-only:hover,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:active,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:focus:active,
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary:focus:hover,
+[data-region=more-courses-button-container] .btn.btn-secondary:focus,
+[data-region=more-courses-button-container] .btn.btn-secondary:active,
+[data-region=more-courses-button-container] .btn.btn-secondary:focus:active,
+[data-region=more-courses-button-container] .btn.btn-secondary:focus:hover,
 #id_cancel:focus,
 #id_cancel:active,
 #id_cancel:focus:active,
 #id_cancel:focus:hover {
+    color: #ffffff;
     outline: none !important;
     box-shadow: none !important;
     background-color: inherit;
@@ -2738,32 +2990,51 @@ form.form-inline input[type=text]:read-only:hover,
 .atto_menu .dropdown-toggle:focus,
 .maincalendar [data-region=view-selector] .dropdown-toggle:active:focus,
 .maincalendar [data-region=view-selector] .dropdown-toggle:hover:focus,
-.maincalendar [data-region=view-selector] .dropdown-toggle:focus {
+.maincalendar [data-region=view-selector] .dropdown-toggle:focus,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-toggle:active:focus,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-toggle:hover:focus,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-toggle:focus,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-toggle:active:focus,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-toggle:hover:focus,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-toggle:focus,
+[data-region=paging-control-limit-container] .dropdown-toggle:active:focus,
+[data-region=paging-control-limit-container] .dropdown-toggle:hover:focus,
+[data-region=paging-control-limit-container] .dropdown-toggle:focus {
     outline: none;
     box-shadow: none;
   }
   .dropdown .dropdown-toggle.btn,
 .btn-group[data-region=view-selector] .dropdown-toggle.btn,
 .atto_menu .dropdown-toggle.btn,
-.maincalendar [data-region=view-selector] .dropdown-toggle.btn {
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-toggle.btn,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-toggle.btn,
+[data-region=paging-control-limit-container] .dropdown-toggle.btn {
     padding-right: 10px !important;
   }
   .dropdown .dropdown-toggle.btn:not(.hidden),
 .btn-group[data-region=view-selector] .dropdown-toggle.btn:not(.hidden),
 .atto_menu .dropdown-toggle.btn:not(.hidden),
-.maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden) {
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden),
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-toggle.btn:not(.hidden),
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-toggle.btn:not(.hidden),
+[data-region=paging-control-limit-container] .dropdown-toggle.btn:not(.hidden) {
     box-shadow: none;
     border: 1px solid #ffffff !important;
   }
   .dropdown .dropdown-toggle.btn:not(.hidden):not(.hidden),
 .btn-group[data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden),
 .atto_menu .dropdown-toggle.btn:not(.hidden):not(.hidden),
-.maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden) {
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden),
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden),
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden),
+[data-region=paging-control-limit-container] .dropdown-toggle.btn:not(.hidden):not(.hidden) {
     border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -2789,7 +3060,19 @@ form.form-inline input[type=text]:read-only:hover,
 .maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden),
 .maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden):active,
 .maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden):focus,
-.maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden):active:focus {
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden):active:focus,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden),
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden):active,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden):focus,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden):active:focus,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden),
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden):active,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden):focus,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden):active:focus,
+[data-region=paging-control-limit-container] .dropdown-toggle.btn:not(.hidden):not(.hidden),
+[data-region=paging-control-limit-container] .dropdown-toggle.btn:not(.hidden):not(.hidden):active,
+[data-region=paging-control-limit-container] .dropdown-toggle.btn:not(.hidden):not(.hidden):focus,
+[data-region=paging-control-limit-container] .dropdown-toggle.btn:not(.hidden):not(.hidden):active:focus {
     outline: unset;
     background-color: inherit;
     color: #ffffff;
@@ -2800,19 +3083,31 @@ form.form-inline input[type=text]:read-only:hover,
 .atto_menu .dropdown-toggle.btn:not(.hidden):not(.hidden) i,
 .atto_menu .dropdown-toggle.btn:not(.hidden):not(.hidden).fa,
 .maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden) i,
-.maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden).fa {
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden).fa,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden) i,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden).fa,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden) i,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-toggle.btn:not(.hidden):not(.hidden).fa,
+[data-region=paging-control-limit-container] .dropdown-toggle.btn:not(.hidden):not(.hidden) i,
+[data-region=paging-control-limit-container] .dropdown-toggle.btn:not(.hidden):not(.hidden).fa {
     margin-right: 8px;
   }
   .dropdown .dropdown-toggle.btn:hover,
 .btn-group[data-region=view-selector] .dropdown-toggle.btn:hover,
 .atto_menu .dropdown-toggle.btn:hover,
-.maincalendar [data-region=view-selector] .dropdown-toggle.btn:hover {
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn:hover,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-toggle.btn:hover,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-toggle.btn:hover,
+[data-region=paging-control-limit-container] .dropdown-toggle.btn:hover {
     background-color: #373737;
   }
   .dropdown .dropdown-toggle.btn::after,
 .btn-group[data-region=view-selector] .dropdown-toggle.btn::after,
 .atto_menu .dropdown-toggle.btn::after,
-.maincalendar [data-region=view-selector] .dropdown-toggle.btn::after {
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn::after,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-toggle.btn::after,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-toggle.btn::after,
+[data-region=paging-control-limit-container] .dropdown-toggle.btn::after {
     border: 0;
     display: inline-block;
     margin: 0;
@@ -2827,7 +3122,10 @@ form.form-inline input[type=text]:read-only:hover,
   .dropdown .dropdown-toggle.btn::after::before,
 .btn-group[data-region=view-selector] .dropdown-toggle.btn::after::before,
 .atto_menu .dropdown-toggle.btn::after::before,
-.maincalendar [data-region=view-selector] .dropdown-toggle.btn::after::before {
+.maincalendar [data-region=view-selector] .dropdown-toggle.btn::after::before,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-toggle.btn::after::before,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-toggle.btn::after::before,
+[data-region=paging-control-limit-container] .dropdown-toggle.btn::after::before {
     width: 20px !important;
     height: 20px !important;
     display: flex !important;
@@ -2836,7 +3134,10 @@ form.form-inline input[type=text]:read-only:hover,
   .dropdown .dropdown-menu,
 .btn-group[data-region=view-selector] .dropdown-menu,
 .atto_menu .dropdown-menu,
-.maincalendar [data-region=view-selector] .dropdown-menu {
+.maincalendar [data-region=view-selector] .dropdown-menu,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-menu,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-menu,
+[data-region=paging-control-limit-container] .dropdown-menu {
     color: #ffffff;
     background-color: #323232;
     box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2) !important;
@@ -2846,52 +3147,85 @@ form.form-inline input[type=text]:read-only:hover,
   .dropdown .dropdown-menu .dropdown-item,
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-item,
 .atto_menu .dropdown-menu .dropdown-item,
-.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item {
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-item,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-item,
+[data-region=paging-control-limit-container] .dropdown-menu .dropdown-item {
     color: #ffffff;
     list-style: none;
     background-color: inherit;
     padding: 10px 15px;
   }
+  .dropdown .dropdown-menu .dropdown-item::first-letter,
+.btn-group[data-region=view-selector] .dropdown-menu .dropdown-item::first-letter,
+.atto_menu .dropdown-menu .dropdown-item::first-letter,
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item::first-letter,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-item::first-letter,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-item::first-letter,
+[data-region=paging-control-limit-container] .dropdown-menu .dropdown-item::first-letter {
+    text-transform: capitalize;
+  }
   .dropdown .dropdown-menu .dropdown-item::before,
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-item::before,
 .atto_menu .dropdown-menu .dropdown-item::before,
-.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item::before {
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item::before,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-item::before,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-item::before,
+[data-region=paging-control-limit-container] .dropdown-menu .dropdown-item::before {
     display: none;
   }
   .dropdown .dropdown-menu .dropdown-item a,
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-item a,
 .atto_menu .dropdown-menu .dropdown-item a,
-.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item a {
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item a,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-item a,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-item a,
+[data-region=paging-control-limit-container] .dropdown-menu .dropdown-item a {
     color: inherit !important;
   }
   .dropdown .dropdown-menu .dropdown-item a:hover,
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-item a:hover,
 .atto_menu .dropdown-menu .dropdown-item a:hover,
-.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item a:hover {
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item a:hover,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-item a:hover,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-item a:hover,
+[data-region=paging-control-limit-container] .dropdown-menu .dropdown-item a:hover {
     text-decoration: none;
   }
   .dropdown .dropdown-menu .dropdown-item i.icon[aria-hidden=true],
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-item i.icon[aria-hidden=true],
 .atto_menu .dropdown-menu .dropdown-item i.icon[aria-hidden=true],
-.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item i.icon[aria-hidden=true] {
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item i.icon[aria-hidden=true],
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-item i.icon[aria-hidden=true],
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-item i.icon[aria-hidden=true],
+[data-region=paging-control-limit-container] .dropdown-menu .dropdown-item i.icon[aria-hidden=true] {
     display: none;
   }
   .dropdown .dropdown-menu .dropdown-item[aria-current=true],
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-item[aria-current=true],
 .atto_menu .dropdown-menu .dropdown-item[aria-current=true],
-.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item[aria-current=true] {
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item[aria-current=true],
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-item[aria-current=true],
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-item[aria-current=true],
+[data-region=paging-control-limit-container] .dropdown-menu .dropdown-item[aria-current=true] {
     background-color: #404040;
   }
   .dropdown .dropdown-menu .dropdown-item:hover,
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-item:hover,
 .atto_menu .dropdown-menu .dropdown-item:hover,
-.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item:hover {
-    background-color: #373737;
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-item:hover,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-item:hover,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-item:hover,
+[data-region=paging-control-limit-container] .dropdown-menu .dropdown-item:hover {
+    background-color: #404040;
   }
   .dropdown .dropdown-menu .dropdown-header,
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-header,
 .atto_menu .dropdown-menu .dropdown-header,
-.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-header {
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-header,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-header,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-header,
+[data-region=paging-control-limit-container] .dropdown-menu .dropdown-header {
     color: #959595;
     padding: 5px 10px;
     text-align: center;
@@ -2899,25 +3233,38 @@ form.form-inline input[type=text]:read-only:hover,
   .dropdown .dropdown-menu .dropdown-divider,
 .btn-group[data-region=view-selector] .dropdown-menu .dropdown-divider,
 .atto_menu .dropdown-menu .dropdown-divider,
-.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-divider {
+.maincalendar [data-region=view-selector] .dropdown-menu .dropdown-divider,
+[data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-divider,
+[data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-menu .dropdown-divider,
+[data-region=paging-control-limit-container] .dropdown-menu .dropdown-divider {
     border-color: #121212;
     margin: 0;
   }
 
-  .maincalendar select.custom-select {
-    background: #494949 url(https://api.iconify.design/fluent/caret-down-16-filled.svg?color=%23ffffff) no-repeat right 10px center;
+  .maincalendar select.custom-select,
+[data-template="core_calendar/day_detailed"] select.custom-select,
+[data-template="core_calendar/month_detailed"] select.custom-select,
+.urlselect.custom-select {
+    background: #1e1e1e url(https://api.iconify.design/fluent/caret-down-16-filled.svg?color=%23ffffff) no-repeat right 10px center !important;
     background-size: 16px 16px;
   }
-  .maincalendar select.custom-select:not(.hidden) {
+  .maincalendar select.custom-select:not(.hidden),
+[data-template="core_calendar/day_detailed"] select.custom-select:not(.hidden),
+[data-template="core_calendar/month_detailed"] select.custom-select:not(.hidden),
+.urlselect.custom-select:not(.hidden) {
     box-shadow: none;
     border: 1px solid #ffffff !important;
   }
-  .maincalendar select.custom-select:not(.hidden):not(.hidden) {
+  .maincalendar select.custom-select:not(.hidden):not(.hidden),
+[data-template="core_calendar/day_detailed"] select.custom-select:not(.hidden):not(.hidden),
+[data-template="core_calendar/month_detailed"] select.custom-select:not(.hidden):not(.hidden),
+.urlselect.custom-select:not(.hidden):not(.hidden) {
     border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -2931,24 +3278,78 @@ form.form-inline input[type=text]:read-only:hover,
     user-select: none;
     vertical-align: middle;
   }
-  .maincalendar select.custom-select:not(.hidden):not(.hidden), .maincalendar select.custom-select:not(.hidden):not(.hidden):active, .maincalendar select.custom-select:not(.hidden):not(.hidden):focus, .maincalendar select.custom-select:not(.hidden):not(.hidden):active:focus {
+  .maincalendar select.custom-select:not(.hidden):not(.hidden), .maincalendar select.custom-select:not(.hidden):not(.hidden):active, .maincalendar select.custom-select:not(.hidden):not(.hidden):focus, .maincalendar select.custom-select:not(.hidden):not(.hidden):active:focus,
+[data-template="core_calendar/day_detailed"] select.custom-select:not(.hidden):not(.hidden),
+[data-template="core_calendar/day_detailed"] select.custom-select:not(.hidden):not(.hidden):active,
+[data-template="core_calendar/day_detailed"] select.custom-select:not(.hidden):not(.hidden):focus,
+[data-template="core_calendar/day_detailed"] select.custom-select:not(.hidden):not(.hidden):active:focus,
+[data-template="core_calendar/month_detailed"] select.custom-select:not(.hidden):not(.hidden),
+[data-template="core_calendar/month_detailed"] select.custom-select:not(.hidden):not(.hidden):active,
+[data-template="core_calendar/month_detailed"] select.custom-select:not(.hidden):not(.hidden):focus,
+[data-template="core_calendar/month_detailed"] select.custom-select:not(.hidden):not(.hidden):active:focus,
+.urlselect.custom-select:not(.hidden):not(.hidden),
+.urlselect.custom-select:not(.hidden):not(.hidden):active,
+.urlselect.custom-select:not(.hidden):not(.hidden):focus,
+.urlselect.custom-select:not(.hidden):not(.hidden):active:focus {
     outline: unset;
     background-color: inherit;
     color: #ffffff;
   }
-  .maincalendar select.custom-select:not(.hidden):not(.hidden) i, .maincalendar select.custom-select:not(.hidden):not(.hidden).fa {
+  .maincalendar select.custom-select:not(.hidden):not(.hidden) i, .maincalendar select.custom-select:not(.hidden):not(.hidden).fa,
+[data-template="core_calendar/day_detailed"] select.custom-select:not(.hidden):not(.hidden) i,
+[data-template="core_calendar/day_detailed"] select.custom-select:not(.hidden):not(.hidden).fa,
+[data-template="core_calendar/month_detailed"] select.custom-select:not(.hidden):not(.hidden) i,
+[data-template="core_calendar/month_detailed"] select.custom-select:not(.hidden):not(.hidden).fa,
+.urlselect.custom-select:not(.hidden):not(.hidden) i,
+.urlselect.custom-select:not(.hidden):not(.hidden).fa {
     margin-right: 8px;
   }
-  .maincalendar select.custom-select:active:focus, .maincalendar select.custom-select:hover:focus, .maincalendar select.custom-select:focus {
+  .maincalendar select.custom-select:active:focus, .maincalendar select.custom-select:hover:focus, .maincalendar select.custom-select:focus,
+[data-template="core_calendar/day_detailed"] select.custom-select:active:focus,
+[data-template="core_calendar/day_detailed"] select.custom-select:hover:focus,
+[data-template="core_calendar/day_detailed"] select.custom-select:focus,
+[data-template="core_calendar/month_detailed"] select.custom-select:active:focus,
+[data-template="core_calendar/month_detailed"] select.custom-select:hover:focus,
+[data-template="core_calendar/month_detailed"] select.custom-select:focus,
+.urlselect.custom-select:active:focus,
+.urlselect.custom-select:hover:focus,
+.urlselect.custom-select:focus {
     outline: none;
     box-shadow: none;
+    color: #ffffff;
+    background-color: #323232;
   }
-  .maincalendar select.custom-select:hover {
-    background-color: #373737;
+  .maincalendar select.custom-select:hover,
+[data-template="core_calendar/day_detailed"] select.custom-select:hover,
+[data-template="core_calendar/month_detailed"] select.custom-select:hover,
+.urlselect.custom-select:hover {
+    cursor: pointer;
+  }
+  .maincalendar select.custom-select option,
+[data-template="core_calendar/day_detailed"] select.custom-select option,
+[data-template="core_calendar/month_detailed"] select.custom-select option,
+.urlselect.custom-select option {
+    color: #ffffff;
+    background-color: #323232;
+  }
+  .maincalendar select.custom-select option[selected],
+[data-template="core_calendar/day_detailed"] select.custom-select option[selected],
+[data-template="core_calendar/month_detailed"] select.custom-select option[selected],
+.urlselect.custom-select option[selected] {
+    background-color: #404040;
+  }
+  .maincalendar select.custom-select option:hover,
+[data-template="core_calendar/day_detailed"] select.custom-select option:hover,
+[data-template="core_calendar/month_detailed"] select.custom-select option:hover,
+.urlselect.custom-select option:hover {
+    background-color: #373737 !important;
+  }
+
+  .urlselect.custom-select {
+    background-color: #121212 !important;
   }
 
   .mform select.custom-select,
-.urlselect.custom-select,
 select.custom-select.singleselect,
 .datapreferences select.custom-select,
 .moodle-dialogue-base .moodle-dialogue-bd select.custom-select,
@@ -2973,7 +3374,6 @@ select.custom-select.singleselect,
     background-size: 14px 14px;
   }
   .mform select.custom-select:hover,
-.urlselect.custom-select:hover,
 select.custom-select.singleselect:hover,
 .datapreferences select.custom-select:hover,
 .moodle-dialogue-base .moodle-dialogue-bd select.custom-select:hover,
@@ -2983,8 +3383,6 @@ select.custom-select.singleselect:hover,
     cursor: pointer;
   }
   .mform select.custom-select:focus, .mform select.custom-select:focus-visible,
-.urlselect.custom-select:focus,
-.urlselect.custom-select:focus-visible,
 select.custom-select.singleselect:focus,
 select.custom-select.singleselect:focus-visible,
 .datapreferences select.custom-select:focus,
@@ -3000,7 +3398,6 @@ select.custom-select.singleselect:focus-visible,
     border-bottom-color: var(--bg-primary);
   }
   .mform select.custom-select:disabled,
-.urlselect.custom-select:disabled,
 select.custom-select.singleselect:disabled,
 .datapreferences select.custom-select:disabled,
 .moodle-dialogue-base .moodle-dialogue-bd select.custom-select:disabled,
@@ -3010,7 +3407,6 @@ select.custom-select.singleselect:disabled,
     border-bottom-color: #888888;
   }
   .mform select.custom-select:disabled:hover,
-.urlselect.custom-select:disabled:hover,
 select.custom-select.singleselect:disabled:hover,
 .datapreferences select.custom-select:disabled:hover,
 .moodle-dialogue-base .moodle-dialogue-bd select.custom-select:disabled:hover,
@@ -3238,6 +3634,7 @@ select.custom-select.singleselect:disabled:hover,
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -3305,12 +3702,14 @@ select.custom-select.singleselect:disabled:hover,
   .activity-navigation #next-activity-link:hover,
 .activity-navigation #prev-activity-link:hover {
     color: #ffffff;
+    text-decoration: none;
   }
   .activity-navigation #next-activity-link:focus, .activity-navigation #next-activity-link:active, .activity-navigation #next-activity-link:focus:active, .activity-navigation #next-activity-link:focus:hover,
 .activity-navigation #prev-activity-link:focus,
 .activity-navigation #prev-activity-link:active,
 .activity-navigation #prev-activity-link:focus:active,
 .activity-navigation #prev-activity-link:focus:hover {
+    color: #ffffff;
     outline: none !important;
     box-shadow: none !important;
     background-color: inherit;
@@ -3410,6 +3809,24 @@ select.custom-select.singleselect:disabled:hover,
   }
   .navbar.navbar-fhs .navbar-nav .nav-link:hover {
     background-color: #373737;
+  }
+  .navbar.navbar-fhs .navbar-nav .nav-link.dropdown a::after {
+    border: 0;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    width: 16px !important;
+    height: 16px !important;
+    content: url("https://api.iconify.design/fluent/caret-down-16-filled.svg?color=%23ffffff") !important;
+    margin-left: 20px !important;
+  }
+  .navbar.navbar-fhs .navbar-nav .nav-link.dropdown a::after::before {
+    width: 20px !important;
+    height: 20px !important;
+    display: flex !important;
+    padding: 0 !important;
   }
   .navbar.navbar-fhs .navbar-nav .popover-region-notifications .nav-link,
 .navbar.navbar-fhs .navbar-nav [data-region=popover-region-messages] .nav-link {
@@ -3752,6 +4169,14 @@ select.custom-select.singleselect:disabled:hover,
     box-shadow: 0 12px 17px 2px rgba(0, 0, 0, 0.14), 0 5px 22px 4px rgba(0, 0, 0, 0.12), 0 7px 8px -4px rgba(0, 0, 0, 0.2) !important;
     border-radius: 10px;
   }
+  .popover .popover-header {
+    background-color: unset !important;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 16px !important;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+    border-color: #121212;
+  }
   .popover .popover-body {
     padding: 15px;
     color: inherit;
@@ -3895,9 +4320,20 @@ select.custom-select.singleselect:disabled:hover,
     width: fit-content;
     padding: 5px 10px !important;
   }
+  [data-region=right-hand-drawer].drawer .message-app .body-container .message [data-region=text-container] p,
+#page-message-index .message-app .body-container .message [data-region=text-container] p {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    font-weight: 400;
+  }
   [data-region=right-hand-drawer].drawer .message-app .body-container .message .time,
 #page-message-index .message-app .body-container .message .time {
     color: inherit;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    font-weight: 400;
   }
   [data-region=right-hand-drawer].drawer .message-app .body-container .message .tail,
 #page-message-index .message-app .body-container .message .tail {
@@ -3950,13 +4386,92 @@ select.custom-select.singleselect:disabled:hover,
     border: 0;
     padding: 0 5px;
   }
-  [data-region=right-hand-drawer].drawer .message-app .footer-container a,
-#page-message-index .message-app .footer-container a {
-    color: var(--bg-secondary);
+  [data-region=right-hand-drawer].drawer .message-app .footer-container a:not(.hidden),
+#page-message-index .message-app .footer-container a:not(.hidden) {
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: normal;
+    min-width: 64px;
+    padding: 0 16px;
+    min-height: 36px;
+    user-select: none;
+    vertical-align: middle;
+    perspective: 1px;
+    position: relative;
+  }
+  [data-region=right-hand-drawer].drawer .message-app .footer-container a:not(.hidden), [data-region=right-hand-drawer].drawer .message-app .footer-container a:not(.hidden):active, [data-region=right-hand-drawer].drawer .message-app .footer-container a:not(.hidden):focus, [data-region=right-hand-drawer].drawer .message-app .footer-container a:not(.hidden):active:focus,
+#page-message-index .message-app .footer-container a:not(.hidden),
+#page-message-index .message-app .footer-container a:not(.hidden):active,
+#page-message-index .message-app .footer-container a:not(.hidden):focus,
+#page-message-index .message-app .footer-container a:not(.hidden):active:focus {
+    outline: unset;
+    background-color: inherit;
+    color: #c6c6c6;
+  }
+  [data-region=right-hand-drawer].drawer .message-app .footer-container a:not(.hidden) i, [data-region=right-hand-drawer].drawer .message-app .footer-container a:not(.hidden).fa,
+#page-message-index .message-app .footer-container a:not(.hidden) i,
+#page-message-index .message-app .footer-container a:not(.hidden).fa {
+    margin-right: 8px;
+  }
+  [data-region=right-hand-drawer].drawer .message-app .footer-container a:not(.hidden)::before,
+#page-message-index .message-app .footer-container a:not(.hidden)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image: radial-gradient(circle, white 1%, transparent 1%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 15000%;
+    opacity: 0;
+    transition: background 0.7s, opacity 1s;
+    z-index: -1;
+  }
+  [data-region=right-hand-drawer].drawer .message-app .footer-container a:not(.hidden):active::before, [data-region=right-hand-drawer].drawer .message-app .footer-container a:not(.hidden):focus::before,
+#page-message-index .message-app .footer-container a:not(.hidden):active::before,
+#page-message-index .message-app .footer-container a:not(.hidden):focus::before {
+    animation-name: ripple;
+    animation-duration: 0.6s;
+    opacity: 0.4;
+    transition: 0s !important;
+  }
+  @keyframes ripple {
+    from {
+      background-size: 1%;
+    }
+    to {
+      background-size: 15000%;
+    }
   }
   [data-region=right-hand-drawer].drawer .message-app .footer-container a:hover,
 #page-message-index .message-app .footer-container a:hover {
-    color: var(--bg-secondary-hover);
+    color: #ffffff;
+    text-decoration: none;
+  }
+  [data-region=right-hand-drawer].drawer .message-app .footer-container a:focus, [data-region=right-hand-drawer].drawer .message-app .footer-container a:active, [data-region=right-hand-drawer].drawer .message-app .footer-container a:focus:active, [data-region=right-hand-drawer].drawer .message-app .footer-container a:focus:hover,
+#page-message-index .message-app .footer-container a:focus,
+#page-message-index .message-app .footer-container a:active,
+#page-message-index .message-app .footer-container a:focus:active,
+#page-message-index .message-app .footer-container a:focus:hover {
+    color: #ffffff;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: inherit;
   }
   [data-region=right-hand-drawer].drawer .message-app .footer-container textarea,
 #page-message-index .message-app .footer-container textarea {
@@ -4104,6 +4619,7 @@ select.custom-select.singleselect:disabled:hover,
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -4168,6 +4684,180 @@ select.custom-select.singleselect:disabled:hover,
       background-size: 15000%;
     }
   }
+  .modal-dialog .modal-content .modal-footer a:not(.hidden),
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer a:not(.hidden) {
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: normal;
+    min-width: 64px;
+    padding: 0 16px;
+    min-height: 36px;
+    user-select: none;
+    vertical-align: middle;
+    perspective: 1px;
+    position: relative;
+  }
+  .modal-dialog .modal-content .modal-footer a:not(.hidden), .modal-dialog .modal-content .modal-footer a:not(.hidden):active, .modal-dialog .modal-content .modal-footer a:not(.hidden):focus, .modal-dialog .modal-content .modal-footer a:not(.hidden):active:focus,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer a:not(.hidden),
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer a:not(.hidden):active,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer a:not(.hidden):focus,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer a:not(.hidden):active:focus {
+    outline: unset;
+    background-color: inherit;
+    color: #c6c6c6;
+  }
+  .modal-dialog .modal-content .modal-footer a:not(.hidden) i, .modal-dialog .modal-content .modal-footer a:not(.hidden).fa,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer a:not(.hidden) i,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer a:not(.hidden).fa {
+    margin-right: 8px;
+  }
+  .modal-dialog .modal-content .modal-footer a:not(.hidden)::before,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer a:not(.hidden)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image: radial-gradient(circle, white 1%, transparent 1%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 15000%;
+    opacity: 0;
+    transition: background 0.7s, opacity 1s;
+    z-index: -1;
+  }
+  .modal-dialog .modal-content .modal-footer a:not(.hidden):active::before, .modal-dialog .modal-content .modal-footer a:not(.hidden):focus::before,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer a:not(.hidden):active::before,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer a:not(.hidden):focus::before {
+    animation-name: ripple;
+    animation-duration: 0.6s;
+    opacity: 0.4;
+    transition: 0s !important;
+  }
+  @keyframes ripple {
+    from {
+      background-size: 1%;
+    }
+    to {
+      background-size: 15000%;
+    }
+  }
+  .modal-dialog .modal-content .modal-footer a:hover,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer a:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  .modal-dialog .modal-content .modal-footer a:focus, .modal-dialog .modal-content .modal-footer a:active, .modal-dialog .modal-content .modal-footer a:focus:active, .modal-dialog .modal-content .modal-footer a:focus:hover,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer a:focus,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer a:active,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer a:focus:active,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer a:focus:hover {
+    color: #ffffff;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: inherit;
+  }
+  .modal-dialog .modal-content .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden),
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden) {
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: normal;
+    min-width: 64px;
+    padding: 0 16px;
+    min-height: 36px;
+    user-select: none;
+    vertical-align: middle;
+    perspective: 1px;
+    position: relative;
+  }
+  .modal-dialog .modal-content .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden), .modal-dialog .modal-content .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden):active, .modal-dialog .modal-content .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden):focus, .modal-dialog .modal-content .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden):active:focus,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden),
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden):active,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden):focus,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden):active:focus {
+    outline: unset;
+    background-color: inherit;
+    color: #c95066;
+  }
+  .modal-dialog .modal-content .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden) i, .modal-dialog .modal-content .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden).fa,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden) i,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden).fa {
+    margin-right: 8px;
+  }
+  .modal-dialog .modal-content .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden)::before,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image: radial-gradient(circle, white 1%, transparent 1%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 15000%;
+    opacity: 0;
+    transition: background 0.7s, opacity 1s;
+    z-index: -1;
+  }
+  .modal-dialog .modal-content .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden):active::before, .modal-dialog .modal-content .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden):focus::before,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden):active::before,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer button.btn.btn-secondary[data-action=delete]:not(.hidden):focus::before {
+    animation-name: ripple;
+    animation-duration: 0.6s;
+    opacity: 0.4;
+    transition: 0s !important;
+  }
+  @keyframes ripple {
+    from {
+      background-size: 1%;
+    }
+    to {
+      background-size: 15000%;
+    }
+  }
+  .modal-dialog .modal-content .modal-footer button.btn.btn-secondary[data-action=delete]:hover,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer button.btn.btn-secondary[data-action=delete]:hover {
+    color: #e17f8c;
+    text-decoration: none;
+  }
+  .modal-dialog .modal-content .modal-footer button.btn.btn-secondary[data-action=delete]:focus, .modal-dialog .modal-content .modal-footer button.btn.btn-secondary[data-action=delete]:active, .modal-dialog .modal-content .modal-footer button.btn.btn-secondary[data-action=delete]:focus:active, .modal-dialog .modal-content .modal-footer button.btn.btn-secondary[data-action=delete]:focus:hover,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer button.btn.btn-secondary[data-action=delete]:focus,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer button.btn.btn-secondary[data-action=delete]:active,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer button.btn.btn-secondary[data-action=delete]:focus:active,
+.moodle-dialogue-base .moodle-dialogue-wrap .modal-footer button.btn.btn-secondary[data-action=delete]:focus:hover {
+    color: #e17f8c;
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: inherit;
+  }
   .modal-dialog .modal-content .modal-header,
 .modal-dialog .modal-content .modal-footer,
 .modal-dialog .modal-content .moodle-dialogue-hd,
@@ -4175,6 +4865,7 @@ select.custom-select.singleselect:disabled:hover,
 .moodle-dialogue-base .moodle-dialogue-wrap .modal-footer,
 .moodle-dialogue-base .moodle-dialogue-wrap .moodle-dialogue-hd {
     border-color: #121212;
+    background-color: unset !important;
     color: #ffffff !important;
   }
   .modal-dialog .modal-content .studentdashboard .row:nth-child(2),
@@ -4351,6 +5042,7 @@ select.custom-select.singleselect:disabled:hover,
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -4408,8 +5100,10 @@ select.custom-select.singleselect:disabled:hover,
   }
   .atto_generico_buttons button:hover {
     color: #ffffff;
+    text-decoration: none;
   }
   .atto_generico_buttons button:focus, .atto_generico_buttons button:active, .atto_generico_buttons button:focus:active, .atto_generico_buttons button:focus:hover {
+    color: #ffffff;
     outline: none !important;
     box-shadow: none !important;
     background-color: inherit;
@@ -4452,7 +5146,9 @@ select.custom-select.singleselect:disabled:hover,
 #page-admin-tool-lp-plans table.generaltable,
 #page-user-managetoken table.generaltable,
 #page-message-notificationpreferences table.preference-table,
-#page-repository-manage_instances table.generaltable {
+#page-repository-manage_instances table.generaltable,
+#page-calendar-managesubscriptions table.generaltable,
+#participants.generaltable {
     background-color: inherit;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2) !important;
     color: #ffffff;
@@ -4467,7 +5163,9 @@ select.custom-select.singleselect:disabled:hover,
 #page-admin-tool-lp-plans table.generaltable thead,
 #page-user-managetoken table.generaltable thead,
 #page-message-notificationpreferences table.preference-table thead,
-#page-repository-manage_instances table.generaltable thead {
+#page-repository-manage_instances table.generaltable thead,
+#page-calendar-managesubscriptions table.generaltable thead,
+#participants.generaltable thead {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2) !important;
   }
   .discussion-list tbody:first-child tr:first-child th,
@@ -4485,7 +5183,11 @@ select.custom-select.singleselect:disabled:hover,
 #page-message-notificationpreferences table.preference-table tbody:first-child tr:first-child th,
 #page-message-notificationpreferences table.preference-table thead th,
 #page-repository-manage_instances table.generaltable tbody:first-child tr:first-child th,
-#page-repository-manage_instances table.generaltable thead th {
+#page-repository-manage_instances table.generaltable thead th,
+#page-calendar-managesubscriptions table.generaltable tbody:first-child tr:first-child th,
+#page-calendar-managesubscriptions table.generaltable thead th,
+#participants.generaltable tbody:first-child tr:first-child th,
+#participants.generaltable thead th {
     background-color: #323232;
     text-align: center;
     border-color: #121212;
@@ -4506,7 +5208,11 @@ select.custom-select.singleselect:disabled:hover,
 #page-message-notificationpreferences table.preference-table tbody:first-child tr:first-child th:first-child,
 #page-message-notificationpreferences table.preference-table thead th:first-child,
 #page-repository-manage_instances table.generaltable tbody:first-child tr:first-child th:first-child,
-#page-repository-manage_instances table.generaltable thead th:first-child {
+#page-repository-manage_instances table.generaltable thead th:first-child,
+#page-calendar-managesubscriptions table.generaltable tbody:first-child tr:first-child th:first-child,
+#page-calendar-managesubscriptions table.generaltable thead th:first-child,
+#participants.generaltable tbody:first-child tr:first-child th:first-child,
+#participants.generaltable thead th:first-child {
     border-top-left-radius: 10px;
   }
   .discussion-list tbody:first-child tr:first-child th:last-child,
@@ -4524,7 +5230,11 @@ select.custom-select.singleselect:disabled:hover,
 #page-message-notificationpreferences table.preference-table tbody:first-child tr:first-child th:last-child,
 #page-message-notificationpreferences table.preference-table thead th:last-child,
 #page-repository-manage_instances table.generaltable tbody:first-child tr:first-child th:last-child,
-#page-repository-manage_instances table.generaltable thead th:last-child {
+#page-repository-manage_instances table.generaltable thead th:last-child,
+#page-calendar-managesubscriptions table.generaltable tbody:first-child tr:first-child th:last-child,
+#page-calendar-managesubscriptions table.generaltable thead th:last-child,
+#participants.generaltable tbody:first-child tr:first-child th:last-child,
+#participants.generaltable thead th:last-child {
     border-top-right-radius: 10px;
   }
   .discussion-list .lead .badge.rounded-pill,
@@ -4534,7 +5244,9 @@ select.custom-select.singleselect:disabled:hover,
 #page-admin-tool-lp-plans table.generaltable .lead .badge.rounded-pill,
 #page-user-managetoken table.generaltable .lead .badge.rounded-pill,
 #page-message-notificationpreferences table.preference-table .lead .badge.rounded-pill,
-#page-repository-manage_instances table.generaltable .lead .badge.rounded-pill {
+#page-repository-manage_instances table.generaltable .lead .badge.rounded-pill,
+#page-calendar-managesubscriptions table.generaltable .lead .badge.rounded-pill,
+#participants.generaltable .lead .badge.rounded-pill {
     background-color: var(--bg-primary-light);
     color: var(--fg-on-primary-light);
     border-radius: 50%;
@@ -4563,7 +5275,13 @@ select.custom-select.singleselect:disabled:hover,
 #page-message-notificationpreferences table.preference-table tbody tr,
 #page-repository-manage_instances table.generaltable tbody td,
 #page-repository-manage_instances table.generaltable tbody th,
-#page-repository-manage_instances table.generaltable tbody tr {
+#page-repository-manage_instances table.generaltable tbody tr,
+#page-calendar-managesubscriptions table.generaltable tbody td,
+#page-calendar-managesubscriptions table.generaltable tbody th,
+#page-calendar-managesubscriptions table.generaltable tbody tr,
+#participants.generaltable tbody td,
+#participants.generaltable tbody th,
+#participants.generaltable tbody tr {
     color: #c6c6c6;
     border: 0;
   }
@@ -4582,7 +5300,11 @@ select.custom-select.singleselect:disabled:hover,
 #page-message-notificationpreferences table.preference-table tbody tr:nth-child(even) td,
 #page-message-notificationpreferences table.preference-table tbody tr:nth-child(even) th,
 #page-repository-manage_instances table.generaltable tbody tr:nth-child(even) td,
-#page-repository-manage_instances table.generaltable tbody tr:nth-child(even) th {
+#page-repository-manage_instances table.generaltable tbody tr:nth-child(even) th,
+#page-calendar-managesubscriptions table.generaltable tbody tr:nth-child(even) td,
+#page-calendar-managesubscriptions table.generaltable tbody tr:nth-child(even) th,
+#participants.generaltable tbody tr:nth-child(even) td,
+#participants.generaltable tbody tr:nth-child(even) th {
     background-color: #272727;
   }
   .discussion-list tbody tr:nth-child(odd) td,
@@ -4600,7 +5322,11 @@ select.custom-select.singleselect:disabled:hover,
 #page-message-notificationpreferences table.preference-table tbody tr:nth-child(odd) td,
 #page-message-notificationpreferences table.preference-table tbody tr:nth-child(odd) th,
 #page-repository-manage_instances table.generaltable tbody tr:nth-child(odd) td,
-#page-repository-manage_instances table.generaltable tbody tr:nth-child(odd) th {
+#page-repository-manage_instances table.generaltable tbody tr:nth-child(odd) th,
+#page-calendar-managesubscriptions table.generaltable tbody tr:nth-child(odd) td,
+#page-calendar-managesubscriptions table.generaltable tbody tr:nth-child(odd) th,
+#participants.generaltable tbody tr:nth-child(odd) td,
+#participants.generaltable tbody tr:nth-child(odd) th {
     background-color: #222222;
   }
   .discussion-list tbody tr:last-child td:first-child,
@@ -4618,7 +5344,11 @@ select.custom-select.singleselect:disabled:hover,
 #page-message-notificationpreferences table.preference-table tbody tr:last-child td:first-child,
 #page-message-notificationpreferences table.preference-table tbody tr:last-child th:first-child,
 #page-repository-manage_instances table.generaltable tbody tr:last-child td:first-child,
-#page-repository-manage_instances table.generaltable tbody tr:last-child th:first-child {
+#page-repository-manage_instances table.generaltable tbody tr:last-child th:first-child,
+#page-calendar-managesubscriptions table.generaltable tbody tr:last-child td:first-child,
+#page-calendar-managesubscriptions table.generaltable tbody tr:last-child th:first-child,
+#participants.generaltable tbody tr:last-child td:first-child,
+#participants.generaltable tbody tr:last-child th:first-child {
     border-bottom-left-radius: 10px;
   }
   .discussion-list tbody tr:last-child td:last-child,
@@ -4636,7 +5366,11 @@ select.custom-select.singleselect:disabled:hover,
 #page-message-notificationpreferences table.preference-table tbody tr:last-child td:last-child,
 #page-message-notificationpreferences table.preference-table tbody tr:last-child th:last-child,
 #page-repository-manage_instances table.generaltable tbody tr:last-child td:last-child,
-#page-repository-manage_instances table.generaltable tbody tr:last-child th:last-child {
+#page-repository-manage_instances table.generaltable tbody tr:last-child th:last-child,
+#page-calendar-managesubscriptions table.generaltable tbody tr:last-child td:last-child,
+#page-calendar-managesubscriptions table.generaltable tbody tr:last-child th:last-child,
+#participants.generaltable tbody tr:last-child td:last-child,
+#participants.generaltable tbody tr:last-child th:last-child {
     border-bottom-right-radius: 10px;
   }
   .discussion-list .btn.btn-link[data-type=favorite-toggle],
@@ -4646,7 +5380,9 @@ select.custom-select.singleselect:disabled:hover,
 #page-admin-tool-lp-plans table.generaltable .btn.btn-link[data-type=favorite-toggle],
 #page-user-managetoken table.generaltable .btn.btn-link[data-type=favorite-toggle],
 #page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle],
-#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle] {
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle],
+#page-calendar-managesubscriptions table.generaltable .btn.btn-link[data-type=favorite-toggle],
+#participants.generaltable .btn.btn-link[data-type=favorite-toggle] {
     perspective: 1px;
     position: relative;
     border: 0;
@@ -4666,7 +5402,9 @@ select.custom-select.singleselect:disabled:hover,
 #page-admin-tool-lp-plans table.generaltable .btn.btn-link[data-type=favorite-toggle]::before,
 #page-user-managetoken table.generaltable .btn.btn-link[data-type=favorite-toggle]::before,
 #page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle]::before,
-#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]::before {
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]::before,
+#page-calendar-managesubscriptions table.generaltable .btn.btn-link[data-type=favorite-toggle]::before,
+#participants.generaltable .btn.btn-link[data-type=favorite-toggle]::before {
     content: "";
     display: block;
     position: absolute;
@@ -4698,7 +5436,11 @@ select.custom-select.singleselect:disabled:hover,
 #page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle]:active::before,
 #page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle]:focus::before,
 #page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:active::before,
-#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus::before {
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus::before,
+#page-calendar-managesubscriptions table.generaltable .btn.btn-link[data-type=favorite-toggle]:active::before,
+#page-calendar-managesubscriptions table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus::before,
+#participants.generaltable .btn.btn-link[data-type=favorite-toggle]:active::before,
+#participants.generaltable .btn.btn-link[data-type=favorite-toggle]:focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -4740,7 +5482,15 @@ select.custom-select.singleselect:disabled:hover,
 #page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus,
 #page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:active,
 #page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:hover,
-#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus:active {
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus:active,
+#page-calendar-managesubscriptions table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus,
+#page-calendar-managesubscriptions table.generaltable .btn.btn-link[data-type=favorite-toggle]:active,
+#page-calendar-managesubscriptions table.generaltable .btn.btn-link[data-type=favorite-toggle]:hover,
+#page-calendar-managesubscriptions table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus:active,
+#participants.generaltable .btn.btn-link[data-type=favorite-toggle]:focus,
+#participants.generaltable .btn.btn-link[data-type=favorite-toggle]:active,
+#participants.generaltable .btn.btn-link[data-type=favorite-toggle]:hover,
+#participants.generaltable .btn.btn-link[data-type=favorite-toggle]:focus:active {
     outline: none;
     border: none;
   }
@@ -4751,7 +5501,9 @@ select.custom-select.singleselect:disabled:hover,
 #page-admin-tool-lp-plans table.generaltable .btn.btn-link[data-type=favorite-toggle]:hover,
 #page-user-managetoken table.generaltable .btn.btn-link[data-type=favorite-toggle]:hover,
 #page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle]:hover,
-#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:hover {
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:hover,
+#page-calendar-managesubscriptions table.generaltable .btn.btn-link[data-type=favorite-toggle]:hover,
+#participants.generaltable .btn.btn-link[data-type=favorite-toggle]:hover {
     background-color: #373737;
     text-decoration: none;
   }
@@ -4769,7 +5521,11 @@ select.custom-select.singleselect:disabled:hover,
 #page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle]:focus,
 #page-message-notificationpreferences table.preference-table .btn.btn-link[data-type=favorite-toggle]:focus-visible,
 #page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus,
-#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus-visible {
+#page-repository-manage_instances table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus-visible,
+#page-calendar-managesubscriptions table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus,
+#page-calendar-managesubscriptions table.generaltable .btn.btn-link[data-type=favorite-toggle]:focus-visible,
+#participants.generaltable .btn.btn-link[data-type=favorite-toggle]:focus,
+#participants.generaltable .btn.btn-link[data-type=favorite-toggle]:focus-visible {
     box-shadow: none;
     background-color: inherit;
     text-decoration: none;
@@ -4781,7 +5537,9 @@ select.custom-select.singleselect:disabled:hover,
 #page-admin-tool-lp-plans table.generaltable [data-container=discussion-tools],
 #page-user-managetoken table.generaltable [data-container=discussion-tools],
 #page-message-notificationpreferences table.preference-table [data-container=discussion-tools],
-#page-repository-manage_instances table.generaltable [data-container=discussion-tools] {
+#page-repository-manage_instances table.generaltable [data-container=discussion-tools],
+#page-calendar-managesubscriptions table.generaltable [data-container=discussion-tools],
+#participants.generaltable [data-container=discussion-tools] {
     margin-right: 5px;
   }
   .discussion-list .author-info,
@@ -4791,7 +5549,9 @@ select.custom-select.singleselect:disabled:hover,
 #page-admin-tool-lp-plans table.generaltable .author-info,
 #page-user-managetoken table.generaltable .author-info,
 #page-message-notificationpreferences table.preference-table .author-info,
-#page-repository-manage_instances table.generaltable .author-info {
+#page-repository-manage_instances table.generaltable .author-info,
+#page-calendar-managesubscriptions table.generaltable .author-info,
+#participants.generaltable .author-info {
     color: #ffffff;
     font-weight: 300;
   }
@@ -4802,7 +5562,9 @@ select.custom-select.singleselect:disabled:hover,
 #page-admin-tool-lp-plans table.generaltable .author-info time,
 #page-user-managetoken table.generaltable .author-info time,
 #page-message-notificationpreferences table.preference-table .author-info time,
-#page-repository-manage_instances table.generaltable .author-info time {
+#page-repository-manage_instances table.generaltable .author-info time,
+#page-calendar-managesubscriptions table.generaltable .author-info time,
+#participants.generaltable .author-info time {
     color: #959595;
   }
   .discussion-list .author-info a,
@@ -4812,7 +5574,9 @@ select.custom-select.singleselect:disabled:hover,
 #page-admin-tool-lp-plans table.generaltable .author-info a,
 #page-user-managetoken table.generaltable .author-info a,
 #page-message-notificationpreferences table.preference-table .author-info a,
-#page-repository-manage_instances table.generaltable .author-info a {
+#page-repository-manage_instances table.generaltable .author-info a,
+#page-calendar-managesubscriptions table.generaltable .author-info a,
+#participants.generaltable .author-info a {
     color: #959595;
   }
   .discussion-list .author-info a:hover, .discussion-list .author-info a:hover time,
@@ -4829,7 +5593,11 @@ select.custom-select.singleselect:disabled:hover,
 #page-message-notificationpreferences table.preference-table .author-info a:hover,
 #page-message-notificationpreferences table.preference-table .author-info a:hover time,
 #page-repository-manage_instances table.generaltable .author-info a:hover,
-#page-repository-manage_instances table.generaltable .author-info a:hover time {
+#page-repository-manage_instances table.generaltable .author-info a:hover time,
+#page-calendar-managesubscriptions table.generaltable .author-info a:hover,
+#page-calendar-managesubscriptions table.generaltable .author-info a:hover time,
+#participants.generaltable .author-info a:hover,
+#participants.generaltable .author-info a:hover time {
     color: #c6c6c6;
   }
 
@@ -4855,6 +5623,7 @@ select.custom-select.singleselect:disabled:hover,
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -4912,8 +5681,10 @@ select.custom-select.singleselect:disabled:hover,
   }
   .path-mod-forum #region-main a.btn.btn-link:hover {
     color: #ffffff;
+    text-decoration: none;
   }
   .path-mod-forum #region-main a.btn.btn-link:focus, .path-mod-forum #region-main a.btn.btn-link:active, .path-mod-forum #region-main a.btn.btn-link:focus:active, .path-mod-forum #region-main a.btn.btn-link:focus:hover {
+    color: #ffffff;
     outline: none !important;
     box-shadow: none !important;
     background-color: inherit;
@@ -5321,6 +6092,7 @@ span.unread::before {
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -5378,8 +6150,10 @@ span.unread::before {
   }
   .atto_chemistry_library li a:not(.hidden):hover {
     color: #ffffff;
+    text-decoration: none;
   }
   .atto_chemistry_library li a:not(.hidden):focus, .atto_chemistry_library li a:not(.hidden):active, .atto_chemistry_library li a:not(.hidden):focus:active, .atto_chemistry_library li a:not(.hidden):focus:hover {
+    color: #ffffff;
     outline: none !important;
     box-shadow: none !important;
     background-color: inherit;
@@ -5421,6 +6195,7 @@ span.unread::before {
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -5478,20 +6253,90 @@ span.unread::before {
   }
   .atto_chemistry_submit:hover {
     color: #ffffff;
+    text-decoration: none;
   }
   .atto_chemistry_submit:focus, .atto_chemistry_submit:active, .atto_chemistry_submit:focus:active, .atto_chemistry_submit:focus:hover {
+    color: #ffffff;
     outline: none !important;
     box-shadow: none !important;
     background-color: inherit;
   }
 
   /* ----- Calendar ----- */
-  .maincalendar .arrow_link:not(.hidden) {
+  .calendar_event_site i.fa.fa-eye {
+    content: url("https://api.iconify.design/fluent/eye-20-regular.svg?color=%23f44336") !important;
+  }
+  .calendar_event_site i.fa.fa-eye-slash {
+    content: url("https://api.iconify.design/fluent/eye-off-20-regular.svg?color=%23f44336") !important;
+  }
+
+  .calendar_event_category i.fa.fa-eye {
+    content: url("https://api.iconify.design/fluent/eye-20-regular.svg?color=%239c27b0") !important;
+  }
+  .calendar_event_category i.fa.fa-eye-slash {
+    content: url("https://api.iconify.design/fluent/eye-off-20-regular.svg?color=%239c27b0") !important;
+  }
+
+  .calendar_event_course i.fa.fa-eye {
+    content: url("https://api.iconify.design/fluent/eye-20-regular.svg?color=%232196f3") !important;
+  }
+  .calendar_event_course i.fa.fa-eye-slash {
+    content: url("https://api.iconify.design/fluent/eye-off-20-regular.svg?color=%232196f3") !important;
+  }
+
+  .calendar_event_group i.fa.fa-eye {
+    content: url("https://api.iconify.design/fluent/eye-20-regular.svg?color=%23ff9800") !important;
+  }
+  .calendar_event_group i.fa.fa-eye-slash {
+    content: url("https://api.iconify.design/fluent/eye-off-20-regular.svg?color=%23ff9800") !important;
+  }
+
+  .calendar_event_user i.fa.fa-eye {
+    content: url("https://api.iconify.design/fluent/eye-20-regular.svg?color=%234caf50") !important;
+  }
+  .calendar_event_user i.fa.fa-eye-slash {
+    content: url("https://api.iconify.design/fluent/eye-off-20-regular.svg?color=%234caf50") !important;
+  }
+
+  .calendar_event_other i.fa.fa-eye {
+    content: url("https://api.iconify.design/fluent/eye-20-regular.svg?color=%239e9e9e") !important;
+  }
+  .calendar_event_other i.fa.fa-eye-slash {
+    content: url("https://api.iconify.design/fluent/eye-off-20-regular.svg?color=%239e9e9e") !important;
+  }
+
+  .calendar_event_site,
+.calendar_event_category,
+.calendar_event_course,
+.calendar_event_group,
+.calendar_event_user,
+.calendar_event_other {
+    background-color: inherit;
+  }
+
+  a[data-action=filter-event-type] {
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 10px 0;
+  }
+  a[data-action=filter-event-type] .eventname {
+    margin-left: 5px;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    font-weight: 400;
+  }
+
+  .path-calendar [data-region=calendar] .arrow_link:not(.hidden),
+.path-calendar [data-template="core_calendar/day_detailed"] .arrow_link:not(.hidden),
+.path-calendar [data-template="core_calendar/month_detailed"] .arrow_link:not(.hidden) {
     border: 0;
     outline: none;
     border-radius: 4px;
     font-family: "Roboto", "Helvetica", sans-serif;
     font-size: 14px;
+    line-height: 14px;
     letter-spacing: 1.25px;
     text-transform: uppercase;
     font-weight: 500;
@@ -5507,15 +6352,29 @@ span.unread::before {
     perspective: 1px;
     position: relative;
   }
-  .maincalendar .arrow_link:not(.hidden), .maincalendar .arrow_link:not(.hidden):active, .maincalendar .arrow_link:not(.hidden):focus, .maincalendar .arrow_link:not(.hidden):active:focus {
+  .path-calendar [data-region=calendar] .arrow_link:not(.hidden), .path-calendar [data-region=calendar] .arrow_link:not(.hidden):active, .path-calendar [data-region=calendar] .arrow_link:not(.hidden):focus, .path-calendar [data-region=calendar] .arrow_link:not(.hidden):active:focus,
+.path-calendar [data-template="core_calendar/day_detailed"] .arrow_link:not(.hidden),
+.path-calendar [data-template="core_calendar/day_detailed"] .arrow_link:not(.hidden):active,
+.path-calendar [data-template="core_calendar/day_detailed"] .arrow_link:not(.hidden):focus,
+.path-calendar [data-template="core_calendar/day_detailed"] .arrow_link:not(.hidden):active:focus,
+.path-calendar [data-template="core_calendar/month_detailed"] .arrow_link:not(.hidden),
+.path-calendar [data-template="core_calendar/month_detailed"] .arrow_link:not(.hidden):active,
+.path-calendar [data-template="core_calendar/month_detailed"] .arrow_link:not(.hidden):focus,
+.path-calendar [data-template="core_calendar/month_detailed"] .arrow_link:not(.hidden):active:focus {
     outline: unset;
     background-color: inherit;
     color: #c6c6c6;
   }
-  .maincalendar .arrow_link:not(.hidden) i, .maincalendar .arrow_link:not(.hidden).fa {
+  .path-calendar [data-region=calendar] .arrow_link:not(.hidden) i, .path-calendar [data-region=calendar] .arrow_link:not(.hidden).fa,
+.path-calendar [data-template="core_calendar/day_detailed"] .arrow_link:not(.hidden) i,
+.path-calendar [data-template="core_calendar/day_detailed"] .arrow_link:not(.hidden).fa,
+.path-calendar [data-template="core_calendar/month_detailed"] .arrow_link:not(.hidden) i,
+.path-calendar [data-template="core_calendar/month_detailed"] .arrow_link:not(.hidden).fa {
     margin-right: 8px;
   }
-  .maincalendar .arrow_link:not(.hidden)::before {
+  .path-calendar [data-region=calendar] .arrow_link:not(.hidden)::before,
+.path-calendar [data-template="core_calendar/day_detailed"] .arrow_link:not(.hidden)::before,
+.path-calendar [data-template="core_calendar/month_detailed"] .arrow_link:not(.hidden)::before {
     content: "";
     display: block;
     position: absolute;
@@ -5533,7 +6392,11 @@ span.unread::before {
     transition: background 0.7s, opacity 1s;
     z-index: -1;
   }
-  .maincalendar .arrow_link:not(.hidden):active::before, .maincalendar .arrow_link:not(.hidden):focus::before {
+  .path-calendar [data-region=calendar] .arrow_link:not(.hidden):active::before, .path-calendar [data-region=calendar] .arrow_link:not(.hidden):focus::before,
+.path-calendar [data-template="core_calendar/day_detailed"] .arrow_link:not(.hidden):active::before,
+.path-calendar [data-template="core_calendar/day_detailed"] .arrow_link:not(.hidden):focus::before,
+.path-calendar [data-template="core_calendar/month_detailed"] .arrow_link:not(.hidden):active::before,
+.path-calendar [data-template="core_calendar/month_detailed"] .arrow_link:not(.hidden):focus::before {
     animation-name: ripple;
     animation-duration: 0.6s;
     opacity: 0.4;
@@ -5547,16 +6410,507 @@ span.unread::before {
       background-size: 15000%;
     }
   }
-  .maincalendar .arrow_link:hover {
+  .path-calendar [data-region=calendar] .arrow_link:hover,
+.path-calendar [data-template="core_calendar/day_detailed"] .arrow_link:hover,
+.path-calendar [data-template="core_calendar/month_detailed"] .arrow_link:hover {
     color: #ffffff;
+    text-decoration: none;
   }
-  .maincalendar .arrow_link:focus, .maincalendar .arrow_link:active, .maincalendar .arrow_link:focus:active, .maincalendar .arrow_link:focus:hover {
+  .path-calendar [data-region=calendar] .arrow_link:focus, .path-calendar [data-region=calendar] .arrow_link:active, .path-calendar [data-region=calendar] .arrow_link:focus:active, .path-calendar [data-region=calendar] .arrow_link:focus:hover,
+.path-calendar [data-template="core_calendar/day_detailed"] .arrow_link:focus,
+.path-calendar [data-template="core_calendar/day_detailed"] .arrow_link:active,
+.path-calendar [data-template="core_calendar/day_detailed"] .arrow_link:focus:active,
+.path-calendar [data-template="core_calendar/day_detailed"] .arrow_link:focus:hover,
+.path-calendar [data-template="core_calendar/month_detailed"] .arrow_link:focus,
+.path-calendar [data-template="core_calendar/month_detailed"] .arrow_link:active,
+.path-calendar [data-template="core_calendar/month_detailed"] .arrow_link:focus:active,
+.path-calendar [data-template="core_calendar/month_detailed"] .arrow_link:focus:hover {
+    color: #ffffff;
     outline: none !important;
     box-shadow: none !important;
     background-color: inherit;
   }
-  .maincalendar [data-region=view-selector] .dropdown-item {
+  .path-calendar [data-region=calendar] [data-region=view-selector] .dropdown-item::first-letter,
+.path-calendar [data-template="core_calendar/day_detailed"] [data-region=view-selector] .dropdown-item::first-letter,
+.path-calendar [data-template="core_calendar/month_detailed"] [data-region=view-selector] .dropdown-item::first-letter {
     text-transform: capitalize;
+  }
+  .path-calendar [data-region=calendar] h2.current,
+.path-calendar [data-template="core_calendar/day_detailed"] h2.current,
+.path-calendar [data-template="core_calendar/month_detailed"] h2.current {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 24px !important;
+    letter-spacing: 0.25px;
+    font-weight: 400;
+    text-transform: capitalize;
+    flex-grow: 3;
+  }
+  .path-calendar [data-region=calendar] .calendar-controls,
+.path-calendar [data-template="core_calendar/day_detailed"] .calendar-controls,
+.path-calendar [data-template="core_calendar/month_detailed"] .calendar-controls {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .path-calendar [data-region=calendar] .calendar-controls > *,
+.path-calendar [data-template="core_calendar/day_detailed"] .calendar-controls > *,
+.path-calendar [data-template="core_calendar/month_detailed"] .calendar-controls > * {
+    position: static;
+    width: auto !important;
+    flex-grow: 1;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2) !important;
+    border-radius: 10px;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth thead th:first-child,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth thead th:first-child,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth thead th:first-child {
+    border-top-left-radius: 10px;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth thead th:last-child,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth thead th:last-child,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth thead th:last-child {
+    border-top-right-radius: 10px;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth thead th,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth thead th,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth thead th {
+    border-top: 0;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth tbody tr:last-child td:first-child,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth tbody tr:last-child td:first-child,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth tbody tr:last-child td:last-child,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth tbody tr:last-child td:last-child,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth tbody tr:last-child td,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth tbody tr:last-child td,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth tbody tr:last-child td {
+    border-bottom: 0;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth td:first-child,
+.path-calendar [data-region=calendar] table.calendarmonth th:first-child,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth td:first-child,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth th:first-child,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth td:first-child,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth th:first-child {
+    border-left: 0;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth td:last-child,
+.path-calendar [data-region=calendar] table.calendarmonth th:last-child,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth td:last-child,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth th:last-child,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth td:last-child,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth th:last-child {
+    border-right: 0;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth td,
+.path-calendar [data-region=calendar] table.calendarmonth th,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth td,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth th,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth td,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth th {
+    color: #ffffff;
+    background-color: #242424;
+    transition: background-color 0.04s ease-in-out;
+    border: 1px solid #121212;
+    padding: 5px;
+    margin: auto;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth td:not(.dayblank):hover,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth td:not(.dayblank):hover,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth td:not(.dayblank):hover {
+    color: #ffffff;
+    background-color: #272727;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth thead tr,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth thead tr,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth thead tr {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12), 0 1px 3px 0 rgba(0, 0, 0, 0.2) !important;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth .header,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth .header,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth .header {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #2c2c2c;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth td.day,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth td.day,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth td.day {
+    height: 110px;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth td.day > .d-md-block,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth td.day > .d-md-block,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth td.day > .d-md-block {
+    display: flex !important;
+    flex-direction: column;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth td.day > .d-md-block a.aalink.day, .path-calendar [data-region=calendar] table.calendarmonth td.day > .d-md-block > span,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth td.day > .d-md-block a.aalink.day,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth td.day > .d-md-block > span,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth td.day > .d-md-block a.aalink.day,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth td.day > .d-md-block > span {
+    margin-bottom: 5px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth td.day.today > .d-md-block > span,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth td.day.today > .d-md-block > span,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth td.day.today > .d-md-block > span {
+    background-color: var(--bg-primary);
+    color: var(--fg-on-primary);
+    border-radius: 50%;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] ul,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] ul,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] ul {
+    list-style: none;
+    padding: 0;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li {
+    padding: 2px 4px;
+    padding-right: 8px;
+    border-radius: 5px;
+    margin: 1px 0;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li a,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li a,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li a {
+    color: #ffffff !important;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li[data-event-eventtype=due], .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li[data-event-eventtype=course], .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li[data-event-eventtype=openassessment], .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li[data-event-eventtype=closeassessment], .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li[data-event-eventtype=opensubmission], .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li[data-event-eventtype=closesubmission],
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=due],
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=course],
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=openassessment],
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=closeassessment],
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=opensubmission],
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=closesubmission],
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=due],
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=course],
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=openassessment],
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=closeassessment],
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=opensubmission],
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=closesubmission] {
+    background-color: #2196f3;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li[data-event-eventtype=user],
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=user],
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=user] {
+    background-color: #4caf50;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li[data-event-eventtype=group],
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=group],
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=group] {
+    background-color: #ff9800;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li[data-event-eventtype=site],
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=site],
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=site] {
+    background-color: #f44336;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li[data-event-eventtype=category],
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=category],
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=category] {
+    background-color: #9c27b0;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li[data-event-eventtype=other],
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=other],
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li[data-event-eventtype=other] {
+    background-color: #9e9e9e;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li > a,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li > a,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li > a {
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li > a .calendar-circle,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li > a .calendar-circle,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li > a .calendar-circle {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li > a img.icon,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li > a img.icon,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li > a img.icon {
+    margin: 0;
+    margin-right: 1px;
+  }
+  .path-calendar [data-region=calendar] table.calendarmonth [data-region=day-content] li > a span.eventname,
+.path-calendar [data-template="core_calendar/day_detailed"] table.calendarmonth [data-region=day-content] li > a span.eventname,
+.path-calendar [data-template="core_calendar/month_detailed"] table.calendarmonth [data-region=day-content] li > a span.eventname {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .path-calendar [data-region=calendar] .bottom,
+.path-calendar [data-template="core_calendar/day_detailed"] .bottom,
+.path-calendar [data-template="core_calendar/month_detailed"] .bottom {
+    margin-top: 15px;
+  }
+
+  .calendarwrapper {
+    margin-top: 15px;
+  }
+  .calendarwrapper .calendar-information.calendar-no-results {
+    display: block;
+    margin: 80px 40px;
+    text-align: center;
+    font-style: italic;
+    color: #959595;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+  }
+  .calendarwrapper .event .card {
+    color: #ffffff;
+    background-color: #242424;
+    border-radius: 10px !important;
+  }
+  .calendarwrapper .event .card .card-header {
+    border-color: #121212;
+    background: unset;
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+  }
+  .calendarwrapper .event .card .card-header .d-inline-block {
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .calendarwrapper .event .card .card-header .d-inline-block .icon {
+    margin-right: 10px;
+  }
+  .calendarwrapper .event .card .card-header .d-inline-block h3 {
+    margin: 0 10px;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 16px !important;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+  }
+  .calendarwrapper .event .card .card-header .float-sm-right {
+    vertical-align: middle;
+    position: absolute;
+    right: 20px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .calendarwrapper .event .card .card-header .float-sm-right a {
+    display: block;
+    margin: 0 5px;
+    height: 20px;
+    perspective: 1px;
+    position: relative;
+    border: 0;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  .calendarwrapper .event .card .card-header .float-sm-right a::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image: radial-gradient(circle, white 1%, transparent 1%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 15000%;
+    opacity: 0;
+    transition: background 0.7s, opacity 1s;
+    z-index: -1;
+  }
+  .calendarwrapper .event .card .card-header .float-sm-right a:active::before, .calendarwrapper .event .card .card-header .float-sm-right a:focus::before {
+    animation-name: ripple;
+    animation-duration: 0.6s;
+    opacity: 0.4;
+    transition: 0s !important;
+  }
+  @keyframes ripple {
+    from {
+      background-size: 1%;
+    }
+    to {
+      background-size: 15000%;
+    }
+  }
+  .calendarwrapper .event .card .card-header .float-sm-right a:focus, .calendarwrapper .event .card .card-header .float-sm-right a:active, .calendarwrapper .event .card .card-header .float-sm-right a:hover, .calendarwrapper .event .card .card-header .float-sm-right a:focus:active {
+    outline: none;
+    border: none;
+  }
+  .calendarwrapper .event .card .card-header .float-sm-right a:hover {
+    background-color: #373737;
+    text-decoration: none;
+  }
+  .calendarwrapper .event .card .card-header .float-sm-right a:focus, .calendarwrapper .event .card .card-header .float-sm-right a:focus-visible {
+    box-shadow: none;
+    background-color: inherit;
+    text-decoration: none;
+  }
+  .calendarwrapper .event .card .card-footer {
+    border-top: 1px solid #121212;
+    border-radius: 0;
+    background-color: unset !important;
+  }
+  .calendarwrapper .event .card .card-footer .card-link:not(.hidden) {
+    border: 0;
+    outline: none;
+    border-radius: 4px;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    font-weight: 500;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    line-height: normal;
+    min-width: 64px;
+    padding: 0 16px;
+    min-height: 36px;
+    user-select: none;
+    vertical-align: middle;
+    perspective: 1px;
+    position: relative;
+  }
+  .calendarwrapper .event .card .card-footer .card-link:not(.hidden), .calendarwrapper .event .card .card-footer .card-link:not(.hidden):active, .calendarwrapper .event .card .card-footer .card-link:not(.hidden):focus, .calendarwrapper .event .card .card-footer .card-link:not(.hidden):active:focus {
+    outline: unset;
+    background-color: inherit;
+    color: var(--bg-primary-light);
+  }
+  .calendarwrapper .event .card .card-footer .card-link:not(.hidden) i, .calendarwrapper .event .card .card-footer .card-link:not(.hidden).fa {
+    margin-right: 8px;
+  }
+  .calendarwrapper .event .card .card-footer .card-link:not(.hidden)::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background-image: radial-gradient(circle, white 1%, transparent 1%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 15000%;
+    opacity: 0;
+    transition: background 0.7s, opacity 1s;
+    z-index: -1;
+  }
+  .calendarwrapper .event .card .card-footer .card-link:not(.hidden):active::before, .calendarwrapper .event .card .card-footer .card-link:not(.hidden):focus::before {
+    animation-name: ripple;
+    animation-duration: 0.6s;
+    opacity: 0.4;
+    transition: 0s !important;
+  }
+  @keyframes ripple {
+    from {
+      background-size: 1%;
+    }
+    to {
+      background-size: 15000%;
+    }
+  }
+  .calendarwrapper .event .card .card-footer .card-link:hover {
+    color: var(--bg-primary-light-hover);
+    text-decoration: none;
+  }
+  .calendarwrapper .event .card .card-footer .card-link:focus, .calendarwrapper .event .card .card-footer .card-link:active, .calendarwrapper .event .card .card-footer .card-link:focus:active, .calendarwrapper .event .card .card-footer .card-link:focus:hover {
+    color: var(--bg-primary-light-hover);
+    outline: none !important;
+    box-shadow: none !important;
+    background-color: inherit;
+  }
+  .calendarwrapper .event .card .description .row {
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 20px;
+    margin: 10px 15px;
+    flex-wrap: nowrap;
+  }
+  .calendarwrapper .event .card .description .row .col-11,
+.calendarwrapper .event .card .description .row .col-1 {
+    flex: none;
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: none;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+  }
+  .calendarwrapper .event .card .description .row .col-11 {
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    text-align: left;
+  }
+  .calendarwrapper .event .card .description .row .col-11 p {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .calendarwrapper .event .card .description .row .col-1 {
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .block .minicalendar .header {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  .block .minicalendar h3 {
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-size: 16px !important;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+  }
+  .block .minicalendar td a {
+    color: var(--bg-secondary-light);
   }
 
   /* ----- Other miscellaneous changes ----- */

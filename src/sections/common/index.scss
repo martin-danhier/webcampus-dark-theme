@@ -23,8 +23,12 @@ h3.sectionname {
     width: 100%;
 }
 
-.bg-white {
+.bg-white, .bg-light {
     background-color: inherit !important;
+}
+
+.border {
+    border: none !important;
 }
 
 .border-bottom {

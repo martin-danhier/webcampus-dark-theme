@@ -112,13 +112,16 @@ a.btn.btn-link {
 }
 
 .btn.btn-primary:not(.btn-lg),
-.maincalendar button[data-action="new-event-button"] {
+.maincalendar button[data-action="new-event-button"],
+[data-template="core_calendar/day_detailed"] button[data-action="new-event-button"],
+[data-template="core_calendar/month_detailed"] button[data-action="new-event-button"] {
     @include raised-button(var(--bg-primary), var(--bg-primary-hover), var(--fg-on-primary));
 }
 
 button.btn.btn-secondary[type="submit"],
 .datapreferences input.btn.btn-secondary[type="submit"],
 .moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary,
+[data-region="more-courses-button-container"] .btn.btn-secondary,
 #id_cancel {
     @include text-button($fg-high-emphasis, $fg-on-surface);
 }
@@ -132,7 +135,10 @@ button.btn.btn-secondary[type="submit"],
 .dropdown,
 .btn-group[data-region="view-selector"],
 .atto_menu,
-.maincalendar [data-region="view-selector"] {
+.maincalendar [data-region="view-selector"],
+[data-template="core_calendar/day_detailed"] [data-region="view-selector"],
+[data-template="core_calendar/month_detailed"] [data-region="view-selector"],
+[data-region="paging-control-limit-container"] {
     // Button / preview
     .dropdown-toggle {
         &:active:focus,
@@ -175,6 +181,10 @@ button.btn.btn-secondary[type="submit"],
             color: $fg-on-surface;
             list-style: none;
 
+            &::first-letter {
+                text-transform: capitalize;
+            }
+
             &::before {
                 display: none;
             }
@@ -201,7 +211,7 @@ button.btn.btn-secondary[type="submit"],
             }
 
             &:hover {
-                background-color: $bg-field-hover;
+                background-color: $bg-dropdown-item-hover;
             }
         }
 
@@ -221,27 +231,52 @@ button.btn.btn-secondary[type="submit"],
 }
 
 // Custom selects that must look like a dropdown menu (because they used it wrong)
-.maincalendar select.custom-select {
+// To be used in an interface
+.maincalendar select.custom-select,
+[data-template="core_calendar/day_detailed"] select.custom-select,
+[data-template="core_calendar/month_detailed"] select.custom-select,
+.urlselect.custom-select {
     @include outlined-button($fg-on-surface, false);
 
     // Arrow
-    background: $bg-field url(https://api.iconify.design/fluent/caret-down-16-filled.svg?color=%23ffffff) no-repeat right $spacing-s center;
+    background: $bg-surface-01dp url(https://api.iconify.design/fluent/caret-down-16-filled.svg?color=%23ffffff)
+        no-repeat right $spacing-s center !important;
     background-size: 16px 16px;
+
 
     &:active:focus,
     &:hover:focus,
     &:focus {
         outline: none;
         box-shadow: none;
+        @include surface(12);
     }
 
     &:hover {
-        background-color: $bg-field-hover;
+        cursor: pointer;
+        // background-color: $bg-field-hover;
+    }
+
+    option {
+        @include surface(12);
+
+        // Hover & selected
+        &[selected] {
+            background-color: $bg-field-selected-bright;
+        }
+
+        &:hover {
+            background-color: $bg-field-hover !important;
+        }
     }
 }
 
+.urlselect.custom-select {
+    background-color: $bg-background !important;
+}
+
+// Custom selects to be used in a form (looks like text field)
 .mform select.custom-select,
-.urlselect.custom-select,
 select.custom-select.singleselect,
 .datapreferences select.custom-select,
 .moodle-dialogue-base .moodle-dialogue-bd select.custom-select,

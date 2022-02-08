@@ -1,18 +1,421 @@
 /* ----- Calendar ----- */
 
-#page-calendar-view {
+// ----- Toggles -----
 
+// Site
+.calendar_event_site {
+    i.fa.fa-eye {
+        // Eye icon
+        @include fluent-icon-img("eye", $bg-badge-site);
+    }
+
+    i.fa.fa-eye-slash {
+        // Eye slash icon
+        @include fluent-icon-img("eye-off", $bg-badge-site);
+    }
 }
 
+// Category
+.calendar_event_category {
+    i.fa.fa-eye {
+        // Eye icon
+        @include fluent-icon-img("eye", $bg-badge-category);
+    }
 
-.maincalendar {
+    i.fa.fa-eye-slash {
+        // Eye slash icon
+        @include fluent-icon-img("eye-off", $bg-badge-category);
+    }
+}
+
+// Course
+.calendar_event_course {
+    i.fa.fa-eye {
+        // Eye icon
+        @include fluent-icon-img("eye", $bg-badge-course);
+    }
+
+    i.fa.fa-eye-slash {
+        // Eye slash icon
+        @include fluent-icon-img("eye-off", $bg-badge-course);
+    }
+}
+
+// Group
+.calendar_event_group {
+    i.fa.fa-eye {
+        // Eye icon
+        @include fluent-icon-img("eye", $bg-badge-group);
+    }
+
+    i.fa.fa-eye-slash {
+        // Eye slash icon
+        @include fluent-icon-img("eye-off", $bg-badge-group);
+    }
+}
+
+// User
+.calendar_event_user {
+    i.fa.fa-eye {
+        // Eye icon
+        @include fluent-icon-img("eye", $bg-badge-user);
+    }
+
+    i.fa.fa-eye-slash {
+        // Eye slash icon
+        @include fluent-icon-img("eye-off", $bg-badge-user);
+    }
+}
+
+// Other
+.calendar_event_other {
+    i.fa.fa-eye {
+        // Eye icon
+        @include fluent-icon-img("eye", $bg-badge-other);
+    }
+
+    i.fa.fa-eye-slash {
+        // Eye slash icon
+        @include fluent-icon-img("eye-off", $bg-badge-other);
+    }
+}
+
+// All of them
+.calendar_event_site,
+.calendar_event_category,
+.calendar_event_course,
+.calendar_event_group,
+.calendar_event_user,
+.calendar_event_other {
+    background-color: inherit;
+}
+
+a[data-action="filter-event-type"] {
+    @include flex-center-start();
+
+    margin: $spacing-s 0;
+
+    .eventname {
+        margin-left: $spacing-xs;
+        @include typography("body2");
+    }
+}
+
+// ----- Main calendar -----
+
+.path-calendar [data-region="calendar"],
+.path-calendar [data-template="core_calendar/day_detailed"],
+.path-calendar [data-template="core_calendar/month_detailed"] {
     // Next / previous
     .arrow_link {
         @include text-button($fg-high-emphasis, $fg-on-surface);
     }
 
     // View selector
-    [data-region="view-selector"] .dropdown-item {
+    [data-region="view-selector"] .dropdown-item::first-letter {
         text-transform: capitalize;
+    }
+
+    h2.current {
+        @include typography("h4");
+        text-transform: capitalize;
+        flex-grow: 3;
+    }
+
+    .calendar-controls {
+        @include flex-center();
+
+        & > * {
+            position: static;
+            width: auto !important;
+            flex-grow: 1;
+        }
+    }
+
+    // Month view
+    table.calendarmonth {
+        @include elevation(1);
+
+        // Shape: border radius + remove borders on the outermost cells
+        border-radius: $border-radius;
+
+        thead {
+            th:first-child {
+                border-top-left-radius: $border-radius;
+            }
+
+            th:last-child {
+                border-top-right-radius: $border-radius;
+            }
+
+            th {
+                border-top: 0;
+            }
+        }
+
+        tbody tr:last-child {
+            td:first-child {
+                border-bottom-left-radius: $border-radius;
+            }
+
+            td:last-child {
+                border-bottom-right-radius: $border-radius;
+            }
+
+            td {
+                border-bottom: 0;
+            }
+        }
+
+        td,
+        th {
+            &:first-child {
+                border-left: 0;
+            }
+
+            &:last-child {
+                border-right: 0;
+            }
+        }
+
+        // Color and shapes
+        td,
+        th {
+            @include surface(3);
+            transition: background-color 0.04s ease-in-out;
+            border: 1px solid $bg-divider;
+            padding: $spacing-xs;
+            margin: auto;
+        }
+
+        td:not(.dayblank):hover {
+            @include surface(4);
+        }
+
+        thead tr {
+            @include elevation(1);
+        }
+
+        .header {
+            @include typography("button");
+            @include surface(6);
+        }
+
+        td.day {
+            height: 110px;
+
+            & > .d-md-block {
+                display: flex !important;
+                flex-direction: column;
+
+                a.aalink.day,
+                & > span {
+                    margin-bottom: $spacing-xs;
+                    width: 28px;
+                    height: 28px;
+                    line-height: 28px;
+                    text-align: center;
+                }
+            }
+
+            &.today > .d-md-block > span {
+                background-color: var(--bg-primary);
+                color: var(--fg-on-primary);
+                border-radius: 50%;
+            }
+        }
+
+        [data-region="day-content"] {
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+
+            li {
+                padding: 2px 4px;
+                padding-right: 8px;
+                border-radius: 5px;
+                margin: 1px 0;
+
+                a {
+                    color: $fg-on-badge !important;
+                }
+
+                // Course event
+                &[data-event-eventtype="due"],
+                &[data-event-eventtype="course"],
+                &[data-event-eventtype="openassessment"],
+                &[data-event-eventtype="closeassessment"],
+                &[data-event-eventtype="opensubmission"],
+                &[data-event-eventtype="closesubmission"] {
+                    background-color: $bg-badge-course;
+                }
+                // User event
+                &[data-event-eventtype="user"] {
+                    background-color: $bg-badge-user;
+                }
+                // Group event
+                &[data-event-eventtype="group"] {
+                    background-color: $bg-badge-group;
+                }
+                // Site event
+                &[data-event-eventtype="site"] {
+                    background-color: $bg-badge-site;
+                }
+                // Category event
+                &[data-event-eventtype="category"] {
+                    background-color: $bg-badge-category;
+                }
+                // Other event
+                &[data-event-eventtype="other"] {
+                    background-color: $bg-badge-other;
+                }
+
+                & > a {
+                    @include flex-center-start();
+
+                    .calendar-circle {
+                        display: none;
+                        margin: 0;
+                        padding: 0;
+                    }
+
+                    img.icon {
+                        margin: 0;
+                        margin-right: 1px;
+                    }
+
+                    span.eventname {
+                        @include typography("caption");
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        margin-top: $spacing-sm;
+    }
+}
+
+// ----- Day view -----
+
+.calendarwrapper {
+    margin-top: $spacing-sm;
+
+    .calendar-information.calendar-no-results {
+        display: block;
+        margin: $spacing-xl $spacing-l;
+        text-align: center;
+        font-style: italic;
+        color: $fg-medium-emphasis;
+        @include typography("body1");
+    }
+
+    .event .card {
+        @include surface(3);
+        border-radius: $border-radius !important;
+
+        .card-header {
+            border-color: $bg-divider;
+            background: unset;
+            @include flex-center-start();
+            position: relative;
+
+            .d-inline-block {
+                margin: 0 !important;
+                @include flex-center();
+
+                .icon {
+                    margin-right: $spacing-s;
+                }
+
+                h3 {
+                    margin: 0 $spacing-s;
+                    @include typography("h6");
+                }
+            }
+
+            .float-sm-right {
+                vertical-align: middle;
+                position: absolute;
+                right: $spacing-m;
+
+                @include flex-center();
+
+                a {
+                    display: block;
+                    margin: 0 $spacing-xs;
+                    height: $fluent-icon-size;
+
+                    @include flat-icon-button($bg-field-hover);
+                }
+            }
+        }
+
+        .card-footer {
+            border-top: 1px solid $bg-divider;
+            border-radius: 0;
+            background-color: unset !important;
+
+            .card-link {
+                @include text-button(var(--bg-primary-light), var(--bg-primary-light-hover));
+            }
+        }
+
+        .description {
+            .row {
+                @include flex-center-start();
+                min-height: $fluent-icon-size;
+                margin: $spacing-s $spacing-sm;
+                flex-wrap: nowrap;
+
+                .col-11,
+                .col-1 {
+                    flex: none;
+                    @include flex-center-start();
+                    max-width: none;
+                    width: fit-content;
+                    margin: 0;
+                    padding: 0;
+                }
+
+                .col-11 {
+                    flex-direction: column;
+                    text-align: left;
+                    justify-content: flex-start;
+                    text-align: left;
+
+                    p {
+                        @include typography("body2");
+                        margin-bottom: $spacing-s;
+                        width: 100%;
+                    }
+                }
+
+                .col-1 {
+                    height: $fluent-icon-size;
+                    margin-right: $spacing-s;
+                }
+            }
+        }
+    }
+}
+
+// ----- Mini calendar -----
+
+.block .minicalendar {
+    .header {
+        @include typography("overline");
+    }
+
+    h3 {
+        @include typography("h6");
+    }
+
+    td a {
+        color: var(--bg-secondary-light);
     }
 }

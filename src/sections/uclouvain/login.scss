@@ -7,15 +7,16 @@
 
 .list-help-item a {
     @include link();
+    @include flex-center-start();
 
     .item-marker {
-        visibility: hidden;
         width: 0;
+        font-size: 0;
+        margin-right: $spacing-xs !important;
 
-        &::before {
-            @include icon("chevron-right");
-            color: var(--bg-secondary-light);
-        }
+        // Icon
+        @include fluent-icon-base();
+        @include fluent-icon("caret-right");
     }
 }
 
@@ -52,8 +53,17 @@ form {
         @include typography(helper-text);
         color: $bg-error;
 
+        // Icon
+        @include fluent-icon("error-circle");
+        @include flex-center-start();
+        min-width: $fluent-icon-size;
+        min-height: $fluent-icon-size;
+
         &::before {
-            @include icon("error-outline");
+            width: $fluent-icon-size !important;
+            height: $fluent-icon-size !important;
+            display: flex !important;
+            padding: 0 !important;
             margin-right: $spacing-xs;
         }
     }

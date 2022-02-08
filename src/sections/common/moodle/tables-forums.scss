@@ -30,7 +30,9 @@
 #page-admin-tool-lp-plans table.generaltable,
 #page-user-managetoken table.generaltable,
 #page-message-notificationpreferences table.preference-table,
-#page-repository-manage_instances table.generaltable {
+#page-repository-manage_instances table.generaltable,
+#page-calendar-managesubscriptions table.generaltable,
+#participants.generaltable {
     background-color: inherit;
     @include elevation(1);
     color: $fg-on-surface;
