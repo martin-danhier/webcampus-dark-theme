@@ -10,7 +10,27 @@
 @-moz-document domain("webcampus.unamur.be"),
 domain("auth.unamur.be") {
 
-
+    /* Scrollbar */
+    /* Firefox */
+    :root {
+        scrollbar-width: thin;
+    }
+    
+    /* Chrome & Other WebKit-based browser */
+    :root::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    :root::-webkit-scrollbar-corner {
+        display: none;
+    }
+    :root::-webkit-scrollbar-thumb {
+        background-color: #717172;
+    }
+    :root::-webkit-scrollbar-thumb:hover {
+        background-color: #969698;
+    }
+    
     /* Main colors & General */
     ul.navbar-nav.d-none.d-md-flex::after {
         content: "Webcampus";
