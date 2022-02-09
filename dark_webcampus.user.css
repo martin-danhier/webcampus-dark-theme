@@ -58,6 +58,7 @@ domain("auth.unamur.be") {
     
     #page.container-fluid, #page.container-sm, #page.container-md, #page.container-lg, #page.container-xl {
         padding-left: 1rem;
+        overflow-x: clip;
     }
 
     #page-wrapper #page-footer {
