@@ -12,7 +12,6 @@ domain("auth.unamur.be") {
 
 
     /* Main colors & General */
-
     ul.navbar-nav.d-none.d-md-flex::after {
         content: "Webcampus";
         font-size: 18px;
@@ -124,8 +123,8 @@ domain("auth.unamur.be") {
         color: #fbfbfb;
     }
     .card {
-        background-color: #171717;
-        border-color: #262626;
+        background-color: #262626;
+        border-color: #303030;
         border-radius: 15px;
     }
     #region-main .card-body {
@@ -1338,6 +1337,10 @@ domain("auth.unamur.be") {
         content: url('https://api.iconify.design/fluent/text-bullet-list-tree-16-filled.svg?color=white&width=24');
     }
     
+    .fp-vb-details > .fa-list::before {
+        content: url('https://api.iconify.design/fluent/text-bullet-list-tree-16-filled.svg?color=white&width=20');
+    }
+    
     .fa-thumbs-up::before {
         content: url('https://api.iconify.design/fluent/person-feedback-24-regular.svg?color=white&width=24');   
     }
@@ -1634,6 +1637,42 @@ domain("auth.unamur.be") {
     
     .fa-warning::before, .fa-exclamation-triangle::before{
         content: url('https://api.iconify.design/fluent/chat-warning-16-regular.svg?color=%23da4f4f&width=24');
+    }
+    
+    .fa-file-o::before {
+        content: url('https://api.iconify.design/fluent/document-add-20-regular.svg?color=white&width=20')
+    }
+    
+    .fa-folder::before {
+        content: url('https://api.iconify.design/fluent/folder-20-filled.svg?color=white&width=20')
+    }
+    
+    .fa-folder-o::before {
+        content: url('https://api.iconify.design/fluent/folder-add-20-regular.svg?color=white&width=20')
+    }
+    
+    .fa-th::before {
+        content: url('https://api.iconify.design/fluent/grid-20-filled.svg?color=white&width=20');
+    }
+    
+    .fa-download::before {
+        content: url('https://api.iconify.design/fluent/arrow-download-20-filled.svg?color=white&width=20');
+    }
+    
+    .fa-trash::before {
+        content: url('https://api.iconify.design/fluent/delete-20-filled.svg?color=white&width=20');
+    }
+    
+    .fp-img-downloading > .fa-circle-o-notch {
+        height: 20px !important;
+        width: 20px !important;
+    }
+    .fa-circle-o-notch::before {
+        content: url('https://api.iconify.design/fluent/spinner-ios-20-filled.svg?color=white&width=20');
+    }
+    
+    .fp-pathbar > .fp-path-folder {
+        background: url('https://api.iconify.design/fluent/folder-16-filled.svg?color=white&width=16') left 3px no-repeat;
     }
     
     div.availabilityinfo::before{
@@ -2103,21 +2142,50 @@ domain("auth.unamur.be") {
         background-color: transparent !important;
         opacity: 1;
     }
+    
+    .fp-upload-btn {
+        margin-bottom: 1rem;
+    }
+    
+    .file-picker {
+        padding-right: .25rem;
+    }
+    
+    .file-picker .fp-content {
+        max-height: unset;
+    }
+    
+    .fp-formset {
+        padding: .5rem 0;
+        margin: 0 1rem
+    }
 
     .close,
     .moodle-dialogue-base .closebutton {
         text-shadow: unset;
     }
-
-    /*     .fp-toolbar .btn-secondary, .fp-toolbar .btn-default, .fp-toolbar .atto_generico_buttons button, .fp-toolbar .atto_generico_buttons button, .fp-toolbar .wikisearch form input, .wikisearch form .fp-toolbar input, .fp-toolbar #page-mod-forum-view #id_advancedadddiscussion, #page-mod-forum-view .fp-toolbar #id_advancedadddiscussion, .fp-toolbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"], #page-mod-forum-discuss .fp-toolbar button[data-action="forum-advanced-reply"], .fp-viewbar .btn-secondary, .fp-viewbar .btn-default, .fp-viewbar .atto_generico_buttons button, .atto_generico_buttons .fp-viewbar button, .fp-viewbar .wikisearch form input, .wikisearch form .fp-viewbar input, .fp-viewbar #page-mod-forum-view #id_advancedadddiscussion, #page-mod-forum-view .fp-viewbar #id_advancedadddiscussion, .fp-viewbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"], #page-mod-forum-discuss .fp-viewbar button[data-action="forum-advanced-reply"] {
-    background-color: #4e4a4a;
-    border: 1px solid #1e1d1d;
     
+    .filemanager > .fp-navbar {
+        margin-top: .5rem
+    }
+    .filemanager > .filemanager-container {
+        margin: .1rem 0 .5rem
+    }
+    
+    .fp-pathbar .fp-path-folder-name {
+        margin-left: 1.25rem
+    }
+    
+    .fp-toolbar .btn-secondary, .fp-toolbar .btn-default, .fp-toolbar .atto_generico_buttons button, .fp-toolbar .atto_generico_buttons button, .fp-toolbar .wikisearch form input, .wikisearch form .fp-toolbar input, .fp-toolbar #page-mod-forum-view #id_advancedadddiscussion, #page-mod-forum-view .fp-toolbar #id_advancedadddiscussion, .fp-toolbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"], #page-mod-forum-discuss .fp-toolbar button[data-action="forum-advanced-reply"], .fp-viewbar .btn-secondary, .fp-viewbar .btn-default, .fp-viewbar .atto_generico_buttons button, .atto_generico_buttons .fp-viewbar button, .fp-viewbar .wikisearch form input, .wikisearch form .fp-viewbar input, .fp-viewbar #page-mod-forum-view #id_advancedadddiscussion, #page-mod-forum-view .fp-viewbar #id_advancedadddiscussion, .fp-viewbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"], #page-mod-forum-discuss .fp-viewbar button[data-action="forum-advanced-reply"] {
+    background-color: #4a4a4a;
+    border: 1px solid #303030;
 }
     
-    .fptoolbar .btn-secondary ::before,  .fp-toolbar .btn-default ::before, .fp-toolbar .atto_generico_buttons button ::before, .fp-toolbar .atto_generico_buttons button ::before, .fp-toolbar .wikisearch form input ::before, .wikisearch form .fp-toolbar input ::before,  .fp-toolbar #page-mod-forum-view #id_advancedadddiscussion ::before,#page-mod-forum-view .fp-toolbar #id_advancedadddiscussion::before, fp-toolbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"] ::before, #page-mod-forum-discuss .fp-toolbar button[data-action="forum-advanced-reply"] ::before, .fp-viewbar .btn-secondary ::before,.fp-viewbar .btn-default ::before,  .fp-viewbar .atto_generico_buttons button ::before, .fp-viewbar .wikisearch form input ::before, .wikisearch form .fp-viewbar input ::before, .fp-viewbar #page-mod-forum-view #id_advancedadddiscussion ::before, .fp-viewbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"] ::before, #page-mod-forum-discuss .fp-viewbar button[data-action="forum-advanced-reply"] ::before, i .icon .fa .fa-refresh .fa-fw ::before   {
+/*     .fptoolbar .btn-secondary ::before,  .fp-toolbar .btn-default ::before, .fp-toolbar .atto_generico_buttons button ::before, .fp-toolbar .atto_generico_buttons button ::before, .fp-toolbar .wikisearch form input ::before, .wikisearch form .fp-toolbar input ::before,  .fp-toolbar #page-mod-forum-view #id_advancedadddiscussion ::before,#page-mod-forum-view .fp-toolbar #id_advancedadddiscussion::before, fp-toolbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"] ::before, #page-mod-forum-discuss .fp-toolbar button[data-action="forum-advanced-reply"] ::before, .fp-viewbar .btn-secondary ::before,.fp-viewbar .btn-default ::before,  .fp-viewbar .atto_generico_buttons button ::before, .fp-viewbar .wikisearch form input ::before, .wikisearch form .fp-viewbar input ::before, .fp-viewbar #page-mod-forum-view #id_advancedadddiscussion ::before, .fp-viewbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"] ::before, #page-mod-forum-discuss .fp-viewbar button[data-action="forum-advanced-reply"] ::before, i .icon .fa .fa-refresh .fa-fw ::before   {
         color: #f2e4e4 !important ;
     } */
+    
+    
     /* Peer review */
     .path-mod-workshop #workshop-viewlet-yourgrades .finalgrades .grade.submissiongrade,
     .path-mod-workshop #workshop-viewlet-yourgrades .finalgrades .grade.assessmentgrade {
