@@ -902,8 +902,18 @@ domain("auth.unamur.be") {
         padding-left: unset;
     }
     
-    .aabtn.focus, .btn-link.focus, .nav-link.focus, .atto_link_button.focus, [role="button"].focus, .list-group-item-action.focus, input[type="checkbox"].focus, input[type="radio"].focus, input[type="file"].focus, input[type="image"].focus, .sr-only-focusable.focus, a.dropdown-toggle.focus, .modal-dialog[tabindex="0"].focus, .moodle-dialogue-base .closebutton.focus, button.close.focus, .form-autocomplete-selection.focus, .aabtn:focus, .btn-link:focus, .nav-link:focus, .atto_link_button:focus, [role="button"]:focus, .list-group-item-action:focus, input[type="checkbox"]:focus, input[type="radio"]:focus, input[type="file"]:focus, input[type="image"]:focus, .sr-only-focusable:focus, a.dropdown-toggle:focus, .modal-dialog[tabindex="0"]:focus, .moodle-dialogue-base .closebutton:focus, button.close:focus, .form-autocomplete-selection:focus, .page-link:focus, .page-item.disabled .page-link:focus {
+    .aabtn.focus, .btn-link.focus, .nav-link.focus, .atto_link_button.focus, [role="button"].focus, .list-group-item-action.focus, input[type="checkbox"].focus, input[type="radio"].focus, input[type="file"].focus, input[type="image"].focus, .sr-only-focusable.focus, a.dropdown-toggle.focus, .modal-dialog[tabindex="0"].focus, .moodle-dialogue-base .closebutton.focus, button.close.focus, .form-autocomplete-selection.focus, .aabtn:focus, .btn-link:focus, .nav-link:not(.active):focus, .atto_link_button:focus, [role="button"]:focus, .list-group-item-action:focus, input[type="checkbox"]:focus, input[type="radio"]:focus, input[type="file"]:focus, input[type="image"]:focus, .sr-only-focusable:focus, a.dropdown-toggle:focus, .modal-dialog[tabindex="0"]:focus, .moodle-dialogue-base .closebutton:focus, button.close:focus, .form-autocomplete-selection:focus, .page-link:focus, .page-item.disabled .page-link:focus {
         box-shadow: 0 0 0 .15rem #4a4a4a;
+        transition: box-shadow .15s ease;
+    }
+    
+    .btn-primary:focus, .btn-primary.focus {
+        box-shadow: unset;
+        outline: unset;
+    }
+    
+    .nav-link.active:focus {
+        box-shadow: 0 0 0 .15rem #127474;
         transition: box-shadow .15s ease;
     }
     
@@ -923,7 +933,6 @@ domain("auth.unamur.be") {
         transition: unset;
     }
     
-    .btn-primary:focus, .btn-primary.focus,
     .btn-secondary:focus, .btn-secondary.focus,
     .btn-outline-secondary:focus, .btn-outline-secondary.focus {
         outline: .1rem solid #4a4a4a;
@@ -953,6 +962,14 @@ domain("auth.unamur.be") {
         color: #fff;
         background-color: #868e96;
         border-color: #868e96;
+    }
+    
+    .togglecompletion > div > .btn {
+        margin-right: .5rem;
+    }
+    
+    .togglecompletion > div > .btn > img.icon[src*="completion"] {
+        margin-right: unset;
     }
     
     /* Dropdown Menus */
@@ -1607,11 +1624,11 @@ domain("auth.unamur.be") {
     }
     
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/i/completion-manual-n"] {
-        content: url('https://api.iconify.design/fluent/checkbox-unchecked-24-filled.svg?color=%23868e96');
+        content: url('https://api.iconify.design/fluent/checkbox-unchecked-24-filled.svg?height=16&color=%23868e96');
     }
     
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/i/completion-manual-y"] {
-        content: url('https://api.iconify.design/fluent/checkbox-checked-24-filled.svg?color=%23868e96');
+        content: url('https://api.iconify.design/fluent/checkbox-checked-24-filled.svg?height=16&color=%23868e96');
     }
     
     .hot .activityinstance::before, .warm .activityinstance::before{
@@ -1697,6 +1714,10 @@ domain("auth.unamur.be") {
     
     .fp-pathbar > .fp-path-folder {
         background: url('https://api.iconify.design/fluent/folder-16-filled.svg?color=white&width=16') left 3px no-repeat;
+    }
+    
+    .dndupload-arrow {
+        background: url('https://api.iconify.design/fluent/arrow-upload-24-filled.svg?width=60&color=white') center no-repeat;
     }
     
     div.availabilityinfo::before{
@@ -2480,6 +2501,10 @@ domain("auth.unamur.be") {
 
     #player_block .player-mask div {
         visibility: hidden !important;
+    }
+    
+    .ub { /* Center icons in the player */
+        font-size: 30px;
     }
     
      /* Pause button */
