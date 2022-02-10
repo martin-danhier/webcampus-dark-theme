@@ -2,7 +2,7 @@
 
 Voir la page [Userstyles](https://userstyles.world/style/3158/webcampus-dark-theme).
 
-## [NEW] Fluent Icons Update 0.5.24
+## [NEW] 1.0.0 - Full Webcampus Support
 
 ![Fluent icons update screenshot](assets/Fluent_icons_update.png)
 
