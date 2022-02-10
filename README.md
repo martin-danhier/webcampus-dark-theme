@@ -1,6 +1,6 @@
 # Webcampus Dark Theme
 
-[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-388E3C.svg?style=flat)](https://userstyles.world/api/style/3158.user.css) [![See on Userstyles](https://img.shields.io/badge/See%20on-Userstyles-blue?style=flat)](https://userstyles.world/style/3158/webcampus-dark-theme) ![Stars](https://img.shields.io/github/stars/martin-danhier/webcampus-dark-theme?color=FBC02D&style=flat)
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-388E3C.svg?style=flat)](https://userstyles.world/api/style/3158.user.css) [![See on Userstyles](https://img.shields.io/badge/See%20on-Userstyles-blue?style=flat)](https://userstyles.world/style/3158/webcampus-dark-theme) [![Stars](https://img.shields.io/github/stars/martin-danhier/webcampus-dark-theme?color=FBC02D&style=flat)](https://github.com/martin-danhier/webcampus-dark-theme)
 
 ## [NEW] 1.0.0 - Full Webcampus Support
 
