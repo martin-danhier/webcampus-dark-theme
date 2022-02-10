@@ -1,5 +1,7 @@
 # Modern dark theme for Moodle
 
+View [Userstyles](https://userstyles.world/style/3158/webcampus-dark-theme) page.
+
 ## [NEW] V2.0.0 - Material Design Update + UCLouvain support
 
 Nouveaux screens TODO
@@ -19,7 +21,7 @@ Chromium-based browsers and Firefox are supported.
 
 1. Install [Stylus](https://add0n.com/stylus.html) for [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chromium](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne).
 
-2. [**Click here to install the CSS Style**](https://raw.githubusercontent.com/martin-danhier/webcampus-dark-theme/master/dark_webcampus.user.css): Stylus recognizes the file, click on `Install Style`.
+2. [**Click here to install the CSS Style**](https://userstyles.world/api/style/3158.user.css): Stylus recognizes the file, click on `Install Style`.
 
 3. Enjoy
 
