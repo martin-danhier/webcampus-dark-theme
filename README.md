@@ -1,6 +1,6 @@
 # Webcampus Dark Theme
 
-Voir la page [Userstyles](https://userstyles.world/api/style/3158.user.css)
+Voir la page [Userstyles](https://userstyles.world/style/3158/webcampus-dark-theme).
 
 ## [NEW] Fluent Icons Update 0.5.24
 
