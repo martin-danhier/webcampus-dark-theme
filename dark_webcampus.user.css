@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.5.33
+@version        1.0.0
 @description    Dark theme for webcampus
 @author         Martin Danhier
 @author         Yannis Fraselle
@@ -91,7 +91,7 @@ domain("auth.unamur.be") {
     }
 
     #page-footer .contactinfo::before {
-        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.33 \A \A";
+        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 1.0.0 \A \A";
         white-space: pre;
         text-align: center;
         color: #e7e7e7;
@@ -148,7 +148,7 @@ domain("auth.unamur.be") {
     }
     .card {
         background-color: #262626;
-        border-color: #303030;
+        border-color: #262626;
         border-radius: 15px;
     }
     #region-main .card-body {
@@ -1427,7 +1427,7 @@ domain("auth.unamur.be") {
     }
     
     .fa-mortar-board::before, .fa-graduation-cap::before {
-        content: url('https://api.iconify.design/fluent/book-open-16-filled.svg?color=white&width=24');
+        content: url('https://api.iconify.design/fluent/book-open-16-regular.svg?color=white&width=24');
     }
 
     .fa-user-plus::before {
@@ -1681,19 +1681,19 @@ domain("auth.unamur.be") {
     }
     
     .fa-file-o::before {
-        content: url('https://api.iconify.design/fluent/document-add-20-regular.svg?color=white&width=20')
+        content: url('https://api.iconify.design/fluent/document-add-20-regular.svg?color=white&width=20');
     }
     
     .fa-folder::before {
-        content: url('https://api.iconify.design/fluent/folder-20-filled.svg?color=white&width=20')
+        content: url('https://api.iconify.design/fluent/folder-20-regular.svg?color=white&width=20');
     }
     
     .fa-folder-o::before {
-        content: url('https://api.iconify.design/fluent/folder-add-20-regular.svg?color=white&width=20')
+        content: url('https://api.iconify.design/fluent/folder-add-20-regular.svg?color=white&width=20');
     }
     
     .fa-th::before {
-        content: url('https://api.iconify.design/fluent/grid-20-filled.svg?color=white&width=20');
+        content: url('https://api.iconify.design/fluent/grid-20-regular.svg?color=white&width=20');
     }
     
     .fa-download::before {
@@ -1735,6 +1735,14 @@ domain("auth.unamur.be") {
     span.eventname{
         margin-left: 0.4rem;
     }
+    
+    button.close span, .moodle-dialogue-base button.closebutton span{
+        color: black !important;
+    }
+    
+    a.dimmed, a.dimmed:link, a.dimmed:visited, a.dimmed_text, a.dimmed_text:link, a.dimmed_text:visited, .dimmed_text, .dimmed_text a, .dimmed_text a:link, .dimmed_text a:visited, .usersuspended, .usersuspended a, .usersuspended a:link, .usersuspended a:visited, .dimmed_category, .dimmed_category a{
+        color: white;
+    }   
     
     /* ================== */
     
