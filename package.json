@@ -1,6 +1,6 @@
 {
   "name": "moodle-dark-theme",
-  "version": "0.6.0",
+  "version": "2.0.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/martin-danhier/webcampus-dark-theme.git"
