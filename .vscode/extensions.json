@@ -1,10 +1,8 @@
 {
     "recommendations": [
-        // Format SCSS files
         "sibiraj-s.vscode-scss-formatter",
-        // Language support for SCSS
         "mrmlnc.vscode-scss",
-        // Linter for SCSS (good code practice)
-        "stylelint.vscode-stylelint"
+        "stylelint.vscode-stylelint",
+        "streetsidesoftware.code-spell-checker"
     ]
 }
