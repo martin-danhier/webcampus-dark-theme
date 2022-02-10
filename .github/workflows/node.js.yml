@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -33,3 +33,4 @@ jobs:
       with:
         name: moodle-dark-theme.user.css
         path: ./output.user.css
+        retention-days: 7
