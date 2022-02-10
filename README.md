@@ -1,6 +1,6 @@
 # Modern dark theme for Moodle
 
-View [Userstyles](https://userstyles.world/style/3158/webcampus-dark-theme) page.
+[![Install directly with Stylus](https://img.shields.io/badge/Install%20directly%20with-Stylus-388E3C.svg?style=flat)](https://userstyles.world/api/style/3158.user.css) [![See on Userstyles](https://img.shields.io/badge/See%20on-Userstyles-blue?style=flat)](https://userstyles.world/style/3158/webcampus-dark-theme) [![Stars](https://img.shields.io/github/stars/martin-danhier/webcampus-dark-theme?color=FBC02D&style=flat)](https://github.com/martin-danhier/webcampus-dark-theme)
 
 ## [NEW] V2.0.0 - Material Design Update + UCLouvain support
 
