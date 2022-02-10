@@ -1,6 +1,8 @@
 # Webcampus Dark Theme
 
-## [NEW] 1.0.0 - Full Modern Webcampus Support
+Voir la page [Userstyles](https://userstyles.world/api/style/3158.user.css)
+
+## [NEW] Fluent Icons Update 0.5.24
 
 ![Fluent icons update screenshot](assets/Fluent_icons_update.png)
 
@@ -16,7 +18,7 @@
 
 1. Installer [Stylus](https://add0n.com/stylus.html) pour [Firefox](https://addons.mozilla.org/en-US/firefox/addon/styl-us/), [Chromium](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne).
 
-2. [Cliquez ici pour installer le CSS](https://raw.githubusercontent.com/martin-danhier/webcampus-dark-theme/master/dark_webcampus.user.css): Stylus reconnaît le fichier, cliquer sur `Install Style`.
+2. [Cliquez ici pour installer le CSS](https://userstyles.world/api/style/3158.user.css): Stylus reconnaît le fichier, cliquer sur `Install Style`.
 
 3. Enjoy
 
