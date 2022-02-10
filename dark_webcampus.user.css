@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           Webcampus Dark Theme
 @namespace      github.com/martin-danhier
-@version        0.5.32
+@version        1.0.0
 @description    Dark theme for webcampus
 @author         Martin Danhier
 @author         Yannis Fraselle
@@ -10,12 +10,31 @@
 @-moz-document domain("webcampus.unamur.be"),
 domain("auth.unamur.be") {
 
-
-    /* Main colors */
-    body {}
-
-
-
+    /* Scrollbar */
+    /* Firefox */
+    :root {
+        scrollbar-width: thin;
+    }
+    
+    /* Chrome & Other WebKit-based browser */
+    :root::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    :root::-webkit-scrollbar-corner {
+        display: none;
+    }
+    :root::-webkit-scrollbar-thumb {
+        background-color: #717172;
+    }
+    :root::-webkit-scrollbar-thumb:hover {
+        background-color: #4e4e4f;
+    }
+    :root::-webkit-scrollbar-thumb:active {
+        background-color: #3f3f3f;
+    }
+    
+    /* Main colors & General */
     ul.navbar-nav.d-none.d-md-flex::after {
         content: "Webcampus";
         font-size: 18px;
@@ -59,7 +78,11 @@ domain("auth.unamur.be") {
     .path-my #region-main .card-body.pr-1.course-info-container {
         border-radius: 0px;
     }
-
+    
+    #page.container-fluid, #page.container-sm, #page.container-md, #page.container-lg, #page.container-xl {
+        padding-left: 1rem;
+        overflow-x: clip;
+    }
 
     #page-wrapper #page-footer {
         border-radius: 15px;
@@ -67,12 +90,8 @@ domain("auth.unamur.be") {
         margin-right: 10px;
     }
 
-    #page-footer .fa.fa-phone {
-        visibility: hidden;
-    }
-
     #page-footer .contactinfo::before {
-        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 0.5.32 \A \A";
+        content: "\A===    Webcampus Dark Theme    ===\AStyle par Martin Danhier et Yannis Fraselle \A Version 1.0.0 \A \A";
         white-space: pre;
         text-align: center;
         color: #e7e7e7;
@@ -106,12 +125,17 @@ domain("auth.unamur.be") {
         border: unset;
         color: #737373;
     }
+    
+    /* Réduire le padding du header sur une page de cours */
+    .pt-3 {
+        padding-top: unset !important;
+    }
 
 
     #region-main .list-group-item {
-
         border-radius: 15px;
     }
+    
     .bg-dark {
         background-color: #151414 !important;
     }
@@ -123,7 +147,7 @@ domain("auth.unamur.be") {
         color: #fbfbfb;
     }
     .card {
-        background-color: #171717;
+        background-color: #262626;
         border-color: #262626;
         border-radius: 15px;
     }
@@ -140,8 +164,32 @@ domain("auth.unamur.be") {
     .region_main_settings_menu_proxy {
         background-color: inherit;
     }
+    
+    .usertext {
+        margin-right: .50rem !important;
+    }
+    
+    #paging-control-limit-container-1>.mr-1 { /* Space between "Show" and the number of courses to show on the overview page */
+        margin-right: .75rem !important;
+    }
+    
+    /* Messages */
+    .message-app {
+        background-color: #262626;
+    }
+    
+    [id^="message-drawer-view-overview-container"]>.card {
+        background-color: inherit;
+    }
+    
+    [id^="message-drawer-view-overview-container"]>.card>.lazy-load-list>.list-group>a:focus,
+    [id^="message-drawer-view-overview-container"]>.card>.lazy-load-list>.list-group>a:active
+    {
+        color: white;
+        background-color: #4a4a4a;
+    }
 
-    /* forum */
+    /* Forum */
     .path-course-view .activityinstance .unread {
         margin-left: 60px;
         background-color: unset;
@@ -164,11 +212,11 @@ domain("auth.unamur.be") {
         margin-top: 15px;
     }
 
-    .alert-warning:before,
-    #page-admin-index .adminwarning:before,
-    .uninstalldeleteconfirmexternal:before,
-    .que .outcome:before,
-    .que .comment:before {
+    .alert-warning::before,
+    #page-admin-index .adminwarning::before,
+    .uninstalldeleteconfirmexternal::before,
+    .que .outcome::before,
+    .que .comment::before {
         content: "⚠"
     }
     
@@ -179,7 +227,7 @@ domain("auth.unamur.be") {
         margin-top: 15px;
     }
     
-    .alert-danger:before, #page-admin-index .adminerror:before {
+    .alert-danger::before, #page-admin-index .adminerror::before {
         content:"⛔"
     }
     
@@ -264,7 +312,7 @@ domain("auth.unamur.be") {
         border: unset;
     }
 
-    /* awful hardcoded colors */
+    /* Awful hardcoded colors */
     span[style*="background-color: rgb("]:not([style^="color: rgb("]):not([style*=" color: rgb("]):not([style*="background-color: rgb(255, 255, 255)"]),
     span[style*="background-color:rgb("]:not([style^="color:rgb("]):not([style*="background-color:rgb(255,255,255)"]) {
         color: #fff !important;
@@ -302,7 +350,7 @@ domain("auth.unamur.be") {
 
 
 
-    /* editor */
+    /* Editor */
     .editor_atto_wrap {
         border: 1px solid #8a8686;
         border-radius: 15px;
@@ -500,7 +548,7 @@ domain("auth.unamur.be") {
         color: #DCDCAA;
     }
 
-    /* text field */
+    /* Text fields */
     .form-control {
         border: 1px solid #999;
     }
@@ -537,7 +585,7 @@ domain("auth.unamur.be") {
         border-top: 1px solid #2c2c2c;
     }
 
-    /* top banner */
+    /* Top banner */
     header.fixed-top.brand-banner {
         visibility: visible;
 
@@ -568,7 +616,7 @@ domain("auth.unamur.be") {
         visibility: hidden;
     }
 
-    /* title color in "chronology" */
+    /* Title color in "chronology" */
     h1,
     h2,
     h3,
@@ -585,13 +633,10 @@ domain("auth.unamur.be") {
         color: #9faab5;
     }
 
-    /* calendar */
+    /* Calendar */
     .calendar_event_course a {
         color: #04d8d2;
     }
-    .calendar_event_course,
-    .block-region .block .minicalendar td:nth-child(even).calendar_event_course,
-    .block-region .block .minicalendar.calendartable td:nth-child(even).calendar_event_course,
     .block-region .block .minicalendar td:nth-child(even),
     .block-region .block .minicalendar.calendartable td:nth-child(even) {
         background-color: inherit;
@@ -601,12 +646,12 @@ domain("auth.unamur.be") {
         visibility: hidden;
         position: relative;
     }
-    .block-region .block .minicalendar .calendar-controls .arrow_link.next .arrow:before {
+    .block-region .block .minicalendar .calendar-controls .arrow_link.next .arrow::before {
         visibility: visible;
         position: absolute;
         content: "";
         font-family: "FontAwesome";
-        font-size: 12;
+        font-size: 12px;
         color: inherit;
     }
 
@@ -614,12 +659,12 @@ domain("auth.unamur.be") {
         visibility: hidden;
         position: relative;
     }
-    .block-region .block .minicalendar .calendar-controls .arrow_link.previous .arrow:before {
+    .block-region .block .minicalendar .calendar-controls .arrow_link.previous .arrow::before {
         visibility: visible;
         position: absolute;
         content: "";
         font-family: "FontAwesome";
-        font-size: 12;
+        font-size: 12px;
         color: inherit;
     }
 
@@ -668,14 +713,60 @@ domain("auth.unamur.be") {
     .path-calendar .maincalendar .event .card-header {
     background-color: #262626;
     }
+    
+    .calendar_event_course, .calendar_event_site, .calendar_event_category, .calendar_event_group, .calendar_event_user, .calendar_event_other{
+        border-radius: 10px;
+    }
+    
+    .path-calendar .maincalendar .calendar-controls .current {
+        border-top: unset;
+    }
 
-    /* back to top arrow */
+    /* "Back to top" arrow */
     #back-to-top a.arrow {
         color: #ccc;
         background: #171717;
     }
-
-    /* block */
+    
+    /* Preferences */
+    .preferences-container .preference-table tr th:nth-child(2n), .preferences-container .preference-table tr td:nth-child(2n) {
+        background-color: unset;
+    }
+    
+    .preferences-container .preference-table .preference-row .preference-state input[type="checkbox"]:checked + .preference-state-status-container .on-text {
+        visibility: hidden;
+    }
+    .preferences-container .preference-table .preference-row .preference-state input[type="checkbox"]:checked + .preference-state-status-container .on-text::after {
+        content: "On";
+        visibility: visible;
+        position: absolute;
+        left: 5px;
+    }
+    .preferences-container .preference-table .preference-row .preference-state .preference-state-status-container .off-text {
+        visibility: hidden;
+    }
+    .preferences-container .preference-table .preference-row .preference-state .preference-state-status-container .off-text::after {
+        content: "Off";
+        visibility: visible;
+        position: absolute;
+        left: 4px
+    }
+    
+    /* Profile */
+    #message-user-button {
+        color: white;
+        margin-left: calc(-1*(24px / 2));
+    }
+    
+    #message-user-button>span>i {
+        margin-right: .2rem;
+    }
+    
+    .page-context-header .header-button-group {
+        float: unset;
+    }
+    
+    /* Blocks */
     #blocks-column {
         height: calc(100vh - 60px)
     }
@@ -695,7 +786,7 @@ domain("auth.unamur.be") {
     .block-region .block .card-body .card-title {
         color: #67f917;
     }
-    .block-region .block .card-body .card-title:before {
+    .block-region .block .card-body .card-title::before {
         color: #a6a5a5;
     }
     .block-region .block .card-body {
@@ -716,14 +807,18 @@ domain("auth.unamur.be") {
     .block_timeline .list-group-item-action {
         color: #d4d3d3;
     }
+    
+    #region-main>[role="main"]>.list-group>a { /* Space between list items in the "Add Block" page */
+        margin-bottom: .2rem;  
+    }
 
-    /* block with personal files */
+    /* Block with personal files */
     .ygtvfocus {
         background-color: #282727;
     }
 
 
-    /* notifications */
+    /* Notifications */
     .navbar .popover-region-container {
         top: 2.5rem;
         box-shadow: 1px 1px #353434;
@@ -779,43 +874,105 @@ domain("auth.unamur.be") {
         color: #22c4c6;
     }
 
-    /* icons */
-    #blocks-column-toggle:before,
-    .fa-plus:before {
+    /* Icons */
+    #blocks-column-toggle::before,
+    .fa-plus::before {
         color: #dbd9d9
     }
-    *:before {
+    
+    *::before {
         color: #a5a4a4
     }
 
+    /* Buttons */
+    .btn {
+        border-radius: 10px;
+    }
 
-
-    /* Button on dashboard */
+    .btn-outline-secondary,
+    .page-link, .page-item.disabled .page-link {
+        border: 1px solid #666;
+    }
+    
+    .navbar-receptic .navbar-nav .nav-link:hover, .navbar-receptic .navbar-nav .nav-link:focus {
+        color: unset;
+    }
+    
+    .navbar-expand .navbar-nav .nav-link {
+        padding-left: unset;
+    }
+    
+    .aabtn.focus, .btn-link.focus, .nav-link.focus, .atto_link_button.focus, [role="button"].focus, .list-group-item-action.focus, input[type="checkbox"].focus, input[type="radio"].focus, input[type="file"].focus, input[type="image"].focus, .sr-only-focusable.focus, a.dropdown-toggle.focus, .modal-dialog[tabindex="0"].focus, .moodle-dialogue-base .closebutton.focus, button.close.focus, .form-autocomplete-selection.focus, .aabtn:focus, .btn-link:focus, .nav-link:not(.active):focus, .atto_link_button:focus, [role="button"]:focus, .list-group-item-action:focus, input[type="checkbox"]:focus, input[type="radio"]:focus, input[type="file"]:focus, input[type="image"]:focus, .sr-only-focusable:focus, a.dropdown-toggle:focus, .modal-dialog[tabindex="0"]:focus, .moodle-dialogue-base .closebutton:focus, button.close:focus, .form-autocomplete-selection:focus, .page-link:focus, .page-item.disabled .page-link:focus {
+        box-shadow: 0 0 0 .15rem #4a4a4a;
+        transition: box-shadow .15s ease;
+    }
+    
+    .btn-primary:focus, .btn-primary.focus {
+        box-shadow: unset;
+        outline: unset;
+    }
+    
+    .nav-link.active:focus {
+        box-shadow: 0 0 0 .15rem #127474;
+        transition: box-shadow .15s ease;
+    }
+    
+    [id^="message-drawer-view-overview-container"]>div>[id$="-toggle"]>button:focus {
+        box-shadow: unset;
+    }
+    
+    .block .block-cards .btn.btn-link.btn-icon:hover, .block .block-cards .btn.btn-link.btn-icon:focus {
+        background-color: #606060;
+    }
+    
+    .aalink.focus, #page-footer a:not([class]).focus, .arrow_link.focus, a:not([class]).focus, .activityinstance > a.focus, .aalink:focus, #page-footer a:not([class]):focus, .arrow_link:focus, a:not([class]):focus, .activityinstance > a:focus {
+        color: #c0c0c0;
+        background-color: #4a4a4a;
+        box-shadow: 0 -.1rem 0 0 #4a4a4a,
+                    0 .1rem 0 0 #4a4a4a;
+        transition: unset;
+    }
+    
+    .btn-secondary:focus, .btn-secondary.focus,
+    .btn-outline-secondary:focus, .btn-outline-secondary.focus {
+        outline: .1rem solid #4a4a4a;
+    }
+    
     .btn-primary:hover,
     .btn-primary:focus {
         background-color: #186f70;
     }
 
-    .btn-outline-secondary:hover,
-    .btn-outline-secondary:focus {
+    .btn-outline-secondary:hover, .btn-outline-secondary:focus,
+    .page-link:hover, .page-link:focus {
         background-color: #484848;
     }
+    
     .show > .btn-outline-secondary.dropdown-toggle {
         background-color: #424040;
         color: #cac7c7;
         box-shadow: unset;
     }
-
-    /* buttons */
-    .btn {
-        border-radius: 10px;
+    
+    .page-link, .page-item.disabled .page-link {
+        background-color: transparent;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     }
-
-    .btn-outline-secondary {
-        border: 1px solid #666;
+    .page-link:active, .page-link:hover {
+        color: #fff;
+        background-color: #868e96;
+        border-color: #868e96;
     }
-
-    /* dropdown menus */
+    
+    .togglecompletion > div > .btn {
+        margin-right: .5rem;
+    }
+    
+    .togglecompletion > div > .btn > img.icon[src*="completion"] {
+        margin-right: unset;
+    }
+    
+    /* Dropdown Menus */
     .dropdown-menu .dropdown-item:focus {
         background-color: #313130;
         color: #bfbfbf;
@@ -860,7 +1017,7 @@ domain("auth.unamur.be") {
         background-color: #201f1f;
     }
 
-    /* modal */
+    /* Modal */
     .modal-content {
         border-radius: 15px;
     }
@@ -872,9 +1029,9 @@ domain("auth.unamur.be") {
     .modal-footer {
         border-top: 1px solid #4a4848;
     }
-
-    .modal-title {
-        color: #f2ebeb;
+    
+    [class^="modal-header calendar_event"]>.modal-title { /* Fix event title in calendar */
+        color: black;
     }
 
     .modal-body .list-group-item:hover {
@@ -890,8 +1047,8 @@ domain("auth.unamur.be") {
 
 
     /* ================= */
-    /* courses overview */
-    /* course list */
+    /* Courses overview */
+    /* Course list */
     .text-muted,
     .resourcelinkdetails {
         color: #b3b3af !important;
@@ -921,6 +1078,10 @@ domain("auth.unamur.be") {
     
     .course-content ul.collapsibletopics li.section.current, .course-content ul.collapsibleweeks li.section.current {
         background-color: unset;
+    }
+    
+    [data-region="myoverview"]>[data-region="filter"] {
+        margin-bottom: .5rem;
     }
 
     /* Progress block */
@@ -986,195 +1147,176 @@ domain("auth.unamur.be") {
         white-space: normal;
     }
 
-    /* new icons (beta) */
-    .ygtvcell .icon {
-        height: 16px;
-        vertical-align: middle;
-        width: 16px;
-        filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
-    }
-
-    img.icon.smallicon,
-    .content-item-container .notification-image img,
-    .notification-area .image-container img {
-        height: 20px;
-        width: 20px;
-        filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
-    }
-
-    img.activityicon,
-    #page-mod-folder-view .fp-icon .icon,
-    .block_completion_progress .progressEventInfo img {
-        height: 24px;
-        width: 24px;
-        filter: invert(100%) sepia(18%) saturate(293%) hue-rotate(293deg) brightness(112%) contrast(86%);
+    /* New icons (beta) */
+    img, .icon {
+        filter: unset !important;
     }
 
     /* URL */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/url/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/link-12-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/link-12-regular.svg?color=white&width=24');
     }
 
     /* Forum / Annonce */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/mod_forum/"][src$="/icon"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/forum/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/chat-multiple-16-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/chat-multiple-16-regular.svg?color=white&width=24');
     }
 
     /* Workshop / Peer review */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/workshop/"][src$="/icon"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/feedback/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/person-feedback-24-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/person-feedback-24-regular.svg?color=white&width=24');
     }
 
     /* Quiz */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/quiz/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/quiz-new-24-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/quiz-new-24-regular.svg?color=white&width=24');
     }
 
     /* PDF */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/pdf"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/pdf-24"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/amanote/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/document-pdf-16-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/document-pdf-16-regular.svg?color=white&width=24');
     }
 
     /* Vidéo */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/ubicast/"][src$="/icon"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/mpeg-24"] {
-        content: url('https://api.iconify.design/fluent/video-clip-16-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/video-clip-16-regular.svg?color=white&width=24');
     }
 
     /* Zip */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/archive-24"] {
-        content: url('https://api.iconify.design/fluent/folder-zip-16-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/folder-zip-16-regular.svg?color=white&width=24');
     }
 
     /* Link to webcampus */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/page/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/note-16-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/note-16-regular.svg?color=white&width=24');
     }
 
     /* Source code */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/sourcecode-24"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/markup-24"] {
-        content: url('https://api.iconify.design/fluent/document-chevron-double-24-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/document-chevron-double-24-regular.svg?color=white&width=24');
     }
     
     /* Tiff */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/tiff"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/tiff-24"] {
-        content: url('https://api.iconify.design/fluent/image-16-filled.svg?width=24');
+        content: url('https://api.iconify.design/fluent/image-16-filled.svg?color=white&width=24');
     }
     
 
     /* Png */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/png"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/png-24"] {
-        content: url('https://api.iconify.design/fluent/image-24-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/image-24-regular.svg?color=white&width=24');
     }
     /* Jpg */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/jpeg-24"] {
-        content: url('https://api.iconify.design/fluent/image-24-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/image-24-regular.svg?color=white&width=24');
     }
 
     /* Word */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/document-24"] {
-        content: url('https://api.iconify.design/fluent/document-text-24-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/document-text-24-regular.svg?color=white&width=24');
     }
 
     /* Powerpoint & ODP */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/powerpoint-24"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/impress-24"] {
-        content: url('https://api.iconify.design/fluent/data-pie-20-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/data-pie-20-regular.svg?color=white&width=24');
     }
 
     /* Excel */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/spreadsheet-24"] {
-        content: url('https://api.iconify.design/fluent/document-table-24-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/document-table-24-regular.svg?color=white&width=24');
     }
     
     /* Wiki */ 
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/wiki/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/globe-16-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/globe-16-regular.svg?color=white&width=24');
     }
 
     /* Devoir (upload) */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/assign/"][src$="/icon"],
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/mod_assign/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/arrow-upload-16-filled.svg?width=24');
+        content: url('https://api.iconify.design/fluent/arrow-upload-16-filled.svg?color=white&width=24');
     }
 
     /* Folder */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/folder/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/folder-16-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/folder-16-regular.svg?color=white&width=24');
     }
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/folder-24"] {
-        content: url('https://api.iconify.design/fluent/folder-open-16-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/folder-open-16-regular.svg?color=white&width=24');
     }
 
     /* Scheduler */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/scheduler/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/calendar-clock-16-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/calendar-clock-16-regular.svg?color=white&width=24');
     }
 
     /* Question (choice) */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/choice/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/chat-help-24-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/chat-help-24-regular.svg?color=white&width=24');
     }
 
     /* Glossary */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/glossary/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/text-sort-ascending-16-filled.svg?width=24');
+        content: url('https://api.iconify.design/fluent/text-sort-ascending-16-filled.svg?color=white&width=24');
     }
 
     /* Certificate */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/customcert/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/certificate-24-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/certificate-24-regular.svg?color=white&width=24');
     }
 
     /* Wooclap */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/wooclap/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/form-new-24-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/form-new-24-regular.svg?color=white&width=24');
     }
 
     /* Choose a group */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/choicegroup/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/people-swap-16-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/people-swap-16-regular.svg?color=white&width=24');
     }
 
     /* Generic text file */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/text-24"] {
-        content: url('https://api.iconify.design/fluent/document-text-24-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/document-text-24-regular.svg?color=white&width=24');
     }
 
     /* Chat */
     img.activityicon[src^="https://webcampus.unamur.be/theme/image.php/receptic/chat/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/chat-12-regular.svg?width=24');
+        content: url('https://api.iconify.design/fluent/chat-12-regular.svg?color=white&width=24');
     }
 
     /* Amanote thingy at the right */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/folder"] {
-        content: url('https://api.iconify.design/ic:round-folder.svg?height=16');
+        content: url('https://api.iconify.design/ic:round-folder.svg?color=white&height=16');
         filter: invert(100%);
     }
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/f/archive"] {
-        content: url('https://api.iconify.design/eva:file-fill.svg?height=16');
+        content: url('https://api.iconify.design/eva:file-fill.svg?color=white&height=16');
         filter: invert(100%);
     }
 
-    /* text info block */
+    /* Text info block */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/label/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/text-align-left-20-filled.svg?width=24');
+        content: url('https://api.iconify.design/fluent/text-align-left-20-filled.svg?color=white&width=24');
     }
     
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/book/"][src$="/icon"] {
-        content: url('https://api.iconify.design/fluent/book-24-regular.svg?width=24');    
+        content: url('https://api.iconify.design/fluent/book-24-regular.svg?color=white&width=24');    
     }
 
     /* Not terminated */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/block_completion_progress/"][src$="/cross"] {
-        content: url('https://api.iconify.design/emojione-monotone:cross-mark.svg?height=12');
+        content: url('https://api.iconify.design/emojione-monotone:cross-mark.svg?color=white&height=12');
         height: 12px !important;
         width: 12px !important;
         vertical-align: -0.125em;
@@ -1183,119 +1325,126 @@ domain("auth.unamur.be") {
 
     /* Done */
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/block_completion_progress/"][src$="/tick"] {
-        content: url('https://api.iconify.design/fa-solid:check.svg?height=12');
+        content: url('https://api.iconify.design/fa-solid:check.svg?color=white&height=12');
         vertical-align: -0.125em;
         height: 12px !important;
         width: 12px !important;
         filter: invert(85%) sepia(24%) saturate(888%) hue-rotate(64deg) brightness(88%) contrast(85%) !important;
     }
     
-    .fa-bell:before {
+    .fa-bell::before {
         content: url('https://api.iconify.design/fluent/alert-16-regular.svg?color=white&width=24');
-        margin-left: -0.2rem;
+        margin-left: .03rem;
     }
     
-    .fa-comment:before {
+    .fa-comment::before {
         content: url('https://api.iconify.design/fluent/comment-12-regular.svg?color=white&width=24');
-        margin-left: -0.2rem;
+        margin-left: .05rem;
     }
     
-    .fa-check:before {
+    .fa-check::before {
         content: url('https://api.iconify.design/fluent/checkmark-12-filled.svg?color=white&width=20');
     }
     
-    .fa-gear:before, .fa-cog:before {
+    .fa-gear::before, .fa-cog::before {
         content: url('https://api.iconify.design/fluent/settings-16-regular.svg?color=white&width=20');
     }
     
-    .fa-user:before {
+    .fa-user::before {
         content: url('https://api.iconify.design/fluent/person-16-regular.svg?color=white&width=20');
     }
     
-    .fa-chevron-right:before {
+    .fa-chevron-right::before {
         content: url('https://api.iconify.design/fluent/chevron-right-16-filled.svg?color=white&width=20');
     }
     
-    .fa-chevron-left:before {
+    .fa-chevron-left::before {
         content: url('https://api.iconify.design/fluent/chevron-left-16-filled.svg?color=white&width=20');
     }
     
-    .fa-dashboard:before, .fa-tachometer:before {
+    .fa-dashboard::before, .fa-tachometer::before {
         content: url('https://api.iconify.design/fluent/board-16-regular.svg?color=white&width=24');
     }
     
-    .fa-info-circle:before {
+    .fa-info-circle::before {
         content: url('https://api.iconify.design/fluent/calendar-info-16-regular.svg?color=white&width=24');
     }
     
-    .fa-calendar:before {
+    .fa-calendar::before {
         content: url('https://api.iconify.design/fluent/calendar-ltr-16-regular.svg?color=white&width=24');
     }
     
-    .fa-list:before {
+    .fa-list::before {
         content: url('https://api.iconify.design/fluent/text-bullet-list-tree-16-filled.svg?color=white&width=24');
     }
     
-    .fa-thumbs-up:before {
+    .fp-vb-details > .fa-list::before {
+        content: url('https://api.iconify.design/fluent/text-bullet-list-tree-16-filled.svg?color=white&width=20');
+    }
+    
+    .fa-thumbs-up::before {
         content: url('https://api.iconify.design/fluent/person-feedback-24-regular.svg?color=white&width=24');   
     }
     
-    .fa-filter:before {
+    .fa-filter::before {
         content: url('https://api.iconify.design/fluent/filter-16-filled.svg?color=white&width=20');
     }
     
-    .fa-sort-amount-asc:before {
+    .fa-sort-amount-asc::before {
         content: url('https://api.iconify.design/fluent/arrow-sort-down-lines-16-filled.svg?color=white&width=20');
     }
     
-    .block-region .block.block_myoverview h5:before {
+    .block-region .block.block_myoverview h5::before {
         content: url('https://api.iconify.design/fluent/board-16-regular.svg?color=white&width=24');
     }
 
-    .fa-star:before {
+    .fa-star::before {
         content: url('https://api.iconify.design/fluent/star-12-filled.svg?color=white&width=18');
     }
     
-    .fa-ban:before {
+    .fa-ban::before {
         content: url('https://api.iconify.design/fluent/star-off-12-regular.svg?color=white&width=18');
     }
 
-    .fa-sign-out:before {
+    .fa-sign-out::before {
         content: url('https://api.iconify.design/fluent/sign-out-24-regular.svg?color=white&width=18');
     }
     
-    .block-region .block.block_recentlyaccessedcourses h5:before {
+    .block-region .block.block_recentlyaccessedcourses h5::before {
         content: url('https://api.iconify.design/fluent/app-recent-24-regular.svg?color=white&width=24');
     }
     
-    .block-region .block.block_news_items h5:before {
+    .block-region .block.block_news_items h5::before {
         content: url('https://api.iconify.design/fluent/news-16-regular.svg?color=white&width=24');
     }
     
-    .block-region .block.block_timeline h5:before {
+    .block-region .block.block_timeline h5::before {
         content: url('https://api.iconify.design/fluent/calendar-clock-16-regular.svg?color=white&width=24');
     }
     
-    .fa-clock-o:before {
+    .fa-clock-o::before {
         content: url('https://api.iconify.design/fluent/clock-12-regular.svg?color=white&width=20');
     }
     
-    .fa-mortar-board:before, .fa-graduation-cap:before {
-        content: url('https://api.iconify.design/fluent/book-open-16-filled.svg?color=white&width=24');
+    .fa-mortar-board::before, .fa-graduation-cap::before {
+        content: url('https://api.iconify.design/fluent/book-open-16-regular.svg?color=white&width=24');
     }
 
-    .fa-user-plus:before {
+    .fa-user-plus::before {
         content: url('https://api.iconify.design/fluent/person-add-24-regular.svg?color=white&width=18');
     }
     
-    body.drawer-open-right #blocks-column-toggle:before {
+    body.drawer-open-right #blocks-column-toggle::before {
         content: url('https://api.iconify.design/fluent/chevron-right-12-regular.svg?color=white&width=24');
-        margin-left: -0.4rem;
     }
     
-    #blocks-column-toggle:before {
+    #blocks-column-toggle::before {
         content: url('https://api.iconify.design/fluent/chevron-left-12-regular.svg?color=white&width=24');
-        margin-left: -0.4rem;
+        height: 24px;
+        width: 24px;
+        position: absolute;
+        left: .25rem;
+        top: .5rem;
     }
     
     .jsenabled .list-group-item.localboostnavigationcollapsibleparent.localboostnavigationcollapsedparent>div::after {
@@ -1308,44 +1457,57 @@ domain("auth.unamur.be") {
     
     .dropdown-toggle::after {
         content: url('https://api.iconify.design/fluent/caret-down-20-regular.svg?color=white&width=18');
-        border-top: 0em;
+        border-top: none;
+        border-right: none;
+        margin-left: unset;
+        vertical-align: middle;
     }
     
-    .fa-ellipsis-h:before {
+    #action-menu-toggle-1::after {
+        margin-right: .3rem;
+    }
+    
+    .fa-ellipsis-h::before {
         content: url('https://api.iconify.design/fluent/more-horizontal-16-regular.svg?color=white&width=20');
     }
     
-    .fa-table:before {
+    .fa-table::before {
         content: url('https://api.iconify.design/fluent/table-32-regular.svg?color=white&width=20');
     }
     
-    .fa-wrench:before {
+    .fa-wrench::before {
         content: url('https://api.iconify.design/fluent/settings-16-regular.svg?color=white&width=20');
     }
     
-    .fa-user-circle:before {
+    .fa-user-circle::before {
         content: url('https://api.iconify.design/fluent/person-circle-12-regular.svg?color=white&width=20');
     }
     
-    .fa-lock:before {
+    .fa-lock::before {
         content: url('https://api.iconify.design/fluent/lock-closed-16-regular.svg?color=white&width=20');
     }
     
-    .help-icon:before{
+    .help-icon::before{
         content: url('https://api.iconify.design/fluent/chat-help-24-regular.svg?color=%231a9e9f&width=20');
+        padding-left: unset;
+        
+    }
+    .help-icon {
+        margin-left: .5rem;
+        height: 25px !important;
+        width: 25px !important;
     }
     
-    .fa-envelope:before {
+    .fa-envelope::before {
         content: url('https://api.iconify.design/fluent/mail-16-regular.svg?color=white&width=20');
     }
     
-    .fa-phone:before {
+    .fa-phone::before {
         content: url('https://api.iconify.design/fluent/call-16-regular.svg?color=white&width=20');
     }
 
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/i/marker"] {
-        content: url('https://api.iconify.design/fluent/calendar-info-16-regular.svg?width=20');
-        color: white;
+        content: url('https://api.iconify.design/fluent/calendar-info-16-regular.svg?color=white&width=20');
     }
     
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/block_timeline/"][src$="/activities"] {
@@ -1356,15 +1518,15 @@ domain("auth.unamur.be") {
         content: url('https://api.iconify.design/fluent/beach-48-regular.svg?color=%23b3b3af');
     }
     
-    .dropdown-item[aria-current="true"]:before{
+    .dropdown-item[aria-current="true"]::before{
         content: url('https://api.iconify.design/fluent/circle-12-regular.svg?color=white&width=13');
     }
     
-    .course_category_tree .courses .coursebox>.info>.coursename a:before, #page-course-search .courses .coursebox>.info>.coursename a:before {
+    .course_category_tree .courses .coursebox>.info>.coursename a::before, #page-course-search .courses .coursebox>.info>.coursename a::before {
         content: url('https://api.iconify.design/fluent/book-open-16-filled.svg?color=white&width=15');
     }
     
-    .course_category_tree .courses .coursebox .moreinfo .fa-info:before, #page-course-search .courses .coursebox .moreinfo .fa-info:before {
+    .course_category_tree .courses .coursebox .moreinfo .fa-info::before, #page-course-search .courses .coursebox .moreinfo .fa-info::before {
         content: url('https://api.iconify.design/fluent/info-12-regular.svg?color=white&width=15');
     }
     
@@ -1388,52 +1550,60 @@ domain("auth.unamur.be") {
         background-image: url('https://api.iconify.design/fluent/caret-down-20-regular.svg?color=white&width=20');
     }
     
-    .fa-group:before, .fa-users:before {
+    .fa-group::before, .fa-users::before {
         content: url('https://api.iconify.design/fluent/people-community-16-regular.svg?color=white&width=24');
     }
     
-    /* bouger l'icone */
-    .icon{
-        margin-right: 0.7rem;
-        margin-top: -0.1rem;
+    /* Centrage des icônes SVG */
+    .icon:not(img), .fa, .icon-size-3 .icon{
+        width: auto !important;
+        height: auto !important;
+        vertical-align: middle !important;
     }
     
-    /* bouger le cadre icone texte mais pas complètement enfin c'est chelou */
-    #nav-drawer .list-group div.list-group-item.active .icon, #nav-drawer .list-group ul li a.list-group-item.active .icon, #nav-drawer .list-group div.list-group-item.active:hover .icon, #nav-drawer .list-group ul li a.list-group-item.active:hover .icon{
-        margin-left: -0.2rem;
+    [id^="message-drawer-view-overview-container"]>div>[id$="-toggle"]>button>[class$="icon-container"]>.icon {
+        width: 16px !important;
+        height: 16px !important;
     }
+    
+    .nav-link[data-action="toggle-drawer"]>.icon {
+        vertical-align: unset !important;
+    }
+    
+    /* Center navbar icons */
     #nav-drawer .list-group div.list-group-item .icon, #nav-drawer .list-group ul li a.list-group-item .icon{
         margin-left: -0.2rem;
     }
     
-    /* bouger le machin bleu */
-    #nav-drawer .list-group ul li a.list-group-item.active{
-        padding-bottom: 0.4rem;
-    }
+    /* Reduce navbar buttons padding */
     #nav-drawer .list-group div.list-group-item, #nav-drawer .list-group ul li a.list-group-item{
-        padding-bottom: 0.4rem;
+        padding-bottom: 0.5rem;
     }
     
-    /* fixer et bouger les icones des blocks */
-    .block-region .block .card-body .card-title:before{
+    /* Fixer et bouger les icônes des blocks */
+    .block-region .block .card-body .card-title::before{
         margin-left: -1.7rem;
         position: absolute;
-
     }
     
-    .block-region .block.block_recent_activity h5:before{
+    /* Ajustement du centrage de l'étoile de la liste des cours */
+    .fa-star {
+        margin-top: -.1em;
+    }
+    
+    .block-region .block.block_recent_activity h5::before{
         content: url('https://api.iconify.design/fluent/shifts-activity-20-filled.svg?color=white&width=24');
     }
     
-    .block-region .block.block_calendar_month h5:before, .block-region .block.block_calendar_upcoming h5:before{
-            content: url(https://api.iconify.design/fluent/calendar-ltr-16-regular.svg?color=white&width=24);
+    .block-region .block.block_calendar_month h5::before, .block-region .block.block_calendar_upcoming h5::before{
+        content: url(https://api.iconify.design/fluent/calendar-ltr-16-regular.svg?color=white&width=24);
     }
     
-    .fa-globe:before{
+    .fa-globe::before{
         content: url('https://api.iconify.design/fluent/globe-16-regular.svg?color=white&width=24');
     }
     
-    .fa-cubes:before{
+    .fa-cubes::before{
         content: url('https://api.iconify.design/fluent/select-all-off-24-regular.svg?color=white&width=24');
     }
     
@@ -1450,89 +1620,129 @@ domain("auth.unamur.be") {
     }
     
     .course-content .collapsible-actions a.collapseall{
-        background: url('https://api.iconify.design/fluent/caret-down-20-regular.svg?color=white&width=18') left no-repeat
+        background: url('https://api.iconify.design/fluent/caret-down-20-regular.svg?color=white&width=18') left no-repeat;
     }
     
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/i/completion-manual-n"] {
-        content: url('https://api.iconify.design/fluent/checkbox-unchecked-24-filled.svg?color=%23868e96');
+        content: url('https://api.iconify.design/fluent/checkbox-unchecked-24-filled.svg?height=16&color=%23868e96');
     }
     
     img[src^="https://webcampus.unamur.be/theme/image.php/receptic/core/"][src$="/i/completion-manual-y"] {
-        content: url('https://api.iconify.design/fluent/checkbox-checked-24-filled.svg?color=%23868e96');
+        content: url('https://api.iconify.design/fluent/checkbox-checked-24-filled.svg?height=16&color=%23868e96');
     }
     
-    .hot .activityinstance:before, .warm .activityinstance:before{
+    .hot .activityinstance::before, .warm .activityinstance::before{
         content: url('https://api.iconify.design/fluent/new-16-filled.svg?color=crimson');
     }
     
-    .fa-map-pin:before {
+    .fa-map-pin::before {
         content: url('https://api.iconify.design/fluent/pin-12-filled.svg?color=white&width=18');
     }
     
-    .fa-star-o:before{
+    .fa-star-o::before{
         content: url('https://api.iconify.design/fluent/star-12-regular.svg?color=white&width=18');
     }
     
-    .fa-ellipsis-v:before{
+    .fa-ellipsis-v::before{
         content: url('https://api.iconify.design/fluent/more-vertical-16-filled.svg?color=white&width=18');
     }
     
-    .alert-danger:before{
+    .alert-danger::before{ /* To check next time an alert is shown */
         content: url('https://api.iconify.design/fluent/error-circle-12-regular.svg?color=%23ff9191&width=18');
         margin-right: 0.2rem;
     }
     
-    #nav-drawer .list-group div.list-group-item .fa-folder-o:before, #nav-drawer .list-group ul li a.list-group-item .fa-folder-o:before {
+    #nav-drawer .list-group div.list-group-item .fa-folder-o::before, #nav-drawer .list-group ul li a.list-group-item .fa-folder-o::before {
         content: url('https://api.iconify.design/fluent/folder-16-regular.svg?color=white&width=24');
     }
     
-    .fa-align-left:before{
+    .fa-align-left::before{
         content: url('https://api.iconify.design/fluent/list-16-regular.svg?color=white&width=24');
     }
     
-    .fa-map-marker:before{
+    .fa-map-marker::before{
         content: url('https://api.iconify.design/fluent/location-28-regular.svg?color=white&width=24');
     }
     
-    .fa-feed:before, .fa-rss:before{
+    .fa-feed::before, .fa-rss::before{
         content: url('https://api.iconify.design/fluent/rss-24-regular.svg?color=white&width=24');
     }
     
-    .calendar_event_site, .calendar_event_category, .calendar_event_group, .calendar_event_user, .calendar_event_other{
-        border-radius: 10px;
-    }
-    
-    .fa-eye:before, .fa-eye-slash:before{
+    .fa-eye::before, .fa-eye-slash::before{
         color: transparent;
     }
     
-    .fa-mortar-board:before, .fa-graduation-cap:before{
-        margin-right: 0.7rem;
-    }
-    
-    .fa-long-arrow-down:before{
+    .fa-long-arrow-down::before{
         content: url('https://api.iconify.design/fluent/arrow-sort-down-16-filled.svg?color=white&width=18');
     }
     
-    .fa-warning:before, .fa-exclamation-triangle:before{
+    .fa-warning::before, .fa-exclamation-triangle::before{
         content: url('https://api.iconify.design/fluent/chat-warning-16-regular.svg?color=%23da4f4f&width=24');
     }
     
-    div.availabilityinfo:before{
+    .fa-file-o::before {
+        content: url('https://api.iconify.design/fluent/document-add-20-regular.svg?color=white&width=20');
+    }
+    
+    .fa-folder::before {
+        content: url('https://api.iconify.design/fluent/folder-20-regular.svg?color=white&width=20');
+    }
+    
+    .fa-folder-o::before {
+        content: url('https://api.iconify.design/fluent/folder-add-20-regular.svg?color=white&width=20');
+    }
+    
+    .fa-th::before {
+        content: url('https://api.iconify.design/fluent/grid-20-regular.svg?color=white&width=20');
+    }
+    
+    .fa-download::before {
+        content: url('https://api.iconify.design/fluent/arrow-download-20-filled.svg?color=white&width=20');
+    }
+    
+    .fa-trash::before {
+        content: url('https://api.iconify.design/fluent/delete-20-filled.svg?color=white&width=20');
+    }
+    
+    .fp-img-downloading > .fa-circle-o-notch {
+        height: 20px !important;
+        width: 20px !important;
+    }
+    .fa-circle-o-notch::before {
+        content: url('https://api.iconify.design/fluent/spinner-ios-20-filled.svg?color=white&width=20');
+    }
+    
+    .fp-pathbar > .fp-path-folder {
+        background: url('https://api.iconify.design/fluent/folder-16-filled.svg?color=white&width=16') left 3px no-repeat;
+    }
+    
+    .dndupload-arrow {
+        background: url('https://api.iconify.design/fluent/arrow-upload-24-filled.svg?width=60&color=white') center no-repeat;
+    }
+    
+    div.availabilityinfo::before{
         content: url('https://api.iconify.design/fluent/clock-12-regular.svg?color=%23da4f4f&width=24');
     }
     
-    .block-region .block .minicalendar .calendar-controls .arrow_link.previous .arrow:before{
+    .block-region .block .minicalendar .calendar-controls .arrow_link.previous .arrow::before{
         content: url('https://api.iconify.design/fluent/chevron-left-16-filled.svg?color=%231cc9ca&width=20');
     }
     
-    .block-region .block .minicalendar .calendar-controls .arrow_link.next .arrow:before{
+    .block-region .block .minicalendar .calendar-controls .arrow_link.next .arrow::before{
         content: url('https://api.iconify.design/fluent/chevron-right-16-filled.svg?color=%231cc9ca&width=20');
     }
     
     span.eventname{
         margin-left: 0.4rem;
     }
+    
+    button.close span, .moodle-dialogue-base button.closebutton span{
+        color: black !important;
+    }
+    
+    a.dimmed, a.dimmed:link, a.dimmed:visited, a.dimmed_text, a.dimmed_text:link, a.dimmed_text:visited, .dimmed_text, .dimmed_text a, .dimmed_text a:link, .dimmed_text a:visited, .usersuspended, .usersuspended a, .usersuspended a:link, .usersuspended a:visited, .dimmed_category, .dimmed_category a{
+        color: white;
+    }   
     
     /* ================== */
     
@@ -1557,13 +1767,9 @@ domain("auth.unamur.be") {
         flex: 0 0 60%;
     }
 
-
-    
-    
-
     /* ================= */
-    /* home */
-    /* popover when mouse hover calendar */
+    /* Home */
+    /* Popover when mouse hover calendar */
     .bs-popover-top .arrow::after {
         border-top-color: #333;
     }
@@ -1576,20 +1782,20 @@ domain("auth.unamur.be") {
 
     /* ================== */
     /* /user/profile.php */
-    /* user profile frames */
+    /* User profile frames */
     #page-enrol-users #filterform,
     .que .history,
     .userprofile .profile_tree section,
     .groupinfobox,
     .well,
     .path-calendar .maincalendar .calendar-event-panel {
-        background-color: #393737;
-        border-color: #444343;
+        background-color: #262626;
+        border-color: #303030;
     }
 
     /* ================== */
-    /* homework submission page */
-    /* "remis pour evaluation" color */
+    /* Homework submission page */
+    /* "Remis pour évaluation" color */
     .path-mod-assign td.submissionstatussubmitted,
     .path-mod-assign div.submissionstatussubmitted,
     .path-mod-assign a:link.submissionstatussubmitted {
@@ -1597,7 +1803,7 @@ domain("auth.unamur.be") {
         color: #e8e5e5;
     }
 
-    /* alternate fields */
+    /* Alternate fields */
     .path-mod-assign td.submissionnotgraded,
     .path-mod-assign div.submissionnotgraded,
     .path-mod-assign td.earlysubmission,
@@ -1607,7 +1813,7 @@ domain("auth.unamur.be") {
     }
 
     /** ==================== */
-    /* warning */
+    /* Warning */
     .flashbox {
         background: #222;
             border-radius: 15px;
@@ -1622,8 +1828,8 @@ domain("auth.unamur.be") {
     }
 
     /* ================== */
-    /* messaging app */
-    /* received message bubble */
+    /* Messaging app */
+    /* Received message bubble */
     .message-app.drawer {
         height: calc(100vh - 60px);
     }
@@ -1659,7 +1865,7 @@ domain("auth.unamur.be") {
         border-radius: 15px;
     }
 
-    /* sent message bubble */
+    /* Sent message bubble */
     .message-app.drawer .message.send .tail {
 
         border-bottom-color: #3b3a3a;
@@ -1669,7 +1875,7 @@ domain("auth.unamur.be") {
     }
 
 
-    /* background color */
+    /* Background color */
     .bg-light {
         background-color: #191919 !important;
     }
@@ -1683,7 +1889,7 @@ domain("auth.unamur.be") {
         background-color: inherit !important;
     }
 
-    /* nav drawer */
+    /* Nav drawer */
     div::-webkit-scrollbar-thumb,
     section::-webkit-scrollbar-thumb,
     div::-webkit-scrollbar-track,
@@ -1727,7 +1933,7 @@ domain("auth.unamur.be") {
         user-select: none;
         background-color: #212020;
         border-radius: 15px;
-        height: calc(100vh - 70px);
+        height: 100vh;
         box-shadow: 1px 1px #242323;
     }
     #nav-drawer .list-group div.list-group-item,
@@ -1740,7 +1946,6 @@ domain("auth.unamur.be") {
     #nav-drawer .list-group div.list-group-item:hover,
     #nav-drawer .list-group ul li a.list-group-item:hover {
         border: 1px solid transparent;
-        ;
         border-radius: 10px;
         background-color: #333030;
     }
@@ -1749,10 +1954,19 @@ domain("auth.unamur.be") {
         border-radius: 15px;
         color: #5fd0c6;
     }
-
+    
+    #nav-drawer .list-group ul li:not(:last-child) { 
+        margin-bottom: .2rem;  
+    }
+    
+    #nav-drawer>.list-group {
+        margin-top: .5rem;
+        margin-left: -.1rem;
+        margin-right: .1rem;
+    }
 
     /* =========== */
-    /* evaluations */
+    /* Evaluations */
     .nav-tabs .nav-link.active,
     .nav-tabs .nav-item.show .nav-link {
         background-color: #262525;
@@ -1764,7 +1978,7 @@ domain("auth.unamur.be") {
     }
 
     /* =========== */
-    /* quiz */
+    /* Quiz */
     #page-mod-quiz-attempt .que {
         box-shadow: unset;
     }
@@ -1828,12 +2042,12 @@ domain("auth.unamur.be") {
         border: none;
     }
 
-    .que .icon.fa-check.text-success:before {
+    .que .icon.fa-check.text-success::before {
         color: #69bf56;
         margin: 4px;
     }
 
-    .que .icon.fa-remove.text-danger:before {
+    .que .icon.fa-remove.text-danger::before {
         color: #ff5454;
         margin: 4px;
     }
@@ -1860,9 +2074,9 @@ domain("auth.unamur.be") {
         background-image: none;
     }
     .moodle-dialogue-base .closebutton::after,
-    .user-enroller-panel .uep-header .close:after,
-    .user-enroller-panel .uep-header .moodle-dialogue-base .closebutton:after,
-    .moodle-dialogue-base .user-enroller-panel .uep-header .closebutton:after {
+    .user-enroller-panel .uep-header .close::after,
+    .user-enroller-panel .uep-header .moodle-dialogue-base .closebutton::after,
+    .moodle-dialogue-base .user-enroller-panel .uep-header .closebutton::after {
         color: #47a4b9;
     }
     #page-mod-quiz-view table.quizattemptsummary tr.bestrow td {
@@ -1933,9 +2147,6 @@ domain("auth.unamur.be") {
         background-color: #222;
     }
 
-
-
-
     .fp-upload-form,
     .fp-iconview,
     .fp-filename-field,
@@ -1953,16 +2164,17 @@ domain("auth.unamur.be") {
     }
 
     .custom-select {
-        width: 100%;
-        background-color: #2a2a2a;
         background: #2a2a2a url("data:image/svg+xml;charset=utf8,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 4 5\'%3E%3Cpath fill=\'%23c7c4c4\' d=\'M2 0L0 2h4zm0 5L0 3h4z\'/%3E%3C/svg%3E") no-repeat right .75rem center;
         -webkit-background-size: 8px 10px;
         background-size: 8px 10px;
-        border-radius: 5px;
+        border-radius: 10px;
         color: #fff;
-        margin-top: 4px;
         margin-bottom: 4px;
-        margin-left: 10px !important;
+        margin-left: 10px !important; /* Still useful somewhere? */
+    }
+    
+    .custom-select.form-control { /* Align custom-select element on modify upload view */
+        margin-left: unset !important;
     }
 
     .custom-select option {
@@ -1983,22 +2195,51 @@ domain("auth.unamur.be") {
         background-color: transparent !important;
         opacity: 1;
     }
+    
+    .fp-upload-btn {
+        margin-bottom: 1rem;
+    }
+    
+    .file-picker {
+        padding-right: .25rem;
+    }
+    
+    .file-picker .fp-content {
+        max-height: unset;
+    }
+    
+    .fp-formset {
+        padding: .5rem 0;
+        margin: 0 1rem
+    }
 
     .close,
     .moodle-dialogue-base .closebutton {
         text-shadow: unset;
     }
-
-    /*     .fp-toolbar .btn-secondary, .fp-toolbar .btn-default, .fp-toolbar .atto_generico_buttons button, .fp-toolbar .atto_generico_buttons button, .fp-toolbar .wikisearch form input, .wikisearch form .fp-toolbar input, .fp-toolbar #page-mod-forum-view #id_advancedadddiscussion, #page-mod-forum-view .fp-toolbar #id_advancedadddiscussion, .fp-toolbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"], #page-mod-forum-discuss .fp-toolbar button[data-action="forum-advanced-reply"], .fp-viewbar .btn-secondary, .fp-viewbar .btn-default, .fp-viewbar .atto_generico_buttons button, .atto_generico_buttons .fp-viewbar button, .fp-viewbar .wikisearch form input, .wikisearch form .fp-viewbar input, .fp-viewbar #page-mod-forum-view #id_advancedadddiscussion, #page-mod-forum-view .fp-viewbar #id_advancedadddiscussion, .fp-viewbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"], #page-mod-forum-discuss .fp-viewbar button[data-action="forum-advanced-reply"] {
-    background-color: #4e4a4a;
-    border: 1px solid #1e1d1d;
     
+    .filemanager > .fp-navbar {
+        margin-top: .5rem
+    }
+    .filemanager > .filemanager-container {
+        margin: .1rem 0 .5rem
+    }
+    
+    .fp-pathbar .fp-path-folder-name {
+        margin-left: 1.25rem
+    }
+    
+    .fp-toolbar .btn-secondary, .fp-toolbar .btn-default, .fp-toolbar .atto_generico_buttons button, .fp-toolbar .atto_generico_buttons button, .fp-toolbar .wikisearch form input, .wikisearch form .fp-toolbar input, .fp-toolbar #page-mod-forum-view #id_advancedadddiscussion, #page-mod-forum-view .fp-toolbar #id_advancedadddiscussion, .fp-toolbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"], #page-mod-forum-discuss .fp-toolbar button[data-action="forum-advanced-reply"], .fp-viewbar .btn-secondary, .fp-viewbar .btn-default, .fp-viewbar .atto_generico_buttons button, .atto_generico_buttons .fp-viewbar button, .fp-viewbar .wikisearch form input, .wikisearch form .fp-viewbar input, .fp-viewbar #page-mod-forum-view #id_advancedadddiscussion, #page-mod-forum-view .fp-viewbar #id_advancedadddiscussion, .fp-viewbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"], #page-mod-forum-discuss .fp-viewbar button[data-action="forum-advanced-reply"] {
+    background-color: #4a4a4a;
+    border: 1px solid #303030;
 }
     
-    .fptoolbar .btn-secondary ::before,  .fp-toolbar .btn-default ::before, .fp-toolbar .atto_generico_buttons button ::before, .fp-toolbar .atto_generico_buttons button ::before, .fp-toolbar .wikisearch form input ::before, .wikisearch form .fp-toolbar input ::before,  .fp-toolbar #page-mod-forum-view #id_advancedadddiscussion ::before,#page-mod-forum-view .fp-toolbar #id_advancedadddiscussion::before, fp-toolbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"] ::before, #page-mod-forum-discuss .fp-toolbar button[data-action="forum-advanced-reply"] ::before, .fp-viewbar .btn-secondary ::before,.fp-viewbar .btn-default ::before,  .fp-viewbar .atto_generico_buttons button ::before, .fp-viewbar .wikisearch form input ::before, .wikisearch form .fp-viewbar input ::before, .fp-viewbar #page-mod-forum-view #id_advancedadddiscussion ::before, .fp-viewbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"] ::before, #page-mod-forum-discuss .fp-viewbar button[data-action="forum-advanced-reply"] ::before, i .icon .fa .fa-refresh .fa-fw ::before   {
+/*     .fptoolbar .btn-secondary ::before,  .fp-toolbar .btn-default ::before, .fp-toolbar .atto_generico_buttons button ::before, .fp-toolbar .atto_generico_buttons button ::before, .fp-toolbar .wikisearch form input ::before, .wikisearch form .fp-toolbar input ::before,  .fp-toolbar #page-mod-forum-view #id_advancedadddiscussion ::before,#page-mod-forum-view .fp-toolbar #id_advancedadddiscussion::before, fp-toolbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"] ::before, #page-mod-forum-discuss .fp-toolbar button[data-action="forum-advanced-reply"] ::before, .fp-viewbar .btn-secondary ::before,.fp-viewbar .btn-default ::before,  .fp-viewbar .atto_generico_buttons button ::before, .fp-viewbar .wikisearch form input ::before, .wikisearch form .fp-viewbar input ::before, .fp-viewbar #page-mod-forum-view #id_advancedadddiscussion ::before, .fp-viewbar #page-mod-forum-discuss button[data-action="forum-advanced-reply"] ::before, #page-mod-forum-discuss .fp-viewbar button[data-action="forum-advanced-reply"] ::before, i .icon .fa .fa-refresh .fa-fw ::before   {
         color: #f2e4e4 !important ;
     } */
-    /* peer review */
+    
+    
+    /* Peer review */
     .path-mod-workshop #workshop-viewlet-yourgrades .finalgrades .grade.submissiongrade,
     .path-mod-workshop #workshop-viewlet-yourgrades .finalgrades .grade.assessmentgrade {
         background-color: #353737;
@@ -2048,7 +2289,7 @@ domain("auth.unamur.be") {
         color: #fff;
     }
 
-    /* assessement */
+    /* Assessement */
     .path-mod-workshop .assessment-full {
         background-color: #201f1f;
         border-radius: 13px;
@@ -2064,7 +2305,7 @@ domain("auth.unamur.be") {
         color: #fff
     }
 
-    /* submission */
+    /* Submission */
     .path-mod-workshop .submission-full {
 
         background-color: #201f1f;
@@ -2085,7 +2326,7 @@ domain("auth.unamur.be") {
 
 
 
-    /* other things I don't remember */
+    /* Other things I don't remember */
     .switch input + label::before {
         background-color: #776a6a;
     }
@@ -2097,13 +2338,8 @@ domain("auth.unamur.be") {
         background-color: #353535;
         color: #737373;
     }
-    .fa-user-plus:before {
+    .fa-user-plus::before {
         color: #fff;
-    }
-    li.page-item .page-link,
-    li.page-item.disabled .page-link {
-        background-color: #201f1f;
-        border-color: #626262;
     }
     
     li.page-item:last-child .page-link{
@@ -2115,11 +2351,10 @@ domain("auth.unamur.be") {
     }
 
     /* ========== */
-    /* login page */
+    /* Login page */
     #page-login-index .input-group .input-group-text {
         background-color: #393939;
         border-radius: 15px 0px 0px 15px;
-        ;
         width: 36px;
         text-align: center;
     }
@@ -2148,12 +2383,11 @@ domain("auth.unamur.be") {
     #page-login-index .input-group-addon {
         background-color: #2d2b2b;
     }
-    #page-login-index .glyphicon-log-in:before {
+    #page-login-index .glyphicon-log-in::before {
         color: #fff !important;
     }
     #page-login-index .btn-success {
         color: #fff !important;
-        ;
         background-image: unset;
         background-color: #3c7919;
         border-color: transparent;
@@ -2168,14 +2402,14 @@ domain("auth.unamur.be") {
     color: #fbfbfb !important;
     }
     
-        /* =========== */
-    /* authentification UNamur trucs specifiques BETA */
+    /* =========== */
+    /* Authentification UNamur — Trucs specifiques (BETA) */
 
-    .alert-warning:before, #page-admin-index .adminwarning:before, .uninstalldeleteconfirmexternal:before, .que .outcome:before, .que .comment:before {
+    .alert-warning::before, #page-admin-index .adminwarning::before, .uninstalldeleteconfirmexternal::before, .que .outcome::before, .que .comment::before {
         color: #ff9191;
     }
 
-    *:before {
+    *::before {
         color: white;
     }
 
@@ -2223,7 +2457,7 @@ domain("auth.unamur.be") {
 
 @-moz-document domain("medias.unamur.be") {
 
-    /* video player */
+    /* Video Player */
     #player_block .player-mask {
         cursor: pointer;
     }
@@ -2277,53 +2511,57 @@ domain("auth.unamur.be") {
         visibility: hidden !important;
     }
     
-     /* bouton pause */
-    .player-state-playing .ub-play:before {
+    .ub { /* Center icons in the player */
+        font-size: 30px;
+    }
+    
+     /* Pause button */
+    .player-state-playing .ub-play::before {
         content: url('https://api.iconify.design/fluent/pause-16-filled.svg?color=white&width=30&height=30');
     }
     
-    /* bouton play */
-    .ub-play:before {
+    /* Play button */
+    .ub-play::before {
         content: url('https://api.iconify.design/fluent/play-16-filled.svg?color=white&width=30&height=30');
     }
     
-    /* bouton -5sec */
-    .ub-rewind-five-big:before {
+    /* -5sec button */
+    .ub-rewind-five-big::before {
         content: url('https://api.iconify.design/carbon/rewind-5.svg?color=white&width=30&height=30');
     }
      
-    /* bouton speed ajustement */
-    .ub-speed:before {
+    /* Speed ajustement button */
+    .ub-speed::before {
         content: url('https://api.iconify.design/ri/speed-mini-fill.svg?color=white&width=30&height=30');
     }
     
-    /* bouton volume state 1 not loud */
-    .ub-volume-1:before {
+    /* Volume state 1 not loud button */
+    .ub-volume-1::before {
         content: url('https://api.iconify.design/ion/volume-off.svg?color=white&width=30&height=30');
     }
     
-    /* bouton volume state 2 loud */
-    .ub-volume-2:before {
+    /* Volume state 2 loud button */
+    .ub-volume-2::before {
         content: url('https://api.iconify.design/ion/volume-low.svg?color=white&width=30&height=30');
     }
     
-    /* bouton volume state 3 SUPER loud */
-    .ub-volume-3:before {
+    /* Volume state 3 SUPER loud button */
+    .ub-volume-3::before {
         content: url('https://api.iconify.design/ion/volume-medium.svg?color=white&width=30&height=30');
     }
     
-    /* bouton volume mute */
-    .ub-mute:before {
+    /* Volume mute button */
+    .ub-mute::before {
         content: url('https://api.iconify.design/ion/volume-mute.svg?color=white&width=30&height=30');
     }
     
-    /* bouton settings */
-    .ub-settings:before {
+    /* Settings button */
+    .ub-settings::before {
         content: url('https://api.iconify.design/fluent/settings-24-filled.svg?color=white&width=30&height=30');
     }
     
-    /* fullscreen bouton */
-    .ub-fullscreen:before {
+    /* Fullscreen button */
+    .ub-fullscreen::before {
         content: url('https://api.iconify.design/ic/baseline-fullscreen.svg?color=white&width=30&height=30');
     }
     
@@ -2331,11 +2569,11 @@ domain("auth.unamur.be") {
         content: url('https://api.iconify.design/akar-icons/circle-fill.svg?color=white&width=30&height=30');
     }
     
-    .fa-info-circle:before {
+    .fa-info-circle::before {
         content: url('https://api.iconify.design/fluent/info-24-filled.svg?color=white&width=30&height=30');
     }
     
-    .ub-search:before {
+    .ub-search::before {
         content: url('https://api.iconify.design/fluent/search-24-filled.svg?color=white&width=30&height=30');
     }
     
@@ -2343,7 +2581,7 @@ domain("auth.unamur.be") {
         content: url('https://api.iconify.design/cil/chat-bubble.svg?color=white&width=30&height=30');
     }
     
-    .ub-unvalid:before {
+    .ub-unvalid::before {
         content: url('https://api.iconify.design/gridicons/cross-circle.svg?width=30&height=30');
     }
     
