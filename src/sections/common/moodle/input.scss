@@ -283,6 +283,7 @@ button.btn.btn-secondary[type="submit"],
 select.custom-select.singleselect,
 .datapreferences select.custom-select,
 .moodle-dialogue-base .moodle-dialogue-bd select.custom-select,
+.file-picker select.form-control,
 .modal-content select.custom-select {
     color: $fg-on-surface;
     box-sizing: border-box;
@@ -507,6 +508,15 @@ input[type="checkbox"] {
         padding-left: calc($checkbox-size + $spacing-s);
         user-select: none;
 
+        // Fix bug for "checkbox only" class
+        &.sr-only {
+            width: 0;
+            height: unset;
+            margin: 0;
+            clip: unset;
+            padding-left: $checkbox-size;
+        }
+
         &::before {
             // Show icon
             position: absolute;
@@ -636,4 +646,10 @@ input[type="checkbox"] {
 .moodle-dialogue-base .moodle-dialogue-bd textarea {
     @include filled-text-field(var(--bg-primary-light));
     height: fit-content;
+}
+
+// File input
+input[type="file"] {
+    height: fit-content;
+    @include typography("body1");
 }

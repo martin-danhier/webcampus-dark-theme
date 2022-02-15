@@ -47,6 +47,10 @@ a.dimmed_text:visited,
 .navbar-fhs .navbar-brand,
 .navbar-fhs .navbar-brand:hover {
     color: $fg-on-surface;
+
+    .site-name {
+        color: $fg-on-surface;
+    }
 }
 
 .text-primary {
@@ -61,7 +65,12 @@ h3.popover-region-header-text {
     @include typography("h6");
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: $fg-on-surface;
     text-align: left;
 }
@@ -89,4 +98,3 @@ h5 {
 h6 {
     @include typography("h6");
 }
-

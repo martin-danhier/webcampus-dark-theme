@@ -1,0 +1,311 @@
+/* ----- Upload page ----- */
+
+.filemanager {
+    // ----- Drop zone -----
+
+    .filemanager-container {
+        border: 0 !important;
+        box-shadow: none !important;
+        margin: $spacing-m 0 !important;
+
+        &.dndupload-ready .fm-empty-container {
+            display: none !important;
+        }
+
+        &:not(.dndupload-ready) .dndupload-target {
+            display: none !important;
+        }
+    }
+
+    .fm-empty-container,
+    .dndupload-target,
+    .dndupload-over .dndupload-target {
+        background-color: inherit !important;
+        border-radius: $border-radius;
+
+        padding: $spacing-l $spacing-s !important;
+    }
+
+    &.fm-noitems .fm-empty-container {
+        border: 2px dashed $fg-medium-emphasis;
+
+        // Remove default style
+        position: static;
+    }
+
+    .dndupload-target {
+        border: 2px dashed var(--bg-primary-light);
+
+        // Remove default style
+        position: static;
+    }
+
+    .dndupload-over .dndupload-target {
+        border: 2px dashed $bg-success;
+
+        // Remove default style
+        position: static;
+    }
+
+    .dndupload-message,
+    .dndupload-target {
+        @include flex-center();
+        flex-direction: column-reverse;
+    }
+
+    .dndupload-arrow {
+        position: static;
+        background: none;
+        margin-bottom: $spacing-m;
+        @include fluent-icon-img-override("arrow-up", 48px);
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    // ----- Toolbar -----
+    .fp-navbar {
+        box-shadow: none !important;
+        margin: $spacing-sm 0 !important;
+    }
+
+    .filemanager-toolbar {
+        margin-bottom: $spacing-s;
+
+        .btn.btn-secondary {
+            background-color: $bg-field;
+            color: $fg-on-surface;
+            border: 1px solid $bg-divider;
+            @include flex-center();
+            height: 35px;
+
+            &:first-child {
+                border-top-left-radius: $border-radius;
+                border-bottom-left-radius: $border-radius;
+            }
+
+            &:last-child {
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+            }
+
+            &:hover {
+                background-color: $bg-field-hover;
+            }
+
+            &:focus,
+            &:active,
+            &:focus:active {
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+
+    // -- Restrictions --
+    position: relative;
+    padding-bottom: $spacing-m;
+
+    .fp-restrictions {
+        text-align: start;
+        color: $fg-medium-emphasis;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+// -- Upload form --
+.moodle-dialogue.filepicker {
+    // Fix padding for border to reach top
+    .moodle-dialogue-bd {
+        padding: 0;
+
+        & > .repository_upload {
+            height: 100%;
+        }
+    }
+
+    .file-picker {
+        height: inherit;
+    }
+
+    // Fix background
+    .fp-content {
+        background-color: inherit;
+        box-shadow: none !important;
+        user-select: none;
+        padding: $spacing-s;
+    }
+
+    // Side menu
+
+    .nav-link {
+        @include flex-center-start();
+        color: $fg-on-surface;
+        margin: $spacing-xs;
+        border-radius: $border-radius;
+        @include ripple(white);
+
+        &.active {
+            @include primary();
+        }
+
+        &:active,
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    .fp-repo-area {
+        border-right: 1px solid $bg-divider;
+        padding: $spacing-s $spacing-xs;
+    }
+
+    .fp-repo-icon {
+        width: $fluent-icon-size;
+        height: $fluent-icon-size;
+        margin-right: $spacing-xs;
+    }
+
+    // Items
+
+    .fp-navbar {
+        background-color: inherit;
+        margin: 0 !important;
+        border-radius: 0;
+        box-shadow: none !important;
+        border-bottom: 1px solid $bg-divider;
+
+        .btn {
+            min-width: unset !important;
+            padding: $spacing-xs $spacing-s !important;
+            margin: 0 2px;
+
+            &:hover {
+                padding: 0;
+                background-color: $bg-field-hover;
+            }
+
+            .icon {
+                margin-right: 0 !important;
+            }
+        }
+    }
+}
+
+// File
+.fp-iconview .fp-file {
+    border-radius: $border-radius;
+    color: $fg-high-emphasis;
+
+    .fp-thumbnail {
+        border-radius: $border-radius;
+        border: 0;
+
+        img[src*="/theme/image.php"] {
+            border: 0;
+            width: 48px;
+            height: 48px;
+        }
+    }
+
+    .fp-filename {
+        background-color: inherit;
+        padding: $spacing-xs;
+        color: inherit;
+
+        &:hover {
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+
+    &:hover {
+        @include surface(12);
+        color: $fg-on-surface;
+    }
+}
+
+.fp-filename-icon a {
+    @include flex-center-start();
+    min-height: 24px;
+}
+
+.fp-icon {
+    display: flex !important;
+    margin-top: 0;
+    margin-right: $spacing-s;
+}
+
+// Table view (god damnit its ugly)
+
+.fp-tableview {
+    .yui3-datatable-cell,
+    .yui3-datatable-even .yui3-datatable-cell {
+        @include typography("body2");
+        text-align: left;
+        background-color: inherit !important;
+        border-color: $bg-divider !important;
+        color: $fg-on-surface !important;
+    }
+
+    .yui3-datatable-header {
+        background-color: inherit !important;
+        border-color: $bg-divider !important;
+        color: $fg-on-surface !important;
+
+        span {
+            text-shadow: none;
+            @include typography("caption");
+            color: $fg-on-surface !important;
+        }
+    }
+
+    tr:nth-child(even) {
+        background-color: $bg-surface-12dp !important;
+    }
+}
+
+.filemanager .fp-tableview {
+    @include elevation(2);
+    border-radius: $border-radius;
+
+    .yui3-datatable-cell {
+        background-color: $bg-surface-04dp !important;
+
+        label {
+            display: inline-flex;
+        }
+    }
+
+    .yui3-datatable-even .yui3-datatable-cell {
+        background-color: $bg-surface-06dp !important;
+    }
+
+    th {
+        background-color: $bg-surface-24dp !important;
+    }
+
+    thead {
+        th:first-child {
+            border-top-left-radius: $border-radius;
+        }
+
+        th:last-child {
+            border-top-right-radius: $border-radius;
+        }
+    }
+
+    tr:last-child {
+        td:first-child {
+            border-bottom-left-radius: $border-radius;
+        }
+
+        td:last-child {
+            border-bottom-right-radius: $border-radius;
+        }
+    }
+}

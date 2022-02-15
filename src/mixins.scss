@@ -552,6 +552,24 @@
         @error "Can't hardcode a variable color in the URL.";
     }
 }
+@mixin fluent-icon-background(
+    $name,
+    $color: $fluent-icon-default-color,
+    $style: $fluent-icon-style,
+    $size: $fluent-icon-size
+) {
+    background-image: url("https://api.iconify.design/fluent/#{$name}-" + escape-size($size) + "-" + $style + ".svg?color=" + escape-color(
+        $color
+    )) !important;
+}
+
+@mixin fluent-icon-background-override($name, $size, $color: $fluent-icon-default-color, $style: $fluent-icon-style) {
+    background: url("https://api.iconify.design/fluent/#{$name}-" + escape-size($size) + "-" + $style + ".svg?color=" + escape-color(
+        $color
+    )) left 0 no-repeat !important;
+    background-size: $size $size !important;
+    min-height: $size;
+}
 
 // Material icon
 @mixin icon($name) {

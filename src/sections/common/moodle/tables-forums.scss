@@ -189,7 +189,7 @@
 }
 
 // Unread message text
-.path-course-view .unread,
+.path-course-view .activityinstance .unread,
 span.unread {
     @include flex-center-start();
     height: $fluent-icon-size;

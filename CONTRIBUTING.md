@@ -27,6 +27,12 @@ Each time a change is merged in the master branch, the version number should be 
 
 Feel free to ask questions if you have any !
 
+## Good practices
+
+- Use constants as much as possible (for colors, spacings, etc.)
+- Be cautious when using nested rules: a vanilla CSS rule is produced for each combination. Try to avoid unnecessary combinations, because it can exponentially increase the output size !
+- Use `/* ----- loud comments ----- */` to delimit sections of code, and `// Regular comments` to explain what you are doing. Only loud comments are kept in the output CSS.
+
 ## How to build
 
 1. Clone the repository
