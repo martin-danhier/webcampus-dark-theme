@@ -30,6 +30,11 @@
         @include elevation(4);
 
         .phase {
+            // Title
+            .title a {
+                @include link();
+            }
+
             // Background
             &:nth-child(even) {
                 dt,

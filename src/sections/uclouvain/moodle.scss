@@ -106,3 +106,9 @@ span[style*="background-color: rgb(125, 159, 211)"] {
     border-color: $red;
     color: $red;
 }
+
+// Weird banners
+
+.card div[style*="background-color:#d8f8f6"] {
+    background-color: inherit !important;
+}
