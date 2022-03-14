@@ -1,0 +1,18 @@
+/* ----- Ghost elements ----- */
+
+// Preview of an element before it has finished loaded.
+// Makes the user less frustrated if the loading takes a while.
+
+@keyframes bg-pulse-grey {
+    0% {
+        background-color: $bg-surface-06dp;
+    }
+
+    50% {
+        background-color: $bg-surface-16dp;
+    }
+
+    100% {
+        background-color: $bg-surface-06dp;
+    }
+}

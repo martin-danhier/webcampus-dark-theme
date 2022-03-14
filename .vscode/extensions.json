@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "sibiraj-s.vscode-scss-formatter",
+        "mrmlnc.vscode-scss",
+        "stylelint.vscode-stylelint",
+        "streetsidesoftware.code-spell-checker"
+    ]
+}

@@ -1,0 +1,97 @@
+/* ----- Navbar ----- */
+
+.navbar.navbar-fhs {
+    // Base values
+    @include surface(2);
+    @include elevation(2);
+
+    // Drawer button & course controls
+    .btn-secondary[data-action="toggle-drawer"],
+    .coursecontrols .btn-secondary {
+        color: inherit;
+        background-color: inherit;
+        border: none;
+        border-radius: $border-radius;
+        @include flex-center();
+
+        &:focus,
+        &:active:focus,
+        &:active {
+            outline: none;
+            box-shadow: none;
+            color: inherit;
+        }
+
+        &:hover {
+            background-color: $bg-field-hover;
+        }
+    }
+
+    .navbar-nav {
+        // Menu
+        .nav-link {
+            color: inherit;
+            border-radius: $border-radius;
+
+            &:hover {
+                background-color: $bg-field-hover;
+            }
+
+            // Arrow
+            &.dropdown a::after {
+                border: 0;
+                @include fluent-icon-base();
+                @include fluent-icon-img-override("caret-down", 16px, $fg-on-surface, "filled");
+                margin-left: $spacing-m !important;
+            }
+        }
+
+        // Icon buttons (notifications, chat)
+        .popover-region-notifications,
+        [data-region="popover-region-messages"] {
+            .nav-link {
+                width: $spacing-l;
+                @include flex-center();
+
+                .icon {
+                    margin-right: 0;
+                    text-align: center;
+                }
+
+                .count-container {
+                    right: 7px;
+                }
+            }
+        }
+
+        // Menu at the right with username and avatar
+        .usermenu {
+            padding-left: $spacing-xs;
+            padding-right: $spacing-s;
+            border-radius: $border-radius;
+
+            .usertext {
+                color: $fg-on-surface;
+                padding: 0 $spacing-s;
+            }
+
+            .caret {
+                color: $fg-on-surface;
+            }
+
+            .userpicture {
+                margin-right: $spacing-xs;
+            }
+
+            &:hover {
+                background-color: $bg-field-hover;
+                outline: none;
+                box-shadow: none;
+            }
+
+            .caret::after {
+                margin-right: 2px;
+            }
+        }
+    }
+}

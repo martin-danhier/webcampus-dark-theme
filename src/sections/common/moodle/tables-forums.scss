@@ -1,0 +1,256 @@
+/* ----- Announces and forums ----- */
+
+// Forum search
+.forumsearch .input-group {
+    gap: 0;
+
+    .search {
+        margin-right: $spacing-m;
+    }
+
+    .input-group-prepend {
+        display: flex;
+    }
+
+    .input-group-append {
+        @include flex-center();
+
+        .btn {
+            width: fit-content;
+            height: fit-content;
+        }
+    }
+}
+
+// Table
+.discussion-list,
+.choicegroups,
+#overview-grade,
+#page-report-usersessions-user table.generaltable,
+#page-admin-tool-lp-plans table.generaltable,
+#page-user-managetoken table.generaltable,
+#page-message-notificationpreferences table.preference-table,
+#page-repository-manage_instances table.generaltable,
+#page-calendar-managesubscriptions table.generaltable,
+#participants.generaltable {
+    background-color: inherit;
+    @include elevation(1);
+    color: $fg-on-surface;
+
+    // Setup the border to support radius
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: $border-radius;
+
+    // Default style for table
+    thead {
+        @include elevation(2);
+    }
+
+    tbody:first-child tr:first-child th,
+    thead th {
+        // Colors
+        background-color: $bg-surface-12dp;
+        text-align: center;
+
+        // Borders
+        border-color: $bg-divider;
+        border: 0;
+
+        &:first-child {
+            border-top-left-radius: $border-radius;
+        }
+
+        &:last-child {
+            border-top-right-radius: $border-radius;
+        }
+    }
+
+    // Unread messages
+    .lead .badge.rounded-pill {
+        background-color: var(--bg-primary-light);
+        color: var(--fg-on-primary-light);
+        border-radius: 50%;
+        margin: 0 $spacing-xs;
+    }
+
+    tbody {
+        td,
+        th,
+        tr {
+            color: $fg-high-emphasis;
+            border: 0;
+        }
+
+        // Colors
+        tr:nth-child(even) {
+            td,
+            th {
+                background-color: $bg-surface-04dp;
+            }
+        }
+
+        tr:nth-child(odd) {
+            td,
+            th {
+                background-color: $bg-surface-02dp;
+            }
+        }
+
+        // Border radius
+        tr:last-child {
+            td,
+            th {
+                &:first-child {
+                    border-bottom-left-radius: $border-radius;
+                }
+
+                &:last-child {
+                    border-bottom-right-radius: $border-radius;
+                }
+            }
+        }
+    }
+
+    // Favorites
+    .btn.btn-link[data-type="favorite-toggle"] {
+        @include flat-icon-button($bg-field-hover);
+        color: $fg-high-emphasis;
+        margin: $spacing-xs;
+    }
+    // Settings
+    [data-container="discussion-tools"] {
+        margin-right: $spacing-xs;
+    }
+
+    // Authors and other texts
+    .author-info {
+        color: $fg-on-surface;
+        font-weight: 300;
+
+        time {
+            color: $fg-medium-emphasis;
+        }
+
+        a {
+            color: $fg-medium-emphasis;
+
+            &:hover,
+            &:hover time {
+                color: $fg-high-emphasis;
+            }
+        }
+    }
+}
+
+.path-mod-forum #region-main {
+    .forum-post-container .forumpost {
+        @include elevation(4);
+        @include surface(4);
+        border-radius: $border-radius;
+        border: 1px solid $bg-surface-04dp !important;
+
+        &:focus-visible,
+        &:focus {
+            border: inherit !important;
+        }
+    }
+
+    :target > .forumpost {
+        border-color: var(--bg-primary-light) !important;
+
+        &::before {
+            display: none;
+        }
+    }
+
+    a.btn.btn-link {
+        @include text-button($fg-high-emphasis, $fg-on-surface);
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    .forumpost.unread .header {
+        background-color: inherit;
+        border: inherit;
+    }
+}
+
+// Grades
+
+#overview-grade {
+    @include elevation(1);
+
+    td.cell.c1 {
+        text-align: center;
+    }
+}
+
+// Unread message text
+.path-course-view .activityinstance .unread,
+span.unread {
+    @include flex-center-start();
+    height: $fluent-icon-size;
+    background-color: inherit;
+    margin-left: $spacing-xl;
+    padding: 0 $spacing-xs;
+
+    background-color: $bg-warning;
+    border-radius: 5px;
+
+    a {
+        color: $fg-on-warning !important;
+        @include typography("subtitle2");
+        margin-left: $spacing-xs;
+    }
+
+    // Add an icon to the message
+    &::before {
+        width: $fluent-icon-size !important;
+        height: $fluent-icon-size !important;
+        display: flex !important;
+        padding: 0 !important;
+        @include fluent-icon-img("mail-unread", $fg-on-warning);
+    }
+}
+
+// Preference table
+
+#page-message-notificationpreferences table.preference-table {
+    border: 0;
+
+    h4 {
+        color: $fg-on-surface;
+    }
+
+    // On / Off switch
+    .preference-state-status-container {
+        background: none;
+    }
+
+    input[type="checkbox"]:not(:checked) + .preference-state-status-container .off-text,
+    input[type="checkbox"]:checked + .preference-state-status-container .on-text {
+        @include fluent-icon-base();
+        font-size: 0;
+    }
+
+    // OFF
+    input[type="checkbox"]:not(:checked) + .preference-state-status-container .off-text {
+        @include fluent-icon-override("alert-off", 28px, $red);
+    }
+
+    // ON
+    input[type="checkbox"]:checked + .preference-state-status-container .on-text {
+        @include fluent-icon-override("alert", 28px, $green);
+    }
+
+    td .container-fluid, .col-6 {
+        padding: 0 $spacing-xs;
+    }
+
+    tr td:not(:first-child) {
+        width: fit-content;
+    }
+}

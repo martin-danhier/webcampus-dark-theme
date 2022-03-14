@@ -1,0 +1,60 @@
+/* ----- Login page ----- */
+
+// Doesn't exist at UCLouvain, but the Webcampus one since to be a Moodle page given the HTML structure
+// Hence its location in the common style
+
+.pagelayout-login {
+    #page-wrapper {
+        flex-direction: column !important;
+        align-items: flex-start;
+    }
+
+    #region-main {
+        @include surface(1);
+        border-radius: 0;
+    }
+
+    .loginpagepanel,
+    .loginpanelbg {
+        background-color: inherit !important;
+        box-shadow: none !important;
+    }
+
+    .loginpagepanel {
+        @include flex-center-start();
+        flex-direction: column;
+    }
+
+    // Login card
+    .col-12.col-sm-4.py-0.loginpanelbg {
+        border-radius: $border-radius;
+        padding: $spacing-sm;
+
+        .card {
+            box-shadow: none !important;
+        }
+    }
+
+    #accordion .card-header {
+        background-color: unset !important;
+    }
+
+    .card-body > label.sr-only {
+        position: static;
+        width: unset;
+        height: unset;
+        color: $fg-on-surface;
+        @include typography(subtitle2);
+    }
+
+    // Link
+    a u {
+        color: var(--bg-secondary-light) !important;
+    }
+
+    // Tooltip
+    a.help-icon {
+        @include fluent-icon-base();
+        @include fluent-icon("question-circle");
+    }
+}

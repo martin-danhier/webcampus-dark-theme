@@ -1,0 +1,14 @@
+/* ----- UNamur specific styles ----- */
+
+// Fixes that only need to be applied to WebCampus because of their ugly custom theme
+
+// Moodle
+@-moz-document url-prefix("https://webcampus.unamur.be/") {
+    // -> this will return a deprecation warning, but it is normal
+    // That is how stylus works
+
+    // Import Webcampus color theme
+    @import "theme.scss";
+    // Import Webcampus style
+    @import "moodle.scss";
+}

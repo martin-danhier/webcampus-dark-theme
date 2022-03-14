@@ -1,0 +1,43 @@
+/* ----- Footer ----- */
+
+#page-footer {
+    background-color: inherit;
+    border: none;
+
+    // Margins
+    margin: 0;
+
+    // Padding
+    padding: $spacing-l $spacing-m !important;
+
+    a {
+        color: $fg-high-emphasis !important;
+
+        &:focus, &:active, &:hover, &:focus:active {
+            color: $fg-on-surface !important;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    // Credits
+    &::after {
+        // Text
+        content: "\A===    Moodle Dark Theme    ===\AStyle par "+ $authors + "\A Version "+ $version + "\A \A";
+
+        // Placement
+        display: block;
+        white-space: pre;
+        width: 100%;
+
+        // Text style
+        text-align: center;
+        color: $fg-on-background;
+        font-weight: 300;
+    }
+}
+
+#back-to-top {
+    @include floating-action-button(var(--bg-secondary), var(--bg-secondary-hover), var(--fg-on-secondary));
+    position: fixed;
+}

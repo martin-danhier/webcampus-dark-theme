@@ -1,0 +1,68 @@
+/* ----- Fixes to remove unwanted behavior originating from the default theme ----- */
+
+.pagelayout-mydashboard #region-main {
+    // Remove that card because 3 layers of cards are ugly
+    @include surface(0);
+    @include elevation(0);
+}
+
+.list-group-item {
+    background-color: inherit;
+}
+
+h3.sectionname {
+    background-color: inherit;
+    border: none;
+}
+
+.section li.activity:hover {
+    background-color: inherit;
+}
+
+.invisiblefieldset {
+    width: 100%;
+}
+
+.bg-white, .bg-light {
+    background-color: inherit !important;
+}
+
+.border {
+    border: none !important;
+}
+
+.border-bottom {
+    border-bottom-color: inherit !important;
+}
+
+.border-right {
+    border-right-color: inherit !important;
+}
+
+hr {
+    border-top-color: $bg-divider !important;
+}
+
+// Imports parts from common directory (split into multiple files to avoid having one huge file)
+@import "moodle/icons.scss";
+@import "moodle/text.scss";
+@import "moodle/cards.scss";
+@import "moodle/input.scss";
+@import "moodle/navbar.scss";
+@import "moodle/drawer.scss";
+@import "moodle/progress-indicators.scss";
+@import "moodle/ghost.scss";
+@import "moodle/footer.scss";
+@import "moodle/tooltips.scss";
+@import "moodle/chat.scss";
+@import "moodle/modals.scss";
+@import "moodle/tables-forums.scss";
+@import "moodle/database.scss";
+@import "moodle/peer-review.scss";
+@import "moodle/editor-atto.scss";
+@import "moodle/calendar.scss";
+@import "moodle/login.scss";
+@import "moodle/upload.scss";
+
+// Last import the miscellaneous styles
+@import "moodle/misc.scss";

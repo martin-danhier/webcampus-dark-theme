@@ -1,0 +1,104 @@
+// Version of the style
+$version: "2.0.0";
+
+// Authors of the style
+// Add your name here if you contributed
+$authors: "Martin Danhier, Yannis Fraselle";
+
+// =========== Color theme ===========
+
+// Background colors
+// For primary colors, see themes
+$bg-background: #121212;
+$bg-surface-00dp: #121212; // 0% white overlay
+$bg-surface-01dp: #1e1e1e;
+$bg-surface-02dp: #222222; // 7%
+$bg-surface-03dp: #242424; // 8%
+$bg-surface-04dp: #272727; // 9%
+$bg-surface-06dp: #2c2c2c; // 11%
+$bg-surface-08dp: #2d2d2d; // 12%
+$bg-surface-12dp: #323232; // 14%
+$bg-surface-16dp: #333333; // 15%
+$bg-surface-24dp: #373737; // 16%
+$bg-field: #494949;
+$bg-field-hover: #373737;
+$bg-dropdown-item-hover: #404040;
+$bg-field-bright: #6e6e6e;
+$bg-field-hover-bright: #808080; // For use on bright background such as surface-12dp
+$bg-field-selected: #373737;
+$bg-field-selected-bright: #404040; // For use on bright background such as surface-12dp
+$bg-field-focus: #2c2c2c;
+$bg-field-disabled: #1d1d1d;
+$bg-divider: #121212;
+
+// Colored backgrounds for calendar badges
+$bg-badge-course: #2196f3;
+$bg-badge-user: #4caf50;
+$bg-badge-site: #f44336;
+$bg-badge-category: #9c27b0;
+$bg-badge-group: #ff9800;
+$bg-badge-other: #9e9e9e;
+
+$bg-error: #c95066;
+$bg-error-hover: #e17f8c;
+$bg-success: #6eb45e;
+$bg-warning: #f1d06b;
+$bg-info: #5e9cd3;
+
+$bg-icon-favorite: #ffd600;
+
+// Foreground colors
+// For primary colors, see themes
+$fg-on-background: #ffffff;
+$fg-on-surface: #ffffff;
+$fg-on-error: #000000;
+$fg-on-success: #000000;
+$fg-on-warning: #000000;
+$fg-on-info: #000000;
+$fg-high-emphasis: #c6c6c6;
+$fg-medium-emphasis: #959595;
+$fg-field-disabled: #888888;
+
+// Foreground colors for badges
+$fg-on-badge: #ffffff;
+
+// Special colors
+$shadow-1: rgba(0, 0, 0, 0.14);
+$shadow-2: rgba(0, 0, 0, 0.12);
+$shadow-3: rgba(0, 0, 0, 0.2);
+
+// Other parameters
+$border-radius: 10px;
+$flex-gap: 10px;
+$appbar-height: 50px;
+$left-drawer-width: 250px;
+$right-drawer-width: 350px;
+$icon-button-diameter: 40px;
+$checkbox-size: 16px;
+
+// Icon settings
+$fluent-icon-size: 20px; // 16px, 20px, 24px, 28px, 32px or 48px
+$fluent-small-icon-size: 16px;
+$fluent-icon-style: "regular"; // "regular" or "filled"
+$fluent-icon-default-color: white;
+
+// Letter spacing
+$letter-spacing-s: 0.3px;
+$letter-spacing-m: 0.4px;
+$letter-spacing-l: 0.5px;
+
+// Spacing
+$spacing-xs: 5px;
+$spacing-s: 10px;
+$spacing-sm: 15px;
+$spacing-m: 20px;
+$spacing-l: 40px;
+$spacing-xl: 80px;
+
+// General colors (used to replace colors set with editor)
+$blue: #00a1e4;
+$yellow: #f1d06b;
+$pink: #ff5e62;
+$purple: #9b51e0;
+$green: #6eb45e;
+$red: #e04545;

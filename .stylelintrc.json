@@ -1,0 +1,73 @@
+{
+    "customSyntax": "postcss-scss",
+    "defaultSeverity": "warning",
+    "plugins": [
+        "stylelint-scss"
+    ],
+    "rules": {
+        "block-closing-brace-newline-after": [
+            "always",
+            {
+                "ignoreAtRules": [
+                    "if",
+                    "else",
+                    "else-if",
+                    "include"
+                ]
+            }
+        ],
+        "block-closing-brace-newline-before": "always",
+        "block-no-empty": true,
+        "block-opening-brace-newline-after": "always",
+        "block-opening-brace-newline-before": "never-single-line",
+        "block-opening-brace-space-before": "always",
+        "color-hex-case": "lower",
+        "color-no-invalid-hex": true,
+        "comment-empty-line-before": "always",
+        "comment-no-empty": true,
+        "font-family-name-quotes": "always-unless-keyword",
+        "font-family-no-duplicate-names": true,
+        "font-weight-notation": "numeric",
+        "function-calc-no-unspaced-operator": true,
+        "function-linear-gradient-no-nonstandard-direction": true,
+        "function-name-case": "lower",
+        "indentation": 4,
+        "keyframe-declaration-no-important": true,
+        "length-zero-no-unit": true,
+        "linebreaks": "unix",
+        "max-empty-lines": 3,
+        "max-line-length": 150,
+        "max-nesting-depth": 7,
+        "no-empty-first-line": true,
+        "no-eol-whitespace": true,
+        "no-extra-semicolons": true,
+        "no-missing-end-of-source-newline": true,
+        "number-leading-zero": "always",
+        "number-no-trailing-zeros": true,
+        "property-case": "lower",
+        "property-no-unknown": true,
+        "rule-empty-line-before": [
+            "always",
+            {
+                "except": [
+                    "first-nested"
+                ],
+                "ignore": [
+                    "after-comment"
+                ]
+            }
+        ],
+        "selector-class-pattern": "^[a-zA-Z][a-zA-Z0-9-_]*$",
+        "selector-max-compound-selectors": 8,
+        "selector-max-id": 2,
+        "selector-no-qualifying-type": null,
+        "selector-pseudo-element-colon-notation": "double",
+        "selector-type-case": "lower",
+        "shorthand-property-no-redundant-values": true,
+        "string-no-newline": true,
+        "string-quotes": "double",
+        "unit-case": "lower",
+        "unit-no-unknown": true,
+        "value-keyword-case": "lower"
+    }
+}

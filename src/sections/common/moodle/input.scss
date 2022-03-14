@@ -1,0 +1,655 @@
+/* ----- Input ----- */
+
+// Advanced search
+
+.datapreferences > form > div {
+    #advancedcheckbox:checked ~ input.btn.btn-secondary {
+        display: none;
+    }
+}
+
+#data_adv_form,
+#page-mod-data-edit form .generalbox {
+    width: 100%;
+
+    table {
+        width: 100%;
+    }
+
+    .defaulttemplate {
+        table {
+            .template-field,
+            .template-token {
+                padding: $spacing-xs $spacing-m;
+            }
+
+            .template-field {
+                width: fit-content;
+            }
+
+            .template-token {
+                width: 65%;
+
+                // Required icon
+                position: relative;
+
+                .inline-req .icon.text-danger {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                }
+            }
+        }
+
+        margin-bottom: $spacing-m;
+    }
+
+    tr td[colspan="4"] {
+        @include flex-center();
+
+        margin-top: $spacing-m;
+
+        .btn.btn-secondary[name="resetadv"] {
+            @include outlined-button($fg-on-surface, false);
+        }
+    }
+}
+
+// Text fields
+
+form .form-inline input[type="text"],
+form .form-inline input[type="password"],
+#coursesearch .coursesearchbox input[type="text"],
+form.form-inline input[type="text"],
+.message-app input[type="text"],
+#data_adv_form input[type="text"],
+#page-mod-data-edit form .generalbox input[type="text"],
+.moodle-dialogue-base .moodle-dialogue-bd input[type="url"].form-control,
+.moodle-dialogue-base .moodle-dialogue-bd input[type="text"].form-control,
+.moodle-dialogue-base .moodle-dialogue-bd input[type="number"].form-control,
+.pagelayout-login input.form-control {
+    // Apply text field to fields
+    @include filled-text-field(var(--bg-primary-light));
+}
+
+#coursesearch .coursesearchbox {
+    align-items: center;
+    justify-content: flex-start;
+    gap: $flex-gap;
+    flex-wrap: wrap;
+    display: inline-flex;
+
+    input {
+        min-width: 30%;
+    }
+}
+
+// Input groups
+
+.input-group {
+    gap: $flex-gap;
+}
+
+.input-group-prepend {
+    display: none;
+}
+
+.input-group-append .btn:empty {
+    @include flat-icon-button();
+}
+
+// Buttons
+
+a.btn.btn-link {
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+
+    &:focus {
+        outline: none;
+        text-decoration: none;
+        box-shadow: none;
+    }
+}
+
+.btn.btn-primary:not(.btn-lg),
+.maincalendar button[data-action="new-event-button"],
+[data-template="core_calendar/day_detailed"] button[data-action="new-event-button"],
+[data-template="core_calendar/month_detailed"] button[data-action="new-event-button"] {
+    @include raised-button(var(--bg-primary), var(--bg-primary-hover), var(--fg-on-primary));
+}
+
+button.btn.btn-secondary[type="submit"],
+.datapreferences input.btn.btn-secondary[type="submit"],
+.moodle-dialogue-base .moodle-dialogue-bd .btn.btn-secondary,
+[data-region="more-courses-button-container"] .btn.btn-secondary,
+.choicegroup-descriptionshow.btn.btn-secondary,
+.choicegroup-membershow.btn.btn-secondary,
+#id_cancel {
+    @include text-button($fg-high-emphasis, $fg-on-surface);
+}
+
+.btn.btn-link.btn-icon {
+    @include flat-icon-button($bg-field-hover);
+}
+
+// Drop downs
+
+.dropdown,
+.btn-group[data-region="view-selector"],
+.atto_menu,
+.maincalendar [data-region="view-selector"],
+[data-template="core_calendar/day_detailed"] [data-region="view-selector"],
+[data-template="core_calendar/month_detailed"] [data-region="view-selector"],
+[data-region="paging-control-limit-container"] {
+    // Button / preview
+    .dropdown-toggle {
+        &:active:focus,
+        &:hover:focus,
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        &.btn {
+            @include outlined-button($fg-on-surface, false);
+            padding-right: $spacing-s !important;
+
+            &:hover {
+                background-color: $bg-field-hover;
+            }
+
+            // Arrow
+            &::after {
+                border: 0;
+                @include fluent-icon-base();
+                @include fluent-icon-img-override("caret-down", 16px, $fg-on-surface, "filled");
+                margin-left: $spacing-m !important;
+            }
+        }
+    }
+
+    // Menu itself
+    .dropdown-menu {
+        @include surface(12);
+        @include elevation(12);
+
+        list-style: none;
+
+        border-radius: $border-radius;
+
+        // List items
+        .dropdown-item {
+            // Remove default style
+            color: $fg-on-surface;
+            list-style: none;
+
+            &::first-letter {
+                text-transform: capitalize;
+            }
+
+            &::before {
+                display: none;
+            }
+
+            a {
+                color: inherit !important;
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            i.icon[aria-hidden="true"] {
+                display: none;
+            }
+            background-color: inherit;
+
+            // Padding
+            padding: $spacing-s $spacing-sm;
+
+            // Hover & selected
+            &[aria-current="true"] {
+                background-color: $bg-field-selected-bright;
+            }
+
+            &:hover {
+                background-color: $bg-dropdown-item-hover;
+            }
+        }
+
+        // Header
+        .dropdown-header {
+            color: $fg-medium-emphasis;
+            padding: $spacing-xs $spacing-s;
+            text-align: center;
+        }
+
+        // Divider
+        .dropdown-divider {
+            border-color: $bg-divider;
+            margin: 0;
+        }
+    }
+}
+
+// Custom selects that must look like a dropdown menu (because they used it wrong)
+// To be used in an interface
+.maincalendar select.custom-select,
+[data-template="core_calendar/day_detailed"] select.custom-select,
+[data-template="core_calendar/month_detailed"] select.custom-select,
+.urlselect.custom-select {
+    @include outlined-button($fg-on-surface, false);
+
+    // Arrow
+    background: $bg-surface-01dp url(https://api.iconify.design/fluent/caret-down-16-filled.svg?color=%23ffffff)
+        no-repeat right $spacing-s center !important;
+    background-size: 16px 16px;
+
+
+    &:active:focus,
+    &:hover:focus,
+    &:focus {
+        outline: none;
+        box-shadow: none;
+        @include surface(12);
+    }
+
+    &:hover {
+        cursor: pointer;
+        // background-color: $bg-field-hover;
+    }
+
+    option {
+        @include surface(12);
+
+        // Hover & selected
+        &[selected] {
+            background-color: $bg-field-selected-bright;
+        }
+
+        &:hover {
+            background-color: $bg-field-hover !important;
+        }
+    }
+}
+
+.urlselect.custom-select {
+    background-color: $bg-background !important;
+}
+
+// Custom selects to be used in a form (looks like text field)
+.mform select.custom-select,
+select.custom-select.singleselect,
+.datapreferences select.custom-select,
+.moodle-dialogue-base .moodle-dialogue-bd select.custom-select,
+.file-picker select.form-control,
+.modal-content select.custom-select {
+    color: $fg-on-surface;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    // Shape
+    padding: 0 2px;
+    padding-right: 28px;
+    height: 42px;
+    border-radius: 4px 4px 0 0;
+    border: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.42);
+
+    // Font
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.009375em;
+    text-decoration: inherit;
+    text-transform: inherit;
+
+    // Animation
+    will-change: border-color, background-color, border-width;
+    transition: border-color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-width 0.2s ease-in-out !important;
+
+    &:hover {
+        background-color: $bg-field-hover;
+        border-bottom-color: rgba(255, 255, 255, 0.87);
+        cursor: pointer;
+    }
+
+    &:focus,
+    &:focus-visible {
+        color: inherit;
+        background-color: $bg-field;
+        outline: none;
+        box-shadow: none;
+        border-bottom-color: var(--bg-primary);
+    }
+
+    &:disabled {
+        background-color: $bg-field-disabled;
+        color: $fg-field-disabled;
+        border-bottom-color: $fg-field-disabled;
+
+        &:hover {
+            border-bottom-color: inherit;
+        }
+    }
+
+    // Arrow
+    background: $bg-field
+        url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23c7c4c4' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E")
+        no-repeat right 10px center;
+    background-size: 14px 14px;
+}
+
+// Page buttons
+
+.pagination {
+    .page-item {
+        // In a button group, only curve the outer edges
+        &:first-child .page-link {
+            border-top-left-radius: $border-radius;
+            border-bottom-left-radius: $border-radius;
+        }
+
+        &:last-child .page-link {
+            border-top-right-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+        }
+
+        // Disabled
+        &.disabled .page-link {
+            color: $fg-field-disabled;
+            border-color: $fg-field-disabled;
+        }
+
+        // Active
+        &.active .page-link {
+            border-color: $fg-high-emphasis;
+            background-color: $bg-field-selected-bright;
+            color: $fg-on-surface;
+        }
+
+        .page-link {
+            // Remove default style
+            border-radius: 0;
+            background-color: inherit;
+            color: $fg-high-emphasis;
+            box-shadow: none;
+            outline: none;
+            border-color: $fg-high-emphasis;
+
+            // Position
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & .icon {
+                text-align: center;
+                vertical-align: middle;
+            }
+
+            // Color
+            &:hover {
+                background-color: $bg-field-hover;
+            }
+        }
+    }
+}
+
+// Tabs
+
+.nav.nav-pills.nav-fill,
+.nav.nav-tabs {
+    border: 0;
+
+    .nav-item {
+        flex-grow: 1;
+
+        .nav-link {
+            // Border
+            border: 0;
+            border-bottom: 1px solid $fg-high-emphasis;
+            border-radius: 0;
+
+            // Color
+            background-color: inherit;
+            color: $fg-high-emphasis;
+
+            // Font
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: 14px;
+            outline: none;
+            letter-spacing: 1.25px;
+            line-height: normal;
+            user-select: none;
+            vertical-align: middle;
+            width: 100%;
+            padding: $spacing-s;
+
+            // Layout
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            // Animation
+            transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+
+            &:focus {
+                outline: none;
+                box-shadow: none;
+            }
+
+            &:hover {
+                color: $fg-on-surface;
+                border-color: $fg-on-surface;
+            }
+
+            &.active {
+                color: var(--bg-primary-light);
+                border-color: var(--bg-primary-light);
+            }
+        }
+    }
+}
+
+// Category buttons
+
+.category-button,
+.emoji-picker .category-button,
+.emoji-picker .btn-outline-secondary:not(:disabled) {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+
+    &:hover {
+        background-color: $bg-field-hover;
+        border-color: $fg-high-emphasis;
+    }
+
+    &:focus,
+    &:active,
+    &:active:focus {
+        background-color: transparent;
+        outline: none;
+        box-shadow: none;
+    }
+
+    &.selected {
+        border-color: var(--bg-primary);
+    }
+}
+
+// Radios and switches
+
+.custom-control-label::before {
+    background-color: $bg-field;
+    border-color: $bg-field;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    border-color: var(--bg-primary-dark);
+    background-color: var(--bg-primary-dark);
+}
+
+// Checkboxes
+
+input[type="checkbox"] {
+    // Hide default unmodifiable checkbox
+    visibility: hidden;
+    width: 0;
+    padding: 0;
+    margin: 0 !important;
+
+    // Add a "fake" checkbox before the label
+    & + label {
+        // Anchor the before element relatively to this one
+        position: relative;
+
+        // Leave some space for the checkbox
+        padding-left: calc($checkbox-size + $spacing-s);
+        user-select: none;
+
+        // Fix bug for "checkbox only" class
+        &.sr-only {
+            width: 0;
+            height: unset;
+            margin: 0;
+            clip: unset;
+            padding-left: $checkbox-size;
+        }
+
+        &::before {
+            // Show icon
+            position: absolute;
+            left: 0;
+            top: 2px;
+
+            // Positioning
+            @include flex-center();
+            padding-top: 1px;
+            padding-right: 1px;
+
+            // Cursor
+            cursor: pointer;
+
+            // Box
+            width: $checkbox-size;
+            height: $checkbox-size;
+            border-radius: 3.5px;
+            background-color: $bg-field-bright;
+
+            // Check
+            content: "";
+            font: 400 normal normal calc($checkbox-size - 5.5px) "FontAwesome";
+            font-weight: 300;
+            line-height: $checkbox-size;
+            text-rendering: auto;
+            text-align: center;
+        }
+
+        &:hover::before {
+            background-color: $bg-field-hover-bright;
+        }
+    }
+
+    // Change icon and color on checked
+    &:checked + label {
+        &::before {
+            content: "\f00c";
+            color: var(--fg-on-primary);
+            background-color: var(--bg-primary);
+        }
+
+        &:hover::before {
+            background-color: var(--bg-primary-hover);
+        }
+    }
+}
+
+// Tags
+
+.datatagcontrol {
+    .form-autocomplete-selection span.badge {
+        // Color
+        background-color: var(--bg-primary);
+        color: var(--fg-on-primary);
+
+        // Shape
+        border-radius: $border-radius;
+        padding: 2px $spacing-s;
+        margin-bottom: $spacing-s !important;
+
+        // Text
+        font-size: 13px !important;
+        font-weight: 500;
+
+        // Button
+        span {
+            margin-right: $spacing-s;
+            font-size: 14px;
+            vertical-align: middle;
+        }
+
+        &:hover {
+            background-color: var(--bg-primary-hover);
+        }
+    }
+
+    input[type="text"].form-control {
+        padding-right: $spacing-l !important;
+    }
+
+    .form-autocomplete-downarrow {
+        color: $fg-high-emphasis;
+        vertical-align: middle;
+    }
+
+    .form-autocomplete-suggestions {
+        @include surface(12);
+        @include elevation(12);
+        border-radius: $border-radius;
+        border: 0;
+        padding: $spacing-s;
+    }
+}
+
+// Message user button
+
+#message-user-button {
+    color: $fg-medium-emphasis;
+
+    &:hover {
+        color: $fg-high-emphasis;
+    }
+}
+
+// Field sets
+
+.mform fieldset {
+    border-bottom-color: $bg-divider;
+}
+
+// Bottom activities links
+.activity-navigation {
+    margin: 0 $spacing-l;
+    width: auto;
+
+    #next-activity-link,
+    #prev-activity-link {
+        @include text-button($fg-high-emphasis, $fg-on-surface);
+    }
+}
+
+// Textarea
+
+[data-fieldtype="textarea"] textarea,
+.comment-ctrl textarea,
+.moodle-dialogue-base .moodle-dialogue-bd textarea {
+    @include filled-text-field(var(--bg-primary-light));
+    height: fit-content;
+}
+
+// File input
+input[type="file"] {
+    height: fit-content;
+    @include typography("body1");
+}

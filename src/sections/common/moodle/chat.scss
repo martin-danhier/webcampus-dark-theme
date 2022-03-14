@@ -1,0 +1,284 @@
+/* ----- Chat ----- */
+[data-region="right-hand-drawer"].drawer {
+    width: $right-drawer-width;
+}
+
+[data-region="right-hand-drawer"].drawer,
+#page-message-index {
+    .message-app {
+        @include surface(1);
+        @include elevation(1);
+        border: none;
+
+        // Header
+        .header-container {
+            border-color: $bg-divider;
+
+            // Layout
+            padding: 0;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            [data-region="view-settings"] {
+                padding: $spacing-sm $spacing-m !important;
+            }
+
+            .align-self-stretch {
+                align-self: center !important;
+            }
+
+            & > div {
+                padding: $spacing-s $spacing-m !important;
+                flex-grow: 1;
+                width: 100%;
+            }
+
+            // Font
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: $letter-spacing-m;
+
+            a {
+                user-select: none;
+            }
+        }
+
+        // Body
+        .body-container {
+            // Search results
+            [data-region="view-search"] {
+                [data-region="empty-message-container"] {
+                    font-weight: 300;
+                    user-select: none;
+                    letter-spacing: $letter-spacing-s;
+                }
+            }
+
+            // Messages categories
+            .section {
+                border-color: $bg-divider !important;
+
+                .card-header {
+                    border-color: $bg-divider;
+
+                    .btn {
+                        border: 0;
+
+                        &:focus {
+                            outline: none;
+                            box-shadow: none;
+                        }
+
+                        .expanded-icon-container,
+                        .collapsed-icon-container {
+                            margin-right: $spacing-s;
+                        }
+
+                        &:hover {
+                            background-color: $bg-surface-01dp;
+                        }
+                    }
+                }
+
+                .lazy-load-list {
+                    background-color: $bg-surface-02dp;
+
+                    .list-group-item {
+                        border-color: $bg-divider;
+                        user-select: none;
+
+                        &:hover,
+                        &:active,
+                        &:focus,
+                        &:active:focus {
+                            background-color: $bg-surface-03dp;
+                            color: inherit;
+                        }
+                    }
+                }
+            }
+
+            // Date
+            .day {
+                color: $fg-medium-emphasis;
+            }
+
+            // Message bubble
+            .message {
+                @include surface(12);
+
+                // Font
+                font-size: 15px;
+                font-weight: 300;
+                letter-spacing: $letter-spacing-m;
+                width: fit-content;
+
+                padding: $spacing-xs $spacing-s !important;
+
+                [data-region="text-container"] p {
+                    @include typography("body2");
+                }
+
+                .time {
+                    color: inherit;
+                    @include typography("caption");
+                }
+
+                .tail {
+                    display: none;
+                }
+
+                &.send {
+                    margin-left: auto !important;
+                    background-color: var(--bg-primary-dark);
+                    border-bottom-right-radius: 0 !important;
+                }
+
+                &.received {
+                    border-top-left-radius: 0 !important;
+                }
+            }
+
+            // Empty message
+            .tab-pane [data-region="empty-message-container"] {
+                padding: $spacing-m $spacing-l !important;
+
+                // Font
+                font-weight: 300;
+                user-select: none;
+                letter-spacing: $letter-spacing-s;
+
+                // Center vertically
+                height: 100%;
+                @include flex-center();
+            }
+
+            // Contacts
+            [data-region="view-contacts"] {
+                .flex-column > .p-3 {
+                    padding: 0 !important;
+                    border: 0 !important;
+                }
+            }
+
+            [data-region="self-conversation-message-container"] {
+                user-select: none;
+            }
+        }
+
+        // Ghost for loading
+        [data-region="content-placeholder"] .bg-light {
+            background-color: inherit !important;
+        }
+
+        // Footer
+        .footer-container {
+            border-top: 1px solid $bg-divider;
+
+            .border-top {
+                border-top: 0 !important;
+            }
+
+            & > div {
+                border: 0;
+                padding: 0 $spacing-xs;
+            }
+
+            a {
+                @include text-button($fg-high-emphasis, $fg-on-surface);
+            }
+
+            textarea {
+                @include filled-text-field(var(--bg-primary));
+                background-color: $bg-field !important;
+                height: auto;
+                padding: $spacing-xs $spacing-xs;
+            }
+
+            .btn.btn-icon[data-action="delete-selected-messages"] .icon {
+                background-size: contain;
+                vertical-align: middle;
+            }
+        }
+
+        .btn.btn-icon {
+            // Size
+            height: $icon-button-diameter;
+            width: $icon-button-diameter;
+
+            &:hover {
+                background-color: $bg-field-hover !important;
+            }
+
+            &:focus,
+            &:active:focus,
+            &:active {
+                background-color: inherit;
+                outline: none;
+                box-shadow: none;
+            }
+        }
+    }
+}
+
+// Emoji picker
+.emoji-picker-container {
+    .card {
+        @include elevation(12);
+        @include surface(12);
+    }
+
+    .card-footer {
+        border-radius: 0;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+        border-top-color: $bg-divider;
+    }
+
+    .card-header {
+        border-bottom-color: $bg-divider;
+    }
+}
+
+// Fullscreen chat
+
+#page-message-index .message-app.main {
+    // Position
+    margin-top: $spacing-l;
+    min-height: 650px;
+
+    // Card
+    @include elevation(1);
+    background-color: $bg-surface-01dp !important;
+    color: $fg-on-surface !important;
+
+    // Border
+    border: 0 !important;
+    border-radius: $border-radius;
+
+    .row-fluid > div,
+    .panel-header-container,
+    [data-region="view-overview-favourites"],
+    .header-container {
+        border-color: $bg-divider !important;
+    }
+
+    .p-3.border-bottom {
+        padding: 0 !important;
+        border: 0 !important;
+    }
+
+    .list-group-item-action:hover {
+        background-color: $bg-field-hover !important;
+        color: inherit;
+    }
+
+    .dropdown-menu {
+        right: 0;
+        top: 100% !important;
+        left: auto !important;
+        transform: none !important;
+    }
+}

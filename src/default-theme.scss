@@ -1,0 +1,37 @@
+/* ----- Default color theme ----- */
+
+// This file defines the default color theme.
+// The common constants between websites are defined in the constants file.
+
+:root {
+    // Primary background colors
+    --bg-primary: #bb86fc;
+    --bg-primary-hover: #c29bf3;
+    --bg-primary-light: #efb7ff;
+    --bg-primary-light-hover: #f3c6ff;
+    --bg-primary-dark: #8858c8;
+    --bg-primary-dark-hover: #9069d1;
+    --bg-primary-variant: #3700b3;
+    --bg-secondary: #03dac6;
+    --bg-secondary-light: #66fff9;
+    --bg-secondary-dark: #00a896;
+    --bg-secondary-hover: #3de2d2;
+
+    // Color of the text if the text is placed onto a colored background
+    --fg-on-primary: #000000;
+    --fg-on-primary-light: #000000;
+    --fg-on-primary-dark: #ffffff;
+    --fg-on-secondary: #000000;
+    --fg-on-secondary-light: #000000;
+    --fg-on-secondary-dark: #000000;
+}
+
+// Root style that is common between all websites
+body,
+#page-my-index {
+    // Base values
+    background-color: $bg-background;
+    color: $fg-on-background;
+    font-family: "Roboto", "Helvetica", sans-serif;
+    font-weight: 400;
+}

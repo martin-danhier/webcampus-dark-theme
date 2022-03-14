@@ -1,0 +1,145 @@
+/* ----- Peer review ----- */
+
+#page-mod-workshop-view.path-mod-workshop {
+    h2 .btn[data-toggle="popover"] {
+        margin-left: $spacing-sm;
+    }
+
+    #mod_workshop-userplanheading {
+        margin-top: $spacing-m;
+    }
+
+    .userdate {
+        color: $fg-medium-emphasis;
+        font-size: 12px;
+    }
+
+    .finalgrades .grade {
+        &.submissiongrade,
+        &.assessmentgrade {
+            @include surface(6);
+            @include elevation(4);
+            border: 0;
+            width: 30%;
+        }
+    }
+
+    .userplan {
+        border: 0;
+        border-radius: $border-radius;
+        @include elevation(4);
+
+        .phase {
+            // Title
+            .title a {
+                @include link();
+            }
+
+            // Background
+            &:nth-child(even) {
+                dt,
+                dd {
+                    background-color: $bg-surface-04dp;
+                }
+            }
+
+            &:nth-child(odd) {
+                dt,
+                dd {
+                    background-color: $bg-surface-06dp;
+                }
+            }
+
+            // Common
+            dt,
+            dd {
+                padding: $spacing-s;
+                text-align: center;
+                vertical-align: middle;
+                border: 0;
+                color: $fg-on-surface;
+
+                &.active {
+                    background-color: var(--bg-primary-dark);
+                }
+            }
+
+            // All
+            dt {
+                height: calc(40px + 2 * $spacing-s) !important;
+
+                @include flex-center();
+
+                border-bottom: 1px solid $bg-divider;
+
+                &.nonactive {
+                    color: $fg-field-disabled;
+                }
+            }
+
+            dd {
+                height: calc(209.2px + 2 * $spacing-s) !important;
+            }
+
+            // Corners
+            &:first-of-type {
+                dt {
+                    border-top-left-radius: $border-radius;
+                }
+
+                dd {
+                    border-bottom-left-radius: $border-radius;
+                }
+            }
+
+            &:last-of-type {
+                dt {
+                    border-top-right-radius: $border-radius;
+                }
+
+                dd {
+                    border-bottom-right-radius: $border-radius;
+                }
+            }
+        }
+    }
+}
+
+// Submission
+#page-mod-workshop-submission {
+    [role="main"] > h3 {
+        margin-top: $spacing-m;
+        margin-bottom: $spacing-m;
+    }
+
+    .submission-full,
+    .assessment-full {
+        border: 0;
+        border-radius: $border-radius;
+        @include elevation(3);
+        @include surface(3);
+
+        .header {
+            background-color: inherit;
+            border-top-left-radius: $border-radius;
+            border-top-right-radius: $border-radius;
+            padding: $spacing-m;
+            border-bottom: 1px solid $bg-divider;
+
+            .userdate {
+                color: $fg-medium-emphasis;
+                font-size: 12px;
+            }
+        }
+
+        .content:not(:empty) {
+            padding: $spacing-m;
+            border-bottom: 1px solid $bg-divider;
+        }
+
+        .assessment-form-wrapper,
+        .attachments {
+            padding: $spacing-m;
+        }
+    }
+}

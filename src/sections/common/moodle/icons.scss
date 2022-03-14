@@ -1,0 +1,1008 @@
+/* ----- Global changes for icons ----- */
+
+img.icon,
+.content-item-container.notification .content-item-body .notification-image > img {
+    width: $fluent-icon-size;
+    height: $fluent-icon-size;
+    line-height: $fluent-icon-size;
+    font-size: $fluent-icon-size;
+}
+
+/* ----- Img icons ----- */
+
+img[src*="/theme/image.php/"][src*="/url/"][src$="/icon"] {
+    // Link
+    @include fluent-icon-img("link");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("link", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/mod_forum/"][src$="/icon"],
+img[src*="/theme/image.php/"][src*="/forum/"][src$="/icon"] {
+    // Forum
+    @include fluent-icon-img("chat-multiple");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("chat-multiple", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/workshop/"][src$="/icon"],
+img[src*="/theme/image.php/"][src*="/feedback/"][src$="/icon"] {
+    // Workshop / peer-review
+    @include fluent-icon-img("person-feedback");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("person-feedback", 24px);
+    }
+}
+
+// Smaller icon for calendar
+.path-calendar .maincalendar [data-region="event-item"] {
+    img[src*="/theme/image.php/"][src*="/workshop/"][src$="/icon"],
+    img[src*="/theme/image.php/"][src*="/feedback/"][src$="/icon"] {
+        @include fluent-icon-img-override("person-feedback", 16px, $fg-on-badge);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/quiz/"][src$="/icon"] {
+    // Quiz
+    @include fluent-icon-img("quiz-new");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("quiz-new", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/pdf"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/pdf-24"],
+img[src*="/theme/image.php/"][src*="/amanote/"][src$="/icon"] {
+    // PDF
+    @include fluent-icon-img("document-pdf");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("document-pdf", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/ubicast/"][src$="/icon"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/mpeg-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/mpeg"] {
+    // Video
+    @include fluent-icon-img("video-clip");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("video-clip", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive"] {
+    // Zip
+    @include fluent-icon-img("folder-zip");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("folder-zip", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/page/"][src$="/icon"] {
+    // Link to other Moodle page
+    @include fluent-icon-img("note");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("note", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/markup-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/sourcecode"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/markup"] {
+    // Source code
+    @include fluent-icon-img("document-chevron-double");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("document-chevron-double", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/tiff"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/tiff-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/png"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/png-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/jpeg"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/jpeg-24"] {
+    // Tiff, Png, Jpg
+    @include fluent-icon-img("image");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("image", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/document-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/document"] {
+    // Word
+    @include fluent-icon-img("document-text");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("document-text", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/powerpoint-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/powerpoint"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/impress-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/impress"] {
+    // Powerpoint & Impress
+    @include fluent-icon-img("data-pie");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("data-pie", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/spreadsheet-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/spreadsheet"] {
+    // Excel
+    @include fluent-icon-img("document-table");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("document-table", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/wiki/"][src$="/icon"] {
+    // Wiki
+    @include fluent-icon-img("globe");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("globe", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/assign/"][src$="/icon"],
+img[src*="/theme/image.php/"][src*="/mod_assign/"][src$="/icon"] {
+    // Assignment
+    @include fluent-icon-img("arrow-upload");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("arrow-upload", 24px);
+    }
+}
+
+// Smaller icon for calendar
+.path-calendar .maincalendar [data-region="event-item"] {
+    img[src*="/theme/image.php/"][src*="/assign/"][src$="/icon"],
+    img[src*="/theme/image.php/"][src*="/mod_assign/"][src$="/icon"] {
+        @include fluent-icon-img-override("arrow-upload", 16px, $fg-on-badge);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/folder/"][src$="/icon"] {
+    // Closed folder
+    @include fluent-icon-img("folder");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("folder", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/folder-24"] {
+    // Open folder
+    @include fluent-icon-img("folder-open");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("folder-open", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/scheduler/"][src$="/icon"] {
+    // Scheduler
+    @include fluent-icon-img("calendar-clock");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("calendar-clock", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/choice/"][src$="/icon"] {
+    // Question (Choice)
+    @include fluent-icon-img("chat-help");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("chat-help", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/glossary/"][src$="/icon"] {
+    // Glossary
+    @include fluent-icon-img("text-sort-ascending");
+}
+
+img[src*="/theme/image.php/"][src*="/customcert/"][src$="/icon"] {
+    // Certificate
+    @include fluent-icon-img("certificate");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("certificate", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/wooclap/"][src$="/icon"] {
+    // Wooclap
+    @include fluent-icon-img("form-new");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("form-new", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/choicegroup/"][src$="/icon"] {
+    // Choose a group
+    @include fluent-icon-img("people-swap");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("people-swap", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/text-24"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/text"] {
+    // Generic text file
+    @include fluent-icon-img("document-text");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("document-text", 24px);
+    }
+}
+
+img.activityicon[src*="/theme/image.php/"][src*="/chat/"][src$="/icon"] {
+    // Chat
+    @include fluent-icon-img("chat");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("chat", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/folder"] {
+    // Folder
+    @include fluent-icon-img("folder");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("folder", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/f/archive"] {
+    // Archive
+    @include fluent-icon-img("folder-zip");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("folder-zip", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/label/"][src$="/icon"] {
+    // Text info block
+    @include fluent-icon-img("text-align-left");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("text-align-left", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/data/"][src$="/icon"] {
+    // Data
+    @include fluent-icon-img("database");
+
+    // Bigger icon for activity icon
+    &.activityicon {
+        @include fluent-icon-img-override("database", 24px);
+    }
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/completion-auto-pass"],
+img[src*="/theme/image.php/"][src*="/core/"][src$="/completion-auto-y"] {
+    // Completion auto pass
+    @include fluent-icon-img-override("checkmark-square", 24px, $bg-success);
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/completion-auto-fail"] {
+    // Completion auto fail
+    @include fluent-icon-img-override("dismiss-square", 24px, $bg-error);
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/completion-auto-n"] {
+    // Completion auto empty
+    @include fluent-icon-img-override("square", 24px, $fg-high-emphasis, "regular");
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/info"] {
+    // Info icon
+    @include fluent-icon-img("info", $fg-high-emphasis, "regular");
+}
+
+img[src*="/theme/image.php/"][src*="/core/"][src$="/warning"] {
+    // Warning icon
+    @include fluent-icon-img("warning", $fg-on-warning, "regular");
+}
+
+img[src*="/theme/image.php/"][src*="/atto_bsgrid/"][src$="/iconone"] {
+    // Atto
+    @include fluent-icon-img("column-triple");
+}
+
+img[src*="/theme/image.php/"][src*="/atto_chemistry/"][src$="/icon"] {
+    // Atto chemistry (no fluent equivalent)
+    content: url("https://api.iconify.design/mdi/flask.svg?color=white&width=20&height=20");
+}
+
+img[src*="/theme/image.php/"][src*="/atto_generico/"][src$="/iconone"] {
+    // Atto generico
+    @include fluent-icon-img("puzzle-piece");
+}
+
+img[src*="/theme/image.php/"][src*="/atto_fontfamily/"][src$="/icon"] {
+    // Atto font family
+    @include fluent-icon-img("text-font");
+}
+
+img[src*="/theme/image.php/"][src*="/atto_fontsize/"][src$="/icon"] {
+    // Atto font size
+    @include fluent-icon-img("text-font-size");
+}
+
+img[src*="/theme/image.php/"][src*="/mod_page/"][src$="/icon"] {
+    // Resources
+    @include fluent-icon-img("book-open");
+}
+
+img[src*="/theme/image.php/"][src*="/block_timeline/"][src$="/activities"] {
+    // Timeline
+    @include fluent-icon-img("calendar-clock", $size: 24px);
+}
+
+img[src*="/theme/image.php/"][src*="/repository_upload/"][src$="/icon"] {
+    // Upload icon
+    @include fluent-icon-img("arrow-upload");
+}
+
+img[src*="/theme/image.php/"][src*="/repository_recent/"][src$="/icon"] {
+    // Recent icon
+    @include fluent-icon-img("history");
+}
+
+// TODO: wtf are these icons: keep them ? don't ?
+
+/* Not terminated */
+
+img[src*="/theme/image.php/"][src*="/block_completion_progress/"][src$="/cross"] {
+    background-image: url("https://api.iconify.design/emojione-monotone:cross-mark.svg?height=12");
+    height: 12px !important;
+    width: 12px !important;
+    vertical-align: -0.125em;
+    filter: invert(55%) sepia(12%) saturate(2496%) hue-rotate(315deg) brightness(99%) contrast(89%) !important;
+}
+
+/* Done */
+
+img[src*="/theme/image.php/"][src*="/block_completion_progress/"][src$="/tick"] {
+    background-image: url("https://api.iconify.design/fa-solid:check.svg?height=12");
+    vertical-align: -0.125em;
+    height: 12px !important;
+    width: 12px !important;
+    filter: invert(85%) sepia(24%) saturate(888%) hue-rotate(64deg) brightness(88%) contrast(85%) !important;
+}
+
+// End of TODO
+
+img[src*="/theme/image.php/"][src*="/block_completion_progress/"][src$="/right"] {
+    // Now icon
+    @include fluent-icon-img("caret-down");
+}
+
+/* ----- FontAwesome icons ----- */
+
+i.fa {
+    @include fluent-icon-base();
+}
+
+// Positioning tweaks
+
+#page-footer ul.footercontact li,
+#nav-drawer .list-group-item .media {
+    // Center with margin
+
+    flex-direction: row;
+    @include flex-center();
+
+    i {
+        @include flex-center();
+        margin-right: $spacing-s;
+    }
+}
+
+.btn.btn-outline-secondary > span:not(.hidden)[data-region*="icon-container"] {
+    // Center without margin
+    flex-direction: row;
+    @include flex-center();
+
+    i {
+        @include flex-center();
+    }
+}
+
+a[data-route="view-settings"] {
+    // Center right but no margin
+    @include flex-center-end();
+}
+
+a[data-route="view-contacts"],
+#message-user-button {
+    // Center right, with margin
+    @include flex-center-end();
+
+    i {
+        margin-right: $spacing-xs !important;
+    }
+}
+
+#page-message-notificationpreferences a:not(#back-to-top)[role="button"] {
+    // Center, with margin left
+    @include flex-center();
+
+    i {
+        margin-left: $spacing-xs !important;
+    }
+}
+
+.icon-size-3 {
+    width: $fluent-icon-size !important;
+    height: $fluent-icon-size !important;
+}
+
+// Replace icons
+
+i.fa.fa-exclamation-circle {
+    @include fluent-icon("error-circle", $bg-error-hover);
+}
+
+i.fa.fa-bars {
+    // Menu
+    @include fluent-icon("navigation");
+}
+
+i.fa.fa-tachometer,
+i.fa.fa-dashboard {
+    // Dashboard
+    @include fluent-icon("board");
+}
+
+i.fa.fa-home {
+    // Home
+    @include fluent-icon("home");
+}
+
+i.fa.fa-calendar {
+    // Calendar
+    @include fluent-icon("calendar");
+}
+
+// Smaller icon for calendar
+.path-calendar .maincalendar [data-region="event-item"] i.fa.fa-calendar {
+    @include fluent-icon-img-override("calendar", 16px, $fg-on-badge);
+}
+
+i.fa.fa-globe {
+    // Globe
+    @include fluent-icon("earth");
+}
+
+// Smaller icon for calendar
+.path-calendar .maincalendar [data-region="event-item"] i.fa.fa-globe {
+    @include fluent-icon-img-override("earth", 16px, $fg-on-badge);
+}
+
+i.fa.fa-cubes {
+    // Category
+    @include fluent-icon("organization");
+}
+
+// Smaller icon for calendar
+.path-calendar .maincalendar [data-region="event-item"] i.fa.fa-cubes {
+    @include fluent-icon-img-override("organization", 16px, $fg-on-badge);
+}
+
+body.drawer-open-left [data-region="drawer"] {
+    [data-parent-key="myhome"],
+    [data-parent-key="home"] {
+        .media-left i:not(.fa-home) {
+            // Open in new tab
+            @include fluent-icon("open");
+        }
+    }
+}
+
+i.fa.fa-bell {
+    // Notifications
+    @include fluent-icon("alert");
+}
+
+i.fa.fa-comment {
+    // Chat
+    @include fluent-icon("chat");
+}
+
+i.fa.fa-question-circle {
+    // Help
+    @include fluent-icon("question-circle");
+}
+
+i.fa.fa-chevron-left {
+    // Chevron left
+    @include fluent-icon("chevron-left");
+}
+
+i.fa.fa-chevron-right {
+    // Chevron right
+    @include fluent-icon("chevron-right");
+}
+
+i.fa.fa-filter {
+    // Filter
+    @include fluent-icon("filter");
+}
+
+i.fa.fa-sort-amount-asc {
+    // Sort
+    @include fluent-icon("arrow-sort-down-lines");
+}
+
+i.fa.fa-th {
+    // Table
+    @include fluent-icon("table");
+}
+
+i.fa.fa-ellipsis-h {
+    // More
+    @include fluent-icon("more-horizontal");
+}
+
+i.fa.fa-ellipsis-v {
+    // More vertical
+    @include fluent-icon("more-vertical");
+}
+
+i.fa.fa-clock-o {
+    // Clock
+    @include fluent-icon("clock");
+}
+
+i.fa.fa-chevron-circle-up {
+    // Up
+    @include fluent-icon("chevron-up");
+}
+
+#back-to-top i.fa.fa-chevron-circle-up {
+    // Back to top, black one on secondary color (impossible to use fg-on-secondary as it is a CSS variable)
+    // Assume it's black... with an icon font this problem wouldn't exist
+    @include fluent-icon("chevron-up", black);
+}
+
+i.fa.fa-graduation-cap {
+    // Graduation cap
+    @include fluent-icon("hat-graduation");
+}
+
+// Smaller icon for calendar
+.path-calendar .maincalendar [data-region="event-item"] i.fa.fa-graduation-cap {
+    @include fluent-icon-img-override("hat-graduation", 16px, $fg-on-badge);
+}
+
+i.fa.fa-user,
+i.fa.fa-group,
+i.fa.fa-users {
+    // Users
+    @include fluent-icon("people-community");
+}
+
+// Smaller icon for calendar
+.path-calendar .maincalendar [data-region="event-item"] i.fa.fa-group {
+    @include fluent-icon-img-override("people-community", 16px, $fg-on-badge);
+}
+
+.dashtitle i.fa.fa-users {
+    // Users in dashboard
+    @include fluent-icon-override("people-community", 24px);
+}
+
+i.fa.fa-folder-o,
+i.fa.fa-folder {
+    // Folder
+    @include fluent-icon("folder");
+}
+
+i.fa.fa-cogs {
+    // Settings
+    @include fluent-icon("settings");
+}
+
+i.fa.fa-envelope,
+i.fa.fa-envelope-o {
+    // Email
+    @include fluent-icon("mail");
+}
+
+i.fa.fa-phone {
+    // Phone
+    display: none;
+}
+
+i.fa.fa-check {
+    // Check
+    @include fluent-icon("checkmark");
+}
+
+i.fa.fa-cog {
+    // Settings
+    @include fluent-icon("settings");
+
+    &.fa-5x {
+        @include fluent-icon-override("settings", 32px);
+    }
+}
+
+i.fa.fa-user {
+    // User
+    @include fluent-icon("person");
+}
+
+// Smaller icon for calendar
+.path-calendar .maincalendar [data-region="event-item"] i.fa.fa-user {
+    @include fluent-icon-img-override("person", 16px, $fg-on-badge);
+}
+
+i.fa.fa-smile-o {
+    // Smile
+    @include fluent-icon("emoji-add");
+}
+
+i.fa.fa-paper-plane {
+    // Send
+    @include fluent-icon("send");
+}
+
+i.fa.fa-trash {
+    // Trash
+    @include fluent-icon("delete");
+}
+
+.icon-size-4 i.icon.fa.fa-trash {
+    // Trash
+    @include fluent-icon-override("delete", 24px);
+}
+
+i.fa-plus {
+    // Add
+    @include fluent-icon("add");
+}
+
+i.fa-minus {
+    // Minus
+    @include fluent-icon("subtract");
+}
+
+.small i.fa.fa-check-circle {
+    // Check
+    @include fluent-icon("checkmark-circle");
+}
+
+.small i.fa.fa-circle-o {
+    // Circle
+    @include fluent-icon("circle", $fluent-icon-default-color, "regular");
+}
+
+i.fa.fa-bold {
+    // Bold
+    @include fluent-icon("text-bold");
+}
+
+i.fa.fa-italic {
+    // Italic
+    @include fluent-icon("text-italic");
+}
+
+i.fa.fa-underline {
+    // Underline
+    @include fluent-icon("text-underline");
+}
+
+i.fa.fa-strikethrough {
+    // Strikethrough
+    @include fluent-icon("text-strikethrough");
+}
+
+i.fa.fa-subscript {
+    // Subscript
+    @include fluent-icon("text-subscript");
+}
+
+i.fa.fa-superscript {
+    // Superscript
+    @include fluent-icon("text-superscript");
+}
+
+i.fa.fa-list-ul,
+i.fa.fa-list {
+    // List
+    @include fluent-icon("text-bullet-list-ltr");
+}
+
+i.fa.fa-list-ol {
+    // List
+    @include fluent-icon("text-number-list-ltr");
+}
+
+i.fa.fa-align-left {
+    // Align left
+    @include fluent-icon("text-align-left");
+}
+
+i.fa.fa-align-center {
+    // Align center
+    @include fluent-icon("text-align-center");
+}
+
+i.fa.fa-align-right {
+    // Align right
+    @include fluent-icon("text-align-right");
+}
+
+i.fa.fa-align-justify {
+    // Align justify
+    @include fluent-icon("text-align-justify");
+}
+
+i.fa.fa-indent {
+    // Indent
+    @include fluent-icon("text-indent-increase-ltr");
+}
+
+i.fa.fa-outdent {
+    // Outdent
+    @include fluent-icon("text-indent-decrease-ltr");
+}
+
+i.fa.fa-link {
+    // Link
+    @include fluent-icon("link");
+}
+
+i.fa.fa-chain-broken {
+    // Broken link
+    @include fluent-icon("link-dismiss");
+}
+
+i.fa.fa-picture-o {
+    // Image
+    @include fluent-icon("image");
+}
+
+i.fa.fa-paint-brush {
+    // Paint brush
+    @include fluent-icon("text-color");
+}
+
+i.fa.fa-lightbulb-o {
+    // Background color
+    @include fluent-icon("color-line");
+}
+
+.editor_atto_toolbar i.fa.fa-caret-down {
+    // Caret down in editor ATTO
+    @include fluent-icon-override("caret-down", 16px, $fg-high-emphasis);
+}
+
+i.fa.fa-tint {
+    // Style
+    @include fluent-icon("color");
+}
+
+i.fa.fa-font {
+    // Font
+    @include fluent-icon("text-font");
+}
+
+i.fa.fa-undo {
+    // Undo
+    @include fluent-icon("arrow-undo");
+}
+
+i.fa.fa-repeat {
+    // Repeat
+    @include fluent-icon("arrow-redo");
+}
+
+i.fa.fa-search {
+    // Search
+    @include fluent-icon("search");
+}
+
+i.fa.fa-circle-o-notch {
+    // Spinner
+    @include fluent-icon("spinner-ios");
+}
+
+i.fa.fa-times {
+    // Close
+    @include fluent-icon("close");
+}
+
+i.fa.fa-level-down {
+    // Level down
+    @include fluent-icon("arrow-curve-down-left");
+}
+
+i.fa.fa-file-o {
+    // File
+    @include fluent-icon("document");
+}
+
+i.fa.fa-files-o {
+    // Files
+    @include fluent-icon("document-multiple");
+}
+
+i.fa.fa-microphone {
+    // Microphone
+    @include fluent-icon("mic");
+}
+
+i.fa.fa-calculator {
+    // Calculator
+    @include fluent-icon("calculator");
+}
+
+i.fa.fa-check-square-o {
+    // Check
+    @include fluent-icon("checkmark-square");
+}
+
+i.fa.fa-map {
+    // Map
+    @include fluent-icon("map");
+}
+
+.dashtitle i.fa.fa-map {
+    // Map
+    @include fluent-icon-override("map", 24px);
+}
+
+i.fa.fa-bar-chart {
+    // Bar chart
+    @include fluent-icon("data-histogram");
+
+    &.fa-5x {
+        @include fluent-icon-override("clipboard-data-bar", 32px);
+    }
+}
+
+.editor_atto_toolbar i.fa.fa-pencil-square-o {
+    // Insert character
+    @include fluent-icon("translate");
+}
+
+i.fa.fa-table {
+    // Insert table
+    @include fluent-icon("table");
+}
+
+i.fa.fa-i-cursor {
+    // Remove formatting
+    @include fluent-icon("text-clear-formatting");
+}
+
+i.fa.fa-code {
+    // Code
+    @include fluent-icon("code");
+}
+
+i.fa.fa-arrows-alt {
+    // Arrows
+    @include fluent-icon("arrow-expand");
+}
+
+i.fa.fa-universal-access {
+    // Accessibility
+    @include fluent-icon("accessibility");
+}
+
+i.fa.fa-long-arrow-down {
+    // Sort descending
+    @include fluent-icon("arrow-sort-down");
+}
+
+i.fa.fa-long-arrow-up {
+    // Sort ascending
+    @include fluent-icon("arrow-sort-up");
+}
+
+i.fa.fa-braille::before {
+    // Braille (no fluent equivalent)
+    content: url("https://api.iconify.design/whh/braillen.svg?color=white&width=16&height=16");
+    width: 16px !important;
+    height: 16px !important;
+    margin: auto;
+    vertical-align: middle;
+}
+
+i.fa.fa-star {
+    // Star
+    @include fluent-icon-override("star", $fluent-small-icon-size, $bg-icon-favorite, "filled");
+}
+
+i.fa.fa-info-circle {
+    // Info
+    @include fluent-icon("info");
+}
+
+i.fa.fa-arrow-right {
+    // Next
+    @include fluent-icon("arrow-right");
+}
+
+i.fa.fa-refresh {
+    // Refresh
+    @include fluent-icon("arrow-clockwise");
+}
+
+i.fa.fa-download {
+    // Download
+    @include fluent-icon("arrow-download");
+}
+
+// ----- File picker icons -----
+
+.fp-path-folder {
+    @include flex-center-start();
+    @include fluent-icon-background-override("folder", 20px);
+}
+
+// ----- Changes that don't require icon changes -----
+
+// Info bubble (question mark)
+.text-info {
+    color: var(--bg-secondary-light) !important;
+}

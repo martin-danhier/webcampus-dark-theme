@@ -1,0 +1,26 @@
+/* ----- UCLouvain color theme ----- */
+
+// This file defines the style-specific colors for the UCLouvain theme.
+// The common constants between websites are defined in the constants file.
+
+:root {
+    // Primary background colors
+    --bg-primary: #1976d2;
+    --bg-primary-hover: #2196f3;
+    --bg-primary-light: #63a4ff;
+    --bg-primary-light-hover: #80b3ff;
+    --bg-primary-dark: #004ba0;
+    --bg-primary-dark-hover: #0062b1;
+    --bg-secondary: #00bcd4;
+    --bg-secondary-light: #62efff;
+    --bg-secondary-dark: #008ba3;
+    --bg-secondary-hover: #4dd0e1;
+
+    // Color of the text if the text is placed onto a colored background
+    --fg-on-primary: #ffffff;
+    --fg-on-primary-light: #000000;
+    --fg-on-primary-dark: #ffffff;
+    --fg-on-secondary: #000000;
+    --fg-on-secondary-light: #000000;
+    --fg-on-secondary-dark: #000000;
+}

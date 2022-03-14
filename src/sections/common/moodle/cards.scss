@@ -1,0 +1,442 @@
+/* ----- Cards ----- */
+
+.card,
+#region-main {
+    @include surface(1);
+    @include elevation(1);
+    border: none;
+    border-radius: $border-radius;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.card-footer {
+    background-color: inherit !important;
+    border-radius: inherit;
+}
+
+// ----- Generic course items ------
+
+.dashboard-card,
+.course-listitem.list-group-item,
+.block .block-cards .course-summaryitem {
+    // They are on top of a bigger card so it needs a bigger elevation
+    @include surface(3);
+    @include elevation(2); // 3 because it is on top of a elevation 1 card
+    border: none;
+    border-radius: $border-radius;
+
+    .dropdown .btn.btn-link.coursemenubtn {
+        @include flat-icon-button($bg-field-hover);
+    }
+
+    .card-img-top,
+    .card-img {
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+    }
+
+    .course-info-container .bg-pulse-grey {
+        border-radius: 3px;
+    }
+}
+
+.block .block-cards .course-summaryitem {
+    a {
+        margin: $spacing-xs;
+        margin-right: $spacing-s;
+
+        .summaryimage {
+            border-radius: 50% !important;
+        }
+    }
+
+    margin-top: $spacing-s !important;
+    margin-bottom: $spacing-s !important;
+}
+
+// ----- Overview block -----
+
+.block_myoverview .container-fluid {
+    margin-top: $spacing-m;
+}
+
+// List appearance
+.block_myoverview [data-region="courses-view"] .list-group .list-group-item {
+    margin-top: $spacing-xs;
+    margin-bottom: $spacing-xs;
+}
+
+// ----- Section ------
+
+.card.section {
+    border-radius: 0;
+    box-shadow: none !important;
+}
+
+// ----- Alerts -----
+
+.bg-white[role="alert"] {
+    background-color: $bg-surface-16dp !important;
+    @include elevation(16);
+    border-radius: $border-radius;
+
+    .text-muted {
+        color: $fg-on-surface !important;
+        user-select: none;
+    }
+
+    .btn.btn-primary {
+        @include raised-button(var(--bg-primary), var(--bg-primary-hover), var(--fg-on-primary));
+
+        &[data-action="confirm-delete-selected-messages"] {
+            @include raised-button($bg-error, $bg-error-hover, $fg-on-error);
+        }
+    }
+
+    .btn.btn-secondary {
+        @include text-button($fg-high-emphasis, $fg-on-surface);
+    }
+}
+
+// ----- Home -----
+
+#page-site-index #page-header .card .d-flex {
+    justify-content: center;
+    align-items: center;
+    margin: $spacing-sm !important;
+
+    .mr-auto {
+        margin-right: 0 !important;
+    }
+
+    .logo {
+        @include flex-center();
+        width: 100%;
+    }
+
+    &.flex-wrap {
+        height: 0;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
+
+// ----- Settings -----
+
+#page-user-preferences {
+    #page-header .card {
+        padding: $spacing-m;
+    }
+
+    #region-main .container-fluid {
+        margin-top: $spacing-m;
+
+        .card {
+            @include surface(3);
+            @include elevation(1);
+            padding: $spacing-sm;
+        }
+    }
+}
+
+#page-user-profile {
+    .profile_tree .card {
+        @include surface(3);
+        @include elevation(1);
+        padding: $spacing-s;
+
+        .badge-image {
+            border-radius: $border-radius;
+        }
+    }
+}
+
+// ----- Course content -----
+
+#page-course-view-topics,
+#page-course-view-weeks {
+    #page-header .card {
+        padding: $spacing-m;
+    }
+
+    .course-content {
+        .section {
+            // Current section (in week mode)
+            &.current {
+                @include surface(4);
+                @include elevation(1);
+                border-top-right-radius: $border-radius;
+                border-bottom-right-radius: $border-radius;
+
+                border-left: 5px solid var(--bg-primary);
+
+                &::before {
+                    display: none;
+                }
+                // Title
+                .sectionname {
+                    background-color: inherit;
+                }
+            }
+
+            .availabilityinfo {
+                .badge.badge-info {
+                    font-size: 12px;
+                    border-radius: 5px;
+                    margin-right: $spacing-xs;
+                    margin-left: $spacing-s;
+                }
+
+                &.isrestricted .badge.badge-info {
+                    background-color: $bg-warning;
+                    color: $fg-on-warning;
+                }
+
+                &.ishidden .badge.badge-info {
+                    background-color: $bg-error;
+                    color: $fg-on-error;
+                }
+            }
+
+            &.hidden {
+                // Title
+                h3.sectionname {
+                    border-top: 0 !important;
+
+                    a {
+                        color: $fg-field-disabled;
+                        cursor: not-allowed;
+
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+
+                    // Icon
+                    &::before {
+                        content: "";
+                        background-image: url("https://api.iconify.design/fluent/lock-closed-32-filled.svg");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        vertical-align: baseline;
+                        width: 24px;
+                        height: 24px;
+                        display: inline-block;
+                        filter: invert(1);
+
+                        margin-right: $spacing-s;
+                    }
+                }
+
+                .content {
+                    background-color: inherit;
+                    color: inherit;
+                    border-color: inherit;
+                }
+            }
+        }
+    }
+}
+
+#page-course-view-weeks .weeks li.section:nth-child(even) {
+    @include surface(3);
+    border-radius: $border-radius;
+
+    .section:empty,
+    .summary p:empty {
+        display: none;
+        margin-bottom: 0;
+    }
+}
+
+/* Forum view */
+
+#page-mod-forum-view {
+    #page-header .card {
+        margin-top: $spacing-s;
+        padding: $spacing-s;
+    }
+
+    #region-main {
+        padding: $spacing-m;
+    }
+}
+
+/* ----- Resource ----- */
+
+.path-mod-resource {
+    #page-header .card {
+        margin-top: $spacing-s;
+        padding: $spacing-s;
+    }
+
+    .resourcedetails {
+        color: $fg-high-emphasis;
+    }
+}
+
+/* ----- Assignment ----- */
+
+#page-mod-assign-view {
+    table.generaltable {
+        background-color: inherit;
+        @include elevation(2);
+        border-radius: $border-radius;
+
+        th {
+            width: 280px;
+        }
+
+        tr {
+            &:nth-child(even) {
+                td,
+                th {
+                    @include surface(4);
+                }
+            }
+
+            &:nth-child(odd) {
+                td,
+                th {
+                    @include surface(2);
+                }
+            }
+
+            td,
+            th {
+                border: 0;
+                padding: $spacing-sm;
+
+                &.submissionstatussubmitted,
+                &.earlysubmission {
+                    background-color: $bg-success;
+                    color: $fg-on-success;
+                }
+            }
+
+            &:first-child {
+                th {
+                    border-top-left-radius: $border-radius;
+                }
+
+                td {
+                    border-top-right-radius: $border-radius;
+                }
+            }
+
+            &:last-child {
+                th {
+                    border-bottom-left-radius: $border-radius;
+                }
+
+                td {
+                    border-bottom-right-radius: $border-radius;
+                }
+            }
+        }
+    }
+
+    a.expandsummaryicon {
+        &:focus,
+        &:active,
+        &:active:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+}
+
+/* ---- Assignment submission ----- */
+
+#page-mod-assign-editsubmission {
+    label[for="id_submissionstatement"] {
+        color: $fg-on-surface;
+        font-weight: 500;
+    }
+
+    #id_cancel {
+        @include text-button($fg-high-emphasis, $fg-on-surface);
+    }
+}
+
+/* ----- Loading ----- */
+
+.block_onlinesurvey_surveys_loading {
+    @include surface(1);
+}
+
+.block_onlinesurvey_lds-spinner div::after {
+    background: $fg-high-emphasis;
+}
+
+.overlay-icon-container {
+    background-color: inherit;
+
+    .loading-icon .icon {
+        height: $fluent-icon-size;
+        width: $fluent-icon-size;
+        font-size: $fluent-icon-size;
+    }
+}
+
+/* ----- Nested cards ----- */
+
+#page-admin-tool-dataprivacy-summary #region-main .card {
+    @include surface(2);
+    @include elevation(1);
+
+    .card-header {
+        @include surface(3);
+        border-bottom: 1px solid $bg-divider;
+        border-top-left-radius: $border-radius;
+        border-top-right-radius: $border-radius;
+    }
+}
+
+/* ----- Timeline ----- */
+
+.block_timeline {
+    .border-bottom {
+        border-bottom: 0 !important;
+    }
+
+    h5.h6 {
+        @include typography("h6");
+
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    h4.h5 {
+        @include typography("h5");
+
+        &::first-letter {
+            text-transform: capitalize;
+        }
+    }
+
+    .list-group-item[data-region="event-list-item"] {
+        @include surface(2);
+        @include elevation(1);
+        border-radius: $border-radius;
+        margin: $spacing-xs 0;
+        padding: $spacing-s $spacing-sm !important;
+
+        h6 {
+            text-align: left;
+        }
+
+        .list-group-item-action {
+            @include text-button($fg-high-emphasis, $fg-on-surface);
+        }
+    }
+
+    [data-region="paging-control-limit-container"] > span {
+        margin-right: $spacing-s !important;
+    }
+}

@@ -1,0 +1,169 @@
+/* ----- Tooltips (notifications, and others) ----- */
+
+.popover-region {
+    // Handle
+    .popover-region-toggle {
+        &::before,
+        &::after {
+            border-bottom-color: $bg-surface-12dp;
+            right: 11px;
+        }
+
+        &:focus {
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+    // Popover itself
+    .popover-region-container {
+        // Make the popover region elevated above the rest of the page
+        @include surface(12);
+        @include elevation(12);
+
+        // Border
+        border-radius: $border-radius;
+        border: 0;
+        border-color: $bg-divider;
+
+        // Header
+        .popover-region-header-container {
+            height: calc(25px + 2 * $spacing-xs);
+            border-color: inherit;
+            padding: $spacing-xs $spacing-sm;
+            @include flex-center();
+            flex-direction: row;
+
+            .popover-region-header-text {
+                font-weight: 400;
+                letter-spacing: $letter-spacing-m;
+                flex-grow: 1;
+            }
+
+            .popover-region-header-actions {
+                @include flex-center();
+                flex-direction: row;
+
+                & > *,
+                .normal-icon {
+                    height: $fluent-icon-size;
+                }
+
+                & > *:focus {
+                    outline: none;
+                    box-shadow: none;
+                }
+            }
+        }
+
+        // Content
+
+        .popover-region-content-container {
+            height: calc(100% - 55px - 4 * $spacing-xs);
+
+            // Notifications
+            .notification {
+                // Remove default style
+                color: inherit;
+                background-color: inherit;
+
+                // Border
+                border-color: $bg-divider;
+
+                // Padding
+                padding: $spacing-s;
+
+                // Hover
+                &:hover {
+                    background-color: $bg-field-hover-bright;
+                }
+
+                // Icon
+                .notification-image {
+                    margin-right: $spacing-s;
+                }
+
+                // Body
+                .notification-message {
+                    width: calc(100% - 24px - $spacing-s);
+                }
+
+                // Footer
+                .content-item-footer .timestamp {
+                    margin-left: calc(24px + $spacing-s);
+                    color: $fg-medium-emphasis;
+                }
+
+                // Unread
+                &.unread {
+                    background-color: $bg-field-selected-bright;
+                }
+            }
+        }
+
+        // Footer
+        .popover-region-footer-container {
+            height: calc(25px + 2 * $spacing-xs);
+            border-color: $bg-divider;
+            background-color: inherit;
+            color: inherit;
+
+            .popover-region-seeall-text {
+                padding: $spacing-xs $spacing-sm;
+            }
+        }
+    }
+}
+
+// Tooltips
+
+.popover {
+    @include surface(12);
+    @include elevation(12);
+    border-radius: $border-radius;
+
+    .popover-header {
+        background-color: unset !important;
+        @include typography("h6");
+        border-color: $bg-divider;
+    }
+
+    .popover-body {
+        padding: $spacing-sm;
+        color: inherit;
+        font-size: 15px;
+    }
+}
+
+.bs-popover-right > .arrow::after,
+.bs-popover-auto[x-placement^="right"] > .arrow::after {
+    border-right-color: $bg-surface-12dp;
+}
+
+.bs-popover-bottom > .arrow::after,
+.bs-popover-auto[x-placement^="bottom"] > .arrow::after {
+    border-bottom-color: $bg-surface-12dp;
+}
+
+.bs-popover-left > .arrow::after,
+.bs-popover-auto[x-placement^="left"] > .arrow::after {
+    border-left-color: $bg-surface-12dp;
+}
+
+.bs-popover-top > .arrow::after,
+.bs-popover-auto[x-placement^="top"] > .arrow::after {
+    border-top-color: $bg-surface-12dp;
+}
+
+// Hover tooltip
+
+.hover-tooltip-container .hover-tooltip {
+    @include surface(12);
+    @include elevation(12);
+    border-radius: $border-radius;
+    padding: $spacing-sm;
+
+    &::before, &::after {
+        border-top-color: $bg-surface-12dp;
+    }
+}
